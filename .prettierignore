@@ -1,0 +1,9 @@
+node_modules/
+.next/
+prisma/
+dist/
+.vscode/
+pnpm-lock.yaml
+.editorconfig
+.gitignore
+.prettierignore

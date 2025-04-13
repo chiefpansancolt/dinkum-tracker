@@ -25,7 +25,7 @@ dinkum-tracker/
 ├── app/                  # Next.js pages using App Router
 │   ├── layout.tsx        # Main layout with header and footer
 │   ├── page.tsx          # Home page
-│   ├── playthroughs/     # Page to list all playthroughs 
+│   ├── playthroughs/     # Page to list all playthroughs
 │   ├── new-playthrough/  # Page to create a new playthrough
 │   └── globals.css       # Global styles and Tailwind imports
 ├── components/           # React components
@@ -53,17 +53,20 @@ dinkum-tracker/
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/yourusername/dinkum-tracker.git
    cd dinkum-tracker
    ```
 
 2. Install dependencies:
+
    ```bash
    pnpm install
    ```
 
 3. Run the development server:
+
    ```bash
    pnpm dev
    ```
