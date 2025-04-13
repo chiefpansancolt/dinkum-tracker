@@ -46,12 +46,7 @@ export default function Header() {
 								</Link>
 							</li>
 							<li>
-								<Dropdown
-									label="Playthroughs"
-									inline={true}
-									dismissOnClick={false}
-									className="cursor-pointer"
-								>
+								<Dropdown label="Playthroughs" inline={true} dismissOnClick={false}>
 									{recentPlaythroughs.length > 0 ? (
 										recentPlaythroughs.map((playthrough) => (
 											<DropdownItem
