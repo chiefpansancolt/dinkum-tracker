@@ -8,7 +8,7 @@ import { HiPlus } from "react-icons/hi2";
 export default function FAB() {
 	const pathname = usePathname();
 
-	if (pathname !== "/" && pathname !== "/playthroughs") {
+	if (pathname !== "/" && pathname !== "/playthrough/list") {
 		return null;
 	}
 

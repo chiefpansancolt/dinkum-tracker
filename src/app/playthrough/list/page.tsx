@@ -45,7 +45,7 @@ export default function PlaythroughsPage() {
 						adventure!
 					</p>
 					<div className="flex justify-center">
-						<Button as={Link} href="/new-playthrough" color="primary">
+						<Button as={Link} href="/playthrough/new" color="primary">
 							Create Your First Playthrough
 						</Button>
 					</div>

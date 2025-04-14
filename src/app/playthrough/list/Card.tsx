@@ -21,14 +21,12 @@ export default function PlaythroughCard({ playthrough, onDelete }: PlaythroughCa
 	};
 
 	const calculateCompletion = () => {
-		// Calculate the completion percentage based on collections and milestones
 		const totalItems =
 			Object.values(playthrough.collections).reduce(
 				(acc, curr) => acc + (curr.length || 0),
 				0
 			) + Object.values(playthrough.milestones).length;
 
-		// Count completed items
 		const completedItems =
 			Object.values(playthrough.collections).reduce((acc, curr) => acc + curr.length, 0) +
 			Object.values(playthrough.milestones).filter((value) => value === true).length;
@@ -89,7 +87,7 @@ export default function PlaythroughCard({ playthrough, onDelete }: PlaythroughCa
 
 			<div className="mt-6 flex gap-3">
 				<Button color="primary" onClick={handleEdit} className="flex-1">
-					Edit
+					View Details
 				</Button>
 				<Button color="red" onClick={handleDelete} disabled={isDeleting} className="flex-1">
 					{isDeleting ? "Deleting..." : "Delete"}

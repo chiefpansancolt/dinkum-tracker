@@ -26,7 +26,7 @@ export default function NewPlaythroughForm() {
 			const newPlaythrough = createEmptyPlaythrough(name.trim());
 			savePlaythrough(newPlaythrough);
 
-			router.push("/playthroughs");
+			router.push("/playthrough/list");
 		} catch (err) {
 			console.error("Error creating playthrough:", err);
 			setError("Failed to create playthrough. Please try again.");
