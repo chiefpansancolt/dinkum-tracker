@@ -22,7 +22,7 @@ export const customTheme: CustomFlowbiteTheme = createTheme({
   },
   sidebar: {
     root: {
-      base: "",
+      base: "h-auto",
       inner:
         "bg-accent overflow-x-hidden overflow-y-auto rounded-lg px-3 py-4 text-white",
     },
@@ -40,7 +40,7 @@ export const customTheme: CustomFlowbiteTheme = createTheme({
       base: "flex items-center justify-center rounded-lg p-2 text-base font-normal text-white hover:text-gray-300 dark:text-white",
       icon: {
         base: "h-6 w-6 text-white transition duration-75 group-hover:text-gray-300 dark:text-white",
-      }
+      },
     },
   },
 });

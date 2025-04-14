@@ -140,7 +140,7 @@ export default function PlaythroughPage() {
       </nav>
       <div className="px-4 py-8">
         <div className="relative mx-auto flex w-full">
-          <div>
+          <div className="sticky top-4 h-fit max-h-screen overflow-y-auto pb-20">
             <Sidebar
               aria-label="Sidebar with logo branding example"
               applyTheme={{
