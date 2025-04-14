@@ -12,13 +12,13 @@ import CollectionsTab from "./CollectionsTab";
 import MilestonesTab from "./MilestonesTab";
 import NotFoundCard from "@/components/NotFoundCard";
 import BackButton from "@/components/BackButton";
+import { errorToast, successToast } from "@/lib/notifications";
 
 export default function PlaythroughPage() {
   const params = useParams();
   const [playthrough, setPlaythrough] = useState<Playthrough | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
-  const [saveSuccess, setSaveSuccess] = useState(false);
 
   useEffect(() => {
     if (typeof params.id !== "string") {
@@ -35,11 +35,13 @@ export default function PlaythroughPage() {
     if (!playthrough) return;
 
     setIsSaving(true);
-    savePlaythrough(playthrough);
-
-    setSaveSuccess(true);
-    setTimeout(() => setSaveSuccess(false), 3000);
-    setIsSaving(false);
+    try {
+      savePlaythrough(playthrough);
+      successToast({ message: "House Updated Successfully!" });
+      setIsSaving(false);
+    } catch (error) {
+      errorToast({ message: JSON.stringify(error) });
+    }
   };
 
   const handleCollectionUpdate = (
@@ -90,11 +92,6 @@ export default function PlaythroughPage() {
           <h1 className="text-primary text-3xl font-bold">
             {playthrough.name}
           </h1>
-          {saveSuccess && (
-            <Badge color="success" className="ml-auto">
-              Saved!
-            </Badge>
-          )}
         </div>
 
         <div className="flex flex-wrap items-center gap-3">

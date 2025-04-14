@@ -7,6 +7,7 @@ import { ThemeProvider } from "flowbite-react";
 import { customTheme } from "@/app/theme";
 import Footer from "@/components/Footer";
 import FAB from "@/components/FAB";
+import { ToastContainer } from "react-toastify";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -41,6 +42,17 @@ export default function RootLayout({
 					<main className="container mx-auto flex-grow px-4 py-8">{children}</main>
 					<Footer />
 					<FAB />
+					<ToastContainer
+						closeButton={false}
+						hideProgressBar
+						newestOnTop
+						draggable
+						stacked
+						className={"mt-14 lg:mr-24 lg:mt-0"}
+						toastClassName={
+							"shadow-md rounded-lg text-gray-500 bg-white dark:text-gray-400 dark:bg-gray-800 p-0"
+						}
+					/>
 				</ThemeProvider>
 			</body>
 		</html>

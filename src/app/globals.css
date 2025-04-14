@@ -10,3 +10,7 @@
   --color-accent: #8b572a;
   --color-highlight: #f39c12;
 }
+
+.Toastify__toast {
+  padding: 0 !important;
+}
