@@ -22,12 +22,9 @@ export default function PlaythroughsPage() {
 	};
 
 	return (
-		<div>
-			<div className="mb-6 flex items-center justify-between">
+		<div className="px-4 py-8">
+			<div className="mb-6 flex">
 				<h1 className="text-primary text-3xl font-bold">My Playthroughs</h1>
-				<Button as={Link} href="/playthrough/new" color="primary">
-					New Playthrough
-				</Button>
 			</div>
 
 			{isLoading ? (

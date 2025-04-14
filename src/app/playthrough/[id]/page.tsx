@@ -2,7 +2,17 @@
 
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
-import { Tabs, TabItem, Button, Spinner, Badge } from "flowbite-react";
+import {
+  Spinner,
+  Breadcrumb,
+  BreadcrumbItem,
+  Sidebar,
+  SidebarItem,
+  SidebarItemGroup,
+  SidebarItems,
+  SidebarCollapse,
+  SidebarLogo,
+} from "flowbite-react";
 import {
   getPlaythroughById,
   Playthrough,
@@ -11,8 +21,34 @@ import {
 import CollectionsTab from "./CollectionsTab";
 import MilestonesTab from "./MilestonesTab";
 import NotFoundCard from "@/components/NotFoundCard";
-import BackButton from "@/components/BackButton";
 import { errorToast, successToast } from "@/lib/notifications";
+import { FaRegSave } from "react-icons/fa";
+import {
+  HiHome,
+  HiArrowSmRight,
+  HiChartPie,
+  HiInbox,
+  HiOutlineMinusSm,
+  HiOutlinePlusSm,
+  HiShoppingBag,
+  HiTable,
+  HiUser,
+} from "react-icons/hi";
+import { MdDashboard } from "react-icons/md";
+import { twMerge } from "flowbite-react/helpers/tailwind-merge";
+import {
+  FaFish,
+  FaBug,
+  FaCalendarDays,
+  FaUsers,
+  FaIdCard,
+  FaBuildingColumns,
+  FaBuilding,
+  FaAward,
+} from "react-icons/fa6";
+import { FaTools } from "react-icons/fa";
+import { HiBuildingLibrary } from "react-icons/hi2";
+import { GoStarFill } from "react-icons/go";
 
 export default function PlaythroughPage() {
   const params = useParams();
@@ -37,10 +73,13 @@ export default function PlaythroughPage() {
     setIsSaving(true);
     try {
       savePlaythrough(playthrough);
-      successToast({ message: "House Updated Successfully!" });
-      setIsSaving(false);
+      successToast({ message: "Playthrough Saved Successfully!" });
+      setTimeout(() => {
+        setIsSaving(false);
+      }, 800);
     } catch (error) {
       errorToast({ message: JSON.stringify(error) });
+      setIsSaving(false);
     }
   };
 
@@ -85,36 +124,131 @@ export default function PlaythroughPage() {
   }
 
   return (
-    <div>
-      <div className="mb-6 space-y-4">
-        <div className="flex items-center gap-4">
-          <BackButton href="/playthrough/list" />
-          <h1 className="text-primary text-3xl font-bold">
-            {playthrough.name}
-          </h1>
+    <div className="relative pb-20">
+      <nav className="border-b border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-700">
+        <div className="px-4 py-2">
+          <Breadcrumb aria-label="Default breadcrumb example">
+            <BreadcrumbItem href="/" icon={HiHome}>
+              Home
+            </BreadcrumbItem>
+            <BreadcrumbItem href="/playthrough/list">
+              Playthroughs
+            </BreadcrumbItem>
+            <BreadcrumbItem>{playthrough.name}</BreadcrumbItem>
+          </Breadcrumb>
         </div>
+      </nav>
+      <div className="px-4 py-8">
+        <div className="relative mx-auto flex w-full">
+          <div>
+            <Sidebar
+              aria-label="Sidebar with logo branding example"
+              applyTheme={{
+                root: { base: "replace", inner: "replace" },
+                collapse: {
+                  button: "replace",
+                  icon: { base: "replace", open: { on: "replace" } },
+                },
+                item: { base: "replace", icon: { base: "replace" } },
+              }}
+            >
+              <SidebarLogo
+                href="#"
+                img="/dinkum_d_logo.png"
+                imgAlt="Dinkum logo"
+              >
+                {playthrough.name}
+              </SidebarLogo>
+              <SidebarItems>
+                <SidebarItemGroup>
+                  <SidebarItem href="#" icon={MdDashboard}>
+                    Overview
+                  </SidebarItem>
+                  <SidebarItem href="#" icon={FaUsers}>
+                    NPCs
+                  </SidebarItem>
+                  <SidebarItem href="#" icon={FaCalendarDays}>
+                    Calendar
+                  </SidebarItem>
+                </SidebarItemGroup>
+                <SidebarItemGroup>
+                  <SidebarCollapse
+                    icon={FaBuildingColumns}
+                    label="Pedia"
+                    renderChevronIcon={(theme, open) => {
+                      const IconComponent = open
+                        ? HiOutlineMinusSm
+                        : HiOutlinePlusSm;
 
-        <div className="flex flex-wrap items-center gap-3">
-          <Button color="primary" onClick={handleSave} disabled={isSaving}>
-            {isSaving ? "Saving..." : "Save Progress"}
-          </Button>
+                      return (
+                        <IconComponent
+                          aria-hidden
+                          className={twMerge(
+                            theme.label.icon.open[open ? "on" : "off"],
+                          )}
+                        />
+                      );
+                    }}
+                  >
+                    <SidebarItem href="#" icon={FaBug}>
+                      Bugs
+                    </SidebarItem>
+                    <SidebarItem href="#" icon={GoStarFill}>
+                      Critters
+                    </SidebarItem>
+                    <SidebarItem href="#" icon={FaFish}>
+                      Fish
+                    </SidebarItem>
+                  </SidebarCollapse>
+                  <SidebarItem href="#" icon={FaBuilding}>
+                    Buildings & Deeds
+                  </SidebarItem>
+                  <SidebarItem href="#" icon={FaIdCard}>
+                    Licenses
+                  </SidebarItem>
+                  <SidebarItem href="#" icon={FaAward}>
+                    Milestones
+                  </SidebarItem>
+                  <SidebarItem href="#" icon={FaTools}>
+                    Skills
+                  </SidebarItem>
+                </SidebarItemGroup>
+              </SidebarItems>
+            </Sidebar>
+          </div>
+
+          <section className="h-full flex-1 overflow-y-auto pb-4 lg:pl-4">
+            <div className="mb-4 grid grid-cols-2 gap-4 xl:grid-cols-4">
+              <div className="h-32 rounded-xl border-2 border-dashed border-gray-300 lg:h-64 dark:border-gray-600"></div>
+              <div className="h-32 rounded-xl border-2 border-dashed border-gray-300 lg:h-64 dark:border-gray-600"></div>
+              <div className="rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600"></div>
+              <div className="h-32 rounded-xl border-2 border-dashed border-gray-300 lg:h-64 dark:border-gray-600"></div>
+            </div>
+            <div className="mb-4 grid grid-cols-2 gap-4">
+              <div className="h-48 rounded-xl border-2 border-dashed border-gray-300 lg:h-96 dark:border-gray-600"></div>
+              <div className="h-48 rounded-xl border-2 border-dashed border-gray-300 lg:h-96 dark:border-gray-600"></div>
+            </div>
+            <div className="mb-4 grid grid-cols-3 gap-4">
+              <div className="h-32 rounded-xl border-2 border-dashed border-gray-300 lg:h-64 dark:border-gray-600"></div>
+              <div className="h-32 rounded-xl border-2 border-dashed border-gray-300 lg:h-64 dark:border-gray-600"></div>
+              <div className="h-32 rounded-xl border-2 border-dashed border-gray-300 lg:h-64 dark:border-gray-600"></div>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="h-48 rounded-xl border-2 border-dashed border-gray-300 lg:h-96 dark:border-gray-600"></div>
+              <div className="h-48 rounded-xl border-2 border-dashed border-gray-300 lg:h-96 dark:border-gray-600"></div>
+            </div>
+          </section>
         </div>
       </div>
 
-      <Tabs>
-        <TabItem active title="Collections">
-          <CollectionsTab
-            collections={playthrough.collections}
-            onUpdate={handleCollectionUpdate}
-          />
-        </TabItem>
-        <TabItem title="Milestones">
-          <MilestonesTab
-            milestones={playthrough.milestones}
-            onUpdate={handleMilestoneUpdate}
-          />
-        </TabItem>
-      </Tabs>
+      <button
+        onClick={handleSave}
+        disabled={isSaving}
+        className="bg-accent hover:bg-accent/95 focus:ring-accent fixed right-6 bottom-6 z-10 flex h-14 w-14 cursor-pointer items-center justify-center rounded-full p-0 text-white shadow-lg transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:opacity-90"
+        aria-label="Save Progress"
+      >
+        {isSaving ? <Spinner size="lg" /> : <FaRegSave className="h-6 w-6" />}
+      </button>
     </div>
   );
 }

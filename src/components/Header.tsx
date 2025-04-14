@@ -24,7 +24,7 @@ export default function Header() {
 
 	return (
 		<header className="bg-primary text-white shadow-md">
-			<div className="container mx-auto px-4 py-4">
+			<div className="mx-auto px-4 py-4">
 				<div className="flex flex-col items-center justify-between md:flex-row">
 					<Link
 						href="/"
@@ -46,7 +46,7 @@ export default function Header() {
 								</Link>
 							</li>
 							<li>
-								<Dropdown label="Playthroughs" inline={true} dismissOnClick={false}>
+								<Dropdown label="Playthroughs" inline={true} dismissOnClick={true}>
 									{recentPlaythroughs.length > 0 ? (
 										recentPlaythroughs.map((playthrough) => (
 											<DropdownItem

@@ -1,5 +1,5 @@
 import NewPlaythroughForm from "./Form";
 
 export default function NewPlaythroughPage() {
-	return <NewPlaythroughForm />;
+	return (<div className="px-4 py-8"><NewPlaythroughForm /></div>);
 }

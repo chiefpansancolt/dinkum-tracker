@@ -39,7 +39,7 @@ export default function RootLayout({
 			>
 				<ThemeProvider theme={customTheme}>
 					<Header />
-					<main className="container mx-auto flex-grow px-4 py-8">{children}</main>
+					<main className="flex-grow">{children}</main>
 					<Footer />
 					<FAB />
 					<ToastContainer
