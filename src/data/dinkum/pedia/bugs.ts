@@ -1,6 +1,6 @@
-import { Bug } from "@/types/dinkum";
+import { PediaItem } from "@/types/dinkum";
 
-export const bugs: Bug[] = [
+export const bugs: PediaItem[] = [
   {
     id: "bee",
     name: "Bee",
