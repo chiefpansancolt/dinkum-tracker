@@ -131,3 +131,36 @@ export interface Skill {
   img: string;
   description: string;
 }
+
+export type Season = "Summer" | "Autumn" | "Winter" | "Spring";
+export type Weekday =
+  | "Sunday"
+  | "Monday"
+  | "Tuesday"
+  | "Wednesday"
+  | "Thursday"
+  | "Friday"
+  | "Saturday";
+
+export interface Birthday {
+  day: number;
+  season: Season;
+  character: string;
+  likes: string;
+}
+
+export interface Event {
+  name: string;
+  startDay: number;
+  endDay: number;
+  season: Season;
+  emoji: string;
+}
+
+export interface CalendarDay {
+  day: number;
+  season: Season;
+  weekday: Weekday;
+  events: Event[];
+  birthdays: Birthday[];
+}
