@@ -23,6 +23,23 @@ export const TIME_PERIODS = [
   "All",
 ] as const;
 
+const DILAY_MILESTONE_TYPES = [
+  "Day One",
+  "Travel",
+  "NPC",
+  "Fishing",
+  "Farming",
+  "Foraging",
+  "Logging",
+  "Mining",
+  "Excavation",
+  "Bug Catching",
+  "Crafting",
+  "Hunting",
+  "Trapping",
+  "Dinks",
+];
+
 export const SEASONS = ["Spring", "Summer", "Autumn", "Winter", "All"] as const;
 
 export const RARITY_LEVELS = [
@@ -37,6 +54,7 @@ export type Biome = (typeof BIOMES)[number];
 export type TimePeriod = (typeof TIME_PERIODS)[number];
 export type Season = (typeof SEASONS)[number];
 export type RarityLevel = (typeof RARITY_LEVELS)[number];
+export type DailyMilestoneType = (typeof DILAY_MILESTONE_TYPES)[number];
 
 export interface PediaItem {
   id: string;
@@ -49,18 +67,47 @@ export interface PediaItem {
   basePrice: number;
 }
 
-export interface Bug extends PediaItem {}
 export interface Fish extends PediaItem {
   cookedPrice: number;
   cookedPieces: number;
 }
-export interface Critter extends PediaItem {}
+
+export interface DailyMilestones {
+  dayOneMilestones: DailyMilestone[];
+  travelMilestones: DailyMilestone[];
+  npcMilestones: DailyMilestone[];
+  fishingMilestones: DailyMilestone[];
+  farmingMilestones: DailyMilestone[];
+  foragingMilestones: DailyMilestone[];
+  loggingMilestones: DailyMilestone[];
+  miningMilestones: DailyMilestone[];
+  excavationMilestones: DailyMilestone[];
+  bugCatchingMilestones: DailyMilestone[];
+  craftingMilestones: DailyMilestone[];
+  huntingMilestones: DailyMilestone[];
+  trappingMilestones: DailyMilestone[];
+  dinksMilestones: DailyMilestone[];
+}
+
+export interface DailyMilestone {
+  id: string;
+  name: string;
+  permitPoints: number;
+}
 
 export interface Milestone {
   id: string;
   name: string;
-  description?: string;
-  requirements?: string;
+  description: string;
+  img: string;
+  levels: MilestoneLevel[];
+}
+
+interface MilestoneLevel {
+  level: number;
+  count: number;
+  permitPoints: number;
+  unit?: string;
 }
 
 interface LicenseLevel {
