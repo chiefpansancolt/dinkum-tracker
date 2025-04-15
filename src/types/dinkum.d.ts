@@ -125,10 +125,9 @@ export interface License {
   levels: LicenseLevel[];
 }
 
-export interface DinkumData {
-  bugs: Bug[];
-  fish: Fish[];
-  critters: Critter[];
-  milestones: Milestone[];
-  licenses: License[];
+export interface Skill {
+  id: string;
+  name: string;
+  img: string;
+  description: string;
 }
