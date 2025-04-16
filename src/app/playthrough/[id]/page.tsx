@@ -13,10 +13,7 @@ import {
 	SidebarCollapse,
 	SidebarLogo,
 } from "flowbite-react";
-import {
-	getPlaythroughById,
-	Playthrough,
-} from "@/lib/localStorage";
+import { getPlaythroughById, Playthrough } from "@/lib/localStorage";
 import CollectionsTab, { CollectionsTabHandle, CollectionType } from "./CollectionsTab";
 import CalendarTab, { CalendarTabHandle } from "./CalendarTab";
 import NotFoundCard from "@/components/NotFoundCard";
@@ -76,15 +73,37 @@ export default function PlaythroughPage() {
 	const collectionsRef = useRef<CollectionsTabHandle>(null);
 
 	useEffect(() => {
+		const handleHashChange = () => {
+			const hash = window.location.hash.replace("#", "");
+			if (hash && Object.values(ActiveTab).includes(hash as ActiveTab)) {
+				setActiveTab(hash as ActiveTab);
+			}
+		};
+
+		handleHashChange();
+
+		window.addEventListener("hashchange", handleHashChange);
+
+		return () => {
+			window.removeEventListener("hashchange", handleHashChange);
+		};
+	}, []);
+
+	useEffect(() => {
 		if (typeof params.id !== "string") {
 			setIsLoading(false);
 			return;
 		}
-		
-		setPlaythrough(getPlaythroughById(params.id));
 
+		setPlaythrough(getPlaythroughById(params.id));
 		setIsLoading(false);
 	}, [params.id]);
+
+	const handleSetActiveTab = (tab: ActiveTab) => {
+		setActiveTab(tab);
+
+		window.history.pushState(null, "", `#${tab}`);
+	};
 
 	const handleSave = async () => {
 		if (!playthrough || !params.id || typeof params.id !== "string") return;
@@ -184,26 +203,26 @@ export default function PlaythroughPage() {
 							<SidebarItems>
 								<SidebarItemGroup>
 									<SidebarItem
-										href="#"
+										href={`#${ActiveTab.Overview}`}
 										icon={MdDashboard}
 										active={activeTab === ActiveTab.Overview}
-										onClick={() => setActiveTab(ActiveTab.Overview)}
+										onClick={() => handleSetActiveTab(ActiveTab.Overview)}
 									>
 										Overview
 									</SidebarItem>
 									<SidebarItem
-										href="#"
+										href={`#${ActiveTab.NPCs}`}
 										icon={FaUsers}
 										active={activeTab === ActiveTab.NPCs}
-										onClick={() => setActiveTab(ActiveTab.NPCs)}
+										onClick={() => handleSetActiveTab(ActiveTab.NPCs)}
 									>
 										NPCs
 									</SidebarItem>
 									<SidebarItem
-										href="#"
+										href={`#${ActiveTab.Calendar}`}
 										icon={FaCalendarDays}
 										active={activeTab === ActiveTab.Calendar}
-										onClick={() => setActiveTab(ActiveTab.Calendar)}
+										onClick={() => handleSetActiveTab(ActiveTab.Calendar)}
 									>
 										Calendar
 									</SidebarItem>
@@ -233,59 +252,59 @@ export default function PlaythroughPage() {
 										}}
 									>
 										<SidebarItem
-											href="#"
+											href={`#${ActiveTab.Bugs}`}
 											icon={FaBug}
 											active={activeTab === ActiveTab.Bugs}
-											onClick={() => setActiveTab(ActiveTab.Bugs)}
+											onClick={() => handleSetActiveTab(ActiveTab.Bugs)}
 										>
 											Bugs
 										</SidebarItem>
 										<SidebarItem
-											href="#"
+											href={`#${ActiveTab.Critters}`}
 											icon={GoStarFill}
 											active={activeTab === ActiveTab.Critters}
-											onClick={() => setActiveTab(ActiveTab.Critters)}
+											onClick={() => handleSetActiveTab(ActiveTab.Critters)}
 										>
 											Critters
 										</SidebarItem>
 										<SidebarItem
-											href="#"
+											href={`#${ActiveTab.Fish}`}
 											icon={FaFish}
 											active={activeTab === ActiveTab.Fish}
-											onClick={() => setActiveTab(ActiveTab.Fish)}
+											onClick={() => handleSetActiveTab(ActiveTab.Fish)}
 										>
 											Fish
 										</SidebarItem>
 									</SidebarCollapse>
 									<SidebarItem
-										href="#"
+										href={`#${ActiveTab.Buildings}`}
 										icon={FaBuilding}
 										active={activeTab === ActiveTab.Buildings}
-										onClick={() => setActiveTab(ActiveTab.Buildings)}
+										onClick={() => handleSetActiveTab(ActiveTab.Buildings)}
 									>
 										Buildings & Deeds
 									</SidebarItem>
 									<SidebarItem
-										href="#"
+										href={`#${ActiveTab.Licenses}`}
 										icon={FaIdCard}
 										active={activeTab === ActiveTab.Licenses}
-										onClick={() => setActiveTab(ActiveTab.Licenses)}
+										onClick={() => handleSetActiveTab(ActiveTab.Licenses)}
 									>
 										Licenses
 									</SidebarItem>
 									<SidebarItem
-										href="#"
+										href={`#${ActiveTab.Milestones}`}
 										icon={FaAward}
 										active={activeTab === ActiveTab.Milestones}
-										onClick={() => setActiveTab(ActiveTab.Milestones)}
+										onClick={() => handleSetActiveTab(ActiveTab.Milestones)}
 									>
 										Milestones
 									</SidebarItem>
 									<SidebarItem
-										href="#"
+										href={`#${ActiveTab.Skills}`}
 										icon={FaTools}
 										active={activeTab === ActiveTab.Skills}
-										onClick={() => setActiveTab(ActiveTab.Skills)}
+										onClick={() => handleSetActiveTab(ActiveTab.Skills)}
 									>
 										Skills
 									</SidebarItem>
