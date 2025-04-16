@@ -13,7 +13,7 @@ import {
 	SidebarCollapse,
 	SidebarLogo,
 } from "flowbite-react";
-import { getPlaythroughById, Playthrough, savePlaythrough } from "@/lib/localStorage";
+import { getPlaythroughById, Playthrough } from "@/lib/localStorage";
 import CollectionsTab from "./CollectionsTab";
 import MilestonesTab from "./MilestonesTab";
 import CalendarTab, { CalendarTabHandle } from "./CalendarTab";
@@ -36,7 +36,6 @@ import {
 import { FaTools } from "react-icons/fa";
 import { GoStarFill } from "react-icons/go";
 
-// Enum for active tab
 enum ActiveTab {
 	Overview = "overview",
 	Calendar = "calendar",
@@ -56,8 +55,6 @@ export default function PlaythroughPage() {
 	const [isLoading, setIsLoading] = useState(true);
 	const [isSaving, setIsSaving] = useState(false);
 	const [activeTab, setActiveTab] = useState<ActiveTab>(ActiveTab.Overview);
-
-	// Reference to the calendar component to call its save function
 	const calendarRef = useRef<CalendarTabHandle>(null);
 
 	useEffect(() => {
@@ -66,8 +63,7 @@ export default function PlaythroughPage() {
 			return;
 		}
 
-		const data = getPlaythroughById(params.id);
-		setPlaythrough(data);
+		setPlaythrough(getPlaythroughById(params.id));
 		setIsLoading(false);
 	}, [params.id]);
 
@@ -76,16 +72,15 @@ export default function PlaythroughPage() {
 
 		setIsSaving(true);
 		try {
-			// Save the calendar data if we're on the calendar tab
+			let status = false;
 			if (activeTab === ActiveTab.Calendar && calendarRef.current) {
-				calendarRef.current.saveSelectedDay();
+				status = calendarRef.current.saveSelectedDay();
 			}
 
-			// Save the playthrough data
-			savePlaythrough(playthrough);
-
-			// Show success message
-			successToast({ message: "Playthrough Saved Successfully!" });
+			if (status) {
+				setPlaythrough(getPlaythroughById(playthrough.id));
+				successToast({ message: "Playthrough Saved Successfully!" });
+			}
 
 			setTimeout(() => {
 				setIsSaving(false);
@@ -136,7 +131,6 @@ export default function PlaythroughPage() {
 		return <NotFoundCard message="Playthrough not found" />;
 	}
 
-	// Render the active tab content
 	const renderTabContent = () => {
 		switch (activeTab) {
 			case ActiveTab.Calendar:

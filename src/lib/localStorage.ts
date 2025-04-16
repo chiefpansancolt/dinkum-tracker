@@ -1,12 +1,9 @@
 import { Season } from "@/types/dinkum";
 
-// Add a new interface for calendar data
 export interface CalendarData {
   currentDay: number;
   currentSeason: Season;
 }
-
-// Update the Playthrough interface to include calendar data
 export interface Playthrough {
   id: string;
   name: string;
@@ -22,8 +19,7 @@ export interface Playthrough {
   milestones: {
     [key: string]: boolean;
   };
-  // Add the calendar property
-  calendar?: CalendarData;
+  calendar: CalendarData;
 }
 
 const STORAGE_KEY = "dinkum-tracker-playthroughs";
@@ -102,7 +98,6 @@ export const createEmptyPlaythrough = (name: string): Playthrough => {
       items: [],
     },
     milestones: {},
-    // Initialize with default calendar values (starting in Summer, day 1)
     calendar: {
       currentDay: 1,
       currentSeason: "Summer",
@@ -110,9 +105,6 @@ export const createEmptyPlaythrough = (name: string): Playthrough => {
   };
 };
 
-// New helper functions specific to calendar operations
-
-// Update the calendar data for a specific playthrough
 export const updatePlaythroughCalendar = (playthroughId: string, calendarData: CalendarData): boolean => {
   if (typeof window === "undefined") {
     return false;
@@ -124,24 +116,21 @@ export const updatePlaythroughCalendar = (playthroughId: string, calendarData: C
     return false;
   }
   
-  // Update the calendar data
   const updatedPlaythrough = {
     ...playthrough,
     calendar: calendarData,
+    lastUpdated: new Date().toISOString(),
   };
   
-  // Save the updated playthrough
   savePlaythrough(updatedPlaythrough);
   
   return true;
 };
 
-// Get calendar data for a specific playthrough
 export const getPlaythroughCalendar = (playthroughId: string): CalendarData | null => {
   const playthrough = getPlaythroughById(playthroughId);
   
   if (!playthrough || !playthrough.calendar) {
-    // Return default values if no calendar data exists
     return {
       currentDay: 1,
       currentSeason: "Summer",

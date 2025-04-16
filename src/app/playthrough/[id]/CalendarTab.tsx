@@ -6,11 +6,10 @@ import { useCalendarStore, getSeasonDays } from "@/lib/services/calendar";
 import { Season, CalendarDay } from "@/types/dinkum";
 import { getSeasonStyles, getSeasonEmoji } from "@/lib/services/seasonalTheme";
 import DayDetails from "./DayDetails";
-import { updatePlaythroughCalendar, getPlaythroughCalendar } from "@/lib/localStorage";
+import { updatePlaythroughCalendar, getPlaythroughCalendar } from "@/lib/localStorage"
 
-// Define the ref handle type
 export interface CalendarTabHandle {
-	saveSelectedDay: () => void;
+	saveSelectedDay: () => boolean;
 }
 
 const CalendarTab = forwardRef<CalendarTabHandle>((props, ref) => {
@@ -23,13 +22,11 @@ const CalendarTab = forwardRef<CalendarTabHandle>((props, ref) => {
 	const [seasonDays, setSeasonDays] = useState(getSeasonDays(selectedSeason));
 	const [selectedDay, setSelectedDay] = useState<CalendarDay | null>(currentDay);
 
-	// On component mount, check if we have saved calendar data for this playthrough
 	useEffect(() => {
 		if (playthroughId) {
 			const savedCalendarData = getPlaythroughCalendar(playthroughId);
 
 			if (savedCalendarData) {
-				// Set the current day in the calendar store
 				try {
 					setDate(savedCalendarData.currentDay, savedCalendarData.currentSeason);
 				} catch (error) {
@@ -48,19 +45,18 @@ const CalendarTab = forwardRef<CalendarTabHandle>((props, ref) => {
 			setSelectedDay(currentDay);
 		}
 	}, [currentDay, selectedDay]);
-
-	// The function to save the selected day as the current day
+	
 	const saveSelectedDay = () => {
-		if (!selectedDay || !playthroughId) return;
+		if (!selectedDay || !playthroughId) return false;
 
-		// Save to localStorage using our integrated approach
-		updatePlaythroughCalendar(playthroughId, {
+		const success = updatePlaythroughCalendar(playthroughId, {
 			currentDay: selectedDay.day,
 			currentSeason: selectedDay.season,
 		});
-	};
 
-	// Expose the saveSelectedDay function to the parent component
+		return success;
+	};
+	
 	useImperativeHandle(ref, () => ({
 		saveSelectedDay,
 	}));
@@ -166,7 +162,6 @@ const CalendarTab = forwardRef<CalendarTabHandle>((props, ref) => {
 				</div>
 			</header>
 
-			{/* Note about save functionality */}
 			<div className="bg-blue-50 px-4 py-2 text-sm text-blue-800 dark:bg-blue-900/20 dark:text-blue-200">
 				<p>
 					Current day:{" "}
@@ -190,7 +185,6 @@ const CalendarTab = forwardRef<CalendarTabHandle>((props, ref) => {
 				</p>
 			</div>
 
-			{/* Calendar grid implementation */}
 			<div
 				className={`shadow-sm ring-1 ring-black/5 lg:flex lg:flex-auto lg:flex-col dark:ring-white/10 ${seasonStyles.bg}`}
 			>
@@ -340,9 +334,7 @@ const CalendarTab = forwardRef<CalendarTabHandle>((props, ref) => {
 			<div className="pt-4">{selectedDay && <DayDetails day={selectedDay} />}</div>
 		</div>
 	);
-});
-
-// Set display name for debugging purposes
+})
 CalendarTab.displayName = "CalendarTab";
 
 export default CalendarTab;
