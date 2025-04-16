@@ -69,7 +69,7 @@ const CollectionStats: React.FC<CollectionStatsProps> = ({ collections, donation
 
 	return (
 		<Card className="w-full">
-			<h2 className="text-primary mb-4 text-xl font-bold">Collection Progress</h2>
+			<h2 className="text-primary mb-4 text-xl font-bold">Pedia Progress</h2>
 
 			<div className="space-y-5">
 				<div>
@@ -102,7 +102,7 @@ const CollectionStats: React.FC<CollectionStatsProps> = ({ collections, donation
 						</div>
 						<Progress
 							progress={data.percentage}
-							color={(progressColorMap[category] as any) || "gray"}
+							color={(progressColorMap[category] as string) || "gray"}
 						/>
 
 						<div className="mt-1 mb-1 flex justify-between">
@@ -115,7 +115,7 @@ const CollectionStats: React.FC<CollectionStatsProps> = ({ collections, donation
 						</div>
 						<Progress
 							progress={data.donationPercentage}
-							color={(progressColorMap[category] as any) || "gray"}
+							color={(progressColorMap[category] as string) || "gray"}
 							size="sm"
 						/>
 					</div>

@@ -2,24 +2,24 @@
 
 import React, { useState, useEffect, forwardRef, useImperativeHandle } from "react";
 import { Select, Card, Label } from "flowbite-react";
-import CollectionItem from "@/comps/playthrough/CollectionItem";
-import { bugs } from "@/data/dinkum/pedia/bugs";
+import CollectionItem from "@/playthrough/pedia/CollectionItem";
+import { critters } from "@/data/dinkum/pedia/critters";
 
 const TIME_PERIODS = ["Morning", "Day", "Evening", "Night", "All"];
 const SEASONS = ["Spring", "Summer", "Autumn", "Winter", "All"];
 
-export interface BugsTabHandle {
+export interface CrittersTabHandle {
 	saveCollectionState: () => { collected: string[]; donated: string[] };
 }
 
-interface BugsTabProps {
+interface CrittersTabProps {
 	collected: string[];
 	donated: string[];
 	onCollectedChange: (id: string, collected: boolean) => void;
 	onDonatedChange: (id: string, donated: boolean) => void;
 }
 
-const BugsTab = forwardRef<BugsTabHandle, BugsTabProps>(
+const CrittersTab = forwardRef<CrittersTabHandle, CrittersTabProps>(
 	({ collected, donated, onCollectedChange, onDonatedChange }, ref) => {
 		const [biomeFilter, setBiomeFilter] = useState<string>("All");
 		const [rarityFilter, setRarityFilter] = useState<string>("All");
@@ -36,7 +36,7 @@ const BugsTab = forwardRef<BugsTabHandle, BugsTabProps>(
 
 		const uniqueBiomes = React.useMemo(() => {
 			const biomes = new Set<string>();
-			bugs.forEach((item) => {
+			critters.forEach((item) => {
 				item.biome.forEach((b) => biomes.add(b));
 			});
 			return ["All", ...Array.from(biomes)].sort();
@@ -44,12 +44,12 @@ const BugsTab = forwardRef<BugsTabHandle, BugsTabProps>(
 
 		const uniqueRarities = React.useMemo(() => {
 			const rarities = new Set<string>();
-			bugs.forEach((item) => rarities.add(item.rarity));
+			critters.forEach((item) => rarities.add(item.rarity));
 			return ["All", ...Array.from(rarities)].sort();
 		}, []);
 
 		const filteredItems = React.useMemo(() => {
-			return bugs.filter((item) => {
+			return critters.filter((item) => {
 				if (biomeFilter !== "All" && !item.biome.includes(biomeFilter)) {
 					return false;
 				}
@@ -199,7 +199,7 @@ const BugsTab = forwardRef<BugsTabHandle, BugsTabProps>(
 
 				<div className="mb-4">
 					<p className="text-primary font-medium">
-						Showing {filteredItems.length} of {bugs.length} bugs • Collected:{" "}
+						Showing {filteredItems.length} of {critters.length} critters • Collected:{" "}
 						{collectedState.length} • Donated: {donatedState.length}
 					</p>
 				</div>
@@ -229,6 +229,6 @@ const BugsTab = forwardRef<BugsTabHandle, BugsTabProps>(
 	}
 );
 
-BugsTab.displayName = "BugsTab";
+CrittersTab.displayName = "CrittersTab";
 
-export default BugsTab;
+export default CrittersTab;

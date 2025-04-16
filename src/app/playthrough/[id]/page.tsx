@@ -16,8 +16,8 @@ import {
 import { getPlaythroughById, Playthrough } from "@/lib/localStorage";
 import CollectionsTab, { CollectionsTabHandle, CollectionType } from "./CollectionsTab";
 import CalendarTab, { CalendarTabHandle } from "./CalendarTab";
-import NotFoundCard from "@/components/NotFoundCard";
-import Dashboard from "@/comps/playthrough/Dashboard";
+import NotFoundCard from "@/comps/NotFoundCard";
+import Dashboard from "@/playthrough/dashboard/Dashboard";
 import { errorToast, successToast } from "@/lib/notifications";
 import { FaRegSave } from "react-icons/fa";
 import { HiHome, HiOutlineMinusSm, HiOutlinePlusSm } from "react-icons/hi";

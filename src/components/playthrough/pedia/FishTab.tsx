@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, forwardRef, useImperativeHandle } from "react";
 import { Select, Card, Label } from "flowbite-react";
-import CollectionItem from "@/comps/playthrough/CollectionItem";
+import CollectionItem from "@/playthrough/pedia/CollectionItem";
 import { fish } from "@/data/dinkum/pedia/fish";
 
 const TIME_PERIODS = ["Morning", "Day", "Evening", "Night", "All"];

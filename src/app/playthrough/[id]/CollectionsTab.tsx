@@ -2,9 +2,9 @@
 
 import React, { useRef, useState, useEffect, useImperativeHandle } from "react";
 import { useParams } from "next/navigation";
-import FishTab, { FishTabHandle } from "@/comps/playthrough/FishTab";
-import BugsTab, { BugsTabHandle } from "@/comps/playthrough/BugsTab";
-import CrittersTab, { CrittersTabHandle } from "@/comps/playthrough/CrittersTab";
+import FishTab, { FishTabHandle } from "@/playthrough/pedia/FishTab";
+import BugsTab, { BugsTabHandle } from "@/playthrough/pedia/BugsTab";
+import CrittersTab, { CrittersTabHandle } from "@/playthrough/pedia/CrittersTab";
 import { fish } from "@/data/dinkum/pedia/fish";
 import { bugs } from "@/data/dinkum/pedia/bugs";
 import { critters } from "@/data/dinkum/pedia/critters";
