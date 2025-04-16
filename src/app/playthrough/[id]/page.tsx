@@ -20,10 +20,10 @@ import {
 	getPlaythroughDonations,
 	Collection,
 } from "@/lib/localStorage";
-import CollectionsTab, { CollectionsTabHandle } from "./CollectionsTab";
+import CollectionsTab, { CollectionsTabHandle, CollectionType } from "./CollectionsTab";
 import MilestonesTab from "./MilestonesTab";
 import CalendarTab, { CalendarTabHandle } from "./CalendarTab";
-import NotFoundCard from "@/comps/NotFoundCard";
+import NotFoundCard from "@/components/NotFoundCard";
 import Dashboard from "@/comps/playthrough/Dashboard";
 import { errorToast, successToast } from "@/lib/notifications";
 import { FaRegSave } from "react-icons/fa";
@@ -56,6 +56,19 @@ enum ActiveTab {
 	Skills = "skills",
 }
 
+const mapTabToCollectionType = (tab: ActiveTab): CollectionType | null => {
+	switch (tab) {
+		case ActiveTab.Fish:
+			return "fish";
+		case ActiveTab.Bugs:
+			return "bugs";
+		case ActiveTab.Critters:
+			return "critters";
+		default:
+			return null;
+	}
+};
+
 export default function PlaythroughPage() {
 	const params = useParams();
 	const [playthrough, setPlaythrough] = useState<Playthrough | null>(null);
@@ -87,18 +100,17 @@ export default function PlaythroughPage() {
 
 		setIsSaving(true);
 		try {
+			let status = false;
 			if (activeTab === ActiveTab.Calendar && calendarRef.current) {
-				calendarRef.current.saveSelectedDay();
+				status = calendarRef.current.saveSelectedDay();
 			}
 
 			if (
-				[ActiveTab.Fish, ActiveTab.Bugs, ActiveTab.Critters].includes(activeTab) &&
-				collectionsRef.current
-			) {
-				collectionsRef.current.saveCollections();
+				[ActiveTab.Fish, ActiveTab.Bugs, ActiveTab.Critters].includes(activeTab) && collectionsRef.current) {
+				status = collectionsRef.current.saveCollections();
 			}
 
-			successToast({ message: "Playthrough Saved Successfully!" });
+			if (status) successToast({ message: "Playthrough Saved Successfully!" });
 
 			setTimeout(() => {
 				setIsSaving(false);
@@ -185,11 +197,15 @@ export default function PlaythroughPage() {
 			case ActiveTab.Fish:
 			case ActiveTab.Bugs:
 			case ActiveTab.Critters:
+				const collectionType = mapTabToCollectionType(activeTab);
+				if (!collectionType) return null;
+
 				return (
 					<CollectionsTab
 						ref={collectionsRef}
 						collections={playthrough.collections}
 						donations={donations || undefined}
+						activeCollectionType={collectionType}
 						onUpdate={handleCollectionUpdate}
 						onDonationUpdate={handleDonationUpdate}
 					/>

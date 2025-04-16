@@ -1,36 +1,26 @@
 "use client";
 
 import React, { useRef } from "react";
-import { Accordion, AccordionContent, AccordionPanel, AccordionTitle } from "flowbite-react";
 import FishTab, { FishTabHandle } from "@/comps/playthrough/FishTab";
 import BugsTab, { BugsTabHandle } from "@/comps/playthrough/BugsTab";
 import CrittersTab, { CrittersTabHandle } from "@/comps/playthrough/CrittersTab";
 import { fish } from "@/data/dinkum/pedia/fish";
 import { bugs } from "@/data/dinkum/pedia/bugs";
 import { critters } from "@/data/dinkum/pedia/critters";
+import { Collection } from "@/lib/localStorage"
 
-interface Collection {
-	fish: string[];
-	bugs: string[];
-	critters: string[];
-}
-
-interface DonationCollection {
-	fish: string[];
-	bugs: string[];
-	critters: string[];
-}
+export type CollectionType = "fish" | "bugs" | "critters";
 
 interface CollectionsTabProps {
 	collections: Collection;
-	donations?: DonationCollection;
+	donations?: Collection;
+	activeCollectionType: CollectionType;
 	onUpdate: (collectionType: keyof Collection, itemIds: string[]) => void;
-	onDonationUpdate?: (collectionType: keyof DonationCollection, itemIds: string[]) => void;
-	onSave?: () => void;
+	onDonationUpdate?: (collectionType: keyof Collection, itemIds: string[]) => void;
 }
 
 export interface CollectionsTabHandle {
-	saveCollections: () => void;
+	saveCollections: () => boolean;
 }
 
 const CollectionsTab = React.forwardRef<CollectionsTabHandle, CollectionsTabProps>(
@@ -42,9 +32,9 @@ const CollectionsTab = React.forwardRef<CollectionsTabHandle, CollectionsTabProp
 				bugs: [],
 				critters: [],
 			},
+			activeCollectionType,
 			onUpdate,
 			onDonationUpdate = () => {},
-			onSave,
 		},
 		ref
 	) => {
@@ -53,41 +43,39 @@ const CollectionsTab = React.forwardRef<CollectionsTabHandle, CollectionsTabProp
 		const crittersTabRef = useRef<CrittersTabHandle>(null);
 
 		const saveCollections = () => {
-			if (fishTabRef.current) {
+			if (activeCollectionType === "fish" && fishTabRef.current) {
 				const fishState = fishTabRef.current.saveCollectionState();
 				onUpdate("fish", fishState.collected);
 				onDonationUpdate("fish", fishState.donated);
 			}
 
-			if (bugsTabRef.current) {
+			if (activeCollectionType === "bugs" && bugsTabRef.current) {
 				const bugsState = bugsTabRef.current.saveCollectionState();
 				onUpdate("bugs", bugsState.collected);
 				onDonationUpdate("bugs", bugsState.donated);
 			}
 
-			if (crittersTabRef.current) {
+			if (activeCollectionType === "critters" && crittersTabRef.current) {
 				const crittersState = crittersTabRef.current.saveCollectionState();
 				onUpdate("critters", crittersState.collected);
 				onDonationUpdate("critters", crittersState.donated);
 			}
 
-			if (onSave) {
-				onSave();
-			}
+			return true
 		};
 
 		React.useImperativeHandle(ref, () => ({
 			saveCollections,
 		}));
 
-		return (
-			<div className="space-y-6">
-				<Accordion>
-					<AccordionPanel>
-						<AccordionTitle>
-							Fish ({collections.fish.length}/{fish.length})
-						</AccordionTitle>
-						<AccordionContent>
+		const renderActiveCollection = () => {
+			switch (activeCollectionType) {
+				case "fish":
+					return (
+						<div className="space-y-4">
+							<h2 className="text-primary text-2xl font-bold">
+								Fish ({collections.fish.length}/{fish.length})
+							</h2>
 							<FishTab
 								ref={fishTabRef}
 								collected={collections.fish}
@@ -105,14 +93,14 @@ const CollectionsTab = React.forwardRef<CollectionsTabHandle, CollectionsTabProp
 									onDonationUpdate("fish", updatedDonations);
 								}}
 							/>
-						</AccordionContent>
-					</AccordionPanel>
-
-					<AccordionPanel>
-						<AccordionTitle>
-							Bugs ({collections.bugs.length}/{bugs.length})
-						</AccordionTitle>
-						<AccordionContent>
+						</div>
+					);
+				case "bugs":
+					return (
+						<div className="space-y-4">
+							<h2 className="text-primary text-2xl font-bold">
+								Bugs ({collections.bugs.length}/{bugs.length})
+							</h2>
 							<BugsTab
 								ref={bugsTabRef}
 								collected={collections.bugs}
@@ -130,14 +118,14 @@ const CollectionsTab = React.forwardRef<CollectionsTabHandle, CollectionsTabProp
 									onDonationUpdate("bugs", updatedDonations);
 								}}
 							/>
-						</AccordionContent>
-					</AccordionPanel>
-
-					<AccordionPanel>
-						<AccordionTitle>
-							Critters ({collections.critters?.length || 0}/{critters.length})
-						</AccordionTitle>
-						<AccordionContent>
+						</div>
+					);
+				case "critters":
+					return (
+						<div className="space-y-4">
+							<h2 className="text-primary text-2xl font-bold">
+								Critters ({collections.critters?.length || 0}/{critters.length})
+							</h2>
 							<CrittersTab
 								ref={crittersTabRef}
 								collected={collections.critters || []}
@@ -159,11 +147,14 @@ const CollectionsTab = React.forwardRef<CollectionsTabHandle, CollectionsTabProp
 									onDonationUpdate("critters", updatedDonations);
 								}}
 							/>
-						</AccordionContent>
-					</AccordionPanel>
-				</Accordion>
-			</div>
-		);
+						</div>
+					);
+				default:
+					return <div>Please select a collection type</div>;
+			}
+		};
+
+		return <div className="space-y-6">{renderActiveCollection()}</div>;
 	}
 );
 
