@@ -38,8 +38,10 @@ export const customTheme: CustomFlowbiteTheme = createTheme({
     },
     item: {
       base: "flex items-center justify-center rounded-lg p-2 text-base font-normal text-white hover:text-gray-300 dark:text-white",
+      active: "bg-primary text-white",
       icon: {
         base: "h-6 w-6 text-white transition duration-75 group-hover:text-gray-300 dark:text-white",
+        active: "text-white",
       },
     },
   },
