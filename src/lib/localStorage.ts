@@ -4,22 +4,25 @@ export interface CalendarData {
   currentDay: number;
   currentSeason: Season;
 }
+
+export interface Collection {
+  fish: string[];
+  bugs: string[];
+  critters: string[];
+}
+
 export interface Playthrough {
   id: string;
   name: string;
   createdAt: string;
   lastUpdated: string;
-  collections: {
-    animals: string[];
-    fish: string[];
-    bugs: string[];
-    minerals: string[];
-    items: string[];
-  };
+  collections: Collection
+  donations: Collection;
   milestones: {
     [key: string]: boolean;
   };
-  calendar: CalendarData;
+
+  calendar?: CalendarData;
 }
 
 const STORAGE_KEY = "dinkum-tracker-playthroughs";
@@ -91,13 +94,17 @@ export const createEmptyPlaythrough = (name: string): Playthrough => {
     createdAt: "",
     lastUpdated: "",
     collections: {
-      animals: [],
       fish: [],
       bugs: [],
-      minerals: [],
-      items: [],
+      critters: [],
+    },
+    donations: {
+      fish: [],
+      bugs: [],
+      critters: [],
     },
     milestones: {},
+
     calendar: {
       currentDay: 1,
       currentSeason: "Summer",
@@ -119,11 +126,12 @@ export const updatePlaythroughCalendar = (
     return false;
   }
 
+
   const updatedPlaythrough = {
     ...playthrough,
     calendar: calendarData,
-    lastUpdated: new Date().toISOString(),
   };
+
 
   savePlaythrough(updatedPlaythrough);
 
@@ -136,6 +144,7 @@ export const getPlaythroughCalendar = (
   const playthrough = getPlaythroughById(playthroughId);
 
   if (!playthrough || !playthrough.calendar) {
+
     return {
       currentDay: 1,
       currentSeason: "Summer",
@@ -143,4 +152,58 @@ export const getPlaythroughCalendar = (
   }
 
   return playthrough.calendar;
+};
+
+export const updatePlaythroughDonations = (
+  playthroughId: string,
+  collectionType: keyof Collection,
+  itemIds: string[],
+): boolean => {
+  if (typeof window === "undefined") {
+    return false;
+  }
+
+  const playthrough = getPlaythroughById(playthroughId);
+
+  if (!playthrough) {
+    return false;
+  }
+
+  if (!playthrough.donations) {
+    playthrough.donations = {
+      fish: [],
+      bugs: [],
+      critters: [],
+    };
+  }
+
+  const updatedPlaythrough = {
+    ...playthrough,
+    donations: {
+      ...playthrough.donations,
+      [collectionType]: itemIds,
+    },
+  };
+
+  savePlaythrough(updatedPlaythrough);
+
+  return true;
+};
+
+export const getPlaythroughDonations = (playthroughId: string): Collection | null => {
+  const playthrough = getPlaythroughById(playthroughId);
+
+  if (!playthrough) {
+    return null;
+  }
+
+  if (!playthrough.donations) {
+    return {
+      fish: [],
+      bugs: [],
+      critters: [],
+    };
+  }
+
+  return playthrough.donations;
 };

@@ -13,7 +13,7 @@ export const BIOMES = [
   "Ponds",
   "Billabongs",
   "Mangroves",
-] as const;
+];
 
 export const TIME_PERIODS = [
   "Morning",
@@ -21,9 +21,9 @@ export const TIME_PERIODS = [
   "Evening",
   "Night",
   "All",
-] as const;
+];
 
-const DILAY_MILESTONE_TYPES = [
+const DAILY_MILESTONE_TYPES = [
   "Day One",
   "Travel",
   "NPC",
@@ -40,7 +40,7 @@ const DILAY_MILESTONE_TYPES = [
   "Dinks",
 ];
 
-export const SEASONS = ["Spring", "Summer", "Autumn", "Winter", "All"] as const;
+export const SEASONS = ["Spring", "Summer", "Autumn", "Winter", "All"];
 
 export const RARITY_LEVELS = [
   "Common",
@@ -48,13 +48,13 @@ export const RARITY_LEVELS = [
   "Rare",
   "Very Rare",
   "Super Rare",
-] as const;
+];
 
 export type Biome = (typeof BIOMES)[number];
 export type TimePeriod = (typeof TIME_PERIODS)[number];
 export type Season = (typeof SEASONS)[number];
 export type RarityLevel = (typeof RARITY_LEVELS)[number];
-export type DailyMilestoneType = (typeof DILAY_MILESTONE_TYPES)[number];
+export type DailyMilestoneType = (typeof DAILY_MILESTONE_TYPES)[number];
 
 export interface PediaItem {
   id: string;

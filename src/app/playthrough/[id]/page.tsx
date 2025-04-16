@@ -13,11 +13,18 @@ import {
 	SidebarCollapse,
 	SidebarLogo,
 } from "flowbite-react";
-import { getPlaythroughById, Playthrough } from "@/lib/localStorage";
-import CollectionsTab from "./CollectionsTab";
+import {
+	getPlaythroughById,
+	Playthrough,
+	updatePlaythroughDonations,
+	getPlaythroughDonations,
+	Collection,
+} from "@/lib/localStorage";
+import CollectionsTab, { CollectionsTabHandle } from "./CollectionsTab";
 import MilestonesTab from "./MilestonesTab";
 import CalendarTab, { CalendarTabHandle } from "./CalendarTab";
-import NotFoundCard from "@/components/NotFoundCard";
+import NotFoundCard from "@/comps/NotFoundCard";
+import Dashboard from "@/comps/playthrough/Dashboard";
 import { errorToast, successToast } from "@/lib/notifications";
 import { FaRegSave } from "react-icons/fa";
 import { HiHome, HiOutlineMinusSm, HiOutlinePlusSm } from "react-icons/hi";
@@ -49,50 +56,16 @@ enum ActiveTab {
 	Skills = "skills",
 }
 
-const hashToTabMap: Record<string, ActiveTab> = {
-	"#overview": ActiveTab.Overview,
-	"#calendar": ActiveTab.Calendar,
-	"#npcs": ActiveTab.NPCs,
-	"#bugs": ActiveTab.Bugs,
-	"#critters": ActiveTab.Critters,
-	"#fish": ActiveTab.Fish,
-	"#buildings": ActiveTab.Buildings,
-	"#licenses": ActiveTab.Licenses,
-	"#milestones": ActiveTab.Milestones,
-	"#skills": ActiveTab.Skills,
-};
-
 export default function PlaythroughPage() {
 	const params = useParams();
 	const [playthrough, setPlaythrough] = useState<Playthrough | null>(null);
+	const [donations, setDonations] = useState<Collection | null>(null);
 	const [isLoading, setIsLoading] = useState(true);
 	const [isSaving, setIsSaving] = useState(false);
 	const [activeTab, setActiveTab] = useState<ActiveTab>(ActiveTab.Overview);
 
 	const calendarRef = useRef<CalendarTabHandle>(null);
-
-	useEffect(() => {
-		if (typeof window !== "undefined") {
-			const hash = window.location.hash.toLowerCase();
-			if (hash && hashToTabMap[hash]) {
-				setActiveTab(hashToTabMap[hash]);
-			}
-		}
-	}, []);
-
-	useEffect(() => {
-		const handleHashChange = () => {
-			const hash = window.location.hash.toLowerCase();
-			if (hash && hashToTabMap[hash]) {
-				setActiveTab(hashToTabMap[hash]);
-			}
-		};
-
-		window.addEventListener("hashchange", handleHashChange);
-		return () => {
-			window.removeEventListener("hashchange", handleHashChange);
-		};
-	}, []);
+	const collectionsRef = useRef<CollectionsTabHandle>(null);
 
 	useEffect(() => {
 		if (typeof params.id !== "string") {
@@ -102,6 +75,10 @@ export default function PlaythroughPage() {
 
 		const data = getPlaythroughById(params.id);
 		setPlaythrough(data);
+
+		const donationsData = getPlaythroughDonations(params.id as string);
+		setDonations(donationsData);
+
 		setIsLoading(false);
 	}, [params.id]);
 
@@ -112,6 +89,13 @@ export default function PlaythroughPage() {
 		try {
 			if (activeTab === ActiveTab.Calendar && calendarRef.current) {
 				calendarRef.current.saveSelectedDay();
+			}
+
+			if (
+				[ActiveTab.Fish, ActiveTab.Bugs, ActiveTab.Critters].includes(activeTab) &&
+				collectionsRef.current
+			) {
+				collectionsRef.current.saveCollections();
 			}
 
 			successToast({ message: "Playthrough Saved Successfully!" });
@@ -140,6 +124,28 @@ export default function PlaythroughPage() {
 		});
 	};
 
+	const handleDonationUpdate = (collectionType: keyof Collection, itemIds: string[]) => {
+		if (!playthrough || !params.id || typeof params.id !== "string") return;
+
+		setDonations((prev) => {
+			if (!prev) {
+				return {
+					fish: [],
+					bugs: [],
+					critters: [],
+					[collectionType]: itemIds,
+				};
+			}
+
+			return {
+				...prev,
+				[collectionType]: itemIds,
+			};
+		});
+
+		updatePlaythroughDonations(params.id, collectionType, itemIds);
+	};
+
 	const handleMilestoneUpdate = (milestoneId: string, completed: boolean) => {
 		if (!playthrough) return;
 
@@ -150,15 +156,6 @@ export default function PlaythroughPage() {
 				[milestoneId]: completed,
 			},
 		});
-	};
-
-	const handleTabChange = (tab: ActiveTab) => {
-		setActiveTab(tab);
-		const hash = Object.entries(hashToTabMap).find(([, value]) => value === tab)?.[0] || "";
-
-		if (typeof window !== "undefined") {
-			window.history.pushState(null, "", hash);
-		}
 	};
 
 	if (isLoading) {
@@ -186,38 +183,20 @@ export default function PlaythroughPage() {
 					/>
 				);
 			case ActiveTab.Fish:
-				return (
-					<CollectionsTab
-						collections={playthrough.collections}
-						onUpdate={handleCollectionUpdate}
-					/>
-				);
 			case ActiveTab.Bugs:
-				return (
-					<CollectionsTab
-						collections={playthrough.collections}
-						onUpdate={handleCollectionUpdate}
-					/>
-				);
 			case ActiveTab.Critters:
 				return (
 					<CollectionsTab
+						ref={collectionsRef}
 						collections={playthrough.collections}
+						donations={donations || undefined}
 						onUpdate={handleCollectionUpdate}
+						onDonationUpdate={handleDonationUpdate}
 					/>
 				);
 			case ActiveTab.Overview:
 			default:
-				return (
-					<div className="mb-4 grid grid-cols-2 gap-4 xl:grid-cols-4">
-						<div className="h-32 rounded-xl border-2 border-dashed border-gray-300 lg:h-64 dark:border-gray-600">
-							<p className="p-4 text-center">Overview dashboard will go here</p>
-						</div>
-						<div className="h-32 rounded-xl border-2 border-dashed border-gray-300 lg:h-64 dark:border-gray-600"></div>
-						<div className="rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600"></div>
-						<div className="h-32 rounded-xl border-2 border-dashed border-gray-300 lg:h-64 dark:border-gray-600"></div>
-					</div>
-				);
+				return <Dashboard playthrough={playthrough} donations={donations || undefined} />;
 		}
 	};
 
@@ -254,26 +233,26 @@ export default function PlaythroughPage() {
 							<SidebarItems>
 								<SidebarItemGroup>
 									<SidebarItem
-										href="#overview"
+										href="#"
 										icon={MdDashboard}
 										active={activeTab === ActiveTab.Overview}
-										onClick={() => handleTabChange(ActiveTab.Overview)}
+										onClick={() => setActiveTab(ActiveTab.Overview)}
 									>
 										Overview
 									</SidebarItem>
 									<SidebarItem
-										href="#npcs"
+										href="#"
 										icon={FaUsers}
 										active={activeTab === ActiveTab.NPCs}
-										onClick={() => handleTabChange(ActiveTab.NPCs)}
+										onClick={() => setActiveTab(ActiveTab.NPCs)}
 									>
 										NPCs
 									</SidebarItem>
 									<SidebarItem
-										href="#calendar"
+										href="#"
 										icon={FaCalendarDays}
 										active={activeTab === ActiveTab.Calendar}
-										onClick={() => handleTabChange(ActiveTab.Calendar)}
+										onClick={() => setActiveTab(ActiveTab.Calendar)}
 									>
 										Calendar
 									</SidebarItem>
@@ -303,59 +282,59 @@ export default function PlaythroughPage() {
 										}}
 									>
 										<SidebarItem
-											href="#bugs"
+											href="#"
 											icon={FaBug}
 											active={activeTab === ActiveTab.Bugs}
-											onClick={() => handleTabChange(ActiveTab.Bugs)}
+											onClick={() => setActiveTab(ActiveTab.Bugs)}
 										>
 											Bugs
 										</SidebarItem>
 										<SidebarItem
-											href="#critters"
+											href="#"
 											icon={GoStarFill}
 											active={activeTab === ActiveTab.Critters}
-											onClick={() => handleTabChange(ActiveTab.Critters)}
+											onClick={() => setActiveTab(ActiveTab.Critters)}
 										>
 											Critters
 										</SidebarItem>
 										<SidebarItem
-											href="#fish"
+											href="#"
 											icon={FaFish}
 											active={activeTab === ActiveTab.Fish}
-											onClick={() => handleTabChange(ActiveTab.Fish)}
+											onClick={() => setActiveTab(ActiveTab.Fish)}
 										>
 											Fish
 										</SidebarItem>
 									</SidebarCollapse>
 									<SidebarItem
-										href="#buildings"
+										href="#"
 										icon={FaBuilding}
 										active={activeTab === ActiveTab.Buildings}
-										onClick={() => handleTabChange(ActiveTab.Buildings)}
+										onClick={() => setActiveTab(ActiveTab.Buildings)}
 									>
 										Buildings & Deeds
 									</SidebarItem>
 									<SidebarItem
-										href="#licenses"
+										href="#"
 										icon={FaIdCard}
 										active={activeTab === ActiveTab.Licenses}
-										onClick={() => handleTabChange(ActiveTab.Licenses)}
+										onClick={() => setActiveTab(ActiveTab.Licenses)}
 									>
 										Licenses
 									</SidebarItem>
 									<SidebarItem
-										href="#milestones"
+										href="#"
 										icon={FaAward}
 										active={activeTab === ActiveTab.Milestones}
-										onClick={() => handleTabChange(ActiveTab.Milestones)}
+										onClick={() => setActiveTab(ActiveTab.Milestones)}
 									>
 										Milestones
 									</SidebarItem>
 									<SidebarItem
-										href="#skills"
+										href="#"
 										icon={FaTools}
 										active={activeTab === ActiveTab.Skills}
-										onClick={() => handleTabChange(ActiveTab.Skills)}
+										onClick={() => setActiveTab(ActiveTab.Skills)}
 									>
 										Skills
 									</SidebarItem>
