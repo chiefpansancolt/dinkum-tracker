@@ -12,7 +12,6 @@ interface CalendarState {
 }
 
 export const useCalendarStore = create<CalendarState>((set, get) => {
-
   const calendar = new GameCalendar();
   const currentDay = calendar.getCurrentDay();
 
@@ -21,11 +20,9 @@ export const useCalendarStore = create<CalendarState>((set, get) => {
     currentDay,
     selectedSeason: currentDay.season,
 
-
     setSelectedSeason: (season: Season) => {
       set({ selectedSeason: season });
     },
-
 
     advanceDay: () => {
       const { calendar } = get();
@@ -36,7 +33,6 @@ export const useCalendarStore = create<CalendarState>((set, get) => {
         selectedSeason: newDay.season,
       });
     },
-
 
     setDate: (day: number, season: Season) => {
       const { calendar } = get();

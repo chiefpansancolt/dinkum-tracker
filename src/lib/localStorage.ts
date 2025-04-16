@@ -105,37 +105,42 @@ export const createEmptyPlaythrough = (name: string): Playthrough => {
   };
 };
 
-export const updatePlaythroughCalendar = (playthroughId: string, calendarData: CalendarData): boolean => {
+export const updatePlaythroughCalendar = (
+  playthroughId: string,
+  calendarData: CalendarData,
+): boolean => {
   if (typeof window === "undefined") {
     return false;
   }
 
   const playthrough = getPlaythroughById(playthroughId);
-  
+
   if (!playthrough) {
     return false;
   }
-  
+
   const updatedPlaythrough = {
     ...playthrough,
     calendar: calendarData,
     lastUpdated: new Date().toISOString(),
   };
-  
+
   savePlaythrough(updatedPlaythrough);
-  
+
   return true;
 };
 
-export const getPlaythroughCalendar = (playthroughId: string): CalendarData | null => {
+export const getPlaythroughCalendar = (
+  playthroughId: string,
+): CalendarData | null => {
   const playthrough = getPlaythroughById(playthroughId);
-  
+
   if (!playthrough || !playthrough.calendar) {
     return {
       currentDay: 1,
       currentSeason: "Summer",
     };
   }
-  
+
   return playthrough.calendar;
 };

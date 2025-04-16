@@ -2,11 +2,11 @@
 
 import React, { useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
 import { useParams } from "next/navigation";
-import { useCalendarStore, getSeasonDays } from "@/lib/services/calendar";
+import { useCalendarStore, getSeasonDays } from "@/service/calendar";
 import { Season, CalendarDay } from "@/types/dinkum";
-import { getSeasonStyles, getSeasonEmoji } from "@/lib/services/seasonalTheme";
+import { getSeasonStyles, getSeasonEmoji } from "@/service/seasonalTheme";
 import DayDetails from "./DayDetails";
-import { updatePlaythroughCalendar, getPlaythroughCalendar } from "@/lib/localStorage"
+import { updatePlaythroughCalendar, getPlaythroughCalendar } from "@/lib/localStorage";
 
 export interface CalendarTabHandle {
 	saveSelectedDay: () => boolean;
@@ -16,8 +16,7 @@ const CalendarTab = forwardRef<CalendarTabHandle>((props, ref) => {
 	const params = useParams();
 	const playthroughId = typeof params.id === "string" ? params.id : "";
 
-	const { currentDay, selectedSeason, setSelectedSeason, setDate } =
-		useCalendarStore();
+	const { currentDay, selectedSeason, setSelectedSeason, setDate } = useCalendarStore();
 
 	const [seasonDays, setSeasonDays] = useState(getSeasonDays(selectedSeason));
 	const [selectedDay, setSelectedDay] = useState<CalendarDay | null>(null);
@@ -59,7 +58,7 @@ const CalendarTab = forwardRef<CalendarTabHandle>((props, ref) => {
 
 		return status;
 	};
-	
+
 	useImperativeHandle(ref, () => ({
 		saveSelectedDay,
 	}));
@@ -335,7 +334,7 @@ const CalendarTab = forwardRef<CalendarTabHandle>((props, ref) => {
 			<div className="pt-4">{selectedDay && <DayDetails day={selectedDay} />}</div>
 		</div>
 	);
-})
+});
 CalendarTab.displayName = "CalendarTab";
 
 export default CalendarTab;
