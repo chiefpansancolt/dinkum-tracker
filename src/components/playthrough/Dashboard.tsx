@@ -1,14 +1,13 @@
 import React from "react";
 import { Card } from "flowbite-react";
 import CollectionStats from "./CollectionStats";
-import { Playthrough, Collection } from "@/lib/localStorage";
+import { Playthrough } from "@/lib/localStorage";
 
 interface DashboardProps {
 	playthrough: Playthrough;
-	donations?: Collection;
 }
 
-const Dashboard: React.FC<DashboardProps> = ({ playthrough, donations }) => {
+const Dashboard: React.FC<DashboardProps> = ({ playthrough }) => {
 	const daysSinceCreation = () => {
 		if (!playthrough.createdAt) return 0;
 
@@ -54,7 +53,7 @@ const Dashboard: React.FC<DashboardProps> = ({ playthrough, donations }) => {
 				</Card>
 			</div>
 
-			<CollectionStats collections={playthrough.collections} donations={donations} />
+			<CollectionStats collections={playthrough.collections} donations={playthrough.donations} />
 
 			<Card>
 				<h2 className="text-primary mb-4 text-xl font-bold">Game Info</h2>

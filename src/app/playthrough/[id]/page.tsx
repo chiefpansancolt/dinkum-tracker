@@ -16,12 +16,8 @@ import {
 import {
 	getPlaythroughById,
 	Playthrough,
-	updatePlaythroughDonations,
-	getPlaythroughDonations,
-	Collection,
 } from "@/lib/localStorage";
 import CollectionsTab, { CollectionsTabHandle, CollectionType } from "./CollectionsTab";
-import MilestonesTab from "./MilestonesTab";
 import CalendarTab, { CalendarTabHandle } from "./CalendarTab";
 import NotFoundCard from "@/components/NotFoundCard";
 import Dashboard from "@/comps/playthrough/Dashboard";
@@ -72,7 +68,6 @@ const mapTabToCollectionType = (tab: ActiveTab): CollectionType | null => {
 export default function PlaythroughPage() {
 	const params = useParams();
 	const [playthrough, setPlaythrough] = useState<Playthrough | null>(null);
-	const [donations, setDonations] = useState<Collection | null>(null);
 	const [isLoading, setIsLoading] = useState(true);
 	const [isSaving, setIsSaving] = useState(false);
 	const [activeTab, setActiveTab] = useState<ActiveTab>(ActiveTab.Overview);
@@ -85,32 +80,30 @@ export default function PlaythroughPage() {
 			setIsLoading(false);
 			return;
 		}
-
-		const data = getPlaythroughById(params.id);
-		setPlaythrough(data);
-
-		const donationsData = getPlaythroughDonations(params.id as string);
-		setDonations(donationsData);
+		
+		setPlaythrough(getPlaythroughById(params.id));
 
 		setIsLoading(false);
 	}, [params.id]);
 
 	const handleSave = async () => {
-		if (!playthrough) return;
+		if (!playthrough || !params.id || typeof params.id !== "string") return;
 
 		setIsSaving(true);
 		try {
-			let status = false;
 			if (activeTab === ActiveTab.Calendar && calendarRef.current) {
-				status = calendarRef.current.saveSelectedDay();
+				calendarRef.current.saveSelectedDay();
 			}
 
 			if (
-				[ActiveTab.Fish, ActiveTab.Bugs, ActiveTab.Critters].includes(activeTab) && collectionsRef.current) {
-				status = collectionsRef.current.saveCollections();
+				[ActiveTab.Fish, ActiveTab.Bugs, ActiveTab.Critters].includes(activeTab) &&
+				collectionsRef.current
+			) {
+				collectionsRef.current.saveCollections();
 			}
 
-			if (status) successToast({ message: "Playthrough Saved Successfully!" });
+			successToast({ message: "Playthrough Saved Successfully!" });
+			setPlaythrough(getPlaythroughById(params.id));
 
 			setTimeout(() => {
 				setIsSaving(false);
@@ -119,55 +112,6 @@ export default function PlaythroughPage() {
 			errorToast({ message: JSON.stringify(error) });
 			setIsSaving(false);
 		}
-	};
-
-	const handleCollectionUpdate = (
-		collectionType: keyof Playthrough["collections"],
-		itemIds: string[]
-	) => {
-		if (!playthrough) return;
-
-		setPlaythrough({
-			...playthrough,
-			collections: {
-				...playthrough.collections,
-				[collectionType]: itemIds,
-			},
-		});
-	};
-
-	const handleDonationUpdate = (collectionType: keyof Collection, itemIds: string[]) => {
-		if (!playthrough || !params.id || typeof params.id !== "string") return;
-
-		setDonations((prev) => {
-			if (!prev) {
-				return {
-					fish: [],
-					bugs: [],
-					critters: [],
-					[collectionType]: itemIds,
-				};
-			}
-
-			return {
-				...prev,
-				[collectionType]: itemIds,
-			};
-		});
-
-		updatePlaythroughDonations(params.id, collectionType, itemIds);
-	};
-
-	const handleMilestoneUpdate = (milestoneId: string, completed: boolean) => {
-		if (!playthrough) return;
-
-		setPlaythrough({
-			...playthrough,
-			milestones: {
-				...playthrough.milestones,
-				[milestoneId]: completed,
-			},
-		});
 	};
 
 	if (isLoading) {
@@ -187,13 +131,6 @@ export default function PlaythroughPage() {
 		switch (activeTab) {
 			case ActiveTab.Calendar:
 				return <CalendarTab ref={calendarRef} />;
-			case ActiveTab.Milestones:
-				return (
-					<MilestonesTab
-						milestones={playthrough.milestones}
-						onUpdate={handleMilestoneUpdate}
-					/>
-				);
 			case ActiveTab.Fish:
 			case ActiveTab.Bugs:
 			case ActiveTab.Critters:
@@ -204,15 +141,13 @@ export default function PlaythroughPage() {
 					<CollectionsTab
 						ref={collectionsRef}
 						collections={playthrough.collections}
-						donations={donations || undefined}
+						donations={playthrough.donations}
 						activeCollectionType={collectionType}
-						onUpdate={handleCollectionUpdate}
-						onDonationUpdate={handleDonationUpdate}
 					/>
 				);
 			case ActiveTab.Overview:
 			default:
-				return <Dashboard playthrough={playthrough} donations={donations || undefined} />;
+				return <Dashboard playthrough={playthrough} />;
 		}
 	};
 

@@ -6,7 +6,7 @@ import { useCalendarStore, getSeasonDays } from "@/service/calendar";
 import { Season, CalendarDay } from "@/types/dinkum";
 import { getSeasonStyles, getSeasonEmoji } from "@/service/seasonalTheme";
 import DayDetails from "./DayDetails";
-import { updatePlaythroughCalendar, getPlaythroughCalendar } from "@/lib/localStorage";
+import { updatePlaythroughData, getPlaythroughById } from "@/lib/localStorage";
 
 export interface CalendarTabHandle {
 	saveSelectedDay: () => boolean;
@@ -24,7 +24,7 @@ const CalendarTab = forwardRef<CalendarTabHandle>((props, ref) => {
 
 	useEffect(() => {
 		if (playthroughId) {
-			const savedCalendarData = getPlaythroughCalendar(playthroughId);
+			const savedCalendarData = getPlaythroughById(playthroughId)?.calendar;
 			if (savedCalendarData) {
 				try {
 					setDate(savedCalendarData.currentDay, savedCalendarData.currentSeason);
@@ -51,9 +51,11 @@ const CalendarTab = forwardRef<CalendarTabHandle>((props, ref) => {
 
 		setDate(selectedDay.day, selectedDay.season);
 
-		const status = updatePlaythroughCalendar(playthroughId, {
-			currentDay: selectedDay.day,
-			currentSeason: selectedDay.season,
+		const status = updatePlaythroughData(playthroughId, {
+			calendar: {
+				currentDay: selectedDay.day,
+				currentSeason: selectedDay.season,
+			},
 		});
 
 		return status;

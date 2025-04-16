@@ -1,72 +1,122 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect, useImperativeHandle } from "react";
+import { useParams } from "next/navigation";
 import FishTab, { FishTabHandle } from "@/comps/playthrough/FishTab";
 import BugsTab, { BugsTabHandle } from "@/comps/playthrough/BugsTab";
 import CrittersTab, { CrittersTabHandle } from "@/comps/playthrough/CrittersTab";
 import { fish } from "@/data/dinkum/pedia/fish";
 import { bugs } from "@/data/dinkum/pedia/bugs";
 import { critters } from "@/data/dinkum/pedia/critters";
-import { Collection } from "@/lib/localStorage"
+import { updatePlaythroughData, Collection } from "@/lib/localStorage";
 
 export type CollectionType = "fish" | "bugs" | "critters";
 
 interface CollectionsTabProps {
 	collections: Collection;
-	donations?: Collection;
+	donations: Collection;
 	activeCollectionType: CollectionType;
-	onUpdate: (collectionType: keyof Collection, itemIds: string[]) => void;
-	onDonationUpdate?: (collectionType: keyof Collection, itemIds: string[]) => void;
 }
 
 export interface CollectionsTabHandle {
-	saveCollections: () => boolean;
+	saveCollections: () => void;
 }
 
 const CollectionsTab = React.forwardRef<CollectionsTabHandle, CollectionsTabProps>(
 	(
 		{
 			collections,
-			donations = {
-				fish: [],
-				bugs: [],
-				critters: [],
-			},
+			donations,
 			activeCollectionType,
-			onUpdate,
-			onDonationUpdate = () => {},
 		},
 		ref
 	) => {
+		const params = useParams();
+		const playthroughId = typeof params.id === "string" ? params.id : "";
 		const fishTabRef = useRef<FishTabHandle>(null);
 		const bugsTabRef = useRef<BugsTabHandle>(null);
 		const crittersTabRef = useRef<CrittersTabHandle>(null);
 
+		const [localCollections, setLocalCollections] = useState<Collection>(collections);
+		const [localDonations, setLocalDonations] = useState<Collection>(donations);
+
+		useEffect(() => {
+			setLocalCollections(collections);
+			setLocalDonations(donations);
+		}, [collections, donations]);
+
 		const saveCollections = () => {
+			if (!playthroughId) return false;
+
+			let status = false;
 			if (activeCollectionType === "fish" && fishTabRef.current) {
 				const fishState = fishTabRef.current.saveCollectionState();
-				onUpdate("fish", fishState.collected);
-				onDonationUpdate("fish", fishState.donated);
+				status = updatePlaythroughData(playthroughId, {
+					collections: {
+						[activeCollectionType]: fishState.collected,
+					} as Partial<Collection>,
+					donations: {
+						[activeCollectionType]: fishState.donated,
+					} as Partial<Collection>,
+				});
 			}
 
 			if (activeCollectionType === "bugs" && bugsTabRef.current) {
 				const bugsState = bugsTabRef.current.saveCollectionState();
-				onUpdate("bugs", bugsState.collected);
-				onDonationUpdate("bugs", bugsState.donated);
+				status = updatePlaythroughData(playthroughId, {
+					collections: {
+						[activeCollectionType]: bugsState.collected,
+					} as Partial<Collection>,
+					donations: {
+						[activeCollectionType]: bugsState.donated,
+					} as Partial<Collection>,
+				});
 			}
 
 			if (activeCollectionType === "critters" && crittersTabRef.current) {
 				const crittersState = crittersTabRef.current.saveCollectionState();
-				onUpdate("critters", crittersState.collected);
-				onDonationUpdate("critters", crittersState.donated);
+				status = updatePlaythroughData(playthroughId, {
+					collections: {
+						[activeCollectionType]: crittersState.collected,
+					} as Partial<Collection>,
+					donations: {
+						[activeCollectionType]: crittersState.donated,
+					} as Partial<Collection>,
+				});
 			}
 
-			return true
+			return status;
 		};
 
-		React.useImperativeHandle(ref, () => ({
+		useImperativeHandle(ref, () => ({
 			saveCollections,
 		}));
+
+		const handleCollectionChange = (type: CollectionType, id: string, collected: boolean) => {
+			setLocalCollections((prev) => {
+				const updatedItems = collected
+					? [...prev[type], id]
+					: prev[type].filter((itemId) => itemId !== id);
+
+				return {
+					...prev,
+					[type]: updatedItems,
+				};
+			});
+		};
+
+		const handleDonationChange = (type: CollectionType, id: string, donated: boolean) => {
+			setLocalDonations((prev) => {
+				const updatedItems = donated
+					? [...prev[type], id]
+					: prev[type].filter((itemId) => itemId !== id);
+
+				return {
+					...prev,
+					[type]: updatedItems,
+				};
+			});
+		};
 
 		const renderActiveCollection = () => {
 			switch (activeCollectionType) {
@@ -74,24 +124,18 @@ const CollectionsTab = React.forwardRef<CollectionsTabHandle, CollectionsTabProp
 					return (
 						<div className="space-y-4">
 							<h2 className="text-primary text-2xl font-bold">
-								Fish ({collections.fish.length}/{fish.length})
+								Fish ({localCollections.fish.length}/{fish.length})
 							</h2>
 							<FishTab
 								ref={fishTabRef}
-								collected={collections.fish}
-								donated={donations.fish}
-								onCollectedChange={(id, collected) => {
-									const updatedCollection = collected
-										? [...collections.fish, id]
-										: collections.fish.filter((itemId) => itemId !== id);
-									onUpdate("fish", updatedCollection);
-								}}
-								onDonatedChange={(id, donated) => {
-									const updatedDonations = donated
-										? [...donations.fish, id]
-										: donations.fish.filter((itemId) => itemId !== id);
-									onDonationUpdate("fish", updatedDonations);
-								}}
+								collected={localCollections.fish}
+								donated={localDonations.fish}
+								onCollectedChange={(id, collected) =>
+									handleCollectionChange("fish", id, collected)
+								}
+								onDonatedChange={(id, donated) =>
+									handleDonationChange("fish", id, donated)
+								}
 							/>
 						</div>
 					);
@@ -99,24 +143,18 @@ const CollectionsTab = React.forwardRef<CollectionsTabHandle, CollectionsTabProp
 					return (
 						<div className="space-y-4">
 							<h2 className="text-primary text-2xl font-bold">
-								Bugs ({collections.bugs.length}/{bugs.length})
+								Bugs ({localCollections.bugs.length}/{bugs.length})
 							</h2>
 							<BugsTab
 								ref={bugsTabRef}
-								collected={collections.bugs}
-								donated={donations.bugs}
-								onCollectedChange={(id, collected) => {
-									const updatedCollection = collected
-										? [...collections.bugs, id]
-										: collections.bugs.filter((itemId) => itemId !== id);
-									onUpdate("bugs", updatedCollection);
-								}}
-								onDonatedChange={(id, donated) => {
-									const updatedDonations = donated
-										? [...donations.bugs, id]
-										: donations.bugs.filter((itemId) => itemId !== id);
-									onDonationUpdate("bugs", updatedDonations);
-								}}
+								collected={localCollections.bugs}
+								donated={localDonations.bugs}
+								onCollectedChange={(id, collected) =>
+									handleCollectionChange("bugs", id, collected)
+								}
+								onDonatedChange={(id, donated) =>
+									handleDonationChange("bugs", id, donated)
+								}
 							/>
 						</div>
 					);
@@ -124,28 +162,19 @@ const CollectionsTab = React.forwardRef<CollectionsTabHandle, CollectionsTabProp
 					return (
 						<div className="space-y-4">
 							<h2 className="text-primary text-2xl font-bold">
-								Critters ({collections.critters?.length || 0}/{critters.length})
+								Critters ({localCollections.critters?.length || 0}/{critters.length}
+								)
 							</h2>
 							<CrittersTab
 								ref={crittersTabRef}
-								collected={collections.critters || []}
-								donated={donations.critters || []}
-								onCollectedChange={(id, collected) => {
-									const updatedCollection = collected
-										? [...(collections.critters || []), id]
-										: (collections.critters || []).filter(
-												(itemId) => itemId !== id
-											);
-									onUpdate("critters", updatedCollection);
-								}}
-								onDonatedChange={(id, donated) => {
-									const updatedDonations = donated
-										? [...(donations.critters || []), id]
-										: (donations.critters || []).filter(
-												(itemId) => itemId !== id
-											);
-									onDonationUpdate("critters", updatedDonations);
-								}}
+								collected={localCollections.critters || []}
+								donated={localDonations.critters || []}
+								onCollectedChange={(id, collected) =>
+									handleCollectionChange("critters", id, collected)
+								}
+								onDonatedChange={(id, donated) =>
+									handleDonationChange("critters", id, donated)
+								}
 							/>
 						</div>
 					);

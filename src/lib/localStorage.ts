@@ -16,12 +16,11 @@ export interface Playthrough {
   name: string;
   createdAt: string;
   lastUpdated: string;
-  collections: Collection
+  collections: Collection;
   donations: Collection;
   milestones: {
     [key: string]: boolean;
   };
-
   calendar?: CalendarData;
 }
 
@@ -104,7 +103,6 @@ export const createEmptyPlaythrough = (name: string): Playthrough => {
       critters: [],
     },
     milestones: {},
-
     calendar: {
       currentDay: 1,
       currentSeason: "Summer",
@@ -112,9 +110,14 @@ export const createEmptyPlaythrough = (name: string): Playthrough => {
   };
 };
 
-export const updatePlaythroughCalendar = (
+export const updatePlaythroughData = (
   playthroughId: string,
-  calendarData: CalendarData,
+  updates: {
+    collections?: Partial<Collection>;
+    donations?: Partial<Collection>;
+    calendar?: CalendarData;
+    milestones?: Record<string, boolean>;
+  },
 ): boolean => {
   if (typeof window === "undefined") {
     return false;
@@ -126,84 +129,41 @@ export const updatePlaythroughCalendar = (
     return false;
   }
 
-
   const updatedPlaythrough = {
     ...playthrough,
-    calendar: calendarData,
+    lastUpdated: new Date().toISOString(),
   };
 
+  if (updates.collections) {
+    updatedPlaythrough.collections = {
+      ...updatedPlaythrough.collections,
+      ...updates.collections,
+    };
+  }
+
+  if (updates.donations) {
+    updatedPlaythrough.donations = {
+      ...(updatedPlaythrough.donations || {
+        fish: [],
+        bugs: [],
+        critters: [],
+      }),
+      ...updates.donations,
+    };
+  }
+
+  if (updates.calendar) {
+    updatedPlaythrough.calendar = updates.calendar;
+  }
+
+  if (updates.milestones) {
+    updatedPlaythrough.milestones = {
+      ...updatedPlaythrough.milestones,
+      ...updates.milestones,
+    };
+  }
 
   savePlaythrough(updatedPlaythrough);
 
   return true;
-};
-
-export const getPlaythroughCalendar = (
-  playthroughId: string,
-): CalendarData | null => {
-  const playthrough = getPlaythroughById(playthroughId);
-
-  if (!playthrough || !playthrough.calendar) {
-
-    return {
-      currentDay: 1,
-      currentSeason: "Summer",
-    };
-  }
-
-  return playthrough.calendar;
-};
-
-export const updatePlaythroughDonations = (
-  playthroughId: string,
-  collectionType: keyof Collection,
-  itemIds: string[],
-): boolean => {
-  if (typeof window === "undefined") {
-    return false;
-  }
-
-  const playthrough = getPlaythroughById(playthroughId);
-
-  if (!playthrough) {
-    return false;
-  }
-
-  if (!playthrough.donations) {
-    playthrough.donations = {
-      fish: [],
-      bugs: [],
-      critters: [],
-    };
-  }
-
-  const updatedPlaythrough = {
-    ...playthrough,
-    donations: {
-      ...playthrough.donations,
-      [collectionType]: itemIds,
-    },
-  };
-
-  savePlaythrough(updatedPlaythrough);
-
-  return true;
-};
-
-export const getPlaythroughDonations = (playthroughId: string): Collection | null => {
-  const playthrough = getPlaythroughById(playthroughId);
-
-  if (!playthrough) {
-    return null;
-  }
-
-  if (!playthrough.donations) {
-    return {
-      fish: [],
-      bugs: [],
-      critters: [],
-    };
-  }
-
-  return playthrough.donations;
 };
