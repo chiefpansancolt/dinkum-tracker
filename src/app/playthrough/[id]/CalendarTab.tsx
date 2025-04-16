@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, forwardRef, useImperativeHandle } from "react";
+import React, { useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
 import { useParams } from "next/navigation";
 import { useCalendarStore, getSeasonDays } from "@/lib/services/calendar";
 import { Season, CalendarDay } from "@/types/dinkum";
@@ -20,12 +20,12 @@ const CalendarTab = forwardRef<CalendarTabHandle>((props, ref) => {
 		useCalendarStore();
 
 	const [seasonDays, setSeasonDays] = useState(getSeasonDays(selectedSeason));
-	const [selectedDay, setSelectedDay] = useState<CalendarDay | null>(currentDay);
+	const [selectedDay, setSelectedDay] = useState<CalendarDay | null>(null);
+	const initialized = useRef(false);
 
 	useEffect(() => {
 		if (playthroughId) {
 			const savedCalendarData = getPlaythroughCalendar(playthroughId);
-
 			if (savedCalendarData) {
 				try {
 					setDate(savedCalendarData.currentDay, savedCalendarData.currentSeason);
@@ -41,20 +41,23 @@ const CalendarTab = forwardRef<CalendarTabHandle>((props, ref) => {
 	}, [selectedSeason]);
 
 	useEffect(() => {
-		if (!selectedDay) {
+		if (currentDay && !initialized.current) {
 			setSelectedDay(currentDay);
+			initialized.current = true;
 		}
-	}, [currentDay, selectedDay]);
-	
+	}, [currentDay]);
+
 	const saveSelectedDay = () => {
 		if (!selectedDay || !playthroughId) return false;
 
-		const success = updatePlaythroughCalendar(playthroughId, {
+		setDate(selectedDay.day, selectedDay.season);
+
+		const status = updatePlaythroughCalendar(playthroughId, {
 			currentDay: selectedDay.day,
 			currentSeason: selectedDay.season,
 		});
 
-		return success;
+		return status;
 	};
 	
 	useImperativeHandle(ref, () => ({
@@ -65,7 +68,6 @@ const CalendarTab = forwardRef<CalendarTabHandle>((props, ref) => {
 
 	const handleDayClick = (day: CalendarDay) => {
 		setSelectedDay(day);
-		setDate(day.day, day.season);
 	};
 
 	const nextSeason = () => {
@@ -255,18 +257,17 @@ const CalendarTab = forwardRef<CalendarTabHandle>((props, ref) => {
 										<ol className="mt-2">
 											{dayEvents.slice(0, 2).map((event, idx) => (
 												<li key={idx}>
-													<a
-														href="#"
+													<div
 														className="group flex"
 														onClick={(e) => {
 															e.preventDefault();
 															handleDayClick(day);
 														}}
 													>
-														<p className="group-hover:text-primary flex-auto truncate font-medium text-gray-900 dark:text-gray-200">
+														<p className="flex-auto truncate font-medium text-gray-900 dark:text-gray-200">
 															{event.emoji} {event.name}
 														</p>
-													</a>
+													</div>
 												</li>
 											))}
 											{dayEvents.length > 2 && (
