@@ -94,9 +94,11 @@ const CollectionsTab = React.forwardRef<CollectionsTabHandle, CollectionsTabProp
 
 		const handleCollectionChange = (type: CollectionType, id: string, collected: boolean) => {
 			setLocalCollections((prev) => {
+				const currentItems = prev[type] || [];
+
 				const updatedItems = collected
-					? [...prev[type], id]
-					: prev[type].filter((itemId) => itemId !== id);
+					? [...currentItems, id]
+					: currentItems.filter((itemId) => itemId !== id);
 
 				return {
 					...prev,
@@ -107,9 +109,11 @@ const CollectionsTab = React.forwardRef<CollectionsTabHandle, CollectionsTabProp
 
 		const handleDonationChange = (type: CollectionType, id: string, donated: boolean) => {
 			setLocalDonations((prev) => {
+				const currentItems = prev[type] || [];
+
 				const updatedItems = donated
-					? [...prev[type], id]
-					: prev[type].filter((itemId) => itemId !== id);
+					? [...currentItems, id]
+					: currentItems.filter((itemId) => itemId !== id);
 
 				return {
 					...prev,
