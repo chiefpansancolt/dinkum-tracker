@@ -36,6 +36,16 @@ const CollectionItem: React.FC<CollectionItemProps> = ({
 }) => {
 	const isFish = "cookedPrice" in item;
 
+	const handleDonatedChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		const isDonated = e.target.checked;
+
+		if (isDonated && !isCollected) {
+			onCollectedChange(item.id, true);
+		}
+
+		onDonatedChange(item.id, isDonated);
+	};
+
 	return (
 		<Card className="flex h-full flex-col">
 			<div className="flex items-start justify-between">
@@ -117,7 +127,7 @@ const CollectionItem: React.FC<CollectionItemProps> = ({
 					<Checkbox
 						id={`donated-${item.id}`}
 						checked={isDonated}
-						onChange={(e) => onDonatedChange(item.id, e.target.checked)}
+						onChange={handleDonatedChange}
 						className="mr-2"
 					/>
 					<Label htmlFor={`donated-${item.id}`} className="cursor-pointer">

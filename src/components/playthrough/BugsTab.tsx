@@ -90,10 +90,17 @@ const BugsTab = forwardRef<BugsTabHandle, BugsTabProps>(
 				return prev;
 			});
 
-			onCollectedChange(id, isCollected);
+			if (isCollected !== collectedState.includes(id)) {
+				onCollectedChange(id, isCollected);
+			}
 		};
 
 		const handleDonatedChange = (id: string, isDonated: boolean) => {
+			if (isDonated && !collectedState.includes(id)) {
+				setCollectedState((prev) => [...prev, id]);
+				onCollectedChange(id, true);
+			}
+
 			setDonatedState((prev) => {
 				if (isDonated) {
 					if (!prev.includes(id)) {
