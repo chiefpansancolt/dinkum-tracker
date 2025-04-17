@@ -67,9 +67,9 @@ export default function PlaythroughCard({ playthrough, onDelete }: PlaythroughCa
 				<div>
 					<h4 className="font-medium">Collections</h4>
 					<ul className="mt-1 text-sm">
-						<li>Fish: {playthrough.collections.fish.length}</li>
-						<li>Bugs: {playthrough.collections.bugs.length}</li>
-						<li>Critters: {playthrough.collections.critters.length}</li>
+						<li>Fish: {playthrough.collections.fish?.length}</li>
+						<li>Bugs: {playthrough.collections.bugs?.length}</li>
+						<li>Critters: {playthrough.collections.critters?.length}</li>
 					</ul>
 				</div>
 				<div>

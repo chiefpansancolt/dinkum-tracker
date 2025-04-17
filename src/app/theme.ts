@@ -45,4 +45,21 @@ export const customTheme: CustomFlowbiteTheme = createTheme({
       },
     },
   },
+  progress: {
+    base: "w-full overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700",
+    label: "mb-1 flex justify-between font-medium dark:text-white",
+    bar: "rounded-full text-center leading-none font-medium text-blue-100",
+    color: {
+      blue: "bg-blue-600",
+      indigo: "bg-indigo-600",
+      red: "bg-red-600",
+      purple: "bg-purple-600",
+    },
+    size: {
+      sm: "h-1.5",
+      md: "h-2.5",
+      lg: "h-4",
+      xl: "h-6",
+    },
+  },
 });

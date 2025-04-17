@@ -63,3 +63,16 @@ export interface FishTabProps {
   onCollectedChange: (id: string, collected: boolean) => void;
   onDonatedChange: (id: string, donated: boolean) => void;
 }
+
+export interface CollectionStatsProps {
+  collections: {
+    fish: string[];
+    bugs: string[];
+    critters: string[];
+  };
+  donations?: {
+    fish: string[];
+    bugs: string[];
+    critters: string[];
+  };
+}

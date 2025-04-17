@@ -3,7 +3,7 @@ import { Card, Progress } from "flowbite-react";
 import { critters } from "@/data/dinkum/pedia/critters";
 import { fish } from "@/data/dinkum/pedia/fish";
 import { bugs } from "@/data/dinkum/pedia/bugs";
-import { CollectionStatsProps } from "@/types/ui";
+import { CollectionStatsProps } from "@/types/dinkum";
 
 const CollectionStats: React.FC<CollectionStatsProps> = ({ collections, donations }) => {
 	const stats = useMemo(() => {
@@ -63,58 +63,68 @@ const CollectionStats: React.FC<CollectionStatsProps> = ({ collections, donation
 	};
 
 	return (
-		<Card className="w-full">
-			<h2 className="text-primary mb-4 text-xl font-bold">Pedia Progress</h2>
-
-			<div className="space-y-5">
-				<div>
-					<div className="mb-1 flex justify-between">
-						<span className="font-medium">
-							Overall Progress ({totalStats.collected}/{totalStats.total})
-						</span>
-						<span className="font-medium">{totalStats.percentage}%</span>
-					</div>
-					<Progress progress={totalStats.percentage} color="blue" />
-
-					<div className="mt-1 mb-1 flex justify-between">
-						<span className="text-sm text-gray-500">
-							Museum Donations ({totalStats.donated}/{totalStats.total})
-						</span>
-						<span className="text-sm text-gray-500">
-							{totalStats.donationPercentage}%
-						</span>
-					</div>
-					<Progress progress={totalStats.donationPercentage} color="indigo" size="sm" />
+		<Card className="flex h-full w-full flex-col">
+			<div className="flex h-full flex-col">
+				<div className="flex-none">
+					<h2 className="text-primary mb-4 text-xl font-bold">Pedia Progress</h2>
 				</div>
 
-				{Object.entries(stats).map(([category, data]) => (
-					<div key={category}>
-						<div className="mb-1 flex justify-between">
-							<span className="font-medium capitalize">
-								{category} ({data.collected}/{data.total})
-							</span>
-							<span className="font-medium">{data.percentage}%</span>
-						</div>
-						<Progress
-							progress={data.percentage}
-							color={(progressColorMap[category] as string) || "gray"}
-						/>
+				<div className="flex-grow overflow-auto">
+					<div className="space-y-5">
+						<div>
+							<div className="mb-1 flex justify-between">
+								<span className="font-medium">
+									Overall Progress ({totalStats.collected}/{totalStats.total})
+								</span>
+								<span className="font-medium">{totalStats.percentage}%</span>
+							</div>
+							<Progress progress={Number(totalStats.percentage)} color="blue" />
 
-						<div className="mt-1 mb-1 flex justify-between">
-							<span className="text-sm text-gray-500">
-								Donated ({data.donated}/{data.total})
-							</span>
-							<span className="text-sm text-gray-500">
-								{data.donationPercentage}%
-							</span>
+							<div className="mt-1 mb-1 flex justify-between">
+								<span className="text-sm text-gray-500">
+									Museum Donations ({totalStats.donated}/{totalStats.total})
+								</span>
+								<span className="text-sm text-gray-500">
+									{totalStats.donationPercentage}%
+								</span>
+							</div>
+							<Progress
+								progress={Number(totalStats.donationPercentage)}
+								color="indigo"
+								size="sm"
+							/>
 						</div>
-						<Progress
-							progress={data.donationPercentage}
-							color={(progressColorMap[category] as string) || "gray"}
-							size="sm"
-						/>
+
+						{Object.entries(stats).map(([category, data]) => (
+							<div key={category}>
+								<div className="mb-1 flex justify-between">
+									<span className="font-medium capitalize">
+										{category} ({data.collected}/{data.total})
+									</span>
+									<span className="font-medium">{data.percentage}%</span>
+								</div>
+								<Progress
+									progress={Number(data.percentage)}
+									color={(progressColorMap[category] as string) || "gray"}
+								/>
+
+								<div className="mt-1 mb-1 flex justify-between">
+									<span className="text-sm text-gray-500">
+										Donated ({data.donated}/{data.total})
+									</span>
+									<span className="text-sm text-gray-500">
+										{data.donationPercentage}%
+									</span>
+								</div>
+								<Progress
+									progress={Number(data.donationPercentage)}
+									color={(progressColorMap[category] as string) || "gray"}
+									size="sm"
+								/>
+							</div>
+						))}
 					</div>
-				))}
+				</div>
 			</div>
 		</Card>
 	);

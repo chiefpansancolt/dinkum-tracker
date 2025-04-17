@@ -14,10 +14,10 @@ import {
 	SidebarLogo,
 } from "flowbite-react";
 import { getPlaythroughById } from "@/lib/localStorage";
-import CollectionsTab from "./CollectionsTab";
-import CalendarTab from "./CalendarTab";
-import MilestonesTab from "./MilestonesTab";
-import SkillsTab from "./SkillsTab";
+import CollectionsTab from "./components/CollectionsTab";
+import CalendarTab from "./components/CalendarTab";
+import MilestonesTab from "./components/MilestonesTab";
+import SkillsTab from "./components/SkillsTab";
 import {
 	CollectionsTabHandle,
 	CollectionType,
@@ -139,6 +139,10 @@ export default function PlaythroughPage() {
 			errorToast({ message: JSON.stringify(error) });
 			setIsSaving(false);
 		}
+	};
+
+	const shouldShowSaveButton = (tab: ActiveTab) => {
+		return tab !== ActiveTab.Overview && tab !== ActiveTab.NPCs;
 	};
 
 	if (isLoading) {
@@ -331,14 +335,16 @@ export default function PlaythroughPage() {
 				</div>
 			</div>
 
-			<button
-				onClick={handleSave}
-				disabled={isSaving}
-				className="bg-accent hover:bg-accent/95 focus:ring-accent fixed right-6 bottom-6 z-10 flex h-14 w-14 cursor-pointer items-center justify-center rounded-full p-0 text-white shadow-lg transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:opacity-90"
-				aria-label="Save Progress"
-			>
-				{isSaving ? <Spinner size="lg" /> : <FaRegSave className="h-6 w-6" />}
-			</button>
+			{shouldShowSaveButton(activeTab) && (
+				<button
+					onClick={handleSave}
+					disabled={isSaving}
+					className="bg-accent hover:bg-accent/95 focus:ring-accent fixed right-6 bottom-6 z-10 flex h-14 w-14 cursor-pointer items-center justify-center rounded-full p-0 text-white shadow-lg transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:opacity-90"
+					aria-label="Save Progress"
+				>
+					{isSaving ? <Spinner size="lg" /> : <FaRegSave className="h-6 w-6" />}
+				</button>
+			)}
 		</div>
 	);
 }

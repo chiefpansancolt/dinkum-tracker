@@ -39,13 +39,9 @@ const CollectionItem: React.FC<CollectionItemProps> = ({
 
 	return (
 		<Card className="flex h-full flex-col">
-			<div className="flex items-start justify-between">
-				<div className="flex items-center space-x-2">
-					<h3 className="text-lg font-medium">{item.name}</h3>
-					<Badge color={getRarityColor(item.rarity)} className="ml-2">
-						{item.rarity}
-					</Badge>
-				</div>
+			<div className="flex items-center justify-between">
+				<h3 className="text-lg font-medium">{item.name}</h3>
+				<Badge color={getRarityColor(item.rarity)}>{item.rarity}</Badge>
 			</div>
 
 			<div className="mt-3 flex items-center justify-center py-2">
@@ -60,21 +56,21 @@ const CollectionItem: React.FC<CollectionItemProps> = ({
 				)}
 			</div>
 
-			<div className="mt-2 grid grid-cols-2 gap-1 text-sm">
-				<div>
-					<p className="font-medium">Biome:</p>
+			<div className="mt-2 space-y-2 text-sm">
+				<div className="flex">
+					<p className="w-32 font-medium">Biome:</p>
 					<p>{item.biome.join(", ")}</p>
 				</div>
-				<div>
-					<p className="font-medium">Seasons:</p>
+				<div className="flex">
+					<p className="w-32 font-medium">Seasons:</p>
 					<p>{item.seasons.join(", ")}</p>
 				</div>
-				<div>
-					<p className="font-medium">Time:</p>
+				<div className="flex">
+					<p className="w-32 font-medium">Time:</p>
 					<p>{item.timeFound.join(", ")}</p>
 				</div>
 				<div className="flex items-center">
-					<p className="mr-1 font-medium">Price:</p>
+					<p className="w-32 font-medium">Base Sell Price:</p>
 					<div className="flex items-center">
 						<img
 							src="https://static.wikia.nocookie.net/dinkum/images/4/42/Inv_Dinks.png"
@@ -85,8 +81,8 @@ const CollectionItem: React.FC<CollectionItemProps> = ({
 					</div>
 				</div>
 				{isFish && (
-					<div className="col-span-2 flex items-center">
-						<p className="mr-1 font-medium">Cooked:</p>
+					<div className="flex items-center">
+						<p className="w-32 font-medium">Cooked Sell Price:</p>
 						<div className="flex items-center">
 							<img
 								src="https://static.wikia.nocookie.net/dinkum/images/4/42/Inv_Dinks.png"
@@ -103,8 +99,8 @@ const CollectionItem: React.FC<CollectionItemProps> = ({
 				)}
 			</div>
 
-			<div className="mt-4 border-t border-gray-200 pt-4 dark:border-gray-700">
-				<div className="mb-2 flex items-center">
+			<div className="mt-4 flex justify-between border-t border-gray-200 pt-4 dark:border-gray-700">
+				<div className="flex items-center">
 					<Checkbox
 						id={`collected-${item.id}`}
 						checked={isCollected}
@@ -116,15 +112,15 @@ const CollectionItem: React.FC<CollectionItemProps> = ({
 					</Label>
 				</div>
 				<div className="flex items-center">
+					<Label htmlFor={`donated-${item.id}`} className="cursor-pointer">
+						Donated to Museum
+					</Label>
 					<Checkbox
 						id={`donated-${item.id}`}
 						checked={isDonated}
 						onChange={handleDonatedChange}
-						className="mr-2"
+						className="ml-2"
 					/>
-					<Label htmlFor={`donated-${item.id}`} className="cursor-pointer">
-						Donated to Museum
-					</Label>
 				</div>
 			</div>
 		</Card>

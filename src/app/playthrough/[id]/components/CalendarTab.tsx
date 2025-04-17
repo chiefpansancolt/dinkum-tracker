@@ -1,12 +1,14 @@
 "use client";
 
 import React, { useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
+import { Alert } from "flowbite-react";
 import { useParams } from "next/navigation";
 import { useCalendarStore, getSeasonDays } from "@/service/calendar";
 import { getSeasonStyles, getSeasonEmoji } from "@/service/seasonalTheme";
 import { updatePlaythroughData, getPlaythroughById } from "@/lib/localStorage";
 import { CalendarTabHandle, Season, CalendarDay } from "@/types/dinkum";
 import DayDetails from "./DayDetails";
+import { HiInformationCircle } from "react-icons/hi";
 
 const CalendarTab = forwardRef<CalendarTabHandle>((props, ref) => {
 	const params = useParams();
@@ -159,28 +161,30 @@ const CalendarTab = forwardRef<CalendarTabHandle>((props, ref) => {
 				</div>
 			</header>
 
-			<div className="bg-blue-50 px-4 py-2 text-sm text-blue-800 dark:bg-blue-900/20 dark:text-blue-200">
-				<p>
-					Current day:{" "}
-					<strong>
-						{currentDay.day} {currentDay.season}
-					</strong>
-					.
-					{(selectedDay && selectedDay?.day !== currentDay.day) ||
-					selectedDay?.season !== currentDay.season ? (
-						<>
-							{" "}
-							Click the save button to set{" "}
-							<strong>
-								{selectedDay?.day} {selectedDay?.season}
-							</strong>{" "}
-							as the current day.
-						</>
-					) : (
-						<> This is the current game day.</>
-					)}
-				</p>
-			</div>
+			<Alert color="blue" icon={HiInformationCircle}>
+				<div className="flex items-center gap-2">
+					<span className="text-sm">
+						Current day:{" "}
+						<strong>
+							{currentDay.day} {currentDay.season}
+						</strong>
+						.
+						{(selectedDay && selectedDay?.day !== currentDay.day) ||
+						selectedDay?.season !== currentDay.season ? (
+							<>
+								{" "}
+								Click the save button to set{" "}
+								<strong>
+									{selectedDay?.day} {selectedDay?.season}
+								</strong>{" "}
+								as the current day.
+							</>
+						) : (
+							<> This is the current game day.</>
+						)}
+					</span>
+				</div>
+			</Alert>
 
 			<div
 				className={`shadow-sm ring-1 ring-black/5 lg:flex lg:flex-auto lg:flex-col dark:ring-white/10 ${seasonStyles.bg}`}

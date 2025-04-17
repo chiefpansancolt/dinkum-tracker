@@ -49,54 +49,65 @@ const MilestoneStats: React.FC<MilestoneStatsProps> = ({ milestones }) => {
 	}, [milestones]);
 
 	return (
-		<Card className="h-full">
-			<h2 className="text-primary mb-4 text-xl font-bold">Milestone Progress</h2>
-
-			<div className="mb-6">
-				<div className="mb-4 flex justify-between">
-					<span className="text-lg font-medium">Overall Progress</span>
-					<span className="text-accent font-medium">
-						{stats.completedMilestones}/{stats.totalMilestones} Complete
-					</span>
+		<Card className="flex h-full flex-col">
+			<div className="flex h-full flex-col">
+				<div className="flex-none">
+					<h2 className="text-primary mb-4 text-xl font-bold">Milestone Progress</h2>
 				</div>
-				<Progress
-					progress={Math.round((stats.completedMilestones / stats.totalMilestones) * 100)}
-					size="lg"
-					color="success"
-				/>
 
-				<div className="mt-4 flex justify-between">
-					<span className="text-sm font-medium">Levels</span>
-					<span className="text-sm font-medium">
-						{stats.completedLevels}/{stats.totalLevels} (
-						{Math.round((stats.completedLevels / stats.totalLevels) * 100)}%)
-					</span>
-				</div>
-				<Progress
-					progress={Math.round((stats.completedLevels / stats.totalLevels) * 100)}
-					size="md"
-					color="blue"
-				/>
-			</div>
+				<div className="flex-grow overflow-auto">
+					<div className="mb-6">
+						<div className="mb-4 flex justify-between">
+							<span className="text-lg font-medium">Overall Progress</span>
+							<span className="text-accent font-medium">
+								{stats.completedMilestones}/{stats.totalMilestones} Complete
+							</span>
+						</div>
+						<Progress
+							progress={Math.round(
+								(stats.completedMilestones / stats.totalMilestones) * 100
+							)}
+							size="lg"
+							color="success"
+						/>
 
-			<div className="mb-4">
-				<h3 className="mb-2 text-lg font-medium">Permit Points</h3>
-				<div className="flex items-center gap-2">
-					<Badge color="primary" size="lg">
-						<span className="flex items-center">
-							{stats.earnedPermitPoints.toLocaleString()} /{" "}
-							{stats.totalPermitPoints.toLocaleString()}{" "}
-							<img
-								src="https://static.wikia.nocookie.net/dinkum/images/9/97/Permit_Points.png"
-								alt="Permit Points"
-								className="inlinde ml-2 w-7"
-							/>
-						</span>
-					</Badge>
-					<span className="text-sm text-gray-500">
-						({Math.round((stats.earnedPermitPoints / stats.totalPermitPoints) * 100)}%
-						earned)
-					</span>
+						<div className="mt-4 flex justify-between">
+							<span className="text-sm font-medium">Levels</span>
+							<span className="text-sm font-medium">
+								{stats.completedLevels}/{stats.totalLevels} (
+								{Math.round((stats.completedLevels / stats.totalLevels) * 100)}%)
+							</span>
+						</div>
+						<Progress
+							progress={Math.round((stats.completedLevels / stats.totalLevels) * 100)}
+							size="md"
+							color="blue"
+						/>
+					</div>
+
+					<div>
+						<h3 className="mb-2 text-lg font-medium">Permit Points</h3>
+						<div className="flex items-center gap-2">
+							<Badge color="primary" size="lg">
+								<span className="flex items-center">
+									{stats.earnedPermitPoints.toLocaleString()} /{" "}
+									{stats.totalPermitPoints.toLocaleString()}{" "}
+									<img
+										src="https://static.wikia.nocookie.net/dinkum/images/9/97/Permit_Points.png"
+										alt="Permit Points"
+										className="inlinde ml-2 w-7"
+									/>
+								</span>
+							</Badge>
+							<span className="text-sm text-gray-500">
+								(
+								{Math.round(
+									(stats.earnedPermitPoints / stats.totalPermitPoints) * 100
+								)}
+								% earned)
+							</span>
+						</div>
+					</div>
 				</div>
 			</div>
 		</Card>

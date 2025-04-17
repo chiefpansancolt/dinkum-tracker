@@ -199,7 +199,7 @@ const MilestonesTab = forwardRef<MilestonesTabHandle, MilestonesTabProps>(
 												className={`h-full ${allComplete ? "border-green-200 bg-green-50 dark:border-green-800 dark:bg-green-900/10" : ""}`}
 											>
 												<div className="flex flex-col gap-4 md:flex-row">
-													<div className="flex w-full items-start justify-center md:w-1/4">
+													<div className="flex w-full items-center justify-center md:w-1/4">
 														<div className="relative">
 															<img
 																src={milestone.img}
