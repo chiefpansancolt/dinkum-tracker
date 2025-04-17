@@ -149,7 +149,7 @@ export default function PlaythroughPage() {
 	};
 
 	const shouldShowSaveButton = (tab: ActiveTab) => {
-		return tab !== ActiveTab.Overview && tab !== ActiveTab.NPCs;
+		return tab !== ActiveTab.Overview;
 	};
 
 	if (isLoading) {
