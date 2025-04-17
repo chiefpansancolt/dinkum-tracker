@@ -34,7 +34,6 @@ const MilestonesTab = forwardRef<MilestonesTabHandle, MilestonesTabProps>(
 				[milestoneKey]: !currentValue,
 			}));
 
-
 			isDirty.current = true;
 		};
 
@@ -50,7 +49,6 @@ const MilestonesTab = forwardRef<MilestonesTabHandle, MilestonesTabProps>(
 				...prev,
 				...updates,
 			}));
-
 
 			isDirty.current = true;
 		};
@@ -85,7 +83,7 @@ const MilestonesTab = forwardRef<MilestonesTabHandle, MilestonesTabProps>(
 		};
 
 		useImperativeHandle(ref, () => ({
-			saveMilestones
+			saveMilestones,
 		}));
 
 		const filteredMilestones = milestones.filter((milestone) => {

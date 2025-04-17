@@ -96,7 +96,7 @@ const CalendarTab = forwardRef<CalendarTabHandle>((props, ref) => {
 
 	return (
 		<div className="lg:flex lg:h-full lg:flex-col">
-			<header className="flex items-center justify-between border-b border-gray-200 pr-6 py-4 lg:flex-none dark:border-gray-700">
+			<header className="flex items-center justify-between border-b border-gray-200 py-4 pr-6 lg:flex-none dark:border-gray-700">
 				<h1 className="text-primary text-2xl font-bold">Calendar</h1>
 				<div className="flex items-center">
 					<div className="relative flex items-center rounded-md bg-white shadow-sm md:items-stretch dark:bg-gray-800">

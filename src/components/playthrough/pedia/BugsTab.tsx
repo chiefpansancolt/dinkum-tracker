@@ -5,7 +5,7 @@ import { Select, Card, Label } from "flowbite-react";
 import CollectionItem from "@/playthrough/pedia/CollectionItem";
 import { bugs } from "@/data/dinkum/pedia/bugs";
 import { TIME_PERIODS, SEASONS } from "@/data/constants";
-import { BugsTabHandle, BugsTabProps } from '@/types/dinkum'
+import { BugsTabHandle, BugsTabProps } from "@/types/dinkum";
 
 const BugsTab = forwardRef<BugsTabHandle, BugsTabProps>(
 	({ collected, donated, onCollectedChange, onDonatedChange }, ref) => {

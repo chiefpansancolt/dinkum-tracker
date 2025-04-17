@@ -13,9 +13,7 @@ import SaveAlert from "@/comps/SaveAlert";
 const SkillsTab = forwardRef<SkillsTabHandle, SkillsTabProps>(({ skillLevels }, ref) => {
 	const params = useParams();
 	const playthroughId = typeof params.id === "string" ? params.id : "";
-	const [localSkillLevels, setLocalSkillLevels] = useState<Record<string, number>>(
-		skillLevels
-	);
+	const [localSkillLevels, setLocalSkillLevels] = useState<Record<string, number>>(skillLevels);
 	const isDirty = React.useRef(false);
 
 	useEffect(() => {
@@ -62,9 +60,7 @@ const SkillsTab = forwardRef<SkillsTabHandle, SkillsTabProps>(({ skillLevels }, 
 				<h1 className="text-primary mb-2 text-2xl font-bold">Skills</h1>
 			</div>
 
-			{isDirty.current && (
-				<SaveAlert message="Your skill progress has not been saved yet." />
-			)}
+			{isDirty.current && <SaveAlert message="Your skill progress has not been saved yet." />}
 
 			<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
 				{skills.map((skill) => (

@@ -1,4 +1,4 @@
-import { BIOMES, TIME_PERIODS, SEASONS, RARITY_LEVELS} from "@/const"
+import { BIOMES, TIME_PERIODS, SEASONS, RARITY_LEVELS } from "@/const";
 
 export type Biome = (typeof BIOMES)[number];
 export type TimePeriod = (typeof TIME_PERIODS)[number];

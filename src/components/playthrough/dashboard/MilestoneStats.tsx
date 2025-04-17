@@ -18,9 +18,7 @@ const MilestoneStats: React.FC<MilestoneStatsProps> = ({ milestones }) => {
 			0
 		);
 
-		const completedLevels = Object.keys(milestones).filter(
-			(key) => milestones[key]
-		).length;
+		const completedLevels = Object.keys(milestones).filter((key) => milestones[key]).length;
 
 		const completedMilestones = milestoneData.filter((milestone) =>
 			areAllLevelsComplete(milestone)
