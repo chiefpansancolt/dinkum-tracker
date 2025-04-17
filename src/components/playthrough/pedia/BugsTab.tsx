@@ -112,78 +112,76 @@ const BugsTab = forwardRef<BugsTabHandle, BugsTabProps>(
 
 		return (
 			<div className="space-y-6">
-				<Card>
-					<div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
-						<div>
-							<div className="mb-2 block">
-								<Label htmlFor="biome-filter">Biome</Label>
-							</div>
-							<Select
-								id="biome-filter"
-								value={biomeFilter}
-								onChange={(e) => setBiomeFilter(e.target.value)}
-							>
-								{uniqueBiomes.map((biome) => (
-									<option key={biome} value={biome}>
-										{biome}
-									</option>
-								))}
-							</Select>
+				<div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
+					<div>
+						<div className="mb-2 block">
+							<Label htmlFor="biome-filter">Biome</Label>
 						</div>
-
-						<div>
-							<div className="mb-2 block">
-								<Label htmlFor="rarity-filter">Rarity</Label>
-							</div>
-							<Select
-								id="rarity-filter"
-								value={rarityFilter}
-								onChange={(e) => setRarityFilter(e.target.value)}
-							>
-								<option value="All">All</option>
-								{uniqueRarities.map((rarity) => (
-									<option key={rarity} value={rarity}>
-										{rarity}
-									</option>
-								))}
-							</Select>
-						</div>
-
-						<div>
-							<div className="mb-2 block">
-								<Label htmlFor="season-filter">Season</Label>
-							</div>
-							<Select
-								id="season-filter"
-								value={seasonFilter}
-								onChange={(e) => setSeasonFilter(e.target.value)}
-							>
-								{Object.values(SEASONS).map((season) => (
-									<option key={season} value={season}>
-										{season}
-									</option>
-								))}
-							</Select>
-						</div>
-
-						<div>
-							<div className="mb-2 block">
-								<Label htmlFor="time-filter">Time</Label>
-							</div>
-							<Select
-								id="time-filter"
-								value={timeFilter}
-								onChange={(e) => setTimeFilter(e.target.value)}
-							>
-								{Object.values(TIME_PERIODS).map((time) => (
-									<option key={time} value={time}>
-										{time}
-									</option>
-								))}
-							</Select>
-						</div>
+						<Select
+							id="biome-filter"
+							value={biomeFilter}
+							onChange={(e) => setBiomeFilter(e.target.value)}
+						>
+							{uniqueBiomes.map((biome) => (
+								<option key={biome} value={biome}>
+									{biome}
+								</option>
+							))}
+						</Select>
 					</div>
-				</Card>
+
+					<div>
+						<div className="mb-2 block">
+							<Label htmlFor="rarity-filter">Rarity</Label>
+						</div>
+						<Select
+							id="rarity-filter"
+							value={rarityFilter}
+							onChange={(e) => setRarityFilter(e.target.value)}
+						>
+							<option value="All">All</option>
+							{uniqueRarities.map((rarity) => (
+								<option key={rarity} value={rarity}>
+									{rarity}
+								</option>
+							))}
+						</Select>
+					</div>
+
+					<div>
+						<div className="mb-2 block">
+							<Label htmlFor="season-filter">Season</Label>
+						</div>
+						<Select
+							id="season-filter"
+							value={seasonFilter}
+							onChange={(e) => setSeasonFilter(e.target.value)}
+						>
+							{Object.values(SEASONS).map((season) => (
+								<option key={season} value={season}>
+									{season}
+								</option>
+							))}
+						</Select>
+					</div>
+
+					<div>
+						<div className="mb-2 block">
+							<Label htmlFor="time-filter">Time</Label>
+						</div>
+						<Select
+							id="time-filter"
+							value={timeFilter}
+							onChange={(e) => setTimeFilter(e.target.value)}
+						>
+							{Object.values(TIME_PERIODS).map((time) => (
+								<option key={time} value={time}>
+									{time}
+								</option>
+							))}
+						</Select>
+					</div>
+				</div>
 
 				<div className="mb-4">
 					<p className="text-primary font-medium">
