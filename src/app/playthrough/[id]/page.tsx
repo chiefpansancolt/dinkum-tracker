@@ -16,7 +16,8 @@ import {
 import { getPlaythroughById } from "@/lib/localStorage";
 import CollectionsTab from "./CollectionsTab";
 import CalendarTab from "./CalendarTab";
-import { CollectionsTabHandle, CollectionType, CalendarTabHandle } from "@/types/dinkum";
+import MilestonesTab from "./MilestonesTab";
+import { CollectionsTabHandle, CollectionType, CalendarTabHandle, MilestonesTabHandle } from "@/types/dinkum";
 import { Playthrough } from "@/types/app";
 import { ActiveTab } from "@/data/constants";
 import NotFoundCard from "@/comps/NotFoundCard";
@@ -61,6 +62,7 @@ export default function PlaythroughPage() {
 
 	const calendarRef = useRef<CalendarTabHandle>(null);
 	const collectionsRef = useRef<CollectionsTabHandle>(null);
+	const milestonesRef = useRef<MilestonesTabHandle>(null);
 
 	useEffect(() => {
 		const handleHashChange = () => {
@@ -111,6 +113,10 @@ export default function PlaythroughPage() {
 				collectionsRef.current.saveCollections();
 			}
 
+			if (activeTab === ActiveTab.Milestones && milestonesRef.current) {
+				milestonesRef.current.saveMilestones();
+			}
+
 			successToast({ message: "Playthrough Saved Successfully!" });
 			setPlaythrough(getPlaythroughById(params.id));
 
@@ -152,6 +158,13 @@ export default function PlaythroughPage() {
 						collections={playthrough.collections}
 						donations={playthrough.donations}
 						activeCollectionType={collectionType}
+					/>
+				);
+			case ActiveTab.Milestones:
+				return (
+					<MilestonesTab
+						ref={milestonesRef}
+						milestones={playthrough.milestones}
 					/>
 				);
 			case ActiveTab.Overview:

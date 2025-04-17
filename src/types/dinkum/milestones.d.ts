@@ -59,5 +59,14 @@ export interface MilestonesTabProps {
   milestones: {
     [key: string]: boolean;
   };
-  onUpdate: (milestoneId: string, completed: boolean) => void;
+}
+
+export interface MilestonesTabHandle {
+  saveMilestones: () => boolean;
+}
+
+export interface MilestoneStatsProps {
+  milestones: {
+    [key: string]: boolean;
+  };
 }
