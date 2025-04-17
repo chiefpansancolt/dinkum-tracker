@@ -9,6 +9,7 @@ import { fish } from "@/data/dinkum/pedia/fish";
 import { bugs } from "@/data/dinkum/pedia/bugs";
 import { critters } from "@/data/dinkum/pedia/critters";
 import { updatePlaythroughData } from "@/lib/localStorage";
+import SaveAlert from "@/comps/SaveAlert";
 import {
 	CollectionsTabHandle,
 	CollectionsTabProps,
@@ -20,14 +21,7 @@ import {
 } from "@/types/dinkum";
 
 const CollectionsTab = React.forwardRef<CollectionsTabHandle, CollectionsTabProps>(
-	(
-		{
-			collections,
-			donations,
-			activeCollectionType,
-		},
-		ref
-	) => {
+	({ collections, donations, activeCollectionType }, ref) => {
 		const params = useParams();
 		const playthroughId = typeof params.id === "string" ? params.id : "";
 		const fishTabRef = useRef<FishTabHandle>(null);
@@ -36,14 +30,22 @@ const CollectionsTab = React.forwardRef<CollectionsTabHandle, CollectionsTabProp
 
 		const [localCollections, setLocalCollections] = useState<Collection>(collections);
 		const [localDonations, setLocalDonations] = useState<Collection>(donations);
+		const isDirty = useRef(false);
 
 		useEffect(() => {
 			setLocalCollections(collections);
 			setLocalDonations(donations);
+			isDirty.current = false;
 		}, [collections, donations]);
 
+		useEffect(() => {
+			isDirty.current = false;
+			setLocalCollections(collections);
+			setLocalDonations(donations);
+		}, [activeCollectionType, collections, donations]);
+
 		const saveCollections = () => {
-			if (!playthroughId) return false;
+			if (!playthroughId || !isDirty.current) return false;
 
 			let status = false;
 			if (activeCollectionType === "fish" && fishTabRef.current) {
@@ -82,6 +84,10 @@ const CollectionsTab = React.forwardRef<CollectionsTabHandle, CollectionsTabProp
 				});
 			}
 
+			if (status) {
+				isDirty.current = false;
+			}
+
 			return status;
 		};
 
@@ -102,6 +108,8 @@ const CollectionsTab = React.forwardRef<CollectionsTabHandle, CollectionsTabProp
 					[type]: updatedItems,
 				};
 			});
+
+			isDirty.current = true;
 		};
 
 		const handleDonationChange = (type: CollectionType, id: string, donated: boolean) => {
@@ -117,6 +125,8 @@ const CollectionsTab = React.forwardRef<CollectionsTabHandle, CollectionsTabProp
 					[type]: updatedItems,
 				};
 			});
+
+			isDirty.current = true;
 		};
 
 		const renderActiveCollection = () => {
@@ -127,6 +137,9 @@ const CollectionsTab = React.forwardRef<CollectionsTabHandle, CollectionsTabProp
 							<h2 className="text-primary text-2xl font-bold">
 								Fish ({localCollections.fish.length}/{fish.length})
 							</h2>
+							{isDirty.current && (
+								<SaveAlert message="Your fish collection progress has not been saved yet." />
+							)}
 							<FishTab
 								ref={fishTabRef}
 								collected={localCollections.fish}
@@ -146,6 +159,9 @@ const CollectionsTab = React.forwardRef<CollectionsTabHandle, CollectionsTabProp
 							<h2 className="text-primary text-2xl font-bold">
 								Bugs ({localCollections.bugs.length}/{bugs.length})
 							</h2>
+							{isDirty.current && (
+								<SaveAlert message="Your bug collection progress has not been saved yet." />
+							)}
 							<BugsTab
 								ref={bugsTabRef}
 								collected={localCollections.bugs}
@@ -166,6 +182,9 @@ const CollectionsTab = React.forwardRef<CollectionsTabHandle, CollectionsTabProp
 								Critters ({localCollections.critters?.length || 0}/{critters.length}
 								)
 							</h2>
+							{isDirty.current && (
+								<SaveAlert message="Your critter collection progress has not been saved yet." />
+							)}
 							<CrittersTab
 								ref={crittersTabRef}
 								collected={localCollections.critters || []}
