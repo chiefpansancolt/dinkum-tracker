@@ -66,12 +66,14 @@ dinkum-tracker/
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/chiefpansancolt/dinkum-tracker.git
    cd dinkum-tracker
    ```
 
 2. Install dependencies:
+
    ```bash
    pnpm install
    # or
@@ -79,6 +81,7 @@ dinkum-tracker/
    ```
 
 3. Start the development server:
+
    ```bash
    pnpm dev
    # or
