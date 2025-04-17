@@ -18,12 +18,14 @@ import CollectionsTab from "./components/CollectionsTab";
 import CalendarTab from "./components/CalendarTab";
 import MilestonesTab from "./components/MilestonesTab";
 import SkillsTab from "./components/SkillsTab";
+import LicensesTab from "./components/LicensesTab";
 import {
 	CollectionsTabHandle,
 	CollectionType,
 	CalendarTabHandle,
 	MilestonesTabHandle,
 	SkillsTabHandle,
+	LicensesTabHandle,
 } from "@/types/dinkum";
 import { Playthrough } from "@/types/app";
 import { ActiveTab } from "@/data/constants";
@@ -71,6 +73,7 @@ export default function PlaythroughPage() {
 	const collectionsRef = useRef<CollectionsTabHandle>(null);
 	const milestonesRef = useRef<MilestonesTabHandle>(null);
 	const skillsRef = useRef<SkillsTabHandle>(null);
+	const licensesRef = useRef<LicensesTabHandle>(null);
 
 	useEffect(() => {
 		const handleHashChange = () => {
@@ -123,6 +126,10 @@ export default function PlaythroughPage() {
 
 			if (activeTab === ActiveTab.Milestones && milestonesRef.current) {
 				milestonesRef.current.saveMilestones();
+			}
+
+			if (activeTab === ActiveTab.Licenses && licensesRef.current) {
+				licensesRef.current.saveLicenses();
 			}
 
 			if (activeTab === ActiveTab.Skills && skillsRef.current) {
@@ -178,6 +185,8 @@ export default function PlaythroughPage() {
 				);
 			case ActiveTab.Milestones:
 				return <MilestonesTab ref={milestonesRef} milestones={playthrough.milestones} />;
+			case ActiveTab.Licenses:
+				return <LicensesTab ref={licensesRef} licenses={playthrough.licenses || {}} />;
 			case ActiveTab.Skills:
 				return <SkillsTab ref={skillsRef} skillLevels={playthrough.skillLevels} />;
 			case ActiveTab.Overview:

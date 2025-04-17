@@ -80,6 +80,7 @@ export const createEmptyPlaythrough = (name: string): Playthrough => {
       critters: [],
     },
     milestones: {},
+    licenses: {},
     skillLevels: {},
     calendar: {
       currentDay: 1,
@@ -95,7 +96,8 @@ export const updatePlaythroughData = (
     donations?: Partial<Collection>;
     calendar?: CalendarData;
     milestones?: Record<string, boolean>;
-    skillLevels?: Record<string, number>; // Adding skillLevels
+    licenses?: Record<string, boolean>;
+    skillLevels?: Record<string, number>;
   },
 ): boolean => {
   if (typeof window === "undefined") {
@@ -139,6 +141,13 @@ export const updatePlaythroughData = (
     updatedPlaythrough.milestones = {
       ...updatedPlaythrough.milestones,
       ...updates.milestones,
+    };
+  }
+
+  if (updates.licenses) {
+    updatedPlaythrough.licenses = {
+      ...(updatedPlaythrough.licenses || {}),
+      ...updates.licenses,
     };
   }
 

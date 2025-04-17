@@ -12,3 +12,25 @@ export interface License {
   requirements: string;
   levels: LicenseLevel[];
 }
+
+export interface LicensesTabProps {
+  licenses: {
+    [key: string]: boolean;
+  };
+}
+
+export interface LicensesTabHandle {
+  saveLicenses: () => boolean;
+}
+
+export interface LicenseCardProps {
+  license: License;
+  isObtained: boolean;
+  onObtainedChange: (id: string, isObtained: boolean) => void;
+}
+
+export interface LicenseStatsProps {
+  licenses: {
+    [key: string]: boolean;
+  };
+}

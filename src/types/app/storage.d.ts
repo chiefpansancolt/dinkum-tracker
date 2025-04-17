@@ -11,6 +11,9 @@ export interface Playthrough {
   milestones: {
     [key: string]: boolean;
   };
+  licenses: {
+    [key: string]: boolean;
+  };
   skillLevels: Record<string, number>;
   calendar: CalendarData;
 }
@@ -29,5 +32,6 @@ export interface PlaythroughUpdateData {
   donations?: Partial<Collection>;
   calendar?: CalendarData;
   milestones?: Record<string, boolean>;
+  licenses?: Record<string, boolean>;
   skillLevels?: Record<string, number>;
 }
