@@ -17,7 +17,14 @@ import { getPlaythroughById } from "@/lib/localStorage";
 import CollectionsTab from "./CollectionsTab";
 import CalendarTab from "./CalendarTab";
 import MilestonesTab from "./MilestonesTab";
-import { CollectionsTabHandle, CollectionType, CalendarTabHandle, MilestonesTabHandle } from "@/types/dinkum";
+import SkillsTab from "./SkillsTab";
+import {
+	CollectionsTabHandle,
+	CollectionType,
+	CalendarTabHandle,
+	MilestonesTabHandle,
+	SkillsTabHandle,
+} from "@/types/dinkum";
 import { Playthrough } from "@/types/app";
 import { ActiveTab } from "@/data/constants";
 import NotFoundCard from "@/comps/NotFoundCard";
@@ -63,6 +70,7 @@ export default function PlaythroughPage() {
 	const calendarRef = useRef<CalendarTabHandle>(null);
 	const collectionsRef = useRef<CollectionsTabHandle>(null);
 	const milestonesRef = useRef<MilestonesTabHandle>(null);
+	const skillsRef = useRef<SkillsTabHandle>(null);
 
 	useEffect(() => {
 		const handleHashChange = () => {
@@ -117,6 +125,10 @@ export default function PlaythroughPage() {
 				milestonesRef.current.saveMilestones();
 			}
 
+			if (activeTab === ActiveTab.Skills && skillsRef.current) {
+				skillsRef.current.saveSkills();
+			}
+
 			successToast({ message: "Playthrough Saved Successfully!" });
 			setPlaythrough(getPlaythroughById(params.id));
 
@@ -161,12 +173,9 @@ export default function PlaythroughPage() {
 					/>
 				);
 			case ActiveTab.Milestones:
-				return (
-					<MilestonesTab
-						ref={milestonesRef}
-						milestones={playthrough.milestones}
-					/>
-				);
+				return <MilestonesTab ref={milestonesRef} milestones={playthrough.milestones} />;
+			case ActiveTab.Skills:
+				return <SkillsTab ref={skillsRef} skillLevels={playthrough.skillLevels} />;
 			case ActiveTab.Overview:
 			default:
 				return <Dashboard playthrough={playthrough} />;

@@ -12,10 +12,3 @@ export interface License {
   requirements: string;
   levels: LicenseLevel[];
 }
-
-export interface Skill {
-  id: string;
-  name: string;
-  img: string;
-  description: string;
-}

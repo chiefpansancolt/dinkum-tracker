@@ -1,8 +1,9 @@
 import React from "react";
 import { Card } from "flowbite-react";
-import CollectionStats from "./CollectionStats";
 import { DashboardProps } from "@/types/app";
+import CollectionStats from "./CollectionStats";
 import MilestoneStats from "./MilestoneStats";
+import SkillStats from "./SkillStats";
 
 const Dashboard: React.FC<DashboardProps> = ({ playthrough }) => {
 	const daysSinceCreation = () => {
@@ -50,7 +51,12 @@ const Dashboard: React.FC<DashboardProps> = ({ playthrough }) => {
 				</Card>
 			</div>
 
-			<CollectionStats collections={playthrough.collections} donations={playthrough.donations} />
+			<SkillStats skillLevels={playthrough.skillLevels} />
+
+			<CollectionStats
+				collections={playthrough.collections}
+				donations={playthrough.donations}
+			/>
 
 			<MilestoneStats milestones={playthrough.milestones} />
 
