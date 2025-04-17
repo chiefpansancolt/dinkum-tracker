@@ -4,3 +4,4 @@ export * from "./milestones";
 export * from "./dailyMilestones";
 export * from "./skills";
 export * from "./calendar";
+export * from "./npcs";

@@ -16,6 +16,7 @@ export interface Playthrough {
   };
   skillLevels: Record<string, number>;
   calendar: CalendarData;
+  relationships: Record<string, number>;
 }
 
 export interface PlaythroughCardProps {
@@ -34,4 +35,5 @@ export interface PlaythroughUpdateData {
   milestones?: Record<string, boolean>;
   licenses?: Record<string, boolean>;
   skillLevels?: Record<string, number>;
+  relationships?: Record<string, number>;
 }
