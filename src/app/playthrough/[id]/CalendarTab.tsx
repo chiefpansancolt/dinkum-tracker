@@ -3,14 +3,10 @@
 import React, { useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
 import { useParams } from "next/navigation";
 import { useCalendarStore, getSeasonDays } from "@/service/calendar";
-import { Season, CalendarDay } from "@/types/dinkum";
 import { getSeasonStyles, getSeasonEmoji } from "@/service/seasonalTheme";
-import DayDetails from "./DayDetails";
 import { updatePlaythroughData, getPlaythroughById } from "@/lib/localStorage";
-
-export interface CalendarTabHandle {
-	saveSelectedDay: () => boolean;
-}
+import { CalendarTabHandle, Season, CalendarDay } from "@/types/dinkum";
+import DayDetails from "./DayDetails";
 
 const CalendarTab = forwardRef<CalendarTabHandle>((props, ref) => {
 	const params = useParams();

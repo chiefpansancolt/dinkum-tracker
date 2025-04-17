@@ -4,20 +4,8 @@ import React, { useState, useEffect, forwardRef, useImperativeHandle } from "rea
 import { Select, Card, Label } from "flowbite-react";
 import CollectionItem from "@/playthrough/pedia/CollectionItem";
 import { bugs } from "@/data/dinkum/pedia/bugs";
-
-const TIME_PERIODS = ["Morning", "Day", "Evening", "Night", "All"];
-const SEASONS = ["Spring", "Summer", "Autumn", "Winter", "All"];
-
-export interface BugsTabHandle {
-	saveCollectionState: () => { collected: string[]; donated: string[] };
-}
-
-interface BugsTabProps {
-	collected: string[];
-	donated: string[];
-	onCollectedChange: (id: string, collected: boolean) => void;
-	onDonatedChange: (id: string, donated: boolean) => void;
-}
+import { TIME_PERIODS, SEASONS } from "@/data/constants";
+import { BugsTabHandle, BugsTabProps } from '@/types/dinkum'
 
 const BugsTab = forwardRef<BugsTabHandle, BugsTabProps>(
 	({ collected, donated, onCollectedChange, onDonatedChange }, ref) => {

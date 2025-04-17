@@ -2,13 +2,7 @@
 
 import { Card, Checkbox, Label } from "flowbite-react";
 import { milestones, licenseTypes } from "@/lib/gameData";
-
-interface MilestonesTabProps {
-	milestones: {
-		[key: string]: boolean;
-	};
-	onUpdate: (milestoneId: string, completed: boolean) => void;
-}
+import { MilestonesTabProps } from "@/types/dinkum";
 
 export default function MilestonesTab({
 	milestones: milestonesState,

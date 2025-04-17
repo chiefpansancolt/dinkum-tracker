@@ -3,12 +3,8 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Card, Button, Badge, Progress } from "flowbite-react";
-import { Playthrough, deletePlaythrough } from "@/lib/localStorage";
-
-interface PlaythroughCardProps {
-	playthrough: Playthrough;
-	onDelete: () => void;
-}
+import { deletePlaythrough } from "@/lib/localStorage";
+import { PlaythroughCardProps } from "@/types/app";
 
 export default function PlaythroughCard({ playthrough, onDelete }: PlaythroughCardProps) {
 	const router = useRouter();
@@ -71,10 +67,9 @@ export default function PlaythroughCard({ playthrough, onDelete }: PlaythroughCa
 				<div>
 					<h4 className="font-medium">Collections</h4>
 					<ul className="mt-1 text-sm">
-						<li>Animals: {playthrough.collections.animals.length}</li>
 						<li>Fish: {playthrough.collections.fish.length}</li>
 						<li>Bugs: {playthrough.collections.bugs.length}</li>
-						<li>Minerals: {playthrough.collections.minerals.length}</li>
+						<li>Critters: {playthrough.collections.critters.length}</li>
 					</ul>
 				</div>
 				<div>

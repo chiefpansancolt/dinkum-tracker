@@ -4,20 +4,8 @@ import React, { useState, useEffect, forwardRef, useImperativeHandle } from "rea
 import { Select, Card, Label } from "flowbite-react";
 import CollectionItem from "@/playthrough/pedia/CollectionItem";
 import { critters } from "@/data/dinkum/pedia/critters";
-
-const TIME_PERIODS = ["Morning", "Day", "Evening", "Night", "All"];
-const SEASONS = ["Spring", "Summer", "Autumn", "Winter", "All"];
-
-export interface CrittersTabHandle {
-	saveCollectionState: () => { collected: string[]; donated: string[] };
-}
-
-interface CrittersTabProps {
-	collected: string[];
-	donated: string[];
-	onCollectedChange: (id: string, collected: boolean) => void;
-	onDonatedChange: (id: string, donated: boolean) => void;
-}
+import { TIME_PERIODS, SEASONS } from "@/data/constants";
+import { CrittersTabHandle, CrittersTabProps } from "@/types/dinkum";
 
 const CrittersTab = forwardRef<CrittersTabHandle, CrittersTabProps>(
 	({ collected, donated, onCollectedChange, onDonatedChange }, ref) => {

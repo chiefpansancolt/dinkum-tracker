@@ -1,16 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { Card, Checkbox, Badge, Label } from "flowbite-react";
-import { PediaItem } from "@/types/dinkum";
-import { Fish } from "@/types/dinkum";
-
-interface CollectionItemProps {
-	item: PediaItem | Fish;
-	isCollected: boolean;
-	isDonated: boolean;
-	onCollectedChange: (id: string, collected: boolean) => void;
-	onDonatedChange: (id: string, donated: boolean) => void;
-}
+import { CollectionItemProps, Fish } from "@/types/dinkum";
 
 const getRarityColor = (rarity: string) => {
 	switch (rarity) {

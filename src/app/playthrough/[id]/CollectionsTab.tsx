@@ -8,19 +8,13 @@ import CrittersTab, { CrittersTabHandle } from "@/playthrough/pedia/CrittersTab"
 import { fish } from "@/data/dinkum/pedia/fish";
 import { bugs } from "@/data/dinkum/pedia/bugs";
 import { critters } from "@/data/dinkum/pedia/critters";
-import { updatePlaythroughData, Collection } from "@/lib/localStorage";
-
-export type CollectionType = "fish" | "bugs" | "critters";
-
-interface CollectionsTabProps {
-	collections: Collection;
-	donations: Collection;
-	activeCollectionType: CollectionType;
-}
-
-export interface CollectionsTabHandle {
-	saveCollections: () => void;
-}
+import { updatePlaythroughData } from "@/lib/localStorage";
+import {
+	CollectionsTabHandle,
+	CollectionsTabProps,
+	Collection,
+	CollectionType,
+} from "@/types/dinkum";
 
 const CollectionsTab = React.forwardRef<CollectionsTabHandle, CollectionsTabProps>(
 	(

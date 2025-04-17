@@ -1,11 +1,7 @@
 import React from "react";
 import { Card } from "flowbite-react";
 import CollectionStats from "./CollectionStats";
-import { Playthrough } from "@/lib/localStorage";
-
-interface DashboardProps {
-	playthrough: Playthrough;
-}
+import { DashboardProps } from "@/types/app";
 
 const Dashboard: React.FC<DashboardProps> = ({ playthrough }) => {
 	const daysSinceCreation = () => {

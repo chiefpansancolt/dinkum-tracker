@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Dropdown, DropdownDivider, DropdownItem } from "flowbite-react";
-import { getPlaythroughs, Playthrough } from "../lib/localStorage";
+import { getPlaythroughs } from "../lib/localStorage";
+import { Playthrough } from "@/types/app";
 
 export default function Header() {
 	const pathname = usePathname();

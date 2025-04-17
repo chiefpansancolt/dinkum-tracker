@@ -3,12 +3,7 @@ import { Card, Progress } from "flowbite-react";
 import { critters } from "@/data/dinkum/pedia/critters";
 import { fish } from "@/data/dinkum/pedia/fish";
 import { bugs } from "@/data/dinkum/pedia/bugs";
-import { Collection } from "@/lib/localStorage";
-
-interface CollectionStatsProps {
-	collections: Collection;
-	donations?: Collection;
-}
+import { CollectionStatsProps } from "@/types/ui";
 
 const CollectionStats: React.FC<CollectionStatsProps> = ({ collections, donations }) => {
 	const stats = useMemo(() => {

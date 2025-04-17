@@ -13,9 +13,12 @@ import {
 	SidebarCollapse,
 	SidebarLogo,
 } from "flowbite-react";
-import { getPlaythroughById, Playthrough } from "@/lib/localStorage";
-import CollectionsTab, { CollectionsTabHandle, CollectionType } from "./CollectionsTab";
-import CalendarTab, { CalendarTabHandle } from "./CalendarTab";
+import { getPlaythroughById } from "@/lib/localStorage";
+import CollectionsTab from "./CollectionsTab";
+import CalendarTab from "./CalendarTab";
+import { CollectionsTabHandle, CollectionType, CalendarTabHandle } from "@/types/dinkum";
+import { Playthrough } from "@/types/app";
+import { ActiveTab } from "@/data/constants";
 import NotFoundCard from "@/comps/NotFoundCard";
 import Dashboard from "@/playthrough/dashboard/Dashboard";
 import { errorToast, successToast } from "@/lib/notifications";
@@ -35,19 +38,6 @@ import {
 } from "react-icons/fa6";
 import { FaTools } from "react-icons/fa";
 import { GoStarFill } from "react-icons/go";
-
-enum ActiveTab {
-	Overview = "overview",
-	Calendar = "calendar",
-	NPCs = "npcs",
-	Bugs = "bugs",
-	Critters = "critters",
-	Fish = "fish",
-	Buildings = "buildings",
-	Licenses = "licenses",
-	Milestones = "milestones",
-	Skills = "skills",
-}
 
 const mapTabToCollectionType = (tab: ActiveTab): CollectionType | null => {
 	switch (tab) {

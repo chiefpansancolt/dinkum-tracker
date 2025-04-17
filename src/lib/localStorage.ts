@@ -1,28 +1,5 @@
-import { Season } from "@/types/dinkum";
-
-export interface CalendarData {
-  currentDay: number;
-  currentSeason: Season;
-}
-
-export interface Collection {
-  fish: string[];
-  bugs: string[];
-  critters: string[];
-}
-
-export interface Playthrough {
-  id: string;
-  name: string;
-  createdAt: string;
-  lastUpdated: string;
-  collections: Collection;
-  donations: Collection;
-  milestones: {
-    [key: string]: boolean;
-  };
-  calendar?: CalendarData;
-}
+import { CalendarData, Collection } from "@/types/dinkum";
+import { Playthrough } from "@/types/app";
 
 const STORAGE_KEY = "dinkum-tracker-playthroughs";
 

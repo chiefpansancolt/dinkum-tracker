@@ -1,6 +1,6 @@
 import { toast } from "react-toastify";
-import { ToastProps } from "@/types/components/toast";
-import { TOAST_TYPES } from "@/data/toastTypes";
+import { ToastProps } from "@/types/ui/toast";
+import { TOAST_TYPES } from "@/data/constants";
 import CustomToast from "@/comps/Toast";
 
 export const errorToast = ({ message }: ToastProps) => {

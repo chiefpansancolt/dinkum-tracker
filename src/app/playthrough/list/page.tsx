@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button, Card, Spinner } from "flowbite-react";
 import PlaythroughCard from "./Card";
-import { getPlaythroughs, Playthrough } from "@/lib/localStorage";
+import { getPlaythroughs } from "@/lib/localStorage";
+import { Playthrough } from "@/types/app";
 
 export default function PlaythroughsPage() {
 	const [playthroughs, setPlaythroughs] = useState<Playthrough[]>([]);
@@ -38,7 +39,7 @@ export default function PlaythroughsPage() {
 						No Playthroughs Found
 					</h2>
 					<p className="mb-6 text-gray-600">
-						You haven't created any playthroughs yet. Start tracking your Dinkum
+						You haven&apos;t created any playthroughs yet. Start tracking your Dinkum
 						adventure!
 					</p>
 					<div className="flex justify-center">

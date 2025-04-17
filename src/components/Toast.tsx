@@ -1,9 +1,9 @@
 import { Toast, ToastToggle } from "flowbite-react";
 import { HiCheck, HiX, HiInformationCircle, HiExclamation } from "react-icons/hi";
 import { twMerge } from "flowbite-react/helpers/tailwind-merge";
-import { CustomToastProps } from "@/types/components/toast";
+import { CustomToastProps } from "@/types/ui";
 
-const CustomToast = ({ closeToast, data, toastProps }: CustomToastProps) => {
+const CustomToast = ({ closeToast, data }: CustomToastProps) => {
 	const iconMap = {
 		success: <HiCheck className="h-5 w-5" />,
 		error: <HiX className="h-5 w-5" />,
