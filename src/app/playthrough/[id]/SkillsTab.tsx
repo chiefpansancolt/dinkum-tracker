@@ -8,6 +8,7 @@ import { skills } from "@/data/dinkum";
 import { SkillCardProps, SkillsTabHandle, SkillsTabProps } from "@/types/dinkum";
 import { updatePlaythroughData } from "@/lib/localStorage";
 import { HiMinusSm, HiPlusSm } from "react-icons/hi";
+import SaveAlert from "@/comps/SaveAlert";
 
 const SkillsTab = forwardRef<SkillsTabHandle, SkillsTabProps>(({ skillLevels }, ref) => {
 	const params = useParams();
@@ -62,10 +63,7 @@ const SkillsTab = forwardRef<SkillsTabHandle, SkillsTabProps>(({ skillLevels }, 
 			</div>
 
 			{isDirty.current && (
-				<div className="mb-4 rounded-lg bg-yellow-50 p-4 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-200">
-					<span className="font-medium">Unsaved changes!</span> Your skill progress has
-					not been saved yet.
-				</div>
+				<SaveAlert message="Your skill progress has not been saved yet." />
 			)}
 
 			<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">

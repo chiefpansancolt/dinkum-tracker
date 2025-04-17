@@ -3,12 +3,13 @@
 
 import { useState, forwardRef, useImperativeHandle, useRef, useEffect } from "react";
 import { useParams } from "next/navigation";
-import { Card, Checkbox, Label, Badge, TextInput, Button, Select, Alert } from "flowbite-react";
+import { Card, Checkbox, Label, Badge, TextInput, Button, Select } from "flowbite-react";
 import { milestones } from "@/data/dinkum/milestones";
 import { Milestone, MilestonesTabHandle, MilestonesTabProps } from "@/types/dinkum";
 import { updatePlaythroughData } from "@/lib/localStorage";
 import { MILESTONE_CATEGORIES } from "@/data/constants";
 import { HiSearch, HiCheck } from "react-icons/hi";
+import SaveAlert from "@/comps/SaveAlert";
 
 const MilestonesTab = forwardRef<MilestonesTabHandle, MilestonesTabProps>(
 	({ milestones: milestonesState }, ref) => {
@@ -143,16 +144,7 @@ const MilestonesTab = forwardRef<MilestonesTabHandle, MilestonesTabProps>(
 					</div>
 
 					{isDirty.current && (
-						<div className="mb-4">
-							<Alert color="red">
-								<div className="flex items-center gap-2">
-									<span className="font-medium">Unsaved changes</span>
-									<span className="text-sm">
-										Your milestone progress has not been saved yet.
-									</span>
-								</div>
-							</Alert>
-						</div>
+						<SaveAlert message="Your milestone progress has not been saved yet." />
 					)}
 				</div>
 
