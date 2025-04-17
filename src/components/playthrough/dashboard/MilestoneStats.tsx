@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useMemo } from "react";
 import { Card, Progress, Badge } from "flowbite-react";
 import { milestones as milestoneData } from "@/data/dinkum/milestones";
@@ -84,8 +85,15 @@ const MilestoneStats: React.FC<MilestoneStatsProps> = ({ milestones }) => {
 				<h3 className="mb-2 text-lg font-medium">Permit Points</h3>
 				<div className="flex items-center gap-2">
 					<Badge color="primary" size="lg">
-						{stats.earnedPermitPoints.toLocaleString()} /{" "}
-						{stats.totalPermitPoints.toLocaleString()} PP
+						<span className="flex items-center">
+							{stats.earnedPermitPoints.toLocaleString()} /{" "}
+							{stats.totalPermitPoints.toLocaleString()}{" "}
+							<img
+								src="https://static.wikia.nocookie.net/dinkum/images/9/97/Permit_Points.png"
+								alt="Permit Points"
+								className="inlinde ml-2 w-7"
+							/>
+						</span>
 					</Badge>
 					<span className="text-sm text-gray-500">
 						({Math.round((stats.earnedPermitPoints / stats.totalPermitPoints) * 100)}%

@@ -81,7 +81,7 @@ const CollectionItem: React.FC<CollectionItemProps> = ({
 							alt="Dinks"
 							className="mr-1 h-4 w-4"
 						/>
-						<span>{item.basePrice}</span>
+						<span>{item.basePrice.toLocaleString()}</span>
 					</div>
 				</div>
 				{isFish && (
@@ -94,7 +94,8 @@ const CollectionItem: React.FC<CollectionItemProps> = ({
 								className="mr-1 h-4 w-4"
 							/>
 							<span>
-								{(item as Fish).cookedPrice} ({(item as Fish).cookedPieces} piece
+								{(item as Fish).cookedPrice.toLocaleString()} (
+								{(item as Fish).cookedPieces} piece
 								{(item as Fish).cookedPieces > 1 ? "s" : ""})
 							</span>
 						</div>

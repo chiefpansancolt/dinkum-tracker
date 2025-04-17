@@ -294,12 +294,16 @@ const MilestonesTab = forwardRef<MilestonesTabHandle, MilestonesTabProps>(
 																					Level{" "}
 																					{level.level}:
 																				</span>{" "}
-																				{level.count}{" "}
+																				{level.count.toLocaleString()}{" "}
 																				{level.unit || ""}
 																			</Label>
 																			<Badge color="indigo">
 																				{level.permitPoints}{" "}
-																				PP
+																				<img
+																					src="https://static.wikia.nocookie.net/dinkum/images/9/97/Permit_Points.png"
+																					alt="Permit Points"
+																					className="inline w-5"
+																				/>
 																			</Badge>
 																		</div>
 																	</div>
