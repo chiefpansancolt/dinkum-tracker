@@ -5,6 +5,7 @@ import MilestoneStats from "./MilestoneStats";
 import SkillStats from "./SkillStats";
 import LicenseStats from "./LicenseStats";
 import NPCStats from "./NPCStats";
+import BuildingStats from "./BuildingStats";
 import GameInfoCard from "./GameInfoCard";
 
 const Dashboard: React.FC<DashboardProps> = ({ playthrough }) => {
@@ -20,6 +21,8 @@ const Dashboard: React.FC<DashboardProps> = ({ playthrough }) => {
 			<MilestoneStats milestones={playthrough.milestones} />
 
 			<LicenseStats licenses={playthrough.licenses || {}} />
+
+			<BuildingStats buildings={playthrough.buildings || {}} />
 
 			<NPCStats relationships={playthrough.relationships || {}} />
 

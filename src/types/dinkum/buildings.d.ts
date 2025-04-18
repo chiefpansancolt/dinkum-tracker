@@ -4,6 +4,8 @@ export interface BuildingResource {
   img: string;
 }
 
+export type DeedType = "Collectable" | "Movable" | "Reference";
+
 export interface Building {
   id: string;
   buildingName: string;
@@ -15,5 +17,24 @@ export interface Building {
   description: string;
   buildTime: string;
   deedPrice: number;
+  deedType: DeedType;
   resources: BuildingResource[];
+  operatingHours: string[];
+  daysClosed: string;
+}
+
+export interface BuildingsTabProps {
+  buildings: {
+    [key: string]: boolean;
+  };
+}
+
+export interface BuildingsTabHandle {
+  saveBuildings: () => boolean;
+}
+
+export interface BuildingStatsProps {
+  buildings: {
+    [key: string]: boolean;
+  };
 }

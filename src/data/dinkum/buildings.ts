@@ -5,7 +5,7 @@ export const buildings: Building[] = [
     id: "base_tent",
     buildingName: "Base Tent",
     deedName: "Base Tent Roll",
-    size: "4x4",
+    size: "5x5",
     img: "https://static.wikia.nocookie.net/dinkum/images/9/94/Inv_Base_Tent_Roll.png",
     npc: "Fletch",
     npcImg:
@@ -14,13 +14,16 @@ export const buildings: Building[] = [
       "Starter building. Obtain from Fletch after landing on the Island. Fletch appears at the Base Tent after it is placed/built.",
     buildTime: "Instant",
     deedPrice: 0,
+    deedType: "Collectable",
     resources: [],
+    operatingHours: ["7am - 4pm"],
+    daysClosed: "",
   },
   {
-    id: "move_base_tent",
+    id: "base_tent_move",
     buildingName: "Base Tent (Move)",
     deedName: "Base Tent Deed",
-    size: "4x4",
+    size: "",
     img: "https://static.wikia.nocookie.net/dinkum/images/2/27/Inv_Move_Base_Tent.png",
     npc: "Fletch",
     npcImg:
@@ -29,13 +32,16 @@ export const buildings: Building[] = [
       "This is used to move the Base Tent. This deed becomes available after the player has received the nails and crate recipes from Fletch.",
     buildTime: "Overnight",
     deedPrice: 25000,
+    deedType: "Movable",
     resources: [],
+    operatingHours: [],
+    daysClosed: "",
   },
   {
     id: "player_tent",
     buildingName: "Tent",
     deedName: "Tent Roll",
-    size: "4x4",
+    size: "5x5",
     img: "https://static.wikia.nocookie.net/dinkum/images/b/bd/Inv_Player_Tent.png",
     npc: "Player",
     npcImg: "https://static.wikia.nocookie.net/dinkum/images/0/0c/Player.png",
@@ -43,27 +49,33 @@ export const buildings: Building[] = [
       "Starter building. Obtain from Fletch after the placing the Base Tent. It cannot be moved until it has been upgraded into a House.",
     buildTime: "Instant",
     deedPrice: 0,
+    deedType: "Collectable",
     resources: [],
+    operatingHours: [],
+    daysClosed: "",
   },
   {
     id: "visitors_site",
     buildingName: "Visitors Site",
     deedName: "Visiting Site Deed",
-    size: "6x6",
+    size: "4x4",
     img: "https://static.wikia.nocookie.net/dinkum/images/f/fa/Inv_Visiting_Site_Deed.png",
     npc: "Various",
     npcImg: "",
     description: "Fletch's first quest. Temporary residents rotate here.",
     buildTime: "Instant",
     deedPrice: 0,
+    deedType: "Collectable",
     resources: [],
+    operatingHours: [],
+    daysClosed: "",
   },
   {
     id: "town_hall",
     buildingName: "Town Hall",
     deedName: "Town Hall Upgrade",
-    size: "6x6",
-    img: "",
+    size: "5x5",
+    img: "https://static.wikia.nocookie.net/dinkum/images/a/a6/Inv_Move_Town_Hall.png",
     npc: "Fletch",
     npcImg:
       "https://static.wikia.nocookie.net/dinkum/images/c/c4/NPC_Fletch.png",
@@ -71,6 +83,7 @@ export const buildings: Building[] = [
       "Upgrading the Base Tent to the Town Hall requires 5 permanent residents. Talk to Fletch.",
     buildTime: "Overnight",
     deedPrice: 0,
+    deedType: "Collectable",
     resources: [
       {
         count: 15,
@@ -103,12 +116,14 @@ export const buildings: Building[] = [
         img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Nails.png",
       },
     ],
+    operatingHours: ["7am - 4pm"],
+    daysClosed: "",
   },
   {
     id: "move_town_hall",
     buildingName: "Town Hall (Move)",
     deedName: "Town Hall Deed",
-    size: "6x6",
+    size: "",
     img: "https://static.wikia.nocookie.net/dinkum/images/a/a6/Inv_Move_Town_Hall.png",
     npc: "Fletch",
     npcImg:
@@ -117,13 +132,16 @@ export const buildings: Building[] = [
       "This is used to move the Town Hall. This deed becomes available after the player has already upgraded the Base Tent to the Town Hall.",
     buildTime: "Overnight",
     deedPrice: 25000,
+    deedType: "Movable",
     resources: [],
+    operatingHours: [],
+    daysClosed: "",
   },
   {
     id: "bulletin_board",
     buildingName: "Bulletin Board",
     deedName: "Bulletin Board Deed",
-    size: "1x1",
+    size: "1x2",
     img: "https://static.wikia.nocookie.net/dinkum/images/a/a7/Inv_Bulletin_Board_Deed.png",
     npc: "",
     npcImg: "",
@@ -131,6 +149,7 @@ export const buildings: Building[] = [
       "The deed is available from Fletch after completing a few starting quests. The player will also receive the recipe to make more Bulletin Boards.",
     buildTime: "Instant",
     deedPrice: 10000,
+    deedType: "Collectable",
     resources: [
       {
         count: 2,
@@ -143,18 +162,21 @@ export const buildings: Building[] = [
         img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Nails.png",
       },
     ],
+    operatingHours: [],
+    daysClosed: "",
   },
   {
     id: "johns_goods",
     buildingName: "John's Goods",
     deedName: "Shop Deed",
-    size: "8x8",
+    size: "4x5",
     img: "https://static.wikia.nocookie.net/dinkum/images/1/16/Inv_Shop_Deed.png",
     npc: "John",
     npcImg: "https://static.wikia.nocookie.net/dinkum/images/5/59/NPC_John.png",
     description: "General Store. Relationship > 1/4 heart with John.",
     buildTime: "2 nights",
     deedPrice: 75000,
+    deedType: "Collectable",
     resources: [
       {
         count: 15,
@@ -177,12 +199,14 @@ export const buildings: Building[] = [
         img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Nails.png",
       },
     ],
+    operatingHours: ["8am - 6pm"],
+    daysClosed: "Sunday",
   },
   {
     id: "museum",
     buildingName: "Museum",
     deedName: "Museum Deed",
-    size: "10x10",
+    size: "6x5",
     img: "https://static.wikia.nocookie.net/dinkum/images/7/7c/Inv_Museum_Deed.png",
     npc: "Theodore",
     npcImg:
@@ -191,6 +215,7 @@ export const buildings: Building[] = [
       "Unlocked after John has moved in and the player talks to Theodore for the first time. Display Bugs, Critters, and Fish.",
     buildTime: "2 nights",
     deedPrice: 125000,
+    deedType: "Collectable",
     resources: [
       {
         count: 15,
@@ -213,6 +238,8 @@ export const buildings: Building[] = [
         img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Nails.png",
       },
     ],
+    operatingHours: ["7am - 8pm"],
+    daysClosed: "",
   },
   {
     id: "band_stand",
@@ -226,6 +253,7 @@ export const buildings: Building[] = [
       "Outdoor Community Centre. Unlocks after 3 permanent residents move onto the island.",
     buildTime: "2 nights",
     deedPrice: 25000,
+    deedType: "Collectable",
     resources: [
       {
         count: 10,
@@ -258,12 +286,14 @@ export const buildings: Building[] = [
         img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Nails.png",
       },
     ],
+    operatingHours: [],
+    daysClosed: "",
   },
   {
     id: "franklyns_lab",
     buildingName: "Franklyn's Lab",
     deedName: "Crafting Lab Deed",
-    size: "8x8",
+    size: "4x4",
     img: "https://static.wikia.nocookie.net/dinkum/images/e/ea/Inv_Crafting_Lab_Deed.png",
     npc: "Franklyn",
     npcImg:
@@ -272,6 +302,7 @@ export const buildings: Building[] = [
       "Research Center. Spend > 190,000 Dinks (sold Shiny Discs included). Relationship > 3/4 heart with Franklyn.",
     buildTime: "2 nights",
     deedPrice: 250000,
+    deedType: "Collectable",
     resources: [
       {
         count: 15,
@@ -304,12 +335,14 @@ export const buildings: Building[] = [
         img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Nails.png",
       },
     ],
+    operatingHours: ["8am - 4pm"],
+    daysClosed: "Saturday & Sunday",
   },
   {
     id: "irwins_barn",
     buildingName: "Irwin's Barn",
     deedName: "Animal Shop Deed",
-    size: "8x8",
+    size: "5x4",
     img: "https://static.wikia.nocookie.net/dinkum/images/8/80/Inv_Animal_Shop_Deed.png",
     npc: "Irwin",
     npcImg:
@@ -318,6 +351,7 @@ export const buildings: Building[] = [
       "Animal Store. Spend > 25,000 Dinks with Irwin. Relationship > 1/2 heart.",
     buildTime: "2 nights",
     deedPrice: 150000,
+    deedType: "Collectable",
     resources: [
       {
         count: 15,
@@ -350,12 +384,14 @@ export const buildings: Building[] = [
         img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Nails.png",
       },
     ],
+    operatingHours: ["10am - 6pm"],
+    daysClosed: "Monday",
   },
   {
     id: "melvin_furniture",
     buildingName: "Melvin Furniture",
     deedName: "Furniture Shop Deed",
-    size: "8x8",
+    size: "4x4",
     img: "https://static.wikia.nocookie.net/dinkum/images/3/32/Inv_Furniture_Shop_Deed.png",
     npc: "Melvin",
     npcImg:
@@ -364,6 +400,7 @@ export const buildings: Building[] = [
       "Furniture Store. Spend > 800 Dinks with Melvin. Relationship > 1 heart.",
     buildTime: "2 nights",
     deedPrice: 145000,
+    deedType: "Collectable",
     resources: [
       {
         count: 18,
@@ -386,12 +423,14 @@ export const buildings: Building[] = [
         img: "https://static.wikia.nocookie.net/dinkum/images/3/3b/Inv_Tin_Sheet.png",
       },
     ],
+    operatingHours: ["10am - 5pm"],
+    daysClosed: "Tuesday & Thursday",
   },
   {
     id: "rayne_greenhouse",
     buildingName: "Rayne's Greenhouse",
     deedName: "Plant Shop Deed",
-    size: "8x8",
+    size: "5x4",
     img: "https://static.wikia.nocookie.net/dinkum/images/8/88/Inv_Plant_Shop_Deed.png",
     npc: "Rayne",
     npcImg:
@@ -400,6 +439,7 @@ export const buildings: Building[] = [
       "Seeds and Gardening Tools. Spend > 18,000 Dinks with Rayne. Relationship > 1/2 heart.",
     buildTime: "2 nights",
     deedPrice: 200000,
+    deedType: "Collectable",
     resources: [
       {
         count: 10,
@@ -432,12 +472,14 @@ export const buildings: Building[] = [
         img: "https://static.wikia.nocookie.net/dinkum/images/0/09/Inv_Stone.png",
       },
     ],
+    operatingHours: ["11am - 4pm"],
+    daysClosed: "Friday",
   },
   {
     id: "threadspace",
     buildingName: "Threadspace",
     deedName: "Clothing Shop Deed",
-    size: "8x8",
+    size: "4x5",
     img: "https://static.wikia.nocookie.net/dinkum/images/8/84/Inv_Clothing_Shop_Deed.png",
     npc: "Clover",
     npcImg:
@@ -446,6 +488,7 @@ export const buildings: Building[] = [
       "Clothes. Spend > 10,000 Dinks with Clover. Relationship > 1 heart.",
     buildTime: "2 nights",
     deedPrice: 180000,
+    deedType: "Collectable",
     resources: [
       {
         count: 20,
@@ -478,12 +521,14 @@ export const buildings: Building[] = [
         img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Nails.png",
       },
     ],
+    operatingHours: ["9am - 5p"],
+    daysClosed: "Tuesday",
   },
   {
     id: "bank",
     buildingName: "Bank",
     deedName: "Bank Deed",
-    size: "8x8",
+    size: "4x4",
     img: "https://static.wikia.nocookie.net/dinkum/images/b/bf/Inv_Bank_Deed.png",
     npc: "Milburn",
     npcImg:
@@ -491,6 +536,7 @@ export const buildings: Building[] = [
     description: "Store Dinks for interest. Economy > 35%.",
     buildTime: "2 nights",
     deedPrice: 100000,
+    deedType: "Collectable",
     resources: [
       {
         count: 15,
@@ -523,12 +569,14 @@ export const buildings: Building[] = [
         img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Nails.png",
       },
     ],
+    operatingHours: ["7am - 4pm"],
+    daysClosed: "Staurday & Sunday",
   },
   {
     id: "sallys_salon",
     buildingName: "Sally's Salon",
     deedName: "Salon Deed",
-    size: "6x6",
+    size: "5x5",
     img: "https://static.wikia.nocookie.net/dinkum/images/6/68/Inv_Salon_Deed.png",
     npc: "Sally",
     npcImg:
@@ -537,6 +585,7 @@ export const buildings: Building[] = [
       "Hairstyles and facial changes. Spend > 10,000 Dinks with Sally. Relationship > 2 1/4 hearts.",
     buildTime: "Overnight",
     deedPrice: 320000,
+    deedType: "Collectable",
     resources: [
       {
         count: 20,
@@ -564,12 +613,14 @@ export const buildings: Building[] = [
         img: "https://static.wikia.nocookie.net/dinkum/images/5/5a/Inv_Quartz_Crystal.png",
       },
     ],
+    operatingHours: ["7am - 3pm"],
+    daysClosed: "Sunday",
   },
   {
     id: "mine",
     buildingName: "Mine",
     deedName: "Mine Deed",
-    size: "6x6",
+    size: "3x3",
     img: "https://static.wikia.nocookie.net/dinkum/images/a/ae/Inv_Mine_Deed.png",
     npc: "",
     npcImg: "",
@@ -577,6 +628,7 @@ export const buildings: Building[] = [
       "Elevator to access mines containing ore and treasure. Unlocked after purchasing the Deep Mining Licence from Fletch.",
     buildTime: "2 nights",
     deedPrice: 250000,
+    deedType: "Collectable",
     resources: [
       {
         count: 10,
@@ -609,18 +661,21 @@ export const buildings: Building[] = [
         img: "https://static.wikia.nocookie.net/dinkum/images/7/7a/Inv_Copper_Bar.png",
       },
     ],
+    operatingHours: [],
+    daysClosed: "",
   },
   {
     id: "tele_tower",
     buildingName: "Tele Tower",
     deedName: "",
     size: "2x2",
-    img: "",
+    img: "https://static.wikia.nocookie.net/dinkum/images/f/f3/Tele_Tower.png",
     npc: "",
     npcImg: "",
     description: "One near the coast of each cardinal direction on the Island.",
     buildTime: "",
     deedPrice: 0,
+    deedType: "Reference",
     resources: [
       {
         count: 3,
@@ -648,6 +703,8 @@ export const buildings: Building[] = [
         img: "https://static.wikia.nocookie.net/dinkum/images/c/c8/Inv_Smooth_Slate.png",
       },
     ],
+    operatingHours: [],
+    daysClosed: "",
   },
   {
     id: "tele_pad",
@@ -661,6 +718,7 @@ export const buildings: Building[] = [
       "It's like a Tele Tower you can place where you want. After Franklyn has moved onto the Island and at least 2 Tele Towers have been repaired. Talk to Franklyn then talk to Fletch.",
     buildTime: "Overnight",
     deedPrice: 75000,
+    deedType: "Collectable",
     resources: [
       {
         count: 8,
@@ -693,13 +751,15 @@ export const buildings: Building[] = [
         img: "https://static.wikia.nocookie.net/dinkum/images/1/1a/Inv_Green_Board.png",
       },
     ],
+    operatingHours: [],
+    daysClosed: "",
   },
   {
     id: "jimmys_boat",
     buildingName: "Jimmy's Boat",
     deedName: "",
     size: "",
-    img: "",
+    img: "https://static.wikia.nocookie.net/dinkum/images/f/f2/Jimmy%27s_Boat.png",
     npc: "Jimmy",
     npcImg:
       "https://static.wikia.nocookie.net/dinkum/images/4/4e/NPC_Jimmy.png",
@@ -707,13 +767,16 @@ export const buildings: Building[] = [
       "Must be raining in the morning. At least 1,000,000 in your Bank account. Will buy stacks of 50+ for 1.5 times the value.",
     buildTime: "",
     deedPrice: 1000000,
+    deedType: "Collectable",
     resources: [],
+    operatingHours: [],
+    daysClosed: "",
   },
   {
     id: "tuckerbox",
     buildingName: "Tuckerbox",
     deedName: "Tuckshop Deed",
-    size: "",
+    size: "9x6",
     img: "https://static.wikia.nocookie.net/dinkum/images/2/2c/Inv_Tuckshop_Deed.png",
     npc: "Sheila",
     npcImg:
@@ -722,6 +785,7 @@ export const buildings: Building[] = [
       "A place to get tucker and yarns. Relationship > 1 1/4 hearts  with Sheila.",
     buildTime: "2 nights",
     deedPrice: 750000,
+    deedType: "Collectable",
     resources: [
       {
         count: 15,
@@ -764,12 +828,14 @@ export const buildings: Building[] = [
         img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Nails.png",
       },
     ],
+    operatingHours: ["10am - 3pm", "6pm - Late"],
+    daysClosed: "",
   },
   {
     id: "airport",
     buildingName: "Airport",
     deedName: "Airport Deed",
-    size: "",
+    size: "6x5",
     img: "https://static.wikia.nocookie.net/dinkum/images/1/16/Inv_Airport_Deed.png",
     npc: "Nancy",
     npcImg:
@@ -777,6 +843,7 @@ export const buildings: Building[] = [
     description: "From Year 2 after all NPCs have moved in",
     buildTime: "2 nights",
     deedPrice: 2500000,
+    deedType: "Collectable",
     resources: [
       {
         count: 25,
@@ -814,18 +881,21 @@ export const buildings: Building[] = [
         img: "https://static.wikia.nocookie.net/dinkum/images/8/8f/Inv_Cloth.png",
       },
     ],
+    operatingHours: ["7am - Late"],
+    daysClosed: "Monday - Saturday",
   },
   {
     id: "wish_fountain",
     buildingName: "Wish Fountain",
     deedName: "Wish Fountain Deed",
-    size: "",
-    img: "",
+    size: "3x3",
+    img: "https://static.wikia.nocookie.net/dinkum/images/7/76/Inv_Wish_Fountain_Deed.png",
     npc: "",
     npcImg: "",
     description: "",
     buildTime: "Overnight",
     deedPrice: 50000,
+    deedType: "Collectable",
     resources: [
       {
         count: 5,
@@ -843,6 +913,8 @@ export const buildings: Building[] = [
         img: "https://static.wikia.nocookie.net/dinkum/images/e/eb/Inv_Bag_of_Cement.png",
       },
     ],
+    operatingHours: [],
+    daysClosed: "",
   },
   {
     id: "house_move",
@@ -856,20 +928,24 @@ export const buildings: Building[] = [
       "Talk to Fletch about moving a house. This is only available after the player has upgraded their Tent to a House.",
     buildTime: "Overnight",
     deedPrice: 25000,
+    deedType: "Movable",
     resources: [],
+    operatingHours: [],
+    daysClosed: "",
   },
   {
     id: "house_upgrade_1",
     buildingName: "House Upgrade 1",
-    deedName: "",
+    deedName: "House Upgrade 1",
     size: "6x6",
-    img: "",
+    img: "https://static.wikia.nocookie.net/dinkum/images/9/9c/Inv_House_Move_Deed.png",
     npc: "",
     npcImg: "",
     description:
       "Upgrade from Tent to House. Construction materials box appears at house. Upfront fee",
     buildTime: "Overnight",
     deedPrice: 95000,
+    deedType: "Collectable",
     resources: [
       {
         count: 15,
@@ -887,18 +963,21 @@ export const buildings: Building[] = [
         img: "https://static.wikia.nocookie.net/dinkum/images/3/3b/Inv_Tin_Sheet.png",
       },
     ],
+    operatingHours: [],
+    daysClosed: "",
   },
   {
     id: "house_upgrade_2",
     buildingName: "House Upgrade 2",
-    deedName: "",
+    deedName: "House Upgrade 2",
     size: "8x8",
-    img: "",
+    img: "https://static.wikia.nocookie.net/dinkum/images/9/9c/Inv_House_Move_Deed.png",
     npc: "",
     npcImg: "",
     description: "Construction materials box appears at house. Upfront fee",
     buildTime: "Overnight",
     deedPrice: 220000,
+    deedType: "Collectable",
     resources: [
       {
         count: 15,
@@ -931,18 +1010,21 @@ export const buildings: Building[] = [
         img: "https://static.wikia.nocookie.net/dinkum/images/7/7a/Inv_Copper_Bar.png",
       },
     ],
+    operatingHours: [],
+    daysClosed: "",
   },
   {
     id: "house_upgrade_3",
     buildingName: "House Upgrade 3",
-    deedName: "",
+    deedName: "House Upgrade 3",
     size: "10x10",
-    img: "",
+    img: "https://static.wikia.nocookie.net/dinkum/images/9/9c/Inv_House_Move_Deed.png",
     npc: "",
     npcImg: "",
     description: "Construction materials box appears at house. Upfront fee",
     buildTime: "Overnight",
     deedPrice: 440000,
+    deedType: "Collectable",
     resources: [
       {
         count: 15,
@@ -960,12 +1042,14 @@ export const buildings: Building[] = [
         img: "https://static.wikia.nocookie.net/dinkum/images/3/3b/Inv_Tin_Sheet.png",
       },
     ],
+    operatingHours: [],
+    daysClosed: "",
   },
   {
     id: "guest_house",
     buildingName: "Guest House",
     deedName: "",
-    size: "",
+    size: "5x5",
     img: "https://static.wikia.nocookie.net/dinkum/images/f/ff/Inv_Guest_House_Deed_1.png",
     npc: "",
     npcImg: "",
@@ -973,6 +1057,7 @@ export const buildings: Building[] = [
       "Three Guest House deeds become available after the player has upgraded their Tent to a House. For friends.",
     buildTime: "Overnight",
     deedPrice: 95000,
+    deedType: "Collectable",
     resources: [
       {
         count: 20,
@@ -995,6 +1080,8 @@ export const buildings: Building[] = [
         img: "https://static.wikia.nocookie.net/dinkum/images/3/3b/Inv_Tin_Sheet.png",
       },
     ],
+    operatingHours: [],
+    daysClosed: "",
   },
   {
     id: "guest_house_move",
@@ -1008,6 +1095,9 @@ export const buildings: Building[] = [
       "Talk to Fletch about moving a guest house. Each guest house has its own colour identifying it on the map.",
     buildTime: "Overnight",
     deedPrice: 25000,
+    deedType: "Movable",
     resources: [],
+    operatingHours: [],
+    daysClosed: "",
   },
 ];

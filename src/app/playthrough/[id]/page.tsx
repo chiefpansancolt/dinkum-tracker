@@ -20,6 +20,7 @@ import MilestonesTab from "./components/MilestonesTab";
 import SkillsTab from "./components/SkillsTab";
 import LicensesTab from "./components/LicensesTab";
 import NPCsTab from "./components/NPCsTab";
+import BuildingsTab from "./components/BuildingsTab";
 import {
 	CollectionsTabHandle,
 	CollectionType,
@@ -28,6 +29,7 @@ import {
 	SkillsTabHandle,
 	LicensesTabHandle,
 	NPCsTabHandle,
+	BuildingsTabHandle,
 } from "@/types/dinkum";
 import { Playthrough } from "@/types/app";
 import { ActiveTab } from "@/data/constants";
@@ -77,6 +79,7 @@ export default function PlaythroughPage() {
 	const skillsRef = useRef<SkillsTabHandle>(null);
 	const licensesRef = useRef<LicensesTabHandle>(null);
 	const npcsRef = useRef<NPCsTabHandle>(null);
+	const buildingsRef = useRef<BuildingsTabHandle>(null);
 
 	useEffect(() => {
 		const handleHashChange = () => {
@@ -143,6 +146,10 @@ export default function PlaythroughPage() {
 				npcsRef.current.saveRelationships();
 			}
 
+			if (activeTab === ActiveTab.Buildings && buildingsRef.current) {
+				buildingsRef.current.saveBuildings();
+			}
+
 			successToast({ message: "Playthrough Saved Successfully!" });
 			setPlaythrough(getPlaythroughById(params.id));
 
@@ -198,6 +205,13 @@ export default function PlaythroughPage() {
 				return <SkillsTab ref={skillsRef} skillLevels={playthrough.skillLevels} />;
 			case ActiveTab.NPCs:
 				return <NPCsTab ref={npcsRef} relationships={playthrough.relationships || {}} />;
+			case ActiveTab.Buildings:
+				return (
+					<BuildingsTab
+						ref={buildingsRef}
+						buildings={playthrough.buildings || {}}
+					/>
+				);
 			case ActiveTab.Overview:
 			default:
 				return <Dashboard playthrough={playthrough} />;

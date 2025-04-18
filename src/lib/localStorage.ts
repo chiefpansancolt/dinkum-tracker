@@ -81,6 +81,7 @@ export const createEmptyPlaythrough = (name: string): Playthrough => {
     },
     milestones: {},
     licenses: {},
+    buildings: {},
     skillLevels: {},
     calendar: {
       currentDay: 1,
@@ -98,6 +99,7 @@ export const updatePlaythroughData = (
     calendar?: CalendarData;
     milestones?: Record<string, boolean>;
     licenses?: Record<string, boolean>;
+    buildings?: Record<string, boolean>;
     skillLevels?: Record<string, number>;
     relationships?: Record<string, number>;
   },
@@ -150,6 +152,13 @@ export const updatePlaythroughData = (
     updatedPlaythrough.licenses = {
       ...(updatedPlaythrough.licenses || {}),
       ...updates.licenses,
+    };
+  }
+
+  if (updates.buildings) {
+    updatedPlaythrough.buildings = {
+      ...(updatedPlaythrough.buildings || {}),
+      ...updates.buildings,
     };
   }
 
