@@ -206,12 +206,7 @@ export default function PlaythroughPage() {
 			case ActiveTab.NPCs:
 				return <NPCsTab ref={npcsRef} relationships={playthrough.relationships || {}} />;
 			case ActiveTab.Buildings:
-				return (
-					<BuildingsTab
-						ref={buildingsRef}
-						buildings={playthrough.buildings || {}}
-					/>
-				);
+				return <BuildingsTab ref={buildingsRef} buildings={playthrough.buildings || {}} />;
 			case ActiveTab.Overview:
 			default:
 				return <Dashboard playthrough={playthrough} />;
