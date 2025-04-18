@@ -88,6 +88,15 @@ export const createEmptyPlaythrough = (name: string): Playthrough => {
       currentSeason: "Summer",
     },
     relationships: {},
+    cookingRecipes: {},
+    craftingRecipes: {},
+    books: {},
+    tools: {},
+    weapons: {},
+    equipment: {},
+    vehicles: {},
+    clothing: {},
+    furniture: {},
   };
 };
 
@@ -102,6 +111,15 @@ export const updatePlaythroughData = (
     buildings?: Record<string, boolean>;
     skillLevels?: Record<string, number>;
     relationships?: Record<string, number>;
+    cookingRecipes?: Record<string, boolean>;
+    craftingRecipes?: Record<string, boolean>;
+    books?: Record<string, boolean>;
+    tools?: Record<string, boolean>;
+    weapons?: Record<string, boolean>;
+    equipment?: Record<string, boolean>;
+    vehicles?: Record<string, boolean>;
+    clothing?: Record<string, boolean>;
+    furniture?: Record<string, boolean>;
   },
 ): boolean => {
   if (typeof window === "undefined") {
@@ -121,7 +139,11 @@ export const updatePlaythroughData = (
 
   if (updates.collections) {
     updatedPlaythrough.collections = {
-      ...updatedPlaythrough.collections,
+      ...(updatedPlaythrough.collections || {
+        fish: [],
+        bugs: [],
+        critters: [],
+      }),
       ...updates.collections,
     };
   }
@@ -143,7 +165,7 @@ export const updatePlaythroughData = (
 
   if (updates.milestones) {
     updatedPlaythrough.milestones = {
-      ...updatedPlaythrough.milestones,
+      ...(updatedPlaythrough.milestones || {}),
       ...updates.milestones,
     };
   }
@@ -173,6 +195,69 @@ export const updatePlaythroughData = (
     updatedPlaythrough.relationships = {
       ...(updatedPlaythrough.relationships || {}),
       ...updates.relationships,
+    };
+  }
+
+  if (updates.cookingRecipes) {
+    updatedPlaythrough.cookingRecipes = {
+      ...(updatedPlaythrough.cookingRecipes || {}),
+      ...updates.cookingRecipes,
+    };
+  }
+
+  if (updates.craftingRecipes) {
+    updatedPlaythrough.craftingRecipes = {
+      ...(updatedPlaythrough.craftingRecipes || {}),
+      ...updates.craftingRecipes,
+    };
+  }
+
+  if (updates.books) {
+    updatedPlaythrough.books = {
+      ...(updatedPlaythrough.books || {}),
+      ...updates.books,
+    };
+  }
+
+  if (updates.tools) {
+    updatedPlaythrough.tools = {
+      ...(updatedPlaythrough.tools || {}),
+      ...updates.tools,
+    };
+  }
+
+  if (updates.weapons) {
+    updatedPlaythrough.weapons = {
+      ...(updatedPlaythrough.weapons || {}),
+      ...updates.weapons,
+    };
+  }
+
+  if (updates.equipment) {
+    updatedPlaythrough.equipment = {
+      ...(updatedPlaythrough.equipment || {}),
+      ...updates.equipment,
+    };
+  }
+
+  if (updates.vehicles) {
+    updatedPlaythrough.vehicles = {
+      ...(updatedPlaythrough.vehicles || {}),
+      ...updates.vehicles,
+    };
+  }
+
+  if (updates.clothing) {
+    updatedPlaythrough.clothing = {
+      ...(updatedPlaythrough.clothing || {}),
+      ...updates.clothing,
+    };
+  }
+
+  if (updates.furniture) {
+    updatedPlaythrough.furniture = {
+      ...(updatedPlaythrough.furniture || {}),
+      ...updates.furniture,
     };
   }
 

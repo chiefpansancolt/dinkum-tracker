@@ -23,7 +23,6 @@ import NPCsTab from "./components/NPCsTab";
 import BuildingsTab from "./components/BuildingsTab";
 import {
 	CollectionsTabHandle,
-	CollectionType,
 	CalendarTabHandle,
 	MilestonesTabHandle,
 	SkillsTabHandle,
@@ -36,9 +35,6 @@ import { ActiveTab } from "@/data/constants";
 import NotFoundCard from "@/comps/NotFoundCard";
 import Dashboard from "@/playthrough/dashboard/Dashboard";
 import { errorToast, successToast } from "@/lib/notifications";
-import { FaRegSave } from "react-icons/fa";
-import { HiHome, HiOutlineMinusSm, HiOutlinePlusSm } from "react-icons/hi";
-import { MdDashboard } from "react-icons/md";
 import { twMerge } from "flowbite-react/helpers/tailwind-merge";
 import {
 	FaFish,
@@ -49,22 +45,19 @@ import {
 	FaBuildingColumns,
 	FaBuilding,
 	FaAward,
+	FaReceipt,
+	FaBook,
+	FaCar,
+	FaCouch,
+	FaKey,
+	FaBoxOpen,
 } from "react-icons/fa6";
-import { FaTools } from "react-icons/fa";
+import { HiHome, HiOutlineMinusSm, HiOutlinePlusSm } from "react-icons/hi";
+import { MdDashboard } from "react-icons/md";
+import { FaTools, FaRegSave, FaToolbox, FaAppleAlt } from "react-icons/fa";
 import { GoStarFill } from "react-icons/go";
-
-const mapTabToCollectionType = (tab: ActiveTab): CollectionType | null => {
-	switch (tab) {
-		case ActiveTab.Fish:
-			return "fish";
-		case ActiveTab.Bugs:
-			return "bugs";
-		case ActiveTab.Critters:
-			return "critters";
-		default:
-			return null;
-	}
-};
+import { LuCookingPot } from "react-icons/lu";
+import { GiBackpack, GiClothes, GiMineralPearls, GiPartyPopper, GiSofa, GiStoneCrafting, GiSwordman, GiWheat } from "react-icons/gi";
 
 export default function PlaythroughPage() {
 	const params = useParams();
@@ -186,15 +179,12 @@ export default function PlaythroughPage() {
 			case ActiveTab.Fish:
 			case ActiveTab.Bugs:
 			case ActiveTab.Critters:
-				const collectionType = mapTabToCollectionType(activeTab);
-				if (!collectionType) return null;
-
 				return (
 					<CollectionsTab
 						ref={collectionsRef}
 						collections={playthrough.collections}
 						donations={playthrough.donations}
-						activeCollectionType={collectionType}
+						activeCollectionType={activeTab}
 					/>
 				);
 			case ActiveTab.Milestones:
@@ -351,6 +341,226 @@ export default function PlaythroughPage() {
 									>
 										Skills
 									</SidebarItem>
+								</SidebarItemGroup>
+								<SidebarItemGroup>
+									<SidebarCollapse
+										icon={FaReceipt}
+										label="Recipes"
+										open={[
+											ActiveTab.CookingRecipes,
+											ActiveTab.CraftingRecipes,
+										].includes(activeTab)}
+										renderChevronIcon={(theme, open) => {
+											const IconComponent = open
+												? HiOutlineMinusSm
+												: HiOutlinePlusSm;
+
+											return (
+												<IconComponent
+													aria-hidden
+													className={twMerge(
+														theme.label.icon.open[open ? "on" : "off"]
+													)}
+												/>
+											);
+										}}
+									>
+										<SidebarItem
+											href={`#${ActiveTab.CookingRecipes}`}
+											icon={LuCookingPot}
+											active={activeTab === ActiveTab.CookingRecipes}
+											onClick={() =>
+												handleSetActiveTab(ActiveTab.CookingRecipes)
+											}
+										>
+											Cooking Recipes
+										</SidebarItem>
+										<SidebarItem
+											href={`#${ActiveTab.CraftingRecipes}`}
+											icon={GiStoneCrafting}
+											active={activeTab === ActiveTab.CraftingRecipes}
+											onClick={() =>
+												handleSetActiveTab(ActiveTab.CraftingRecipes)
+											}
+										>
+											Crafting Recipes
+										</SidebarItem>
+									</SidebarCollapse>
+									<SidebarCollapse
+										icon={FaToolbox}
+										label="Gear & Equipment"
+										open={[
+											ActiveTab.Books,
+											ActiveTab.Tools,
+											ActiveTab.Weapons,
+											ActiveTab.Equipment,
+											ActiveTab.Vehicles,
+										].includes(activeTab)}
+										renderChevronIcon={(theme, open) => {
+											const IconComponent = open
+												? HiOutlineMinusSm
+												: HiOutlinePlusSm;
+
+											return (
+												<IconComponent
+													aria-hidden
+													className={twMerge(
+														theme.label.icon.open[open ? "on" : "off"]
+													)}
+												/>
+											);
+										}}
+									>
+										<SidebarItem
+											href={`#${ActiveTab.Books}`}
+											icon={FaBook}
+											active={activeTab === ActiveTab.Books}
+											onClick={() => handleSetActiveTab(ActiveTab.Books)}
+										>
+											Books
+										</SidebarItem>
+										<SidebarItem
+											href={`#${ActiveTab.Tools}`}
+											icon={FaTools}
+											active={activeTab === ActiveTab.Tools}
+											onClick={() => handleSetActiveTab(ActiveTab.Tools)}
+										>
+											Tools
+										</SidebarItem>
+										<SidebarItem
+											href={`#${ActiveTab.Weapons}`}
+											icon={GiSwordman}
+											active={activeTab === ActiveTab.Weapons}
+											onClick={() => handleSetActiveTab(ActiveTab.Weapons)}
+										>
+											Weapons
+										</SidebarItem>
+										<SidebarItem
+											href={`#${ActiveTab.Equipment}`}
+											icon={GiBackpack}
+											active={activeTab === ActiveTab.Equipment}
+											onClick={() => handleSetActiveTab(ActiveTab.Equipment)}
+										>
+											Equipment
+										</SidebarItem>
+										<SidebarItem
+											href={`#${ActiveTab.Vehicles}`}
+											icon={FaCar}
+											active={activeTab === ActiveTab.Vehicles}
+											onClick={() => handleSetActiveTab(ActiveTab.Vehicles)}
+										>
+											Vehicles
+										</SidebarItem>
+									</SidebarCollapse>
+									<SidebarCollapse
+										icon={GiSofa}
+										label="Customization & Decor"
+										open={[
+											ActiveTab.Clothing,
+											ActiveTab.Decorations,
+											ActiveTab.Furniture,
+										].includes(activeTab)}
+										renderChevronIcon={(theme, open) => {
+											const IconComponent = open
+												? HiOutlineMinusSm
+												: HiOutlinePlusSm;
+
+											return (
+												<IconComponent
+													aria-hidden
+													className={twMerge(
+														theme.label.icon.open[open ? "on" : "off"]
+													)}
+												/>
+											);
+										}}
+									>
+										<SidebarItem
+											href={`#${ActiveTab.Clothing}`}
+											icon={GiClothes}
+											active={activeTab === ActiveTab.Clothing}
+											onClick={() => handleSetActiveTab(ActiveTab.Clothing)}
+										>
+											Clothing
+										</SidebarItem>
+										<SidebarItem
+											href={`#${ActiveTab.Decorations}`}
+											icon={GiPartyPopper}
+											active={activeTab === ActiveTab.Decorations}
+											onClick={() =>
+												handleSetActiveTab(ActiveTab.Decorations)
+											}
+										>
+											Decorations
+										</SidebarItem>
+										<SidebarItem
+											href={`#${ActiveTab.Furniture}`}
+											icon={FaCouch}
+											active={activeTab === ActiveTab.Furniture}
+											onClick={() => handleSetActiveTab(ActiveTab.Furniture)}
+										>
+											Furniture
+										</SidebarItem>
+									</SidebarCollapse>
+									<SidebarCollapse
+										icon={FaBoxOpen}
+										label="Materials & Collectibles"
+										open={[
+											ActiveTab.Resources,
+											ActiveTab.Consumables,
+											ActiveTab.Relics,
+											ActiveTab.Crops,
+										].includes(activeTab)}
+										renderChevronIcon={(theme, open) => {
+											const IconComponent = open
+												? HiOutlineMinusSm
+												: HiOutlinePlusSm;
+
+											return (
+												<IconComponent
+													aria-hidden
+													className={twMerge(
+														theme.label.icon.open[open ? "on" : "off"]
+													)}
+												/>
+											);
+										}}
+									>
+										<SidebarItem
+											href={`#${ActiveTab.Resources}`}
+											icon={GiMineralPearls}
+											active={activeTab === ActiveTab.Resources}
+											onClick={() => handleSetActiveTab(ActiveTab.Resources)}
+										>
+											Resources
+										</SidebarItem>
+										<SidebarItem
+											href={`#${ActiveTab.Consumables}`}
+											icon={FaAppleAlt}
+											active={activeTab === ActiveTab.Consumables}
+											onClick={() =>
+												handleSetActiveTab(ActiveTab.Consumables)
+											}
+										>
+											Consumables
+										</SidebarItem>
+										<SidebarItem
+											href={`#${ActiveTab.Relics}`}
+											icon={FaKey}
+											active={activeTab === ActiveTab.Relics}
+											onClick={() => handleSetActiveTab(ActiveTab.Relics)}
+										>
+											Relics
+										</SidebarItem>
+										<SidebarItem
+											href={`#${ActiveTab.Crops}`}
+											icon={GiWheat}
+											active={activeTab === ActiveTab.Crops}
+											onClick={() => handleSetActiveTab(ActiveTab.Crops)}
+										>
+											Crops
+										</SidebarItem>
+									</SidebarCollapse>
 								</SidebarItemGroup>
 							</SidebarItems>
 						</Sidebar>

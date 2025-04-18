@@ -5,8 +5,6 @@ export interface Fish extends PediaItem {
   cookedPieces: number;
 }
 
-export type CollectionType = "fish" | "bugs" | "critters";
-
 export interface Collection {
   fish: string[];
   bugs: string[];

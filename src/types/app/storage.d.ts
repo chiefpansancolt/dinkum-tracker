@@ -20,6 +20,15 @@ export interface Playthrough {
   skillLevels: Record<string, number>;
   calendar: CalendarData;
   relationships: Record<string, number>;
+  cookingRecipes: Record<string, boolean>;
+  craftingRecipes: Record<string, boolean>;
+  books: Record<string, boolean>;
+  tools: Record<string, boolean>;
+  weapons: Record<string, boolean>;
+  equipment: Record<string, boolean>;
+  vehicles: Record<string, boolean>;
+  clothing: Record<string, boolean>;
+  furniture: Record<string, boolean>;
 }
 
 export interface PlaythroughCardProps {
@@ -40,4 +49,13 @@ export interface PlaythroughUpdateData {
   buildings?: Record<string, boolean>;
   skillLevels?: Record<string, number>;
   relationships?: Record<string, number>;
+  cookingRecipes?: Record<string, boolean>;
+  craftingRecipes?: Record<string, boolean>;
+  books?: Record<string, boolean>;
+  tools?: Record<string, boolean>;
+  weapons?: Record<string, boolean>;
+  equipment?: Record<string, boolean>;
+  vehicles?: Record<string, boolean>;
+  clothing?: Record<string, boolean>;
+  furniture?: Record<string, boolean>;
 }
