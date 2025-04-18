@@ -68,7 +68,7 @@ const LicenseStats: React.FC<LicenseStatsProps> = ({ licenses = {} }) => {
 								(stats.completedLicenses / stats.totalLicenses) * 100
 							)}
 							size="lg"
-							color="success"
+							color="green"
 						/>
 
 						<div className="mt-4 flex justify-between">

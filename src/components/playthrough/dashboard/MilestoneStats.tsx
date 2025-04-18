@@ -68,7 +68,7 @@ const MilestoneStats: React.FC<MilestoneStatsProps> = ({ milestones }) => {
 								(stats.completedMilestones / stats.totalMilestones) * 100
 							)}
 							size="lg"
-							color="success"
+							color="green"
 						/>
 
 						<div className="mt-4 flex justify-between">
