@@ -1,5 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useMemo } from "react";
-import { Card, Progress } from "flowbite-react";
+import { Card, Progress, Badge } from "flowbite-react";
 import { critters } from "@/data/dinkum/pedia/critters";
 import { fish } from "@/data/dinkum/pedia/fish";
 import { bugs } from "@/data/dinkum/pedia/bugs";
@@ -47,12 +48,22 @@ const CollectionStats: React.FC<CollectionStatsProps> = ({ collections, donation
 			(donations?.bugs.length || 0) +
 			(donations?.critters.length || 0);
 
+		const totalPossiblePermitPoints = totalItems * 100;
+		const earnedPermitPoints = totalDonated * 100;
+		const permitPointsPercentage =
+			totalPossiblePermitPoints > 0
+				? Math.round((earnedPermitPoints / totalPossiblePermitPoints) * 100)
+				: 0;
+
 		return {
 			collected: totalCollected,
 			total: totalItems,
 			percentage: Math.round((totalCollected / totalItems) * 100) || 0,
 			donated: totalDonated,
 			donationPercentage: Math.round((totalDonated / totalItems) * 100) || 0,
+			totalPossiblePermitPoints,
+			earnedPermitPoints,
+			permitPointsPercentage,
 		};
 	}, [stats, donations]);
 
@@ -123,6 +134,26 @@ const CollectionStats: React.FC<CollectionStatsProps> = ({ collections, donation
 								/>
 							</div>
 						))}
+
+						<div className="mt-4">
+							<h3 className="mb-2 text-lg font-medium">Permit Points</h3>
+							<div className="flex items-center gap-2">
+								<Badge color="primary" size="lg">
+									<span className="flex items-center">
+										{totalStats.earnedPermitPoints.toLocaleString()} /{" "}
+										{totalStats.totalPossiblePermitPoints.toLocaleString()}{" "}
+										<img
+											src="https://static.wikia.nocookie.net/dinkum/images/9/97/Permit_Points.png"
+											alt="Permit Points"
+											className="ml-2 w-7"
+										/>
+									</span>
+								</Badge>
+								<span className="text-sm text-gray-500">
+									({totalStats.permitPointsPercentage}% earned)
+								</span>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

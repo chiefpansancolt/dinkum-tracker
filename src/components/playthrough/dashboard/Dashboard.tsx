@@ -13,18 +13,18 @@ const Dashboard: React.FC<DashboardProps> = ({ playthrough }) => {
 		<div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
 			<SkillStats skillLevels={playthrough.skillLevels} />
 
+			<LicenseStats licenses={playthrough.licenses} />
+
+			<MilestoneStats milestones={playthrough.milestones} />
+
 			<CollectionStats
 				collections={playthrough.collections}
 				donations={playthrough.donations}
 			/>
 
-			<MilestoneStats milestones={playthrough.milestones} />
+			<BuildingStats buildings={playthrough.buildings} />
 
-			<LicenseStats licenses={playthrough.licenses || {}} />
-
-			<BuildingStats buildings={playthrough.buildings || {}} />
-
-			<NPCStats relationships={playthrough.relationships || {}} />
+			<NPCStats relationships={playthrough.relationships} />
 
 			<GameInfoCard playthrough={playthrough} />
 		</div>
