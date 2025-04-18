@@ -1,5 +1,14 @@
 import type { Season, Weekday } from "./base";
 
+export interface CalendarState {
+  calendar: GameCalendar;
+  currentDay: CalendarDay;
+  selectedSeason: Season;
+  setSelectedSeason: (season: Season) => void;
+  advanceDay: () => void;
+  setDate: (day: number, season: Season) => void;
+}
+
 export interface CalendarData {
   currentDay: number;
   currentSeason: Season;

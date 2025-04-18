@@ -1,13 +1,4 @@
-import { Season } from "@/types/dinkum";
-
-export interface SeasonStyle {
-  bg: string;
-  border: string;
-  text: string;
-  accent: string;
-  hover: string;
-  cardBg: string;
-}
+import { Season, SeasonStyle } from "@/types/dinkum";
 
 export const getSeasonStyles = (season: Season): SeasonStyle => {
   switch (season) {

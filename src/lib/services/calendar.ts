@@ -1,15 +1,6 @@
 import { create } from "zustand";
 import { GameCalendar } from "@/data/dinkum";
-import { Season, CalendarDay } from "@/types/dinkum";
-
-interface CalendarState {
-  calendar: GameCalendar;
-  currentDay: CalendarDay;
-  selectedSeason: Season;
-  setSelectedSeason: (season: Season) => void;
-  advanceDay: () => void;
-  setDate: (day: number, season: Season) => void;
-}
+import { Season, CalendarDay, CalendarState } from "@/types/dinkum";
 
 export const useCalendarStore = create<CalendarState>((set, get) => {
   const calendar = new GameCalendar();
