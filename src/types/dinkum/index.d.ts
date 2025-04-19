@@ -8,3 +8,4 @@ export * from "./npc";
 export * from "./buildings";
 export * from "./books";
 export * from "./clothing";
+export * from "./relics";

@@ -23,6 +23,7 @@ import NPCsTab from "./tabs/NPCsTab";
 import BuildingsTab from "./tabs/BuildingsTab";
 import ClothingTab from "./tabs/ClothingTab";
 import BooksTab from "./tabs/BooksTab";
+import RelicsTab from "./tabs/RelicsTab";
 import {
 	CollectionsTabHandle,
 	CalendarTabHandle,
@@ -222,6 +223,8 @@ export default function PlaythroughPage() {
 				return <ClothingTab ref={clothingRef} collected={playthrough.clothing || {}} />;
 			case ActiveTab.Books:
 				return <BooksTab ref={booksRef} collected={playthrough.books || {}} />;
+			case ActiveTab.Relics:
+				return <RelicsTab />;
 			case ActiveTab.Overview:
 			default:
 				return <Dashboard playthrough={playthrough} />;
