@@ -9,3 +9,4 @@ export * from "./books";
 export * from "./clothing";
 export * from "./buildings";
 export * from "./relics";
+export * from "./tools";
