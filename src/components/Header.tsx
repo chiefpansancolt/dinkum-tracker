@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { Dropdown, DropdownDivider, DropdownItem } from "flowbite-react";
 import { getPlaythroughs } from "../lib/localStorage";
 import { Playthrough } from "@/types/app";
+import { HiCog } from "react-icons/hi";
 
 export default function Header() {
 	const pathname = usePathname();
@@ -66,6 +67,17 @@ export default function Header() {
 										View All Playthroughs
 									</DropdownItem>
 								</Dropdown>
+							</li>
+							<li>
+								<Link
+									href="/settings"
+									className={`hover:text-highlight flex items-center transition-colors ${
+										pathname === "/settings" ? "font-bold underline" : ""
+									}`}
+								>
+									<HiCog className="mr-1 h-5 w-5" />
+									Settings
+								</Link>
 							</li>
 						</ul>
 					</nav>

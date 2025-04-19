@@ -1,7 +1,7 @@
 import { CalendarData, Collection } from "@/types/dinkum";
 import { Playthrough } from "@/types/app";
 
-const STORAGE_KEY = "dinkum-tracker-playthroughs";
+export const STORAGE_KEY = "dinkum-tracker-playthroughs";
 
 export const getPlaythroughs = (): Playthrough[] => {
   if (typeof window === "undefined") {
