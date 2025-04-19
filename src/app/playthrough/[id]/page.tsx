@@ -57,7 +57,16 @@ import { MdDashboard } from "react-icons/md";
 import { FaTools, FaRegSave, FaToolbox, FaAppleAlt } from "react-icons/fa";
 import { GoStarFill } from "react-icons/go";
 import { LuCookingPot } from "react-icons/lu";
-import { GiBackpack, GiClothes, GiMineralPearls, GiPartyPopper, GiSofa, GiStoneCrafting, GiSwordman, GiWheat } from "react-icons/gi";
+import {
+	GiBackpack,
+	GiClothes,
+	GiMineralPearls,
+	GiPartyPopper,
+	GiSofa,
+	GiStoneCrafting,
+	GiSwordman,
+	GiWheat,
+} from "react-icons/gi";
 
 export default function PlaythroughPage() {
 	const params = useParams();
