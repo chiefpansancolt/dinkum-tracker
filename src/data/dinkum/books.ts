@@ -2,6 +2,7 @@ import { Book } from "@/types/dinkum";
 
 export const books: Book[] = [
   {
+    id: "adventurers_journal",
     name: "Adventurer's Journal",
     img: "https://static.wikia.nocookie.net/dinkum/images/e/ee/Inv_Adventurer%27s_Journal.png",
     details: [
@@ -14,6 +15,7 @@ export const books: Book[] = [
     ],
   },
   {
+    id: "bug_book",
     name: "Bug Book",
     img: "https://static.wikia.nocookie.net/dinkum/images/0/0c/Inv_Bug_Book.png",
     details: [
@@ -26,6 +28,7 @@ export const books: Book[] = [
     ],
   },
   {
+    id: "fish_book",
     name: "Fish Book",
     img: "https://static.wikia.nocookie.net/dinkum/images/5/58/Inv_Fish_Book.png",
     details: [
@@ -38,6 +41,7 @@ export const books: Book[] = [
     ],
   },
   {
+    id: "machine_manual",
     name: "Machine Manual",
     img: "https://static.wikia.nocookie.net/dinkum/images/d/d7/Inv_Machine_Manual.png",
     details: [
@@ -50,6 +54,7 @@ export const books: Book[] = [
     ],
   },
   {
+    id: "plant_book",
     name: "Plant Book",
     img: "https://static.wikia.nocookie.net/dinkum/images/6/6d/Inv_Plant_Book.png",
     details: [

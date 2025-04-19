@@ -6,13 +6,14 @@ interface BookData {
 }
 
 export interface Book {
+  id: string;
   name: string;
   img: string;
   details: BookData[];
 }
 
 export interface BooksTabProps {
-  books: {
+  collected: {
     [key: string]: boolean;
   };
 }

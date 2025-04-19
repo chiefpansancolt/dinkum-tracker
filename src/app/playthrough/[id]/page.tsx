@@ -30,6 +30,7 @@ import {
 	NPCsTabHandle,
 	BuildingsTabHandle,
 	ClothingTabHandle,
+	BooksTabHandle,
 } from "@/types/dinkum";
 import { Playthrough } from "@/types/app";
 import { ActiveTab } from "@/data/constants";
@@ -69,6 +70,7 @@ import {
 	GiWheat,
 } from "react-icons/gi";
 import ClothingTab from "./components/ClothingTab";
+import BooksTab from "./components/BooksTab";
 
 export default function PlaythroughPage() {
 	const params = useParams();
@@ -85,6 +87,7 @@ export default function PlaythroughPage() {
 	const npcsRef = useRef<NPCsTabHandle>(null);
 	const buildingsRef = useRef<BuildingsTabHandle>(null);
 	const clothingRef = useRef<ClothingTabHandle>(null);
+	const booksRef = useRef<BooksTabHandle>(null);
 
 	useEffect(() => {
 		const handleHashChange = () => {
@@ -159,6 +162,10 @@ export default function PlaythroughPage() {
 				clothingRef.current.saveClothing();
 			}
 
+			if (activeTab === ActiveTab.Books && booksRef.current) {
+				booksRef.current.saveBooks();
+			}
+
 			successToast({ message: "Playthrough Saved Successfully!" });
 			setPlaythrough(getPlaythroughById(params.id));
 
@@ -215,6 +222,8 @@ export default function PlaythroughPage() {
 				return <BuildingsTab ref={buildingsRef} buildings={playthrough.buildings || {}} />;
 			case ActiveTab.Clothing:
 				return <ClothingTab ref={clothingRef} collected={playthrough.clothing || {}} />;
+			case ActiveTab.Books:
+				return <BooksTab ref={booksRef} collected={playthrough.books || {}} />;
 			case ActiveTab.Overview:
 			default:
 				return <Dashboard playthrough={playthrough} />;
