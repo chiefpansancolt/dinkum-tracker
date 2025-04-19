@@ -28,7 +28,7 @@ export const customTheme: CustomFlowbiteTheme = createTheme({
     },
     collapse: {
       button:
-        "group hover:text-primary flex w-full cursor-pointer items-center rounded-lg p-2 text-base font-normal text-white transition duration-75 dark:text-white",
+        "group hover:text-secondary flex w-full cursor-pointer items-center rounded-lg p-2 text-base font-normal text-white transition duration-75 dark:text-white",
       icon: {
         base: "h-6 w-6 text-white transition duration-75 dark:text-white",
         open: {
@@ -37,10 +37,10 @@ export const customTheme: CustomFlowbiteTheme = createTheme({
       },
     },
     item: {
-      base: "hover:text-primary flex items-center justify-center rounded-lg p-2 text-base font-normal text-white dark:text-white",
+      base: "hover:text-secondary flex items-center justify-center rounded-lg p-2 text-base font-normal text-white dark:text-white",
       active: "bg-primary text-white",
       icon: {
-        base: "group-hover:text-primary h-6 w-6 text-white transition duration-75 dark:text-white",
+        base: "group-hover:text-secondary h-6 w-6 text-white transition duration-75 dark:text-white",
         active: "text-white",
       },
     },
