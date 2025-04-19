@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { Dropdown, DropdownDivider, DropdownItem } from "flowbite-react";
 import { getPlaythroughs } from "../lib/localStorage";
 import { Playthrough } from "@/types/app";
-import { HiCog } from "react-icons/hi";
+import { HiCog, HiHome } from "react-icons/hi";
 
 export default function Header() {
 	const pathname = usePathname();
@@ -40,10 +40,11 @@ export default function Header() {
 							<li>
 								<Link
 									href="/"
-									className={`hover:text-highlight transition-colors ${
+									className={`hover:text-highlight flex items-center transition-colors ${
 										pathname === "/" ? "font-bold underline" : ""
 									}`}
 								>
+									<HiHome className="mr-1 h-5 w-5" />
 									Home
 								</Link>
 							</li>
