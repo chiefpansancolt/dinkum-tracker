@@ -5,7 +5,7 @@ import { Select, Card, Label } from "flowbite-react";
 import CollectionItem from "@/playthrough/pedia/CollectionItem";
 import { fish } from "@/data/dinkum/pedia/fish";
 import { TIME_PERIODS, SEASONS } from "@/data/constants";
-import { FishTabHandle, FishTabProps } from "@/types/dinkum";
+import { Biome, FishTabHandle, FishTabProps, Season, TimePeriod } from "@/types/dinkum";
 
 const FishTab = forwardRef<FishTabHandle, FishTabProps>(
 	({ collected, donated, onCollectedChange, onDonatedChange }, ref) => {
@@ -38,7 +38,7 @@ const FishTab = forwardRef<FishTabHandle, FishTabProps>(
 
 		const filteredItems = React.useMemo(() => {
 			return fish.filter((item) => {
-				if (biomeFilter !== "All" && !item.biome.includes(biomeFilter)) {
+				if (biomeFilter !== "All" && !item.biome.includes(biomeFilter as Biome)) {
 					return false;
 				}
 
@@ -48,15 +48,15 @@ const FishTab = forwardRef<FishTabHandle, FishTabProps>(
 
 				if (
 					seasonFilter !== "All" &&
-					!item.seasons.includes(seasonFilter) &&
-					!item.seasons.includes("All")
+					!item.seasons.includes(seasonFilter as Season) &&
+					!item.seasons.includes("All" as Season)
 				) {
 					return false;
 				}
 
 				if (
 					timeFilter !== "All" &&
-					!item.timeFound.includes(timeFilter) &&
+					!item.timeFound.includes(timeFilter as TimePeriod) &&
 					!item.timeFound.includes("All")
 				) {
 					return false;

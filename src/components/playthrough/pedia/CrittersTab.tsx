@@ -5,7 +5,7 @@ import { Select, Card, Label } from "flowbite-react";
 import CollectionItem from "@/playthrough/pedia/CollectionItem";
 import { critters } from "@/data/dinkum/pedia/critters";
 import { TIME_PERIODS, SEASONS } from "@/data/constants";
-import { CrittersTabHandle, CrittersTabProps } from "@/types/dinkum";
+import { Biome, CrittersTabHandle, CrittersTabProps, Season, TimePeriod } from "@/types/dinkum";
 
 const CrittersTab = forwardRef<CrittersTabHandle, CrittersTabProps>(
 	({ collected, donated, onCollectedChange, onDonatedChange }, ref) => {
@@ -38,7 +38,7 @@ const CrittersTab = forwardRef<CrittersTabHandle, CrittersTabProps>(
 
 		const filteredItems = React.useMemo(() => {
 			return critters.filter((item) => {
-				if (biomeFilter !== "All" && !item.biome.includes(biomeFilter)) {
+				if (biomeFilter !== "All" && !item.biome.includes(biomeFilter as Biome)) {
 					return false;
 				}
 
@@ -48,15 +48,15 @@ const CrittersTab = forwardRef<CrittersTabHandle, CrittersTabProps>(
 
 				if (
 					seasonFilter !== "All" &&
-					!item.seasons.includes(seasonFilter) &&
-					!item.seasons.includes("All")
+					!item.seasons.includes(seasonFilter as Season) &&
+					!item.seasons.includes("All" as Season)
 				) {
 					return false;
 				}
 
 				if (
 					timeFilter !== "All" &&
-					!item.timeFound.includes(timeFilter) &&
+					!item.timeFound.includes(timeFilter as TimePeriod) &&
 					!item.timeFound.includes("All")
 				) {
 					return false;
