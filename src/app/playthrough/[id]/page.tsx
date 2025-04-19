@@ -37,6 +37,7 @@ import {
 import { Playthrough } from "@/types/app";
 import { ActiveTab } from "@/data/constants";
 import NotFoundCard from "@/comps/NotFoundCard";
+import LoadingPlaythrough from "@/comps/playthrough/LoadingPlaythrough";
 import Dashboard from "@/playthrough/dashboard/Dashboard";
 import { errorToast, successToast } from "@/lib/notifications";
 import { twMerge } from "flowbite-react/helpers/tailwind-merge";
@@ -183,12 +184,7 @@ export default function PlaythroughPage() {
 	};
 
 	if (isLoading) {
-		return (
-			<div className="flex flex-col items-center justify-center py-12">
-				<Spinner size="xl" />
-				<p className="mt-4">Loading playthrough...</p>
-			</div>
-		);
+		return <LoadingPlaythrough message="Fetching your adventure data..." />;
 	}
 
 	if (!playthrough) {
@@ -608,7 +604,7 @@ export default function PlaythroughPage() {
 					className="bg-accent hover:bg-accent/95 focus:ring-accent fixed right-6 bottom-6 z-10 flex h-14 w-14 cursor-pointer items-center justify-center rounded-full p-0 text-white shadow-lg transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:opacity-90"
 					aria-label="Save Progress"
 				>
-					{isSaving ? <Spinner size="lg" /> : <FaRegSave className="h-6 w-6" />}
+					{isSaving ? <Spinner size="lg" color="primary" /> : <FaRegSave className="h-6 w-6" />}
 				</button>
 			)}
 		</div>

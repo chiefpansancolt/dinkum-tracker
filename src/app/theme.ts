@@ -62,4 +62,11 @@ export const customTheme: CustomFlowbiteTheme = createTheme({
       xl: "h-6",
     },
   },
+  spinner: {
+    color: {
+      primary: "fill-primary",
+      secondary: "fill-secondary",
+      accent: "fill-accent",
+    },
+  },
 });
