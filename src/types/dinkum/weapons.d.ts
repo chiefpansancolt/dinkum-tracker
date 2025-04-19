@@ -1,28 +1,24 @@
 import { Resource } from "@/types/dinkum";
 
-export type BuyUnits = "Dinks" | "Permit Points";
-
-export interface Tool {
+export interface Weapon {
   id: string;
   name: string;
   img: string;
   damage: number | null;
-  licence: string;
+  licenceLevel: number | null;
   source: string[];
-  shinyDiscCount?: number;
-  berkoniumOreCount?: number;
   inputs?: Resource[];
   buyPrice?: number;
   buyUnits?: BuyUnits;
   baseSellPrice: number;
 }
 
-export interface ToolsTabProps {
+export interface WeaponsTabProps {
   collected: {
     [key: string]: boolean;
   };
 }
 
-export interface ToolsTabHandle {
-  saveTools: () => boolean;
+export interface WeaponsTabHandle {
+  saveWeapons: () => boolean;
 }

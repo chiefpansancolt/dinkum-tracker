@@ -10,3 +10,5 @@ export * from "./books";
 export * from "./clothing";
 export * from "./relics";
 export * from "./tools";
+export * from "./weapons";
+export * from "./resource";

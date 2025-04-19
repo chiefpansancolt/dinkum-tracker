@@ -10,3 +10,4 @@ export * from "./clothing";
 export * from "./buildings";
 export * from "./relics";
 export * from "./tools";
+export * from "./weapons";

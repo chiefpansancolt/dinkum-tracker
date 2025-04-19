@@ -25,6 +25,7 @@ import ClothingTab from "./tabs/ClothingTab";
 import BooksTab from "./tabs/BooksTab";
 import RelicsTab from "./tabs/RelicsTab";
 import ToolsTab from "./tabs/ToolsTab";
+import WeaponsTab from "./tabs/WeaponsTab";
 import {
 	CollectionsTabHandle,
 	CalendarTabHandle,
@@ -36,6 +37,7 @@ import {
 	ClothingTabHandle,
 	BooksTabHandle,
 	ToolsTabHandle,
+	WeaponsTabHandle,
 } from "@/types/dinkum";
 import { Playthrough } from "@/types/app";
 import { ActiveTab } from "@/data/constants";
@@ -93,6 +95,7 @@ export default function PlaythroughPage() {
 	const clothingRef = useRef<ClothingTabHandle>(null);
 	const booksRef = useRef<BooksTabHandle>(null);
 	const toolsRef = useRef<ToolsTabHandle>(null);
+	const weaponsRef = useRef<WeaponsTabHandle>(null);
 
 	useEffect(() => {
 		const handleHashChange = () => {
@@ -175,6 +178,10 @@ export default function PlaythroughPage() {
 				toolsRef.current.saveTools();
 			}
 
+			if (activeTab === ActiveTab.Weapons && weaponsRef.current) {
+				weaponsRef.current.saveWeapons();
+			}
+
 			successToast({ message: "Playthrough Saved Successfully!" });
 			setPlaythrough(getPlaythroughById(params.id));
 
@@ -234,6 +241,8 @@ export default function PlaythroughPage() {
 				return <RelicsTab />;
 			case ActiveTab.Tools:
 				return <ToolsTab ref={toolsRef} collected={playthrough.tools || {}} />;
+			case ActiveTab.Weapons:
+				return <WeaponsTab ref={weaponsRef} collected={playthrough.weapons || {}} />;
 			case ActiveTab.Overview:
 			default:
 				return <Dashboard playthrough={playthrough} />;
