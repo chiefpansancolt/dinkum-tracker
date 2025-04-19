@@ -4,24 +4,24 @@
 import { useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
 import { useParams } from "next/navigation";
 import { Card, Checkbox, Label, Badge } from "flowbite-react";
-import { buildings as buildingsData } from "@/data/dinkum/buildings";
+import { buildings } from "@/data/dinkum";
 import { BuildingsTabHandle, BuildingsTabProps } from "@/types/dinkum";
 import { updatePlaythroughData } from "@/lib/localStorage";
 import { HiInformationCircle, HiCheck, HiClock } from "react-icons/hi";
 import { HiCalendarDays } from "react-icons/hi2";
 import SaveAlert from "@/comps/SaveAlert";
 
-const BuildingsTab = forwardRef<BuildingsTabHandle, BuildingsTabProps>(({ buildings }, ref) => {
+const BuildingsTab = forwardRef<BuildingsTabHandle, BuildingsTabProps>(({ collected }, ref) => {
 	const params = useParams();
 	const playthroughId = typeof params.id === "string" ? params.id : "";
-	const [localBuildingsState, setLocalBuildingsState] = useState(buildings || {});
+	const [localBuildingsState, setLocalBuildingsState] = useState(collected);
 
 	const isDirty = useRef(false);
 
 	useEffect(() => {
-		setLocalBuildingsState(buildings || {});
+		setLocalBuildingsState(collected);
 		isDirty.current = false;
-	}, [buildings]);
+	}, [collected]);
 
 	const handleToggleBuildingInstalled = (buildingId: string, isInstalled: boolean) => {
 		setLocalBuildingsState((prev) => ({
@@ -68,7 +68,7 @@ const BuildingsTab = forwardRef<BuildingsTabHandle, BuildingsTabProps>(({ buildi
 	};
 
 	const getCollectableBuildingsCount = () => {
-		return buildingsData.filter((building) => building.deedType === "Collectable").length;
+		return buildings.filter((building) => building.deedType === "Collectable").length;
 	};
 
 	return (
@@ -89,7 +89,7 @@ const BuildingsTab = forwardRef<BuildingsTabHandle, BuildingsTabProps>(({ buildi
 			</div>
 
 			<div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-				{buildingsData.map((building) => {
+				{buildings.map((building) => {
 					const isInstalled = localBuildingsState[building.id] === true;
 					const isCollectable = building.deedType === "Collectable";
 					const hasOperatingHours =

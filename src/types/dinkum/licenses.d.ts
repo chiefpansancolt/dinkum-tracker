@@ -14,7 +14,7 @@ export interface License {
 }
 
 export interface LicensesTabProps {
-  licenses: {
+  collected: {
     [key: string]: boolean;
   };
 }
@@ -30,7 +30,7 @@ export interface LicenseCardProps {
 }
 
 export interface LicenseStatsProps {
-  licenses: {
+  collected: {
     [key: string]: boolean;
   };
 }

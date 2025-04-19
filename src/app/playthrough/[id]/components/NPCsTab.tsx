@@ -3,25 +3,23 @@
 import React, { useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
 import { useParams } from "next/navigation";
 import { Badge } from "flowbite-react";
-import { npcs } from "@/data/dinkum/npcs";
+import { npcs } from "@/data/dinkum";
 import { updatePlaythroughData } from "@/lib/localStorage";
 import SaveAlert from "@/comps/SaveAlert";
 import { NPCsTabHandle, NPCsTabProps } from "@/types/dinkum";
 import NPCCard from "@/playthrough/npcs/NPCCard";
 
-const NPCsTab = forwardRef<NPCsTabHandle, NPCsTabProps>(({ relationships }, ref) => {
+const NPCsTab = forwardRef<NPCsTabHandle, NPCsTabProps>(({ collected }, ref) => {
 	const params = useParams();
 	const playthroughId = typeof params.id === "string" ? params.id : "";
-	const [localRelationships, setLocalRelationships] = useState<Record<string, number>>(
-		relationships || {}
-	);
+	const [localRelationships, setLocalRelationships] = useState<Record<string, number>>(collected);
 
 	const isDirty = useRef(false);
 
 	useEffect(() => {
-		setLocalRelationships(relationships || {});
+		setLocalRelationships(collected);
 		isDirty.current = false;
-	}, [relationships]);
+	}, [collected]);
 
 	const handleHeartChange = (npcId: string, hearts: number) => {
 		setLocalRelationships((prev) => ({

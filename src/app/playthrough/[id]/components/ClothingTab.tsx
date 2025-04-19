@@ -9,7 +9,7 @@ import {
 	getClothingBySlot,
 	getClothingByType,
 	getClothingBySet,
-} from "@/data/dinkum/clothing";
+} from "@/data/dinkum";
 import { ClothingSlots } from "@/data/constants";
 import { ClothingTabHandle, ClothingTabProps, ClothingSlot } from "@/types/dinkum";
 import { updatePlaythroughData } from "@/lib/localStorage";

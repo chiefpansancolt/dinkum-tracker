@@ -5,9 +5,7 @@ import { useParams } from "next/navigation";
 import FishTab from "@/playthrough/pedia/FishTab";
 import BugsTab from "@/playthrough/pedia/BugsTab";
 import CrittersTab from "@/playthrough/pedia/CrittersTab";
-import { fish } from "@/data/dinkum/pedia/fish";
-import { bugs } from "@/data/dinkum/pedia/bugs";
-import { critters } from "@/data/dinkum/pedia/critters";
+import { fish, bugs, critters } from "@/data/dinkum";
 import { updatePlaythroughData } from "@/lib/localStorage";
 import SaveAlert from "@/comps/SaveAlert";
 import {

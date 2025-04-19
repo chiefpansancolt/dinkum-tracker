@@ -1,5 +1,7 @@
 import { PediaItem } from "./base";
 
+export type CollectionType = "fish" | "critters" | "bugs";
+
 export interface Fish extends PediaItem {
   cookedPrice: number;
   cookedPieces: number;
@@ -68,7 +70,7 @@ export interface CollectionStatsProps {
     bugs: string[];
     critters: string[];
   };
-  donations?: {
+  donations: {
     fish: string[];
     bugs: string[];
     critters: string[];

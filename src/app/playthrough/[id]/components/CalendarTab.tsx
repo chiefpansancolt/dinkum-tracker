@@ -5,12 +5,12 @@ import { Alert } from "flowbite-react";
 import { useParams } from "next/navigation";
 import { useCalendarStore, getSeasonDays } from "@/service/calendar";
 import { getSeasonStyles, getSeasonEmoji } from "@/service/seasonalTheme";
-import { updatePlaythroughData, getPlaythroughById } from "@/lib/localStorage";
-import { CalendarTabHandle, Season, CalendarDay } from "@/types/dinkum";
-import DayDetails from "./DayDetails";
+import { updatePlaythroughData } from "@/lib/localStorage";
+import { CalendarTabHandle, Season, CalendarDay, CalendarTabProps } from "@/types/dinkum";
+import DayDetails from "@/comps/playthrough/DayDetails";
 import { HiInformationCircle } from "react-icons/hi";
 
-const CalendarTab = forwardRef<CalendarTabHandle>((props, ref) => {
+const CalendarTab = forwardRef<CalendarTabHandle, CalendarTabProps>(({ current }, ref) => {
 	const params = useParams();
 	const playthroughId = typeof params.id === "string" ? params.id : "";
 
@@ -21,17 +21,15 @@ const CalendarTab = forwardRef<CalendarTabHandle>((props, ref) => {
 	const initialized = useRef(false);
 
 	useEffect(() => {
-		if (playthroughId) {
-			const savedCalendarData = getPlaythroughById(playthroughId)?.calendar;
-			if (savedCalendarData) {
-				try {
-					setDate(savedCalendarData.currentDay, savedCalendarData.currentSeason);
-				} catch (error) {
-					console.error("Error setting saved calendar date:", error);
-				}
+		if (current && !initialized.current) {
+			try {
+				setDate(current.currentDay, current.currentSeason);
+				initialized.current = true;
+			} catch (error) {
+				console.error("Error setting calendar date from props:", error);
 			}
 		}
-	}, [playthroughId, setDate]);
+	}, [current, setDate]);
 
 	useEffect(() => {
 		setSeasonDays(getSeasonDays(selectedSeason));
@@ -41,8 +39,10 @@ const CalendarTab = forwardRef<CalendarTabHandle>((props, ref) => {
 		if (currentDay && !initialized.current) {
 			setSelectedDay(currentDay);
 			initialized.current = true;
+		} else if (currentDay && selectedDay === null) {
+			setSelectedDay(currentDay);
 		}
-	}, [currentDay]);
+	}, [currentDay, selectedDay]);
 
 	const saveSelectedDay = () => {
 		if (!selectedDay || !playthroughId) return false;

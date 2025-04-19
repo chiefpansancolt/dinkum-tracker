@@ -24,7 +24,7 @@ export interface Building {
 }
 
 export interface BuildingsTabProps {
-  buildings: {
+  collected: {
     [key: string]: boolean;
   };
 }

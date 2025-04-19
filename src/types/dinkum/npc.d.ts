@@ -16,7 +16,7 @@ export interface NPC {
 }
 
 export interface NPCsTabProps {
-  relationships: Record<string, number>;
+  collected: Record<string, number>;
 }
 
 export interface NPCsTabHandle {
@@ -30,5 +30,5 @@ export interface NPCCardProps {
 }
 
 export interface NPCStatsProps {
-  relationships: Record<string, number>;
+  collected: Record<string, number>;
 }

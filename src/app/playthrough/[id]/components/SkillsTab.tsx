@@ -10,15 +10,15 @@ import { updatePlaythroughData } from "@/lib/localStorage";
 import { HiMinusSm, HiPlusSm } from "react-icons/hi";
 import SaveAlert from "@/comps/SaveAlert";
 
-const SkillsTab = forwardRef<SkillsTabHandle, SkillsTabProps>(({ skillLevels }, ref) => {
+const SkillsTab = forwardRef<SkillsTabHandle, SkillsTabProps>(({ collected }, ref) => {
 	const params = useParams();
 	const playthroughId = typeof params.id === "string" ? params.id : "";
-	const [localSkillLevels, setLocalSkillLevels] = useState<Record<string, number>>(skillLevels);
+	const [localSkillLevels, setLocalSkillLevels] = useState<Record<string, number>>(collected);
 	const isDirty = React.useRef(false);
 
 	useEffect(() => {
-		setLocalSkillLevels(skillLevels);
-	}, [skillLevels]);
+		setLocalSkillLevels(collected);
+	}, [collected]);
 
 	const handleSkillLevelChange = (skillId: string, delta: number) => {
 		setLocalSkillLevels((prev) => {

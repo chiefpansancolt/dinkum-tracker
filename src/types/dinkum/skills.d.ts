@@ -12,7 +12,7 @@ export interface SkillCardProps {
 }
 
 export interface SkillsTabProps {
-  skillLevels: Record<string, number>;
+  collected: Record<string, number>;
 }
 
 export interface SkillsTabHandle {
@@ -20,5 +20,5 @@ export interface SkillsTabHandle {
 }
 
 export interface SkillStatsProps {
-  skillLevels: Record<string, number>;
+  collected: Record<string, number>;
 }

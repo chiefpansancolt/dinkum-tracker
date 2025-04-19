@@ -37,6 +37,10 @@ export interface CalendarDay {
   birthdays: Birthday[];
 }
 
+export interface CalendarTabProps {
+  current: CalendarData;
+}
+
 export interface CalendarTabHandle {
   saveSelectedDay: () => boolean;
 }

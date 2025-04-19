@@ -4,7 +4,7 @@
 import React, { useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
 import { useParams } from "next/navigation";
 import { Card, Checkbox, Label, Badge } from "flowbite-react";
-import { books } from "@/data/dinkum/books";
+import { books } from "@/data/dinkum";
 import { BooksTabHandle, BooksTabProps } from "@/types/dinkum";
 import { updatePlaythroughData } from "@/lib/localStorage";
 import { HiCheck } from "react-icons/hi";

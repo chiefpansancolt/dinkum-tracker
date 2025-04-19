@@ -198,7 +198,7 @@ export default function PlaythroughPage() {
 	const renderTabContent = () => {
 		switch (activeTab) {
 			case ActiveTab.Calendar:
-				return <CalendarTab ref={calendarRef} />;
+				return <CalendarTab ref={calendarRef} current={playthrough.calendar} />;
 			case ActiveTab.Fish:
 			case ActiveTab.Bugs:
 			case ActiveTab.Critters:
@@ -211,15 +211,17 @@ export default function PlaythroughPage() {
 					/>
 				);
 			case ActiveTab.Milestones:
-				return <MilestonesTab ref={milestonesRef} milestones={playthrough.milestones} />;
+				return (
+					<MilestonesTab ref={milestonesRef} collected={playthrough.milestones || {}} />
+				);
 			case ActiveTab.Licenses:
-				return <LicensesTab ref={licensesRef} licenses={playthrough.licenses || {}} />;
+				return <LicensesTab ref={licensesRef} collected={playthrough.licenses || {}} />;
 			case ActiveTab.Skills:
-				return <SkillsTab ref={skillsRef} skillLevels={playthrough.skillLevels} />;
+				return <SkillsTab ref={skillsRef} collected={playthrough.skillLevels || {}} />;
 			case ActiveTab.NPCs:
-				return <NPCsTab ref={npcsRef} relationships={playthrough.relationships || {}} />;
+				return <NPCsTab ref={npcsRef} collected={playthrough.relationships || {}} />;
 			case ActiveTab.Buildings:
-				return <BuildingsTab ref={buildingsRef} buildings={playthrough.buildings || {}} />;
+				return <BuildingsTab ref={buildingsRef} collected={playthrough.buildings || {}} />;
 			case ActiveTab.Clothing:
 				return <ClothingTab ref={clothingRef} collected={playthrough.clothing || {}} />;
 			case ActiveTab.Books:

@@ -56,7 +56,7 @@ export const DAILY_MILESTONE_TYPES = [
 export type DailyMilestoneType = (typeof DAILY_MILESTONE_TYPES)[number];
 
 export interface MilestonesTabProps {
-  milestones: {
+  collected: {
     [key: string]: boolean;
   };
 }
@@ -66,7 +66,7 @@ export interface MilestonesTabHandle {
 }
 
 export interface MilestoneStatsProps {
-  milestones: {
+  collected: {
     [key: string]: boolean;
   };
 }
