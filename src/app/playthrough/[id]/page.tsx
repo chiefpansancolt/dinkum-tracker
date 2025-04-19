@@ -14,13 +14,15 @@ import {
 	SidebarLogo,
 } from "flowbite-react";
 import { getPlaythroughById } from "@/lib/localStorage";
-import CollectionsTab from "./components/CollectionsTab";
-import CalendarTab from "./components/CalendarTab";
-import MilestonesTab from "./components/MilestonesTab";
-import SkillsTab from "./components/SkillsTab";
-import LicensesTab from "./components/LicensesTab";
-import NPCsTab from "./components/NPCsTab";
-import BuildingsTab from "./components/BuildingsTab";
+import CollectionsTab from "./tabs/CollectionsTab";
+import CalendarTab from "./tabs/CalendarTab";
+import MilestonesTab from "./tabs/MilestonesTab";
+import SkillsTab from "./tabs/SkillsTab";
+import LicensesTab from "./tabs/LicensesTab";
+import NPCsTab from "./tabs/NPCsTab";
+import BuildingsTab from "./tabs/BuildingsTab";
+import ClothingTab from "./tabs/ClothingTab";
+import BooksTab from "./tabs/BooksTab";
 import {
 	CollectionsTabHandle,
 	CalendarTabHandle,
@@ -69,8 +71,6 @@ import {
 	GiSwordman,
 	GiWheat,
 } from "react-icons/gi";
-import ClothingTab from "./components/ClothingTab";
-import BooksTab from "./components/BooksTab";
 
 export default function PlaythroughPage() {
 	const params = useParams();
