@@ -12,3 +12,4 @@ export * from "./relics";
 export * from "./tools";
 export * from "./weapons";
 export * from "./resource";
+export * from "./equipment";

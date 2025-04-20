@@ -27,6 +27,7 @@ import BooksTab from "./tabs/BooksTab";
 import RelicsTab from "./tabs/RelicsTab";
 import ToolsTab from "./tabs/ToolsTab";
 import WeaponsTab from "./tabs/WeaponsTab";
+import EquipmentTab from "./tabs/EquipmentTab";
 import {
 	CollectionsTabHandle,
 	CalendarTabHandle,
@@ -39,6 +40,7 @@ import {
 	BooksTabHandle,
 	ToolsTabHandle,
 	WeaponsTabHandle,
+	EquipmentTabHandle
 } from "@/types/dinkum";
 import { Playthrough } from "@/types/app";
 import { ActiveTab } from "@/data/constants";
@@ -98,16 +100,14 @@ export default function PlaythroughPage() {
 	const booksRef = useRef<BooksTabHandle>(null);
 	const toolsRef = useRef<ToolsTabHandle>(null);
 	const weaponsRef = useRef<WeaponsTabHandle>(null);
+	const equipmentRef = useRef<EquipmentTabHandle>(null);
 
-	// Close sidebar on tab change for mobile
 	const closeSidebar = () => {
 		if (window.innerWidth < 1024) {
-			// lg breakpoint
 			setSidebarOpen(false);
 		}
 	};
 
-	// Handle click outside to close sidebar on mobile
 	useEffect(() => {
 		const handleClickOutside = (event: MouseEvent) => {
 			const sidebar = document.getElementById("playthrough-sidebar");
@@ -145,18 +145,15 @@ export default function PlaythroughPage() {
 		};
 	}, []);
 
-	// Handle window resize
 	useEffect(() => {
 		const handleResize = () => {
 			if (window.innerWidth >= 1024) {
-				// lg breakpoint
 				setSidebarOpen(true);
 			} else {
 				setSidebarOpen(false);
 			}
 		};
 
-		// Set initial state based on window width
 		handleResize();
 
 		window.addEventListener("resize", handleResize);
@@ -233,6 +230,10 @@ export default function PlaythroughPage() {
 				weaponsRef.current.saveWeapons();
 			}
 
+			if (activeTab === ActiveTab.Equipment && equipmentRef.current) {
+				equipmentRef.current.saveEquipment();
+			}
+
 			successToast({ message: "Playthrough Saved Successfully!" });
 			setPlaythrough(getPlaythroughById(params.id));
 
@@ -294,6 +295,8 @@ export default function PlaythroughPage() {
 				return <ToolsTab ref={toolsRef} collected={playthrough.tools || {}} />;
 			case ActiveTab.Weapons:
 				return <WeaponsTab ref={weaponsRef} collected={playthrough.weapons || {}} />;
+			case ActiveTab.Equipment:
+				return <EquipmentTab ref={equipmentRef} collected={playthrough.equipment || {}} />;
 			case ActiveTab.Overview:
 			default:
 				return <Dashboard playthrough={playthrough} />;

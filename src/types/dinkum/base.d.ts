@@ -1,5 +1,6 @@
 import { BIOMES, TIME_PERIODS, SEASONS, RARITY_LEVELS } from "@/data/constants";
 
+export type BuyUnits = "Dinks" | "Permit Points";
 export type Biome = (typeof BIOMES)[number];
 export type TimePeriod = (typeof TIME_PERIODS)[number];
 export type Season = Exclude<(typeof SEASONS)[number], "All">;

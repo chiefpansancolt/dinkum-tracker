@@ -1,6 +1,4 @@
-import { Resource } from "@/types/dinkum";
-
-export type BuyUnits = "Dinks" | "Permit Points";
+import { Resource, BuyUnits } from "@/types/dinkum";
 
 export interface Tool {
   id: string;
