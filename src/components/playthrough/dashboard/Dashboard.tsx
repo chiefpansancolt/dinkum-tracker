@@ -7,6 +7,7 @@ import LicenseStats from "./LicenseStats";
 import NPCStats from "./NPCStats";
 import BuildingStats from "./BuildingStats";
 import GameInfoCard from "./GameInfoCard";
+import GearAndEquipmentStats from "./GearAndEquipmentStats";
 
 const Dashboard: React.FC<DashboardProps> = ({ playthrough }) => {
 	return (
@@ -20,6 +21,14 @@ const Dashboard: React.FC<DashboardProps> = ({ playthrough }) => {
 			<CollectionStats
 				collections={playthrough.collections}
 				donations={playthrough.donations}
+			/>
+
+			<GearAndEquipmentStats
+				bookCollection={playthrough.books || {}}
+				toolCollection={playthrough.tools || {}}
+				weaponCollection={playthrough.weapons || {}}
+				equipmentCollection={playthrough.equipment || {}}
+				vehicleCollection={playthrough.vehicles || {}}
 			/>
 
 			<BuildingStats collected={playthrough.buildings || {}} />
