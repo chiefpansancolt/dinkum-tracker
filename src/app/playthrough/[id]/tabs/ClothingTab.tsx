@@ -4,12 +4,7 @@
 import { useMemo, useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
 import { useParams } from "next/navigation";
 import { Card, Checkbox, Label, Badge, TextInput, Select } from "flowbite-react";
-import {
-	clothing,
-	getClothingBySlot,
-	getClothingByType,
-	getClothingBySet,
-} from "@/data/dinkum";
+import { clothing, getClothingBySlot, getClothingByType, getClothingBySet } from "@/data/dinkum";
 import { ClothingSlots } from "@/data/constants";
 import { ClothingTabHandle, ClothingTabProps, ClothingSlot } from "@/types/dinkum";
 import { updatePlaythroughData } from "@/lib/localStorage";

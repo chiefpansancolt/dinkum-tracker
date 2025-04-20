@@ -160,11 +160,7 @@ const SettingsPage = () => {
 								)}
 							</div>
 							<div className="flex flex-col gap-2">
-								<FileInput
-									id="import-data"
-									ref={fileInputRef}
-									accept=".json"
-								/>
+								<FileInput id="import-data" ref={fileInputRef} accept=".json" />
 								<p className="text-sm text-gray-500">
 									Upload a previously exported file (.json)
 								</p>

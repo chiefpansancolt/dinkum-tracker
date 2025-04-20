@@ -13,10 +13,7 @@ const LicenseStats: React.FC<LicenseStatsProps> = ({ collected }) => {
 			});
 		};
 
-		const totalLevels = licenses.reduce(
-			(total, license) => total + license.levels.length,
-			0
-		);
+		const totalLevels = licenses.reduce((total, license) => total + license.levels.length, 0);
 
 		const completedLevels = Object.keys(collected).filter((key) => collected[key]).length;
 

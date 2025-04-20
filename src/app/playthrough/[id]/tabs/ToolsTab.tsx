@@ -235,7 +235,7 @@ const ToolsTab = forwardRef<ToolsTabHandle, ToolsTabProps>(({ collected }, ref) 
 				) : (
 					filteredTools.map((tool) => {
 						const isCollected = localToolsState[tool.id] === true;
-						const isCraftable = tool.source.includes('Crafting Table');
+						const isCraftable = tool.source.includes("Crafting Table");
 
 						return (
 							<Card

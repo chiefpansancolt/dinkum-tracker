@@ -10,9 +10,7 @@ const NPCStats: React.FC<NPCStatsProps> = ({ collected }) => {
 
 	const stats = useMemo(() => {
 		const totalNPCs = residents.length;
-		const friendsCount = Object.keys(collected).filter(
-			(npcId) => collected[npcId] > 0
-		).length;
+		const friendsCount = Object.keys(collected).filter((npcId) => collected[npcId] > 0).length;
 
 		const oneHeartCount = Object.keys(collected).filter(
 			(npcId) => collected[npcId] >= 1
@@ -24,10 +22,7 @@ const NPCStats: React.FC<NPCStatsProps> = ({ collected }) => {
 
 		let avgHearts = 0;
 		if (friendsCount > 0) {
-			const totalHearts = Object.values(collected).reduce(
-				(sum, hearts) => sum + hearts,
-				0
-			);
+			const totalHearts = Object.values(collected).reduce((sum, hearts) => sum + hearts, 0);
 			avgHearts = totalHearts / friendsCount;
 		}
 

@@ -40,7 +40,7 @@ import {
 	BooksTabHandle,
 	ToolsTabHandle,
 	WeaponsTabHandle,
-	EquipmentTabHandle
+	EquipmentTabHandle,
 } from "@/types/dinkum";
 import { Playthrough } from "@/types/app";
 import { ActiveTab } from "@/data/constants";
@@ -342,7 +342,7 @@ export default function PlaythroughPage() {
 						id="playthrough-sidebar"
 						className={`${
 							sidebarOpen ? "translate-x-0" : "-translate-x-full"
-						} bg-accent fixed inset-y-0 left-0 z-50 w-64 transform overflow-y-auto pt-16 transition-transform duration-300 ease-in-out lg:static lg:z-0 lg:w-auto lg:translate-x-0 lg:pt-0 lg:rounded-lg`}
+						} bg-accent fixed inset-y-0 left-0 z-50 w-64 transform overflow-y-auto pt-16 transition-transform duration-300 ease-in-out lg:static lg:z-0 lg:w-auto lg:translate-x-0 lg:rounded-lg lg:pt-0`}
 					>
 						<div className="sticky top-4 h-fit max-h-screen overflow-y-auto pb-20">
 							<Sidebar

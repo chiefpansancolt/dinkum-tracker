@@ -14,10 +14,7 @@ const RelicsTab: React.FC = () => {
 
 	const filteredRelics = useMemo(() => {
 		return relics.filter((relic) => {
-			if (
-				searchQuery &&
-				!relic.name.toLowerCase().includes(searchQuery.toLowerCase())
-			) {
+			if (searchQuery && !relic.name.toLowerCase().includes(searchQuery.toLowerCase())) {
 				return false;
 			}
 
@@ -32,9 +29,7 @@ const RelicsTab: React.FC = () => {
 	return (
 		<div className="space-y-6">
 			<div>
-				<h1 className="text-primary mb-6 text-2xl font-bold">
-					Relics
-				</h1>
+				<h1 className="text-primary mb-6 text-2xl font-bold">Relics</h1>
 			</div>
 
 			<div className="flex flex-col gap-4 md:flex-row">
@@ -172,10 +167,7 @@ const RelicCard: React.FC<RelicCardProps> = ({ relic }) => {
 						<p className="font-medium">Found in:</p>
 						<div className="mt-1 flex flex-wrap gap-2">
 							{relic.locations.map((location) => (
-								<Badge
-									key={`${relic.id}-${location}`}
-									color="info"
-								>
+								<Badge key={`${relic.id}-${location}`} color="info">
 									{location}
 								</Badge>
 							))}

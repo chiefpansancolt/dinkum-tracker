@@ -28,8 +28,7 @@ const BuildingStats: React.FC<BuildingStatsProps> = ({ collected }) => {
 		).length;
 
 		const townCount = collectableBuildings.filter(
-			(building) =>
-				/hall|museum|bank|band/i.test(building.id) && collected[building.id]
+			(building) => /hall|museum|bank|band/i.test(building.id) && collected[building.id]
 		).length;
 
 		const utilityCount = collectableBuildings.filter(
