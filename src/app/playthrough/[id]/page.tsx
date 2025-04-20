@@ -28,6 +28,7 @@ import RelicsTab from "./tabs/RelicsTab";
 import ToolsTab from "./tabs/ToolsTab";
 import WeaponsTab from "./tabs/WeaponsTab";
 import EquipmentTab from "./tabs/EquipmentTab";
+import VehiclesTab from "./tabs/VehiclesTab";
 import {
 	CollectionsTabHandle,
 	CalendarTabHandle,
@@ -41,6 +42,7 @@ import {
 	ToolsTabHandle,
 	WeaponsTabHandle,
 	EquipmentTabHandle,
+	VehicleTabHandle,
 } from "@/types/dinkum";
 import { Playthrough } from "@/types/app";
 import { ActiveTab } from "@/data/constants";
@@ -101,6 +103,7 @@ export default function PlaythroughPage() {
 	const toolsRef = useRef<ToolsTabHandle>(null);
 	const weaponsRef = useRef<WeaponsTabHandle>(null);
 	const equipmentRef = useRef<EquipmentTabHandle>(null);
+	const vehicleRef = useRef<VehicleTabHandle>(null);
 
 	const closeSidebar = () => {
 		if (window.innerWidth < 1024) {
@@ -234,6 +237,10 @@ export default function PlaythroughPage() {
 				equipmentRef.current.saveEquipment();
 			}
 
+			if (activeTab === ActiveTab.Vehicles && vehicleRef.current) {
+				vehicleRef.current.saveVehicle();
+			}
+
 			successToast({ message: "Playthrough Saved Successfully!" });
 			setPlaythrough(getPlaythroughById(params.id));
 
@@ -297,6 +304,8 @@ export default function PlaythroughPage() {
 				return <WeaponsTab ref={weaponsRef} collected={playthrough.weapons || {}} />;
 			case ActiveTab.Equipment:
 				return <EquipmentTab ref={equipmentRef} collected={playthrough.equipment || {}} />;
+			case ActiveTab.Vehicles:
+				return <VehiclesTab ref={vehicleRef} collected={playthrough.vehicles || {}} />;
 			case ActiveTab.Overview:
 			default:
 				return <Dashboard playthrough={playthrough} />;

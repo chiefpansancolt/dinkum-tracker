@@ -13,3 +13,4 @@ export * from "./tools";
 export * from "./weapons";
 export * from "./resource";
 export * from "./equipment";
+export * from "./vehicles";
