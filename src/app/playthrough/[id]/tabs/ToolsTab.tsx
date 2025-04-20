@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import React, { useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
+import { useMemo, useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
 import { useParams } from "next/navigation";
 import { Card, Checkbox, Label, Badge, TextInput, Select, Button } from "flowbite-react";
 import { tools } from "@/data/dinkum/tools";
@@ -22,7 +22,7 @@ const ToolsTab = forwardRef<ToolsTabHandle, ToolsTabProps>(({ collected }, ref) 
 
 	const isDirty = useRef(false);
 
-	const uniqueLicenses = React.useMemo(() => {
+	const uniqueLicenses = useMemo(() => {
 		const licenses = new Set<string>();
 		tools.forEach((tool) => {
 			if (tool.licence) {
@@ -32,7 +32,7 @@ const ToolsTab = forwardRef<ToolsTabHandle, ToolsTabProps>(({ collected }, ref) 
 		return ["All", ...Array.from(licenses).sort()];
 	}, []);
 
-	const uniqueSources = React.useMemo(() => {
+	const uniqueSources = useMemo(() => {
 		const sources = new Set<string>();
 		tools.forEach((tool) => {
 			if (tool.source && tool.source.length > 0) {
@@ -77,7 +77,7 @@ const ToolsTab = forwardRef<ToolsTabHandle, ToolsTabProps>(({ collected }, ref) 
 		saveTools,
 	}));
 
-	const filteredTools = React.useMemo(() => {
+	const filteredTools = useMemo(() => {
 		return tools.filter((tool) => {
 			if (licenseFilter !== "All" && tool.licence !== licenseFilter) {
 				return false;

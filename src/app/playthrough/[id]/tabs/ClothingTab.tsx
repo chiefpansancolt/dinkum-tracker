@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import React, { useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
+import { useMemo, useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
 import { useParams } from "next/navigation";
 import { Card, Checkbox, Label, Badge, TextInput, Select } from "flowbite-react";
 import {
@@ -30,7 +30,7 @@ const ClothingTab = forwardRef<ClothingTabHandle, ClothingTabProps>(({ collected
 
 	const isDirty = useRef(false);
 
-	const uniqueSets = React.useMemo(() => {
+	const uniqueSets = useMemo(() => {
 		const sets = new Set<string>();
 		clothing.forEach((item) => {
 			if (item.set) {
@@ -88,7 +88,7 @@ const ClothingTab = forwardRef<ClothingTabHandle, ClothingTabProps>(({ collected
 		saveClothing,
 	}));
 
-	const filteredClothing = React.useMemo(() => {
+	const filteredClothing = useMemo(() => {
 		let filtered = [...clothing];
 
 		if (slotFilter !== "All") {

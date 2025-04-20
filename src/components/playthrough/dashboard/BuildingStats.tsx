@@ -1,41 +1,41 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useMemo } from "react";
 import { Card, Progress, Badge } from "flowbite-react";
-import { buildings } from "@/data/dinkum/buildings";
+import { buildings } from "@/data/dinkum";
 import { BuildingStatsProps } from "@/types/dinkum";
 import { HiOutlineHome, HiOutlineOfficeBuilding, HiOutlineShoppingBag } from "react-icons/hi";
 
-const BuildingStats: React.FC<BuildingStatsProps> = ({ buildings: buildingsInstalled = {} }) => {
+const BuildingStats: React.FC<BuildingStatsProps> = ({ collected }) => {
 	const stats = useMemo(() => {
 		const collectableBuildings = buildings.filter(
 			(building) => building.deedType === "Collectable"
 		);
 		const totalBuildings = collectableBuildings.length;
 
-		const installedCount = Object.keys(buildingsInstalled).filter(
-			(buildingId) => buildingsInstalled[buildingId]
+		const installedCount = Object.keys(collected).filter(
+			(buildingId) => collected[buildingId]
 		).length;
 
 		const houseUpgradeCount = collectableBuildings.filter(
-			(building) => building.id.includes("house_upgrade") && buildingsInstalled[building.id]
+			(building) => building.id.includes("house_upgrade") && collected[building.id]
 		).length;
 
 		const shopCount = collectableBuildings.filter(
 			(building) =>
 				(building.id.includes("shop") ||
 					/barn|lab|salon|greenhouse|threadspace|tuckerbox/i.test(building.id)) &&
-				buildingsInstalled[building.id]
+				collected[building.id]
 		).length;
 
 		const townCount = collectableBuildings.filter(
 			(building) =>
-				/hall|museum|bank|band/i.test(building.id) && buildingsInstalled[building.id]
+				/hall|museum|bank|band/i.test(building.id) && collected[building.id]
 		).length;
 
 		const utilityCount = collectableBuildings.filter(
 			(building) =>
 				/mine|tower|pad|fountain|airport|bulletin/i.test(building.id) &&
-				buildingsInstalled[building.id]
+				collected[building.id]
 		).length;
 
 		return {
@@ -46,7 +46,7 @@ const BuildingStats: React.FC<BuildingStatsProps> = ({ buildings: buildingsInsta
 			townCount,
 			utilityCount,
 		};
-	}, [buildingsInstalled]);
+	}, [collected]);
 
 	const expensiveBuildings = useMemo(() => {
 		return buildings

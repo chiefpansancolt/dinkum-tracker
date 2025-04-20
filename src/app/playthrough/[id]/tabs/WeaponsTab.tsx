@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import React, { useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
+import { useMemo, useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { Card, Checkbox, Label, Badge, TextInput, Select, Button } from "flowbite-react";
@@ -21,7 +21,7 @@ const WeaponsTab = forwardRef<WeaponsTabHandle, WeaponsTabProps>(({ collected },
 
 	const isDirty = useRef(false);
 
-	const uniqueSources = React.useMemo(() => {
+	const uniqueSources = useMemo(() => {
 		const sources = new Set<string>();
 		weapons.forEach((weapon) => {
 			if (weapon.source && weapon.source.length > 0) {
@@ -66,7 +66,7 @@ const WeaponsTab = forwardRef<WeaponsTabHandle, WeaponsTabProps>(({ collected },
 		saveWeapons,
 	}));
 
-	const filteredWeapons = React.useMemo(() => {
+	const filteredWeapons = useMemo(() => {
 		return weapons.filter((weapon) => {
 			if (sourceFilter !== "All" && !weapon.source.includes(sourceFilter)) {
 				return false;

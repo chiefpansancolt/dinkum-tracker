@@ -34,7 +34,7 @@ export interface BuildingsTabHandle {
 }
 
 export interface BuildingStatsProps {
-  buildings: {
+  collected: {
     [key: string]: boolean;
   };
 }

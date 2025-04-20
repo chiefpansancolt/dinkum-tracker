@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, forwardRef, useImperativeHandle } from "react";
+import { useMemo, useState, useEffect, forwardRef, useImperativeHandle } from "react";
 import { Select, Card, Label } from "flowbite-react";
 import CollectionItem from "@/playthrough/pedia/CollectionItem";
 import { critters } from "@/data/dinkum/pedia/critters";
@@ -22,7 +22,7 @@ const CrittersTab = forwardRef<CrittersTabHandle, CrittersTabProps>(
 			setDonatedState(donated);
 		}, [collected, donated]);
 
-		const uniqueBiomes = React.useMemo(() => {
+		const uniqueBiomes = useMemo(() => {
 			const biomes = new Set<string>();
 			critters.forEach((item) => {
 				item.biome.forEach((b) => biomes.add(b));
@@ -30,13 +30,13 @@ const CrittersTab = forwardRef<CrittersTabHandle, CrittersTabProps>(
 			return ["All", ...Array.from(biomes)].sort();
 		}, []);
 
-		const uniqueRarities = React.useMemo(() => {
+		const uniqueRarities = useMemo(() => {
 			const rarities = new Set<string>();
 			critters.forEach((item) => rarities.add(item.rarity));
 			return ["All", ...Array.from(rarities)].sort();
 		}, []);
 
-		const filteredItems = React.useMemo(() => {
+		const filteredItems = useMemo(() => {
 			return critters.filter((item) => {
 				if (biomeFilter !== "All" && !item.biome.includes(biomeFilter as Biome)) {
 					return false;

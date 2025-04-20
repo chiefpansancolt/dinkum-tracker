@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Card, Label, TextInput, Select, Badge } from "flowbite-react";
 import { relics } from "@/data/dinkum";
 import { RelicLocations } from "@/data/constants";
@@ -12,7 +12,7 @@ const RelicsTab: React.FC = () => {
 	const [searchQuery, setSearchQuery] = useState<string>("");
 	const [locationFilter, setLocationFilter] = useState<string>("All");
 
-	const filteredRelics = React.useMemo(() => {
+	const filteredRelics = useMemo(() => {
 		return relics.filter((relic) => {
 			if (
 				searchQuery &&

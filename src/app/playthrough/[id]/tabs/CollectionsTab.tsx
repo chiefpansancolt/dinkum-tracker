@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState, useEffect, useImperativeHandle } from "react";
+import { useRef, useState, useEffect, useImperativeHandle, forwardRef } from "react";
 import { useParams } from "next/navigation";
 import FishTab from "@/playthrough/pedia/FishTab";
 import BugsTab from "@/playthrough/pedia/BugsTab";
@@ -18,7 +18,7 @@ import {
 	CrittersTabHandle,
 } from "@/types/dinkum";
 
-const CollectionsTab = React.forwardRef<CollectionsTabHandle, CollectionsTabProps>(
+const CollectionsTab = forwardRef<CollectionsTabHandle, CollectionsTabProps>(
 	({ collections, donations, activeCollectionType }, ref) => {
 		const params = useParams();
 		const playthroughId = typeof params.id === "string" ? params.id : "";
@@ -28,6 +28,7 @@ const CollectionsTab = React.forwardRef<CollectionsTabHandle, CollectionsTabProp
 
 		const [localCollections, setLocalCollections] = useState<Collection>(collections);
 		const [localDonations, setLocalDonations] = useState<Collection>(donations);
+
 		const isDirty = useRef(false);
 
 		useEffect(() => {

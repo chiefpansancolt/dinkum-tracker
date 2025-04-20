@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import React, { useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
+import { useMemo, useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { Card, Checkbox, Label, Badge, TextInput, Select, Button } from "flowbite-react";
@@ -22,7 +22,7 @@ const EquipmentTab = forwardRef<EquipmentTabHandle, EquipmentTabProps>(({ collec
 
 	const isDirty = useRef(false);
 
-	const uniqueSources = React.useMemo(() => {
+	const uniqueSources = useMemo(() => {
 		const sources = new Set<string>();
 		equipment.forEach((item) => {
 			if (item.source && item.source.length > 0) {
@@ -34,7 +34,7 @@ const EquipmentTab = forwardRef<EquipmentTabHandle, EquipmentTabProps>(({ collec
 		return ["All", ...Array.from(sources).sort()];
 	}, []);
 
-	const uniqueRequirementTypes = React.useMemo(() => {
+	const uniqueRequirementTypes = useMemo(() => {
 		const types = new Set<string>();
 		equipment.forEach((item) => {
 			if (item.requirementType) {
@@ -77,7 +77,7 @@ const EquipmentTab = forwardRef<EquipmentTabHandle, EquipmentTabProps>(({ collec
 		saveEquipment,
 	}));
 
-	const filteredEquipment = React.useMemo(() => {
+	const filteredEquipment = useMemo(() => {
 		return equipment.filter((item) => {
 			if (sourceFilter !== "All" && !item.source.includes(sourceFilter)) {
 				return false;

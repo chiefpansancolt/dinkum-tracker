@@ -1,30 +1,30 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useMemo } from "react";
 import { Card } from "flowbite-react";
-import { npcs } from "@/data/dinkum/npcs";
+import { npcs } from "@/data/dinkum";
 import { NPCStatsProps } from "@/types/dinkum";
 import { HiHeart } from "react-icons/hi";
 
-const NPCStats: React.FC<NPCStatsProps> = ({ relationships = {} }) => {
+const NPCStats: React.FC<NPCStatsProps> = ({ collected }) => {
 	const residents = useMemo(() => npcs, []);
 
 	const stats = useMemo(() => {
 		const totalNPCs = residents.length;
-		const friendsCount = Object.keys(relationships).filter(
-			(npcId) => relationships[npcId] > 0
+		const friendsCount = Object.keys(collected).filter(
+			(npcId) => collected[npcId] > 0
 		).length;
 
-		const oneHeartCount = Object.keys(relationships).filter(
-			(npcId) => relationships[npcId] >= 1
+		const oneHeartCount = Object.keys(collected).filter(
+			(npcId) => collected[npcId] >= 1
 		).length;
 
-		const maxHeartCount = Object.keys(relationships).filter(
-			(npcId) => relationships[npcId] >= 5
+		const maxHeartCount = Object.keys(collected).filter(
+			(npcId) => collected[npcId] >= 5
 		).length;
 
 		let avgHearts = 0;
 		if (friendsCount > 0) {
-			const totalHearts = Object.values(relationships).reduce(
+			const totalHearts = Object.values(collected).reduce(
 				(sum, hearts) => sum + hearts,
 				0
 			);
@@ -38,13 +38,13 @@ const NPCStats: React.FC<NPCStatsProps> = ({ relationships = {} }) => {
 			maxHeartCount,
 			avgHearts,
 		};
-	}, [relationships, residents]);
+	}, [collected, residents]);
 
 	const sortedNPCIds = useMemo(() => {
-		return Object.keys(relationships)
-			.sort((a, b) => (relationships[b] || 0) - (relationships[a] || 0))
+		return Object.keys(collected)
+			.sort((a, b) => (collected[b] || 0) - (collected[a] || 0))
 			.slice(0, 5);
-	}, [relationships]);
+	}, [collected]);
 
 	return (
 		<Card className="flex h-full flex-col">
@@ -100,7 +100,7 @@ const NPCStats: React.FC<NPCStatsProps> = ({ relationships = {} }) => {
 								<div className="space-y-2">
 									{sortedNPCIds.map((npcId) => {
 										const npc = npcs.find((n) => n.id === npcId);
-										const hearts = relationships[npcId] || 0;
+										const hearts = collected[npcId] || 0;
 
 										if (!npc) return null;
 
@@ -131,7 +131,7 @@ const NPCStats: React.FC<NPCStatsProps> = ({ relationships = {} }) => {
 						) : (
 							<div className="rounded-lg bg-gray-50 p-4 text-center dark:bg-gray-800">
 								<p className="text-gray-500 italic dark:text-gray-400">
-									No NPC relationships recorded yet.
+									No NPC collected recorded yet.
 								</p>
 							</div>
 						)}

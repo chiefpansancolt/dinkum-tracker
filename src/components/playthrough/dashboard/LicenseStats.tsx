@@ -1,38 +1,38 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useMemo } from "react";
 import { Card, Progress, Badge } from "flowbite-react";
-import { licenses as licenseData } from "@/data/dinkum/licences";
+import { licenses } from "@/data/dinkum";
 import { License, LicenseStatsProps } from "@/types/dinkum";
 
-const LicenseStats: React.FC<LicenseStatsProps> = ({ licenses = {} }) => {
+const LicenseStats: React.FC<LicenseStatsProps> = ({ collected }) => {
 	const stats = useMemo(() => {
 		const areAllLevelsComplete = (license: License) => {
 			return license.levels.every((level) => {
 				const licenseKey = `${license.id}_level_${level.level}`;
-				return licenses[licenseKey] === true;
+				return collected[licenseKey] === true;
 			});
 		};
 
-		const totalLevels = licenseData.reduce(
+		const totalLevels = licenses.reduce(
 			(total, license) => total + license.levels.length,
 			0
 		);
 
-		const completedLevels = Object.keys(licenses).filter((key) => licenses[key]).length;
+		const completedLevels = Object.keys(collected).filter((key) => collected[key]).length;
 
-		const completedLicenses = licenseData.filter((license) =>
+		const completedLicenses = licenses.filter((license) =>
 			areAllLevelsComplete(license)
 		).length;
 
 		let totalPermitPoints = 0;
 		let spentPermitPoints = 0;
 
-		licenseData.forEach((license) => {
+		licenses.forEach((license) => {
 			license.levels.forEach((level) => {
 				totalPermitPoints += level.permitPointCost;
 
 				const licenseKey = `${license.id}_level_${level.level}`;
-				if (licenses[licenseKey]) {
+				if (collected[licenseKey]) {
 					spentPermitPoints += level.permitPointCost;
 				}
 			});
@@ -41,12 +41,12 @@ const LicenseStats: React.FC<LicenseStatsProps> = ({ licenses = {} }) => {
 		return {
 			totalLevels,
 			completedLevels,
-			totalLicenses: licenseData.length,
+			totalLicenses: licenses.length,
 			completedLicenses,
 			totalPermitPoints,
 			spentPermitPoints,
 		};
-	}, [licenses]);
+	}, [collected]);
 
 	return (
 		<Card className="flex h-full flex-col">

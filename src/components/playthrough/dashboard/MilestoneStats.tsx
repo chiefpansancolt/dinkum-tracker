@@ -1,38 +1,38 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useMemo } from "react";
 import { Card, Progress, Badge } from "flowbite-react";
-import { milestones as milestoneData } from "@/data/dinkum/milestones";
+import { milestones } from "@/data/dinkum";
 import { Milestone, MilestoneStatsProps } from "@/types/dinkum";
 
-const MilestoneStats: React.FC<MilestoneStatsProps> = ({ milestones }) => {
+const MilestoneStats: React.FC<MilestoneStatsProps> = ({ collected }) => {
 	const stats = useMemo(() => {
 		const areAllLevelsComplete = (milestone: Milestone) => {
 			return milestone.levels.every((level) => {
 				const milestoneKey = `${milestone.id}_level_${level.level}`;
-				return milestones[milestoneKey] === true;
+				return collected[milestoneKey] === true;
 			});
 		};
 
-		const totalLevels = milestoneData.reduce(
+		const totalLevels = milestones.reduce(
 			(total, milestone) => total + milestone.levels.length,
 			0
 		);
 
-		const completedLevels = Object.keys(milestones).filter((key) => milestones[key]).length;
+		const completedLevels = Object.keys(collected).filter((key) => collected[key]).length;
 
-		const completedMilestones = milestoneData.filter((milestone) =>
+		const completedMilestones = milestones.filter((milestone) =>
 			areAllLevelsComplete(milestone)
 		).length;
 
 		let totalPermitPoints = 0;
 		let earnedPermitPoints = 0;
 
-		milestoneData.forEach((milestone) => {
+		milestones.forEach((milestone) => {
 			milestone.levels.forEach((level) => {
 				totalPermitPoints += level.permitPoints;
 
 				const milestoneKey = `${milestone.id}_level_${level.level}`;
-				if (milestones[milestoneKey]) {
+				if (collected[milestoneKey]) {
 					earnedPermitPoints += level.permitPoints;
 				}
 			});
@@ -41,12 +41,12 @@ const MilestoneStats: React.FC<MilestoneStatsProps> = ({ milestones }) => {
 		return {
 			totalLevels,
 			completedLevels,
-			totalMilestones: milestoneData.length,
+			totalMilestones: milestones.length,
 			completedMilestones,
 			totalPermitPoints,
 			earnedPermitPoints,
 		};
-	}, [milestones]);
+	}, [collected]);
 
 	return (
 		<Card className="flex h-full flex-col">

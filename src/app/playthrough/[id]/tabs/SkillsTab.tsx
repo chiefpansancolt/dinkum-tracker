@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import React, { useState, useEffect, forwardRef, useImperativeHandle } from "react";
+import React, { useState, useEffect, useRef, forwardRef, useImperativeHandle } from "react";
 import { useParams } from "next/navigation";
 import { Card, Label, Button } from "flowbite-react";
 import { skills } from "@/data/dinkum";
@@ -14,7 +14,8 @@ const SkillsTab = forwardRef<SkillsTabHandle, SkillsTabProps>(({ collected }, re
 	const params = useParams();
 	const playthroughId = typeof params.id === "string" ? params.id : "";
 	const [localSkillLevels, setLocalSkillLevels] = useState<Record<string, number>>(collected);
-	const isDirty = React.useRef(false);
+
+	const isDirty = useRef(false);
 
 	useEffect(() => {
 		setLocalSkillLevels(collected);

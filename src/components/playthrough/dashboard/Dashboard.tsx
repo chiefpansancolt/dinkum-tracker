@@ -11,20 +11,20 @@ import GameInfoCard from "./GameInfoCard";
 const Dashboard: React.FC<DashboardProps> = ({ playthrough }) => {
 	return (
 		<div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-			<SkillStats skillLevels={playthrough.skillLevels} />
+			<SkillStats collected={playthrough.skillLevels || {}} />
 
-			<LicenseStats licenses={playthrough.licenses} />
+			<LicenseStats collected={playthrough.licenses || {}} />
 
-			<MilestoneStats milestones={playthrough.milestones} />
+			<MilestoneStats collected={playthrough.milestones || {}} />
 
 			<CollectionStats
 				collections={playthrough.collections}
 				donations={playthrough.donations}
 			/>
 
-			<BuildingStats buildings={playthrough.buildings} />
+			<BuildingStats collected={playthrough.buildings || {}} />
 
-			<NPCStats relationships={playthrough.relationships} />
+			<NPCStats collected={playthrough.relationships || {}} />
 
 			<GameInfoCard playthrough={playthrough} />
 		</div>

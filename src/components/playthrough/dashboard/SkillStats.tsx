@@ -4,8 +4,8 @@ import { Card, Badge } from "flowbite-react";
 import { skills } from "@/data/dinkum";
 import { SkillStatsProps } from "@/types/dinkum";
 
-const SkillStats: React.FC<SkillStatsProps> = ({ skillLevels = {} }) => {
-	const hasSkills = Object.keys(skillLevels).length > 0;
+const SkillStats: React.FC<SkillStatsProps> = ({ collected }) => {
+	const hasSkills = Object.keys(collected).length > 0;
 
 	return (
 		<Card className="flex h-full flex-col">
@@ -20,7 +20,7 @@ const SkillStats: React.FC<SkillStatsProps> = ({ skillLevels = {} }) => {
 					) : (
 						<div className="space-y-4">
 							{skills.map((skill) => {
-								const level = skillLevels[skill.id] || 0;
+								const level = collected[skill.id] || 0;
 
 								return (
 									<div

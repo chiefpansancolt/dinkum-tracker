@@ -1,9 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useMemo } from "react";
 import { Card, Progress, Badge } from "flowbite-react";
-import { critters } from "@/data/dinkum/pedia/critters";
-import { fish } from "@/data/dinkum/pedia/fish";
-import { bugs } from "@/data/dinkum/pedia/bugs";
+import { critters, fish, bugs } from "@/data/dinkum";
 import { CollectionStatsProps } from "@/types/dinkum";
 
 const CollectionStats: React.FC<CollectionStatsProps> = ({ collections, donations }) => {
