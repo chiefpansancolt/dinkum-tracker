@@ -1,8 +1,4 @@
-export interface BuildingResource {
-  name: string;
-  count: number;
-  img: string;
-}
+import { Resource } from "./resource";
 
 export type DeedType = "Collectable" | "Movable" | "Reference";
 
@@ -18,7 +14,7 @@ export interface Building {
   buildTime: string;
   deedPrice: number;
   deedType: DeedType;
-  resources: BuildingResource[];
+  inputs: Resource[];
   operatingHours: string[];
   daysClosed: string;
 }

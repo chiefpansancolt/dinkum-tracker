@@ -13,13 +13,13 @@ const RecipeStats: React.FC<RecipeStatsProps> = ({
 	const stats = useMemo(() => {
 		return {
 			cooking: {
-				unlocked: Object.keys(unlockedCookingRecipes || {}).filter(
+				unlocked: Object.keys(unlockedCookingRecipes).filter(
 					(key) => unlockedCookingRecipes[key]
 				).length,
 				total: cookingRecipes.length,
 				percentage:
 					Math.round(
-						(Object.keys(unlockedCookingRecipes || {}).filter(
+						(Object.keys(unlockedCookingRecipes).filter(
 							(key) => unlockedCookingRecipes[key]
 						).length /
 							cookingRecipes.length) *
@@ -27,13 +27,13 @@ const RecipeStats: React.FC<RecipeStatsProps> = ({
 					) || 0,
 			},
 			crafting: {
-				unlocked: Object.keys(unlockedCraftingRecipes || {}).filter(
+				unlocked: Object.keys(unlockedCraftingRecipes).filter(
 					(key) => unlockedCraftingRecipes[key]
 				).length,
 				total: craftingRecipes.length,
 				percentage:
 					Math.round(
-						(Object.keys(unlockedCraftingRecipes || {}).filter(
+						(Object.keys(unlockedCraftingRecipes).filter(
 							(key) => unlockedCraftingRecipes[key]
 						).length /
 							craftingRecipes.length) *
@@ -41,13 +41,13 @@ const RecipeStats: React.FC<RecipeStatsProps> = ({
 					) || 0,
 			},
 			signwriting: {
-				unlocked: Object.keys(unlockedSignwritingRecipes || {}).filter(
+				unlocked: Object.keys(unlockedSignwritingRecipes).filter(
 					(key) => unlockedSignwritingRecipes[key]
 				).length,
 				total: signWritingRecipes.length,
 				percentage:
 					Math.round(
-						(Object.keys(unlockedSignwritingRecipes || {}).filter(
+						(Object.keys(unlockedSignwritingRecipes).filter(
 							(key) => unlockedSignwritingRecipes[key]
 						).length /
 							signWritingRecipes.length) *

@@ -232,26 +232,26 @@ const BuildingsTab = forwardRef<BuildingsTabHandle, BuildingsTabProps>(({ collec
 										{building.description}
 									</p>
 
-									{building.resources && building.resources.length > 0 && (
+									{building.inputs && building.inputs.length > 0 && (
 										<div className="mt-auto">
 											<h4 className="mb-2 text-sm font-medium">
-												Required Resources:
+												Required inputs:
 											</h4>
 											<div className="grid grid-cols-2 gap-2">
-												{building.resources.map((resource, idx) => (
+												{building.inputs.map((input, idx) => (
 													<div
 														key={idx}
 														className="flex items-center gap-2 rounded-lg bg-gray-50 p-2 dark:bg-gray-800"
 													>
-														{resource.img && (
+														{input.img && (
 															<img
-																src={resource.img}
-																alt={resource.name}
+																src={input.img}
+																alt={input.name}
 																className="h-6 w-6 object-contain"
 															/>
 														)}
 														<span className="text-sm">
-															{resource.count}x {resource.name}
+															{input.count}x {input.name}
 														</span>
 													</div>
 												))}

@@ -15,7 +15,7 @@ export const buildings: Building[] = [
     buildTime: "Instant",
     deedPrice: 0,
     deedType: "Collectable",
-    resources: [],
+    inputs: [],
     operatingHours: ["7am - 4pm"],
     daysClosed: "",
   },
@@ -33,7 +33,7 @@ export const buildings: Building[] = [
     buildTime: "Overnight",
     deedPrice: 25000,
     deedType: "Movable",
-    resources: [],
+    inputs: [],
     operatingHours: [],
     daysClosed: "",
   },
@@ -50,7 +50,7 @@ export const buildings: Building[] = [
     buildTime: "Instant",
     deedPrice: 0,
     deedType: "Collectable",
-    resources: [],
+    inputs: [],
     operatingHours: [],
     daysClosed: "",
   },
@@ -66,7 +66,7 @@ export const buildings: Building[] = [
     buildTime: "Instant",
     deedPrice: 0,
     deedType: "Collectable",
-    resources: [],
+    inputs: [],
     operatingHours: [],
     daysClosed: "",
   },
@@ -84,7 +84,7 @@ export const buildings: Building[] = [
     buildTime: "Overnight",
     deedPrice: 0,
     deedType: "Collectable",
-    resources: [
+    inputs: [
       {
         count: 15,
         name: "Gum Wood Plank",
@@ -133,7 +133,7 @@ export const buildings: Building[] = [
     buildTime: "Overnight",
     deedPrice: 25000,
     deedType: "Movable",
-    resources: [],
+    inputs: [],
     operatingHours: [],
     daysClosed: "",
   },
@@ -150,7 +150,7 @@ export const buildings: Building[] = [
     buildTime: "Instant",
     deedPrice: 10000,
     deedType: "Collectable",
-    resources: [
+    inputs: [
       {
         count: 2,
         name: "Gum Wood Plank",
@@ -177,7 +177,7 @@ export const buildings: Building[] = [
     buildTime: "2 nights",
     deedPrice: 75000,
     deedType: "Collectable",
-    resources: [
+    inputs: [
       {
         count: 15,
         name: "Gum Wood Plank",
@@ -216,7 +216,7 @@ export const buildings: Building[] = [
     buildTime: "2 nights",
     deedPrice: 125000,
     deedType: "Collectable",
-    resources: [
+    inputs: [
       {
         count: 15,
         name: "Gum Wood Plank",
@@ -254,7 +254,7 @@ export const buildings: Building[] = [
     buildTime: "2 nights",
     deedPrice: 25000,
     deedType: "Collectable",
-    resources: [
+    inputs: [
       {
         count: 10,
         name: "Gum Wood Plank",
@@ -303,7 +303,7 @@ export const buildings: Building[] = [
     buildTime: "2 nights",
     deedPrice: 250000,
     deedType: "Collectable",
-    resources: [
+    inputs: [
       {
         count: 15,
         name: "Gum Wood Plank",
@@ -352,7 +352,7 @@ export const buildings: Building[] = [
     buildTime: "2 nights",
     deedPrice: 150000,
     deedType: "Collectable",
-    resources: [
+    inputs: [
       {
         count: 15,
         name: "Gum Wood Plank",
@@ -401,7 +401,7 @@ export const buildings: Building[] = [
     buildTime: "2 nights",
     deedPrice: 145000,
     deedType: "Collectable",
-    resources: [
+    inputs: [
       {
         count: 18,
         name: "Gum Wood Plank",
@@ -440,7 +440,7 @@ export const buildings: Building[] = [
     buildTime: "2 nights",
     deedPrice: 200000,
     deedType: "Collectable",
-    resources: [
+    inputs: [
       {
         count: 10,
         name: "Bag of Cement",
@@ -489,7 +489,7 @@ export const buildings: Building[] = [
     buildTime: "2 nights",
     deedPrice: 180000,
     deedType: "Collectable",
-    resources: [
+    inputs: [
       {
         count: 20,
         name: "Gum Wood Plank",
@@ -537,7 +537,7 @@ export const buildings: Building[] = [
     buildTime: "2 nights",
     deedPrice: 100000,
     deedType: "Collectable",
-    resources: [
+    inputs: [
       {
         count: 15,
         name: "Hard Wood Plank",
@@ -586,7 +586,7 @@ export const buildings: Building[] = [
     buildTime: "Overnight",
     deedPrice: 320000,
     deedType: "Collectable",
-    resources: [
+    inputs: [
       {
         count: 20,
         name: "Hard Wood Plank",
@@ -629,7 +629,7 @@ export const buildings: Building[] = [
     buildTime: "2 nights",
     deedPrice: 250000,
     deedType: "Collectable",
-    resources: [
+    inputs: [
       {
         count: 10,
         name: "Bag of Cement",
@@ -676,7 +676,7 @@ export const buildings: Building[] = [
     buildTime: "",
     deedPrice: 0,
     deedType: "Reference",
-    resources: [
+    inputs: [
       {
         count: 3,
         name: "Green Board",
@@ -719,7 +719,7 @@ export const buildings: Building[] = [
     buildTime: "Overnight",
     deedPrice: 75000,
     deedType: "Collectable",
-    resources: [
+    inputs: [
       {
         count: 8,
         name: "Bag of Cement",
@@ -768,7 +768,7 @@ export const buildings: Building[] = [
     buildTime: "",
     deedPrice: 1000000,
     deedType: "Collectable",
-    resources: [],
+    inputs: [],
     operatingHours: [],
     daysClosed: "",
   },
@@ -786,7 +786,7 @@ export const buildings: Building[] = [
     buildTime: "2 nights",
     deedPrice: 750000,
     deedType: "Collectable",
-    resources: [
+    inputs: [
       {
         count: 15,
         name: "Hard Wood Plank",
@@ -844,7 +844,7 @@ export const buildings: Building[] = [
     buildTime: "2 nights",
     deedPrice: 2500000,
     deedType: "Collectable",
-    resources: [
+    inputs: [
       {
         count: 25,
         name: "Gum Wood Plank",
@@ -896,7 +896,7 @@ export const buildings: Building[] = [
     buildTime: "Overnight",
     deedPrice: 50000,
     deedType: "Collectable",
-    resources: [
+    inputs: [
       {
         count: 5,
         name: "Pearl",
@@ -929,7 +929,7 @@ export const buildings: Building[] = [
     buildTime: "Overnight",
     deedPrice: 25000,
     deedType: "Movable",
-    resources: [],
+    inputs: [],
     operatingHours: [],
     daysClosed: "",
   },
@@ -946,7 +946,7 @@ export const buildings: Building[] = [
     buildTime: "Overnight",
     deedPrice: 95000,
     deedType: "Collectable",
-    resources: [
+    inputs: [
       {
         count: 15,
         name: "Gum Wood Plank",
@@ -978,7 +978,7 @@ export const buildings: Building[] = [
     buildTime: "Overnight",
     deedPrice: 220000,
     deedType: "Collectable",
-    resources: [
+    inputs: [
       {
         count: 15,
         name: "Gum Wood Plank",
@@ -1025,7 +1025,7 @@ export const buildings: Building[] = [
     buildTime: "Overnight",
     deedPrice: 440000,
     deedType: "Collectable",
-    resources: [
+    inputs: [
       {
         count: 15,
         name: "Gum Wood Plank",
@@ -1058,7 +1058,7 @@ export const buildings: Building[] = [
     buildTime: "Overnight",
     deedPrice: 95000,
     deedType: "Collectable",
-    resources: [
+    inputs: [
       {
         count: 20,
         name: "Gum Wood Plank",
@@ -1096,7 +1096,7 @@ export const buildings: Building[] = [
     buildTime: "Overnight",
     deedPrice: 25000,
     deedType: "Movable",
-    resources: [],
+    inputs: [],
     operatingHours: [],
     daysClosed: "",
   },
