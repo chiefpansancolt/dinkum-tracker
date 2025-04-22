@@ -24,7 +24,6 @@ import NPCsTab from "./tabs/NPCsTab";
 import BuildingsTab from "./tabs/BuildingsTab";
 import ClothingTab from "./tabs/ClothingTab";
 import BooksTab from "./tabs/BooksTab";
-import RelicsTab from "./tabs/RelicsTab";
 import ToolsTab from "./tabs/ToolsTab";
 import WeaponsTab from "./tabs/WeaponsTab";
 import EquipmentTab from "./tabs/EquipmentTab";
@@ -70,13 +69,13 @@ import {
 	FaBook,
 	FaCar,
 	FaCouch,
-	FaKey,
+	FaSeedling,
 	FaBoxOpen,
 	FaSignsPost,
 } from "react-icons/fa6";
 import { HiHome, HiOutlineMinusSm, HiOutlinePlusSm, HiMenuAlt2, HiX } from "react-icons/hi";
 import { MdDashboard } from "react-icons/md";
-import { FaTools, FaRegSave, FaToolbox, FaAppleAlt } from "react-icons/fa";
+import { FaTools, FaRegSave, FaToolbox } from "react-icons/fa";
 import { GoStarFill } from "react-icons/go";
 import { LuCookingPot } from "react-icons/lu";
 import {
@@ -318,8 +317,6 @@ export default function PlaythroughPage() {
 				return <ClothingTab ref={clothingRef} collected={playthrough.clothing || {}} />;
 			case ActiveTab.Books:
 				return <BooksTab ref={booksRef} collected={playthrough.books || {}} />;
-			case ActiveTab.Relics:
-				return <RelicsTab />;
 			case ActiveTab.Tools:
 				return <ToolsTab ref={toolsRef} collected={playthrough.tools || {}} />;
 			case ActiveTab.Weapons:
@@ -657,7 +654,7 @@ export default function PlaythroughPage() {
 										</SidebarCollapse>
 										<SidebarCollapse
 											icon={GiSofa}
-											label="Customization & Decor"
+											label="Clothing & Decor"
 											open={[
 												ActiveTab.Clothing,
 												ActiveTab.Decorations,
@@ -713,11 +710,10 @@ export default function PlaythroughPage() {
 										</SidebarCollapse>
 										<SidebarCollapse
 											icon={FaBoxOpen}
-											label="Materials & Collectibles"
+											label="Resources & Crops"
 											open={[
 												ActiveTab.Resources,
-												ActiveTab.Consumables,
-												ActiveTab.Relics,
+												ActiveTab.Seeds,
 												ActiveTab.Crops,
 											].includes(activeTab)}
 											renderChevronIcon={(theme, open) => {
@@ -748,22 +744,12 @@ export default function PlaythroughPage() {
 												Resources
 											</SidebarItem>
 											<SidebarItem
-												href={`#${ActiveTab.Consumables}`}
-												icon={FaAppleAlt}
-												active={activeTab === ActiveTab.Consumables}
-												onClick={() =>
-													handleSetActiveTab(ActiveTab.Consumables)
-												}
+												href={`#${ActiveTab.Seeds}`}
+												icon={FaSeedling}
+												active={activeTab === ActiveTab.Seeds}
+												onClick={() => handleSetActiveTab(ActiveTab.Seeds)}
 											>
-												Consumables
-											</SidebarItem>
-											<SidebarItem
-												href={`#${ActiveTab.Relics}`}
-												icon={FaKey}
-												active={activeTab === ActiveTab.Relics}
-												onClick={() => handleSetActiveTab(ActiveTab.Relics)}
-											>
-												Relics
+												Seeds
 											</SidebarItem>
 											<SidebarItem
 												href={`#${ActiveTab.Crops}`}

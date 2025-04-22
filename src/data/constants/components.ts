@@ -19,9 +19,8 @@ export enum ActiveTab {
   Furniture = "furniture",
   Decorations = "decorations",
   Resources = "resources",
-  Consumables = "consumables",
   Vehicles = "vehicles",
   Crops = "crops",
   Equipment = "equipment",
-  Relics = "relics",
+  Seeds = "seeds",
 }
