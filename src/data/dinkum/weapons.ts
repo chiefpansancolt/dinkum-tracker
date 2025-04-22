@@ -168,7 +168,7 @@ export const weapons: Weapon[] = [
     inputs: [
       {
         count: 3,
-        name: "Toungue",
+        name: "Tongue",
         img: "https://static.wikia.nocookie.net/dinkum/images/c/cf/Inv_Tongue.png",
       },
       {
@@ -213,7 +213,7 @@ export const weapons: Weapon[] = [
     inputs: [
       {
         count: 1,
-        name: "Toungue",
+        name: "Tongue",
         img: "https://static.wikia.nocookie.net/dinkum/images/0/0d/Inv_Torch.png",
       },
       {
@@ -255,12 +255,12 @@ export const weapons: Weapon[] = [
     inputs: [
       {
         count: 1,
-        name: "Spinefex Tuft",
+        name: "Spinifex Tuft",
         img: "https://static.wikia.nocookie.net/dinkum/images/0/06/Inv_Spinifex_Tuft.png",
       },
       {
         count: 2,
-        name: "Spinefex Resin",
+        name: "Spinifex Resin",
         img: "https://static.wikia.nocookie.net/dinkum/images/a/a3/Inv_Spinifex_Resin.png",
       },
       {
@@ -297,7 +297,7 @@ export const weapons: Weapon[] = [
       },
       {
         count: 2,
-        name: "Spinefex Resin",
+        name: "Spinifex Resin",
         img: "https://static.wikia.nocookie.net/dinkum/images/a/a3/Inv_Spinifex_Resin.png",
       },
       {
@@ -519,7 +519,7 @@ export const weapons: Weapon[] = [
     inputs: [
       {
         count: 3,
-        name: "Meteorite Chunck",
+        name: "Meteorite Chunk",
         img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Meteorite_Chunk.png",
       },
       {

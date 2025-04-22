@@ -1076,7 +1076,7 @@ export const buildings: Building[] = [
       },
       {
         count: 4,
-        name: "Tin Sheets",
+        name: "Tin Sheet",
         img: "https://static.wikia.nocookie.net/dinkum/images/3/3b/Inv_Tin_Sheet.png",
       },
     ],

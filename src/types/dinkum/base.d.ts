@@ -61,7 +61,7 @@ export interface BuffIcon {
   fastHealthTickSpeedLevel2: string;
   coolLevel1: string;
   coolLevel2: string;
-};
+}
 
 export interface Buffs {
   length: number;

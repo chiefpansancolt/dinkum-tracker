@@ -1,4 +1,5 @@
 export const BIOMES = [
+  "Beach",
   "Bushlands",
   "Plains",
   "Pine Forests",
@@ -13,6 +14,9 @@ export const BIOMES = [
   "Ponds",
   "Billabongs",
   "Mangroves",
+  "Hot Hot Hot",
+  "Undergrove",
+  "Deep Mine",
 ] as const;
 
 export const TIME_PERIODS = [

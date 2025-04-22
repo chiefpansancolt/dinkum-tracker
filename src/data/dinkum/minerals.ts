@@ -1,0 +1,88 @@
+import { Mineral } from "@/types/dinkum";
+
+export const minerals: Mineral[] = [
+  {
+    id: "aquamarine_gemstone",
+    name: "Aquamarine Gemstone",
+    img: "https://static.wikia.nocookie.net/dinkum/images/a/a2/Aquamarine.png",
+    locations: ["Island Reef"],
+    baseSellPrice: 15000,
+  },
+  {
+    id: "ruby_gemstone",
+    name: "Ruby Gemstone",
+    img: "https://static.wikia.nocookie.net/dinkum/images/a/a9/Ruby.png",
+    locations: ["Island Reef"],
+    baseSellPrice: 15000,
+  },
+  {
+    id: "emerald_gemstone",
+    name: "Emerald Gemstone",
+    img: "https://static.wikia.nocookie.net/dinkum/images/6/6a/Emerald.png",
+    locations: ["Undergrove"],
+    baseSellPrice: 15000,
+  },
+  {
+    id: "berkonium_ore",
+    name: "Berkonium Ore",
+    img: "https://static.wikia.nocookie.net/dinkum/images/c/cc/Inv_Berkonium_Ore.png",
+    locations: ["Undergrove", "Island Reef", "Hot Hot Hot"],
+    baseSellPrice: 1000,
+  },
+  {
+    id: "iron_ore",
+    name: "Iron Ore",
+    img: "https://static.wikia.nocookie.net/dinkum/images/f/fa/Inv_Iron_Ore.png",
+    locations: ["Tropics"],
+    baseSellPrice: 100,
+  },
+  {
+    id: "copper_ore",
+    name: "Copper Ore",
+    img: "https://static.wikia.nocookie.net/dinkum/images/6/60/Inv_Copper_Ore.png",
+    locations: ["Tropics"],
+    baseSellPrice: 50,
+  },
+  {
+    id: "tin_ore",
+    name: "Tin Ore",
+    img: "https://static.wikia.nocookie.net/dinkum/images/a/a9/Inv_Tin_Ore.png",
+    locations: ["Tropics"],
+    baseSellPrice: 25,
+  },
+  {
+    id: "marble",
+    name: "Marble",
+    img: "https://static.wikia.nocookie.net/dinkum/images/2/2d/Inv_Marble.png",
+    locations: ["Undergrove"],
+    baseSellPrice: 10,
+  },
+  {
+    id: "meteorite",
+    name: "Meteorite",
+    img: "https://static.wikia.nocookie.net/dinkum/images/9/9e/Meteorite.png",
+    source: ["Meteorite Shower"],
+    baseSellPrice: 400000,
+  },
+  {
+    id: "shiny_stone",
+    name: "Shiny Stone",
+    img: "https://static.wikia.nocookie.net/dinkum/images/1/16/Inv_Shiny_Stone.png",
+    source: ["Tropics"],
+    baseSellPrice: 100,
+  },
+  {
+    id: "quartz_crystal",
+    name: "Quartz Crystal",
+    img: "https://static.wikia.nocookie.net/dinkum/images/5/5a/Inv_Quartz_Crystal.png",
+    source: ["Tropics"],
+    baseSellPrice: 200,
+  },
+  {
+    id: "stone",
+    name: "Stone",
+    img: "https://static.wikia.nocookie.net/dinkum/images/0/09/Inv_Stone.png",
+    source: ["Tropics"],
+    baseSellPrice: 10,
+  },
+];

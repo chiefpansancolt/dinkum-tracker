@@ -11,10 +11,12 @@ export interface Recipe {
   id: string;
   name: string;
   img: string;
+  buyPrice?: number;
   baseSellPrice: number;
-  outputCount: number;
-  source: string[];
+  outputCount?: number | "Varies";
+  source?: string[];
   variants: RecipeVariant[];
+  buffs?: Buffs;
 }
 
 export interface CookingRecipe {

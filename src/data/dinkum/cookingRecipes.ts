@@ -27,60 +27,6 @@ export const cookingRecipes: CookingRecipe[] = [
     },
   },
   {
-    id: "animal_food",
-    name: "Animal Food",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/55/Inv_Animal_Food.png",
-    outputCount: "Varies",
-    variants: [
-      {
-        id: "corn",
-        outputCount: 10,
-        inputs: [
-          {
-            count: 1,
-            name: "Corn",
-            img: "https://static.wikia.nocookie.net/dinkum/images/5/5c/Inv_Corn.png",
-          },
-        ],
-      },
-      {
-        id: "fir_grass_seeds",
-        outputCount: 1,
-        inputs: [
-          {
-            count: 5,
-            name: "Fir Grass Seed",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Fir_Grass_Seeds.png",
-          },
-        ],
-      },
-      {
-        id: "grass_seeds",
-        outputCount: 1,
-        inputs: [
-          {
-            count: 5,
-            name: "Grass Seed",
-            img: "https://static.wikia.nocookie.net/dinkum/images/8/8f/Inv_Grass_Seed.png",
-          },
-        ],
-      },
-      {
-        id: "tropical_grass_seeds",
-        outputCount: 1,
-        inputs: [
-          {
-            count: 5,
-            name: "Tropical Grass Seed",
-            img: "https://static.wikia.nocookie.net/dinkum/images/b/b3/Inv_Tropical_Grass_Seeds.png",
-          },
-        ],
-      },
-    ],
-    cookingLocation: ["Grain Mill"],
-    baseSellPrice: 50,
-  },
-  {
     id: "banana_jam",
     name: "Banana Jam",
     img: "https://static.wikia.nocookie.net/dinkum/images/4/49/Inv_Banana_Jam.png",
@@ -296,43 +242,6 @@ export const cookingRecipes: CookingRecipe[] = [
       staminaMax: 10,
       fishLevel: 2,
       swimmingLevel: 2,
-    },
-  },
-  {
-    id: "cheese",
-    name: "Cheese",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a9/Inv_Cheese.png",
-    outputCount: 1,
-    variants: [
-      {
-        id: "milk",
-        inputs: [
-          {
-            count: 1,
-            name: "Milk",
-            img: "https://static.wikia.nocookie.net/dinkum/images/c/c6/Inv_Milk.png",
-          },
-        ],
-      },
-      {
-        id: "high_quality_cheese",
-        inputs: [
-          {
-            count: 1,
-            name: "High Quality Cheese",
-            img: "https://static.wikia.nocookie.net/dinkum/images/c/c1/Inv_High_Quality_Cheese.png",
-          },
-        ],
-      },
-    ],
-    cookingLocation: ["Cheese Maker"],
-    baseSellPrice: 2400,
-    buffs: {
-      length: 10,
-      healthRegenRate: 1,
-      healthMax: 15,
-      staminaRegenRate: 2,
-      staminaMax: 15,
     },
   },
   {
@@ -613,7 +522,7 @@ export const cookingRecipes: CookingRecipe[] = [
         inputs: [
           {
             count: 1,
-            name: "Raw Drimpstick",
+            name: "Raw Drumstick",
             img: "https://static.wikia.nocookie.net/dinkum/images/0/0e/Inv_Raw_Drumstick.png",
           },
         ],
@@ -868,7 +777,7 @@ export const cookingRecipes: CookingRecipe[] = [
         inputs: [
           {
             count: 1,
-            name: "Raw Giant Drumpstick",
+            name: "Raw Giant Drumstick",
             img: "https://static.wikia.nocookie.net/dinkum/images/a/a7/Inv_Raw_Giant_Drumstick.png",
           },
         ],
@@ -1742,31 +1651,6 @@ export const cookingRecipes: CookingRecipe[] = [
     },
   },
   {
-    id: "flour",
-    name: "Flour",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Inv_Flour.png",
-    outputCount: 1,
-    variants: [
-      {
-        id: "standard",
-        inputs: [
-          {
-            count: 4,
-            name: "Wheat",
-            img: "https://static.wikia.nocookie.net/dinkum/images/7/78/Inv_Wheat.png",
-          },
-        ],
-      },
-    ],
-    cookingLocation: ["Grain Mill"],
-    baseSellPrice: 1080,
-    buffs: {
-      length: 5,
-      healthRegenRate: 1,
-      staminaRegenRate: 0.2,
-    },
-  },
-  {
     id: "fried_egg",
     name: "Fried Egg",
     img: "https://static.wikia.nocookie.net/dinkum/images/4/45/Inv_Fried_Egg.png",
@@ -1789,6 +1673,31 @@ export const cookingRecipes: CookingRecipe[] = [
       length: 7,
       staminaRegenRate: 1.5,
       staminaMax: 10,
+    },
+  },
+  {
+    id: "fried_gonut",
+    name: "Fried Gonut",
+    img: "https://static.wikia.nocookie.net/dinkum/images/1/10/Inv_Fried_Gonut.png",
+    outputCount: 1,
+    variants: [
+      {
+        id: "standard",
+        inputs: [
+          {
+            count: 1,
+            name: "Gonut",
+            img: "https://static.wikia.nocookie.net/dinkum/images/7/7f/Inv_Gonut.png",
+          },
+        ],
+      },
+    ],
+    cookingLocation: ["Campfire", "BBQ"],
+    baseSellPrice: 0,
+    buffs: {
+      length: 4,
+      healthRegenRate: 1,
+      staminaRegenRate: 1.2,
     },
   },
   {
@@ -1877,6 +1786,36 @@ export const cookingRecipes: CookingRecipe[] = [
     },
   },
   {
+    id: "gonut",
+    name: "Gonut",
+    img: "https://static.wikia.nocookie.net/dinkum/images/7/7f/Inv_Gonut.png",
+    outputCount: 1,
+    variants: [
+      {
+        id: "standard",
+        inputs: [
+          {
+            count: 5,
+            name: "Flour",
+            img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Inv_Flour.png",
+          },
+          {
+            count: 5,
+            name: "Sugar",
+            img: "https://static.wikia.nocookie.net/dinkum/images/1/1f/Inv_Sugar.png",
+          },
+        ],
+      },
+    ],
+    cookingLocation: ["TownCo. Agent"],
+    baseSellPrice: 0,
+    buffs: {
+      length: 1,
+      healthRegenRate: 1,
+      staminaRegenRate: 0.6,
+    },
+  },
+  {
     id: "hearty_stew",
     name: "Hearty Stew",
     img: "https://static.wikia.nocookie.net/dinkum/images/b/b7/Inv_Hearty_Stew.png",
@@ -1921,61 +1860,6 @@ export const cookingRecipes: CookingRecipe[] = [
       staminaMax: 10,
       attackLevel: 1,
       defenseLevel: 2,
-    },
-  },
-  {
-    id: "high_quality_cheese",
-    name: "High Quality Cheese",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c1/Inv_High_Quality_Cheese.png",
-    outputCount: 1,
-    variants: [
-      {
-        id: "standard",
-        inputs: [
-          {
-            count: 1,
-            name: "High Quality Milk",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/ab/Inv_High_Quality_Milk.png",
-          },
-        ],
-      },
-    ],
-    cookingLocation: ["Cheese Maker"],
-    baseSellPrice: 3500,
-    buffs: {
-      length: 10,
-      healthRegenRate: 1,
-      healthMax: 20,
-      staminaRegenRate: 2,
-      staminaMax: 20,
-    },
-  },
-  {
-    id: "ice_cream",
-    name: "Ice Cream",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/69/Inv_Ice_Cream.png",
-    outputCount: 1,
-    variants: [
-      {
-        id: "standard",
-        inputs: [
-          {
-            count: 1,
-            name: "High Quality Milk",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/ab/Inv_High_Quality_Milk.png",
-          },
-        ],
-      },
-    ],
-    cookingLocation: ["Ice Cream Maker"],
-    baseSellPrice: 3500,
-    buffs: {
-      length: 10,
-      healthRegenRate: 1,
-      healthMax: 20,
-      staminaRegenRate: 3,
-      staminaMax: 20,
-      coolLevel: 2,
     },
   },
   {
@@ -2105,7 +1989,7 @@ export const cookingRecipes: CookingRecipe[] = [
           },
           {
             count: 1,
-            name: "Cocunut",
+            name: "Coconut",
             img: "https://static.wikia.nocookie.net/dinkum/images/4/4a/Inv_Coconut.png",
           },
           {
@@ -2135,7 +2019,7 @@ export const cookingRecipes: CookingRecipe[] = [
           },
           {
             count: 1,
-            name: "Cocunut",
+            name: "Coconut",
             img: "https://static.wikia.nocookie.net/dinkum/images/4/4a/Inv_Coconut.png",
           },
           {
@@ -2165,7 +2049,7 @@ export const cookingRecipes: CookingRecipe[] = [
           },
           {
             count: 1,
-            name: "Cocunut",
+            name: "Coconut",
             img: "https://static.wikia.nocookie.net/dinkum/images/4/4a/Inv_Coconut.png",
           },
           {
@@ -2195,7 +2079,7 @@ export const cookingRecipes: CookingRecipe[] = [
           },
           {
             count: 1,
-            name: "Cocunut",
+            name: "Coconut",
             img: "https://static.wikia.nocookie.net/dinkum/images/4/4a/Inv_Coconut.png",
           },
           {
@@ -2798,7 +2682,7 @@ export const cookingRecipes: CookingRecipe[] = [
         inputs: [
           {
             count: 3,
-            name: "Coffee Beans",
+            name: "Coffee Bean",
             img: "https://static.wikia.nocookie.net/dinkum/images/e/e4/Inv_Coffee_Bean.png",
           },
         ],
@@ -3126,31 +3010,6 @@ export const cookingRecipes: CookingRecipe[] = [
     },
   },
   {
-    id: "sugar",
-    name: "Sugar",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1f/Inv_Sugar.png",
-    outputCount: 1,
-    variants: [
-      {
-        id: "standard",
-        inputs: [
-          {
-            count: 1,
-            name: "Sugar Cane",
-            img: "https://static.wikia.nocookie.net/dinkum/images/8/84/Inv_Sugar_Cane.png",
-          },
-        ],
-      },
-    ],
-    cookingLocation: ["Grain Mill"],
-    baseSellPrice: 840,
-    buffs: {
-      length: 5,
-      staminaRegenRate: 4,
-      staminaMax: 5,
-    },
-  },
-  {
     id: "toffee",
     name: "Toffee",
     img: "https://static.wikia.nocookie.net/dinkum/images/4/43/Inv_Toffee.png",
@@ -3179,34 +3038,6 @@ export const cookingRecipes: CookingRecipe[] = [
     buffs: {
       length: 8,
       staminaRegenRate: 10,
-    },
-  },
-  {
-    id: "watermelon_popsicle",
-    name: "Watermelon Popsicle",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/67/Inv_Watermelon_Popsicle.png",
-    outputCount: 1,
-    variants: [
-      {
-        id: "standard",
-        inputs: [
-          {
-            count: 1,
-            name: "Watermelon",
-            img: "https://static.wikia.nocookie.net/dinkum/images/d/da/Inv_Watermelon.png",
-          },
-        ],
-      },
-    ],
-    cookingLocation: ["Ice Cream Maker"],
-    baseSellPrice: 3580,
-    buffs: {
-      length: 10,
-      healthRegenRate: 3,
-      healthMax: 20,
-      staminaRegenRate: 5,
-      staminaMax: 10,
-      coolLevel: 2,
     },
   },
   {

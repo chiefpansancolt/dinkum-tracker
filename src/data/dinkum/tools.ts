@@ -451,7 +451,7 @@ export const tools: Tool[] = [
         count: 10,
       },
       {
-        name: "Ruby Shary",
+        name: "Ruby Shard",
         img: "https://static.wikia.nocookie.net/dinkum/images/5/50/Inv_Ruby_Shard.png",
         count: 10,
       },
@@ -486,7 +486,7 @@ export const tools: Tool[] = [
         count: 10,
       },
       {
-        name: "Ruby Shary",
+        name: "Ruby Shard",
         img: "https://static.wikia.nocookie.net/dinkum/images/5/50/Inv_Ruby_Shard.png",
         count: 10,
       },
@@ -521,7 +521,7 @@ export const tools: Tool[] = [
         count: 10,
       },
       {
-        name: "Ruby Shary",
+        name: "Ruby Shard",
         img: "https://static.wikia.nocookie.net/dinkum/images/5/50/Inv_Ruby_Shard.png",
         count: 10,
       },
@@ -556,7 +556,7 @@ export const tools: Tool[] = [
         count: 10,
       },
       {
-        name: "Ruby Shary",
+        name: "Ruby Shard",
         img: "https://static.wikia.nocookie.net/dinkum/images/5/50/Inv_Ruby_Shard.png",
         count: 10,
       },

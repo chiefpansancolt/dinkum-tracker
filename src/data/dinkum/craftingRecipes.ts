@@ -1611,7 +1611,7 @@ export const craftingRecipes: Recipe[] = [
         id: "standard",
         inputs: [
           {
-            name: "Watering Can",
+            name: "Basic Watering Can",
             count: 1,
             img: "https://static.wikia.nocookie.net/dinkum/images/b/bd/Inv_Watering_Can.png",
           },

@@ -123,12 +123,4 @@ export const relics: Relic[] = [
     baseSellPrice: 745,
     johnsSellPrice: 186,
   },
-  {
-    id: "tin_sheet",
-    name: "Tin Sheet",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3b/Inv_Tin_Sheet.png",
-    locations: ["Old Barrel"],
-    baseSellPrice: 275,
-    johnsSellPrice: 275,
-  },
 ];

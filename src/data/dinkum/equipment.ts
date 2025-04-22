@@ -597,7 +597,7 @@ export const equipment: Equipment[] = [
       },
       {
         count: 2,
-        name: "Spinifex Resin ",
+        name: "Spinifex Resin",
         img: "https://static.wikia.nocookie.net/dinkum/images/a/a3/Inv_Spinifex_Resin.png",
       },
     ],
