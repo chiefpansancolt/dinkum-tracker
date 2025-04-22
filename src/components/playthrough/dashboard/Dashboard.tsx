@@ -8,6 +8,7 @@ import NPCStats from "./NPCStats";
 import BuildingStats from "./BuildingStats";
 import GameInfoCard from "./GameInfoCard";
 import GearAndEquipmentStats from "./GearAndEquipmentStats";
+import RecipeStats from "./RecipesStats";
 
 const Dashboard: React.FC<DashboardProps> = ({ playthrough }) => {
 	return (
@@ -32,6 +33,12 @@ const Dashboard: React.FC<DashboardProps> = ({ playthrough }) => {
 			/>
 
 			<BuildingStats collected={playthrough.buildings || {}} />
+
+			<RecipeStats
+				unlockedCookingRecipes={playthrough.cookingRecipes || {}}
+				unlockedCraftingRecipes={playthrough.craftingRecipes || {}}
+				unlockedSignwritingRecipes={playthrough.signWritingRecipes || {}}
+			/>
 
 			<NPCStats collected={playthrough.relationships || {}} />
 

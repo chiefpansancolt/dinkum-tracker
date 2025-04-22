@@ -1,116 +1,79 @@
 import React, { useMemo } from "react";
 import { Card, Progress, Badge } from "flowbite-react";
-import { books, tools, weapons, equipment, vehicles } from "@/data/dinkum";
-import { GearAndEquipmentStatsProps } from "@/types/dinkum";
-import { FaTools, FaBook } from "react-icons/fa";
-import { GiSwordman, GiBackpack } from "react-icons/gi";
-import { FaCar } from "react-icons/fa6";
+import { cookingRecipes, craftingRecipes, signWritingRecipes } from "@/data/dinkum";
+import { RecipeStatsProps } from "@/types/dinkum";
+import { LuCookingPot } from "react-icons/lu";
+import { GiStoneCrafting, GiPaintBrush } from "react-icons/gi";
 
-const GearAndEquipmentStats: React.FC<GearAndEquipmentStatsProps> = ({
-	bookCollection,
-	toolCollection,
-	weaponCollection,
-	equipmentCollection,
-	vehicleCollection,
+const RecipeStats: React.FC<RecipeStatsProps> = ({
+	unlockedCookingRecipes,
+	unlockedCraftingRecipes,
+	unlockedSignwritingRecipes,
 }) => {
 	const stats = useMemo(() => {
 		return {
-			books: {
-				collected: Object.keys(bookCollection || {}).filter((key) => bookCollection[key])
-					.length,
-				total: books.length,
-				percentage:
-					Math.round(
-						(Object.keys(bookCollection || {}).filter((key) => bookCollection[key])
-							.length /
-							books.length) *
-							100
-					) || 0,
-			},
-			tools: {
-				collected: Object.keys(toolCollection || {}).filter((key) => toolCollection[key])
-					.length,
-				total: tools.length,
-				percentage:
-					Math.round(
-						(Object.keys(toolCollection || {}).filter((key) => toolCollection[key])
-							.length /
-							tools.length) *
-							100
-					) || 0,
-			},
-			weapons: {
-				collected: Object.keys(weaponCollection || {}).filter(
-					(key) => weaponCollection[key]
+			cooking: {
+				unlocked: Object.keys(unlockedCookingRecipes || {}).filter(
+					(key) => unlockedCookingRecipes[key]
 				).length,
-				total: weapons.length,
+				total: cookingRecipes.length,
 				percentage:
 					Math.round(
-						(Object.keys(weaponCollection || {}).filter((key) => weaponCollection[key])
-							.length /
-							weapons.length) *
-							100
-					) || 0,
-			},
-			equipment: {
-				collected: Object.keys(equipmentCollection || {}).filter(
-					(key) => equipmentCollection[key]
-				).length,
-				total: equipment.length,
-				percentage:
-					Math.round(
-						(Object.keys(equipmentCollection || {}).filter(
-							(key) => equipmentCollection[key]
+						(Object.keys(unlockedCookingRecipes || {}).filter(
+							(key) => unlockedCookingRecipes[key]
 						).length /
-							equipment.length) *
+							cookingRecipes.length) *
 							100
 					) || 0,
 			},
-			vehicles: {
-				collected: Object.keys(vehicleCollection || {}).filter(
-					(key) => vehicleCollection[key]
+			crafting: {
+				unlocked: Object.keys(unlockedCraftingRecipes || {}).filter(
+					(key) => unlockedCraftingRecipes[key]
 				).length,
-				total: vehicles.length,
+				total: craftingRecipes.length,
 				percentage:
 					Math.round(
-						(Object.keys(vehicleCollection || {}).filter(
-							(key) => vehicleCollection[key]
+						(Object.keys(unlockedCraftingRecipes || {}).filter(
+							(key) => unlockedCraftingRecipes[key]
 						).length /
-							vehicles.length) *
+							craftingRecipes.length) *
+							100
+					) || 0,
+			},
+			signwriting: {
+				unlocked: Object.keys(unlockedSignwritingRecipes || {}).filter(
+					(key) => unlockedSignwritingRecipes[key]
+				).length,
+				total: signWritingRecipes.length,
+				percentage:
+					Math.round(
+						(Object.keys(unlockedSignwritingRecipes || {}).filter(
+							(key) => unlockedSignwritingRecipes[key]
+						).length /
+							signWritingRecipes.length) *
 							100
 					) || 0,
 			},
 		};
-	}, [bookCollection, toolCollection, weaponCollection, equipmentCollection, vehicleCollection]);
+	}, [unlockedCookingRecipes, unlockedCraftingRecipes, unlockedSignwritingRecipes]);
 
 	const totalStats = useMemo(() => {
-		const totalCollected =
-			stats.books.collected +
-			stats.tools.collected +
-			stats.weapons.collected +
-			stats.equipment.collected +
-			stats.vehicles.collected;
+		const totalUnlocked =
+			stats.cooking.unlocked + stats.crafting.unlocked + stats.signwriting.unlocked;
 
-		const totalItems =
-			stats.books.total +
-			stats.tools.total +
-			stats.weapons.total +
-			stats.equipment.total +
-			stats.vehicles.total;
+		const totalItems = stats.cooking.total + stats.crafting.total + stats.signwriting.total;
 
 		return {
-			collected: totalCollected,
+			unlocked: totalUnlocked,
 			total: totalItems,
-			percentage: Math.round((totalCollected / totalItems) * 100) || 0,
+			percentage: Math.round((totalUnlocked / totalItems) * 100) || 0,
 		};
 	}, [stats]);
 
 	const progressColorMap: Record<string, string> = {
-		books: "indigo",
-		tools: "blue",
-		weapons: "red",
-		equipment: "green",
-		vehicles: "purple",
+		cooking: "orange",
+		crafting: "blue",
+		signwriting: "purple",
 	};
 
 	const mostCompleteCategory = useMemo(() => {
@@ -135,7 +98,7 @@ const GearAndEquipmentStats: React.FC<GearAndEquipmentStatsProps> = ({
 		<Card className="flex h-full w-full flex-col">
 			<div className="flex h-full flex-col">
 				<div className="flex-none">
-					<h2 className="text-primary mb-4 text-xl font-bold">Gear & Equipment</h2>
+					<h2 className="text-primary mb-4 text-xl font-bold">Recipe Collection</h2>
 				</div>
 
 				<div className="flex-grow overflow-auto">
@@ -143,27 +106,27 @@ const GearAndEquipmentStats: React.FC<GearAndEquipmentStatsProps> = ({
 						<div>
 							<div className="mb-1 flex justify-between">
 								<span className="font-medium">
-									Overall Progress ({totalStats.collected}/{totalStats.total})
+									Overall Progress ({totalStats.unlocked}/{totalStats.total})
 								</span>
 								<span className="font-medium">{totalStats.percentage}%</span>
 							</div>
-							<Progress progress={Number(totalStats.percentage)} color="blue" />
+							<Progress progress={Number(totalStats.percentage)} color="green" />
 						</div>
 
 						{Object.entries(stats).map(([category, data]) => (
 							<div key={category}>
 								<div className="mb-1 flex items-center justify-between">
 									<span className="flex items-center gap-2 font-medium capitalize">
-										{category === "books" && <FaBook className="h-4 w-4" />}
-										{category === "tools" && <FaTools className="h-4 w-4" />}
-										{category === "weapons" && (
-											<GiSwordman className="h-4 w-4" />
+										{category === "cooking" && (
+											<LuCookingPot className="h-4 w-4" />
 										)}
-										{category === "equipment" && (
-											<GiBackpack className="h-4 w-4" />
+										{category === "crafting" && (
+											<GiStoneCrafting className="h-4 w-4" />
 										)}
-										{category === "vehicles" && <FaCar className="h-4 w-4" />}
-										{category} ({data.collected}/{data.total})
+										{category === "signwriting" && (
+											<GiPaintBrush className="h-4 w-4" />
+										)}
+										{category} ({data.unlocked}/{data.total})
 									</span>
 									<span className="font-medium">{data.percentage}%</span>
 								</div>
@@ -220,4 +183,4 @@ const GearAndEquipmentStats: React.FC<GearAndEquipmentStatsProps> = ({
 	);
 };
 
-export default GearAndEquipmentStats;
+export default RecipeStats;

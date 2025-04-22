@@ -90,6 +90,7 @@ export const createEmptyPlaythrough = (name: string): Playthrough => {
     relationships: {},
     cookingRecipes: {},
     craftingRecipes: {},
+    signWritingRecipes: {},
     books: {},
     tools: {},
     weapons: {},
@@ -113,6 +114,7 @@ export const updatePlaythroughData = (
     relationships?: Record<string, number>;
     cookingRecipes?: Record<string, boolean>;
     craftingRecipes?: Record<string, boolean>;
+    signWritingRecipes?: Record<string, boolean>;
     books?: Record<string, boolean>;
     tools?: Record<string, boolean>;
     weapons?: Record<string, boolean>;
@@ -209,6 +211,13 @@ export const updatePlaythroughData = (
     updatedPlaythrough.craftingRecipes = {
       ...(updatedPlaythrough.craftingRecipes || {}),
       ...updates.craftingRecipes,
+    };
+  }
+
+  if (updates.signWritingRecipes) {
+    updatedPlaythrough.signWritingRecipes = {
+      ...(updatedPlaythrough.signWritingRecipes || {}),
+      ...updates.signWritingRecipes,
     };
   }
 

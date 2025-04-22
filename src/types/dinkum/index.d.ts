@@ -15,3 +15,4 @@ export * from "./resource";
 export * from "./equipment";
 export * from "./vehicles";
 export * from "./gearAndEquipmentStats";
+export * from "./recipes";

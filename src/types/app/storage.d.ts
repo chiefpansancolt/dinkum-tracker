@@ -22,6 +22,7 @@ export interface Playthrough {
   relationships: Record<string, number>;
   cookingRecipes: Record<string, boolean>;
   craftingRecipes: Record<string, boolean>;
+  signWritingRecipes: Record<string, boolean>;
   books: Record<string, boolean>;
   tools: Record<string, boolean>;
   weapons: Record<string, boolean>;
@@ -51,6 +52,7 @@ export interface PlaythroughUpdateData {
   relationships?: Record<string, number>;
   cookingRecipes?: Record<string, boolean>;
   craftingRecipes?: Record<string, boolean>;
+  signWritingRecipes?: Record<string, boolean>;
   books?: Record<string, boolean>;
   tools?: Record<string, boolean>;
   weapons?: Record<string, boolean>;

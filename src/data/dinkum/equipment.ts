@@ -382,6 +382,15 @@ export const equipment: Equipment[] = [
     baseSellPrice: 7525,
   },
   {
+    id: "ice_cream_maker",
+    name: "Ice Cream Maker",
+    img: "https://static.wikia.nocookie.net/dinkum/images/9/98/Inv_Ice_Cream_Maker.png/revision/latest?cb=20231118022131",
+    description: "Turns high quality milk into ice cream.",
+    requirementLevel: null,
+    source: ["Island Reef"],
+    baseSellPrice: 8625,
+  },
+  {
     id: "improved_table_saw",
     name: "Improved Table Saw",
     img: "https://static.wikia.nocookie.net/dinkum/images/c/cd/Inv_Improved_Table_Saw.png",

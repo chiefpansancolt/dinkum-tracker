@@ -29,6 +29,9 @@ import ToolsTab from "./tabs/ToolsTab";
 import WeaponsTab from "./tabs/WeaponsTab";
 import EquipmentTab from "./tabs/EquipmentTab";
 import VehiclesTab from "./tabs/VehiclesTab";
+import CraftingRecipesTab from "./tabs/CraftingRecipesTab";
+import SignWritingRecipesTab from "./tabs/SignWritingRecipesTab";
+import CookingRecipesTab from "./tabs/CookingRecipesTab";
 import {
 	CollectionsTabHandle,
 	CalendarTabHandle,
@@ -43,6 +46,9 @@ import {
 	WeaponsTabHandle,
 	EquipmentTabHandle,
 	VehicleTabHandle,
+	CraftingRecipesTabHandle,
+	CookingRecipesTabHandle,
+	SignWritingRecipesTabHandle,
 } from "@/types/dinkum";
 import { Playthrough } from "@/types/app";
 import { ActiveTab } from "@/data/constants";
@@ -66,6 +72,7 @@ import {
 	FaCouch,
 	FaKey,
 	FaBoxOpen,
+	FaSignsPost,
 } from "react-icons/fa6";
 import { HiHome, HiOutlineMinusSm, HiOutlinePlusSm, HiMenuAlt2, HiX } from "react-icons/hi";
 import { MdDashboard } from "react-icons/md";
@@ -104,6 +111,9 @@ export default function PlaythroughPage() {
 	const weaponsRef = useRef<WeaponsTabHandle>(null);
 	const equipmentRef = useRef<EquipmentTabHandle>(null);
 	const vehicleRef = useRef<VehicleTabHandle>(null);
+	const craftingRecipesRef = useRef<CraftingRecipesTabHandle>(null);
+	const cookingRecipesRef = useRef<CookingRecipesTabHandle>(null);
+	const signWritingRecipesRef = useRef<SignWritingRecipesTabHandle>(null);
 
 	const closeSidebar = () => {
 		if (window.innerWidth < 1024) {
@@ -241,6 +251,18 @@ export default function PlaythroughPage() {
 				vehicleRef.current.saveVehicle();
 			}
 
+			if (activeTab === ActiveTab.CraftingRecipes && craftingRecipesRef.current) {
+				craftingRecipesRef.current.saveCraftingRecipes();
+			}
+
+			if (activeTab === ActiveTab.CookingRecipes && cookingRecipesRef.current) {
+				cookingRecipesRef.current.saveCookingRecipes();
+			}
+
+			if (activeTab === ActiveTab.SignWritingRecipes && signWritingRecipesRef.current) {
+				signWritingRecipesRef.current.saveSignWritingRecipes();
+			}
+
 			successToast({ message: "Playthrough Saved Successfully!" });
 			setPlaythrough(getPlaythroughById(params.id));
 
@@ -306,6 +328,27 @@ export default function PlaythroughPage() {
 				return <EquipmentTab ref={equipmentRef} collected={playthrough.equipment || {}} />;
 			case ActiveTab.Vehicles:
 				return <VehiclesTab ref={vehicleRef} collected={playthrough.vehicles || {}} />;
+			case ActiveTab.CraftingRecipes:
+				return (
+					<CraftingRecipesTab
+						ref={craftingRecipesRef}
+						unlocked={playthrough.craftingRecipes || {}}
+					/>
+				);
+			case ActiveTab.CookingRecipes:
+				return (
+					<CookingRecipesTab
+						ref={cookingRecipesRef}
+						unlocked={playthrough.cookingRecipes || {}}
+					/>
+				);
+			case ActiveTab.SignWritingRecipes:
+				return (
+					<SignWritingRecipesTab
+						ref={signWritingRecipesRef}
+						unlocked={playthrough.signWritingRecipes || {}}
+					/>
+				);
 			case ActiveTab.Overview:
 			default:
 				return <Dashboard playthrough={playthrough} />;
@@ -488,6 +531,7 @@ export default function PlaythroughPage() {
 											open={[
 												ActiveTab.CookingRecipes,
 												ActiveTab.CraftingRecipes,
+												ActiveTab.SignWritingRecipes,
 											].includes(activeTab)}
 											renderChevronIcon={(theme, open) => {
 												const IconComponent = open
@@ -525,6 +569,16 @@ export default function PlaythroughPage() {
 												}
 											>
 												Crafting Recipes
+											</SidebarItem>
+											<SidebarItem
+												href={`#${ActiveTab.SignWritingRecipes}`}
+												icon={FaSignsPost}
+												active={activeTab === ActiveTab.SignWritingRecipes}
+												onClick={() =>
+													handleSetActiveTab(ActiveTab.SignWritingRecipes)
+												}
+											>
+												Sign Writing Recipes
 											</SidebarItem>
 										</SidebarCollapse>
 										<SidebarCollapse

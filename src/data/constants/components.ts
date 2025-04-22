@@ -11,6 +11,7 @@ export enum ActiveTab {
   Skills = "skills",
   CookingRecipes = "cookingRecipes",
   CraftingRecipes = "craftingRecipes",
+  SignWritingRecipes = "signWritingRecipes",
   Books = "books",
   Tools = "tools",
   Weapons = "weapons",
