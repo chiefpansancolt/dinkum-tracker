@@ -2,16 +2,16 @@
 "use client";
 
 import { useMemo, useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
-import { useParams } from "next/navigation";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 import { Card, Checkbox, Label, Badge, TextInput, Select, Button } from "flowbite-react";
-import { vehicles } from "@/data/dinkum/vehicles";
+import { vehicles } from "@/data/dinkum";
 import { updatePlaythroughData } from "@/lib/localStorage";
-import { HiSearch, HiCheck } from "react-icons/hi";
+import { TabHandle, CollectTabProps } from "@/types";
 import SaveAlert from "@/comps/SaveAlert";
-import { VehicleTabHandle, VehicleTabProps } from "@/types/dinkum";
+import { HiSearch, HiCheck } from "react-icons/hi";
 
-const VehiclesTab = forwardRef<VehicleTabHandle, VehicleTabProps>(({ collected }, ref) => {
+const VehiclesTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) => {
 	const params = useParams();
 	const playthroughId = typeof params.id === "string" ? params.id : "";
 	const [searchQuery, setSearchQuery] = useState("");
@@ -58,7 +58,7 @@ const VehiclesTab = forwardRef<VehicleTabHandle, VehicleTabProps>(({ collected }
 		isDirty.current = true;
 	};
 
-	const saveVehicle = () => {
+	const save = () => {
 		if (!playthroughId || !isDirty.current) return false;
 
 		const success = updatePlaythroughData(playthroughId, {
@@ -74,7 +74,7 @@ const VehiclesTab = forwardRef<VehicleTabHandle, VehicleTabProps>(({ collected }
 	};
 
 	useImperativeHandle(ref, () => ({
-		saveVehicle,
+		save,
 	}));
 
 	const filteredVehicles = useMemo(() => {

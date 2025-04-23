@@ -5,12 +5,12 @@ import { useState, forwardRef, useImperativeHandle, useRef, useEffect } from "re
 import { useParams } from "next/navigation";
 import { Card, Checkbox, Label, Badge, TextInput, Button, Select, Tooltip } from "flowbite-react";
 import { licenses } from "@/data/dinkum";
-import { License, LicensesTabHandle, LicensesTabProps } from "@/types/dinkum";
+import { License, TabHandle, CollectTabProps } from "@/types";
 import { updatePlaythroughData } from "@/lib/localStorage";
-import { HiSearch, HiLockClosed, HiCheck } from "react-icons/hi";
 import SaveAlert from "@/comps/SaveAlert";
+import { HiSearch, HiLockClosed, HiCheck } from "react-icons/hi";
 
-const LicensesTab = forwardRef<LicensesTabHandle, LicensesTabProps>(({ collected }, ref) => {
+const LicensesTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) => {
 	const params = useParams();
 	const playthroughId = typeof params.id === "string" ? params.id : "";
 	const [searchQuery, setSearchQuery] = useState("");
@@ -106,7 +106,7 @@ const LicensesTab = forwardRef<LicensesTabHandle, LicensesTabProps>(({ collected
 		}).length;
 	};
 
-	const saveLicenses = () => {
+	const save = () => {
 		if (!playthroughId || !isDirty.current) return false;
 
 		const success = updatePlaythroughData(playthroughId, {
@@ -122,7 +122,7 @@ const LicensesTab = forwardRef<LicensesTabHandle, LicensesTabProps>(({ collected
 	};
 
 	useImperativeHandle(ref, () => ({
-		saveLicenses,
+		save,
 	}));
 
 	const licenseCategories = [

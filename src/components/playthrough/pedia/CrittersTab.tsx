@@ -5,9 +5,10 @@ import { Select, Card, Label } from "flowbite-react";
 import CollectionItem from "@/playthrough/pedia/CollectionItem";
 import { critters } from "@/data/dinkum/pedia/critters";
 import { TIME_PERIODS, SEASONS } from "@/data/constants";
-import { Biome, CrittersTabHandle, CrittersTabProps, Season, TimePeriod } from "@/types/dinkum";
+import { Biome, Season, TimePeriod } from "@/types/dinkum";
+import { PediaTabHandle, PediaTabProps } from "@/types/dinkum/ui";
 
-const CrittersTab = forwardRef<CrittersTabHandle, CrittersTabProps>(
+const CrittersTab = forwardRef<PediaTabHandle, PediaTabProps>(
 	({ collected, donated, onCollectedChange, onDonatedChange }, ref) => {
 		const [biomeFilter, setBiomeFilter] = useState<string>("All");
 		const [rarityFilter, setRarityFilter] = useState<string>("All");
@@ -104,7 +105,7 @@ const CrittersTab = forwardRef<CrittersTabHandle, CrittersTabProps>(
 		};
 
 		useImperativeHandle(ref, () => ({
-			saveCollectionState: () => ({
+			save: () => ({
 				collected: collectedState,
 				donated: donatedState,
 			}),

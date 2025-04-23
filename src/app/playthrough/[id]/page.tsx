@@ -31,25 +31,8 @@ import VehiclesTab from "./tabs/VehiclesTab";
 import CraftingRecipesTab from "./tabs/CraftingRecipesTab";
 import SignWritingRecipesTab from "./tabs/SignWritingRecipesTab";
 import CookingRecipesTab from "./tabs/CookingRecipesTab";
-import {
-	CollectionsTabHandle,
-	CalendarTabHandle,
-	MilestonesTabHandle,
-	SkillsTabHandle,
-	LicensesTabHandle,
-	NPCsTabHandle,
-	BuildingsTabHandle,
-	ClothingTabHandle,
-	BooksTabHandle,
-	ToolsTabHandle,
-	WeaponsTabHandle,
-	EquipmentTabHandle,
-	VehicleTabHandle,
-	CraftingRecipesTabHandle,
-	CookingRecipesTabHandle,
-	SignWritingRecipesTabHandle,
-} from "@/types/dinkum";
-import { Playthrough } from "@/types/app";
+import ResourcesTab from "./tabs/ResourcesTab";
+import { TabHandle, Playthrough } from "@/types";
 import { ActiveTab } from "@/data/constants";
 import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/comps/playthrough/LoadingPlaythrough";
@@ -88,7 +71,6 @@ import {
 	GiSwordman,
 	GiWheat,
 } from "react-icons/gi";
-import ResourcesTab from "./tabs/ResourcesTab";
 
 export default function PlaythroughPage() {
 	const params = useParams();
@@ -98,22 +80,22 @@ export default function PlaythroughPage() {
 	const [activeTab, setActiveTab] = useState<ActiveTab>(ActiveTab.Overview);
 	const [sidebarOpen, setSidebarOpen] = useState(false);
 
-	const calendarRef = useRef<CalendarTabHandle>(null);
-	const collectionsRef = useRef<CollectionsTabHandle>(null);
-	const milestonesRef = useRef<MilestonesTabHandle>(null);
-	const skillsRef = useRef<SkillsTabHandle>(null);
-	const licensesRef = useRef<LicensesTabHandle>(null);
-	const npcsRef = useRef<NPCsTabHandle>(null);
-	const buildingsRef = useRef<BuildingsTabHandle>(null);
-	const clothingRef = useRef<ClothingTabHandle>(null);
-	const booksRef = useRef<BooksTabHandle>(null);
-	const toolsRef = useRef<ToolsTabHandle>(null);
-	const weaponsRef = useRef<WeaponsTabHandle>(null);
-	const equipmentRef = useRef<EquipmentTabHandle>(null);
-	const vehicleRef = useRef<VehicleTabHandle>(null);
-	const craftingRecipesRef = useRef<CraftingRecipesTabHandle>(null);
-	const cookingRecipesRef = useRef<CookingRecipesTabHandle>(null);
-	const signWritingRecipesRef = useRef<SignWritingRecipesTabHandle>(null);
+	const calendarRef = useRef<TabHandle>(null);
+	const collectionsRef = useRef<TabHandle>(null);
+	const milestonesRef = useRef<TabHandle>(null);
+	const skillsRef = useRef<TabHandle>(null);
+	const licensesRef = useRef<TabHandle>(null);
+	const npcsRef = useRef<TabHandle>(null);
+	const buildingsRef = useRef<TabHandle>(null);
+	const clothingRef = useRef<TabHandle>(null);
+	const booksRef = useRef<TabHandle>(null);
+	const toolsRef = useRef<TabHandle>(null);
+	const weaponsRef = useRef<TabHandle>(null);
+	const equipmentRef = useRef<TabHandle>(null);
+	const vehicleRef = useRef<TabHandle>(null);
+	const craftingRecipesRef = useRef<TabHandle>(null);
+	const cookingRecipesRef = useRef<TabHandle>(null);
+	const signWritingRecipesRef = useRef<TabHandle>(null);
 
 	const closeSidebar = () => {
 		if (window.innerWidth < 1024) {
@@ -197,70 +179,70 @@ export default function PlaythroughPage() {
 		setIsSaving(true);
 		try {
 			if (activeTab === ActiveTab.Calendar && calendarRef.current) {
-				calendarRef.current.saveSelectedDay();
+				calendarRef.current.save();
 			}
 
 			if (
 				[ActiveTab.Fish, ActiveTab.Bugs, ActiveTab.Critters].includes(activeTab) &&
 				collectionsRef.current
 			) {
-				collectionsRef.current.saveCollections();
+				collectionsRef.current.save();
 			}
 
 			if (activeTab === ActiveTab.Milestones && milestonesRef.current) {
-				milestonesRef.current.saveMilestones();
+				milestonesRef.current.save();
 			}
 
 			if (activeTab === ActiveTab.Licenses && licensesRef.current) {
-				licensesRef.current.saveLicenses();
+				licensesRef.current.save();
 			}
 
 			if (activeTab === ActiveTab.Skills && skillsRef.current) {
-				skillsRef.current.saveSkills();
+				skillsRef.current.save();
 			}
 
 			if (activeTab === ActiveTab.NPCs && npcsRef.current) {
-				npcsRef.current.saveRelationships();
+				npcsRef.current.save();
 			}
 
 			if (activeTab === ActiveTab.Buildings && buildingsRef.current) {
-				buildingsRef.current.saveBuildings();
+				buildingsRef.current.save();
 			}
 
 			if (activeTab === ActiveTab.Clothing && clothingRef.current) {
-				clothingRef.current.saveClothing();
+				clothingRef.current.save();
 			}
 
 			if (activeTab === ActiveTab.Books && booksRef.current) {
-				booksRef.current.saveBooks();
+				booksRef.current.save();
 			}
 
 			if (activeTab === ActiveTab.Tools && toolsRef.current) {
-				toolsRef.current.saveTools();
+				toolsRef.current.save();
 			}
 
 			if (activeTab === ActiveTab.Weapons && weaponsRef.current) {
-				weaponsRef.current.saveWeapons();
+				weaponsRef.current.save();
 			}
 
 			if (activeTab === ActiveTab.Equipment && equipmentRef.current) {
-				equipmentRef.current.saveEquipment();
+				equipmentRef.current.save();
 			}
 
 			if (activeTab === ActiveTab.Vehicles && vehicleRef.current) {
-				vehicleRef.current.saveVehicle();
+				vehicleRef.current.save();
 			}
 
 			if (activeTab === ActiveTab.CraftingRecipes && craftingRecipesRef.current) {
-				craftingRecipesRef.current.saveCraftingRecipes();
+				craftingRecipesRef.current.save();
 			}
 
 			if (activeTab === ActiveTab.CookingRecipes && cookingRecipesRef.current) {
-				cookingRecipesRef.current.saveCookingRecipes();
+				cookingRecipesRef.current.save();
 			}
 
 			if (activeTab === ActiveTab.SignWritingRecipes && signWritingRecipesRef.current) {
-				signWritingRecipesRef.current.saveSignWritingRecipes();
+				signWritingRecipesRef.current.save();
 			}
 
 			successToast({ message: "Playthrough Saved Successfully!" });
@@ -327,7 +309,7 @@ export default function PlaythroughPage() {
 			case ActiveTab.Vehicles:
 				return <VehiclesTab ref={vehicleRef} collected={playthrough.vehicles || {}} />;
 			case ActiveTab.Resources:
-				return <ResourcesTab />
+				return <ResourcesTab />;
 			case ActiveTab.CraftingRecipes:
 				return (
 					<CraftingRecipesTab

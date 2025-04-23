@@ -1,3 +1,5 @@
+import { Base } from "./base";
+
 export interface MilestoneLevel {
   level: number;
   count: number;
@@ -5,11 +7,8 @@ export interface MilestoneLevel {
   unit?: string;
 }
 
-export interface Milestone {
-  id: string;
-  name: string;
+export interface Milestone extends Base {
   description: string;
-  img: string;
   levels: MilestoneLevel[];
 }
 
@@ -54,19 +53,3 @@ export const DAILY_MILESTONE_TYPES = [
 ] as const;
 
 export type DailyMilestoneType = (typeof DAILY_MILESTONE_TYPES)[number];
-
-export interface MilestonesTabProps {
-  collected: {
-    [key: string]: boolean;
-  };
-}
-
-export interface MilestonesTabHandle {
-  saveMilestones: () => boolean;
-}
-
-export interface MilestoneStatsProps {
-  collected: {
-    [key: string]: boolean;
-  };
-}

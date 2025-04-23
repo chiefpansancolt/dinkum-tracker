@@ -1,4 +1,4 @@
-import { Weapon } from "@/types/dinkum";
+import { Weapon } from "@/types";
 
 export const weapons: Weapon[] = [
   {

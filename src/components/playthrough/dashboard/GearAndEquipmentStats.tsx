@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { Card, Progress, Badge } from "flowbite-react";
 import { books, tools, weapons, equipment, vehicles } from "@/data/dinkum";
-import { GearAndEquipmentStatsProps } from "@/types/dinkum";
+import { GearAndEquipmentStatsProps } from "@/types";
 import { FaTools, FaBook } from "react-icons/fa";
 import { GiSwordman, GiBackpack } from "react-icons/gi";
 import { FaCar } from "react-icons/fa6";

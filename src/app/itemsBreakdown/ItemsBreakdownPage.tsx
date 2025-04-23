@@ -16,7 +16,7 @@ import {
 	relics,
 	crops,
 	animalProducts,
-	forageables,
+	foragables,
 	critters,
 	bugs,
 	paint,
@@ -24,9 +24,9 @@ import {
 	otherCraftables,
 	trophies,
 } from "@/data/dinkum";
-import { HiSearch, HiX, HiFilter, HiTag } from "react-icons/hi";
-import { UniqueResource, Resource } from "@/types/dinkum";
 import { ResourceType } from "@/data/constants";
+import { UniqueResource, Resource } from "@/types";
+import { HiSearch, HiX, HiFilter, HiTag } from "react-icons/hi";
 
 export default function ItemsBreakdownPage() {
 	const [searchQuery, setSearchQuery] = useState<string>("");
@@ -68,7 +68,7 @@ export default function ItemsBreakdownPage() {
 			relics.forEach((item) => relicNames.add(item.name));
 			crops.forEach((item) => cropNames.add(item.name));
 			animalProducts.forEach((item) => animalProductNames.add(item.name));
-			forageables.forEach((item) => forageableNames.add(item.name));
+			foragables.forEach((item) => forageableNames.add(item.name));
 			paint.forEach((item) => paintNames.add(item.name));
 			minerals.forEach((item) => mineralNames.add(item.name));
 			trophies.forEach((item) => trophyNames.add(item.name));

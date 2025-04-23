@@ -5,9 +5,10 @@ import { Select, Card, Label } from "flowbite-react";
 import CollectionItem from "@/playthrough/pedia/CollectionItem";
 import { fish } from "@/data/dinkum/pedia/fish";
 import { TIME_PERIODS, SEASONS } from "@/data/constants";
-import { Biome, FishTabHandle, FishTabProps, Season, TimePeriod } from "@/types/dinkum";
+import { Biome, Season, TimePeriod } from "@/types/dinkum";
+import { PediaTabHandle, PediaTabProps } from "@/types/dinkum/ui";
 
-const FishTab = forwardRef<FishTabHandle, FishTabProps>(
+const FishTab = forwardRef<PediaTabHandle, PediaTabProps>(
 	({ collected, donated, onCollectedChange, onDonatedChange }, ref) => {
 		const [biomeFilter, setBiomeFilter] = useState<string>("All");
 		const [rarityFilter, setRarityFilter] = useState<string>("All");
@@ -104,7 +105,7 @@ const FishTab = forwardRef<FishTabHandle, FishTabProps>(
 		};
 
 		useImperativeHandle(ref, () => ({
-			saveCollectionState: () => ({
+			save: () => ({
 				collected: collectedState,
 				donated: donatedState,
 			}),

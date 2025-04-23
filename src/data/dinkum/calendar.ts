@@ -1,4 +1,4 @@
-import { Season, Weekday, Birthday, Event, CalendarDay } from "@/types/dinkum";
+import { Season, Weekday, Birthday, Event, CalendarDay } from "@/types";
 
 export class GameCalendar {
   private currentDay: number = 1;

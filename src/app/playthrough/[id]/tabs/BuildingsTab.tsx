@@ -5,13 +5,13 @@ import { useState, useEffect, forwardRef, useImperativeHandle, useRef } from "re
 import { useParams } from "next/navigation";
 import { Card, Checkbox, Label, Badge } from "flowbite-react";
 import { buildings } from "@/data/dinkum";
-import { BuildingsTabHandle, BuildingsTabProps } from "@/types/dinkum";
+import { TabHandle, CollectTabProps } from "@/types";
 import { updatePlaythroughData } from "@/lib/localStorage";
 import { HiInformationCircle, HiCheck, HiClock } from "react-icons/hi";
 import { HiCalendarDays } from "react-icons/hi2";
 import SaveAlert from "@/comps/SaveAlert";
 
-const BuildingsTab = forwardRef<BuildingsTabHandle, BuildingsTabProps>(({ collected }, ref) => {
+const BuildingsTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) => {
 	const params = useParams();
 	const playthroughId = typeof params.id === "string" ? params.id : "";
 	const [localBuildingsState, setLocalBuildingsState] = useState(collected);
@@ -32,7 +32,7 @@ const BuildingsTab = forwardRef<BuildingsTabHandle, BuildingsTabProps>(({ collec
 		isDirty.current = true;
 	};
 
-	const saveBuildings = () => {
+	const save = () => {
 		if (!playthroughId || !isDirty.current) return false;
 
 		const success = updatePlaythroughData(playthroughId, {
@@ -48,7 +48,7 @@ const BuildingsTab = forwardRef<BuildingsTabHandle, BuildingsTabProps>(({ collec
 	};
 
 	useImperativeHandle(ref, () => ({
-		saveBuildings,
+		save,
 	}));
 
 	const getBadgeColor = (deedType: string) => {

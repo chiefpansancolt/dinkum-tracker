@@ -1,4 +1,4 @@
-import { Tool } from "@/types/dinkum";
+import { Tool } from "@/types";
 
 export const tools: Tool[] = [
   {

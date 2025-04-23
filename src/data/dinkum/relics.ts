@@ -1,4 +1,4 @@
-import { Relic } from "@/types/dinkum";
+import { Relic } from "@/types";
 
 export const relics: Relic[] = [
   {

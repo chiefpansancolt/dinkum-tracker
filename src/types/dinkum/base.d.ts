@@ -3,7 +3,7 @@ import { BIOMES, TIME_PERIODS, SEASONS, RARITY_LEVELS } from "@/data/constants";
 export type BuyUnits = "Dinks" | "Permit Points";
 export type Biome = (typeof BIOMES)[number];
 export type TimePeriod = (typeof TIME_PERIODS)[number];
-export type Season = Exclude<(typeof SEASONS)[number], "All">;
+export type Season = (typeof SEASONS)[number];
 export type RarityLevel = (typeof RARITY_LEVELS)[number];
 export type Weekday =
   | "Sunday"
@@ -14,15 +14,37 @@ export type Weekday =
   | "Friday"
   | "Saturday";
 
-export interface PediaItem {
-  id: string;
+export interface Resource {
   name: string;
   img: string;
-  biome: Biome[];
-  timeFound: TimePeriod[];
-  seasons: Season[];
-  rarity: RarityLevel;
-  basePrice: number;
+  count: number;
+}
+
+export interface ResourceVariant {
+  id: string;
+  outputCount?: number;
+  inputs: Resource[];
+}
+
+export interface Buffs {
+  length: number;
+  healthRegenRate?: number;
+  healthMax?: number;
+  staminaRegenRate?: number;
+  staminaMax?: number;
+  attackLevel?: number;
+  defenseLevel?: number;
+  experienceLevel?: number;
+  fishLevel?: number;
+  foragingLevel?: number;
+  miningLevel?: number;
+  speedLevel?: number;
+  swimmingLevel?: number;
+  charged?: boolean;
+  diligent?: boolean;
+  sleepless?: boolean;
+  fastHealthTickSpeedLevel?: number;
+  coolLevel?: number;
 }
 
 export interface BuffIcon {
@@ -63,23 +85,25 @@ export interface BuffIcon {
   coolLevel2: string;
 }
 
-export interface Buffs {
-  length: number;
-  healthRegenRate?: number;
-  healthMax?: number;
-  staminaRegenRate?: number;
-  staminaMax?: number;
-  attackLevel?: number;
-  defenseLevel?: number;
-  experienceLevel?: number;
-  fishLevel?: number;
-  foragingLevel?: number;
-  miningLevel?: number;
-  speedLevel?: number;
-  swimmingLevel?: number;
-  charged?: boolean;
-  diligent?: boolean;
-  sleepless?: boolean;
-  fastHealthTickSpeedLevel?: number;
-  coolLevel?: number;
+export interface PediaItem {
+  id: string;
+  name: string;
+  img: string;
+  biome: Biome[];
+  timeFound: TimePeriod[];
+  seasons: Season[];
+  rarity: RarityLevel;
+  basePrice: number;
+}
+
+export interface Base {
+  id: string;
+  name: string;
+  img: string;
+}
+
+export interface BaseResource extends Base {
+  source?: string[];
+  baseSellPrice: number;
+  buyPrice?: number;
 }

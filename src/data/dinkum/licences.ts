@@ -1,4 +1,4 @@
-import { License } from "@/types/dinkum";
+import { License } from "@/types";
 
 export const licenses: License[] = [
   {

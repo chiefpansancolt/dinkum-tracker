@@ -2,7 +2,7 @@
 import React, { useMemo } from "react";
 import { Card, Progress, Badge } from "flowbite-react";
 import { critters, fish, bugs } from "@/data/dinkum";
-import { CollectionStatsProps } from "@/types/dinkum";
+import { CollectionStatsProps } from "@/types";
 
 const CollectionStats: React.FC<CollectionStatsProps> = ({ collections, donations }) => {
 	const stats = useMemo(() => {

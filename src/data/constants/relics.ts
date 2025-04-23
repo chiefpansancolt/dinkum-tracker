@@ -5,4 +5,4 @@ export const RelicLocations = [
   "Satellite",
   "Crab Pot",
   "John's Goods",
-];
+] as const;

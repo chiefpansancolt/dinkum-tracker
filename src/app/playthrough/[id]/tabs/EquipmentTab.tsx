@@ -5,13 +5,13 @@ import { useMemo, useState, useEffect, forwardRef, useImperativeHandle, useRef }
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { Card, Checkbox, Label, Badge, TextInput, Select, Button } from "flowbite-react";
-import { equipment } from "@/data/dinkum/equipment";
+import { equipment } from "@/data/dinkum";
+import { TabHandle, CollectTabProps } from "@/types";
 import { updatePlaythroughData } from "@/lib/localStorage";
 import { HiSearch, HiCheck } from "react-icons/hi";
 import SaveAlert from "@/comps/SaveAlert";
-import { EquipmentTabHandle, EquipmentTabProps } from "@/types/dinkum";
 
-const EquipmentTab = forwardRef<EquipmentTabHandle, EquipmentTabProps>(({ collected }, ref) => {
+const EquipmentTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) => {
 	const params = useParams();
 	const playthroughId = typeof params.id === "string" ? params.id : "";
 	const [searchQuery, setSearchQuery] = useState("");
@@ -58,7 +58,7 @@ const EquipmentTab = forwardRef<EquipmentTabHandle, EquipmentTabProps>(({ collec
 		isDirty.current = true;
 	};
 
-	const saveEquipment = () => {
+	const save = () => {
 		if (!playthroughId || !isDirty.current) return false;
 
 		const success = updatePlaythroughData(playthroughId, {
@@ -74,7 +74,7 @@ const EquipmentTab = forwardRef<EquipmentTabHandle, EquipmentTabProps>(({ collec
 	};
 
 	useImperativeHandle(ref, () => ({
-		saveEquipment,
+		save,
 	}));
 
 	const filteredEquipment = useMemo(() => {

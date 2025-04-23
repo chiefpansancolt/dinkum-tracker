@@ -1,6 +1,6 @@
-import { Trophy } from "@/types";
+import { BaseResource } from "@/types";
 
-export const trophies: Trophy[] = [
+export const trophies: BaseResource[] = [
   {
     id: "bronze_bug_comp_trophy",
     name: "Bronze Bug Comp Trophy",

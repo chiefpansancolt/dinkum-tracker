@@ -2,9 +2,9 @@
 import React, { useMemo } from "react";
 import { Card, Progress, Badge } from "flowbite-react";
 import { milestones } from "@/data/dinkum";
-import { Milestone, MilestoneStatsProps } from "@/types/dinkum";
+import { Milestone, CollectTabProps } from "@/types";
 
-const MilestoneStats: React.FC<MilestoneStatsProps> = ({ collected }) => {
+const MilestoneStats: React.FC<CollectTabProps> = ({ collected }) => {
 	const stats = useMemo(() => {
 		const areAllLevelsComplete = (milestone: Milestone) => {
 			return milestone.levels.every((level) => {

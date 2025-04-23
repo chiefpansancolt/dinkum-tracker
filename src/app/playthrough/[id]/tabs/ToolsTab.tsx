@@ -2,16 +2,16 @@
 "use client";
 
 import { useMemo, useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
+import Link from "next/link";
 import { useParams } from "next/navigation";
 import { Card, Checkbox, Label, Badge, TextInput, Select, Button } from "flowbite-react";
-import { tools } from "@/data/dinkum/tools";
+import { tools } from "@/data/dinkum";
 import { updatePlaythroughData } from "@/lib/localStorage";
-import { HiSearch, HiCheck } from "react-icons/hi";
+import { TabHandle, CollectTabProps } from "@/types";
 import SaveAlert from "@/comps/SaveAlert";
-import { ToolsTabHandle, ToolsTabProps } from "@/types/dinkum";
-import Link from "next/link";
+import { HiSearch, HiCheck } from "react-icons/hi";
 
-const ToolsTab = forwardRef<ToolsTabHandle, ToolsTabProps>(({ collected }, ref) => {
+const ToolsTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) => {
 	const params = useParams();
 	const playthroughId = typeof params.id === "string" ? params.id : "";
 	const [searchQuery, setSearchQuery] = useState("");
@@ -58,7 +58,7 @@ const ToolsTab = forwardRef<ToolsTabHandle, ToolsTabProps>(({ collected }, ref) 
 		isDirty.current = true;
 	};
 
-	const saveTools = () => {
+	const save = () => {
 		if (!playthroughId || !isDirty.current) return false;
 
 		const success = updatePlaythroughData(playthroughId, {
@@ -74,7 +74,7 @@ const ToolsTab = forwardRef<ToolsTabHandle, ToolsTabProps>(({ collected }, ref) 
 	};
 
 	useImperativeHandle(ref, () => ({
-		saveTools,
+		save,
 	}));
 
 	const filteredTools = useMemo(() => {

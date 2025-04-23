@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "flowbite-react";
-import { GameInfoCardProps } from "@/types/ui";
+import { GameInfoCardProps } from "@/types";
 
 const GameInfoCard: React.FC<GameInfoCardProps> = ({ playthrough }) => {
 	const daysSinceCreation = () => {

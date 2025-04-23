@@ -1,7 +1,7 @@
 import ItemsBreakdownPage from "./ItemsBreakdownPage";
 
 export const metadata = {
-	title: "Resources - Dinkum Tracker",
+	title: "Items Breakdown - Dinkum Tracker",
 	description: "Track all resources used in Dinkum recipes, buildings, tools, and more",
 };
 

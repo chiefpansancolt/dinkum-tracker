@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, Badge } from "flowbite-react";
-import { DayDetailsProps } from "@/types/dinkum";
+import { DayDetailsProps } from "@/types";
 import { getSeasonStyles, getSeasonEmoji } from "@/service/seasonalTheme";
 
 export default function DayDetails({ day }: DayDetailsProps) {

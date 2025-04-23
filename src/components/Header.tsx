@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Dropdown, DropdownDivider, DropdownItem } from "flowbite-react";
-import { getPlaythroughs } from "../lib/localStorage";
-import { Playthrough } from "@/types/app";
+import { getPlaythroughs } from "@/lib/localStorage";
+import { Playthrough } from "@/types";
 import { HiCog, HiHome } from "react-icons/hi";
 
 export default function Header() {

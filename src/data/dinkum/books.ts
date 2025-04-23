@@ -1,4 +1,4 @@
-import { Book } from "@/types/dinkum";
+import { Book } from "@/types";
 
 export const books: Book[] = [
   {

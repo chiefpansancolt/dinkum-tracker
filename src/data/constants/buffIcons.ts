@@ -1,4 +1,4 @@
-import { BuffIcon } from "@/types/dinkum";
+import { BuffIcon } from "@/types";
 
 export const BuffIcons: BuffIcon = {
   length: "https://static.wikia.nocookie.net/dinkum/images/2/28/Full_Buff.png",

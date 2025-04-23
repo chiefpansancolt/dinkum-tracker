@@ -5,13 +5,13 @@ import { useState, forwardRef, useImperativeHandle, useRef, useEffect } from "re
 import { useParams } from "next/navigation";
 import { Card, Checkbox, Label, Badge, TextInput, Button, Select } from "flowbite-react";
 import { milestones } from "@/data/dinkum";
-import { Milestone, MilestonesTabHandle, MilestonesTabProps } from "@/types/dinkum";
+import { Milestone, TabHandle, CollectTabProps } from "@/types";
 import { updatePlaythroughData } from "@/lib/localStorage";
 import { MILESTONE_CATEGORIES } from "@/data/constants";
-import { HiSearch, HiCheck } from "react-icons/hi";
 import SaveAlert from "@/comps/SaveAlert";
+import { HiSearch, HiCheck } from "react-icons/hi";
 
-const MilestonesTab = forwardRef<MilestonesTabHandle, MilestonesTabProps>(({ collected }, ref) => {
+const MilestonesTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) => {
 	const params = useParams();
 	const playthroughId = typeof params.id === "string" ? params.id : "";
 	const [searchQuery, setSearchQuery] = useState("");
@@ -66,7 +66,7 @@ const MilestonesTab = forwardRef<MilestonesTabHandle, MilestonesTabProps>(({ col
 		}).length;
 	};
 
-	const saveMilestones = () => {
+	const save = () => {
 		if (!playthroughId || !isDirty.current) return false;
 
 		const success = updatePlaythroughData(playthroughId, {
@@ -82,7 +82,7 @@ const MilestonesTab = forwardRef<MilestonesTabHandle, MilestonesTabProps>(({ col
 	};
 
 	useImperativeHandle(ref, () => ({
-		saveMilestones,
+		save,
 	}));
 
 	const filteredMilestones = milestones.filter((milestone) => {

@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { Card, Checkbox, Badge, Label } from "flowbite-react";
-import { CollectionItemProps, Fish } from "@/types/dinkum";
+import { CollectionItemProps, Fish } from "@/types";
 
 const getRarityColor = (rarity: string) => {
 	switch (rarity) {

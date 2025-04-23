@@ -1,4 +1,4 @@
-import { Mineral } from "@/types/dinkum";
+import { Mineral } from "@/types";
 
 export const minerals: Mineral[] = [
   {

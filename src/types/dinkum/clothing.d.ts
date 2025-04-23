@@ -1,7 +1,7 @@
 import { ClothingSlots } from "@/data/constants";
+import { BaseResource } from "./base";
 
 export type ClothingSlot = keyof typeof ClothingSlots;
-
 export type ClothingType =
   | (typeof ClothingSlots.Head)[number]
   | (typeof ClothingSlots.Face)[number]
@@ -9,25 +9,11 @@ export type ClothingType =
   | (typeof ClothingSlots.Legs)[number]
   | (typeof ClothingSlots.Feet)[number];
 
-export interface Clothing {
-  id: string;
-  name: string;
-  img: string;
+export interface Clothing extends BaseResource {
   displayPrice: number | null;
   cataloguePrice: number | null;
-  baseSellingPrice: number;
   cloversCatalogue: boolean;
   slot: ClothingSlot[];
   type: ClothingType;
   set: string;
-}
-
-export interface ClothingTabProps {
-  collected: {
-    [key: string]: boolean;
-  };
-}
-
-export interface ClothingTabHandle {
-  saveClothing: () => boolean;
 }

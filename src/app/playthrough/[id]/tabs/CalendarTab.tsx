@@ -6,11 +6,11 @@ import { useParams } from "next/navigation";
 import { useCalendarStore, getSeasonDays } from "@/service/calendar";
 import { getSeasonStyles, getSeasonEmoji } from "@/service/seasonalTheme";
 import { updatePlaythroughData } from "@/lib/localStorage";
-import { CalendarTabHandle, Season, CalendarDay, CalendarTabProps } from "@/types/dinkum";
+import { TabHandle, CalendarTabProps, Season, CalendarDay } from "@/types";
 import DayDetails from "@/comps/playthrough/DayDetails";
 import { HiInformationCircle } from "react-icons/hi";
 
-const CalendarTab = forwardRef<CalendarTabHandle, CalendarTabProps>(({ current }, ref) => {
+const CalendarTab = forwardRef<TabHandle, CalendarTabProps>(({ current }, ref) => {
 	const params = useParams();
 	const playthroughId = typeof params.id === "string" ? params.id : "";
 
@@ -44,7 +44,7 @@ const CalendarTab = forwardRef<CalendarTabHandle, CalendarTabProps>(({ current }
 		}
 	}, [currentDay, selectedDay]);
 
-	const saveSelectedDay = () => {
+	const save = () => {
 		if (!selectedDay || !playthroughId) return false;
 
 		setDate(selectedDay.day, selectedDay.season);
@@ -60,7 +60,7 @@ const CalendarTab = forwardRef<CalendarTabHandle, CalendarTabProps>(({ current }
 	};
 
 	useImperativeHandle(ref, () => ({
-		saveSelectedDay,
+		save,
 	}));
 
 	const seasonStyles = getSeasonStyles(selectedSeason);

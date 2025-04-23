@@ -5,12 +5,12 @@ import React, { useState, useEffect, useRef, forwardRef, useImperativeHandle } f
 import { useParams } from "next/navigation";
 import { Card, Label, Button } from "flowbite-react";
 import { skills } from "@/data/dinkum";
-import { SkillCardProps, SkillsTabHandle, SkillsTabProps } from "@/types/dinkum";
+import { SkillCardProps, TabHandle, CollectNumberTabProps } from "@/types";
 import { updatePlaythroughData } from "@/lib/localStorage";
 import { HiMinusSm, HiPlusSm } from "react-icons/hi";
 import SaveAlert from "@/comps/SaveAlert";
 
-const SkillsTab = forwardRef<SkillsTabHandle, SkillsTabProps>(({ collected }, ref) => {
+const SkillsTab = forwardRef<TabHandle, CollectNumberTabProps>(({ collected }, ref) => {
 	const params = useParams();
 	const playthroughId = typeof params.id === "string" ? params.id : "";
 	const [localSkillLevels, setLocalSkillLevels] = useState<Record<string, number>>(collected);
@@ -36,7 +36,7 @@ const SkillsTab = forwardRef<SkillsTabHandle, SkillsTabProps>(({ collected }, re
 		});
 	};
 
-	const saveSkills = () => {
+	const save = () => {
 		if (!playthroughId || !isDirty.current) return false;
 
 		const success = updatePlaythroughData(playthroughId, {
@@ -52,7 +52,7 @@ const SkillsTab = forwardRef<SkillsTabHandle, SkillsTabProps>(({ collected }, re
 	};
 
 	useImperativeHandle(ref, () => ({
-		saveSkills,
+		save,
 	}));
 
 	return (

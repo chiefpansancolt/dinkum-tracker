@@ -1,4 +1,4 @@
-import { Recipe } from "@/types/dinkum";
+import { Recipe } from "@/types";
 
 export const craftingRecipes: Recipe[] = [
   {

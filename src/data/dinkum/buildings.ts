@@ -1,4 +1,4 @@
-import { Building } from "@/types/dinkum";
+import { Building } from "@/types";
 
 export const buildings: Building[] = [
   {

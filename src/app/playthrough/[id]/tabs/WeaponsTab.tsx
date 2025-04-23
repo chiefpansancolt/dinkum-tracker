@@ -5,13 +5,13 @@ import { useMemo, useState, useEffect, forwardRef, useImperativeHandle, useRef }
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { Card, Checkbox, Label, Badge, TextInput, Select, Button } from "flowbite-react";
-import { weapons } from "@/data/dinkum/weapons";
+import { weapons } from "@/data/dinkum";
 import { updatePlaythroughData } from "@/lib/localStorage";
-import { HiSearch, HiCheck } from "react-icons/hi";
+import { TabHandle, CollectTabProps } from "@/types";
 import SaveAlert from "@/comps/SaveAlert";
-import { WeaponsTabHandle, WeaponsTabProps } from "@/types/dinkum";
+import { HiSearch, HiCheck } from "react-icons/hi";
 
-const WeaponsTab = forwardRef<WeaponsTabHandle, WeaponsTabProps>(({ collected }, ref) => {
+const WeaponsTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) => {
 	const params = useParams();
 	const playthroughId = typeof params.id === "string" ? params.id : "";
 	const [searchQuery, setSearchQuery] = useState("");
@@ -47,7 +47,7 @@ const WeaponsTab = forwardRef<WeaponsTabHandle, WeaponsTabProps>(({ collected },
 		isDirty.current = true;
 	};
 
-	const saveWeapons = () => {
+	const save = () => {
 		if (!playthroughId || !isDirty.current) return false;
 
 		const success = updatePlaythroughData(playthroughId, {
@@ -63,7 +63,7 @@ const WeaponsTab = forwardRef<WeaponsTabHandle, WeaponsTabProps>(({ collected },
 	};
 
 	useImperativeHandle(ref, () => ({
-		saveWeapons,
+		save,
 	}));
 
 	const filteredWeapons = useMemo(() => {

@@ -1,4 +1,4 @@
-import { Resource } from "./resource";
+import { Resource } from "./base";
 
 export type DeedType = "Collectable" | "Movable" | "Reference";
 
@@ -17,20 +17,4 @@ export interface Building {
   inputs: Resource[];
   operatingHours: string[];
   daysClosed: string;
-}
-
-export interface BuildingsTabProps {
-  collected: {
-    [key: string]: boolean;
-  };
-}
-
-export interface BuildingsTabHandle {
-  saveBuildings: () => boolean;
-}
-
-export interface BuildingStatsProps {
-  collected: {
-    [key: string]: boolean;
-  };
 }

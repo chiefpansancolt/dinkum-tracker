@@ -17,7 +17,7 @@ export * from "./craftingRecipes";
 export * from "./signWritingRecipes";
 export * from "./cookingRecipes";
 export * from "./crops";
-export * from "./forageables";
+export * from "./foragables";
 export * from "./animalProducts";
 export * from "./paint";
 export * from "./minerals";

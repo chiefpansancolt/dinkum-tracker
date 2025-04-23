@@ -1,6 +1,6 @@
-import { Forageable } from "@/types/dinkum";
+import { Foragable } from "@/types";
 
-export const forageables: Forageable[] = [
+export const foragables: Foragable[] = [
   {
     id: "apple",
     name: "Apple",

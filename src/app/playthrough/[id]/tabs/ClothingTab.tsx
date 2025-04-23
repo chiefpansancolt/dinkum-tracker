@@ -6,12 +6,12 @@ import { useParams } from "next/navigation";
 import { Card, Checkbox, Label, Badge, TextInput, Select } from "flowbite-react";
 import { clothing, getClothingBySlot, getClothingByType, getClothingBySet } from "@/data/dinkum";
 import { ClothingSlots } from "@/data/constants";
-import { ClothingTabHandle, ClothingTabProps, ClothingSlot } from "@/types/dinkum";
+import { ClothingSlot, TabHandle, CollectTabProps } from "@/types";
 import { updatePlaythroughData } from "@/lib/localStorage";
 import { HiSearch, HiCheck } from "react-icons/hi";
 import SaveAlert from "@/comps/SaveAlert";
 
-const ClothingTab = forwardRef<ClothingTabHandle, ClothingTabProps>(({ collected }, ref) => {
+const ClothingTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) => {
 	const params = useParams();
 	const playthroughId = typeof params.id === "string" ? params.id : "";
 	const [searchQuery, setSearchQuery] = useState("");
@@ -64,7 +64,7 @@ const ClothingTab = forwardRef<ClothingTabHandle, ClothingTabProps>(({ collected
 		isDirty.current = true;
 	};
 
-	const saveClothing = () => {
+	const save = () => {
 		if (!playthroughId || !isDirty.current) return false;
 
 		const success = updatePlaythroughData(playthroughId, {
@@ -80,7 +80,7 @@ const ClothingTab = forwardRef<ClothingTabHandle, ClothingTabProps>(({ collected
 	};
 
 	useImperativeHandle(ref, () => ({
-		saveClothing,
+		save,
 	}));
 
 	const filteredClothing = useMemo(() => {
@@ -281,7 +281,7 @@ const ClothingTab = forwardRef<ClothingTabHandle, ClothingTabProps>(({ collected
 													className="mr-1 h-4 w-4"
 												/>
 												<span>
-													{item.baseSellingPrice.toLocaleString()}
+													{item.baseSellPrice.toLocaleString()}
 												</span>
 											</div>
 										</div>

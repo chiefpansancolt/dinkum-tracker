@@ -1,4 +1,4 @@
-import { NPC } from "@/types/dinkum";
+import { NPC } from "@/types";
 
 export const npcs: NPC[] = [
   {

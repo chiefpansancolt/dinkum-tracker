@@ -1,4 +1,4 @@
-import { Fish } from "@/types/dinkum";
+import { Fish } from "@/types";
 
 export const fish: Fish[] = [
   {

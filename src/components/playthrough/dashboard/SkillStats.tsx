@@ -2,9 +2,9 @@
 import React from "react";
 import { Card, Badge } from "flowbite-react";
 import { skills } from "@/data/dinkum";
-import { SkillStatsProps } from "@/types/dinkum";
+import { CollectNumberTabProps } from "@/types";
 
-const SkillStats: React.FC<SkillStatsProps> = ({ collected }) => {
+const SkillStats: React.FC<CollectNumberTabProps> = ({ collected }) => {
 	const hasSkills = Object.keys(collected).length > 0;
 
 	return (

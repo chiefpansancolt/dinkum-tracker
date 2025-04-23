@@ -2,9 +2,9 @@
 import React, { useMemo } from "react";
 import { Card, Progress, Badge } from "flowbite-react";
 import { licenses } from "@/data/dinkum";
-import { License, LicenseStatsProps } from "@/types/dinkum";
+import { License, CollectTabProps } from "@/types";
 
-const LicenseStats: React.FC<LicenseStatsProps> = ({ collected }) => {
+const LicenseStats: React.FC<CollectTabProps> = ({ collected }) => {
 	const stats = useMemo(() => {
 		const areAllLevelsComplete = (license: License) => {
 			return license.levels.every((level) => {

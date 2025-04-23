@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { Card, Progress, Badge } from "flowbite-react";
 import { cookingRecipes, craftingRecipes, signWritingRecipes } from "@/data/dinkum";
-import { RecipeStatsProps } from "@/types/dinkum";
+import { RecipeStatsProps } from "@/types";
 import { LuCookingPot } from "react-icons/lu";
 import { GiStoneCrafting, GiPaintBrush } from "react-icons/gi";
 

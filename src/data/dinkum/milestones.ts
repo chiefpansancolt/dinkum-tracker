@@ -1,4 +1,4 @@
-import { Milestone } from "@/types/dinkum";
+import { Milestone } from "@/types";
 
 export const milestones: Milestone[] = [
   {

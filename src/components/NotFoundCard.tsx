@@ -1,6 +1,6 @@
 import { Card, Button } from "flowbite-react";
 import Link from "next/link";
-import { NotFoundCardProps } from "@/types/ui";
+import { NotFoundCardProps } from "@/types";
 
 export default function NotFoundCard({ message }: NotFoundCardProps) {
 	return (

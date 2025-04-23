@@ -9,22 +9,20 @@ import { fish, bugs, critters } from "@/data/dinkum";
 import { updatePlaythroughData } from "@/lib/localStorage";
 import SaveAlert from "@/comps/SaveAlert";
 import {
-	CollectionsTabHandle,
-	CollectionsTabProps,
 	Collection,
 	CollectionType,
-	FishTabHandle,
-	BugsTabHandle,
-	CrittersTabHandle,
-} from "@/types/dinkum";
+	TabHandle,
+	PediaTabHandle,
+	CollectionsTabProps,
+} from "@/types";
 
-const CollectionsTab = forwardRef<CollectionsTabHandle, CollectionsTabProps>(
+const CollectionsTab = forwardRef<TabHandle, CollectionsTabProps>(
 	({ collections, donations, activeCollectionType }, ref) => {
 		const params = useParams();
 		const playthroughId = typeof params.id === "string" ? params.id : "";
-		const fishTabRef = useRef<FishTabHandle>(null);
-		const bugsTabRef = useRef<BugsTabHandle>(null);
-		const crittersTabRef = useRef<CrittersTabHandle>(null);
+		const fishTabRef = useRef<PediaTabHandle>(null);
+		const bugsTabRef = useRef<PediaTabHandle>(null);
+		const crittersTabRef = useRef<PediaTabHandle>(null);
 
 		const [localCollections, setLocalCollections] = useState<Collection>(collections);
 		const [localDonations, setLocalDonations] = useState<Collection>(donations);
@@ -43,12 +41,12 @@ const CollectionsTab = forwardRef<CollectionsTabHandle, CollectionsTabProps>(
 			setLocalDonations(donations);
 		}, [activeCollectionType, collections, donations]);
 
-		const saveCollections = () => {
+		const save = () => {
 			if (!playthroughId || !isDirty.current) return false;
 
 			let status = false;
 			if (activeCollectionType === "fish" && fishTabRef.current) {
-				const fishState = fishTabRef.current.saveCollectionState();
+				const fishState = fishTabRef.current.save();
 				status = updatePlaythroughData(playthroughId, {
 					collections: {
 						[activeCollectionType]: fishState.collected,
@@ -60,7 +58,7 @@ const CollectionsTab = forwardRef<CollectionsTabHandle, CollectionsTabProps>(
 			}
 
 			if (activeCollectionType === "bugs" && bugsTabRef.current) {
-				const bugsState = bugsTabRef.current.saveCollectionState();
+				const bugsState = bugsTabRef.current.save();
 				status = updatePlaythroughData(playthroughId, {
 					collections: {
 						[activeCollectionType]: bugsState.collected,
@@ -72,7 +70,7 @@ const CollectionsTab = forwardRef<CollectionsTabHandle, CollectionsTabProps>(
 			}
 
 			if (activeCollectionType === "critters" && crittersTabRef.current) {
-				const crittersState = crittersTabRef.current.saveCollectionState();
+				const crittersState = crittersTabRef.current.save();
 				status = updatePlaythroughData(playthroughId, {
 					collections: {
 						[activeCollectionType]: crittersState.collected,
@@ -91,7 +89,7 @@ const CollectionsTab = forwardRef<CollectionsTabHandle, CollectionsTabProps>(
 		};
 
 		useImperativeHandle(ref, () => ({
-			saveCollections,
+			save,
 		}));
 
 		const handleCollectionChange = (type: CollectionType, id: string, collected: boolean) => {

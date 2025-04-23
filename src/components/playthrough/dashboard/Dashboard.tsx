@@ -1,5 +1,5 @@
 import React from "react";
-import { DashboardProps } from "@/types/app";
+import { DashboardProps } from "@/types";
 import CollectionStats from "./CollectionStats";
 import MilestoneStats from "./MilestoneStats";
 import SkillStats from "./SkillStats";

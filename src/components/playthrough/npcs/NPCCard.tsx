@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { Card, Button } from "flowbite-react";
-import { NPCCardProps } from "@/types/dinkum";
+import { NPCCardProps } from "@/types";
 import { HiHeart, HiOutlineHeart } from "react-icons/hi";
 
 const NPCCard: React.FC<NPCCardProps> = ({ npc, hearts, onHeartsChange }) => {

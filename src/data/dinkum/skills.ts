@@ -1,4 +1,4 @@
-import { Skill } from "@/types/dinkum";
+import { Skill } from "@/types";
 
 export const skills: Skill[] = [
   {

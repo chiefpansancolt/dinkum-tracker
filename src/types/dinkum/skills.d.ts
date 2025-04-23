@@ -10,15 +10,3 @@ export interface SkillCardProps {
   level: number;
   onLevelChange: (delta: number) => void;
 }
-
-export interface SkillsTabProps {
-  collected: Record<string, number>;
-}
-
-export interface SkillsTabHandle {
-  saveSkills: () => boolean;
-}
-
-export interface SkillStatsProps {
-  collected: Record<string, number>;
-}

@@ -5,11 +5,11 @@ import { useParams } from "next/navigation";
 import { Badge } from "flowbite-react";
 import { npcs } from "@/data/dinkum";
 import { updatePlaythroughData } from "@/lib/localStorage";
-import SaveAlert from "@/comps/SaveAlert";
-import { NPCsTabHandle, NPCsTabProps } from "@/types/dinkum";
+import { TabHandle, CollectNumberTabProps } from "@/types";
 import NPCCard from "@/playthrough/npcs/NPCCard";
+import SaveAlert from "@/comps/SaveAlert";
 
-const NPCsTab = forwardRef<NPCsTabHandle, NPCsTabProps>(({ collected }, ref) => {
+const NPCsTab = forwardRef<TabHandle, CollectNumberTabProps>(({ collected }, ref) => {
 	const params = useParams();
 	const playthroughId = typeof params.id === "string" ? params.id : "";
 	const [localRelationships, setLocalRelationships] = useState<Record<string, number>>(collected);
@@ -30,7 +30,7 @@ const NPCsTab = forwardRef<NPCsTabHandle, NPCsTabProps>(({ collected }, ref) => 
 		isDirty.current = true;
 	};
 
-	const saveRelationships = () => {
+	const save = () => {
 		if (!playthroughId || !isDirty.current) return false;
 
 		const success = updatePlaythroughData(playthroughId, {
@@ -46,7 +46,7 @@ const NPCsTab = forwardRef<NPCsTabHandle, NPCsTabProps>(({ collected }, ref) => 
 	};
 
 	useImperativeHandle(ref, () => ({
-		saveRelationships,
+		save,
 	}));
 
 	return (

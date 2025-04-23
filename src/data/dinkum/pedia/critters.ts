@@ -1,4 +1,4 @@
-import { PediaItem } from "@/types/dinkum";
+import { PediaItem } from "@/types";
 
 export const critters: PediaItem[] = [
   {

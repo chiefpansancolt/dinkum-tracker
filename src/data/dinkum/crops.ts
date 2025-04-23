@@ -1,4 +1,4 @@
-import { Crop } from "@/types/dinkum";
+import { Crop } from "@/types";
 
 export const crops: Crop[] = [
   {

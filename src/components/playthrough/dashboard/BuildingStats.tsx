@@ -2,10 +2,10 @@
 import React, { useMemo } from "react";
 import { Card, Progress, Badge } from "flowbite-react";
 import { buildings } from "@/data/dinkum";
-import { BuildingStatsProps } from "@/types/dinkum";
+import { CollectTabProps } from "@/types/dinkum";
 import { HiOutlineHome, HiOutlineOfficeBuilding, HiOutlineShoppingBag } from "react-icons/hi";
 
-const BuildingStats: React.FC<BuildingStatsProps> = ({ collected }) => {
+const BuildingStats: React.FC<CollectTabProps> = ({ collected }) => {
 	const stats = useMemo(() => {
 		const collectableBuildings = buildings.filter(
 			(building) => building.deedType === "Collectable"

@@ -1,13 +1,5 @@
+import { GameCalendar } from "@/data/dinkum";
 import type { Season, Weekday } from "./base";
-
-export interface CalendarState {
-  calendar: GameCalendar;
-  currentDay: CalendarDay;
-  selectedSeason: Season;
-  setSelectedSeason: (season: Season) => void;
-  advanceDay: () => void;
-  setDate: (day: number, season: Season) => void;
-}
 
 export interface CalendarData {
   currentDay: number;
@@ -37,12 +29,13 @@ export interface CalendarDay {
   birthdays: Birthday[];
 }
 
-export interface CalendarTabProps {
-  current: CalendarData;
-}
-
-export interface CalendarTabHandle {
-  saveSelectedDay: () => boolean;
+export interface CalendarState {
+  calendar: GameCalendar
+  currentDay: CalendarDay;
+  selectedSeason: Season;
+  setSelectedSeason: (season: Season) => void;
+  advanceDay: () => void;
+  setDate: (day: number, season: Season) => void;
 }
 
 export interface DayDetailsProps {

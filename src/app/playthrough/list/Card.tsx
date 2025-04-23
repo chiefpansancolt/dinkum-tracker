@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Card, Button, Badge, Progress } from "flowbite-react";
 import { deletePlaythrough } from "@/lib/localStorage";
-import { PlaythroughCardProps } from "@/types/app";
+import { PlaythroughCardProps } from "@/types";
 
 export default function PlaythroughCard({ playthrough, onDelete }: PlaythroughCardProps) {
 	const router = useRouter();

@@ -1,6 +1,6 @@
-import { Paint } from "@/types/dinkum";
+import { BaseResource } from "@/types";
 
-export const paint: Paint[] = [
+export const paint: BaseResource[] = [
   {
     id: "black_paint",
     name: "Black Paint",

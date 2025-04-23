@@ -5,15 +5,15 @@ import { useState, useMemo } from "react";
 import { Card, TextInput, Select, Badge, Label, Checkbox, Button } from "flowbite-react";
 import {
 	animalProducts,
-	forageables,
+	foragables,
 	minerals,
 	relics,
 	trophies,
 	otherCraftables,
 } from "@/data/dinkum";
-import { HiSearch, HiX, HiFilter } from "react-icons/hi";
-import { ResourceItem } from "@/types";
 import { BuffIcons, ResourceType } from "@/data/constants";
+import { ResourceItem } from "@/types";
+import { HiSearch, HiX, HiFilter } from "react-icons/hi";
 
 export default function ResourcesTab() {
 	const [searchQuery, setSearchQuery] = useState<string>("");
@@ -34,7 +34,7 @@ export default function ResourcesTab() {
 			});
 		});
 
-		forageables.forEach((item) => {
+		foragables.forEach((item) => {
 			resources.push({
 				...item,
 				resourceType: ResourceType.FORAGABLE,
@@ -177,7 +177,7 @@ export default function ResourcesTab() {
 			<div>
 				<h1 className="text-primary mb-2 text-2xl font-bold">Resources</h1>
 				<p className="text-gray-600 dark:text-gray-400">
-					Browse all resources available in Dinkum including animal products, forageables,
+					Browse all resources available in Dinkum including animal products, foragables,
 					minerals, relics, and trophies.
 				</p>
 			</div>

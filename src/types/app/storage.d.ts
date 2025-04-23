@@ -8,15 +8,9 @@ export interface Playthrough {
   lastUpdated: string;
   collections: Collection;
   donations: Collection;
-  milestones: {
-    [key: string]: boolean;
-  };
-  licenses: {
-    [key: string]: boolean;
-  };
-  buildings: {
-    [key: string]: boolean;
-  };
+  milestones: Record<string, boolean>;
+  licenses: Record<string, boolean>;
+  buildings: Record<string, boolean>;
   skillLevels: Record<string, number>;
   calendar: CalendarData;
   relationships: Record<string, number>;

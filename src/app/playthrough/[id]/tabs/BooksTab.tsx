@@ -5,12 +5,12 @@ import { useState, useEffect, forwardRef, useImperativeHandle, useRef } from "re
 import { useParams } from "next/navigation";
 import { Card, Checkbox, Label, Badge } from "flowbite-react";
 import { books } from "@/data/dinkum";
-import { BooksTabHandle, BooksTabProps } from "@/types/dinkum";
+import { TabHandle, CollectTabProps } from "@/types";
 import { updatePlaythroughData } from "@/lib/localStorage";
 import { HiCheck } from "react-icons/hi";
 import SaveAlert from "@/comps/SaveAlert";
 
-const BooksTab = forwardRef<BooksTabHandle, BooksTabProps>(({ collected }, ref) => {
+const BooksTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) => {
 	const params = useParams();
 	const playthroughId = typeof params.id === "string" ? params.id : "";
 	const [localBooksState, setLocalBooksState] = useState<Record<string, boolean>>(collected);
@@ -31,7 +31,7 @@ const BooksTab = forwardRef<BooksTabHandle, BooksTabProps>(({ collected }, ref) 
 		isDirty.current = true;
 	};
 
-	const saveBooks = () => {
+	const save = () => {
 		if (!playthroughId || !isDirty.current) return false;
 
 		const success = updatePlaythroughData(playthroughId, {
@@ -47,7 +47,7 @@ const BooksTab = forwardRef<BooksTabHandle, BooksTabProps>(({ collected }, ref) 
 	};
 
 	useImperativeHandle(ref, () => ({
-		saveBooks,
+		save,
 	}));
 
 	const getCollectedCount = () => {

@@ -2,10 +2,10 @@
 import React, { useMemo } from "react";
 import { Card } from "flowbite-react";
 import { npcs } from "@/data/dinkum";
-import { NPCStatsProps } from "@/types/dinkum";
+import { CollectNumberTabProps } from "@/types";
 import { HiHeart } from "react-icons/hi";
 
-const NPCStats: React.FC<NPCStatsProps> = ({ collected }) => {
+const NPCStats: React.FC<CollectNumberTabProps> = ({ collected }) => {
 	const residents = useMemo(() => npcs, []);
 
 	const stats = useMemo(() => {
