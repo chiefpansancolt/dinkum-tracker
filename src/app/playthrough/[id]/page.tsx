@@ -88,6 +88,7 @@ import {
 	GiSwordman,
 	GiWheat,
 } from "react-icons/gi";
+import ResourcesTab from "./tabs/ResourcesTab";
 
 export default function PlaythroughPage() {
 	const params = useParams();
@@ -325,6 +326,8 @@ export default function PlaythroughPage() {
 				return <EquipmentTab ref={equipmentRef} collected={playthrough.equipment || {}} />;
 			case ActiveTab.Vehicles:
 				return <VehiclesTab ref={vehicleRef} collected={playthrough.vehicles || {}} />;
+			case ActiveTab.Resources:
+				return <ResourcesTab />
 			case ActiveTab.CraftingRecipes:
 				return (
 					<CraftingRecipesTab

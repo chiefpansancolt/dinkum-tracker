@@ -1,11 +1,5 @@
-import { Resource } from "./resource";
+import { ResourceVariant } from "./resource";
 import { Buffs } from "./base";
-
-export interface RecipeVariant {
-  id: string;
-  outputCount?: number;
-  inputs: Resource[];
-}
 
 export interface Recipe {
   id: string;
@@ -15,7 +9,7 @@ export interface Recipe {
   baseSellPrice: number;
   outputCount?: number | "Varies";
   source?: string[];
-  variants: RecipeVariant[];
+  variants: ResourceVariant[];
   buffs?: Buffs;
 }
 
@@ -25,7 +19,7 @@ export interface CookingRecipe {
   img: string;
   outputCount: number | "Varies";
   cookingLocation: string[];
-  variants: RecipeVariant[];
+  variants: ResourceVariant[];
   baseSellPrice: number;
   sheilasSellPrice?: number;
   tedsSellPrice?: number | null;

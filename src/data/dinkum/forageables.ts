@@ -52,7 +52,7 @@ export const forageables: Forageable[] = [
   {
     id: "bush_lime",
     name: "Bush Lime",
-    img: "",
+    img: "https://static.wikia.nocookie.net/dinkum/images/a/af/Inv_Bush_Lime.png",
     source: ["Bush Lime Tree"],
     locations: ["Bushlands", "Billabongs"],
     buyPrice: 180,
@@ -96,7 +96,7 @@ export const forageables: Forageable[] = [
   {
     id: "coconut",
     name: "Coconut",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4a/Inv_Coconut.png/revision/latest?cb=20241028105253",
+    img: "https://static.wikia.nocookie.net/dinkum/images/4/4a/Inv_Coconut.png",
     source: ["Coconut Trees"],
     locations: ["Tropics"],
     baseSellPrice: 261,

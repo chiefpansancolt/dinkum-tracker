@@ -524,7 +524,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "ruby_shard",
     name: "Ruby Shard",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/50/Inv_Ruby_Shard.png3",
+    img: "https://static.wikia.nocookie.net/dinkum/images/5/50/Inv_Ruby_Shard.png",
     source: ["Crusher", "Jimmy's Boat"],
     variants: [
       {

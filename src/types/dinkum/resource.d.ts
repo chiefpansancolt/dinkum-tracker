@@ -3,3 +3,9 @@ export interface Resource {
   img: string;
   count: number;
 }
+
+export interface ResourceVariant {
+  id: string;
+  outputCount?: number;
+  inputs: Resource[];
+}
