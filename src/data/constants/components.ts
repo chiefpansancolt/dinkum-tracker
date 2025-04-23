@@ -24,3 +24,18 @@ export enum ActiveTab {
   Equipment = "equipment",
   Seeds = "seeds",
 }
+
+export enum ResourceType {
+  FISH = "Fish",
+  CRITTER = "Critter",
+  BUG = "Bug",
+  RELIC = "Relic",
+  CROP = "Crop",
+  FORAGABLE = "Foragable",
+  ANIMALPRODUCT = "Animal Product",
+  PAINT = "Paint",
+  MINERAL = "Mineral",
+  CRAFTABLE = "Craftable",
+  TROPHY = "Trophy",
+  RESOURCE = "Resource",
+}

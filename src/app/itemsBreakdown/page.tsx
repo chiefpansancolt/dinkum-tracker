@@ -1,4 +1,4 @@
-import ResourcesPage from "./ResourcesPage";
+import ItemsBreakdownPage from "./ItemsBreakdownPage";
 
 export const metadata = {
 	title: "Resources - Dinkum Tracker",
@@ -6,5 +6,5 @@ export const metadata = {
 };
 
 export default function ResourcesRoute() {
-	return <ResourcesPage />;
+	return <ItemsBreakdownPage />;
 }

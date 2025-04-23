@@ -1,4 +1,4 @@
-import { ResourceVariant, BuyUnits } from "@/types/dinkum";
+import { Resource, BuyUnits } from "@/types/dinkum";
 
 export interface Equipment {
   id: string;
@@ -12,7 +12,7 @@ export interface Equipment {
   windmillCompatable?: boolean;
   solarPanelCompatable?: boolean;
   source: string[];
-  inputs?: ResourceVariant[];
+  inputs?: Resource[];
   buyPrice?: number;
   buyUnits?: BuyUnits;
   baseSellPrice: number;

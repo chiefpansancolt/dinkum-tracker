@@ -105,7 +105,7 @@ export const forageables: Forageable[] = [
     id: "field_mushroom",
     name: "Field Mushroom",
     img: "https://static.wikia.nocookie.net/dinkum/images/f/fa/Inv_Field_Mushroom.png",
-    source: ["Grows Under Trees"],
+    source: ["Grows under Trees"],
     baseSellPrice: 250,
     buffs: {
       length: 0.5,
@@ -124,7 +124,7 @@ export const forageables: Forageable[] = [
     id: "glowing_mushroom",
     name: "Glowing Mushroom",
     img: "https://static.wikia.nocookie.net/dinkum/images/9/91/Inv_Glowing_Mushroom.png",
-    source: ["Deep Mine"],
+    source: ["Deep Mines"],
     baseSellPrice: 35,
     buffs: {
       length: 0.5,
@@ -172,7 +172,7 @@ export const forageables: Forageable[] = [
     id: "milk_cap",
     name: "Milk Cap",
     img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Inv_Milk_Cap.png",
-    source: ["Grows Under Trees"],
+    source: ["Grows under Trees"],
     baseSellPrice: 250,
     buffs: {
       length: 0.5,

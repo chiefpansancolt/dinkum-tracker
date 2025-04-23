@@ -25,30 +25,10 @@ import {
 	trophies,
 } from "@/data/dinkum";
 import { HiSearch, HiX, HiFilter, HiTag } from "react-icons/hi";
-import { Resource } from "@/types/dinkum";
+import { UniqueResource, Resource } from "@/types/dinkum";
+import { ResourceType } from "@/data/constants";
 
-enum ResourceType {
-	FISH = "Fish",
-	CRITTER = "Critter",
-	BUG = "Bug",
-	RELIC = "Relic",
-	CROP = "Crop",
-	FORAGABLE = "Foragable",
-	ANIMALPRODUCT = "Animal Product",
-	PAINT = "Paint",
-	MINERAL = "Mineral",
-	CRAFTABLE = "Craftable",
-	TROPHY = "Trophy",
-	RESOURCE = "Resource",
-}
-
-interface UniqueResource extends Resource {
-	usedIn: string[];
-	categories: string[];
-	resourceType: ResourceType;
-}
-
-export default function ResourcesPage() {
+export default function ItemsBreakdownPage() {
 	const [searchQuery, setSearchQuery] = useState<string>("");
 	const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
 	const [selectedTypes, setSelectedTypes] = useState<ResourceType[]>([]);

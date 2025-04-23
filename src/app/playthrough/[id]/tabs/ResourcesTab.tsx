@@ -12,35 +12,13 @@ import {
 	otherCraftables,
 } from "@/data/dinkum";
 import { HiSearch, HiX, HiFilter } from "react-icons/hi";
-import { Buffs, ResourceVariant } from "@/types";
-import { BuffIcons } from "@/data/constants";
-
-enum ResourceType {
-	ANIMAL_PRODUCT = "Animal Product",
-	FORAGEABLE = "Forageable",
-	MINERAL = "Mineral",
-	RELIC = "Relic",
-	TROPHY = "Trophy",
-	CRAFTABLE = "Craftable",
-}
-
-interface ResourceItem {
-	id: string;
-	name: string;
-	img: string;
-	source?: string[];
-	baseSellPrice: number;
-	buffs?: Buffs;
-	locations?: string[];
-	resourceType: ResourceType;
-	buyPrice?: number;
-	description?: string;
-	variants?: ResourceVariant[];
-}
+import { ResourceItem } from "@/types";
+import { BuffIcons, ResourceType } from "@/data/constants";
 
 export default function ResourcesTab() {
 	const [searchQuery, setSearchQuery] = useState<string>("");
 	const [selectedTypes, setSelectedTypes] = useState<ResourceType[]>([]);
+	const [selectedSource, setSelectedSource] = useState<string>("All");
 	const [sortBy, setSortBy] = useState<string>("name");
 	const [showFilter, setShowFilter] = useState<boolean>(false);
 	const [priceRangeMin, setPriceRangeMin] = useState<string>("");
@@ -52,14 +30,14 @@ export default function ResourcesTab() {
 		animalProducts.forEach((item) => {
 			resources.push({
 				...item,
-				resourceType: ResourceType.ANIMAL_PRODUCT,
+				resourceType: ResourceType.ANIMALPRODUCT,
 			});
 		});
 
 		forageables.forEach((item) => {
 			resources.push({
 				...item,
-				resourceType: ResourceType.FORAGEABLE,
+				resourceType: ResourceType.FORAGABLE,
 			});
 		});
 
@@ -98,16 +76,42 @@ export default function ResourcesTab() {
 		return Object.values(ResourceType);
 	}, []);
 
+	// Extract all unique sources from resources
+	const allSources = useMemo(() => {
+		const sources = new Set<string>();
+		sources.add("All"); // Add "All" option
+
+		allResources.forEach((resource) => {
+			if (resource.source && resource.source.length > 0) {
+				resource.source.forEach((src) => {
+					sources.add(src);
+				});
+			}
+		});
+
+		return Array.from(sources).sort();
+	}, [allResources]);
+
 	const filteredResources = useMemo(() => {
 		return allResources.filter((resource) => {
+			// Filter by search query
 			if (searchQuery && !resource.name.toLowerCase().includes(searchQuery.toLowerCase())) {
 				return false;
 			}
 
+			// Filter by resource type
 			if (selectedTypes.length > 0 && !selectedTypes.includes(resource.resourceType)) {
 				return false;
 			}
 
+			// Filter by source
+			if (selectedSource !== "All") {
+				if (!resource.source || !resource.source.includes(selectedSource)) {
+					return false;
+				}
+			}
+
+			// Filter by price range
 			const minPrice = priceRangeMin ? parseInt(priceRangeMin) : 0;
 			const maxPrice = priceRangeMax ? parseInt(priceRangeMax) : Infinity;
 			if (resource.baseSellPrice < minPrice || resource.baseSellPrice > maxPrice) {
@@ -116,7 +120,7 @@ export default function ResourcesTab() {
 
 			return true;
 		});
-	}, [allResources, searchQuery, selectedTypes, priceRangeMin, priceRangeMax]);
+	}, [allResources, searchQuery, selectedTypes, selectedSource, priceRangeMin, priceRangeMax]);
 
 	const sortedResources = useMemo(() => {
 		return [...filteredResources].sort((a, b) => {
@@ -151,9 +155,9 @@ export default function ResourcesTab() {
 
 	const getTypeColor = (type: ResourceType): string => {
 		switch (type) {
-			case ResourceType.ANIMAL_PRODUCT:
+			case ResourceType.ANIMALPRODUCT:
 				return "success";
-			case ResourceType.FORAGEABLE:
+			case ResourceType.FORAGABLE:
 				return "green";
 			case ResourceType.MINERAL:
 				return "purple";
@@ -190,7 +194,24 @@ export default function ResourcesTab() {
 					</Select>
 				</div>
 
-				<div className="md:col-span-9">
+				<div className="md:col-span-2">
+					<div className="mb-2 block">
+						<Label htmlFor="source-filter">Source</Label>
+					</div>
+					<Select
+						id="source-filter"
+						value={selectedSource}
+						onChange={(e) => setSelectedSource(e.target.value)}
+					>
+						{allSources.map((source) => (
+							<option key={source} value={source}>
+								{source}
+							</option>
+						))}
+					</Select>
+				</div>
+
+				<div className="md:col-span-7">
 					<div className="mb-2 block">
 						<Label htmlFor="search-resources">Search</Label>
 					</div>
@@ -294,6 +315,7 @@ export default function ResourcesTab() {
 				<p className="text-primary font-medium">
 					Showing {sortedResources.length} of {allResources.length} resources
 					{selectedTypes.length > 0 && ` (filtered by ${selectedTypes.length} types)`}
+					{selectedSource !== "All" && ` (source: ${selectedSource})`}
 				</p>
 			</div>
 
