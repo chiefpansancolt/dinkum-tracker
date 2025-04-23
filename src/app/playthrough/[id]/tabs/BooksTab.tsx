@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
+import React, { useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
 import { useParams } from "next/navigation";
 import { Card, Checkbox, Label, Badge } from "flowbite-react";
 import { books } from "@/data/dinkum";
