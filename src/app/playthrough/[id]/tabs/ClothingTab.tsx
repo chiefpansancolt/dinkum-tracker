@@ -1,15 +1,23 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useMemo, useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
 import { useParams } from "next/navigation";
-import { Card, Checkbox, Label, Badge, TextInput, Select } from "flowbite-react";
+import { Badge } from "flowbite-react";
 import { clothing, getClothingBySlot, getClothingByType, getClothingBySet } from "@/data/dinkum";
 import { ClothingSlots } from "@/data/constants";
 import { ClothingSlot, TabHandle, CollectTabProps } from "@/types";
 import { updatePlaythroughData } from "@/lib/localStorage";
-import { HiSearch, HiCheck } from "react-icons/hi";
-import SaveAlert from "@/comps/SaveAlert";
+import { getHashQueryParams, setHashQueryParam } from "@/service/urlService";
+import TabHeader from "@/playthrough/ui/TabHeader";
+import FilterBar from "@/playthrough/ui/FilterBar";
+import FilterDetails from "@/playthrough/ui/FilterDetails";
+import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
+import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
+import DinkValue from "@/playthrough/ui/itemcard/DinkValue";
+import ItemFooter from "@/playthrough/ui/itemcard/ItemFooter";
+import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
+import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
+import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
 
 const ClothingTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) => {
 	const params = useParams();
@@ -18,8 +26,7 @@ const ClothingTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) 
 	const [slotFilter, setSlotFilter] = useState<string>("All");
 	const [typeFilter, setTypeFilter] = useState<string>("All");
 	const [setFilter, setSetFilter] = useState<string>("All");
-	const [localCollectionState, setLocalCollectionState] =
-		useState<Record<string, boolean>>(collected);
+	const [localState, setLocalState] = useState<Record<string, boolean>>(collected);
 	const [availableTypes, setAvailableTypes] = useState<string[]>([]);
 	const [availableSets, setAvailableSets] = useState<string[]>([]);
 
@@ -36,8 +43,13 @@ const ClothingTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) 
 	}, []);
 
 	useEffect(() => {
-		setLocalCollectionState(collected);
+		setLocalState(collected);
 		isDirty.current = false;
+
+		const hashParams = getHashQueryParams();
+		if (hashParams.q) {
+			setSearchQuery(hashParams.q);
+		}
 	}, [collected]);
 
 	useEffect(() => {
@@ -55,8 +67,16 @@ const ClothingTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) 
 		}
 	}, [slotFilter]);
 
+	useEffect(() => {
+		if (searchQuery) {
+			setHashQueryParam("q", searchQuery);
+		} else {
+			setHashQueryParam("q", "");
+		}
+	}, [searchQuery]);
+
 	const handleToggleCollected = (id: string, isCollected: boolean) => {
-		setLocalCollectionState((prev) => ({
+		setLocalState((prev) => ({
 			...prev,
 			[id]: isCollected,
 		}));
@@ -64,26 +84,24 @@ const ClothingTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) 
 		isDirty.current = true;
 	};
 
-	const save = () => {
-		if (!playthroughId || !isDirty.current) return false;
-
-		const success = updatePlaythroughData(playthroughId, {
-			clothing: localCollectionState,
-		});
-
-		if (success) {
-			isDirty.current = false;
-			return true;
-		}
-
-		return false;
-	};
-
 	useImperativeHandle(ref, () => ({
-		save,
+		save: () => {
+			if (!playthroughId || !isDirty.current) return false;
+
+			const success = updatePlaythroughData(playthroughId, {
+				clothing: localState,
+			});
+
+			if (success) {
+				isDirty.current = false;
+				return true;
+			}
+
+			return false;
+		},
 	}));
 
-	const filteredClothing = useMemo(() => {
+	const filteredData = useMemo(() => {
 		let filtered = [...clothing];
 
 		if (slotFilter !== "All") {
@@ -107,219 +125,132 @@ const ClothingTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) 
 		return filtered;
 	}, [slotFilter, typeFilter, setFilter, searchQuery]);
 
-	const collectedCount = Object.keys(localCollectionState).filter(
-		(id) => localCollectionState[id]
-	).length;
+	const getCollectedCount = () => {
+		return Object.keys(localState).filter((key) => localState[key]).length;
+	};
+
+	const filters = {
+		slot: {
+			value: slotFilter,
+			options: ["All", ...Object.keys(ClothingSlots)],
+			label: "Slot",
+		},
+		type: {
+			value: typeFilter,
+			options: availableTypes,
+			label: "Type",
+		},
+		set: {
+			value: setFilter,
+			options: availableSets,
+			label: "Set",
+		},
+	};
+
+	const handleFilterChange = (name: string, value: string) => {
+		if (name === "slot") {
+			setSlotFilter(value);
+		} else if (name === "type") {
+			setTypeFilter(value);
+		} else if (name === "set") {
+			setSetFilter(value);
+		}
+	};
 
 	return (
 		<div className="space-y-6">
-			<div>
-				<div className="mb-2 flex items-center justify-between">
-					<h1 className="text-primary text-2xl font-bold">
-						Clothing ({collectedCount} / {clothing.length})
-					</h1>
-					<Badge color="blue" size="lg">
-						{Math.round((collectedCount / clothing.length) * 100)}% collected
-					</Badge>
-				</div>
+			<TabHeader
+				title="Clothing"
+				collectionName="Collected"
+				enableCollectionCount={true}
+				enableSaveAlert={true}
+				isDirty={isDirty.current}
+				collectedCount={getCollectedCount()}
+				collectionTotal={clothing.length}
+				dirtyMessage="Your clothing collection has not been saved yet."
+			/>
 
-				{isDirty.current && (
-					<SaveAlert message="Your clothing collection has not been saved yet." />
-				)}
-			</div>
+			<FilterBar
+				showFilters={true}
+				filters={filters}
+				onFilterChange={handleFilterChange}
+				showSearch={true}
+				searchValue={searchQuery}
+				onSearchChange={(value) => setSearchQuery(value)}
+				searchPlaceholder="Search clothing by name..."
+			/>
 
-			<div className="grid grid-cols-2 gap-4 md:grid-cols-10">
-				<div className="col-span-1 md:col-span-2">
-					<div className="mb-2 block">
-						<Label htmlFor="slot-filter">Slot</Label>
-					</div>
-					<Select
-						id="slot-filter"
-						value={slotFilter}
-						onChange={(e) => setSlotFilter(e.target.value)}
-					>
-						<option value="All">All Slots</option>
-						{Object.keys(ClothingSlots).map((slot) => (
-							<option key={slot} value={slot}>
-								{slot}
-							</option>
-						))}
-					</Select>
-				</div>
+			<FilterDetails
+				title="clothing items"
+				filteredCount={filteredData.length}
+				totalCount={clothing.length}
+				collectedLabel="Collected"
+				collectedCount={getCollectedCount()}
+			/>
 
-				<div className="col-span-1 md:col-span-2">
-					<div className="mb-2 block">
-						<Label htmlFor="type-filter">Type</Label>
-					</div>
-					<Select
-						id="type-filter"
-						value={typeFilter}
-						onChange={(e) => setTypeFilter(e.target.value)}
-					>
-						{availableTypes.map((type) => (
-							<option key={type} value={type}>
-								{type === "All" ? "All Types" : type}
-							</option>
-						))}
-					</Select>
-				</div>
+			{filteredData.length > 0 && (
+				<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+					{filteredData.map((item) => {
+							const isCollected = localState[item.id] === true;
 
-				<div className="col-span-1 md:col-span-2">
-					<div className="mb-2 block">
-						<Label htmlFor="set-filter">Set</Label>
-					</div>
-					<Select
-						id="set-filter"
-						value={setFilter}
-						onChange={(e) => setSetFilter(e.target.value)}
-					>
-						{availableSets.map((set) => (
-							<option key={set} value={set}>
-								{set === "All" ? "All Sets" : set}
-							</option>
-						))}
-					</Select>
-				</div>
+							return (
+								<ItemCard
+									key={item.id}
+									renderHeader={() => (
+										<ItemHeader
+											title={item.name}
+											renderRightComp={() => (
+												<Badge color="purple">{item.type}</Badge>
+											)}
+										/>
+									)}
+									renderImage={() => (
+										<ItemImage
+											src={item.img}
+											name={item.name}
+											isCollected={isCollected}
+										/>
+									)}
+									renderDetails={() => (
+										<>
+											<ItemDetail label="Slot" details={item.slot.join(", ")} />
 
-				<div className="col-span-1 md:col-span-4">
-					<div className="mb-2 block">
-						<Label htmlFor="search-clothing">Search</Label>
-					</div>
-					<TextInput
-						id="search-clothing"
-						type="text"
-						icon={HiSearch}
-						placeholder="Search by name..."
-						value={searchQuery}
-						onChange={(e) => setSearchQuery(e.target.value)}
-					/>
-				</div>
-			</div>
+											{item.set && <ItemDetail label="Set" details={item.set} />}
 
-			<div className="mb-4">
-				<p className="text-primary font-medium">
-					Showing {filteredClothing.length} of {clothing.length} clothing items •
-					Collected: {collectedCount}
-				</p>
-			</div>
+											{item.displayPrice !== null && (
+												<DinkValue label="Price" price={item.displayPrice} />
+											)}
 
-			<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-				{filteredClothing.length === 0 ? (
-					<Card className="col-span-full py-8 text-center">
-						<p className="text-gray-500 dark:text-gray-400">
-							No clothing items match your filter criteria. Try adjusting your
-							filters.
-						</p>
-					</Card>
-				) : (
-					filteredClothing.map((item) => {
-						const isCollected = localCollectionState[item.id] === true;
-
-						return (
-							<Card
-								key={item.id}
-								className={`${isCollected ? "border-green-200 bg-green-50 dark:border-green-800 dark:bg-green-900/10" : ""}`}
-							>
-								<div className="flex h-full flex-col">
-									<div className="mb-2 flex items-start justify-between">
-										<h3 className="text-lg font-medium">{item.name}</h3>
-										<Badge color="purple">{item.type}</Badge>
-									</div>
-
-									<div className="flex items-center justify-center py-2">
-										{item.img && (
-											<div className="relative h-20 w-20">
-												<img
-													src={item.img}
-													alt={item.name}
-													className="h-full w-full object-contain"
-												/>
-												{isCollected && (
-													<div className="absolute -top-2 -right-2 rounded-full bg-green-500 p-1 text-white">
-														<HiCheck className="h-4 w-4" />
-													</div>
-												)}
-											</div>
-										)}
-									</div>
-
-									<div className="mt-2 flex-grow space-y-2 text-sm">
-										<div className="flex">
-											<p className="w-32 font-medium">Slot:</p>
-											<p>{item.slot.join(", ")}</p>
-										</div>
-
-										{item.set && (
-											<div className="flex">
-												<p className="w-32 font-medium">Set:</p>
-												<p>{item.set}</p>
-											</div>
-										)}
-
-										{item.displayPrice !== null && (
-											<div className="flex items-center">
-												<p className="w-32 font-medium">Price:</p>
-												<div className="flex items-center">
-													<img
-														src="https://static.wikia.nocookie.net/dinkum/images/4/42/Inv_Dinks.png"
-														alt="Dinks"
-														className="mr-1 h-4 w-4"
-													/>
-													<span>
-														{item.displayPrice.toLocaleString()}
-													</span>
-												</div>
-											</div>
-										)}
-
-										<div className="flex items-center">
-											<p className="w-32 font-medium">Sell Price:</p>
-											<div className="flex items-center">
-												<img
-													src="https://static.wikia.nocookie.net/dinkum/images/4/42/Inv_Dinks.png"
-													alt="Dinks"
-													className="mr-1 h-4 w-4"
-												/>
-												<span>
-													{item.baseSellPrice.toLocaleString()}
-												</span>
-											</div>
-										</div>
-
-										{item.cloversCatalogue && (
-											<div className="flex items-center">
-												<p className="w-32 font-medium">Available at:</p>
-												<span className="text-purple-600 dark:text-purple-400">
-													Clover&apos;s Shop
-												</span>
-											</div>
-										)}
-									</div>
-
-									<div className="mt-4 border-t border-gray-200 pt-4 dark:border-gray-700">
-										<div className="flex items-center">
-											<Checkbox
-												id={`collected-${item.id}`}
-												checked={isCollected}
-												onChange={(e) =>
-													handleToggleCollected(item.id, e.target.checked)
-												}
-												className="mr-2"
+											<DinkValue
+												label="Sell Price"
+												price={item.baseSellPrice}
+												showCommerceLicenses
 											/>
-											<Label
-												htmlFor={`collected-${item.id}`}
-												className="cursor-pointer"
-											>
-												Collected
-											</Label>
-										</div>
-									</div>
-								</div>
-							</Card>
-						);
-					})
-				)}
-			</div>
+
+											{item.cloversCatalogue && (
+												<ItemDetail
+													label="Available at"
+													details="Clover's Shop"
+												/>
+											)}
+										</>
+									)}
+									renderFooter={() => (
+										<ItemFooter
+											id={item.id}
+											leftLabel="Collected"
+											isLeftChecked={isCollected}
+											handleLeftToggle={handleToggleCollected}
+										/>
+									)}
+								/>
+							);
+						})
+					}
+				</div>
+			)}
+
+			{filteredData.length === 0 && <EmptyFilterCard />}
 		</div>
 	);
 });
