@@ -35,7 +35,7 @@ export default function RootLayout({
 				<ThemeModeScript />
 			</head>
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col bg-gray-100 antialiased`}
+				className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col bg-gray-100 dark:bg-gray-900 antialiased`}
 			>
 				<ThemeProvider theme={customTheme}>
 					<Header />

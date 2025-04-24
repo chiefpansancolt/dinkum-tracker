@@ -1,13 +1,11 @@
-import { Resource } from "./base";
+import { Base, Resource } from "./base";
+import { DeedTypes } from "@/data/constants";
 
-export type DeedType = "Collectable" | "Movable" | "Reference";
+export type DeedType = DeedTypes.Collectable | DeedTypes.Movable | DeedTypes.Reference;
 
-export interface Building {
-  id: string;
-  buildingName: string;
+export interface Building extends Base {
   deedName: string;
   size: string;
-  img: string;
   npc: string;
   npcImg: string;
   description: string;

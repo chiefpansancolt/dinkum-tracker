@@ -36,3 +36,9 @@ export const RARITY_LEVELS = [
   "Very Rare",
   "Super Rare",
 ] as const;
+
+export enum DeedTypes {
+  Collectable = "Collectable",
+  Movable = "Movable",
+  Reference = "Reference",
+};

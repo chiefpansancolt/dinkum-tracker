@@ -85,15 +85,11 @@ export interface BuffIcon {
   coolLevel2: string;
 }
 
-export interface PediaItem {
-  id: string;
-  name: string;
-  img: string;
+export interface PediaItem extends BaseResource {
   biome: Biome[];
   timeFound: TimePeriod[];
   seasons: Season[];
   rarity: RarityLevel;
-  basePrice: number;
 }
 
 export interface Base {

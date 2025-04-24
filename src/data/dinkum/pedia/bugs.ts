@@ -9,7 +9,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Day"],
     seasons: ["Summer", "Spring"],
     rarity: "Uncommon",
-    basePrice: 680,
+    baseSellPrice: 680,
   },
   {
     id: "birdwing_butterfly",
@@ -19,7 +19,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Morning"],
     seasons: ["Autumn"],
     rarity: "Super Rare",
-    basePrice: 9100,
+    baseSellPrice: 9100,
   },
   {
     id: "black_cricket",
@@ -29,7 +29,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Night"],
     seasons: ["All"],
     rarity: "Common",
-    basePrice: 980,
+    baseSellPrice: 980,
   },
   {
     id: "blue_moon_butterfly",
@@ -39,7 +39,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Morning", "Day"],
     seasons: ["All"],
     rarity: "Common",
-    basePrice: 290,
+    baseSellPrice: 290,
   },
   {
     id: "blue_tiger_butterfly",
@@ -49,7 +49,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["All"],
     seasons: ["All"],
     rarity: "Uncommon",
-    basePrice: 2300,
+    baseSellPrice: 2300,
   },
   {
     id: "bogong_moth",
@@ -59,7 +59,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Night"],
     seasons: ["All"],
     rarity: "Uncommon",
-    basePrice: 260,
+    baseSellPrice: 260,
   },
   {
     id: "centipede",
@@ -69,7 +69,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Night"],
     seasons: ["All"],
     rarity: "Very Rare",
-    basePrice: 2220,
+    baseSellPrice: 2220,
   },
   {
     id: "cicada",
@@ -79,7 +79,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Morning", "Day"],
     seasons: ["Summer", "Spring"],
     rarity: "Common",
-    basePrice: 3800,
+    baseSellPrice: 3800,
   },
   {
     id: "cockroach",
@@ -89,7 +89,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Night"],
     seasons: ["All"],
     rarity: "Common",
-    basePrice: 154,
+    baseSellPrice: 154,
   },
   {
     id: "common_blue_tail",
@@ -99,7 +99,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Morning", "Day"],
     seasons: ["Autumn", "Winter"],
     rarity: "Common",
-    basePrice: 772,
+    baseSellPrice: 772,
   },
   {
     id: "common_crow_butterfly",
@@ -109,7 +109,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["All"],
     seasons: ["All"],
     rarity: "Uncommon",
-    basePrice: 1980,
+    baseSellPrice: 1980,
   },
   {
     id: "cricket",
@@ -119,7 +119,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Night"],
     seasons: ["All"],
     rarity: "Uncommon",
-    basePrice: 1348,
+    baseSellPrice: 1348,
   },
   {
     id: "desert_scorpion",
@@ -129,7 +129,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["All"],
     seasons: ["Autumn", "Winter"],
     rarity: "Rare",
-    basePrice: 1212,
+    baseSellPrice: 1212,
   },
   {
     id: "duskhawker_dragonfly",
@@ -139,7 +139,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Morning", "Day"],
     seasons: ["Autumn", "Spring"],
     rarity: "Rare",
-    basePrice: 2350,
+    baseSellPrice: 2350,
   },
   {
     id: "emperor_dragonfly",
@@ -149,7 +149,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Day"],
     seasons: ["Spring"],
     rarity: "Super Rare",
-    basePrice: 4172,
+    baseSellPrice: 4172,
   },
   {
     id: "fiddler_beetle",
@@ -159,7 +159,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Morning"],
     seasons: ["Autumn", "Winter"],
     rarity: "Rare",
-    basePrice: 2400,
+    baseSellPrice: 2400,
   },
   {
     id: "firefly",
@@ -169,7 +169,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Night"],
     seasons: ["All"],
     rarity: "Uncommon",
-    basePrice: 860,
+    baseSellPrice: 860,
   },
   {
     id: "fly",
@@ -179,7 +179,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Morning", "Day"],
     seasons: ["All"],
     rarity: "Common",
-    basePrice: 72,
+    baseSellPrice: 72,
   },
   {
     id: "funnel_web_spider",
@@ -189,7 +189,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Day", "Night"],
     seasons: ["Summer", "Spring"],
     rarity: "Uncommon",
-    basePrice: 1020,
+    baseSellPrice: 1020,
   },
   {
     id: "glow_bug",
@@ -199,7 +199,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["All"],
     seasons: ["All"],
     rarity: "Uncommon",
-    basePrice: 2580,
+    baseSellPrice: 2580,
   },
   {
     id: "goliath_stick",
@@ -209,7 +209,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Morning"],
     seasons: ["Winter"],
     rarity: "Very Rare",
-    basePrice: 6330,
+    baseSellPrice: 6330,
   },
   {
     id: "grass_yellow_butterfly",
@@ -219,7 +219,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Morning", "Day"],
     seasons: ["All"],
     rarity: "Common",
-    basePrice: 220,
+    baseSellPrice: 220,
   },
   {
     id: "grasshopper",
@@ -229,7 +229,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Day"],
     seasons: ["Spring"],
     rarity: "Uncommon",
-    basePrice: 1700,
+    baseSellPrice: 1700,
   },
   {
     id: "gumleaf_grasshopper",
@@ -239,7 +239,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Morning", "Day"],
     seasons: ["Summer", "Autumn", "Winter"],
     rarity: "Uncommon",
-    basePrice: 3400,
+    baseSellPrice: 3400,
   },
   {
     id: "harlequin_butterfly",
@@ -249,7 +249,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Morning", "Day"],
     seasons: ["All"],
     rarity: "Rare",
-    basePrice: 2121,
+    baseSellPrice: 2121,
   },
   {
     id: "hercules_moth",
@@ -259,7 +259,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Night"],
     seasons: ["Winter", "Spring"],
     rarity: "Super Rare",
-    basePrice: 3000,
+    baseSellPrice: 3000,
   },
   {
     id: "huntsman",
@@ -269,7 +269,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Day", "Night"],
     seasons: ["Autumn", "Winter"],
     rarity: "Super Rare",
-    basePrice: 3552,
+    baseSellPrice: 3552,
   },
   {
     id: "lacewing",
@@ -279,7 +279,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Day"],
     seasons: ["Summer", "Spring"],
     rarity: "Rare",
-    basePrice: 1680,
+    baseSellPrice: 1680,
   },
   {
     id: "ladybird",
@@ -289,7 +289,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Morning"],
     seasons: ["Spring"],
     rarity: "Rare",
-    basePrice: 1900,
+    baseSellPrice: 1900,
   },
   {
     id: "largidae",
@@ -299,7 +299,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Day"],
     seasons: ["All"],
     rarity: "Uncommon",
-    basePrice: 780,
+    baseSellPrice: 780,
   },
   {
     id: "meadow_katydid",
@@ -309,7 +309,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Morning", "Day"],
     seasons: ["Autumn", "Spring"],
     rarity: "Common",
-    basePrice: 900,
+    baseSellPrice: 900,
   },
   {
     id: "monarch_butterfly",
@@ -319,7 +319,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Morning", "Day"],
     seasons: ["Spring"],
     rarity: "Rare",
-    basePrice: 3860,
+    baseSellPrice: 3860,
   },
   {
     id: "painted_lady_butterfly",
@@ -329,7 +329,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Morning", "Day"],
     seasons: ["Summer", "Spring"],
     rarity: "Uncommon",
-    basePrice: 560,
+    baseSellPrice: 560,
   },
   {
     id: "paper_wasp",
@@ -339,7 +339,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Day"],
     seasons: ["Autumn"],
     rarity: "Rare",
-    basePrice: 990,
+    baseSellPrice: 990,
   },
   {
     id: "peacock_spider",
@@ -349,7 +349,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Morning"],
     seasons: ["All"],
     rarity: "Very Rare",
-    basePrice: 1792,
+    baseSellPrice: 1792,
   },
   {
     id: "purple_azure_butterfly",
@@ -359,7 +359,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Morning", "Day"],
     seasons: ["Summer", "Autumn", "Spring"],
     rarity: "Rare",
-    basePrice: 2200,
+    baseSellPrice: 2200,
   },
   {
     id: "purple_winged_mantis",
@@ -369,7 +369,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Night"],
     seasons: ["All"],
     rarity: "Super Rare",
-    basePrice: 6330,
+    baseSellPrice: 6330,
   },
   {
     id: "pygmyfly",
@@ -379,7 +379,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Day"],
     seasons: ["All"],
     rarity: "Rare",
-    basePrice: 1672,
+    baseSellPrice: 1672,
   },
   {
     id: "queen_bee",
@@ -389,7 +389,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Morning"],
     seasons: ["Summer", "Spring"],
     rarity: "Very Rare",
-    basePrice: 2300,
+    baseSellPrice: 2300,
   },
   {
     id: "redback_spider",
@@ -399,7 +399,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Day", "Night"],
     seasons: ["Summer", "Autumn", "Spring"],
     rarity: "Rare",
-    basePrice: 1552,
+    baseSellPrice: 1552,
   },
   {
     id: "rhinoceros_beetle",
@@ -409,7 +409,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Morning"],
     seasons: ["Autumn", "Winter"],
     rarity: "Very Rare",
-    basePrice: 1930,
+    baseSellPrice: 1930,
   },
   {
     id: "scarlet_jezebel_butterfly",
@@ -419,7 +419,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Day"],
     seasons: ["All"],
     rarity: "Common",
-    basePrice: 790,
+    baseSellPrice: 790,
   },
   {
     id: "stag_beetle",
@@ -429,7 +429,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Day"],
     seasons: ["Spring"],
     rarity: "Super Rare",
-    basePrice: 4100,
+    baseSellPrice: 4100,
   },
   {
     id: "stinkbug",
@@ -439,7 +439,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["All"],
     seasons: ["Autumn"],
     rarity: "Common",
-    basePrice: 300,
+    baseSellPrice: 300,
   },
   {
     id: "swallow_tail_butterfly",
@@ -449,7 +449,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Day"],
     seasons: ["Summer", "Autumn"],
     rarity: "Uncommon",
-    basePrice: 990,
+    baseSellPrice: 990,
   },
   {
     id: "tau_emerald_dragonfly",
@@ -459,7 +459,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Day"],
     seasons: ["Summer", "Autumn"],
     rarity: "Rare",
-    basePrice: 2010,
+    baseSellPrice: 2010,
   },
   {
     id: "tiger_beetle",
@@ -469,7 +469,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Night"],
     seasons: ["Autumn", "Spring"],
     rarity: "Rare",
-    basePrice: 2400,
+    baseSellPrice: 2400,
   },
   {
     id: "tiger_moth",
@@ -479,7 +479,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Night"],
     seasons: ["Autumn", "Winter"],
     rarity: "Rare",
-    basePrice: 1360,
+    baseSellPrice: 1360,
   },
   {
     id: "trogid",
@@ -489,7 +489,7 @@ export const bugs: PediaItem[] = [
     timeFound: ["Night"],
     seasons: ["Autumn", "Spring"],
     rarity: "Rare",
-    basePrice: 1400,
+    baseSellPrice: 1400,
   },
   {
     id: "ulysses_butterfly",
@@ -499,6 +499,6 @@ export const bugs: PediaItem[] = [
     timeFound: ["Morning", "Day"],
     seasons: ["Summer", "Spring"],
     rarity: "Uncommon",
-    basePrice: 660,
+    baseSellPrice: 660,
   },
 ];

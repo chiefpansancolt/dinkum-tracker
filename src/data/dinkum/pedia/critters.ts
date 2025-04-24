@@ -9,7 +9,7 @@ export const critters: PediaItem[] = [
     timeFound: ["All"],
     seasons: ["All"],
     rarity: "Rare",
-    basePrice: 4540,
+    baseSellPrice: 4540,
   },
   {
     id: "biscuit_sea_star",
@@ -19,7 +19,7 @@ export const critters: PediaItem[] = [
     timeFound: ["All"],
     seasons: ["All"],
     rarity: "Common",
-    basePrice: 1200,
+    baseSellPrice: 1200,
   },
   {
     id: "black_sea_cucumber",
@@ -29,7 +29,7 @@ export const critters: PediaItem[] = [
     timeFound: ["All"],
     seasons: ["Autumn", "Winter"],
     rarity: "Super Rare",
-    basePrice: 12540,
+    baseSellPrice: 12540,
   },
   {
     id: "blue_mussel",
@@ -39,7 +39,7 @@ export const critters: PediaItem[] = [
     timeFound: ["All"],
     seasons: ["All"],
     rarity: "Common",
-    basePrice: 799,
+    baseSellPrice: 799,
   },
   {
     id: "blue_sea_slug",
@@ -49,7 +49,7 @@ export const critters: PediaItem[] = [
     timeFound: ["Night"],
     seasons: ["Winter"],
     rarity: "Super Rare",
-    basePrice: 50160,
+    baseSellPrice: 50160,
   },
   {
     id: "blue_ringed_octopus",
@@ -59,7 +59,7 @@ export const critters: PediaItem[] = [
     timeFound: ["All"],
     seasons: ["Summer", "Winter"],
     rarity: "Very Rare",
-    basePrice: 7400,
+    baseSellPrice: 7400,
   },
   {
     id: "cushion_sea_star",
@@ -69,7 +69,7 @@ export const critters: PediaItem[] = [
     timeFound: ["All"],
     seasons: ["Spring"],
     rarity: "Uncommon",
-    basePrice: 2540,
+    baseSellPrice: 2540,
   },
   {
     id: "eleven_armed_sea_star",
@@ -79,7 +79,7 @@ export const critters: PediaItem[] = [
     timeFound: ["Morning"],
     seasons: ["All"],
     rarity: "Very Rare",
-    basePrice: 8540,
+    baseSellPrice: 8540,
   },
   {
     id: "fresh_water_mussel",
@@ -89,7 +89,7 @@ export const critters: PediaItem[] = [
     timeFound: ["All"],
     seasons: ["All"],
     rarity: "Common",
-    basePrice: 800,
+    baseSellPrice: 800,
   },
   {
     id: "fresh_water_prawn",
@@ -99,7 +99,7 @@ export const critters: PediaItem[] = [
     timeFound: ["All"],
     seasons: ["All"],
     rarity: "Very Rare",
-    basePrice: 1540,
+    baseSellPrice: 1540,
   },
   {
     id: "inland_crab",
@@ -109,7 +109,7 @@ export const critters: PediaItem[] = [
     timeFound: ["All"],
     seasons: ["All"],
     rarity: "Uncommon",
-    basePrice: 740,
+    baseSellPrice: 740,
   },
   {
     id: "king_prawn",
@@ -119,7 +119,7 @@ export const critters: PediaItem[] = [
     timeFound: ["All"],
     seasons: ["All"],
     rarity: "Very Rare",
-    basePrice: 3540,
+    baseSellPrice: 3540,
   },
   {
     id: "mud_crab",
@@ -129,7 +129,7 @@ export const critters: PediaItem[] = [
     timeFound: ["All"],
     seasons: ["Summer", "Autumn"],
     rarity: "Very Rare",
-    basePrice: 4540,
+    baseSellPrice: 4540,
   },
   {
     id: "nudibranch",
@@ -139,7 +139,7 @@ export const critters: PediaItem[] = [
     timeFound: ["Night"],
     seasons: ["Winter", "Autumn"],
     rarity: "Super Rare",
-    basePrice: 17540,
+    baseSellPrice: 17540,
   },
   {
     id: "pink_sea_urchin",
@@ -149,7 +149,7 @@ export const critters: PediaItem[] = [
     timeFound: ["All"],
     seasons: ["All"],
     rarity: "Rare",
-    basePrice: 1540,
+    baseSellPrice: 1540,
   },
   {
     id: "purple_mottled_crab",
@@ -159,7 +159,7 @@ export const critters: PediaItem[] = [
     timeFound: ["All"],
     seasons: ["Summer"],
     rarity: "Common",
-    basePrice: 440,
+    baseSellPrice: 440,
   },
   {
     id: "purple_sea_urchin",
@@ -169,7 +169,7 @@ export const critters: PediaItem[] = [
     timeFound: ["All"],
     seasons: ["Spring"],
     rarity: "Very Rare",
-    basePrice: 8040,
+    baseSellPrice: 8040,
   },
   {
     id: "rock_oyster",
@@ -179,7 +179,7 @@ export const critters: PediaItem[] = [
     timeFound: ["All"],
     seasons: ["Summer", "Spring"],
     rarity: "Very Rare",
-    basePrice: 12784,
+    baseSellPrice: 12784,
   },
   {
     id: "sea_sponge",
@@ -189,7 +189,7 @@ export const critters: PediaItem[] = [
     timeFound: ["All"],
     seasons: ["All"],
     rarity: "Common",
-    basePrice: 200,
+    baseSellPrice: 200,
   },
   {
     id: "seahorse",
@@ -199,7 +199,7 @@ export const critters: PediaItem[] = [
     timeFound: ["All"],
     seasons: ["All"],
     rarity: "Very Rare",
-    basePrice: 3540,
+    baseSellPrice: 3540,
   },
   {
     id: "spiny_sea_urchin",
@@ -209,7 +209,7 @@ export const critters: PediaItem[] = [
     timeFound: ["All"],
     seasons: ["All"],
     rarity: "Uncommon",
-    basePrice: 640,
+    baseSellPrice: 640,
   },
   {
     id: "tiger_prawn",
@@ -219,7 +219,7 @@ export const critters: PediaItem[] = [
     timeFound: ["All"],
     seasons: ["All"],
     rarity: "Common",
-    basePrice: 1540,
+    baseSellPrice: 1540,
   },
   {
     id: "tritons_trumpet",
@@ -229,7 +229,7 @@ export const critters: PediaItem[] = [
     timeFound: ["All"],
     seasons: ["All"],
     rarity: "Rare",
-    basePrice: 1300,
+    baseSellPrice: 1300,
   },
   {
     id: "white_yabbie",
@@ -239,7 +239,7 @@ export const critters: PediaItem[] = [
     timeFound: ["All"],
     seasons: ["All"],
     rarity: "Common",
-    basePrice: 980,
+    baseSellPrice: 980,
   },
   {
     id: "yabbie",
@@ -249,6 +249,6 @@ export const critters: PediaItem[] = [
     timeFound: ["All"],
     seasons: ["All"],
     rarity: "Rare",
-    basePrice: 1899,
+    baseSellPrice: 1899,
   },
 ];
