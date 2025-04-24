@@ -1,71 +1,137 @@
 "use client";
 
 import { useMemo, useState, useEffect, forwardRef, useImperativeHandle } from "react";
-import { Select, Card, Label } from "flowbite-react";
-import CollectionItem from "@/playthrough/pedia/CollectionItem";
 import { critters } from "@/data/dinkum/pedia/critters";
 import { TIME_PERIODS, SEASONS } from "@/data/constants";
-import { Biome, Season, TimePeriod } from "@/types/dinkum";
-import { PediaTabHandle, PediaTabProps } from "@/types/dinkum/ui";
+import { Biome, Season, TimePeriod, PediaTabHandle, PediaTabProps } from "@/types";
+import { getHashQueryParams, setHashQueryParam } from "@/service/urlService";
+import CollectionItem from "@/playthrough/pedia/CollectionItem";
+import FilterBar from "@/playthrough/ui/FilterBar";
+import FilterDetails from "@/playthrough/ui/FilterDetails";
+import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
 
 const CrittersTab = forwardRef<PediaTabHandle, PediaTabProps>(
 	({ collected, donated, onCollectedChange, onDonatedChange }, ref) => {
-		const [biomeFilter, setBiomeFilter] = useState<string>("All");
-		const [rarityFilter, setRarityFilter] = useState<string>("All");
-		const [seasonFilter, setSeasonFilter] = useState<string>("All");
-		const [timeFilter, setTimeFilter] = useState<string>("All");
-
 		const [collectedState, setCollectedState] = useState<string[]>(collected);
 		const [donatedState, setDonatedState] = useState<string[]>(donated);
+		const [searchQuery, setSearchQuery] = useState("");
+
+		const [filters, setFilters] = useState<{
+			biome: { value: string; options: string[]; label: string };
+			rarity: { value: string; options: string[]; label: string };
+			season: { value: string; options: string[]; label: string };
+			time: { value: string; options: string[]; label: string };
+		}>({
+			biome: {
+				value: "All",
+				options: [],
+				label: "Biome",
+			},
+			rarity: {
+				value: "All",
+				options: [],
+				label: "Rarity",
+			},
+			season: {
+				value: "All",
+				options: Object.values(SEASONS),
+				label: "Season",
+			},
+			time: {
+				value: "All",
+				options: Object.values(TIME_PERIODS),
+				label: "Time",
+			},
+		});
 
 		useEffect(() => {
-			setCollectedState(collected);
-			setDonatedState(donated);
-		}, [collected, donated]);
-
-		const uniqueBiomes = useMemo(() => {
 			const biomes = new Set<string>();
 			critters.forEach((item) => {
 				item.biome.forEach((b) => biomes.add(b));
 			});
-			return ["All", ...Array.from(biomes)].sort();
-		}, []);
+			const biomeOptions = ["All", ...Array.from(biomes)].sort();
 
-		const uniqueRarities = useMemo(() => {
 			const rarities = new Set<string>();
 			critters.forEach((item) => rarities.add(item.rarity));
-			return ["All", ...Array.from(rarities)].sort();
+			const rarityOptions = ["All", ...Array.from(rarities)].sort();
+
+			setFilters((prev) => ({
+				...prev,
+				biome: {
+					...prev.biome,
+					options: biomeOptions,
+				},
+				rarity: {
+					...prev.rarity,
+					options: rarityOptions,
+				},
+			}));
 		}, []);
+
+		useEffect(() => {
+			setCollectedState(collected);
+			setDonatedState(donated);
+
+			const hashParams = getHashQueryParams();
+			if (hashParams.q) {
+				setSearchQuery(hashParams.q);
+			}
+		}, [collected, donated]);
+
+		useEffect(() => {
+			if (searchQuery) {
+				setHashQueryParam("q", searchQuery);
+			} else {
+				setHashQueryParam("q", "");
+			}
+		}, [searchQuery]);
+
+		const handleFilterChange = (name: string, value: string) => {
+			setFilters((prev) => ({
+				...prev,
+				[name]: {
+					...prev[name],
+					value,
+				},
+			}));
+		};
 
 		const filteredItems = useMemo(() => {
 			return critters.filter((item) => {
-				if (biomeFilter !== "All" && !item.biome.includes(biomeFilter as Biome)) {
+				if (
+					filters.biome.value !== "All" &&
+					!item.biome.includes(filters.biome.value as Biome)
+				) {
 					return false;
 				}
 
-				if (rarityFilter !== "All" && item.rarity !== rarityFilter) {
+				if (filters.rarity.value !== "All" && item.rarity !== filters.rarity.value) {
 					return false;
 				}
 
 				if (
-					seasonFilter !== "All" &&
-					!item.seasons.includes(seasonFilter as Season) &&
+					filters.season.value !== "All" &&
+					!item.seasons.includes(filters.season.value as Season) &&
 					!item.seasons.includes("All" as Season)
 				) {
 					return false;
 				}
 
 				if (
-					timeFilter !== "All" &&
-					!item.timeFound.includes(timeFilter as TimePeriod) &&
+					filters.time.value !== "All" &&
+					!item.timeFound.includes(filters.time.value as TimePeriod) &&
 					!item.timeFound.includes("All")
 				) {
 					return false;
 				}
 
+				if (searchQuery && !item.name.toLowerCase().includes(searchQuery.toLowerCase())) {
+					return false;
+				}
+
 				return true;
 			});
-		}, [biomeFilter, rarityFilter, seasonFilter, timeFilter]);
+		}, [filters, searchQuery]);
 
 		const handleCollectedChange = (id: string, isCollected: boolean) => {
 			setCollectedState((prev) => {
@@ -113,85 +179,27 @@ const CrittersTab = forwardRef<PediaTabHandle, PediaTabProps>(
 
 		return (
 			<div className="space-y-6">
-				<div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
-					<div>
-						<div className="mb-2 block">
-							<Label htmlFor="biome-filter">Biome</Label>
-						</div>
-						<Select
-							id="biome-filter"
-							value={biomeFilter}
-							onChange={(e) => setBiomeFilter(e.target.value)}
-						>
-							{uniqueBiomes.map((biome) => (
-								<option key={biome} value={biome}>
-									{biome}
-								</option>
-							))}
-						</Select>
-					</div>
+				<FilterBar
+					showFilters={true}
+					filters={filters}
+					onFilterChange={handleFilterChange}
+					showSearch={true}
+					searchValue={searchQuery}
+					onSearchChange={setSearchQuery}
+					searchPlaceholder="Search critters by name..."
+				/>
 
-					<div>
-						<div className="mb-2 block">
-							<Label htmlFor="rarity-filter">Rarity</Label>
-						</div>
-						<Select
-							id="rarity-filter"
-							value={rarityFilter}
-							onChange={(e) => setRarityFilter(e.target.value)}
-						>
-							<option value="All">All</option>
-							{uniqueRarities.map((rarity) => (
-								<option key={rarity} value={rarity}>
-									{rarity}
-								</option>
-							))}
-						</Select>
-					</div>
+				<FilterDetails
+					title="critters"
+					filteredCount={filteredItems.length}
+					totalCount={critters.length}
+					collectedLabel="Captured"
+					collectedCount={collectedState.length}
+					donatedLabel="Donated"
+					donatedCount={donatedState.length}
+				/>
 
-					<div>
-						<div className="mb-2 block">
-							<Label htmlFor="season-filter">Season</Label>
-						</div>
-						<Select
-							id="season-filter"
-							value={seasonFilter}
-							onChange={(e) => setSeasonFilter(e.target.value)}
-						>
-							{Object.values(SEASONS).map((season) => (
-								<option key={season} value={season}>
-									{season}
-								</option>
-							))}
-						</Select>
-					</div>
-
-					<div>
-						<div className="mb-2 block">
-							<Label htmlFor="time-filter">Time</Label>
-						</div>
-						<Select
-							id="time-filter"
-							value={timeFilter}
-							onChange={(e) => setTimeFilter(e.target.value)}
-						>
-							{Object.values(TIME_PERIODS).map((time) => (
-								<option key={time} value={time}>
-									{time}
-								</option>
-							))}
-						</Select>
-					</div>
-				</div>
-
-				<div className="mb-4">
-					<p className="text-primary font-medium">
-						Showing {filteredItems.length} of {critters.length} critters • Collected:{" "}
-						{collectedState.length} • Donated: {donatedState.length}
-					</p>
-				</div>
-
-				<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+				<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 					{filteredItems.map((item) => (
 						<CollectionItem
 							key={item.id}
@@ -204,13 +212,7 @@ const CrittersTab = forwardRef<PediaTabHandle, PediaTabProps>(
 					))}
 				</div>
 
-				{filteredItems.length === 0 && (
-					<Card className="py-8 text-center">
-						<p className="text-gray-500 dark:text-gray-400">
-							No items match your filter criteria. Try adjusting your filters.
-						</p>
-					</Card>
-				)}
+				{filteredItems.length === 0 && <EmptyFilterCard />}
 			</div>
 		);
 	}

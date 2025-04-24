@@ -10,7 +10,7 @@ export default function DayDetails({ day }: DayDetailsProps) {
 	return (
 		<Card className={`${seasonStyles.cardBg}`}>
 			<div className="flex items-center justify-between">
-				<h2 className="flex items-center gap-2 text-xl font-bold">
+				<h2 className="flex items-center gap-2 text-xl font-bold text-gray-900 dark:text-gray-50">
 					{getSeasonEmoji(day.season)} {day.weekday}, {day.day} {day.season}
 				</h2>
 				<Badge
@@ -40,7 +40,9 @@ export default function DayDetails({ day }: DayDetailsProps) {
 								>
 									<span className="text-xl">{event.emoji}</span>
 									<div>
-										<div className="font-medium">{event.name}</div>
+										<div className="font-medium text-gray-900 dark:text-gray-50">
+											{event.name}
+										</div>
 										{event.startDay !== event.endDay && (
 											<div className="text-sm text-gray-600 dark:text-gray-400">
 												Days {event.startDay}-{event.endDay} of {day.season}
@@ -66,7 +68,7 @@ export default function DayDetails({ day }: DayDetailsProps) {
 								>
 									<span className="text-xl">🎂</span>
 									<div>
-										<div className="font-medium">
+										<div className="font-medium text-gray-900 dark:text-gray-50">
 											{birthday.character}&apos;s Birthday
 										</div>
 										<div className="text-sm text-gray-600 dark:text-gray-400">

@@ -1,29 +1,49 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
-import React, { useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
+import { useMemo, useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
 import { useParams } from "next/navigation";
-import { Card, Checkbox, Label, Badge } from "flowbite-react";
 import { books } from "@/data/dinkum";
 import { TabHandle, CollectTabProps } from "@/types";
 import { updatePlaythroughData } from "@/lib/localStorage";
-import { HiCheck } from "react-icons/hi";
-import SaveAlert from "@/comps/SaveAlert";
+import { getHashQueryParams, setHashQueryParam } from "@/service/urlService";
+import TabHeader from "@/playthrough/ui/TabHeader";
+import FilterBar from "@/playthrough/ui/FilterBar";
+import FilterDetails from "@/playthrough/ui/FilterDetails";
+import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
+import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
+import DinkValue from "@/playthrough/ui/itemcard/DinkValue";
+import ItemFooter from "@/playthrough/ui/itemcard/ItemFooter";
+import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
+import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
 
 const BooksTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) => {
 	const params = useParams();
 	const playthroughId = typeof params.id === "string" ? params.id : "";
-	const [localBooksState, setLocalBooksState] = useState<Record<string, boolean>>(collected);
+	const [searchQuery, setSearchQuery] = useState("");
+	const [localState, setLocalState] = useState<Record<string, boolean>>(collected);
 
 	const isDirty = useRef(false);
 
 	useEffect(() => {
-		setLocalBooksState(collected);
+		setLocalState(collected);
 		isDirty.current = false;
+
+		const hashParams = getHashQueryParams();
+		if (hashParams.q) {
+			setSearchQuery(hashParams.q);
+		}
 	}, [collected]);
 
+	useEffect(() => {
+		if (searchQuery) {
+			setHashQueryParam("q", searchQuery);
+		} else {
+			setHashQueryParam("q", "");
+		}
+	}, [searchQuery]);
+
 	const handleToggleCollected = (id: string, isCollected: boolean) => {
-		setLocalBooksState((prev) => ({
+		setLocalState((prev) => ({
 			...prev,
 			[id]: isCollected,
 		}));
@@ -31,158 +51,130 @@ const BooksTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) => 
 		isDirty.current = true;
 	};
 
-	const save = () => {
-		if (!playthroughId || !isDirty.current) return false;
-
-		const success = updatePlaythroughData(playthroughId, {
-			books: localBooksState,
-		});
-
-		if (success) {
-			isDirty.current = false;
-			return true;
-		}
-
-		return false;
-	};
-
 	useImperativeHandle(ref, () => ({
-		save,
+		save: () => {
+			if (!playthroughId || !isDirty.current) return false;
+
+			const success = updatePlaythroughData(playthroughId, {
+				books: localState,
+			});
+
+			if (success) {
+				isDirty.current = false;
+				return true;
+			}
+
+			return false;
+		},
 	}));
 
+	const filteredData = useMemo(() => {
+		return books.filter((item) => {
+			if (searchQuery && !item.name.toLowerCase().includes(searchQuery.toLowerCase())) {
+				return false;
+			}
+
+			return true;
+		});
+	}, [searchQuery]);
+
 	const getCollectedCount = () => {
-		return Object.keys(localBooksState).filter((key) => localBooksState[key]).length;
+		return Object.keys(localState).filter((key) => localState[key]).length;
 	};
 
 	return (
 		<div className="space-y-6">
-			<div>
-				<div className="mb-2 flex items-center justify-between">
-					<h1 className="text-primary text-2xl font-bold">
-						Books ({getCollectedCount()} / {books.length})
-					</h1>
-					<Badge color="blue" size="lg">
-						{Math.round((getCollectedCount() / books.length) * 100)}% collected
-					</Badge>
-				</div>
+			<TabHeader
+				title="Books"
+				collectionName="Collected"
+				enableCollectionCount={true}
+				enableSaveAlert={true}
+				isDirty={isDirty.current}
+				collectedCount={getCollectedCount()}
+				collectionTotal={books.length}
+				dirtyMessage="Your book collection has not been saved yet."
+			/>
 
-				{isDirty.current && (
-					<SaveAlert message="Your book collection has not been saved yet." />
-				)}
-			</div>
+			<FilterBar
+				showFilters={false}
+				showSearch={true}
+				searchValue={searchQuery}
+				onSearchChange={(value) => setSearchQuery(value)}
+			/>
 
-			<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-				{books.map((book) => {
-					const isCollected = localBooksState[book.id] === true;
+			<FilterDetails
+				title="books"
+				filteredCount={filteredData.length}
+				totalCount={books.length}
+				collectedLabel="Collected"
+				collectedCount={getCollectedCount()}
+			/>
+
+			<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+				{filteredData.map((item) => {
+					const isCollected = localState[item.id] === true;
 
 					return (
-						<Card
-							key={book.id}
-							className={`h-full ${
-								isCollected
-									? "border-green-200 bg-green-50 dark:border-green-800 dark:bg-green-900/10"
-									: ""
-							}`}
-						>
-							<div className="flex h-full flex-col">
-								<div className="mb-2 flex items-start justify-between">
-									<h3 className="text-lg font-medium">{book.name}</h3>
-									{isCollected && (
-										<div className="rounded-full bg-green-500 p-1 text-white">
-											<HiCheck className="h-4 w-4" />
-										</div>
-									)}
-								</div>
-
-								<div className="flex items-center justify-center py-4">
-									{book.img && (
-										<div className="relative h-24 w-24">
-											<img
-												src={book.img}
-												alt={book.name}
-												className="h-full w-full object-contain"
-											/>
-										</div>
-									)}
-								</div>
-
-								<div className="mt-2 flex-grow space-y-4 text-sm">
-									{book.details.map((detail, index) => (
+						<ItemCard
+							key={item.id}
+							renderHeader={() => <ItemHeader title={item.name} />}
+							renderImage={() => (
+								<ItemImage src={item.img} name={item.name} isCollected />
+							)}
+							renderDetails={() => (
+								<>
+									{item.details.map((detail, index) => (
 										<div
 											key={index}
-											className="rounded-lg bg-gray-50 p-3 dark:bg-gray-800"
+											className="grid grid-cols-12 gap-1.5 rounded-lg bg-gray-50 p-3 dark:bg-gray-800"
 										>
-											<div className="mb-2 flex">
-												<p className="w-32 font-medium">Acquired From:</p>
-												<p>{detail.aquiredFrom}</p>
+											<div className="col-span-12">
+												<ItemDetail
+													label="Aquired From"
+													details={detail.aquiredFrom}
+												/>
 											</div>
 
-											{detail.requirements && (
-												<div className="mb-2 flex">
-													<p className="w-32 font-medium">
-														Requirements:
-													</p>
-													<p>{detail.requirements}</p>
+											<div className="col-span-12">
+												<ItemDetail
+													label="Requirements"
+													details={detail.requirements}
+												/>
+											</div>
+
+											{detail.buyingPrice > 0 && (
+												<div className="col-span-6">
+													<DinkValue
+														label="Buy Price"
+														price={detail.buyingPrice}
+													/>
 												</div>
 											)}
 
-											<div className="grid grid-cols-2 gap-2">
-												{detail.buyingPrice > 0 && (
-													<div className="flex items-center">
-														<p className="mr-2 font-medium">Buy:</p>
-														<div className="flex items-center">
-															<img
-																src="https://static.wikia.nocookie.net/dinkum/images/4/42/Inv_Dinks.png"
-																alt="Dinks"
-																className="mr-1 h-4 w-4"
-															/>
-															<span>
-																{detail.buyingPrice.toLocaleString()}
-															</span>
-														</div>
-													</div>
-												)}
-
-												{detail.sellingPrice > 0 && (
-													<div className="flex items-center">
-														<p className="mr-2 font-medium">Sell:</p>
-														<div className="flex items-center">
-															<img
-																src="https://static.wikia.nocookie.net/dinkum/images/4/42/Inv_Dinks.png"
-																alt="Dinks"
-																className="mr-1 h-4 w-4"
-															/>
-															<span>
-																{detail.sellingPrice.toLocaleString()}
-															</span>
-														</div>
-													</div>
-												)}
-											</div>
+											{detail.sellingPrice > 0 && (
+												<div className="col-span-6">
+													<DinkValue
+														label="Sell Price"
+														price={detail.sellingPrice}
+														showCommerceLicenses
+													/>
+												</div>
+											)}
 										</div>
 									))}
-								</div>
-
-								<div className="mt-4 border-t border-gray-200 pt-4 dark:border-gray-700">
-									<div className="flex items-center">
-										<Checkbox
-											id={`collected-${book.id}`}
-											checked={isCollected}
-											onChange={(e) =>
-												handleToggleCollected(book.id, e.target.checked)
-											}
-											className="mr-2"
-										/>
-										<Label
-											htmlFor={`collected-${book.id}`}
-											className="cursor-pointer"
-										>
-											Collected
-										</Label>
-									</div>
-								</div>
-							</div>
-						</Card>
+								</>
+							)}
+							renderFooter={() => (
+								<ItemFooter
+									id={item.id}
+									leftLabel="Collected"
+									isLeftChecked={isCollected}
+									handleLeftToggle={(id, checked) =>
+										handleToggleCollected(id, checked)
+									}
+								/>
+							)}
+						/>
 					);
 				})}
 			</div>

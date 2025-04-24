@@ -2,12 +2,8 @@
 
 import { useRef, useState, useEffect, useImperativeHandle, forwardRef } from "react";
 import { useParams } from "next/navigation";
-import FishTab from "@/playthrough/pedia/FishTab";
-import BugsTab from "@/playthrough/pedia/BugsTab";
-import CrittersTab from "@/playthrough/pedia/CrittersTab";
 import { fish, bugs, critters } from "@/data/dinkum";
 import { updatePlaythroughData } from "@/lib/localStorage";
-import SaveAlert from "@/comps/SaveAlert";
 import {
 	Collection,
 	CollectionType,
@@ -15,6 +11,10 @@ import {
 	PediaTabHandle,
 	CollectionsTabProps,
 } from "@/types";
+import TabHeader from "@/playthrough/ui/TabHeader";
+import FishTab from "@/playthrough/pedia/FishTab";
+import BugsTab from "@/playthrough/pedia/BugsTab";
+import CrittersTab from "@/playthrough/pedia/CrittersTab";
 
 const CollectionsTab = forwardRef<TabHandle, CollectionsTabProps>(
 	({ collections, donations, activeCollectionType }, ref) => {
@@ -41,55 +41,53 @@ const CollectionsTab = forwardRef<TabHandle, CollectionsTabProps>(
 			setLocalDonations(donations);
 		}, [activeCollectionType, collections, donations]);
 
-		const save = () => {
-			if (!playthroughId || !isDirty.current) return false;
-
-			let status = false;
-			if (activeCollectionType === "fish" && fishTabRef.current) {
-				const fishState = fishTabRef.current.save();
-				status = updatePlaythroughData(playthroughId, {
-					collections: {
-						[activeCollectionType]: fishState.collected,
-					} as Partial<Collection>,
-					donations: {
-						[activeCollectionType]: fishState.donated,
-					} as Partial<Collection>,
-				});
-			}
-
-			if (activeCollectionType === "bugs" && bugsTabRef.current) {
-				const bugsState = bugsTabRef.current.save();
-				status = updatePlaythroughData(playthroughId, {
-					collections: {
-						[activeCollectionType]: bugsState.collected,
-					} as Partial<Collection>,
-					donations: {
-						[activeCollectionType]: bugsState.donated,
-					} as Partial<Collection>,
-				});
-			}
-
-			if (activeCollectionType === "critters" && crittersTabRef.current) {
-				const crittersState = crittersTabRef.current.save();
-				status = updatePlaythroughData(playthroughId, {
-					collections: {
-						[activeCollectionType]: crittersState.collected,
-					} as Partial<Collection>,
-					donations: {
-						[activeCollectionType]: crittersState.donated,
-					} as Partial<Collection>,
-				});
-			}
-
-			if (status) {
-				isDirty.current = false;
-			}
-
-			return status;
-		};
-
 		useImperativeHandle(ref, () => ({
-			save,
+			save: () => {
+				if (!playthroughId || !isDirty.current) return false;
+
+				let status = false;
+				if (activeCollectionType === "fish" && fishTabRef.current) {
+					const fishState = fishTabRef.current.save();
+					status = updatePlaythroughData(playthroughId, {
+						collections: {
+							[activeCollectionType]: fishState.collected,
+						} as Partial<Collection>,
+						donations: {
+							[activeCollectionType]: fishState.donated,
+						} as Partial<Collection>,
+					});
+				}
+
+				if (activeCollectionType === "bugs" && bugsTabRef.current) {
+					const bugsState = bugsTabRef.current.save();
+					status = updatePlaythroughData(playthroughId, {
+						collections: {
+							[activeCollectionType]: bugsState.collected,
+						} as Partial<Collection>,
+						donations: {
+							[activeCollectionType]: bugsState.donated,
+						} as Partial<Collection>,
+					});
+				}
+
+				if (activeCollectionType === "critters" && crittersTabRef.current) {
+					const crittersState = crittersTabRef.current.save();
+					status = updatePlaythroughData(playthroughId, {
+						collections: {
+							[activeCollectionType]: crittersState.collected,
+						} as Partial<Collection>,
+						donations: {
+							[activeCollectionType]: crittersState.donated,
+						} as Partial<Collection>,
+					});
+				}
+
+				if (status) {
+					isDirty.current = false;
+				}
+
+				return status;
+			},
 		}));
 
 		const handleCollectionChange = (type: CollectionType, id: string, collected: boolean) => {
@@ -131,12 +129,17 @@ const CollectionsTab = forwardRef<TabHandle, CollectionsTabProps>(
 				case "fish":
 					return (
 						<div className="space-y-4">
-							<h2 className="text-primary text-2xl font-bold">
-								Fish ({localCollections.fish.length}/{fish.length})
-							</h2>
-							{isDirty.current && (
-								<SaveAlert message="Your fish collection progress has not been saved yet." />
-							)}
+							<TabHeader
+								title="Fish"
+								collectionName="Captured"
+								enableCollectionCount={true}
+								enableSaveAlert={true}
+								isDirty={isDirty.current}
+								collectedCount={localCollections.fish.length}
+								collectionTotal={fish.length}
+								dirtyMessage="Your fish collection progress has not been saved yet."
+							/>
+
 							<FishTab
 								ref={fishTabRef}
 								collected={localCollections.fish}
@@ -153,12 +156,17 @@ const CollectionsTab = forwardRef<TabHandle, CollectionsTabProps>(
 				case "bugs":
 					return (
 						<div className="space-y-4">
-							<h2 className="text-primary text-2xl font-bold">
-								Bugs ({localCollections.bugs.length}/{bugs.length})
-							</h2>
-							{isDirty.current && (
-								<SaveAlert message="Your bug collection progress has not been saved yet." />
-							)}
+							<TabHeader
+								title="Bugs"
+								collectionName="Captured"
+								enableCollectionCount={true}
+								enableSaveAlert={true}
+								isDirty={isDirty.current}
+								collectedCount={localCollections.bugs.length}
+								collectionTotal={bugs.length}
+								dirtyMessage="Your bugs collection progress has not been saved yet."
+							/>
+
 							<BugsTab
 								ref={bugsTabRef}
 								collected={localCollections.bugs}
@@ -175,13 +183,17 @@ const CollectionsTab = forwardRef<TabHandle, CollectionsTabProps>(
 				case "critters":
 					return (
 						<div className="space-y-4">
-							<h2 className="text-primary text-2xl font-bold">
-								Critters ({localCollections.critters?.length || 0}/{critters.length}
-								)
-							</h2>
-							{isDirty.current && (
-								<SaveAlert message="Your critter collection progress has not been saved yet." />
-							)}
+							<TabHeader
+								title="Critters"
+								collectionName="Captured"
+								enableCollectionCount={true}
+								enableSaveAlert={true}
+								isDirty={isDirty.current}
+								collectedCount={localCollections.critters.length}
+								collectionTotal={critters.length}
+								dirtyMessage="Your critters collection progress has not been saved yet."
+							/>
+
 							<CrittersTab
 								ref={crittersTabRef}
 								collected={localCollections.critters || []}

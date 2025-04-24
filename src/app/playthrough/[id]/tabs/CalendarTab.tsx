@@ -44,23 +44,21 @@ const CalendarTab = forwardRef<TabHandle, CalendarTabProps>(({ current }, ref) =
 		}
 	}, [currentDay, selectedDay]);
 
-	const save = () => {
-		if (!selectedDay || !playthroughId) return false;
-
-		setDate(selectedDay.day, selectedDay.season);
-
-		const status = updatePlaythroughData(playthroughId, {
-			calendar: {
-				currentDay: selectedDay.day,
-				currentSeason: selectedDay.season,
-			},
-		});
-
-		return status;
-	};
-
 	useImperativeHandle(ref, () => ({
-		save,
+		save: () => {
+			if (!selectedDay || !playthroughId) return false;
+
+			setDate(selectedDay.day, selectedDay.season);
+
+			const status = updatePlaythroughData(playthroughId, {
+				calendar: {
+					currentDay: selectedDay.day,
+					currentSeason: selectedDay.season,
+				},
+			});
+
+			return status;
+		},
 	}));
 
 	const seasonStyles = getSeasonStyles(selectedSeason);
@@ -161,36 +159,38 @@ const CalendarTab = forwardRef<TabHandle, CalendarTabProps>(({ current }, ref) =
 				</div>
 			</header>
 
-			<Alert color="blue" icon={HiInformationCircle}>
-				<div className="flex items-center gap-2">
-					<span className="text-sm">
-						Current day:{" "}
-						<strong>
-							{currentDay.day} {currentDay.season}
-						</strong>
-						.
-						{(selectedDay && selectedDay?.day !== currentDay.day) ||
-						selectedDay?.season !== currentDay.season ? (
-							<>
-								{" "}
-								Click the save button to set{" "}
-								<strong>
-									{selectedDay?.day} {selectedDay?.season}
-								</strong>{" "}
-								as the current day.
-							</>
-						) : (
-							<> This is the current game day.</>
-						)}
-					</span>
-				</div>
-			</Alert>
+			<div className="mb-4">
+				<Alert color="blue" icon={HiInformationCircle}>
+					<div className="flex items-center gap-2">
+						<span className="text-sm">
+							Current day:{" "}
+							<strong>
+								{currentDay.day} {currentDay.season}
+							</strong>
+							.
+							{(selectedDay && selectedDay?.day !== currentDay.day) ||
+							selectedDay?.season !== currentDay.season ? (
+								<>
+									{" "}
+									Click the save button to set{" "}
+									<strong>
+										{selectedDay?.day} {selectedDay?.season}
+									</strong>{" "}
+									as the current day.
+								</>
+							) : (
+								<> This is the current game day.</>
+							)}
+						</span>
+					</div>
+				</Alert>
+			</div>
 
 			<div
-				className={`shadow-sm ring-1 ring-black/5 lg:flex lg:flex-auto lg:flex-col dark:ring-white/10 ${seasonStyles.bg}`}
+				className={`rounded-lg shadow-sm ring-1 ring-black/5 lg:flex lg:flex-auto lg:flex-col dark:ring-white/10 ${seasonStyles.bg}`}
 			>
-				<div className="grid grid-cols-7 gap-px border-b border-gray-300 bg-gray-200 text-center text-xs leading-6 font-semibold text-gray-700 lg:flex-none dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200">
-					<div className="flex justify-center bg-white py-2 dark:bg-gray-800">
+				<div className="grid grid-cols-7 gap-px rounded-tl-lg rounded-tr-lg border-b border-gray-300 bg-gray-200 text-center text-xs leading-6 font-semibold text-gray-700 lg:flex-none dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200">
+					<div className="flex justify-center rounded-tl-lg bg-white py-2 dark:bg-gray-800">
 						<span>S</span>
 						<span className="sr-only sm:not-sr-only">un</span>
 					</div>
@@ -214,12 +214,12 @@ const CalendarTab = forwardRef<TabHandle, CalendarTabProps>(({ current }, ref) =
 						<span>F</span>
 						<span className="sr-only sm:not-sr-only">ri</span>
 					</div>
-					<div className="flex justify-center bg-white py-2 dark:bg-gray-800">
+					<div className="flex justify-center rounded-tr-lg bg-white py-2 dark:bg-gray-800">
 						<span>S</span>
 						<span className="sr-only sm:not-sr-only">at</span>
 					</div>
 				</div>
-				<div className="flex bg-gray-200 text-xs leading-6 text-gray-700 lg:flex-auto dark:bg-gray-700 dark:text-gray-200">
+				<div className="flex rounded-br-lg rounded-bl-lg bg-gray-200 text-xs leading-6 text-gray-700 lg:flex-auto dark:bg-gray-700 dark:text-gray-200">
 					<div className="hidden w-full lg:grid lg:grid-cols-7 lg:grid-rows-4 lg:gap-px">
 						{seasonDays.map((day, index) => {
 							const isCurrentDay =
@@ -237,7 +237,7 @@ const CalendarTab = forwardRef<TabHandle, CalendarTabProps>(({ current }, ref) =
 											: isCurrentDay
 												? `ring-primary bg-white ring-2 ring-inset dark:bg-gray-800`
 												: `bg-white dark:bg-gray-800 ${seasonStyles.hover} cursor-pointer`
-									}`}
+									} ${index === seasonDays.length - 1 ? "rounded-br-lg" : ""} ${index === seasonDays.length - 7 ? "rounded-bl-lg" : ""}`}
 									onClick={() => handleDayClick(day)}
 								>
 									<time
