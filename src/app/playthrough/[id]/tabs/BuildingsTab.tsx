@@ -17,10 +17,11 @@ import DinkValue from "@/playthrough/ui/itemcard/DinkValue";
 import ItemFooter from "@/playthrough/ui/itemcard/ItemFooter";
 import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
+import ItemResources from "@/playthrough/ui/itemcard/ItemResources";
+import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
 import { HiClock } from "react-icons/hi";
 import { HiCalendarDays } from "react-icons/hi2";
 import { DeedTypes } from "@/data/constants";
-import ItemResources from "@/components/playthrough/ui/itemcard/ItemResources";
 
 const BuildingsTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) => {
 	const params = useParams();
@@ -116,116 +117,124 @@ const BuildingsTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref)
 				collectedCount={getInstalledCount()}
 			/>
 
-			<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-				{filteredData.map((item) => {
-					const isInstalled = localState[item.id] === true;
-					const isCollectable = item.deedType === DeedTypes.Collectable;
-					const hasOperatingHours = item.operatingHours && item.operatingHours.length > 0;
+			{filteredData.length > 0 && (
+				<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+					{filteredData.map((item) => {
+						const isInstalled = localState[item.id] === true;
+						const isCollectable = item.deedType === DeedTypes.Collectable;
+						const hasOperatingHours =
+							item.operatingHours && item.operatingHours.length > 0;
 
-					return (
-						<ItemCard
-							key={item.id}
-							renderHeader={() => (
-								<ItemHeader
-									title={item.name}
-									renderRightComp={() => (
-										<Badge color={getDeedBadgeColor(item.deedType)}>
-											{item.deedType}
-										</Badge>
-									)}
-								/>
-							)}
-							renderImage={() => (
-								<ItemImage
-									src={item.img}
-									name={item.name}
-									isCollected={isInstalled}
-								/>
-							)}
-							renderDetails={() => (
-								<>
-									<div className="grid grid-cols-1 gap-2">
-										{item.deedName && (
-											<ItemDetail label="Deed" details={item.deedName} />
+						return (
+							<ItemCard
+								key={item.id}
+								renderHeader={() => (
+									<ItemHeader
+										title={item.name}
+										renderRightComp={() => (
+											<Badge color={getDeedBadgeColor(item.deedType)}>
+												{item.deedType}
+											</Badge>
 										)}
-										{item.npc && (
-											<ItemDetail
-												label="NPC"
-												details={item.npc}
-												iconComp={() =>
-													item.npcImg && (
-														<img
-															src={item.npcImg}
-															alt={item.npc}
-															className="h-5 w-5 object-contain"
-														/>
-													)
-												}
-											/>
-										)}
-										{item.size && (
-											<ItemDetail label="Size" details={item.size} />
-										)}
-
-										{item.buildTime && (
-											<ItemDetail
-												label="Build Time"
-												details={item.buildTime}
-											/>
-										)}
-										{item.deedPrice > 0 && (
-											<DinkValue label="Deed Price" price={item.deedPrice} />
-										)}
-
-										{hasOperatingHours && (
-											<ItemDetail
-												label="Hours"
-												details={item.operatingHours.join(", ")}
-												iconComp={() => <HiClock className="h-4 w-4" />}
-											/>
-										)}
-
-										{item.daysClosed && (
-											<ItemDetail
-												label="Closed"
-												details={item.daysClosed}
-												iconComp={() => (
-													<HiCalendarDays className="h-4 w-4" />
-												)}
-											/>
-										)}
-
-										<ItemDetail
-											label="Description"
-											details={item.description}
-										/>
-
-										{item.inputs.length > 0 && (
-											<ItemResources
-												id={item.id}
-												label="Resources"
-												items={item.inputs}
-											/>
-										)}
-									</div>
-								</>
-							)}
-							renderFooter={() =>
-								isCollectable && (
-									<ItemFooter
-										id={item.id}
-										leftLabel="Installed"
-										isLeftChecked={isInstalled}
-										handleLeftToggle={(id, checked) =>
-											handleToggleInstalled(id, checked)
-										}
 									/>
-								)
-							}
-						/>
-					);
-				})}
-			</div>
+								)}
+								renderImage={() => (
+									<ItemImage
+										src={item.img}
+										name={item.name}
+										isCollected={isInstalled}
+									/>
+								)}
+								renderDetails={() => (
+									<>
+										<div className="grid grid-cols-1 gap-2">
+											{item.deedName && (
+												<ItemDetail label="Deed" details={item.deedName} />
+											)}
+											{item.npc && (
+												<ItemDetail
+													label="NPC"
+													details={item.npc}
+													iconComp={() =>
+														item.npcImg && (
+															<img
+																src={item.npcImg}
+																alt={item.npc}
+																className="h-5 w-5 object-contain"
+															/>
+														)
+													}
+												/>
+											)}
+											{item.size && (
+												<ItemDetail label="Size" details={item.size} />
+											)}
+
+											{item.buildTime && (
+												<ItemDetail
+													label="Build Time"
+													details={item.buildTime}
+												/>
+											)}
+											{item.deedPrice > 0 && (
+												<DinkValue
+													label="Deed Price"
+													price={item.deedPrice}
+												/>
+											)}
+
+											{hasOperatingHours && (
+												<ItemDetail
+													label="Hours"
+													details={item.operatingHours.join(", ")}
+													iconComp={() => <HiClock className="h-4 w-4" />}
+												/>
+											)}
+
+											{item.daysClosed && (
+												<ItemDetail
+													label="Closed"
+													details={item.daysClosed}
+													iconComp={() => (
+														<HiCalendarDays className="h-4 w-4" />
+													)}
+												/>
+											)}
+
+											<ItemDetail
+												label="Description"
+												details={item.description}
+											/>
+
+											{item.inputs.length > 0 && (
+												<ItemResources
+													id={item.id}
+													label="Resources"
+													items={item.inputs}
+												/>
+											)}
+										</div>
+									</>
+								)}
+								renderFooter={() =>
+									isCollectable && (
+										<ItemFooter
+											id={item.id}
+											leftLabel="Installed"
+											isLeftChecked={isInstalled}
+											handleLeftToggle={(id, checked) =>
+												handleToggleInstalled(id, checked)
+											}
+										/>
+									)
+								}
+							/>
+						);
+					})}
+				</div>
+			)}
+
+			{filteredData.length === 0 && <EmptyFilterCard />}
 		</div>
 	);
 });

@@ -199,18 +199,20 @@ const FishTab = forwardRef<PediaTabHandle, PediaTabProps>(
 					donatedCount={donatedState.length}
 				/>
 
-				<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-					{filteredItems.map((item) => (
-						<CollectionItem
-							key={item.id}
-							item={item}
-							isCollected={collectedState.includes(item.id)}
-							isDonated={donatedState.includes(item.id)}
-							onCollectedChange={handleCollectedChange}
-							onDonatedChange={handleDonatedChange}
-						/>
-					))}
-				</div>
+				{filteredItems.length > 0 && (
+					<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+						{filteredItems.map((item) => (
+							<CollectionItem
+								key={item.id}
+								item={item}
+								isCollected={collectedState.includes(item.id)}
+								isDonated={donatedState.includes(item.id)}
+								onCollectedChange={handleCollectedChange}
+								onDonatedChange={handleDonatedChange}
+							/>
+						))}
+					</div>
+				)}
 
 				{filteredItems.length === 0 && <EmptyFilterCard />}
 			</div>

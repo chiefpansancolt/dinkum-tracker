@@ -15,6 +15,7 @@ import DinkValue from "@/playthrough/ui/itemcard/DinkValue";
 import ItemFooter from "@/playthrough/ui/itemcard/ItemFooter";
 import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
+import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
 
 const BooksTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) => {
 	const params = useParams();
@@ -110,74 +111,78 @@ const BooksTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) => 
 				collectedCount={getCollectedCount()}
 			/>
 
-			<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-				{filteredData.map((item) => {
-					const isCollected = localState[item.id] === true;
+			{filteredData.length > 0 && (
+				<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+					{filteredData.map((item) => {
+						const isCollected = localState[item.id] === true;
 
-					return (
-						<ItemCard
-							key={item.id}
-							renderHeader={() => <ItemHeader title={item.name} />}
-							renderImage={() => (
-								<ItemImage src={item.img} name={item.name} isCollected />
-							)}
-							renderDetails={() => (
-								<>
-									{item.details.map((detail, index) => (
-										<div
-											key={index}
-											className="grid grid-cols-12 gap-1.5 rounded-lg bg-gray-50 p-3 dark:bg-gray-800"
-										>
-											<div className="col-span-12">
-												<ItemDetail
-													label="Aquired From"
-													details={detail.aquiredFrom}
-												/>
-											</div>
-
-											<div className="col-span-12">
-												<ItemDetail
-													label="Requirements"
-													details={detail.requirements}
-												/>
-											</div>
-
-											{detail.buyingPrice > 0 && (
-												<div className="col-span-6">
-													<DinkValue
-														label="Buy Price"
-														price={detail.buyingPrice}
+						return (
+							<ItemCard
+								key={item.id}
+								renderHeader={() => <ItemHeader title={item.name} />}
+								renderImage={() => (
+									<ItemImage src={item.img} name={item.name} isCollected />
+								)}
+								renderDetails={() => (
+									<>
+										{item.details.map((detail, index) => (
+											<div
+												key={index}
+												className="grid grid-cols-12 gap-1.5 rounded-lg bg-gray-50 p-3 dark:bg-gray-800"
+											>
+												<div className="col-span-12">
+													<ItemDetail
+														label="Aquired From"
+														details={detail.aquiredFrom}
 													/>
 												</div>
-											)}
 
-											{detail.sellingPrice > 0 && (
-												<div className="col-span-6">
-													<DinkValue
-														label="Sell Price"
-														price={detail.sellingPrice}
-														showCommerceLicenses
+												<div className="col-span-12">
+													<ItemDetail
+														label="Requirements"
+														details={detail.requirements}
 													/>
 												</div>
-											)}
-										</div>
-									))}
-								</>
-							)}
-							renderFooter={() => (
-								<ItemFooter
-									id={item.id}
-									leftLabel="Collected"
-									isLeftChecked={isCollected}
-									handleLeftToggle={(id, checked) =>
-										handleToggleCollected(id, checked)
-									}
-								/>
-							)}
-						/>
-					);
-				})}
-			</div>
+
+												{detail.buyingPrice > 0 && (
+													<div className="col-span-6">
+														<DinkValue
+															label="Buy Price"
+															price={detail.buyingPrice}
+														/>
+													</div>
+												)}
+
+												{detail.sellingPrice > 0 && (
+													<div className="col-span-6">
+														<DinkValue
+															label="Sell Price"
+															price={detail.sellingPrice}
+															showCommerceLicenses
+														/>
+													</div>
+												)}
+											</div>
+										))}
+									</>
+								)}
+								renderFooter={() => (
+									<ItemFooter
+										id={item.id}
+										leftLabel="Collected"
+										isLeftChecked={isCollected}
+										handleLeftToggle={(id, checked) =>
+											handleToggleCollected(id, checked)
+										}
+									/>
+								)}
+							/>
+						);
+					})}
+				</div>
+			)}
+
+			{filteredData.length === 0 && <EmptyFilterCard />}
 		</div>
 	);
 });
