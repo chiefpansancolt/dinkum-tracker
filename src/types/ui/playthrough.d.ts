@@ -100,3 +100,8 @@ export interface ResourceItemProps {
   isVariantUsage?: boolean;
   input: Resource;
 }
+
+export interface ItemFranklynProps {
+  shinyDiscCount?: number;
+  berkoniumOreCount?: number;
+}

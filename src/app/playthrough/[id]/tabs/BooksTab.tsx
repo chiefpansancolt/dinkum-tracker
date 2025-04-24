@@ -124,47 +124,39 @@ const BooksTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) => 
 									<ItemImage src={item.img} name={item.name} isCollected />
 								)}
 								renderDetails={() => (
-									<>
+									<div className="grid grid-cols-1 gap-2">
 										{item.details.map((detail, index) => (
 											<div
 												key={index}
-												className="grid grid-cols-12 gap-1.5 rounded-lg bg-gray-50 p-3 dark:bg-gray-800"
+												className="gap-2 rounded-lg grid grid-cols-1 bg-gray-100 p-3 dark:bg-gray-900"
 											>
-												<div className="col-span-12">
-													<ItemDetail
-														label="Aquired From"
-														details={detail.aquiredFrom}
-													/>
-												</div>
+												<ItemDetail
+													label="Aquired From"
+													details={detail.aquiredFrom}
+												/>
 
-												<div className="col-span-12">
-													<ItemDetail
-														label="Requirements"
-														details={detail.requirements}
-													/>
-												</div>
+												<ItemDetail
+													label="Requirements"
+													details={detail.requirements}
+												/>
 
 												{detail.buyingPrice > 0 && (
-													<div className="col-span-6">
-														<DinkValue
-															label="Buy Price"
-															price={detail.buyingPrice}
-														/>
-													</div>
+													<DinkValue
+														label="Buy Price"
+														price={detail.buyingPrice}
+													/>
 												)}
 
 												{detail.sellingPrice > 0 && (
-													<div className="col-span-6">
-														<DinkValue
-															label="Sell Price"
-															price={detail.sellingPrice}
-															showCommerceLicenses
-														/>
-													</div>
+													<DinkValue
+														label="Sell Price"
+														price={detail.sellingPrice}
+														showCommerceLicenses
+													/>
 												)}
 											</div>
 										))}
-									</>
+									</div>
 								)}
 								renderFooter={() => (
 									<ItemFooter

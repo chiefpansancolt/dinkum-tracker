@@ -44,7 +44,7 @@ const CollectionItem: React.FC<CollectionItemProps> = ({
 				<ItemImage src={item.img} name={item.name} isCollected={isComplete} />
 			)}
 			renderDetails={() => (
-				<>
+				<div className="grid grid-cols-1 gap-2">
 					<ItemDetail label="Biome(s)" details={item.biome.join(", ")} />
 					<ItemDetail label="Seasons(s)" details={item.seasons.join(", ")} />
 					<ItemDetail label="Time(s)" details={item.timeFound.join(", ")} />
@@ -63,7 +63,7 @@ const CollectionItem: React.FC<CollectionItemProps> = ({
 							<ItemDetail label="Cooked Piece(s)" details={item.cookedPieces.toString()} />
 						</>
 					)}
-				</>
+				</div>
 			)}
 			renderFooter={() => (
 				<ItemFooter
