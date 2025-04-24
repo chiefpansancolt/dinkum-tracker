@@ -1,4 +1,4 @@
-import { TabHeaderProps } from "@/types"
+import { TabHeaderProps } from "@/types";
 import { Badge } from "flowbite-react";
 import SaveAlert from "@/components/SaveAlert";
 
@@ -10,7 +10,7 @@ const TabHeader = ({
 	collectionTotal,
 	enableSaveAlert = true,
 	isDirty,
-	dirtyMessage
+	dirtyMessage,
 }: TabHeaderProps) => {
 	return (
 		<div>
@@ -35,4 +35,4 @@ const TabHeader = ({
 	);
 };
 
-export default TabHeader
+export default TabHeader;

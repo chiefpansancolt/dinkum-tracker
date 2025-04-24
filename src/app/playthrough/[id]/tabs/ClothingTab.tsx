@@ -191,62 +191,61 @@ const ClothingTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) 
 			{filteredData.length > 0 && (
 				<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 					{filteredData.map((item) => {
-							const isCollected = localState[item.id] === true;
+						const isCollected = localState[item.id] === true;
 
-							return (
-								<ItemCard
-									key={item.id}
-									renderHeader={() => (
-										<ItemHeader
-											title={item.name}
-											renderRightComp={() => (
-												<Badge color="purple">{item.type}</Badge>
-											)}
+						return (
+							<ItemCard
+								key={item.id}
+								renderHeader={() => (
+									<ItemHeader
+										title={item.name}
+										renderRightComp={() => (
+											<Badge color="purple">{item.type}</Badge>
+										)}
+									/>
+								)}
+								renderImage={() => (
+									<ItemImage
+										src={item.img}
+										name={item.name}
+										isCollected={isCollected}
+									/>
+								)}
+								renderDetails={() => (
+									<>
+										<ItemDetail label="Slot" details={item.slot.join(", ")} />
+
+										{item.set && <ItemDetail label="Set" details={item.set} />}
+
+										{item.displayPrice !== null && (
+											<DinkValue label="Price" price={item.displayPrice} />
+										)}
+
+										<DinkValue
+											label="Sell Price"
+											price={item.baseSellPrice}
+											showCommerceLicenses
 										/>
-									)}
-									renderImage={() => (
-										<ItemImage
-											src={item.img}
-											name={item.name}
-											isCollected={isCollected}
-										/>
-									)}
-									renderDetails={() => (
-										<>
-											<ItemDetail label="Slot" details={item.slot.join(", ")} />
 
-											{item.set && <ItemDetail label="Set" details={item.set} />}
-
-											{item.displayPrice !== null && (
-												<DinkValue label="Price" price={item.displayPrice} />
-											)}
-
-											<DinkValue
-												label="Sell Price"
-												price={item.baseSellPrice}
-												showCommerceLicenses
+										{item.cloversCatalogue && (
+											<ItemDetail
+												label="Available at"
+												details="Clover's Shop"
 											/>
-
-											{item.cloversCatalogue && (
-												<ItemDetail
-													label="Available at"
-													details="Clover's Shop"
-												/>
-											)}
-										</>
-									)}
-									renderFooter={() => (
-										<ItemFooter
-											id={item.id}
-											leftLabel="Collected"
-											isLeftChecked={isCollected}
-											handleLeftToggle={handleToggleCollected}
-										/>
-									)}
-								/>
-							);
-						})
-					}
+										)}
+									</>
+								)}
+								renderFooter={() => (
+									<ItemFooter
+										id={item.id}
+										leftLabel="Collected"
+										isLeftChecked={isCollected}
+										handleLeftToggle={handleToggleCollected}
+									/>
+								)}
+							/>
+						);
+					})}
 				</div>
 			)}
 

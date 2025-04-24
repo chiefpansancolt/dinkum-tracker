@@ -30,7 +30,7 @@ export interface CalendarDay {
 }
 
 export interface CalendarState {
-  calendar: GameCalendar
+  calendar: GameCalendar;
   currentDay: CalendarDay;
   selectedSeason: Season;
   setSelectedSeason: (season: Season) => void;

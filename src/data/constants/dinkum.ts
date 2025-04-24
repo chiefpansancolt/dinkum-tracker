@@ -41,4 +41,4 @@ export enum DeedTypes {
   Collectable = "Collectable",
   Movable = "Movable",
   Reference = "Reference",
-};
+}

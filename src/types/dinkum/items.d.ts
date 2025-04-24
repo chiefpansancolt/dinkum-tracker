@@ -1,10 +1,4 @@
-import {
-  BaseResource,
-  Resource,
-  Buffs,
-  Biome,
-  ResourceVariant,
-} from "./base";
+import { BaseResource, Resource, Buffs, Biome, ResourceVariant } from "./base";
 import { ResourceType } from "@/data/constants";
 
 export interface Crop extends BaseResource {

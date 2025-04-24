@@ -17,4 +17,4 @@ const ItemImage = ({ src, name, isCollected }: ItemImageProps) => {
 	);
 };
 
-export default ItemImage
+export default ItemImage;

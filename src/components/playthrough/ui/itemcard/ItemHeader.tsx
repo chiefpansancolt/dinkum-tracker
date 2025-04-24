@@ -9,4 +9,4 @@ const ItemHeader = ({ title, renderRightComp }: ItemHeaderProps) => {
 	);
 };
 
-export default ItemHeader
+export default ItemHeader;

@@ -1,7 +1,7 @@
-import { Checkbox, Label } from "flowbite-react"
+import { Checkbox, Label } from "flowbite-react";
 import { ItemFooterProps } from "@/types";
 
-const ItemFooter = ({ 
+const ItemFooter = ({
 	id,
 	showRightCheckbox = false,
 	leftLabel,
@@ -43,4 +43,4 @@ const ItemFooter = ({
 	);
 };
 
-export default ItemFooter
+export default ItemFooter;

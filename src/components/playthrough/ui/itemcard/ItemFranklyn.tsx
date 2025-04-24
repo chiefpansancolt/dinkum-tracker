@@ -24,13 +24,13 @@ const ItemFranklyn = ({ shinyDiscCount, berkoniumOreCount }: ItemFranklynProps) 
 	const shinyDisc: Resource = {
 		name: "Shiny Disc",
 		count: shinyDiscCount || 0,
-		img: "https://static.wikia.nocookie.net/dinkum/images/8/83/Inv_Shiny_Disc.png"
+		img: "https://static.wikia.nocookie.net/dinkum/images/8/83/Inv_Shiny_Disc.png",
 	};
 
 	const berkonium: Resource = {
 		name: "Berkonium Ore",
 		count: berkoniumOreCount || 0,
-		img: "https://static.wikia.nocookie.net/dinkum/images/c/cc/Inv_Berkonium_Ore.png"
+		img: "https://static.wikia.nocookie.net/dinkum/images/c/cc/Inv_Berkonium_Ore.png",
 	};
 
 	return (
@@ -44,4 +44,4 @@ const ItemFranklyn = ({ shinyDiscCount, berkoniumOreCount }: ItemFranklynProps) 
 	);
 };
 
-export default ItemFranklyn
+export default ItemFranklyn;

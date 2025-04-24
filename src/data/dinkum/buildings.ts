@@ -1104,8 +1104,9 @@ export const buildings: Building[] = [
 ];
 
 export const getCollectableBuildingsCount = () => {
-  return buildings.filter((building) => building.deedType === DeedTypes.Collectable)
-    .length;
+  return buildings.filter(
+    (building) => building.deedType === DeedTypes.Collectable,
+  ).length;
 };
 
 export const getDeedBadgeColor = (deedType: DeedType) => {

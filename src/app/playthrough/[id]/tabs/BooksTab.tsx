@@ -128,7 +128,7 @@ const BooksTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) => 
 										{item.details.map((detail, index) => (
 											<div
 												key={index}
-												className="gap-2 rounded-lg grid grid-cols-1 bg-gray-100 p-3 dark:bg-gray-900"
+												className="grid grid-cols-1 gap-2 rounded-lg bg-gray-100 p-3 dark:bg-gray-900"
 											>
 												<ItemDetail
 													label="Aquired From"

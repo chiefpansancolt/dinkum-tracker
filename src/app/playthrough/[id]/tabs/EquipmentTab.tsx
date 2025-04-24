@@ -241,9 +241,13 @@ const EquipmentTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref)
 											/>
 										)}
 
-										{item.shinyDiscCount || item.berkoniumOreCount && (
-											<ItemFranklyn shinyDiscCount={item.shinyDiscCount} berkoniumOreCount={item.berkoniumOreCount} />
-										)}
+										{item.shinyDiscCount ||
+											(item.berkoniumOreCount && (
+												<ItemFranklyn
+													shinyDiscCount={item.shinyDiscCount}
+													berkoniumOreCount={item.berkoniumOreCount}
+												/>
+											))}
 
 										{item.inputs && item.inputs.length > 0 && (
 											<ItemResources

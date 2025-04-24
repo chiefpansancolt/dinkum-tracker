@@ -28,4 +28,4 @@ const FilterDetails = ({
 	);
 };
 
-export default FilterDetails
+export default FilterDetails;

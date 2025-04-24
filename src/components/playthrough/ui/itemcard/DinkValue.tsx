@@ -12,8 +12,8 @@ const DinkPrice = ({ price }: DinkPriceProps) => {
 			/>
 			<span>{price.toLocaleString()}</span>
 		</div>
-	)
-}
+	);
+};
 
 const CommerceContent = ({ price }: DinkPriceProps) => {
 	const commerceLevel1Price = Math.round(price * 1.05);
@@ -22,7 +22,7 @@ const CommerceContent = ({ price }: DinkPriceProps) => {
 
 	return (
 		<div className="w-64 p-2">
-			<h3 className="mb-2 pb-2 border-b border-gray-200 font-medium dark:border-gray-700">
+			<h3 className="mb-2 border-b border-gray-200 pb-2 font-medium dark:border-gray-700">
 				Commerce License Pricing
 			</h3>
 			<div className="space-y-1">
@@ -47,11 +47,7 @@ const CommerceContent = ({ price }: DinkPriceProps) => {
 	);
 };
 
-const DinkValue = ({
-	label,
-	price,
-	showCommerceLicenses = false,
-}: DinkValueProps) => {
+const DinkValue = ({ label, price, showCommerceLicenses = false }: DinkValueProps) => {
 	return (
 		<div className="grid grid-cols-12">
 			<div className="col-span-4 font-medium">{label}:</div>

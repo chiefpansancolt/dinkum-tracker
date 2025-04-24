@@ -72,7 +72,7 @@ const BuildingsTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref)
 			}
 
 			return false;
-		}
+		},
 	}));
 
 	const filteredData = useMemo(() => {
@@ -176,10 +176,7 @@ const BuildingsTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref)
 											/>
 										)}
 										{item.deedPrice > 0 && (
-											<DinkValue
-												label="Deed Price"
-												price={item.deedPrice}
-											/>
+											<DinkValue label="Deed Price" price={item.deedPrice} />
 										)}
 
 										{hasOperatingHours && (

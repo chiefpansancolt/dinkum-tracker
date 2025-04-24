@@ -60,7 +60,10 @@ const CollectionItem: React.FC<CollectionItemProps> = ({
 								label="Cooked Sell Price"
 								showCommerceLicenses
 							/>
-							<ItemDetail label="Cooked Piece(s)" details={item.cookedPieces.toString()} />
+							<ItemDetail
+								label="Cooked Piece(s)"
+								details={item.cookedPieces.toString()}
+							/>
 						</>
 					)}
 				</div>

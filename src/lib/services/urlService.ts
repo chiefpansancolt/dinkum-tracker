@@ -53,7 +53,6 @@ export const setHashQueryParam = (key: string, value: string): void => {
   const newQueryString = params.toString();
   const newHash = newQueryString ? `${baseHash}?${newQueryString}` : baseHash;
 
-
   window.history.replaceState(
     null,
     "",

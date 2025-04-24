@@ -10,6 +10,6 @@ const ItemDetail = ({ label, details, iconComp }: ItemDetailProps) => {
 			</div>
 		</div>
 	);
-}
+};
 
-export default ItemDetail
+export default ItemDetail;
