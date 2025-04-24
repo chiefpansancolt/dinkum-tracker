@@ -384,7 +384,7 @@ export const equipment: Equipment[] = [
   {
     id: "ice_cream_maker",
     name: "Ice Cream Maker",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/98/Inv_Ice_Cream_Maker.png/revision/latest?cb=20231118022131",
+    img: "https://static.wikia.nocookie.net/dinkum/images/9/98/Inv_Ice_Cream_Maker.png",
     description: "Turns high quality milk into ice cream.",
     requirementLevel: null,
     source: ["Island Reef"],
