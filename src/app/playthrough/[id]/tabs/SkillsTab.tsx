@@ -90,7 +90,9 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill, level, onLevelChange }) =>
 							className="mr-3 h-10 w-10 object-contain"
 						/>
 					)}
-					<h3 className="text-lg font-bold text-gray-900 dark:text-gray-50">{skill.name}</h3>
+					<h3 className="text-lg font-bold text-gray-900 dark:text-gray-50">
+						{skill.name}
+					</h3>
 				</div>
 			)}
 			renderDetails={() => (
@@ -99,7 +101,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill, level, onLevelChange }) =>
 				</p>
 			)}
 			renderFooter={() => (
-				<div className="mt-auto flex items-center justify-between border-t pt-4 border-gray-200 dark:border-gray-700">
+				<div className="mt-auto flex items-center justify-between border-t border-gray-200 pt-4 dark:border-gray-700">
 					<div className="font-medium text-gray-900 dark:text-gray-50">Skill Level:</div>
 					<div className="flex items-center space-x-2">
 						<Button
@@ -111,7 +113,9 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill, level, onLevelChange }) =>
 							<HiMinusSm className="h-4 w-4" />
 						</Button>
 
-						<span className="w-10 text-center font-medium text-gray-800 dark:text-gray-50">{level}</span>
+						<span className="w-10 text-center font-medium text-gray-800 dark:text-gray-50">
+							{level}
+						</span>
 
 						<Button color="gray" size="sm" onClick={() => onLevelChange(1)}>
 							<HiPlusSm className="h-4 w-4" />

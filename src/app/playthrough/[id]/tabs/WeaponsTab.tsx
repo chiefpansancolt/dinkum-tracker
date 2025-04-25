@@ -70,26 +70,24 @@ const WeaponsTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) =
 		isDirty.current = true;
 	};
 
-	const save = () => {
-		if (!playthroughId || !isDirty.current) return false;
-
-		const success = updatePlaythroughData(playthroughId, {
-			weapons: localState,
-		});
-
-		if (success) {
-			isDirty.current = false;
-			return true;
-		}
-
-		return false;
-	};
-
 	useImperativeHandle(ref, () => ({
-		save,
+		save: () => {
+			if (!playthroughId || !isDirty.current) return false;
+
+			const success = updatePlaythroughData(playthroughId, {
+				weapons: localState,
+			});
+
+			if (success) {
+				isDirty.current = false;
+				return true;
+			}
+
+			return false;
+		},
 	}));
 
-	const filteredWeapons = useMemo(() => {
+	const filteredData = useMemo(() => {
 		return weapons.filter((weapon) => {
 			if (sourceFilter !== "All" && !weapon.source.includes(sourceFilter)) {
 				return false;
@@ -168,17 +166,17 @@ const WeaponsTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) =
 
 			<FilterDetails
 				title="weapons"
-				filteredCount={filteredWeapons.length}
+				filteredCount={filteredData.length}
 				totalCount={weapons.length}
 				collectedLabel="Collected"
 				collectedCount={getCollectedCount()}
 			/>
 
 			<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-				{filteredWeapons.length === 0 ? (
+				{filteredData.length === 0 ? (
 					<EmptyFilterCard />
 				) : (
-					filteredWeapons.map((weapon) => {
+					filteredData.map((weapon) => {
 						const isCollected = localState[weapon.id] === true;
 						const isCraftable = weapon.source.includes("Crafting Table");
 

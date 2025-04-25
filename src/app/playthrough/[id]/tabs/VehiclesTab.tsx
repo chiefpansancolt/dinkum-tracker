@@ -97,7 +97,7 @@ const VehiclesTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) 
 		},
 	}));
 
-	const filteredVehicles = useMemo(() => {
+	const filteredData = useMemo(() => {
 		return vehicles.filter((vehicle) => {
 			if (sourceFilter !== "All" && !vehicle.source.includes(sourceFilter)) {
 				return false;
@@ -165,15 +165,15 @@ const VehiclesTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) 
 
 			<FilterDetails
 				title="vehicles"
-				filteredCount={filteredVehicles.length}
+				filteredCount={filteredData.length}
 				totalCount={vehicles.length}
 				collectedLabel="Collected"
 				collectedCount={getCollectedCount()}
 			/>
 
-			{filteredVehicles.length > 0 && (
+			{filteredData.length > 0 && (
 				<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-					{filteredVehicles.map((vehicle) => {
+					{filteredData.map((vehicle) => {
 						const isCollected = localState[vehicle.id] === true;
 						const isCraftable = vehicle.source.includes("Crafting Table");
 
@@ -276,7 +276,7 @@ const VehiclesTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) 
 				</div>
 			)}
 
-			{filteredVehicles.length === 0 && <EmptyFilterCard />}
+			{filteredData.length === 0 && <EmptyFilterCard />}
 		</div>
 	);
 });

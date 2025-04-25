@@ -99,7 +99,7 @@ const ToolsTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) => 
 		},
 	}));
 
-	const filteredTools = useMemo(() => {
+	const filteredData = useMemo(() => {
 		return tools.filter((tool) => {
 			if (licenseFilter !== "All" && tool.licence !== licenseFilter) {
 				return false;
@@ -186,15 +186,15 @@ const ToolsTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) => 
 
 			<FilterDetails
 				title="tools"
-				filteredCount={filteredTools.length}
+				filteredCount={filteredData.length}
 				totalCount={tools.length}
 				collectedLabel="Collected"
 				collectedCount={getCollectedCount()}
 			/>
 
-			{filteredTools.length > 0 && (
+			{filteredData.length > 0 && (
 				<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-					{filteredTools.map((tool) => {
+					{filteredData.map((tool) => {
 						const isCollected = localState[tool.id] === true;
 						const isCraftable = tool.source.includes("Crafting Table");
 
@@ -284,7 +284,7 @@ const ToolsTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) => 
 				</div>
 			)}
 
-			{filteredTools.length === 0 && <EmptyFilterCard />}
+			{filteredData.length === 0 && <EmptyFilterCard />}
 		</div>
 	);
 });
