@@ -1,26 +1,34 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { useState, forwardRef, useImperativeHandle, useRef, useEffect } from "react";
+import { useMemo, useState, forwardRef, useImperativeHandle, useRef, useEffect } from "react";
 import { useParams } from "next/navigation";
-import { Card, Checkbox, Label, Badge, TextInput, Button, Select, Tooltip } from "flowbite-react";
+import { Checkbox, Label, Badge, Button, Tooltip } from "flowbite-react";
 import { licenses } from "@/data/dinkum";
 import { License, TabHandle, CollectTabProps } from "@/types";
 import { updatePlaythroughData } from "@/lib/localStorage";
-import SaveAlert from "@/comps/SaveAlert";
-import { HiSearch, HiLockClosed, HiCheck } from "react-icons/hi";
+import { HiLockClosed } from "react-icons/hi";
+import TabHeader from "@/playthrough/ui/TabHeader";
+import FilterBar from "@/playthrough/ui/FilterBar";
+import FilterDetails from "@/playthrough/ui/FilterDetails";
+import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
+import ItemCard from "@/components/playthrough/ui/itemcard/ItemCard";
+import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
+import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
+import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
+import PermiteValue from "@/components/playthrough/ui/itemcard/PermiteValue";
 
 const LicensesTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) => {
 	const params = useParams();
 	const playthroughId = typeof params.id === "string" ? params.id : "";
 	const [searchQuery, setSearchQuery] = useState("");
-	const [categoryFilter, setCategoryFilter] = useState("all");
-	const [localLicensesState, setLocalLicensesState] = useState(collected);
+	const [categoryFilter, setCategoryFilter] = useState("All Licenses");
+	const [localState, setLocalState] = useState(collected);
 
 	const isDirty = useRef(false);
 
 	useEffect(() => {
-		setLocalLicensesState(collected);
+		setLocalState(collected);
 	}, [collected]);
 
 	const isPreviousLevelObtained = (licenseId: string, level: number) => {
@@ -29,12 +37,12 @@ const LicensesTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) 
 		const previousLevel = level - 1;
 		const previousLicenseKey = `${licenseId}_level_${previousLevel}`;
 
-		return localLicensesState[previousLicenseKey] === true;
+		return localState[previousLicenseKey] === true;
 	};
 
 	const handleToggleLicenseLevel = (licenseId: string, level: number) => {
 		const licenseKey = `${licenseId}_level_${level}`;
-		const currentValue = localLicensesState[licenseKey] || false;
+		const currentValue = localState[licenseKey] || false;
 
 		if (!currentValue && !isPreviousLevelObtained(licenseId, level)) {
 			return;
@@ -55,12 +63,12 @@ const LicensesTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) 
 				});
 			}
 
-			setLocalLicensesState((prev) => ({
+			setLocalState((prev) => ({
 				...prev,
 				...updates,
 			}));
 		} else {
-			setLocalLicensesState((prev) => ({
+			setLocalState((prev) => ({
 				...prev,
 				[licenseKey]: true,
 			}));
@@ -84,7 +92,7 @@ const LicensesTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) 
 			});
 		}
 
-		setLocalLicensesState((prev) => ({
+		setLocalState((prev) => ({
 			...prev,
 			...updates,
 		}));
@@ -95,76 +103,77 @@ const LicensesTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) 
 	const areAllLevelsComplete = (license: License) => {
 		return license.levels.every((level) => {
 			const licenseKey = `${license.id}_level_${level.level}`;
-			return localLicensesState[licenseKey] === true;
+			return localState[licenseKey] === true;
 		});
-	};
-
-	const getCompletedLevelsForLicense = (license: License) => {
-		return license.levels.filter((level) => {
-			const licenseKey = `${license.id}_level_${level.level}`;
-			return localLicensesState[licenseKey] === true;
-		}).length;
-	};
-
-	const save = () => {
-		if (!playthroughId || !isDirty.current) return false;
-
-		const success = updatePlaythroughData(playthroughId, {
-			licenses: localLicensesState,
-		});
-
-		if (success) {
-			isDirty.current = false;
-			return true;
-		}
-
-		return false;
 	};
 
 	useImperativeHandle(ref, () => ({
-		save,
+		save: () => {
+			if (!playthroughId || !isDirty.current) return false;
+
+			const success = updatePlaythroughData(playthroughId, {
+				licenses: localState,
+			});
+
+			if (success) {
+				isDirty.current = false;
+				return true;
+			}
+
+			return false;
+		},
 	}));
 
-	const licenseCategories = [
-		{ id: "all", name: "All Licenses" },
-		{ id: "mining", name: "Mining" },
-		{ id: "fishing", name: "Fishing" },
-		{ id: "farming", name: "Farming" },
-		{ id: "logging", name: "Logging" },
-		{ id: "hunting", name: "Hunting" },
-		{ id: "building", name: "Building" },
-		{ id: "vehicle", name: "Vehicle" },
-		{ id: "commerce", name: "Commerce" },
-	];
+	const filters = {
+		category: {
+			value: categoryFilter,
+			options: [
+				"All Licenses",
+				"Mining",
+				"Fishing",
+				"Farming",
+				"Logging",
+				"Hunting",
+				"Building",
+				"Vehicle",
+				"Commerce",
+			],
+			label: "Category",
+		},
+	};
 
-	const filteredLicenses = licenses.filter((license) => {
-		if (categoryFilter !== "all") {
-			if (!license.id.includes(categoryFilter)) {
-				return false;
+	const handleFilterChange = (name: string, value: string) => {
+		if (name === "category") {
+			setCategoryFilter(value);
+		}
+	};
+
+	const filteredData = useMemo(() => {
+		return licenses.filter((license) => {
+			if (categoryFilter !== "All Licenses") {
+				if (!license.id.includes(categoryFilter.toLowerCase())) {
+					return false;
+				}
 			}
-		}
 
-		if (searchQuery) {
-			const query = searchQuery.toLowerCase();
-			return (
-				license.name.toLowerCase().includes(query) ||
-				license.requirements.toLowerCase().includes(query)
-			);
-		}
+			if (searchQuery) {
+				const query = searchQuery.toLowerCase();
+				return (
+					license.name.toLowerCase().includes(query) ||
+					license.requirements.toLowerCase().includes(query)
+				);
+			}
 
-		return true;
-	});
+			return true;
+		});
+	}, [categoryFilter, searchQuery]);
 
 	const getTotalLevels = () => {
 		return licenses.reduce((total, license) => total + license.levels.length, 0);
 	};
 
 	const getCompletedLevels = () => {
-		return Object.keys(localLicensesState).filter((key) => localLicensesState[key]).length;
-	};
-
-	const getCompletedLicenses = () => {
-		return licenses.filter((license) => areAllLevelsComplete(license)).length;
+		return Object.keys(localState).filter((key) => localState[key]).length;
 	};
 
 	const getTotalPermitPoints = () => {
@@ -182,7 +191,7 @@ const LicensesTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) 
 		licenses.forEach((license) => {
 			license.levels.forEach((level) => {
 				const licenseKey = `${license.id}_level_${level.level}`;
-				if (localLicensesState[licenseKey]) {
+				if (localState[licenseKey]) {
 					spent += level.permitPointCost;
 				}
 			});
@@ -192,216 +201,159 @@ const LicensesTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) 
 
 	return (
 		<div className="space-y-6">
-			<div>
-				<div className="mb-2 flex items-center justify-between">
-					<h1 className="text-primary text-2xl font-bold">
-						Licenses ({getCompletedLicenses()} / {licenses.length})
-					</h1>
-					<Badge color="blue" size="lg">
-						{getCompletedLevels()} / {getTotalLevels()} levels obtained
-					</Badge>
-				</div>
+			<TabHeader
+				title="Licenses"
+				collectionName="levels obtained"
+				enableCollectionCount={true}
+				enableSaveAlert={true}
+				isDirty={isDirty.current}
+				collectedCount={getCompletedLevels()}
+				collectionTotal={getTotalLevels()}
+				dirtyMessage="Your license progress has not been saved yet."
+			/>
 
-				{isDirty.current && (
-					<SaveAlert message="Your license progress has not been saved yet." />
+			<FilterBar
+				showFilters={true}
+				filters={filters}
+				onFilterChange={handleFilterChange}
+				showSearch={true}
+				searchValue={searchQuery}
+				onSearchChange={(value) => setSearchQuery(value)}
+				searchPlaceholder="Search by name..."
+			/>
+
+			<FilterDetails
+				title="licenses"
+				filteredCount={filteredData.length}
+				totalCount={filteredData.length}
+				collectedLabel="Unlocked Levels"
+				collectedCount={getCompletedLevels()}
+				showRightBadge={true}
+				renderBadgeDetails={() => (
+					<span className="flex items-center">
+						Permit Points: {getSpentPermitPoints().toLocaleString()} /{" "}
+						{getTotalPermitPoints().toLocaleString()}{" "}
+						<img
+							src="https://static.wikia.nocookie.net/dinkum/images/9/97/Permit_Points.png"
+							alt="Permit Points"
+							className="ml-2 w-7"
+						/>
+					</span>
 				)}
-			</div>
+			/>
 
-			<div className="flex flex-col gap-4 md:flex-row">
-				<div className="w-full md:w-1/4">
-					<Select
-						value={categoryFilter}
-						onChange={(e) => setCategoryFilter(e.target.value)}
-					>
-						{licenseCategories.map((category) => (
-							<option key={category.id} value={category.id}>
-								{category.name}
-							</option>
-						))}
-					</Select>
-				</div>
-				<div className="w-full md:w-3/4">
-					<TextInput
-						id="search-licenses"
-						type="text"
-						icon={HiSearch}
-						placeholder="Search for licenses..."
-						value={searchQuery}
-						onChange={(e) => setSearchQuery(e.target.value)}
-						className="mb-4"
-					/>
-				</div>
-			</div>
-
-			<div className="mb-4">
-				<div className="flex justify-between">
-					<div>
-						<Badge color="indigo" size="lg">
-							<span className="flex items-center">
-								Permit Points: {getSpentPermitPoints().toLocaleString()} /{" "}
-								{getTotalPermitPoints().toLocaleString()}{" "}
-								<img
-									src="https://static.wikia.nocookie.net/dinkum/images/9/97/Permit_Points.png"
-									alt="Permit Points"
-									className="ml-2 w-7"
-								/>
-							</span>
-						</Badge>
-					</div>
-					<div>
-						<Badge color="success" size="lg">
-							<span className="flex items-center">
-								{Math.round(
-									(getSpentPermitPoints() / getTotalPermitPoints()) * 100
-								)}
-								% obtained
-							</span>
-						</Badge>
-					</div>
-				</div>
-			</div>
-
-			<div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-				{filteredLicenses.length === 0 ? (
-					<Card className="py-8 text-center">
-						<p>No licenses match your search criteria. Try adjusting your filters.</p>
-					</Card>
-				) : (
-					filteredLicenses.map((license) => {
+			{filteredData.length > 0 && (
+				<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+					{filteredData.map((license) => {
 						const allComplete = areAllLevelsComplete(license);
-						const completedCount = getCompletedLevelsForLicense(license);
 
 						return (
-							<Card
+							<ItemCard
 								key={license.id}
-								className={`h-full ${allComplete ? "border-green-200 bg-green-50 dark:border-green-800 dark:bg-green-900/10" : ""}`}
-							>
-								<div className="flex h-full flex-col gap-4 md:flex-row">
-									<div className="flex w-full items-center justify-center md:w-1/4">
-										<div className="relative">
-											<img
-												src={license.img}
-												alt={license.name}
-												className="h-24 w-24 object-contain"
-											/>
-											{allComplete && (
-												<div className="absolute -top-2 -right-2 rounded-full bg-green-500 p-1 text-white">
-													<HiCheck className="h-4 w-4" />
-												</div>
-											)}
-										</div>
-									</div>
-									<div className="flex w-full flex-col md:w-3/4">
-										<div className="mb-1 flex items-start justify-between">
-											<h3 className="text-primary text-lg font-bold">
-												{license.name}
-											</h3>
-											<div className="flex items-center gap-2">
-												<Badge color={allComplete ? "success" : "gray"}>
-													{completedCount}/{license.levels.length}
-												</Badge>
-												<Button
-													size="xs"
-													color={allComplete ? "accent" : "secondary"}
-													onClick={() =>
-														toggleAllLevelsForLicense(
-															license,
-															!allComplete
-														)
-													}
-												>
-													{allComplete ? "Clear All" : "Complete All"}
-												</Button>
-											</div>
-										</div>
-										{license.requirements && (
-											<p className="mb-2 text-sm text-gray-600 dark:text-gray-400">
-												<span className="font-medium">Requirements:</span>{" "}
-												{license.requirements}
-											</p>
+								renderHeader={() => (
+									<ItemHeader
+										title={license.name}
+										renderRightComp={() => (
+											<Button
+												size="xs"
+												color={allComplete ? "accent" : "secondary"}
+												onClick={() =>
+													toggleAllLevelsForLicense(license, !allComplete)
+												}
+											>
+												{allComplete ? "Clear All" : "Complete All"}
+											</Button>
 										)}
+									/>
+								)}
+								renderImage={() => (
+									<ItemImage
+										src={license.img}
+										name={license.name}
+										isCollected={allComplete}
+									/>
+								)}
+								renderDetails={() => (
+									<div className="grid grid-cols-1 gap-2">
+										{license.requirements && (
+											<ItemDetail
+												label="Requirement"
+												details={license.requirements}
+											/>
+										)}
+										{license.levels.map((level) => {
+											const licenseKey = `${license.id}_level_${level.level}`;
+											const isObtained = localState[licenseKey] === true;
+											const canObtain = isPreviousLevelObtained(
+												license.id,
+												level.level
+											);
 
-										<div className="space-y-3">
-											{license.levels.map((level) => {
-												const licenseKey = `${license.id}_level_${level.level}`;
-												const isObtained =
-													localLicensesState[licenseKey] === true;
-												const canObtain = isPreviousLevelObtained(
-													license.id,
-													level.level
-												);
-
-												return (
-													<div
-														key={licenseKey}
-														className={`rounded-lg p-2 ${
-															isObtained
-																? "bg-green-50 dark:bg-green-900/20"
-																: "bg-gray-50 dark:bg-gray-800/50"
-														}`}
-													>
-														<div className="flex flex-col gap-2">
-															<div className="flex items-center justify-between">
-																<div className="flex items-center gap-2">
-																	{!canObtain ? (
-																		<Tooltip content="Complete previous level(s) first">
-																			<span className="inline-flex">
-																				<HiLockClosed className="text-gray-400" />
-																			</span>
-																		</Tooltip>
-																	) : (
-																		<Checkbox
-																			id={`license-${license.id}-level-${level.level}`}
-																			checked={isObtained}
-																			onChange={() =>
-																				handleToggleLicenseLevel(
-																					license.id,
-																					level.level
-																				)
-																			}
-																			disabled={!canObtain}
-																			className="mr-2"
-																		/>
-																	)}
-																	<Label
-																		htmlFor={`license-${license.id}-level-${level.level}`}
-																		className={`${canObtain ? "cursor-pointer" : "cursor-not-allowed text-gray-500"} font-medium`}
-																	>
-																		Level {level.level}
-																	</Label>
-																</div>
-																<Badge color="indigo">
-																	{level.permitPointCost.toLocaleString()}{" "}
-																	<img
-																		src="https://static.wikia.nocookie.net/dinkum/images/9/97/Permit_Points.png"
-																		alt="Permit Points"
-																		className="ml-1 inline w-4"
+											return (
+												<div
+													key={licenseKey}
+													className="rounded-lg bg-gray-100 p-2 dark:bg-gray-900"
+												>
+													<div className="flex flex-col gap-2">
+														<div className="flex items-center justify-between">
+															<div className="flex items-center gap-2">
+																{!canObtain ? (
+																	<Tooltip content="Complete previous level(s) first">
+																		<span className="inline-flex">
+																			<HiLockClosed className="text-gray-400" />
+																		</span>
+																	</Tooltip>
+																) : (
+																	<Checkbox
+																		id={`license-${license.id}-level-${level.level}`}
+																		checked={isObtained}
+																		onChange={() =>
+																			handleToggleLicenseLevel(
+																				license.id,
+																				level.level
+																			)
+																		}
+																		disabled={!canObtain}
+																		className="mr-2"
 																	/>
-																</Badge>
+																)}
+																<Label
+																	htmlFor={`license-${license.id}-level-${level.level}`}
+																	className={`${canObtain ? "cursor-pointer" : "cursor-not-allowed text-gray-500"} font-medium`}
+																>
+																	Level {level.level}
+																</Label>
 															</div>
-															{level.skillLevel > 0 && (
-																<div className="ml-7 text-sm text-gray-600 dark:text-gray-400">
-																	<span className="font-medium">
-																		Required Skill Level:{" "}
-																	</span>
-																	{level.skillLevel}
-																</div>
-															)}
+															<Badge color="indigo">
+																<PermiteValue
+																	price={level.permitPointCost}
+																/>
+															</Badge>
+														</div>
+														{level.skillLevel > 0 && (
 															<div className="ml-7 text-sm text-gray-600 dark:text-gray-400">
-																{level.description}
+																<span className="font-medium">
+																	Required Skill Level:{" "}
+																</span>
+																{level.skillLevel}
 															</div>
+														)}
+														<div className="ml-7 text-sm text-gray-600 dark:text-gray-400">
+															{level.description}
 														</div>
 													</div>
-												);
-											})}
-										</div>
+												</div>
+											);
+										})}
 									</div>
-								</div>
-							</Card>
+								)}
+							/>
 						);
-					})
-				)}
-			</div>
+					})}
+				</div>
+			)}
+
+			{filteredData.length === 0 && <EmptyFilterCard />}
 		</div>
 	);
 });

@@ -1,6 +1,7 @@
 import { FilterDetailsProps } from "@/types";
+import { Badge } from "flowbite-react";
 
-const FilterDetails = ({
+const FilterDetails: React.FC<FilterDetailsProps> = ({
 	title,
 	filteredCount,
 	totalCount,
@@ -8,9 +9,11 @@ const FilterDetails = ({
 	collectedCount,
 	donatedLabel,
 	donatedCount,
+	showRightBadge = false,
+	renderBadgeDetails,
 }: FilterDetailsProps) => {
 	return (
-		<div className="mb-4">
+		<div className="mb-4 flex justify-between">
 			<p className="text-primary font-medium">
 				Showing {filteredCount} of {totalCount} {title}
 				{collectedLabel && (
@@ -24,6 +27,11 @@ const FilterDetails = ({
 					</span>
 				)}
 			</p>
+			{showRightBadge && (
+				<Badge color="indigo" size="lg">
+					{renderBadgeDetails && renderBadgeDetails()}
+				</Badge>
+			)}
 		</div>
 	);
 };

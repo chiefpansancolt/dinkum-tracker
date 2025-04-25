@@ -36,6 +36,8 @@ export interface FilterDetailsProps {
   collectedCount?: number;
   donatedLabel?: string;
   donatedCount?: number;
+  showRightBadge?: boolean;
+  renderBadgeDetails?: () => React.ReactNode;
 }
 
 export interface ItemImageProps {
@@ -54,6 +56,11 @@ export interface DinkValueProps {
   label: string;
   price: number;
   showCommerceLicenses?: boolean;
+}
+
+export interface PermitValueProps {
+  label?: string;
+  price: number;
 }
 
 export interface ItemFooterProps {
