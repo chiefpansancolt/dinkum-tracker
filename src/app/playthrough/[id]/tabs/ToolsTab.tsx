@@ -195,96 +195,92 @@ const ToolsTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) => 
 			{filteredTools.length > 0 && (
 				<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
 					{filteredTools.map((tool) => {
-							const isCollected = localState[tool.id] === true;
-							const isCraftable = tool.source.includes("Crafting Table");
+						const isCollected = localState[tool.id] === true;
+						const isCraftable = tool.source.includes("Crafting Table");
 
-							return (
-								<ItemCard
-									key={tool.id}
-									renderHeader={() => (
-										<ItemHeader
-											title={tool.name}
-											renderRightComp={() =>
-												isCraftable && (
-													<Button
-														as={Link}
-														href={`#craftingRecipes?q=${tool.name}`}
-														color="secondary"
-														size="xs"
-													>
-														Crafting Recipe
-													</Button>
-												)
-											}
-										/>
-									)}
-									renderImage={() => (
-										<ItemImage
-											src={tool.img}
-											name={tool.name}
-											isCollected={isCollected}
-										/>
-									)}
-									renderDetails={() => (
-										<div className="grid grid-cols-1 gap-2">
-											{tool.licence && (
-												<ItemDetail label="License" details={tool.licence} />
-											)}
+						return (
+							<ItemCard
+								key={tool.id}
+								renderHeader={() => (
+									<ItemHeader
+										title={tool.name}
+										renderRightComp={() =>
+											isCraftable && (
+												<Button
+													as={Link}
+													href={`#craftingRecipes?q=${tool.name}`}
+													color="secondary"
+													size="xs"
+												>
+													Crafting Recipe
+												</Button>
+											)
+										}
+									/>
+								)}
+								renderImage={() => (
+									<ItemImage
+										src={tool.img}
+										name={tool.name}
+										isCollected={isCollected}
+									/>
+								)}
+								renderDetails={() => (
+									<div className="grid grid-cols-1 gap-2">
+										{tool.licence && (
+											<ItemDetail label="License" details={tool.licence} />
+										)}
 
-											{tool.source && tool.source.length > 0 && (
-												<ItemDetail
-													label="Source"
-													details={tool.source.join(", ")}
-												/>
-											)}
+										{tool.source && tool.source.length > 0 && (
+											<ItemDetail
+												label="Source"
+												details={tool.source.join(", ")}
+											/>
+										)}
 
-											{tool.damage && tool.damage > 0 && (
-												<ItemDamage
-													label="Damage"
-													damage={tool.damage}
-												/>
-											)}
+										{tool.damage && tool.damage > 0 && (
+											<ItemDamage label="Damage" damage={tool.damage} />
+										)}
 
-											{(tool.shinyDiscCount || tool.berkoniumOreCount) && (
-												<ItemFranklyn
-													shinyDiscCount={tool.shinyDiscCount}
-													berkoniumOreCount={tool.berkoniumOreCount}
-												/>
-											)}
+										{(tool.shinyDiscCount || tool.berkoniumOreCount) && (
+											<ItemFranklyn
+												shinyDiscCount={tool.shinyDiscCount}
+												berkoniumOreCount={tool.berkoniumOreCount}
+											/>
+										)}
 
-											{tool.inputs && tool.inputs.length > 0 && (
-												<ItemResources
-													id={tool.id}
-													label="Ingredients"
-													items={tool.inputs}
-												/>
-											)}
+										{tool.inputs && tool.inputs.length > 0 && (
+											<ItemResources
+												id={tool.id}
+												label="Ingredients"
+												items={tool.inputs}
+											/>
+										)}
 
-											{tool.buyPrice !== undefined && (
-												<DinkValue label="Buy Price" price={tool.buyPrice} />
-											)}
+										{tool.buyPrice !== undefined && (
+											<DinkValue label="Buy Price" price={tool.buyPrice} />
+										)}
 
-											{tool.baseSellPrice !== null && (
-												<DinkValue
-													label="Sell Price"
-													price={tool.baseSellPrice}
-													showCommerceLicenses
-												/>
-											)}
-										</div>
-									)}
-									renderFooter={() => (
-										<ItemFooter
-											id={tool.id}
-											leftLabel="Collected"
-											isLeftChecked={isCollected}
-											handleLeftToggle={handleToggleCollected}
-										/>
-									)}
-								/>
-							);
-						})
-					}
+										{tool.baseSellPrice !== null && (
+											<DinkValue
+												label="Sell Price"
+												price={tool.baseSellPrice}
+												showCommerceLicenses
+											/>
+										)}
+									</div>
+								)}
+								renderFooter={() => (
+									<ItemFooter
+										id={tool.id}
+										leftLabel="Collected"
+										isLeftChecked={isCollected}
+										handleLeftToggle={handleToggleCollected}
+									/>
+								)}
+							/>
+						);
+					})}
 				</div>
 			)}
 

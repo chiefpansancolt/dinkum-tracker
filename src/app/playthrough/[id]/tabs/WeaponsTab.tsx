@@ -226,10 +226,7 @@ const WeaponsTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) =
 										)}
 
 										{weapon.damage && (
-											<ItemDamage
-												label="Damage"
-												damage={weapon.damage}
-											/>
+											<ItemDamage label="Damage" damage={weapon.damage} />
 										)}
 
 										{weapon.inputs && weapon.inputs.length > 0 && (

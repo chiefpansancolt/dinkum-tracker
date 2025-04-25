@@ -170,7 +170,7 @@ const VehiclesTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) 
 				collectedLabel="Collected"
 				collectedCount={getCollectedCount()}
 			/>
-			
+
 			{filteredVehicles.length > 0 && (
 				<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
 					{filteredVehicles.map((vehicle) => {
@@ -227,7 +227,9 @@ const VehiclesTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) 
 												label="Compatible with"
 												details={[
 													vehicle.windmillCompatable ? "Windmill" : "",
-													vehicle.solarPanelCompatable ? "Solar Panel" : "",
+													vehicle.solarPanelCompatable
+														? "Solar Panel"
+														: "",
 												]
 													.filter(Boolean)
 													.join(", ")}

@@ -17,4 +17,4 @@ const ItemDamage = ({ label, damage }: ItemDamageProps) => {
 	);
 };
 
-export default ItemDamage
+export default ItemDamage;
