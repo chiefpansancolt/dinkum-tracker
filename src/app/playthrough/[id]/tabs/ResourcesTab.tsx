@@ -76,10 +76,8 @@ export default function ResourcesTab() {
 		return Object.values(ResourceType);
 	}, []);
 
-	// Extract all unique sources from resources
 	const allSources = useMemo(() => {
 		const sources = new Set<string>();
-		sources.add("All"); // Add "All" option
 
 		allResources.forEach((resource) => {
 			if (resource.source && resource.source.length > 0) {
@@ -94,24 +92,20 @@ export default function ResourcesTab() {
 
 	const filteredResources = useMemo(() => {
 		return allResources.filter((resource) => {
-			// Filter by search query
 			if (searchQuery && !resource.name.toLowerCase().includes(searchQuery.toLowerCase())) {
 				return false;
 			}
 
-			// Filter by resource type
 			if (selectedTypes.length > 0 && !selectedTypes.includes(resource.resourceType)) {
 				return false;
 			}
 
-			// Filter by source
 			if (selectedSource !== "All") {
 				if (!resource.source || !resource.source.includes(selectedSource)) {
 					return false;
 				}
 			}
 
-			// Filter by price range
 			const minPrice = priceRangeMin ? parseInt(priceRangeMin) : 0;
 			const maxPrice = priceRangeMax ? parseInt(priceRangeMax) : Infinity;
 			if (resource.baseSellPrice < minPrice || resource.baseSellPrice > maxPrice) {

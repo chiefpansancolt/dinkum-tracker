@@ -27,8 +27,7 @@ const EquipmentTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref)
 	const [searchQuery, setSearchQuery] = useState("");
 	const [sourceFilter, setSourceFilter] = useState<string>("All");
 	const [requirementFilter, setRequirementFilter] = useState<string>("All");
-	const [localEquipmentState, setLocalEquipmentState] =
-		useState<Record<string, boolean>>(collected);
+	const [localState, setLocalState] = useState<Record<string, boolean>>(collected);
 
 	const isDirty = useRef(false);
 
@@ -55,7 +54,7 @@ const EquipmentTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref)
 	}, []);
 
 	useEffect(() => {
-		setLocalEquipmentState(collected);
+		setLocalState(collected);
 		isDirty.current = false;
 
 		const hashParams = getHashQueryParams();
@@ -73,7 +72,7 @@ const EquipmentTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref)
 	}, [searchQuery]);
 
 	const handleToggleCollected = (id: string, isCollected: boolean) => {
-		setLocalEquipmentState((prev) => ({
+		setLocalState((prev) => ({
 			...prev,
 			[id]: isCollected,
 		}));
@@ -81,23 +80,21 @@ const EquipmentTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref)
 		isDirty.current = true;
 	};
 
-	const save = () => {
-		if (!playthroughId || !isDirty.current) return false;
-
-		const success = updatePlaythroughData(playthroughId, {
-			equipment: localEquipmentState,
-		});
-
-		if (success) {
-			isDirty.current = false;
-			return true;
-		}
-
-		return false;
-	};
-
 	useImperativeHandle(ref, () => ({
-		save,
+		save: () => {
+			if (!playthroughId || !isDirty.current) return false;
+
+			const success = updatePlaythroughData(playthroughId, {
+				equipment: localState,
+			});
+
+			if (success) {
+				isDirty.current = false;
+				return true;
+			}
+
+			return false;
+		},
 	}));
 
 	const filteredEquipment = useMemo(() => {
@@ -119,7 +116,7 @@ const EquipmentTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref)
 	}, [sourceFilter, requirementFilter, searchQuery]);
 
 	const getCollectedCount = () => {
-		return Object.keys(localEquipmentState).filter((key) => localEquipmentState[key]).length;
+		return Object.keys(localState).filter((key) => localState[key]).length;
 	};
 
 	const filters = {
@@ -179,7 +176,7 @@ const EquipmentTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref)
 					<EmptyFilterCard />
 				) : (
 					filteredEquipment.map((item) => {
-						const isCollected = localEquipmentState[item.id] === true;
+						const isCollected = localState[item.id] === true;
 						const isCraftable = item.source.includes("Crafting Table");
 
 						return (

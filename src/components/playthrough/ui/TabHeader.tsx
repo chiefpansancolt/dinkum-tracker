@@ -6,8 +6,8 @@ const TabHeader = ({
 	title,
 	collectionName,
 	enableCollectionCount = true,
-	collectedCount,
-	collectionTotal,
+	collectedCount = 0,
+	collectionTotal = 0,
 	enableSaveAlert = true,
 	isDirty,
 	dirtyMessage,
@@ -23,7 +23,7 @@ const TabHeader = ({
 						</span>
 					)}
 				</h1>
-				{enableCollectionCount && collectedCount && collectionTotal && (
+				{enableCollectionCount && (
 					<Badge color="blue" size="lg">
 						{Math.round((collectedCount / collectionTotal) * 100)}% {collectionName}
 					</Badge>

@@ -1,8 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import { Card, Button } from "flowbite-react";
+import { Button } from "flowbite-react";
 import { NPCCardProps } from "@/types";
 import { HiHeart, HiOutlineHeart } from "react-icons/hi";
+import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
+import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
+import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
+import ItemDetail from "../ui/itemcard/ItemDetail";
 
 const NPCCard: React.FC<NPCCardProps> = ({ npc, hearts, onHeartsChange }) => {
 	const fullHearts = Math.floor(hearts);
@@ -12,7 +16,7 @@ const NPCCard: React.FC<NPCCardProps> = ({ npc, hearts, onHeartsChange }) => {
 
 	const renderHeartSection = () => {
 		return (
-			<div className="mt-auto border-t border-gray-200 pt-3 dark:border-gray-700">
+			<div className="mt-4 border-t border-gray-200 pt-3 dark:border-gray-700">
 				<div className="flex items-center gap-1">
 					<div className="flex-grow">
 						<div className="flex items-center">
@@ -23,7 +27,7 @@ const NPCCard: React.FC<NPCCardProps> = ({ npc, hearts, onHeartsChange }) => {
 								return (
 									<div key={index} className="relative h-6 w-6 cursor-pointer">
 										<HiOutlineHeart
-											className="absolute h-6 w-6 text-gray-400"
+											className="absolute h-6 w-6 text-gray-500 dark:text-gray-100"
 											onClick={() => {
 												if (index >= fullHearts) {
 													onHeartsChange(npc.id, index + 1);
@@ -69,7 +73,7 @@ const NPCCard: React.FC<NPCCardProps> = ({ npc, hearts, onHeartsChange }) => {
 							<span className="sr-only">Decrease hearts</span>-
 						</Button>
 
-						<span className="w-16 text-center">
+						<span className="w-16 text-center text-gray-900 dark:text-gray-50">
 							{hearts
 								.toFixed(2)
 								.replace(/\.00$/, "")
@@ -97,105 +101,73 @@ const NPCCard: React.FC<NPCCardProps> = ({ npc, hearts, onHeartsChange }) => {
 	};
 
 	return (
-		<Card className="flex h-full">
-			<div className="flex h-full flex-col">
-				<div className="mb-4 flex-grow">
-					<div className="flex items-start">
-						<h3 className="text-primary text-xl font-bold">{npc.name}</h3>
+		<ItemCard
+			renderHeader={() => <ItemHeader title={npc.name} />}
+			renderImage={() => <ItemImage src={npc.img} name={npc.name} isCollected={false} />}
+			renderDetails={() => (
+				<div className="grid grid-cols-1 gap-2">
+					<ItemDetail label="Ocupation" details={npc.occupation} />
+
+					<div>
+						<h4 className="font-semibold text-gray-900 underline dark:text-gray-50">
+							Requirements:
+						</h4>
+						<div className="mt-1 ml-2 space-y-1">
+							<ItemDetail label="Visit" details={npc.requirements.visit} />
+							<ItemDetail label="Move In" details={npc.requirements.moveIn} />
+						</div>
 					</div>
 
-					<div className="mt-4 flex flex-col gap-4 md:flex-row">
-						<div className="flex items-center justify-center md:w-1/4">
-							<img
-								src={npc.img}
-								alt={npc.name}
-								className="h-24 w-24 object-contain"
-							/>
-						</div>
-
-						<div className="flex-1 md:w-3/4">
-							<div className="space-y-3">
-								<div>
-									<h4 className="font-semibold text-gray-700 dark:text-gray-300">
-										Occupation
-									</h4>
-									<p className="text-sm whitespace-pre-line">{npc.occupation}</p>
-								</div>
-
-								<div>
-									<h4 className="font-semibold text-gray-700 dark:text-gray-300">
-										Requirements
-									</h4>
-									<div className="space-y-1">
-										<p className="text-sm">
-											<span className="font-medium">Visit:</span>{" "}
-											{npc.requirements.visit}
-										</p>
-										<p className="text-sm">
-											<span className="font-medium">Move In:</span>{" "}
-											{npc.requirements.moveIn}
-										</p>
-									</div>
-								</div>
-
-								<div>
-									<h4 className="font-semibold text-gray-700 dark:text-gray-300">
-										Food Preferences
-									</h4>
-									<div className="space-y-1">
-										{npc.foodPreferences.likes !== "None" ? (
-											<div className="flex items-center">
-												<span className="mr-2 text-sm font-medium">
-													Likes:
-												</span>
-												{npc.foodPreferences.likesImg && (
+					<div>
+						<h4 className="font-semibold text-gray-900 underline dark:text-gray-50">
+							Food Preferences:
+						</h4>
+						<div className="mt-1 ml-2 space-y-1">
+							{npc.foodPreferences.likes !== "None" ? (
+								<ItemDetail
+									label="Likes"
+									details={npc.foodPreferences.likes}
+									iconComp={
+										npc.foodPreferences.likesImg
+											? () => (
 													<img
 														src={npc.foodPreferences.likesImg}
 														alt={`${npc.foodPreferences.likes} icon`}
 														className="mr-1 h-5 w-5 object-contain"
 													/>
-												)}
-												<span className="text-sm">
-													{npc.foodPreferences.likes}
-												</span>
-											</div>
-										) : (
-											<p className="text-sm">
-												<span className="font-medium">Likes:</span> None
-											</p>
-										)}
+												)
+											: undefined
+									}
+								/>
+							) : (
+								<ItemDetail label="Likes" details="None" />
+							)}
 
-										{npc.foodPreferences.dislikes !== "None" ? (
-											<div className="flex items-center">
-												<span className="mr-2 text-sm font-medium">
-													Dislikes:
-												</span>
-												{npc.foodPreferences.dislikesImg && (
+							{npc.foodPreferences.dislikes !== "None" ? (
+								<ItemDetail
+									label="Dislikes"
+									details={npc.foodPreferences.dislikes}
+									iconComp={
+										npc.foodPreferences.dislikesImg
+											? () => (
 													<img
 														src={npc.foodPreferences.dislikesImg}
 														alt={`${npc.foodPreferences.dislikes} icon`}
 														className="mr-1 h-5 w-5 object-contain"
 													/>
-												)}
-												<span className="text-sm whitespace-pre-line">
-													{npc.foodPreferences.dislikes}
-												</span>
-											</div>
-										) : (
-											<p className="text-sm">
-												<span className="font-medium">Dislikes:</span> None
-											</p>
-										)}
-									</div>
-								</div>
-							</div>
+												)
+											: undefined
+									}
+								/>
+							) : (
+								<ItemDetail label="DisLikes" details="None" />
+							)}
 						</div>
 					</div>
 				</div>
-
-				{renderHeartSection()}
-			</div>
-		</Card>
+			)}
+			renderFooter={() => renderHeartSection()}
+		/>
 	);
 };
 

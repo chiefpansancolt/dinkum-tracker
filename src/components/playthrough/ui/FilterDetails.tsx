@@ -13,12 +13,12 @@ const FilterDetails = ({
 		<div className="mb-4">
 			<p className="text-primary font-medium">
 				Showing {filteredCount} of {totalCount} {title}
-				{collectedLabel && collectedCount && (
+				{collectedLabel && (
 					<span className="ml-1">
 						• {collectedLabel}: {collectedCount}
 					</span>
 				)}
-				{donatedLabel && donatedCount && (
+				{donatedLabel && (
 					<span className="ml-1">
 						• {donatedLabel}: {donatedCount}
 					</span>

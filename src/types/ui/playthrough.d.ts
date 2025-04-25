@@ -105,3 +105,8 @@ export interface ItemFranklynProps {
   shinyDiscCount?: number;
   berkoniumOreCount?: number;
 }
+
+export interface ItemDamageProps {
+  label: string;
+  damage: number;
+}
