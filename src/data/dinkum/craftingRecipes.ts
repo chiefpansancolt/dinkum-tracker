@@ -813,6 +813,136 @@ export const craftingRecipes: Recipe[] = [
     ],
   },
   {
+    id: "bug_terrarium",
+    name: "Bug Terrarium",
+    img: "https://static.wikia.nocookie.net/dinkum/images/1/1d/Inv_Bug_Terrarium.png",
+    baseSellPrice: 0,
+    source: ["Bug Catching Level 30"],
+    outputCount: 1,
+    variants: [
+      {
+        id: "bronze_bug_trophy",
+        inputs: [
+          {
+            name: "Palm Wood Plank",
+            count: 25,
+            img: "https://static.wikia.nocookie.net/dinkum/images/3/39/Inv_Palm_Wood_Plank.png",
+          },
+          {
+            name: "Vine",
+            count: 25,
+            img: "https://static.wikia.nocookie.net/dinkum/images/e/ea/Inv_Vine.png",
+          },
+          {
+            name: "Bird of Paradise",
+            count: 10,
+            img: "https://static.wikia.nocookie.net/dinkum/images/b/b4/Inv_Bird_of_Paradise.png",
+          },
+          {
+            name: "Quartz Crystal",
+            count: 10,
+            img: "https://static.wikia.nocookie.net/dinkum/images/5/5a/Inv_Quartz_Crystal.png",
+          },
+          {
+            name: "Fir Grass Seeds",
+            count: 10,
+            img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Fir_Grass_Seeds.png",
+          },
+          {
+            name: "Bee House",
+            count: 1,
+            img: "https://static.wikia.nocookie.net/dinkum/images/0/08/Inv_Bee_House.png",
+          },
+          {
+            name: "Bronze Bug Comp Trophy",
+            count: 1,
+            img: "https://static.wikia.nocookie.net/dinkum/images/a/a7/Inv_Bronze_Bug_Comp_Trophy.png",
+          },
+        ],
+      },
+      {
+        id: "silver_bug_trophy",
+        inputs: [
+          {
+            name: "Palm Wood Plank",
+            count: 25,
+            img: "https://static.wikia.nocookie.net/dinkum/images/3/39/Inv_Palm_Wood_Plank.png",
+          },
+          {
+            name: "Vine",
+            count: 25,
+            img: "https://static.wikia.nocookie.net/dinkum/images/e/ea/Inv_Vine.png",
+          },
+          {
+            name: "Bird of Paradise",
+            count: 10,
+            img: "https://static.wikia.nocookie.net/dinkum/images/b/b4/Inv_Bird_of_Paradise.png",
+          },
+          {
+            name: "Quartz Crystal",
+            count: 10,
+            img: "https://static.wikia.nocookie.net/dinkum/images/5/5a/Inv_Quartz_Crystal.png",
+          },
+          {
+            name: "Fir Grass Seeds",
+            count: 10,
+            img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Fir_Grass_Seeds.png",
+          },
+          {
+            name: "Bee House",
+            count: 1,
+            img: "https://static.wikia.nocookie.net/dinkum/images/0/08/Inv_Bee_House.png",
+          },
+          {
+            name: "Silver Bug Comp Trophy",
+            count: 1,
+            img: "https://static.wikia.nocookie.net/dinkum/images/b/b5/Inv_Silver_Bug_Comp_Trophy.png",
+          },
+        ],
+      },
+      {
+        id: "gold_bug_trophy",
+        inputs: [
+          {
+            name: "Palm Wood Plank",
+            count: 25,
+            img: "https://static.wikia.nocookie.net/dinkum/images/3/39/Inv_Palm_Wood_Plank.png",
+          },
+          {
+            name: "Vine",
+            count: 25,
+            img: "https://static.wikia.nocookie.net/dinkum/images/e/ea/Inv_Vine.png",
+          },
+          {
+            name: "Bird of Paradise",
+            count: 10,
+            img: "https://static.wikia.nocookie.net/dinkum/images/b/b4/Inv_Bird_of_Paradise.png",
+          },
+          {
+            name: "Quartz Crystal",
+            count: 10,
+            img: "https://static.wikia.nocookie.net/dinkum/images/5/5a/Inv_Quartz_Crystal.png",
+          },
+          {
+            name: "Fir Grass Seeds",
+            count: 10,
+            img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Fir_Grass_Seeds.png",
+          },
+          {
+            name: "Bee House",
+            count: 1,
+            img: "https://static.wikia.nocookie.net/dinkum/images/0/08/Inv_Bee_House.png",
+          },
+          {
+            name: "Gold Bug Comp Trophy",
+            count: 1,
+            img: "https://static.wikia.nocookie.net/dinkum/images/5/57/Inv_Gold_Bug_Comp_Trophy.png",
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: "bulletin_board",
     name: "Bulletin Board",
     img: "https://static.wikia.nocookie.net/dinkum/images/c/c5/Bulletin_Board_Sprite.png",
