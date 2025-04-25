@@ -19,7 +19,7 @@ export interface FilterBarProps {
 
 export interface TabHeaderProps {
   title: string;
-  collectionName: string;
+  collectionName?: string;
   enableCollectionCount: boolean;
   collectedCount?: number;
   collectionTotal?: number;
@@ -78,7 +78,7 @@ export interface DinkPriceProps {
 
 export interface ItemCardProps {
   renderHeader: () => React.ReactNode;
-  renderImage: () => React.ReactNode;
+  renderImage?: () => React.ReactNode;
   renderDetails: () => React.ReactNode;
   renderFooter?: () => React.ReactNode;
 }
