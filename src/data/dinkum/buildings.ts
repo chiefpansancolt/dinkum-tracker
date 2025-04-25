@@ -1101,6 +1101,55 @@ export const buildings: Building[] = [
     operatingHours: [],
     daysClosed: "",
   },
+  {
+    id: "town_bell",
+    name: "Town Bell",
+    deedName: "Town Bell Deed",
+    size: "3x3",
+    img: "https://static.wikia.nocookie.net/dinkum/images/4/49/Inv_Town_Bell_Deed.png",
+    npc: "Fletch",
+    npcImg:
+      "https://static.wikia.nocookie.net/dinkum/images/c/c4/NPC_Fletch.png",
+    description:
+      "The Town Bell Deed is unlocked after completing the Town Hall.",
+    buildTime: "2 nights",
+    deedPrice: 125000,
+    deedType: DeedTypes.Collectable,
+    inputs: [
+      {
+        count: 10,
+        name: "Gum Wood Plank",
+        img: "https://static.wikia.nocookie.net/dinkum/images/3/38/Inv_Gum_Wood_Plank.png",
+      },
+      {
+        count: 10,
+        name: "Hard Wood Plank",
+        img: "https://static.wikia.nocookie.net/dinkum/images/3/39/Inv_Palm_Wood_Plank.png",
+      },
+      {
+        count: 10,
+        name: "Copper Bar",
+        img: "https://static.wikia.nocookie.net/dinkum/images/7/7a/Inv_Copper_Bar.png",
+      },
+      {
+        count: 10,
+        name: "Iron Bar",
+        img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Inv_Iron_Bar.png",
+      },
+      {
+        count: 1,
+        name: "Opal",
+        img: "https://static.wikia.nocookie.net/dinkum/images/a/a7/Inv_Opal.png",
+      },
+      {
+        count: 16,
+        name: "Nails",
+        img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Nails.png",
+      },
+    ],
+    operatingHours: [],
+    daysClosed: "",
+  },
 ];
 
 export const getCollectableBuildingsCount = () => {
