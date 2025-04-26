@@ -1,6 +1,6 @@
 import { FilterBarProps, FilterArray, FilterObject } from "@/types";
-import { Label, Select, TextInput } from "flowbite-react";
-import { HiSearch } from "react-icons/hi";
+import { Label, Select, TextInput, Button } from "flowbite-react";
+import { HiSearch, HiFilter } from "react-icons/hi";
 
 const isFilterObjectArray = (options: FilterArray | FilterObject[]): options is FilterObject[] => {
 	return options.length > 0 && typeof options[0] === "object" && "id" in options[0];
@@ -14,25 +14,30 @@ const FilterBar: React.FC<FilterBarProps> = ({
 	searchValue = "",
 	onSearchChange,
 	searchPlaceholder = "Search by name...",
+	showActionButton = false,
+	actionButtonLabel = "Filter",
+	onActionButtonClick,
+	filterActive,
+	selectedCount,
 }) => {
 	const totalFilters = showFilters && filters ? Object.keys(filters).length * 2 : 0;
 
 	const getSearchColSpanClass = () => {
 		switch (totalFilters) {
 			case 0:
-				return "md:col-span-12";
+				return showActionButton ? "md:col-span-11" : "md:col-span-12";
 			case 2:
-				return "md:col-span-10";
+				return showActionButton ? "md:col-span-9" : "md:col-span-10";
 			case 4:
-				return "md:col-span-8";
+				return showActionButton ? "md:col-span-7" : "md:col-span-8";
 			case 6:
-				return "md:col-span-6";
+				return showActionButton ? "md:col-span-5" : "md:col-span-6";
 			case 8:
-				return "md:col-span-4";
+				return showActionButton ? "md:col-span-3" : "md:col-span-4";
 			case 10:
-				return "md:col-span-2";
+				return "md:col-span-1";
 			default:
-				return "md:col-span-12";
+				return showActionButton ? "md:col-span-11" : "md:col-span-12";
 		}
 	};
 
@@ -42,7 +47,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
 				onFilterChange &&
 				filters &&
 				Object.entries(filters).map(([key, filter]) => (
-					<div key={key} className="md:col-span-2">
+					<div key={key} className="col-span-1 md:col-span-2">
 						<div className="mb-2 block">
 							<Label htmlFor={`filter-${key}`}>{filter.label}</Label>
 						</div>
@@ -79,6 +84,26 @@ const FilterBar: React.FC<FilterBarProps> = ({
 						value={searchValue}
 						onChange={(e) => onSearchChange(e.target.value)}
 					/>
+				</div>
+			)}
+
+			{showActionButton && onActionButtonClick && (
+				<div className="col-span-1 flex items-end justify-start">
+					<Button
+						color={
+							filterActive || (selectedCount && selectedCount > 0)
+								? "primary"
+								: "light"
+						}
+						onClick={onActionButtonClick}
+						className="w-full"
+					>
+						<HiFilter className="mr-2 h-5 w-5" />
+						{actionButtonLabel}
+						{selectedCount !== undefined && selectedCount > 0 && (
+							<span className="ml-1">({selectedCount})</span>
+						)}
+					</Button>
 				</div>
 			)}
 		</div>

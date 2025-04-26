@@ -1,5 +1,5 @@
 import React from "react";
-import { Resource, ResourceVariant } from "../dinkum";
+import { Resource, ResourceVariant, Buffs, ResourceItem } from "../dinkum";
 
 export type FilterArray = string[];
 export interface FilterObject {
@@ -21,6 +21,11 @@ export interface FilterBarProps {
   searchValue?: string;
   onSearchChange?: (value: string) => void;
   searchPlaceholder?: string;
+  showActionButton?: boolean;
+  actionButtonLabel?: string;
+  onActionButtonClick?: () => void;
+  filterActive?: boolean;
+  selectedCount?: number;
 }
 
 export interface TabHeaderProps {
@@ -122,4 +127,14 @@ export interface ItemFranklynProps {
 export interface ItemDamageProps {
   label: string;
   damage: number;
+}
+
+export interface ItemBuffsProps {
+  id: string;
+  buffs: Buffs;
+}
+
+interface ResourceCardProps {
+  resource: ResourceItem;
+  getTypeColor: (type: ResourceType) => string;
 }

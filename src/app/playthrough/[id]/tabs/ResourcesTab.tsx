@@ -1,8 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useState, useMemo } from "react";
-import { Card, TextInput, Select, Badge, Label, Checkbox, Button } from "flowbite-react";
+import { Card, Badge, Checkbox, Button } from "flowbite-react";
 import {
 	animalProducts,
 	foragables,
@@ -11,18 +10,27 @@ import {
 	trophies,
 	otherCraftables,
 } from "@/data/dinkum";
-import { BuffIcons, ResourceType } from "@/data/constants";
-import { ResourceItem } from "@/types";
-import { HiSearch, HiX, HiFilter } from "react-icons/hi";
+import { ResourceType } from "@/data/constants";
+import { ResourceItem, ResourceCardProps } from "@/types";
+import TabHeader from "@/playthrough/ui/TabHeader";
+import FilterBar from "@/playthrough/ui/FilterBar";
+import FilterDetails from "@/playthrough/ui/FilterDetails";
+import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
+import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
+import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
+import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
+import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
+import DinkValue from "@/playthrough/ui/itemcard/DinkValue";
+import ItemResources from "@/playthrough/ui/itemcard/ItemResources";
+import ItemBuffs from "@/playthrough/ui/itemcard/ItemBuffs";
+import { HiX } from "react-icons/hi";
 
 export default function ResourcesTab() {
 	const [searchQuery, setSearchQuery] = useState<string>("");
 	const [selectedTypes, setSelectedTypes] = useState<ResourceType[]>([]);
-	const [selectedSource, setSelectedSource] = useState<string>("All");
+	const [sourceFilter, setSourceFilter] = useState<string>("All");
 	const [sortBy, setSortBy] = useState<string>("name");
 	const [showFilter, setShowFilter] = useState<boolean>(false);
-	const [priceRangeMin, setPriceRangeMin] = useState<string>("");
-	const [priceRangeMax, setPriceRangeMax] = useState<string>("");
 
 	const allResources = useMemo(() => {
 		const resources: ResourceItem[] = [];
@@ -73,7 +81,15 @@ export default function ResourcesTab() {
 	}, []);
 
 	const resourceTypes = useMemo(() => {
-		return Object.values(ResourceType);
+		return Object.values(ResourceType).filter(
+			(type) =>
+				type !== ResourceType.FISH &&
+				type !== ResourceType.BUG &&
+				type !== ResourceType.CRITTER &&
+				type !== ResourceType.CROP &&
+				type !== ResourceType.PAINT &&
+				type !== ResourceType.RESOURCE
+		);
 	}, []);
 
 	const allSources = useMemo(() => {
@@ -90,7 +106,32 @@ export default function ResourcesTab() {
 		return Array.from(sources).sort();
 	}, [allResources]);
 
-	const filteredResources = useMemo(() => {
+	const filters = {
+		sort: {
+			value: sortBy,
+			options: [
+				{ id: "name", value: "Name (A-Z)" },
+				{ id: "priceDesc", value: "Price (High to Low)" },
+				{ id: "priceAsc", value: "Price (Low to High)" },
+			],
+			label: "Sort By",
+		},
+		source: {
+			value: sourceFilter,
+			options: ["All", ...allSources],
+			label: "Source",
+		},
+	};
+
+	const handleFilterChange = (name: string, value: string) => {
+		if (name === "sort") {
+			setSortBy(value);
+		} else if (name === "source") {
+			setSourceFilter(value);
+		}
+	};
+
+	const filteredData = useMemo(() => {
 		return allResources.filter((resource) => {
 			if (searchQuery && !resource.name.toLowerCase().includes(searchQuery.toLowerCase())) {
 				return false;
@@ -100,24 +141,18 @@ export default function ResourcesTab() {
 				return false;
 			}
 
-			if (selectedSource !== "All") {
-				if (!resource.source || !resource.source.includes(selectedSource)) {
+			if (sourceFilter !== "All") {
+				if (!resource.source || !resource.source.includes(sourceFilter)) {
 					return false;
 				}
 			}
 
-			const minPrice = priceRangeMin ? parseInt(priceRangeMin) : 0;
-			const maxPrice = priceRangeMax ? parseInt(priceRangeMax) : Infinity;
-			if (resource.baseSellPrice < minPrice || resource.baseSellPrice > maxPrice) {
-				return false;
-			}
-
 			return true;
 		});
-	}, [allResources, searchQuery, selectedTypes, selectedSource, priceRangeMin, priceRangeMax]);
+	}, [allResources, searchQuery, selectedTypes, sourceFilter]);
 
 	const sortedResources = useMemo(() => {
-		return [...filteredResources].sort((a, b) => {
+		return [...filteredData].sort((a, b) => {
 			if (sortBy === "name") {
 				return a.name.localeCompare(b.name);
 			} else if (sortBy === "priceAsc") {
@@ -127,7 +162,7 @@ export default function ResourcesTab() {
 			}
 			return 0;
 		});
-	}, [filteredResources, sortBy]);
+	}, [filteredData, sortBy]);
 
 	const toggleType = (type: ResourceType) => {
 		setSelectedTypes((prev) => {
@@ -141,6 +176,10 @@ export default function ResourcesTab() {
 
 	const clearAllTypes = () => {
 		setSelectedTypes([]);
+	};
+
+	const toggleFilter = () => {
+		setShowFilter(!showFilter);
 	};
 
 	const typeCount = (type: ResourceType) => {
@@ -168,75 +207,28 @@ export default function ResourcesTab() {
 
 	return (
 		<div className="space-y-6">
-			<div>
-				<h1 className="text-primary mb-2 text-2xl font-bold">Resources</h1>
-				<p className="text-gray-600 dark:text-gray-400">
-					Browse all resources available in Dinkum including animal products, foragables,
-					minerals, relics, and trophies.
-				</p>
-			</div>
+			<TabHeader title="Resources" enableCollectionCount={false} enableSaveAlert={false} />
 
-			<div className="grid grid-cols-1 gap-4 md:grid-cols-12">
-				<div className="md:col-span-2">
-					<div className="mb-2 block">
-						<Label htmlFor="sort-by">Sort By</Label>
-					</div>
-					<Select id="sort-by" value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
-						<option value="name">Name (A-Z)</option>
-						<option value="priceDesc">Price (High to Low)</option>
-						<option value="priceAsc">Price (Low to High)</option>
-					</Select>
-				</div>
-
-				<div className="md:col-span-2">
-					<div className="mb-2 block">
-						<Label htmlFor="source-filter">Source</Label>
-					</div>
-					<Select
-						id="source-filter"
-						value={selectedSource}
-						onChange={(e) => setSelectedSource(e.target.value)}
-					>
-						{allSources.map((source) => (
-							<option key={source} value={source}>
-								{source}
-							</option>
-						))}
-					</Select>
-				</div>
-
-				<div className="md:col-span-7">
-					<div className="mb-2 block">
-						<Label htmlFor="search-resources">Search</Label>
-					</div>
-					<TextInput
-						id="search-resources"
-						type="text"
-						icon={HiSearch}
-						placeholder="Search by name..."
-						value={searchQuery}
-						onChange={(e) => setSearchQuery(e.target.value)}
-					/>
-				</div>
-
-				<div className="flex items-end justify-start md:col-span-1">
-					<Button
-						color={showFilter || selectedTypes.length > 0 ? "primary" : "light"}
-						onClick={() => setShowFilter(!showFilter)}
-					>
-						<HiFilter className="mr-2 h-5 w-5" />
-						<span>Filter</span>
-						{selectedTypes.length > 0 && (
-							<span className="ml-1">({selectedTypes.length})</span>
-						)}
-					</Button>
-				</div>
-			</div>
+			<FilterBar
+				showFilters={true}
+				filters={filters}
+				onFilterChange={handleFilterChange}
+				showSearch={true}
+				searchValue={searchQuery}
+				onSearchChange={(value) => setSearchQuery(value)}
+				searchPlaceholder="Search by name..."
+				showActionButton={true}
+				onActionButtonClick={toggleFilter}
+				filterActive={showFilter}
+				selectedCount={selectedTypes.length}
+			/>
 
 			{showFilter && (
-				<Card className="p-4">
-					<div className="mb-4 flex items-center justify-between">
-						<h3 className="text-lg font-medium">Filter by Resource Type</h3>
+				<Card>
+					<div className="mb-2 flex items-center justify-between">
+						<h3 className="text-lg font-medium text-gray-900 dark:text-gray-50">
+							Filter by Resource Type
+						</h3>
 						<Button
 							size="xs"
 							color="secondary"
@@ -248,7 +240,7 @@ export default function ResourcesTab() {
 						</Button>
 					</div>
 
-					<div className="mb-4 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-6">
+					<div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-6">
 						{resourceTypes.map((type) => {
 							const isSelected = selectedTypes.includes(type);
 							const count = typeCount(type);
@@ -259,13 +251,17 @@ export default function ResourcesTab() {
 									className={`flex cursor-pointer items-center gap-2 rounded-lg border p-2 ${
 										isSelected
 											? "border-blue-500 bg-blue-50 dark:border-blue-400 dark:bg-blue-900/20"
-											: "border-gray-200 dark:border-gray-700"
+											: "border-gray-700 dark:border-gray-500"
 									}`}
 									onClick={() => toggleType(type)}
 								>
 									<div className="flex flex-col">
-										<span className="text-sm font-medium">{type}</span>
-										<span className="text-xs text-gray-500">{count} items</span>
+										<span className="text-sm font-medium text-gray-900 dark:text-gray-50">
+											{type}
+										</span>
+										<span className="text-xs text-gray-500 dark:text-gray-300">
+											{count} items
+										</span>
 									</div>
 									<Checkbox
 										className="ml-auto"
@@ -276,339 +272,100 @@ export default function ResourcesTab() {
 							);
 						})}
 					</div>
-
-					<div>
-						<h3 className="mb-2 text-lg font-medium">Price Range</h3>
-						<div className="grid grid-cols-2 gap-4">
-							<div>
-								<Label htmlFor="price-min">Min Price</Label>
-								<TextInput
-									id="price-min"
-									type="number"
-									placeholder="Min"
-									value={priceRangeMin}
-									onChange={(e) => setPriceRangeMin(e.target.value)}
-								/>
-							</div>
-							<div>
-								<Label htmlFor="price-max">Max Price</Label>
-								<TextInput
-									id="price-max"
-									type="number"
-									placeholder="Max"
-									value={priceRangeMax}
-									onChange={(e) => setPriceRangeMax(e.target.value)}
-								/>
-							</div>
-						</div>
-					</div>
 				</Card>
 			)}
 
-			<div className="mb-4">
-				<p className="text-primary font-medium">
-					Showing {sortedResources.length} of {allResources.length} resources
-					{selectedTypes.length > 0 && ` (filtered by ${selectedTypes.length} types)`}
-					{selectedSource !== "All" && ` (source: ${selectedSource})`}
-				</p>
-			</div>
+			<FilterDetails
+				title="resources"
+				filteredCount={filteredData.length}
+				totalCount={filteredData.length}
+			/>
 
-			<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-				{sortedResources.length === 0 ? (
-					<Card className="col-span-full py-8 text-center">
-						<p className="text-gray-500 dark:text-gray-400">
-							No resources match your filter criteria. Try adjusting your filters.
-						</p>
-					</Card>
-				) : (
-					sortedResources.map((resource) => (
+			{sortedResources.length > 0 && (
+				<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+					{sortedResources.map((resource) => (
 						<ResourceCard
 							key={resource.id}
 							resource={resource}
 							getTypeColor={getTypeColor}
 						/>
-					))
-				)}
-			</div>
+					))}
+				</div>
+			)}
+
+			{sortedResources.length === 0 && <EmptyFilterCard />}
 		</div>
 	);
 }
 
-interface ResourceCardProps {
-	resource: ResourceItem;
-	getTypeColor: (type: ResourceType) => string;
-}
-
 const ResourceCard: React.FC<ResourceCardProps> = ({ resource, getTypeColor }) => {
-	const getBuffIcon = (buffName: string, value?: number): { icon: string; level?: number } => {
-		if (value) {
-			if (buffName === "attackLevel" && value <= 3) {
-				return {
-					icon: BuffIcons[`attackLevel${value}` as keyof typeof BuffIcons],
-					level: value,
-				};
-			} else if (buffName === "defenseLevel" && value <= 3) {
-				return {
-					icon: BuffIcons[`defenseLevel${value}` as keyof typeof BuffIcons],
-					level: value,
-				};
-			} else if (buffName === "experienceLevel" && value <= 3) {
-				return {
-					icon: BuffIcons[`experienceLevel${value}` as keyof typeof BuffIcons],
-					level: value,
-				};
-			} else if (buffName === "fishLevel" && value <= 3) {
-				return {
-					icon: BuffIcons[`fishLevel${value}` as keyof typeof BuffIcons],
-					level: value,
-				};
-			} else if (buffName === "foragingLevel" && value <= 3) {
-				return {
-					icon: BuffIcons[`foragingLevel${value}` as keyof typeof BuffIcons],
-					level: value,
-				};
-			} else if (buffName === "miningLevel" && value <= 3) {
-				return {
-					icon: BuffIcons[`miningLevel${value}` as keyof typeof BuffIcons],
-					level: value,
-				};
-			} else if (buffName === "speedLevel" && value <= 3) {
-				return {
-					icon: BuffIcons[`speedLevel${value}` as keyof typeof BuffIcons],
-					level: value,
-				};
-			} else if (buffName === "swimmingLevel" && value <= 3) {
-				return {
-					icon: BuffIcons[`swimmingLevel${value}` as keyof typeof BuffIcons],
-					level: value,
-				};
-			} else if (buffName === "fastHealthTickSpeedLevel" && value <= 2) {
-				return {
-					icon: BuffIcons[`fastHealthTickSpeedLevel${value}` as keyof typeof BuffIcons],
-					level: value,
-				};
-			} else if (buffName === "coolLevel" && value <= 2) {
-				return {
-					icon: BuffIcons[`coolLevel${value}` as keyof typeof BuffIcons],
-					level: value,
-				};
-			}
-		}
-
-		return { icon: BuffIcons[buffName as keyof typeof BuffIcons] };
-	};
-
 	return (
-		<Card className="h-full">
-			<div className="flex h-full flex-col">
-				<div className="mb-2 flex items-start justify-between">
-					<h3 className="text-lg font-medium">{resource.name}</h3>
-					<Badge color={getTypeColor(resource.resourceType)}>
-						{resource.resourceType}
-					</Badge>
-				</div>
-
-				<div className="flex items-center justify-center py-4">
-					{resource.img && (
-						<div className="h-20 w-20">
-							<img
-								src={resource.img}
-								alt={resource.name}
-								className="h-full w-full object-contain"
-							/>
-						</div>
+		<ItemCard
+			renderHeader={() => (
+				<ItemHeader
+					title={resource.name}
+					renderRightComp={() => (
+						<Badge color={getTypeColor(resource.resourceType)}>
+							{resource.resourceType}
+						</Badge>
 					)}
-				</div>
-
-				<div className="mt-2 flex-grow space-y-2 text-sm">
+				/>
+			)}
+			renderImage={() => (
+				<ItemImage src={resource.img} name={resource.name} isCollected={false} />
+			)}
+			renderDetails={() => (
+				<div className="grid grid-cols-1 gap-2">
 					{resource.source && resource.source.length > 0 && (
-						<div className="flex">
-							<p className="w-24 font-medium">Source:</p>
-							<div className="flex flex-wrap gap-1">
-								{resource.source.map((src, index) => (
-									<Badge
-										key={`${resource.id}-src-${index}`}
-										color="info"
-										className="mr-1"
-									>
-										{src}
-									</Badge>
-								))}
+						<div className="grid grid-cols-12">
+							<div className="col-span-4">Source:</div>
+							<div className="col-span-8">
+								<div className="flex flex-wrap gap-1">
+									{resource.source.map((src, index) => (
+										<Badge
+											key={`${resource.id}-src-${index}`}
+											color="info"
+											className="mr-1"
+										>
+											{src}
+										</Badge>
+									))}
+								</div>
 							</div>
 						</div>
 					)}
 
 					{resource.locations && resource.locations.length > 0 && (
-						<div className="flex">
-							<p className="w-24 font-medium">Locations:</p>
-							<p>{resource.locations.join(", ")}</p>
-						</div>
+						<ItemDetail label="Locations" details={resource.locations.join(", ")} />
 					)}
 
 					{resource.buyPrice !== undefined && (
-						<div className="flex items-center">
-							<p className="w-24 font-medium">Buy Price:</p>
-							<div className="flex items-center">
-								<img
-									src="https://static.wikia.nocookie.net/dinkum/images/4/42/Inv_Dinks.png"
-									alt="Dinks"
-									className="mr-1 h-4 w-4"
-								/>
-								<span>{resource.buyPrice.toLocaleString()}</span>
-							</div>
-						</div>
+						<DinkValue label="Buy Price" price={resource.buyPrice} />
 					)}
 
-					<div className="flex items-center">
-						<p className="w-24 font-medium">Sell Price:</p>
-						<div className="flex items-center">
-							<img
-								src="https://static.wikia.nocookie.net/dinkum/images/4/42/Inv_Dinks.png"
-								alt="Dinks"
-								className="mr-1 h-4 w-4"
-							/>
-							<span>{resource.baseSellPrice.toLocaleString()}</span>
-						</div>
-					</div>
+					<DinkValue
+						label="Sell Price"
+						price={resource.baseSellPrice}
+						showCommerceLicenses={true}
+					/>
 
 					{resource.variants && (
-						<div className="flex flex-col">
-							<p className="mb-1 font-medium">Resources:</p>
-							{resource.variants.length > 1 ? (
-								<div className="max-h-60 overflow-y-auto">
-									{resource.variants.map((variant, variantIndex) => (
-										<div
-											key={`${resource.id}-variant-${variantIndex}`}
-											className="mb-2 rounded-lg bg-gray-50 p-2 dark:bg-gray-800"
-										>
-											<p className="mb-1 text-sm font-medium">
-												Option {variantIndex + 1}:
-												{variant.outputCount && (
-													<span className="ml-1 text-xs text-gray-500">
-														(x
-														{variant.outputCount})
-													</span>
-												)}
-											</p>
-											<div className="ml-2 space-y-1">
-												{variant.inputs.map((input, idx) => (
-													<div
-														key={`${resource.id}-variant-${variantIndex}-input-${idx}`}
-														className="flex items-center gap-1 rounded-md bg-white p-1 dark:bg-gray-700"
-													>
-														{input.img && (
-															<img
-																src={input.img}
-																alt={input.name}
-																className="h-4 w-4"
-															/>
-														)}
-														<span>
-															{input.count}x {input.name}
-														</span>
-													</div>
-												))}
-											</div>
-										</div>
-									))}
-								</div>
-							) : (
-								<div className="ml-2 space-y-1">
-									{resource.variants?.[0].inputs.map((input, idx) => (
-										<div
-											key={`${resource.variants?.[0]?.id}-input-${idx}`}
-											className="flex items-center gap-1 rounded-md bg-gray-50 p-1 dark:bg-gray-700"
-										>
-											{input.img && (
-												<img
-													src={input.img}
-													alt={input.name}
-													className="h-5 w-5 object-contain"
-												/>
-											)}
-											<span>
-												{input.count}x {input.name}
-											</span>
-										</div>
-									))}
-								</div>
-							)}
-						</div>
+						<ItemResources
+							id={resource.id}
+							label="Resources"
+							variants={resource.variants}
+						/>
 					)}
 
 					{resource.description && (
-						<div className="mt-2">
-							<p className="font-medium">Description:</p>
-							<p className="text-gray-600 dark:text-gray-400">
-								{resource.description}
-							</p>
-						</div>
+						<ItemDetail label="Description" details={resource.description} />
 					)}
 
 					{resource.buffs && Object.keys(resource.buffs).length > 0 && (
-						<div className="mt-2 border-t border-gray-100 pt-2 dark:border-gray-700">
-							{resource.buffs && Object.keys(resource.buffs).length > 1 && (
-								<div className="flex">
-									<p className="mr-4 font-medium">Buffs:</p>
-									<div className="flex flex-wrap items-center gap-1">
-										{resource.buffs.length && (
-											<div
-												key={`${resource.id}-buff-length`}
-												className="flex items-center"
-												title="Buff Duration"
-											>
-												<img
-													src={BuffIcons.length}
-													alt="Buff Duration"
-													className="h-7 w-7 object-contain"
-												/>
-												<span className="ml-1 text-xs">
-													{resource.buffs.length}
-												</span>
-											</div>
-										)}
-
-										{Object.entries(resource.buffs).map(([buffName, value]) => {
-											if (buffName === "length") return null;
-
-											const { icon, level } = getBuffIcon(
-												buffName,
-												value as number
-											);
-
-											return (
-												<div
-													key={`${resource.id}-buff-${buffName}`}
-													className="flex items-center"
-													title={buffName
-														.replace(/([A-Z])/g, " $1")
-														.replace(/^./, (str) => str.toUpperCase())}
-												>
-													{icon && (
-														<img
-															src={icon}
-															alt={buffName}
-															className="h-5 w-5 object-contain"
-														/>
-													)}
-													{typeof value === "number" && !level && (
-														<span className="ml-1 text-xs">
-															{value}
-															{buffName === "healthRegenRate" && "/t"}
-															{buffName === "staminaRegenRate" &&
-																"/s"}
-														</span>
-													)}
-												</div>
-											);
-										})}
-									</div>
-								</div>
-							)}
-						</div>
+						<ItemBuffs id={resource.id} buffs={resource.buffs} />
 					)}
 				</div>
-			</div>
-		</Card>
+			)}
+		/>
 	);
 };
