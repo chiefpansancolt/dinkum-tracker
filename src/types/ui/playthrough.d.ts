@@ -110,12 +110,10 @@ export interface ItemResourcesProps {
 
 export interface ItemsListProps {
   id: string;
-  isVariantUsage?: boolean;
   inputs: Resource[];
 }
 
 export interface ResourceItemProps {
-  isVariantUsage?: boolean;
   input: Resource;
 }
 

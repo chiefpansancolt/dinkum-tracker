@@ -79,7 +79,7 @@ const ItemBuffs = ({ id, buffs }: ItemBuffsProps) => {
 										alt="Buff Duration"
 										className="h-7 w-7 object-contain"
 									/>
-									<span className="ml-1 text-xs">{buffs.length}</span>
+									<span className="ml-1 text-xs">{buffs.length} min(s)</span>
 								</div>
 							)}
 

@@ -1,16 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { ItemResourcesProps, ItemsListProps, ResourceItemProps } from "@/types";
-import { twMerge } from "flowbite-react/helpers/tailwind-merge";
 
-const Item = ({ input, isVariantUsage = false }: ResourceItemProps) => {
+const Item = ({ input }: ResourceItemProps) => {
 	return (
-		<div
-			className={twMerge(
-				"flex items-center gap-2 rounded-lg p-2",
-				isVariantUsage ? "bg-white dark:bg-gray-700" : "bg-gray-100 dark:bg-gray-900"
-			)}
-		>
+		<div className="flex items-center gap-2 rounded-lg bg-gray-400 p-2 dark:bg-gray-900">
 			{input.img && (
 				<img src={input.img} alt={input.name} className="h-6 w-6 object-contain" />
 			)}
@@ -21,11 +15,11 @@ const Item = ({ input, isVariantUsage = false }: ResourceItemProps) => {
 	);
 };
 
-const ItemsList = ({ id, inputs, isVariantUsage = false }: ItemsListProps) => {
+const ItemsList = ({ id, inputs }: ItemsListProps) => {
 	return (
 		<div className="grid grid-cols-2 gap-2">
 			{inputs.map((input, idx) => (
-				<Item key={`${id}-${idx}`} input={input} isVariantUsage={isVariantUsage} />
+				<Item key={`${id}-${idx}`} input={input} />
 			))}
 		</div>
 	);
@@ -42,7 +36,7 @@ const ItemResources = ({ id, label, items, variants }: ItemResourcesProps) => {
 					{variants.map((variant, variantIndex) => (
 						<div
 							key={`${id}-variant-${variantIndex}`}
-							className="mb-2 rounded-lg bg-gray-50 p-2 dark:bg-gray-800"
+							className="mb-2 rounded-lg bg-gray-100 p-2 dark:bg-gray-700"
 						>
 							<p className="mb-1 font-medium">
 								Option {variantIndex + 1}:
@@ -56,7 +50,6 @@ const ItemResources = ({ id, label, items, variants }: ItemResourcesProps) => {
 								<ItemsList
 									id={`${id}-variant-${variantIndex}-input`}
 									inputs={variant.inputs}
-									isVariantUsage={true}
 								/>
 							</div>
 						</div>
