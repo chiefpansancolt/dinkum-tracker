@@ -55,7 +55,7 @@ const BuildingStats: React.FC<CollectTabProps> = ({ collected }) => {
 	}, []);
 
 	return (
-		<Card className="flex h-full flex-col">
+		<Card className="flex h-full flex-col text-gray-900 dark:text-gray-50">
 			<div className="flex h-full flex-col">
 				<div className="flex-none">
 					<h2 className="text-primary mb-4 text-xl font-bold">Buildings Progress</h2>
@@ -65,7 +65,7 @@ const BuildingStats: React.FC<CollectTabProps> = ({ collected }) => {
 					<div className="mb-6">
 						<div className="mb-4 flex justify-between">
 							<span className="text-lg font-medium">Overall Progress</span>
-							<span className="text-accent font-medium">
+							<span className="text-gray-900 dark:text-gray-50 font-medium">
 								{stats.installedCount}/{stats.totalBuildings} Complete
 							</span>
 						</div>
@@ -122,13 +122,13 @@ const BuildingStats: React.FC<CollectTabProps> = ({ collected }) => {
 										{building.img ? (
 											<img
 												src={building.img}
-												alt={building.buildingName}
+												alt={building.name}
 												className="mr-2 h-6 w-6 object-contain"
 											/>
 										) : (
 											<div className="mr-2 h-6 w-6 bg-gray-200 dark:bg-gray-700"></div>
 										)}
-										<span className="font-medium">{building.buildingName}</span>
+										<span className="font-medium">{building.name}</span>
 									</div>
 									<Badge color="indigo">
 										<span className="flex">

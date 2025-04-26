@@ -72,7 +72,7 @@ const CollectionStats: React.FC<CollectionStatsProps> = ({ collections, donation
 	};
 
 	return (
-		<Card className="flex h-full w-full flex-col">
+		<Card className="flex h-full w-full flex-col text-gray-900 dark:text-gray-50">
 			<div className="flex h-full flex-col">
 				<div className="flex-none">
 					<h2 className="text-primary mb-4 text-xl font-bold">Pedia Progress</h2>
@@ -90,10 +90,10 @@ const CollectionStats: React.FC<CollectionStatsProps> = ({ collections, donation
 							<Progress progress={Number(totalStats.percentage)} color="blue" />
 
 							<div className="mt-1 mb-1 flex justify-between">
-								<span className="text-sm text-gray-500">
+								<span className="text-sm text-gray-500 dark:text-gray-300">
 									Museum Donations ({totalStats.donated}/{totalStats.total})
 								</span>
-								<span className="text-sm text-gray-500">
+								<span className="text-sm text-gray-500 dark:text-gray-300">
 									{totalStats.donationPercentage}%
 								</span>
 							</div>
@@ -118,10 +118,10 @@ const CollectionStats: React.FC<CollectionStatsProps> = ({ collections, donation
 								/>
 
 								<div className="mt-1 mb-1 flex justify-between">
-									<span className="text-sm text-gray-500">
+									<span className="text-sm text-gray-500 dark:text-gray-300">
 										Donated ({data.donated}/{data.total})
 									</span>
-									<span className="text-sm text-gray-500">
+									<span className="text-sm text-gray-500 dark:text-gray-300">
 										{data.donationPercentage}%
 									</span>
 								</div>
@@ -147,7 +147,7 @@ const CollectionStats: React.FC<CollectionStatsProps> = ({ collections, donation
 										/>
 									</span>
 								</Badge>
-								<span className="text-sm text-gray-500">
+								<span className="text-sm text-gray-500 dark:text-gray-300">
 									({totalStats.permitPointsPercentage}% earned)
 								</span>
 							</div>

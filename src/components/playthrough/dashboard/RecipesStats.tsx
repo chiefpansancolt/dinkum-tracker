@@ -95,7 +95,7 @@ const RecipeStats: React.FC<RecipeStatsProps> = ({
 	}, [stats]);
 
 	return (
-		<Card className="flex h-full w-full flex-col">
+		<Card className="flex h-full w-full flex-col text-gray-900 dark:text-gray-50">
 			<div className="flex h-full flex-col">
 				<div className="flex-none">
 					<h2 className="text-primary mb-4 text-xl font-bold">Recipe Collection</h2>
@@ -146,7 +146,7 @@ const RecipeStats: React.FC<RecipeStatsProps> = ({
 									<p className="text-lg font-bold capitalize">
 										{mostCompleteCategory}
 									</p>
-									<Badge color={progressColorMap[mostCompleteCategory] as string}>
+									<Badge color="blue">
 										{
 											stats[mostCompleteCategory as keyof typeof stats]
 												.percentage
@@ -164,9 +164,7 @@ const RecipeStats: React.FC<RecipeStatsProps> = ({
 									<p className="text-lg font-bold capitalize">
 										{leastCompleteCategory}
 									</p>
-									<Badge
-										color={progressColorMap[leastCompleteCategory] as string}
-									>
+									<Badge color="blue">
 										{
 											stats[leastCompleteCategory as keyof typeof stats]
 												.percentage

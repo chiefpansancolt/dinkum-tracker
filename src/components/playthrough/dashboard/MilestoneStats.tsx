@@ -49,7 +49,7 @@ const MilestoneStats: React.FC<CollectTabProps> = ({ collected }) => {
 	}, [collected]);
 
 	return (
-		<Card className="flex h-full flex-col">
+		<Card className="flex h-full flex-col text-gray-900 dark:text-gray-50">
 			<div className="flex h-full flex-col">
 				<div className="flex-none">
 					<h2 className="text-primary mb-4 text-xl font-bold">Milestone Progress</h2>
@@ -59,7 +59,7 @@ const MilestoneStats: React.FC<CollectTabProps> = ({ collected }) => {
 					<div className="mb-6">
 						<div className="mb-4 flex justify-between">
 							<span className="text-lg font-medium">Overall Progress</span>
-							<span className="text-accent font-medium">
+							<span className="font-medium text-gray-900 dark:text-gray-50">
 								{stats.completedMilestones}/{stats.totalMilestones} Complete
 							</span>
 						</div>
@@ -99,7 +99,7 @@ const MilestoneStats: React.FC<CollectTabProps> = ({ collected }) => {
 									/>
 								</span>
 							</Badge>
-							<span className="text-sm text-gray-500">
+							<span className="text-sm text-gray-500 dark:text-gray-300">
 								(
 								{Math.round(
 									(stats.earnedPermitPoints / stats.totalPermitPoints) * 100

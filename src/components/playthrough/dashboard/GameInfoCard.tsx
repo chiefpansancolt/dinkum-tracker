@@ -37,7 +37,7 @@ const GameInfoCard: React.FC<GameInfoCardProps> = ({ playthrough }) => {
 	const completedMilestones = getMilestoneCompletion();
 
 	return (
-		<Card className="flex h-full flex-col">
+		<Card className="flex h-full flex-col text-gray-900 dark:text-gray-50">
 			<div className="flex h-full flex-col">
 				<div className="flex-none">
 					<h2 className="text-primary mb-4 text-xl font-bold">Game Info</h2>

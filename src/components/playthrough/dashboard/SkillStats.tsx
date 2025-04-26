@@ -8,7 +8,7 @@ const SkillStats: React.FC<CollectNumberTabProps> = ({ collected }) => {
 	const hasSkills = Object.keys(collected).length > 0;
 
 	return (
-		<Card className="flex h-full flex-col">
+		<Card className="flex h-full flex-col text-gray-900 dark:text-gray-50">
 			<div className="flex h-full flex-col">
 				<div className="flex-none">
 					<h2 className="text-primary mb-4 text-xl font-bold">Character Skills</h2>
