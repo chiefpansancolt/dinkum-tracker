@@ -9,6 +9,7 @@ import { Milestone, TabHandle, CollectTabProps } from "@/types";
 import { updatePlaythroughData } from "@/lib/localStorage";
 import { MILESTONE_CATEGORIES } from "@/data/constants";
 import { HiLockClosed } from "react-icons/hi";
+import { getHashQueryParams, setHashQueryParam } from "@/service/urlService";
 import TabHeader from "@/playthrough/ui/TabHeader";
 import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
@@ -29,7 +30,21 @@ const MilestonesTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref
 
 	useEffect(() => {
 		setLocalState(collected);
+		isDirty.current = false;
+
+		const hashParams = getHashQueryParams();
+		if (hashParams.q) {
+			setSearchQuery(hashParams.q);
+		}
 	}, [collected]);
+
+	useEffect(() => {
+		if (searchQuery) {
+			setHashQueryParam("q", searchQuery);
+		} else {
+			setHashQueryParam("q", "");
+		}
+	}, [searchQuery]);
 
 	const isPreviousLevelObtained = (milestoneId: string, level: number) => {
 		if (level === 1) return true;

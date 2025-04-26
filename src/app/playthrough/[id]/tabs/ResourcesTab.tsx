@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Card, Badge, Checkbox, Button } from "flowbite-react";
 import {
 	animalProducts,
@@ -12,6 +12,7 @@ import {
 } from "@/data/dinkum";
 import { ResourceType } from "@/data/constants";
 import { ResourceItem, ResourceCardProps } from "@/types";
+import { getHashQueryParams, setHashQueryParam } from "@/service/urlService";
 import TabHeader from "@/playthrough/ui/TabHeader";
 import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
@@ -31,6 +32,21 @@ export default function ResourcesTab() {
 	const [sourceFilter, setSourceFilter] = useState<string>("All");
 	const [sortBy, setSortBy] = useState<string>("name");
 	const [showFilter, setShowFilter] = useState<boolean>(false);
+
+	useEffect(() => {
+		const hashParams = getHashQueryParams();
+		if (hashParams.q) {
+			setSearchQuery(hashParams.q);
+		}
+	}, [setSearchQuery]);
+
+	useEffect(() => {
+		if (searchQuery) {
+			setHashQueryParam("q", searchQuery);
+		} else {
+			setHashQueryParam("q", "");
+		}
+	}, [searchQuery]);
 
 	const allResources = useMemo(() => {
 		const resources: ResourceItem[] = [];
@@ -248,7 +264,7 @@ export default function ResourcesTab() {
 							return (
 								<div
 									key={type}
-									className={`flex cursor-pointer items-center gap-2 rounded-lg border p-2 ${
+									className={`flex cursor-pointer items-center gap-2 rounded-lg border p-2 text-gray-900 dark:text-gray-50 ${
 										isSelected
 											? "border-blue-500 bg-blue-50 dark:border-blue-400 dark:bg-blue-900/20"
 											: "border-gray-700 dark:border-gray-500"
@@ -256,9 +272,7 @@ export default function ResourcesTab() {
 									onClick={() => toggleType(type)}
 								>
 									<div className="flex flex-col">
-										<span className="text-sm font-medium text-gray-900 dark:text-gray-50">
-											{type}
-										</span>
+										<span className="text-sm font-medium">{type}</span>
 										<span className="text-xs text-gray-500 dark:text-gray-300">
 											{count} items
 										</span>
