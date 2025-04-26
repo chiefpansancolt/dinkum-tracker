@@ -65,7 +65,7 @@ const BuildingStats: React.FC<CollectTabProps> = ({ collected }) => {
 					<div className="mb-6">
 						<div className="mb-4 flex justify-between">
 							<span className="text-lg font-medium">Overall Progress</span>
-							<span className="text-gray-900 dark:text-gray-50 font-medium">
+							<span className="font-medium text-gray-900 dark:text-gray-50">
 								{stats.installedCount}/{stats.totalBuildings} Complete
 							</span>
 						</div>

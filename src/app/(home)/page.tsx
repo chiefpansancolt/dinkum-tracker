@@ -7,7 +7,7 @@ import { FaUsers } from "react-icons/fa";
 
 export default function Home() {
 	return (
-		<div className="container mx-auto px-4 py-8">
+		<div className="container mx-auto px-4 py-8 text-gray-900 dark:text-gray-50">
 			<div className="space-y-8">
 				<div className="from-secondary/30 to-primary/20 rounded-lg bg-gradient-to-r p-8 shadow-lg">
 					<h1 className="text-primary mb-4 text-4xl font-bold">
@@ -43,10 +43,10 @@ export default function Home() {
 							that gives you a complete overview of your progress.
 						</p>
 						<div className="mt-4 flex flex-wrap gap-2">
-							<Badge color="info">Fish</Badge>
-							<Badge color="success">Bugs</Badge>
+							<Badge color="cyan">Fish</Badge>
+							<Badge color="green">Bugs</Badge>
 							<Badge color="purple">Critters</Badge>
-							<Badge color="warning">Milestones</Badge>
+							<Badge color="yellow">Milestones</Badge>
 							<Badge color="indigo">Licenses</Badge>
 							<Badge color="blue">Buildings</Badge>
 						</div>
@@ -64,10 +64,10 @@ export default function Home() {
 							miss another festival or special occasion in your Dinkum town.
 						</p>
 						<div className="mt-4 flex flex-wrap gap-2">
-							<Badge color="warning">Summer Events</Badge>
+							<Badge color="yellow">Summer Events</Badge>
 							<Badge color="orange">Autumn Activities</Badge>
-							<Badge color="info">Winter Celebrations</Badge>
-							<Badge color="success">Spring Festivals</Badge>
+							<Badge color="cyan">Winter Celebrations</Badge>
+							<Badge color="green">Spring Festivals</Badge>
 						</div>
 					</Card>
 
@@ -210,7 +210,7 @@ export default function Home() {
 							<Badge color="blue" size="lg">
 								Fully Responsive
 							</Badge>
-							<Badge color="success" size="lg">
+							<Badge color="green" size="lg">
 								Open Source
 							</Badge>
 						</div>

@@ -50,15 +50,15 @@ export default function PlaythroughCard({ playthrough, onDelete }: PlaythroughCa
 	const completion = calculateCompletion();
 
 	return (
-		<Card className="transition-shadow hover:shadow-lg">
+		<Card className="text-gray-900 transition-shadow hover:shadow-lg dark:text-gray-50">
 			<div className="flex items-start justify-between">
-				<h3 className="text-primary text-xl font-bold">{playthrough.name}</h3>
+				<h3 className="text-xl font-bold">{playthrough.name}</h3>
 				<Badge color="info">{completion}% Complete</Badge>
 			</div>
 
 			<Progress progress={completion} color="blue" className="mt-2" />
 
-			<div className="mt-4 text-sm text-gray-600">
+			<div className="mt-4 text-sm">
 				<p>Created: {formatDate(playthrough.createdAt)}</p>
 				<p>Last Updated: {formatDate(playthrough.lastUpdated)}</p>
 			</div>

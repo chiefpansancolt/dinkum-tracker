@@ -69,4 +69,12 @@ export const customTheme: CustomFlowbiteTheme = createTheme({
       accent: "fill-accent",
     },
   },
+  badge: {
+    root: {
+      color: {
+        orange:
+          "bg-orange-100 text-orange-800 hover:bg-orange-200 dark:bg-orange-200 dark:text-orange-800 dark:hover:bg-orange-300",
+      },
+    },
+  },
 });

@@ -6,5 +6,9 @@ export const metadata = {
 };
 
 export default function ResourcesRoute() {
-	return <ItemsBreakdownPage />;
+	return (
+		<div className="m-4">
+			<ItemsBreakdownPage />
+		</div>
+	);
 }

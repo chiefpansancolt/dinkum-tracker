@@ -36,8 +36,8 @@ export default function NewPlaythroughForm() {
 
 	return (
 		<div className="mx-auto max-w-md">
-			<Card>
-				<h2 className="text-primary mb-6 text-2xl font-bold">Create New Playthrough</h2>
+			<Card className="text-gray-900 dark:text-gray-50">
+				<h2 className="mb-6 text-2xl font-bold">Create New Playthrough</h2>
 
 				<form onSubmit={handleSubmit} className="space-y-6">
 					<div>
@@ -51,7 +51,7 @@ export default function NewPlaythroughForm() {
 							onChange={(e) => setName(e.target.value)}
 							required
 						/>
-						<p className="mt-1 text-sm text-gray-500">
+						<p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
 							Give your playthrough a memorable name to help you identify it later.
 						</p>
 					</div>

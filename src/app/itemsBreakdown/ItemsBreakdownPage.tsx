@@ -1,8 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useState, useMemo } from "react";
-import { Card, TextInput, Select, Badge, Label, Checkbox, Button } from "flowbite-react";
+import { Card, Badge, Label, Checkbox, Button } from "flowbite-react";
 import {
 	weapons,
 	vehicles,
@@ -25,8 +24,14 @@ import {
 	trophies,
 } from "@/data/dinkum";
 import { ResourceType } from "@/data/constants";
-import { UniqueResource, Resource } from "@/types";
-import { HiSearch, HiX, HiFilter, HiTag } from "react-icons/hi";
+import { UniqueResource, Resource, ItemBreakdownResourceCardProps } from "@/types";
+import { HiX } from "react-icons/hi";
+import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
+import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
+import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
+import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
+import TabHeader from "@/playthrough/ui/TabHeader";
+import FilterBar from "@/playthrough/ui/FilterBar";
 
 export default function ItemsBreakdownPage() {
 	const [searchQuery, setSearchQuery] = useState<string>("");
@@ -34,8 +39,7 @@ export default function ItemsBreakdownPage() {
 	const [selectedTypes, setSelectedTypes] = useState<ResourceType[]>([]);
 	const [sortBy, setSortBy] = useState<string>("name");
 	const [showCommonOnly, setShowCommonOnly] = useState<boolean>(false);
-	const [showCategoryFilter, setShowCategoryFilter] = useState<boolean>(false);
-	const [showTypeFilter, setShowTypeFilter] = useState<boolean>(false);
+	const [showFilter, setShowFilter] = useState<boolean>(false);
 
 	const allUniqueResources = useMemo(() => {
 		const resourceMap = new Map<string, UniqueResource>();
@@ -116,7 +120,7 @@ export default function ItemsBreakdownPage() {
 
 		buildings.forEach((building) => {
 			if (building.inputs && building.inputs.length > 0) {
-				addResources(building.inputs, building.buildingName, "Buildings");
+				addResources(building.inputs, building.name, "Buildings");
 			}
 		});
 
@@ -183,6 +187,23 @@ export default function ItemsBreakdownPage() {
 		return Array.from(categories).sort();
 	}, [allUniqueResources]);
 
+	const filters = {
+		sort: {
+			value: sortBy,
+			options: [
+				{ id: "name", value: "Name (A-Z)" },
+				{ id: "usageCount", value: "Usage Count" },
+			],
+			label: "Sort By",
+		},
+	};
+
+	const handleFilterChange = (name: string, value: string) => {
+		if (name === "sort") {
+			setSortBy(value);
+		}
+	};
+
 	const filteredResources = useMemo(() => {
 		return allUniqueResources.filter((resource) => {
 			if (searchQuery && !resource.name.toLowerCase().includes(searchQuery.toLowerCase())) {
@@ -242,12 +263,13 @@ export default function ItemsBreakdownPage() {
 		});
 	};
 
-	const clearAllCategories = () => {
+	const clearAllFilters = () => {
 		setSelectedCategories([]);
+		setSelectedTypes([]);
 	};
 
-	const clearAllTypes = () => {
-		setSelectedTypes([]);
+	const toggleFilter = () => {
+		setShowFilter(!showFilter);
 	};
 
 	const resourceTypeCounts = useMemo(() => {
@@ -282,175 +304,109 @@ export default function ItemsBreakdownPage() {
 	};
 
 	return (
-		<div className="px-4 py-8">
-			<div className="mb-6">
-				<h1 className="text-primary mb-2 text-3xl font-bold">Item Breakdown</h1>
-				<p className="text-gray-600 dark:text-gray-400">
-					Track all resources used in recipes, buildings, tools, and more.
-				</p>
-			</div>
+		<div className="space-y-6">
+			<TabHeader title="Buildings" enableCollectionCount={false} enableSaveAlert={false} />
 
-			<div className="mb-6">
-				<div className="grid grid-cols-1 gap-4 md:grid-cols-12">
-					<div className="md:col-span-3">
-						<div className="mb-2 block">
-							<Label htmlFor="sort-by">Sort By</Label>
-						</div>
-						<Select
-							id="sort-by"
-							value={sortBy}
-							onChange={(e) => setSortBy(e.target.value)}
-						>
-							<option value="name">Name (A-Z)</option>
-							<option value="usageCount">Usage Count</option>
-						</Select>
-					</div>
+			<FilterBar
+				showFilters={true}
+				filters={filters}
+				onFilterChange={handleFilterChange}
+				showSearch={true}
+				searchValue={searchQuery}
+				onSearchChange={(value) => setSearchQuery(value)}
+				showActionButton={true}
+				onActionButtonClick={toggleFilter}
+				filterActive={showFilter}
+				selectedCount={selectedTypes.length + selectedCategories.length}
+			/>
 
-					<div className="md:col-span-6">
-						<div className="mb-2 block">
-							<Label htmlFor="search-resources">Search</Label>
-						</div>
-						<TextInput
-							id="search-resources"
-							type="text"
-							icon={HiSearch}
-							placeholder="Search for resources by name..."
-							value={searchQuery}
-							onChange={(e) => setSearchQuery(e.target.value)}
-						/>
-					</div>
-
-					<div className="flex items-end gap-2 md:col-span-3">
+			{showFilter && (
+				<Card>
+					<div className="mb-4 flex items-center justify-between">
+						<h3 className="text-lg font-medium text-gray-900 dark:text-gray-50">
+							Filter by Category
+						</h3>
 						<Button
-							color={
-								showCategoryFilter || selectedCategories.length > 0
-									? "primary"
-									: "light"
-							}
-							onClick={() => setShowCategoryFilter(!showCategoryFilter)}
-							className="flex flex-1 items-center"
+							size="xs"
+							color="secondary"
+							onClick={clearAllFilters}
+							disabled={selectedCategories.length === 0 && selectedTypes.length === 0}
 						>
-							<HiFilter className="mr-2 h-5 w-5" />
-							<span>Categories</span>
-							{selectedCategories.length > 0 && (
-								<span className="ml-1">({selectedCategories.length})</span>
-							)}
-						</Button>
-
-						<Button
-							color={showTypeFilter || selectedTypes.length > 0 ? "primary" : "light"}
-							onClick={() => setShowTypeFilter(!showTypeFilter)}
-							className="flex flex-1 items-center"
-						>
-							<HiTag className="mr-2 h-5 w-5" />
-							<span>Types</span>
-							{selectedTypes.length > 0 && (
-								<span className="ml-1">({selectedTypes.length})</span>
-							)}
+							<HiX className="mr-1 h-4 w-4" />
+							Clear Selections
 						</Button>
 					</div>
-				</div>
+					<div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+						{uniqueCategories.map((category) => {
+							const isSelected = selectedCategories.includes(category);
 
-				{showCategoryFilter && (
-					<Card className="mt-4 p-4">
-						<div className="mb-4 flex items-center justify-between">
-							<h3 className="text-lg font-medium">Filter by Category</h3>
-							<Button
-								size="xs"
-								color="secondary"
-								onClick={clearAllCategories}
-								disabled={selectedCategories.length === 0}
-							>
-								<HiX className="mr-1 h-4 w-4" />
-								Clear Selections
-							</Button>
-						</div>
-						<div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-							{uniqueCategories.map((category) => {
-								const isSelected = selectedCategories.includes(category);
-
-								return (
-									<div
-										key={category}
-										className={`flex cursor-pointer items-center justify-between gap-2 rounded-lg border p-2 ${
-											isSelected
-												? "border-blue-500 bg-blue-50 dark:border-blue-400 dark:bg-blue-900/20"
-												: "border-gray-200 dark:border-gray-700"
-										}`}
-										onClick={() => toggleCategory(category)}
-									>
-										<span className="text-sm">{category}</span>
-										<Checkbox
-											className="ml-auto"
-											checked={isSelected}
-											onChange={() => toggleCategory(category)}
-										/>
-									</div>
-								);
-							})}
-						</div>
-					</Card>
-				)}
-
-				{showTypeFilter && (
-					<Card className="mt-4 p-4">
-						<div className="mb-4 flex items-center justify-between">
-							<h3 className="text-lg font-medium">Filter by Resource Type</h3>
-							<Button
-								size="xs"
-								color="secondary"
-								onClick={clearAllTypes}
-								disabled={selectedTypes.length === 0}
-							>
-								<HiX className="mr-1 h-4 w-4" />
-								Clear Selections
-							</Button>
-						</div>
-						<div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5">
-							{Object.values(ResourceType).map((type) => {
-								const isSelected = selectedTypes.includes(type);
-								const count = resourceTypeCounts.get(type) || 0;
-
-								return (
-									<div
-										key={type}
-										className={`flex cursor-pointer items-center justify-between gap-2 rounded-lg border p-2 ${
-											isSelected
-												? "border-blue-500 bg-blue-50 dark:border-blue-400 dark:bg-blue-900/20"
-												: "border-gray-200 dark:border-gray-700"
-										}`}
-										onClick={() => toggleType(type)}
-									>
-										<div className="flex flex-col">
-											<span className="text-sm font-medium">{type}</span>
-											<span className="text-xs text-gray-500">
-												{count} items
-											</span>
-										</div>
-										<Checkbox
-											className="ml-auto"
-											checked={isSelected}
-											onChange={() => toggleType(type)}
-										/>
-									</div>
-								);
-							})}
-						</div>
-					</Card>
-				)}
-
-				<div className="mt-4 flex flex-wrap gap-4">
-					<div className="flex items-center">
-						<Checkbox
-							id="common-only"
-							checked={showCommonOnly}
-							onChange={() => setShowCommonOnly(!showCommonOnly)}
-							className="mr-2"
-						/>
-						<Label htmlFor="common-only" className="cursor-pointer">
-							Common Resources Only (Used in 3+ Items)
-						</Label>
+							return (
+								<div
+									key={category}
+									className={`flex cursor-pointer items-center justify-between gap-2 rounded-lg border p-2 text-gray-900 dark:text-gray-50 ${
+										isSelected
+											? "border-blue-500 bg-blue-50 dark:border-blue-400 dark:bg-blue-900/20"
+											: "border-gray-200 dark:border-gray-700"
+									}`}
+									onClick={() => toggleCategory(category)}
+								>
+									<span className="text-sm">{category}</span>
+									<Checkbox
+										className="ml-auto"
+										checked={isSelected}
+										onChange={() => toggleCategory(category)}
+									/>
+								</div>
+							);
+						})}
 					</div>
+					<div className="my-2">
+						<h3 className="text-lg font-medium text-gray-900 dark:text-gray-50">
+							Filter by Resource Type
+						</h3>
+					</div>
+					<div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5">
+						{Object.values(ResourceType).map((type) => {
+							const isSelected = selectedTypes.includes(type);
+							const count = resourceTypeCounts.get(type) || 0;
+
+							return (
+								<div
+									key={type}
+									className={`flex cursor-pointer items-center justify-between gap-2 rounded-lg border p-2 text-gray-900 dark:text-gray-50 ${
+										isSelected
+											? "border-blue-500 bg-blue-50 dark:border-blue-400 dark:bg-blue-900/20"
+											: "border-gray-200 dark:border-gray-700"
+									}`}
+									onClick={() => toggleType(type)}
+								>
+									<div className="flex flex-col">
+										<span className="text-sm font-medium">{type}</span>
+										<span className="text-xs text-gray-500">{count} items</span>
+									</div>
+									<Checkbox
+										className="ml-auto"
+										checked={isSelected}
+										onChange={() => toggleType(type)}
+									/>
+								</div>
+							);
+						})}
+					</div>
+				</Card>
+			)}
+
+			<div className="mt-4 flex flex-wrap gap-4">
+				<div className="flex items-center">
+					<Checkbox
+						id="common-only"
+						checked={showCommonOnly}
+						onChange={() => setShowCommonOnly(!showCommonOnly)}
+						className="mr-2"
+					/>
+					<Label htmlFor="common-only" className="cursor-pointer">
+						Common Resources Only (Used in 3+ Items)
+					</Label>
 				</div>
 			</div>
 
@@ -464,69 +420,52 @@ export default function ItemsBreakdownPage() {
 				</p>
 			</div>
 
-			<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-				{sortedResources.length === 0 ? (
-					<Card className="col-span-full py-8 text-center">
-						<p className="text-gray-500 dark:text-gray-400">
-							No resources match your filter criteria. Try adjusting your filters.
-						</p>
-					</Card>
-				) : (
-					sortedResources.map((resource) => (
+			{sortedResources.length > 0 && (
+				<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+					{sortedResources.map((resource) => (
 						<ResourceCard
 							key={resource.name}
 							resource={resource}
 							getTypeColor={getTypeColor}
 						/>
-					))
-				)}
-			</div>
+					))}
+				</div>
+			)}
+
+			{sortedResources.length === 0 && <EmptyFilterCard />}
 		</div>
 	);
 }
 
-interface ResourceCardProps {
-	resource: UniqueResource;
-	getTypeColor: (type: ResourceType) => string;
-}
-
-const ResourceCard: React.FC<ResourceCardProps> = ({ resource, getTypeColor }) => {
+const ResourceCard: React.FC<ItemBreakdownResourceCardProps> = ({ resource, getTypeColor }) => {
 	const [showAllUsages, setShowAllUsages] = useState(false);
-
 	const displayedUsages = showAllUsages ? resource.usedIn : resource.usedIn.slice(0, 5);
-
 	const hasMoreUsages = resource.usedIn.length > 5;
 
 	return (
-		<Card className="h-full">
-			<div className="flex h-full flex-col">
-				<div className="mb-2 flex items-start justify-between">
-					<h3 className="text-lg font-medium">{resource.name}</h3>
-					<div className="flex flex-col gap-1">
-						<Badge color="indigo">Used in {resource.usedIn.length} items</Badge>
-						<Badge color={getTypeColor(resource.resourceType)}>
-							{resource.resourceType}
-						</Badge>
-					</div>
-				</div>
-
-				<div className="flex items-center justify-center py-4">
-					{resource.img && (
-						<div className="relative h-20 w-20">
-							<img
-								src={resource.img}
-								alt={resource.name}
-								className="h-full w-full object-contain"
-							/>
+		<ItemCard
+			renderHeader={() => (
+				<ItemHeader
+					title={resource.name}
+					renderRightComp={() => (
+						<div className="flex flex-col gap-1">
+							<Badge color="indigo">Used in {resource.usedIn.length} items</Badge>
+							<Badge color={getTypeColor(resource.resourceType)}>
+								{resource.resourceType}
+							</Badge>
 						</div>
 					)}
-				</div>
-
-				<div className="mt-2 flex-grow">
-					<div className="mb-2">
-						<p className="font-medium">Categories:</p>
-						<div className="mt-1 flex flex-wrap gap-1">
-							{resource.categories.map((category) => (
+				/>
+			)}
+			renderImage={() => (
+				<ItemImage src={resource.img} name={resource.name} isCollected={false} />
+			)}
+			renderDetails={() => (
+				<div className="grid grid-cols-1 gap-2">
+					<div className="mt-auto">
+						<div className="mb-2 font-medium">Categories:</div>
+						<div className="flex flex-wrap gap-1">
+							{resource.categories.map((category: string) => (
 								<Badge
 									key={`${resource.name}-${category}`}
 									color="blue"
@@ -537,39 +476,41 @@ const ResourceCard: React.FC<ResourceCardProps> = ({ resource, getTypeColor }) =
 							))}
 						</div>
 					</div>
-
 					<div>
-						<p className="font-medium">Used in:</p>
-						<ul className="mt-1 space-y-1">
-							{displayedUsages.map((item, index) => (
-								<li key={`${resource.name}-usage-${index}`} className="text-sm">
-									• {item}
-								</li>
+						<div className="mb-2 font-medium">Used In:</div>
+						<div className="mb-2 grid grid-cols-2 gap-2">
+							{displayedUsages.map((item: string, index: number) => (
+								<div
+									key={`${resource.name}-usage-${index}`}
+									className="rounded-md bg-gray-100 p-2 text-sm text-gray-900 dark:bg-gray-900 dark:text-gray-50"
+								>
+									{item}
+								</div>
 							))}
-							{hasMoreUsages && !showAllUsages && (
-								<li>
-									<button
-										className="text-primary hover:text-accent mt-1 text-sm"
-										onClick={() => setShowAllUsages(true)}
-									>
-										Show {resource.usedIn.length - 5} more...
-									</button>
-								</li>
-							)}
-							{showAllUsages && hasMoreUsages && (
-								<li>
-									<button
-										className="text-primary hover:text-accent mt-1 text-sm"
-										onClick={() => setShowAllUsages(false)}
-									>
-										Show less
-									</button>
-								</li>
-							)}
-						</ul>
+						</div>
+						{hasMoreUsages && !showAllUsages && (
+							<Button
+								color="primary"
+								outline={true}
+								size="xs"
+								onClick={() => setShowAllUsages(true)}
+							>
+								Show {resource.usedIn.length - 5} more...
+							</Button>
+						)}
+						{showAllUsages && hasMoreUsages && (
+							<Button
+								color="primary"
+								outline={true}
+								size="xs"
+								onClick={() => setShowAllUsages(false)}
+							>
+								Show less
+							</Button>
+						)}
 					</div>
 				</div>
-			</div>
-		</Card>
+			)}
+		/>
 	);
 };

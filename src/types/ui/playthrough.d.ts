@@ -132,7 +132,12 @@ export interface ItemBuffsProps {
   buffs: Buffs;
 }
 
-interface ResourceCardProps {
+export interface ResourceCardProps {
   resource: ResourceItem;
+  getTypeColor: (type: ResourceType) => string;
+}
+
+export interface ItemBreakdownResourceCardProps {
+  resource: UniqueResource;
   getTypeColor: (type: ResourceType) => string;
 }
