@@ -1,12 +1,18 @@
 import React from "react";
 import { Resource, ResourceVariant } from "../dinkum";
 
+export type FilterArray = string[];
+export interface FilterObject {
+  id: string;
+  value: string;
+}
+
 export interface FilterBarProps {
   showFilters: boolean;
   filters?: {
     [key: string]: {
       value: string;
-      options: string[];
+      options: FilterArray | FilterObject[];
       label: string;
     };
   };

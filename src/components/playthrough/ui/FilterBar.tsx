@@ -1,6 +1,10 @@
-import { FilterBarProps } from "@/types";
+import { FilterBarProps, FilterArray, FilterObject } from "@/types";
 import { Label, Select, TextInput } from "flowbite-react";
 import { HiSearch } from "react-icons/hi";
+
+const isFilterObjectArray = (options: FilterArray | FilterObject[]): options is FilterObject[] => {
+	return options.length > 0 && typeof options[0] === "object" && "id" in options[0];
+};
 
 const FilterBar: React.FC<FilterBarProps> = ({
 	showFilters = false,
@@ -47,11 +51,17 @@ const FilterBar: React.FC<FilterBarProps> = ({
 							value={filter.value}
 							onChange={(e) => onFilterChange(key, e.target.value)}
 						>
-							{filter.options.map((option) => (
-								<option key={option} value={option}>
-									{option}
-								</option>
-							))}
+							{isFilterObjectArray(filter.options)
+								? filter.options.map((option) => (
+										<option key={option.id} value={option.id}>
+											{option.value}
+										</option>
+									))
+								: filter.options.map((option) => (
+										<option key={option} value={option}>
+											{option}
+										</option>
+									))}
 						</Select>
 					</div>
 				))}
