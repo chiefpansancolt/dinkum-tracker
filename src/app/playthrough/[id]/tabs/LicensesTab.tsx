@@ -12,11 +12,11 @@ import TabHeader from "@/playthrough/ui/TabHeader";
 import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
 import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
-import ItemCard from "@/components/playthrough/ui/itemcard/ItemCard";
+import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
 import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
 import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
 import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
-import PermiteValue from "@/components/playthrough/ui/itemcard/PermiteValue";
+import PermiteValue from "@/playthrough/ui/itemcard/PermiteValue";
 
 const LicensesTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) => {
 	const params = useParams();
@@ -231,7 +231,7 @@ const LicensesTab = forwardRef<TabHandle, CollectTabProps>(({ collected }, ref) 
 				showRightBadge={true}
 				renderBadgeDetails={() => (
 					<span className="flex items-center">
-						Permit Points: {getSpentPermitPoints().toLocaleString()} /{" "}
+						Permit Points Spent: {getSpentPermitPoints().toLocaleString()} /{" "}
 						{getTotalPermitPoints().toLocaleString()}{" "}
 						<img
 							src="https://static.wikia.nocookie.net/dinkum/images/9/97/Permit_Points.png"
