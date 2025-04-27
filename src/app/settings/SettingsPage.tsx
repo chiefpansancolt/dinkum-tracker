@@ -1,14 +1,13 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { Alert, Card, Button, Label, ToggleSwitch, FileInput, Select, Badge } from "flowbite-react";
+import { Alert, Card, Button, Label, FileInput, Select, Badge } from "flowbite-react";
 import { HiInformationCircle, HiDownload, HiUpload, HiTrash } from "react-icons/hi";
 import Link from "next/link";
 import {
 	downloadData,
 	importData,
 	clearAllData,
-	saveThemePreference,
 	saveDefaultSortPreference,
 	getDefaultSortPreference,
 } from "@/lib/services/dataService";
@@ -16,7 +15,6 @@ import { getPlaythroughs } from "@/lib/localStorage";
 
 const SettingsPage = () => {
 	const fileInputRef = useRef<HTMLInputElement>(null);
-	const [darkMode, setDarkMode] = useState(false);
 	const [confirmReset, setConfirmReset] = useState(false);
 	const [resetSuccess, setResetSuccess] = useState(false);
 	const [exportSuccess, setExportSuccess] = useState(false);
@@ -27,21 +25,10 @@ const SettingsPage = () => {
 
 	useEffect(() => {
 		if (typeof window !== "undefined") {
-			const isDark = document.documentElement.classList.contains("dark");
-			setDarkMode(isDark);
 			setDefaultSort(getDefaultSortPreference());
 			setPlaythroughCount(getPlaythroughs().length);
 		}
 	}, []);
-
-	const handleDarkModeToggle = () => {
-		if (typeof window !== "undefined") {
-			document.documentElement.classList.toggle("dark");
-			const newDarkMode = !darkMode;
-			setDarkMode(newDarkMode);
-			saveThemePreference(newDarkMode);
-		}
-	};
 
 	const handleSortChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
 		const value = e.target.value;
@@ -200,16 +187,6 @@ const SettingsPage = () => {
 					</h2>
 
 					<div className="space-y-6">
-						<div className="flex items-center justify-between">
-							<Label htmlFor="dark-mode-toggle">Dark Mode</Label>
-							<ToggleSwitch
-								id="dark-mode-toggle"
-								checked={darkMode}
-								onChange={handleDarkModeToggle}
-								label=""
-							/>
-						</div>
-
 						<div>
 							<div className="mb-2 block">
 								<Label htmlFor="default-sort">Default Playthrough Sort</Label>

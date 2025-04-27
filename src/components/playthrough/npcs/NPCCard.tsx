@@ -6,7 +6,7 @@ import { HiHeart, HiOutlineHeart } from "react-icons/hi";
 import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
 import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
-import ItemDetail from "../ui/itemcard/ItemDetail";
+import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
 
 const NPCCard: React.FC<NPCCardProps> = ({ npc, hearts, onHeartsChange }) => {
 	const fullHearts = Math.floor(hearts);
