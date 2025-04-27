@@ -6,7 +6,7 @@ import { getPlaythroughById, updatePlaythroughData } from "@/lib/localStorage";
 import { npcs } from "@/data/dinkum";
 import { Playthrough } from "@/types";
 import TabHeader from "@/playthrough/ui/TabHeader";
-import NPCCard from "@/playthrough/npcs/NPCCard";
+import NPCCard from "./NPCCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
 import SaveFAB from "@/playthrough/SaveFAB";
 import NotFoundCard from "@/comps/NotFoundCard";
