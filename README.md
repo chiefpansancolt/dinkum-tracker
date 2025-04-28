@@ -2,8 +2,6 @@
 
 A comprehensive tracking application for your Dinkum adventures. Manage multiple playthroughs, track collections, and monitor progress all in one place - all saved locally in your browser.
 
-![Dinkum Tracker](https://raw.githubusercontent.com/chiefpansancolt/dinkum-tracker/main/public/dinkum_d_logo.png)
-
 ## 🌟 Features
 
 - **Multiple Playthrough Support**: Create and manage separate playthroughs for different Dinkum game saves
@@ -16,43 +14,71 @@ A comprehensive tracking application for your Dinkum adventures. Manage multiple
   - 🏆 Milestones (65+ in-game achievements)
   - 🎓 Skills tracking
   - 📜 License progression
-- **Game Information**:
-  - Detailed item data (rarity, location, sale prices)
-  - Seasonal item availability
-  - Museum donation tracking
+  - 🏠 Building construction
+  - 👫 NPC relationships
+- **Complete Item Database**:
+  - 📚 Books
+  - 🔨 Tools
+  - ⚔️ Weapons
+  - 🎒 Equipment
+  - 🚗 Vehicles
+  - 👕 Clothing
+  - 🪑 Furniture
+  - 📝 Recipes (Cooking, Crafting, Sign Writing)
+  - 💎 Resources (Minerals, Relics, Foragables, etc.)
+- **Detailed Analysis**:
+  - 📊 Dashboard with progress statistics
+  - 🧮 Items breakdown for crafting purposes
+  - 🏷️ Advanced filtering and search capabilities
 - **Local Storage**: All data saved in your browser - no account needed
+- **Data Management**:
+  - 💾 Export/import data for backup and transfer
+  - 🔄 Reset functionality
 - **Responsive Design**: Works on desktop and mobile devices
+- **Dark Mode Support**: Toggle between light and dark themes
 
 ## 🔧 Technology Stack
 
 - **Next.js 15.3.0**: Modern React framework with App Router
-- **React 19**: Latest React features
-- **TypeScript**: Type-safe code
-- **Tailwind CSS 4.1.0**: Utility-first styling
+- **React 19**: Latest React features and improvements
+- **TypeScript**: Type-safe code development
+- **Tailwind CSS 4.1.0**: Utility-first styling approach
 - **Flowbite-React**: UI component library built on Tailwind
+- **Zustand**: State management for persistent UI state
+- **React-Toastify**: Toast notifications for user feedback
+- **React-Icons**: Comprehensive icon library
 - **LocalStorage API**: Client-side data persistence
 
 ## 📋 Project Structure
 
-```
+```text
 dinkum-tracker/
 ├── app/                   # Next.js pages
 │   ├── (home)/           # Home page components
 │   ├── playthrough/      # Playthrough management
+│   │   ├── [id]/         # Dynamic routes for each playthrough
+│   │   ├── list/         # Playthrough listing
+│   │   └── new/          # Create new playthrough
+│   ├── settings/         # App settings
+│   ├── itemsBreakdown/   # Items analysis
 │   └── globals.css       # Global styles
 ├── components/           # React components
 │   ├── playthrough/      # Playthrough-specific components
 │   │   ├── dashboard/    # Dashboard components
-│   │   └── pedia/        # Collection tracking components
-│   └── ui/               # Reusable UI components
+│   │   └── ui/           # Reusable UI components for playthrough
+│   └── layout/           # Layout components (Sidebar, Navigation)
 ├── data/                 # Game data
 │   ├── constants/        # App constants
 │   └── dinkum/           # Game-specific data
-│       └── pedia/        # Collectible item data
+│       ├── pedia/        # Collectible item data
+│       └── ...           # Other game data (buildings, licenses, etc.)
 ├── lib/                  # Utility functions
 │   ├── localStorage.ts   # Storage operations
 │   └── services/         # Application services
 ├── types/                # TypeScript type definitions
+│   ├── app/              # Application-specific types
+│   ├── dinkum/           # Game data types
+│   └── ui/               # UI component types
 └── public/               # Static assets
 ```
 
@@ -98,14 +124,41 @@ This application stores all data in your browser's localStorage. This means:
 - Data persists between browser sessions
 - Clearing browser data will remove your saved playthroughs
 - Data is not synced between devices
+- Use the export/import feature to backup or transfer your data
 
 ## 🔍 Usage
 
+### Managing Playthroughs
+
 1. **Create a Playthrough**: Start by creating a new playthrough with a memorable name
-2. **Track Collections**: Mark fish, bugs, and critters as collected and donated
-3. **Monitor Progress**: Keep track of milestones, licenses, and skills
-4. **Update Calendar**: Track the current day and season in your game
-5. **Save Progress**: All changes are saved automatically when you use the save button
+2. **View Dashboard**: See your overall progress and statistics at a glance
+3. **Navigate Features**: Use the sidebar to access different tracking features
+
+### Tracking Collections
+
+- **Fish, Bugs, and Critters**: Mark items as collected and donated to the museum
+- **Advanced Filtering**: Filter by season, biome, time of day, or rarity
+- **Search**: Find specific items by name
+
+### Monitoring Progress
+
+- **Milestones**: Track achievement completion
+- **Licenses**: Monitor license acquisition
+- **Skills**: Record skill level progression
+- **Buildings**: Track building construction
+- **NPC Relationships**: Manage relationships with town NPCs
+
+### Managing Items
+
+- **Recipes**: Track unlocked cooking, crafting, and sign writing recipes
+- **Equipment**: Keep track of tools, weapons, equipment, and vehicles
+- **Items Breakdown**: Analyze resource usage and requirements
+
+### Calendar
+
+- **Season and Day**: Keep track of the current day and season in your game
+- **Events**: View upcoming events and birthdays
+- **Planning**: Plan your activities based on seasonal availability
 
 ## 🌐 Live Demo
 
