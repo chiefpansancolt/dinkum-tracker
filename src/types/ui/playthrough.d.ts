@@ -1,5 +1,14 @@
 import React from "react";
-import { Resource, ResourceVariant, Buffs, ResourceItem } from "../dinkum";
+import {
+  Resource,
+  ResourceVariant,
+  Buffs,
+  ResourceItem,
+  License,
+  Milestone,
+  Skill,
+  NPC,
+} from "../dinkum";
 
 export type FilterArray = string[];
 export interface FilterObject {
@@ -147,4 +156,58 @@ export interface BreadCrumbsProps {
   overview?: boolean;
   routeName?: string;
   id?: string;
+}
+
+export interface CollectionCardProps {
+  record:
+    | Book
+    | PediaItem
+    | Building
+    | Clothing
+    | CookingRecipe
+    | Recipe
+    | Equipment
+    | ResourceItem
+    | Tool
+    | Vehicle
+    | Weapon;
+  isCollected?: boolean;
+  isDonated?: boolean;
+  onToggleCollected?: (id: string, isCollected: boolean) => void;
+  onToggleDonated?: (id: string, isDonated: boolean) => void;
+  getTypeColor?: (type: ResourceType) => string;
+}
+
+export interface NPCCardProps {
+  npc: NPC;
+  hearts: number;
+  onHeartsChange: (id: string, hearts: number) => void;
+}
+
+export interface LicenseCardProps {
+  license: License;
+  licenseCollection: Record<string, boolean>;
+  isPreviousLevelObtained: (licenseId: string, level: number) => boolean;
+  onToggleLicenseLevel: (
+    licenseId: string,
+    level: number,
+    isObtained: boolean,
+  ) => void;
+  onToggleAllLevels: (license: License, obtainAll: boolean) => void;
+  areAllLevelsComplete: (license: License) => boolean;
+}
+
+export interface MilestoneCardProps {
+  milestone: Milestone;
+  milestoneCollection: Record<string, boolean>;
+  isPreviousLevelObtained: (milestoneId: string, level: number) => boolean;
+  onToggleMilestoneLevel: (milestoneId: string, level: number) => void;
+  onToggleAllLevels: (milestone: Milestone, setToValue: boolean) => void;
+  areAllLevelsComplete: (milestone: Milestone) => boolean;
+}
+
+export interface SkillCardProps {
+  skill: Skill;
+  level: number;
+  onLevelChange: (delta: number) => void;
 }

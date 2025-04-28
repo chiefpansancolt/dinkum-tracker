@@ -40,40 +40,34 @@ import SidebarCollapse from "./SidebarCollapse";
 import Link from "next/link";
 
 interface SidebarLinkProps {
-  href: string;
-  currentPath: string;
-  icon?: React.ReactNode;
-  indented?: boolean;
-  children: React.ReactNode;
+	href: string;
+	currentPath: string;
+	icon?: React.ReactNode;
+	indented?: boolean;
+	children: React.ReactNode;
 }
 
-const SidebarLink = ({ 
-  href, 
-  currentPath, 
-  icon, 
-  indented = false, 
-  children 
-}: SidebarLinkProps) => {
-  const isActive = currentPath === href;
+const SidebarLink = ({ href, currentPath, icon, indented = false, children }: SidebarLinkProps) => {
+	const isActive = currentPath === href;
 
-  return (
-    <Link
-      href={href}
-      className={`flex items-center rounded-lg ${indented ? 'p-2 pl-11' : 'p-2'} text-base font-medium transition duration-75 ${
-        isActive
-          ? "bg-primary text-white"
-          : "text-white hover:bg-primary"
-      } group`}
-    >
-      {icon && (
-        <span className={`${indented ? 'mr-2' : ''} h-5 w-5 text-white transition duration-75`}>
-          {icon}
-        </span>
-      )}
-      <span className={!indented && icon ? "ml-3" : ""}>{children}</span>
-    </Link>
-  );
-}
+	return (
+		<Link
+			href={href}
+			className={`flex items-center rounded-lg ${indented ? "p-2 pl-11" : "p-2"} text-base font-medium transition duration-75 ${
+				isActive ? "bg-primary text-white" : "hover:bg-primary text-white"
+			} group`}
+		>
+			{icon && (
+				<span
+					className={`${indented ? "mr-2" : ""} h-5 w-5 text-white transition duration-75`}
+				>
+					{icon}
+				</span>
+			)}
+			<span className={!indented && icon ? "ml-3" : ""}>{children}</span>
+		</Link>
+	);
+};
 
 export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 	const pathname = usePathname();

@@ -14,9 +14,3 @@ export interface NPC {
     dislikesImg: string;
   };
 }
-
-export interface NPCCardProps {
-  npc: NPC;
-  hearts: number;
-  onHeartsChange: (id: string, hearts: number) => void;
-}

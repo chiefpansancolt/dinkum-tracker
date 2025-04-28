@@ -191,7 +191,7 @@ export default function VehiclesPage() {
 						{filteredVehicles.map((vehicle) => (
 							<VehicleCard
 								key={vehicle.id}
-								vehicle={vehicle}
+								record={vehicle}
 								isCollected={vehicleCollection[vehicle.id] || false}
 								onToggleCollected={handleToggleCollected}
 							/>

@@ -184,9 +184,9 @@ export default function SignWritingRecipesPage() {
 						{filteredData.map((recipe) => (
 							<SignWritingRecipeCard
 								key={recipe.id}
-								recipe={recipe}
-								isUnlocked={signWritingRecipesCollection[recipe.id] || false}
-								onToggleUnlocked={handleToggleUnlocked}
+								record={recipe}
+								isCollected={signWritingRecipesCollection[recipe.id] || false}
+								onToggleCollected={handleToggleUnlocked}
 							/>
 						))}
 					</div>

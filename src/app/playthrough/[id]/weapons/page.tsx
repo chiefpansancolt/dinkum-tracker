@@ -191,7 +191,7 @@ export default function WeaponsPage() {
 						{filteredWeapons.map((weapon) => (
 							<WeaponCard
 								key={weapon.id}
-								weapon={weapon}
+								record={weapon}
 								isCollected={weaponCollection[weapon.id] || false}
 								onToggleCollected={handleToggleCollected}
 							/>

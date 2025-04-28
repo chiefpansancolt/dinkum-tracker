@@ -34,12 +34,10 @@ export default function RootLayout({
 				<ThemeModeScript />
 			</head>
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} min-h-screen antialiased bg-gray-50 dark:bg-gray-800`}
+				className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-gray-50 antialiased dark:bg-gray-800`}
 			>
 				<ThemeProvider theme={customTheme}>
-					<AppContainer>
-						{children}
-					</AppContainer>
+					<AppContainer>{children}</AppContainer>
 					<FAB />
 					<ToastContainer
 						closeButton={false}

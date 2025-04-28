@@ -1,6 +1,5 @@
-import React from "react";
 import { Badge } from "flowbite-react";
-import { Recipe } from "@/types/dinkum";
+import { Recipe, CollectionCardProps } from "@/types";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
 import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
 import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
@@ -8,17 +7,13 @@ import DinkValue from "@/playthrough/ui/itemcard/DinkValue";
 import ItemFooter from "@/playthrough/ui/itemcard/ItemFooter";
 import ItemResources from "@/playthrough/ui/itemcard/ItemResources";
 
-interface CraftingRecipeCardProps {
-	recipe: Recipe;
-	isUnlocked: boolean;
-	onToggleUnlocked: (id: string, isUnlocked: boolean) => void;
-}
+const CraftingRecipeCard = ({
+	record,
+	isCollected = false,
+	onToggleCollected,
+}: CollectionCardProps) => {
+	const recipe = record as Recipe;
 
-const CraftingRecipeCard: React.FC<CraftingRecipeCardProps> = ({
-	recipe,
-	isUnlocked,
-	onToggleUnlocked,
-}) => {
 	return (
 		<ItemCard
 			renderHeader={() => (
@@ -35,7 +30,7 @@ const CraftingRecipeCard: React.FC<CraftingRecipeCardProps> = ({
 				/>
 			)}
 			renderImage={() => (
-				<ItemImage src={recipe.img} name={recipe.name} isCollected={isUnlocked} />
+				<ItemImage src={recipe.img} name={recipe.name} isCollected={isCollected} />
 			)}
 			renderDetails={() => (
 				<div className="grid grid-cols-1 gap-2">
@@ -69,8 +64,8 @@ const CraftingRecipeCard: React.FC<CraftingRecipeCardProps> = ({
 				<ItemFooter
 					id={recipe.id}
 					leftLabel="Unlocked"
-					isLeftChecked={isUnlocked}
-					handleLeftToggle={onToggleUnlocked}
+					isLeftChecked={isCollected}
+					handleLeftToggle={(id, checked) => onToggleCollected?.(id, checked)}
 				/>
 			)}
 		/>

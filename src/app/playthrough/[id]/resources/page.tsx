@@ -341,7 +341,7 @@ export default function ResourcesPage() {
 						{sortedResources.map((resource) => (
 							<ResourceCard
 								key={resource.id}
-								resource={resource}
+								record={resource}
 								isCollected={false}
 								getTypeColor={getTypeColor}
 							/>

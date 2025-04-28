@@ -210,7 +210,7 @@ export default function ToolsPage() {
 						{filteredTools.map((tool) => (
 							<ToolCard
 								key={tool.id}
-								tool={tool}
+								record={tool}
 								isCollected={toolCollection[tool.id] || false}
 								onToggleCollected={handleToggleCollected}
 							/>

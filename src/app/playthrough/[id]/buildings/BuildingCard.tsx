@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
 import { Badge } from "flowbite-react";
-import { Building } from "@/types/dinkum";
+import { Building, CollectionCardProps } from "@/types";
 import { getDeedBadgeColor } from "@/data/dinkum";
 import { DeedTypes } from "@/data/constants";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
@@ -13,17 +12,8 @@ import ItemFooter from "@/playthrough/ui/itemcard/ItemFooter";
 import ItemResources from "@/playthrough/ui/itemcard/ItemResources";
 import { HiClock, HiCalendarDays } from "react-icons/hi2";
 
-interface BuildingCardProps {
-	building: Building;
-	isInstalled: boolean;
-	onToggleInstalled: (id: string, isInstalled: boolean) => void;
-}
-
-const BuildingCard: React.FC<BuildingCardProps> = ({
-	building,
-	isInstalled,
-	onToggleInstalled,
-}) => {
+const BuildingCard = ({ record, isCollected = false, onToggleCollected }: CollectionCardProps) => {
+	const building = record as Building;
 	const isCollectable = building.deedType === DeedTypes.Collectable;
 	const hasOperatingHours = building.operatingHours && building.operatingHours.length > 0;
 
@@ -40,7 +30,7 @@ const BuildingCard: React.FC<BuildingCardProps> = ({
 				/>
 			)}
 			renderImage={() => (
-				<ItemImage src={building.img} name={building.name} isCollected={isInstalled} />
+				<ItemImage src={building.img} name={building.name} isCollected={isCollected} />
 			)}
 			renderDetails={() => (
 				<div className="grid grid-cols-1 gap-2">
@@ -100,8 +90,8 @@ const BuildingCard: React.FC<BuildingCardProps> = ({
 					<ItemFooter
 						id={building.id}
 						leftLabel="Installed"
-						isLeftChecked={isInstalled}
-						handleLeftToggle={(id, checked) => onToggleInstalled(id, checked)}
+						isLeftChecked={isCollected}
+						handleLeftToggle={(id, checked) => onToggleCollected?.(id, checked)}
 					/>
 				)
 			}

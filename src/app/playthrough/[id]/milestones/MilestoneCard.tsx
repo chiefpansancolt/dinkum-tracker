@@ -1,29 +1,19 @@
-import React from "react";
 import { Button, Badge, Checkbox, Tooltip } from "flowbite-react";
-import { Milestone } from "@/types/dinkum";
+import { MilestoneCardProps } from "@/types";
 import { HiOutlineLockClosed } from "react-icons/hi";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
 import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
 import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
 import PermiteValue from "@/playthrough/ui/itemcard/PermiteValue";
 
-interface MilestoneCardProps {
-	milestone: Milestone;
-	milestoneCollection: Record<string, boolean>;
-	isPreviousLevelObtained: (milestoneId: string, level: number) => boolean;
-	onToggleMilestoneLevel: (milestoneId: string, level: number) => void;
-	onToggleAllLevels: (milestone: Milestone, setToValue: boolean) => void;
-	areAllLevelsComplete: (milestone: Milestone) => boolean;
-}
-
-const MilestoneCard: React.FC<MilestoneCardProps> = ({
+const MilestoneCard = ({
 	milestone,
 	milestoneCollection,
 	isPreviousLevelObtained,
 	onToggleMilestoneLevel,
 	onToggleAllLevels,
 	areAllLevelsComplete,
-}) => {
+}: MilestoneCardProps) => {
 	const allComplete = areAllLevelsComplete(milestone);
 
 	return (

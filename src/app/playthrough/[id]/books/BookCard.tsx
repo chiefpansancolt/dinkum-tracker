@@ -1,5 +1,4 @@
-import React from "react";
-import { Book } from "@/types";
+import { CollectionCardProps, Book } from "@/types";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
 import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
 import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
@@ -7,13 +6,9 @@ import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
 import DinkValue from "@/playthrough/ui/itemcard/DinkValue";
 import ItemFooter from "@/playthrough/ui/itemcard/ItemFooter";
 
-interface BookCardProps {
-	book: Book;
-	isCollected: boolean;
-	onToggleCollected: (id: string, isCollected: boolean) => void;
-}
+const BookCard = ({ record, isCollected = false, onToggleCollected }: CollectionCardProps) => {
+	const book = record as Book;
 
-const BookCard: React.FC<BookCardProps> = ({ book, isCollected, onToggleCollected }) => {
 	return (
 		<ItemCard
 			renderHeader={() => <ItemHeader title={book.name} />}
@@ -51,7 +46,7 @@ const BookCard: React.FC<BookCardProps> = ({ book, isCollected, onToggleCollecte
 					id={book.id}
 					leftLabel="Collected"
 					isLeftChecked={isCollected}
-					handleLeftToggle={(id, checked) => onToggleCollected(id, checked)}
+					handleLeftToggle={(id, checked) => onToggleCollected?.(id, checked)}
 				/>
 			)}
 		/>

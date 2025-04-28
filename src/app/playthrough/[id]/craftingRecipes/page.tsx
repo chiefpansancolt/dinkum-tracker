@@ -184,9 +184,9 @@ export default function CraftingRecipesPage() {
 						{filteredData.map((recipe) => (
 							<CraftingRecipeCard
 								key={recipe.id}
-								recipe={recipe}
-								isUnlocked={craftingRecipesCollection[recipe.id] || false}
-								onToggleUnlocked={handleToggleUnlocked}
+								record={recipe}
+								isCollected={craftingRecipesCollection[recipe.id] || false}
+								onToggleCollected={handleToggleUnlocked}
 							/>
 						))}
 					</div>

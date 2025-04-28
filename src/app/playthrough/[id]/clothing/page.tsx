@@ -205,7 +205,7 @@ export default function ClothingPage() {
 						{filteredData.map((item) => (
 							<ClothingCard
 								key={item.id}
-								clothing={item}
+								record={item}
 								isCollected={clothingCollection[item.id] || false}
 								onToggleCollected={handleToggleCollected}
 							/>

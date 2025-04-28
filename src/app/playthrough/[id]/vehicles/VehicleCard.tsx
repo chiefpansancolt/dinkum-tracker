@@ -1,8 +1,7 @@
-import React from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { Button } from "flowbite-react";
-import { Vehicle } from "@/types/dinkum";
+import { Vehicle, CollectionCardProps } from "@/types";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
 import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
 import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
@@ -12,13 +11,8 @@ import ItemFooter from "@/playthrough/ui/itemcard/ItemFooter";
 import ItemResources from "@/playthrough/ui/itemcard/ItemResources";
 import ItemFranklyn from "@/playthrough/ui/itemcard/ItemFranklyn";
 
-interface VehicleCardProps {
-	vehicle: Vehicle;
-	isCollected: boolean;
-	onToggleCollected: (id: string, isCollected: boolean) => void;
-}
-
-const VehicleCard: React.FC<VehicleCardProps> = ({ vehicle, isCollected, onToggleCollected }) => {
+const VehicleCard = ({ record, isCollected = false, onToggleCollected }: CollectionCardProps) => {
+	const vehicle = record as Vehicle;
 	const params = useParams();
 	const playthroughId = typeof params.id === "string" ? params.id : "";
 	const isCraftable = vehicle.source.includes("Crafting Table");
@@ -95,7 +89,7 @@ const VehicleCard: React.FC<VehicleCardProps> = ({ vehicle, isCollected, onToggl
 					id={vehicle.id}
 					leftLabel="Collected"
 					isLeftChecked={isCollected}
-					handleLeftToggle={onToggleCollected}
+					handleLeftToggle={(id, checked) => onToggleCollected?.(id, checked)}
 				/>
 			)}
 		/>

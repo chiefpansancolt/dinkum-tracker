@@ -1,8 +1,7 @@
-import React from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { Button } from "flowbite-react";
-import { Weapon } from "@/types/dinkum";
+import { Weapon, CollectionCardProps } from "@/types";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
 import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
 import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
@@ -12,13 +11,8 @@ import ItemFooter from "@/playthrough/ui/itemcard/ItemFooter";
 import ItemResources from "@/playthrough/ui/itemcard/ItemResources";
 import ItemDamage from "@/playthrough/ui/itemcard/ItemDamage";
 
-interface WeaponCardProps {
-	weapon: Weapon;
-	isCollected: boolean;
-	onToggleCollected: (id: string, isCollected: boolean) => void;
-}
-
-const WeaponCard: React.FC<WeaponCardProps> = ({ weapon, isCollected, onToggleCollected }) => {
+const WeaponCard = ({ record, isCollected = false, onToggleCollected }: CollectionCardProps) => {
+	const weapon = record as Weapon;
 	const params = useParams();
 	const playthroughId = typeof params.id === "string" ? params.id : "";
 	const isCraftable = weapon.source.includes("Crafting Table");
@@ -82,7 +76,7 @@ const WeaponCard: React.FC<WeaponCardProps> = ({ weapon, isCollected, onToggleCo
 					id={weapon.id}
 					leftLabel="Collected"
 					isLeftChecked={isCollected}
-					handleLeftToggle={onToggleCollected}
+					handleLeftToggle={(id, checked) => onToggleCollected?.(id, checked)}
 				/>
 			)}
 		/>

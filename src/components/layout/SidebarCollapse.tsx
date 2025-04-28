@@ -24,8 +24,8 @@ export default function SidebarCollapse({
 		<div>
 			<button
 				type="button"
-				className={`flex w-full items-center rounded-lg p-2 text-base font-medium transition duration-75 cursor-pointer ${
-					active ? "bg-primary text-white" : "text-white hover:bg-primary"
+				className={`flex w-full cursor-pointer items-center rounded-lg p-2 text-base font-medium transition duration-75 ${
+					active ? "bg-primary text-white" : "hover:bg-primary text-white"
 				} group`}
 				onClick={onToggle}
 			>

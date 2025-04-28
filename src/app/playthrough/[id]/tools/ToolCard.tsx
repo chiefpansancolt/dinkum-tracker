@@ -1,8 +1,7 @@
-import React from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { Button } from "flowbite-react";
-import { Tool } from "@/types/dinkum";
+import { Tool, CollectionCardProps } from "@/types";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
 import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
 import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
@@ -13,13 +12,8 @@ import ItemResources from "@/playthrough/ui/itemcard/ItemResources";
 import ItemFranklyn from "@/playthrough/ui/itemcard/ItemFranklyn";
 import ItemDamage from "@/playthrough/ui/itemcard/ItemDamage";
 
-interface ToolCardProps {
-	tool: Tool;
-	isCollected: boolean;
-	onToggleCollected: (id: string, isCollected: boolean) => void;
-}
-
-const ToolCard: React.FC<ToolCardProps> = ({ tool, isCollected, onToggleCollected }) => {
+const ToolCard = ({ record, isCollected = false, onToggleCollected }: CollectionCardProps) => {
+	const tool = record as Tool;
 	const params = useParams();
 	const playthroughId = typeof params.id === "string" ? params.id : "";
 	const isCraftable = tool.source.includes("Crafting Table");
@@ -87,7 +81,7 @@ const ToolCard: React.FC<ToolCardProps> = ({ tool, isCollected, onToggleCollecte
 					id={tool.id}
 					leftLabel="Collected"
 					isLeftChecked={isCollected}
-					handleLeftToggle={onToggleCollected}
+					handleLeftToggle={(id, checked) => onToggleCollected?.(id, checked)}
 				/>
 			)}
 		/>

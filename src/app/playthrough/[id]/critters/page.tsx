@@ -261,11 +261,11 @@ export default function CrittersPage() {
 						{filteredItems.map((item) => (
 							<CritterCard
 								key={item.id}
-								critter={item}
+								record={item}
 								isCollected={collectedState.includes(item.id)}
 								isDonated={donatedState.includes(item.id)}
-								onCollectedChange={handleCollectedChange}
-								onDonatedChange={handleDonatedChange}
+								onToggleCollected={handleCollectedChange}
+								onToggleDonated={handleDonatedChange}
 							/>
 						))}
 					</div>

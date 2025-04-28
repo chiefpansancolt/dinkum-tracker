@@ -314,9 +314,9 @@ export default function CookingRecipesPage() {
 						{filteredData.map((recipe) => (
 							<CookingRecipeCard
 								key={recipe.id}
-								recipe={recipe}
-								isUnlocked={cookingRecipesCollection[recipe.id] || false}
-								onToggleUnlocked={handleToggleUnlocked}
+								record={recipe}
+								isCollected={cookingRecipesCollection[recipe.id] || false}
+								onToggleCollected={handleToggleUnlocked}
 							/>
 						))}
 					</div>

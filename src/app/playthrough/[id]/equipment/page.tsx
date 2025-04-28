@@ -39,7 +39,6 @@ export default function EquipmentPage() {
 		return ["All", ...Array.from(sources).sort()];
 	}, []);
 
-	// Get unique requirement types for filter
 	const uniqueRequirementTypes = useMemo(() => {
 		const types = new Set<string>();
 		equipment.forEach((item) => {
@@ -193,7 +192,7 @@ export default function EquipmentPage() {
 						filteredEquipment.map((item) => (
 							<EquipmentCard
 								key={item.id}
-								equipment={item}
+								record={item}
 								isCollected={equipmentCollection[item.id] || false}
 								onToggleCollected={handleToggleCollected}
 							/>

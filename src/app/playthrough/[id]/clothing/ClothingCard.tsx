@@ -1,6 +1,5 @@
-import React from "react";
 import { Badge } from "flowbite-react";
-import { Clothing } from "@/types/dinkum";
+import { Clothing, CollectionCardProps } from "@/types";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
 import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
 import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
@@ -8,17 +7,9 @@ import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
 import DinkValue from "@/playthrough/ui/itemcard/DinkValue";
 import ItemFooter from "@/playthrough/ui/itemcard/ItemFooter";
 
-interface ClothingCardProps {
-	clothing: Clothing;
-	isCollected: boolean;
-	onToggleCollected: (id: string, isCollected: boolean) => void;
-}
+const ClothingCard = ({ record, isCollected = false, onToggleCollected }: CollectionCardProps) => {
+	const clothing = record as Clothing;
 
-const ClothingCard: React.FC<ClothingCardProps> = ({
-	clothing,
-	isCollected,
-	onToggleCollected,
-}) => {
 	return (
 		<ItemCard
 			renderHeader={() => (
@@ -51,10 +42,7 @@ const ClothingCard: React.FC<ClothingCardProps> = ({
 					)}
 
 					{clothing.cataloguePrice !== null && (
-						<DinkValue
-							label="Catalogue Price"
-							price={clothing.cataloguePrice}
-						/>
+						<DinkValue label="Catalogue Price" price={clothing.cataloguePrice} />
 					)}
 				</div>
 			)}
@@ -63,7 +51,7 @@ const ClothingCard: React.FC<ClothingCardProps> = ({
 					id={clothing.id}
 					leftLabel="Collected"
 					isLeftChecked={isCollected}
-					handleLeftToggle={onToggleCollected}
+					handleLeftToggle={(id, checked) => onToggleCollected?.(id, checked)}
 				/>
 			)}
 		/>

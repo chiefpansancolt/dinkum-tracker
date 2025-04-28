@@ -261,11 +261,11 @@ export default function FishPage() {
 						{filteredItems.map((item) => (
 							<FishCard
 								key={item.id}
-								fish={item}
+								record={item}
 								isCollected={collectedState.includes(item.id)}
 								isDonated={donatedState.includes(item.id)}
-								onCollectedChange={handleCollectedChange}
-								onDonatedChange={handleDonatedChange}
+								onToggleCollected={handleCollectedChange}
+								onToggleDonated={handleDonatedChange}
 							/>
 						))}
 					</div>

@@ -1,6 +1,5 @@
-import React from "react";
 import { Button, Badge, Checkbox, Tooltip } from "flowbite-react";
-import { License } from "@/types/dinkum";
+import { LicenseCardProps } from "@/types";
 import { HiOutlineLockClosed } from "react-icons/hi";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
 import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
@@ -8,23 +7,14 @@ import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
 import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
 import PermiteValue from "@/playthrough/ui/itemcard/PermiteValue";
 
-interface LicenseCardProps {
-	license: License;
-	licenseCollection: Record<string, boolean>;
-	isPreviousLevelObtained: (licenseId: string, level: number) => boolean;
-	onToggleLicenseLevel: (licenseId: string, level: number, isObtained: boolean) => void;
-	onToggleAllLevels: (license: License, obtainAll: boolean) => void;
-	areAllLevelsComplete: (license: License) => boolean;
-}
-
-const LicenseCard: React.FC<LicenseCardProps> = ({
+const LicenseCard = ({
 	license,
 	licenseCollection,
 	isPreviousLevelObtained,
 	onToggleLicenseLevel,
 	onToggleAllLevels,
 	areAllLevelsComplete,
-}) => {
+}: LicenseCardProps) => {
 	const allComplete = areAllLevelsComplete(license);
 
 	return (

@@ -1,17 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { Button } from "flowbite-react";
-import { Skill } from "@/types/dinkum";
+import { SkillCardProps } from "@/types";
 import { HiMinusSm, HiPlusSm } from "react-icons/hi";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
 
-interface SkillCardProps {
-	skill: Skill;
-	level: number;
-	onLevelChange: (delta: number) => void;
-}
-
-const SkillCard: React.FC<SkillCardProps> = ({ skill, level, onLevelChange }) => {
+const SkillCard = ({ skill, level, onLevelChange }: SkillCardProps) => {
 	return (
 		<ItemCard
 			renderHeader={() => (
@@ -52,11 +46,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill, level, onLevelChange }) =>
 							{level}
 						</span>
 
-						<Button
-							color="gray"
-							size="sm"
-							onClick={() => onLevelChange(1)}
-						>
+						<Button color="gray" size="sm" onClick={() => onLevelChange(1)}>
 							<HiPlusSm className="h-4 w-4" />
 						</Button>
 					</div>

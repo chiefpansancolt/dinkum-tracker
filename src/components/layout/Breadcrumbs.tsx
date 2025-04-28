@@ -25,4 +25,4 @@ const BreadcrumbsComp = ({ name, overview = false, routeName, id }: BreadCrumbsP
 	);
 };
 
-export default BreadcrumbsComp
+export default BreadcrumbsComp;

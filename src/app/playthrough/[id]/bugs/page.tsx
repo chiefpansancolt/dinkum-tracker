@@ -261,11 +261,11 @@ export default function BugsPage() {
 						{filteredItems.map((item) => (
 							<BugCard
 								key={item.id}
-								bug={item}
+								record={item}
 								isCollected={collectedState.includes(item.id)}
 								isDonated={donatedState.includes(item.id)}
-								onCollectedChange={handleCollectedChange}
-								onDonatedChange={handleDonatedChange}
+								onToggleCollected={handleCollectedChange}
+								onToggleDonated={handleDonatedChange}
 							/>
 						))}
 					</div>

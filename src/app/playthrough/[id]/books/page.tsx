@@ -147,7 +147,7 @@ export default function BooksPage() {
 					{filteredBooks.map((book) => (
 						<BookCard
 							key={book.id}
-							book={book}
+							record={book}
 							isCollected={bookCollection[book.id] || false}
 							onToggleCollected={handleToggleCollected}
 						/>

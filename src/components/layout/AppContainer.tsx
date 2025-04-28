@@ -8,7 +8,6 @@ import Footer from "../Footer";
 export default function AppContainer({ children }: { children: React.ReactNode }) {
 	const [sidebarOpen, setSidebarOpen] = useState(true);
 
-
 	useEffect(() => {
 		const handleResize = () => {
 			if (window.innerWidth >= 768) {
@@ -35,7 +34,7 @@ export default function AppContainer({ children }: { children: React.ReactNode }
 
 			<AppSidebar sidebarOpen={sidebarOpen} />
 
-			<main className="min-h-screen flex flex-col md:ml-64 mt-15">
+			<main className="mt-15 flex min-h-screen flex-col md:ml-64">
 				<div className="flex-grow">{children}</div>
 				<Footer />
 			</main>

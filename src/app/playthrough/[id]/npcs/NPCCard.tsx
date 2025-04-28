@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
 import { Button } from "flowbite-react";
 import { NPCCardProps } from "@/types";
 import { HiHeart, HiOutlineHeart } from "react-icons/hi";
@@ -8,7 +7,7 @@ import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
 import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
 
-const NPCCard: React.FC<NPCCardProps> = ({ npc, hearts, onHeartsChange }) => {
+const NPCCard = ({ npc, hearts, onHeartsChange }: NPCCardProps) => {
 	const fullHearts = Math.floor(hearts);
 	const quarterHearts = Math.round((hearts - fullHearts) * 4);
 

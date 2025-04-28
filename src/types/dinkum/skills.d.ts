@@ -4,9 +4,3 @@ export interface Skill {
   img: string;
   description: string;
 }
-
-export interface SkillCardProps {
-  skill: Skill;
-  level: number;
-  onLevelChange: (delta: number) => void;
-}

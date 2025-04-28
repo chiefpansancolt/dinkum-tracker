@@ -12,11 +12,3 @@ export interface Collection {
   bugs: string[];
   critters: string[];
 }
-
-export interface CollectionItemProps {
-  item: PediaItem | Fish;
-  isCollected: boolean;
-  isDonated: boolean;
-  onCollectedChange: (id: string, collected: boolean) => void;
-  onDonatedChange: (id: string, donated: boolean) => void;
-}

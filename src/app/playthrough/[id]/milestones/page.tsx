@@ -252,11 +252,9 @@ export default function MilestonesPage() {
 				/>
 
 				<div className="mb-4">
-					<div className="flex items-center justify-between rounded-lg bg-secondary p-4">
+					<div className="bg-secondary flex items-center justify-between rounded-lg p-4">
 						<div>
-							<h3 className="font-medium">
-								Permit Points Earned
-							</h3>
+							<h3 className="font-medium">Permit Points Earned</h3>
 							<p className="text-sm">
 								You&apos;ve earned {getEarnedPermitPoints().toLocaleString()} of{" "}
 								{getTotalPermitPoints().toLocaleString()} available permit points.

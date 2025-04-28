@@ -178,9 +178,9 @@ export default function BuildingsPage() {
 						{filteredBuildings.map((building) => (
 							<BuildingCard
 								key={building.id}
-								building={building}
-								isInstalled={buildingCollection[building.id] || false}
-								onToggleInstalled={handleToggleInstalled}
+								record={building}
+								isCollected={buildingCollection[building.id] || false}
+								onToggleCollected={handleToggleInstalled}
 							/>
 						))}
 					</div>

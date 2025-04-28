@@ -1,7 +1,5 @@
-import React from "react";
 import { Badge } from "flowbite-react";
-import { ResourceItem } from "@/types";
-import { ResourceType } from "@/data/constants";
+import { ResourceItem, CollectionCardProps } from "@/types";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
 import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
 import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
@@ -10,24 +8,16 @@ import DinkValue from "@/playthrough/ui/itemcard/DinkValue";
 import ItemResources from "@/playthrough/ui/itemcard/ItemResources";
 import ItemBuffs from "@/playthrough/ui/itemcard/ItemBuffs";
 
-interface ResourceCardProps {
-	resource: ResourceItem;
-	isCollected: boolean;
-	getTypeColor: (type: ResourceType) => string;
-}
+const ResourceCard = ({ record, isCollected = false, getTypeColor }: CollectionCardProps) => {
+	const resource = record as ResourceItem;
 
-const ResourceCard: React.FC<ResourceCardProps> = ({
-	resource,
-	isCollected,
-	getTypeColor,
-}) => {
 	return (
 		<ItemCard
 			renderHeader={() => (
 				<ItemHeader
 					title={resource.name}
 					renderRightComp={() => (
-						<Badge color={getTypeColor(resource.resourceType)}>
+						<Badge color={getTypeColor?.(resource.resourceType)}>
 							{resource.resourceType}
 						</Badge>
 					)}

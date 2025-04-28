@@ -245,9 +245,7 @@ export default function LicensesPage() {
 				<div className="mb-4">
 					<div className="bg-secondary flex items-center justify-between rounded-lg p-4">
 						<div>
-							<h3 className="font-medium">
-								Permit Points Spent
-							</h3>
+							<h3 className="font-medium">Permit Points Spent</h3>
 							<p className="text-sm">
 								You&apos;ve spent {getSpentPermitPoints().toLocaleString()} of{" "}
 								{getTotalPermitPoints().toLocaleString()} needed permit points.

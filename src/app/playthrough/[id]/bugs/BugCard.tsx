@@ -1,6 +1,5 @@
-import React from "react";
 import { Badge } from "flowbite-react";
-import { PediaItem } from "@/types/dinkum";
+import { PediaItem, CollectionCardProps } from "@/types";
 import { getRarityColor } from "@/lib/services/rarityColor";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
 import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
@@ -9,21 +8,14 @@ import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
 import DinkValue from "@/playthrough/ui/itemcard/DinkValue";
 import ItemFooter from "@/playthrough/ui/itemcard/ItemFooter";
 
-interface BugCardProps {
-	bug: PediaItem;
-	isCollected: boolean;
-	isDonated: boolean;
-	onCollectedChange: (id: string, isCollected: boolean) => void;
-	onDonatedChange: (id: string, isDonated: boolean) => void;
-}
-
-const BugCard: React.FC<BugCardProps> = ({
-	bug,
-	isCollected,
-	isDonated,
-	onCollectedChange,
-	onDonatedChange,
-}) => {
+const BugCard = ({
+	record,
+	isCollected = false,
+	isDonated = false,
+	onToggleCollected,
+	onToggleDonated,
+}: CollectionCardProps) => {
+	const bug = record as PediaItem;
 	const isComplete = isCollected && isDonated;
 
 	return (
@@ -57,8 +49,8 @@ const BugCard: React.FC<BugCardProps> = ({
 					isLeftChecked={isCollected}
 					rightLabel="Donated to Museum"
 					isRightChecked={isDonated}
-					handleLeftToggle={(id, checked) => onCollectedChange(id, checked)}
-					handleRightToggle={(id, checked) => onDonatedChange(id, checked)}
+					handleLeftToggle={(id, checked) => onToggleCollected?.(id, checked)}
+					handleRightToggle={(id, checked) => onToggleDonated?.(id, checked)}
 				/>
 			)}
 		/>
