@@ -1,28 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import AppSidebar from "./AppSidebar";
 import AppNav from "./AppNav";
 import Footer from "../Footer";
 
 export default function AppContainer({ children }: { children: React.ReactNode }) {
-	const [sidebarOpen, setSidebarOpen] = useState(true);
-
-	useEffect(() => {
-		const handleResize = () => {
-			if (window.innerWidth >= 768) {
-				setSidebarOpen(true);
-			} else {
-				setSidebarOpen(false);
-			}
-		};
-
-		handleResize();
-		window.addEventListener("resize", handleResize);
-		return () => {
-			window.removeEventListener("resize", handleResize);
-		};
-	}, []);
+	const [sidebarOpen, setSidebarOpen] = useState(false);
 
 	const toggleSidebar = () => {
 		setSidebarOpen(!sidebarOpen);

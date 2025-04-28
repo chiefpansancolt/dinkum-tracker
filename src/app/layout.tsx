@@ -1,12 +1,8 @@
-import { ThemeModeScript } from "flowbite-react";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "@/app/globals.css";
-import { ThemeProvider } from "flowbite-react";
-import { customTheme } from "@/app/theme";
-import FAB from "@/comps/FAB";
-import AppContainer from "@/comps/layout/AppContainer";
-import { ToastContainer } from "react-toastify";
+import { ThemeModeScript } from "flowbite-react";
+import LayoutWrapper from "@/comps/layout/LayoutWrapper";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -36,21 +32,7 @@ export default function RootLayout({
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-gray-50 antialiased dark:bg-gray-800`}
 			>
-				<ThemeProvider theme={customTheme}>
-					<AppContainer>{children}</AppContainer>
-					<FAB />
-					<ToastContainer
-						closeButton={false}
-						hideProgressBar
-						newestOnTop
-						draggable
-						stacked
-						className={"mt-14 lg:mt-0 lg:mr-24"}
-						toastClassName={
-							"shadow-md rounded-lg text-gray-500 bg-white dark:text-gray-400 dark:bg-gray-800 p-0"
-						}
-					/>
-				</ThemeProvider>
+				<LayoutWrapper>{children}</LayoutWrapper>
 			</body>
 		</html>
 	);

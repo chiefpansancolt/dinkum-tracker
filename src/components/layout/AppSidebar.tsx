@@ -2,8 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { usePathname, useParams } from "next/navigation";
-import { getPlaythroughs, getPlaythroughById } from "@/lib/localStorage";
-import { Playthrough } from "@/types";
 import { HiHome, HiViewList, HiCog } from "react-icons/hi";
 import {
 	FaFish,
@@ -72,8 +70,6 @@ const SidebarLink = ({ href, currentPath, icon, indented = false, children }: Si
 export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 	const pathname = usePathname();
 	const params = useParams();
-	const [recentPlaythroughs, setRecentPlaythroughs] = useState<Playthrough[]>([]);
-	const [playthroughsOpen, setPlaythroughsOpen] = useState(false);
 	const [pedieOpen, setPedieOpen] = useState(false);
 	const [recipesOpen, setRecipesOpen] = useState(false);
 	const [gearOpen, setGearOpen] = useState(false);
@@ -81,21 +77,7 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 	const [resourcesOpen, setResourcesOpen] = useState(false);
 
 	const playthroughId = params?.id as string;
-	const currentPlaythrough = playthroughId ? getPlaythroughById(playthroughId) : null;
-	const isPlaythroughRoute =
-		pathname?.includes("/playthrough/") && playthroughId && currentPlaythrough;
-
-	useEffect(() => {
-		if (typeof window !== "undefined") {
-			const allPlaythroughs = getPlaythroughs();
-			const sortedPlaythroughs = allPlaythroughs
-				.sort(
-					(a, b) => new Date(b.lastUpdated).getTime() - new Date(a.lastUpdated).getTime()
-				)
-				.slice(0, 5);
-			setRecentPlaythroughs(sortedPlaythroughs);
-		}
-	}, [pathname]);
+	const isPlaythroughRoute = pathname?.includes("/playthrough/") && playthroughId;
 
 	useEffect(() => {
 		if (pathname) {
@@ -144,38 +126,23 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 			<div className="bg-accent h-full overflow-y-auto px-3 pb-28">
 				<ul className="space-y-2">
 					<li>
-						<SidebarLink href="/" currentPath={pathname} icon={<HiHome />}>
+						<SidebarLink
+							href="/"
+							currentPath={pathname}
+							icon={<HiHome className="h-5 w-5" />}
+						>
 							Home
 						</SidebarLink>
 					</li>
 
 					<li>
-						<SidebarCollapse
-							label="Playthroughs"
+						<SidebarLink
+							href="/playthrough/list"
+							currentPath={pathname}
 							icon={<HiViewList className="h-5 w-5" />}
-							open={playthroughsOpen}
-							onToggle={() => setPlaythroughsOpen(!playthroughsOpen)}
 						>
-							{recentPlaythroughs.length > 0 ? (
-								<>
-									{recentPlaythroughs.map((playthrough) => (
-										<SidebarLink
-											key={playthrough.id}
-											href={`/playthrough/${playthrough.id}`}
-											currentPath={pathname}
-											indented
-										>
-											{playthrough.name}
-										</SidebarLink>
-									))}
-									<div className="my-1 border-t border-gray-200 dark:border-gray-700"></div>
-								</>
-							) : null}
-
-							<SidebarLink href="/playthrough/list" currentPath={pathname} indented>
-								View All Playthroughs
-							</SidebarLink>
-						</SidebarCollapse>
+							Playthroughs
+						</SidebarLink>
 					</li>
 
 					<li>
@@ -191,8 +158,8 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 					{isPlaythroughRoute && (
 						<>
 							<div className="mt-6 mb-2 border-t border-gray-200 pt-3 dark:border-gray-700">
-								<p className="px-2 text-sm font-semibold text-gray-400 dark:text-gray-300">
-									{currentPlaythrough?.name}
+								<p className="px-2 text-sm font-semibold text-gray-200">
+									Current Playthrough
 								</p>
 							</div>
 
