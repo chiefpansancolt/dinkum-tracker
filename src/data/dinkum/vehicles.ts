@@ -387,6 +387,58 @@ export const vehicles: Vehicle[] = [
     baseSellPrice: 160000,
   },
   {
+    id: "plane",
+    name: "Plane",
+    img: "https://static.wikia.nocookie.net/dinkum/images/9/9e/Inv_Plane.png",
+    requirementLevel: 3,
+    requirementType: "Vehicle Licence",
+    source: ["Franklyn's Lab"],
+    inputs: [
+      {
+        count: 10,
+        name: "Old Gear",
+        img: "https://static.wikia.nocookie.net/dinkum/images/9/90/Inv_Old_Gear.png",
+      },
+      {
+        count: 8,
+        name: "Old Spring",
+        img: "https://static.wikia.nocookie.net/dinkum/images/1/11/Inv_Old_Spring.png",
+      },
+      {
+        count: 4,
+        name: "Old Contraption",
+        img: "https://static.wikia.nocookie.net/dinkum/images/7/7d/Inv_Old_Contraption.png",
+      },
+      {
+        count: 15,
+        name: "Bright Wires",
+        img: "https://static.wikia.nocookie.net/dinkum/images/8/8f/Inv_Bright_Wire.png",
+      },
+      {
+        count: 2,
+        name: "Ear Hats",
+        img: "https://static.wikia.nocookie.net/dinkum/images/7/7e/Inv_Ear_Hats.png",
+      },
+      {
+        count: 15,
+        name: "Copper Bar",
+        img: "https://static.wikia.nocookie.net/dinkum/images/7/7a/Inv_Copper_Bar.png",
+      },
+      {
+        count: 15,
+        name: "Iron Bar",
+        img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Inv_Iron_Bar.png",
+      },
+      {
+        count: 5,
+        name: "Berkonium Bar",
+        img: "https://static.wikia.nocookie.net/dinkum/images/b/ba/Inv_Berkonium_Bar.png",
+      },
+    ],
+    buyPrice: 5000000,
+    baseSellPrice: 2500000,
+  },
+  {
     id: "bat_glider",
     name: "Bat Glider",
     img: "https://static.wikia.nocookie.net/dinkum/images/8/8a/Inv_Bat_Glider.png",

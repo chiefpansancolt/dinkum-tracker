@@ -315,6 +315,15 @@ export const weapons: Weapon[] = [
     baseSellPrice: 75000,
   },
   {
+    id: "battle_fish",
+    name: "Battle Fish",
+    img: "https://static.wikia.nocookie.net/dinkum/images/7/79/Inv_Battle_Fish.png",
+    damage: 14,
+    licenceLevel: null,
+    source: ["Hunting Sharks"],
+    baseSellPrice: 125000,
+  },
+  {
     id: "berkonium_wand",
     name: "Berkonium Wand",
     img: "https://static.wikia.nocookie.net/dinkum/images/8/8a/Inv_Berkonium_Wand.png",

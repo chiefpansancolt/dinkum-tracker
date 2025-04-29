@@ -325,6 +325,78 @@ export const npcs: NPC[] = [
       dislikesImg: "",
     },
   },
+  {
+    id: "river",
+    name: "River",
+    img: "https://static.wikia.nocookie.net/dinkum/images/2/27/NPC_River.png",
+    occupation: "Hobby Fishing",
+    requirements: {
+      visit: "",
+      moveIn: "Lives in Guest House 1 (green) after it's been put up for rent",
+    },
+    foodPreferences: {
+      likes: "Cooked Saltwater Fish",
+      likesImg:
+        "https://static.wikia.nocookie.net/dinkum/images/8/84/Inv_Cooked_Saltwater_Fish.png",
+      dislikes: "Cooked Meat",
+      dislikesImg:
+        "https://static.wikia.nocookie.net/dinkum/images/4/48/Inv_Cooked_Meat.png",
+    },
+  },
+  {
+    id: "forest",
+    name: "Forest",
+    img: "https://static.wikia.nocookie.net/dinkum/images/8/8c/NPC_Forest.png",
+    occupation: "Hobby Forest",
+    requirements: {
+      visit: "",
+      moveIn: "Lives in Guest House 2 (purple) after it's been put up for rent",
+    },
+    foodPreferences: {
+      likes: "Pastie",
+      likesImg:
+        "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Pastie.png",
+      dislikes: "Mushroom Soup",
+      dislikesImg:
+        "https://static.wikia.nocookie.net/dinkum/images/f/fa/Inv_Mushroom_Soup.png",
+    },
+  },
+  {
+    id: "doug",
+    name: "Doug",
+    img: "https://static.wikia.nocookie.net/dinkum/images/b/b1/NPC_Doug.png",
+    occupation: "Hobby Doug",
+    requirements: {
+      visit: "",
+      moveIn: "Lives in Guest House 3 (yellow) after it's been put up for rent",
+    },
+    foodPreferences: {
+      likes: "Banana Jam",
+      likesImg:
+        "https://static.wikia.nocookie.net/dinkum/images/4/49/Inv_Banana_Jam.png",
+      dislikes: "Apple",
+      dislikesImg:
+        "https://static.wikia.nocookie.net/dinkum/images/9/90/Inv_Apple.png",
+    },
+  },
+  {
+    id: "mason",
+    name: "Mason",
+    img: "https://static.wikia.nocookie.net/dinkum/images/a/a4/NPC_Mason.png",
+    occupation: "Hobby Mason",
+    requirements: {
+      visit: "",
+      moveIn: "Lives in Guest House 4 (red) after it's been put up for rent",
+    },
+    foodPreferences: {
+      likes: "Roe Nigiri",
+      likesImg:
+        "https://static.wikia.nocookie.net/dinkum/images/e/e7/Inv_Roe_Nigiri.png",
+      dislikes: "Crab Soup",
+      dislikesImg:
+        "https://static.wikia.nocookie.net/dinkum/images/f/f2/Inv_Crab_Soup.png",
+    },
+  },
 ];
 
 export const getNPCById = (id: string): NPC | undefined => {

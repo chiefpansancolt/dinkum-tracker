@@ -2,6 +2,28 @@ import { Tool } from "@/types";
 
 export const tools: Tool[] = [
   {
+    id: "animal_brush",
+    name: "Animal Brush",
+    img: "https://static.wikia.nocookie.net/dinkum/images/5/58/Inv_Animal_Brush.png",
+    damage: null,
+    licence: "",
+    source: ["Irwin's Barn"],
+    buyPrice: 3200,
+    buyUnits: "Dinks",
+    baseSellPrice: 1600,
+  },
+  {
+    id: "dog_bowl",
+    name: "Dog Bowl",
+    img: "https://static.wikia.nocookie.net/dinkum/images/f/fb/Inv_Doggo_Bowl.png",
+    damage: null,
+    licence: "",
+    source: ["Irwin's Barn"],
+    buyPrice: 1516,
+    buyUnits: "Dinks",
+    baseSellPrice: 758,
+  },
+  {
     id: "animal_trap",
     name: "Animal Trap",
     img: "https://static.wikia.nocookie.net/dinkum/images/9/94/Inv_Animal_Trap.png",

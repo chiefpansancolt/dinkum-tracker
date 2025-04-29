@@ -54,6 +54,19 @@ export const books: Book[] = [
     ],
   },
   {
+    id: "magic_tome",
+    name: "Magic Tome",
+    img: "https://static.wikia.nocookie.net/dinkum/images/a/ae/Inv_Magic_Tome.png",
+    details: [
+      {
+        aquiredFrom: "Yobbolin Healers in Hot Hot Hot",
+        requirements: "",
+        buyingPrice: 0,
+        sellingPrice: 49000,
+      },
+    ],
+  },
+  {
     id: "plant_book",
     name: "Plant Book",
     img: "https://static.wikia.nocookie.net/dinkum/images/6/6d/Inv_Plant_Book.png",
