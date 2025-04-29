@@ -32,6 +32,7 @@ import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
 import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
 import TabHeader from "@/playthrough/ui/TabHeader";
 import FilterBar from "@/playthrough/ui/FilterBar";
+import LoadingPlaythrough from "@/components/playthrough/LoadingPlaythrough";
 
 export default function ItemsBreakdownPage() {
 	const [searchQuery, setSearchQuery] = useState<string>("");
@@ -40,6 +41,7 @@ export default function ItemsBreakdownPage() {
 	const [sortBy, setSortBy] = useState<string>("name");
 	const [showCommonOnly, setShowCommonOnly] = useState<boolean>(false);
 	const [showFilter, setShowFilter] = useState<boolean>(false);
+	const [isLoading, setIsLoading] = useState(true);
 
 	const allUniqueResources = useMemo(() => {
 		const resourceMap = new Map<string, UniqueResource>();
@@ -172,6 +174,8 @@ export default function ItemsBreakdownPage() {
 			});
 		});
 
+		setIsLoading(false);
+
 		return Array.from(resourceMap.values());
 	}, []);
 
@@ -302,6 +306,10 @@ export default function ItemsBreakdownPage() {
 				return "green";
 		}
 	};
+
+	if (isLoading) {
+		return <LoadingPlaythrough message="Loading Resources..." />;
+	}
 
 	return (
 		<div className="space-y-6">
