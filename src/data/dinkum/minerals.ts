@@ -85,4 +85,18 @@ export const minerals: Mineral[] = [
     source: ["Tropics"],
     baseSellPrice: 10,
   },
+  {
+    id: "gold_ore",
+    name: "Gold Ore",
+    img: "https://static.wikia.nocookie.net/dinkum/images/a/a6/Inv_Gold_Ore.png",
+    source: ["Heat Wave"],
+    baseSellPrice: 50000,
+  },
+  {
+    id: "gold_nugget",
+    name: "Gold Nugget",
+    img: "https://static.wikia.nocookie.net/dinkum/images/7/7f/Inv_Gold_Nugget.png",
+    source: ["Heat Wave"],
+    baseSellPrice: 8500,
+  },
 ];

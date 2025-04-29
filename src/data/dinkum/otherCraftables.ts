@@ -839,4 +839,35 @@ export const otherCraftables: Recipe[] = [
     ],
     baseSellPrice: 5150,
   },
+  {
+    id: "gold_bar",
+    name: "Gold Bar",
+    img: "https://static.wikia.nocookie.net/dinkum/images/e/ec/Inv_Gold_Bar.png",
+    source: ["Furnace", "Blast Furnace"],
+    variants: [
+      {
+        id: "furnace",
+        outputCount: 1,
+        inputs: [
+          {
+            count: 5,
+            name: "Gold Ore",
+            img: "https://static.wikia.nocookie.net/dinkum/images/a/a6/Inv_Gold_Ore.png",
+          },
+        ],
+      },
+      {
+        id: "blast_furnace",
+        outputCount: 2,
+        inputs: [
+          {
+            count: 5,
+            name: "Gold Ore",
+            img: "https://static.wikia.nocookie.net/dinkum/images/a/a6/Inv_Gold_Ore.png",
+          },
+        ],
+      },
+    ],
+    baseSellPrice: 300000,
+  },
 ];
