@@ -7119,4 +7119,73 @@ export const craftingRecipes: Recipe[] = [
       },
     ],
   },
+  {
+    id: "pontoon_bridge",
+    name: "Pontoon Bridge",
+    img: "https://static.wikia.nocookie.net/dinkum/images/3/38/Inv_Pontoon_Bridge.png",
+    baseSellPrice: 0,
+    source: [
+      "NPC Jobs",
+      "Franklyn's Lab",
+      "Jimmy's Boat",
+      "Undergrove",
+      "Island Reef",
+      "Hot Hot Hot",
+    ],
+    outputCount: 16,
+    variants: [
+      {
+        id: "standard",
+        inputs: [
+          {
+            name: "Button Board",
+            count: 3,
+            img: "https://static.wikia.nocookie.net/dinkum/images/7/7c/Inv_Button_Board.png",
+          },
+          {
+            name: "Sliding Handle",
+            count: 1,
+            img: "https://static.wikia.nocookie.net/dinkum/images/d/dc/Inv_Sliding_Handle.png",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "road_lamp",
+    name: "Road Lamp",
+    img: "https://static.wikia.nocookie.net/dinkum/images/2/26/Inv_Road_Lamp.png",
+    baseSellPrice: 0,
+    source: [
+      "NPC Jobs",
+      "Franklyn's Lab",
+      "Jimmy's Boat",
+      "Undergrove",
+      "Island Reef",
+      "Hot Hot Hot",
+    ],
+    outputCount: 1,
+    variants: [
+      {
+        id: "standard",
+        inputs: [
+          {
+            name: "Quartz Crystal",
+            count: 1,
+            img: "https://static.wikia.nocookie.net/dinkum/images/5/5a/Inv_Quartz_Crystal.png",
+          },
+          {
+            name: "Iron Bar",
+            count: 1,
+            img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Inv_Iron_Bar.png",
+          },
+          {
+            name: "Glass Bulb",
+            count: 1,
+            img: "https://static.wikia.nocookie.net/dinkum/images/2/2f/Inv_Glass_Bulb.png"
+          }
+        ],
+      },
+    ],
+  },
 ];
