@@ -82,7 +82,14 @@ export const createEmptyPlaythrough = (name: string): Playthrough => {
     milestones: {},
     licenses: {},
     buildings: {},
-    skillLevels: {},
+    skillLevels: {
+      bug_catching: 0,
+      farming: 0,
+      fishing: 0,
+      foraging: 0,
+      hunting: 0,
+      mining: 0,
+    },
     calendar: {
       currentDay: 1,
       currentSeason: "Summer",

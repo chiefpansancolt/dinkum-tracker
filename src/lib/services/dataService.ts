@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { getPlaythroughs, STORAGE_KEY } from "@/lib/localStorage";
-import { Playthrough } from "@/types/app";
+import { ImportData } from "@/types";
 
 export const exportData = (): string => {
   if (typeof window === "undefined") {
@@ -33,12 +33,6 @@ export const downloadData = (): void => {
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
 };
-
-export interface ImportData {
-  playthroughs: Playthrough[];
-  version: string;
-  exportDate: string;
-}
 
 export const validateImportData = (data: any): data is ImportData => {
   return (
@@ -76,23 +70,6 @@ export const clearAllData = (): void => {
   }
 
   localStorage.removeItem(STORAGE_KEY);
-};
-
-export const saveThemePreference = (isDarkMode: boolean): void => {
-  if (typeof window === "undefined") {
-    return;
-  }
-
-  localStorage.setItem("dinkum-tracker-theme", isDarkMode ? "dark" : "light");
-};
-
-export const getThemePreference = (): boolean => {
-  if (typeof window === "undefined") {
-    return false;
-  }
-
-  const theme = localStorage.getItem("dinkum-tracker-theme");
-  return theme === "dark";
 };
 
 export const saveDefaultSortPreference = (sortBy: string): void => {

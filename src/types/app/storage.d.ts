@@ -55,3 +55,9 @@ export interface PlaythroughUpdateData {
   clothing?: Record<string, boolean>;
   furniture?: Record<string, boolean>;
 }
+
+export interface ImportData {
+  playthroughs: Playthrough[];
+  version: string;
+  exportDate: string;
+}
