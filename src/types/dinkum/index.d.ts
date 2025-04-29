@@ -12,3 +12,4 @@ export * from "./book";
 export * from "./clothing";
 export * from "./milestones";
 export * from "./license";
+export * from "./cassettes";

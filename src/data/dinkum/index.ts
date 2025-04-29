@@ -23,3 +23,4 @@ export * from "./paint";
 export * from "./minerals";
 export * from "./otherCraftables";
 export * from "./trophies";
+export * from "./cassettes";
