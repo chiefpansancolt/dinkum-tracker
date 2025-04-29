@@ -22,6 +22,17 @@ export const equipment: Equipment[] = [
     baseSellPrice: 1285,
   },
   {
+    id: "adm",
+    name: "A.D.M",
+    img: "https://static.wikia.nocookie.net/dinkum/images/5/58/Inv_A.D.M.png",
+    description: "Make withdrawals from your bank account",
+    requirementLevel: null,
+    source: ["Milburn"],
+    buyPrice: 50000,
+    buyUnits: "Dinks",
+    baseSellPrice: 25000,
+  },
+  {
     id: "animal_feeder",
     name: "Animal Feeder",
     img: "https://static.wikia.nocookie.net/dinkum/images/2/2f/Inv_Animal_Feeder.png",
