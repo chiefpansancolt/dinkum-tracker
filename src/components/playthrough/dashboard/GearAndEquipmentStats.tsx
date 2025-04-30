@@ -2,9 +2,10 @@ import { Badge, Card, Progress } from "flowbite-react";
 import React, { useMemo } from "react";
 import { FaBook, FaTools } from "react-icons/fa";
 import { FaCar } from "react-icons/fa6";
+import { BsCassette } from "react-icons/bs";
 import { GiBackpack, GiSwordman } from "react-icons/gi";
 import { GearAndEquipmentStatsProps } from "@/types";
-import { books, equipment, tools, vehicles, weapons } from "@/data/dinkum";
+import { books, cassettes, equipment, tools, vehicles, weapons } from "@/data/dinkum";
 
 const GearAndEquipmentStats: React.FC<GearAndEquipmentStatsProps> = ({
 	bookCollection,
@@ -12,6 +13,7 @@ const GearAndEquipmentStats: React.FC<GearAndEquipmentStatsProps> = ({
 	weaponCollection,
 	equipmentCollection,
 	vehicleCollection,
+	cassetteCollection,
 }) => {
 	const stats = useMemo(() => {
 		return {
@@ -80,23 +82,47 @@ const GearAndEquipmentStats: React.FC<GearAndEquipmentStatsProps> = ({
 							100
 					) || 0,
 			},
+			cassettes: {
+				collected: Object.keys(cassetteCollection || {}).filter(
+					(key) => cassetteCollection[key]
+				).length,
+				total: cassettes.length,
+				percentage:
+					Math.round(
+						(Object.keys(cassetteCollection || {}).filter(
+							(key) => cassetteCollection[key]
+						).length /
+							cassettes.length) *
+							100
+					) || 0,
+			},
 		};
-	}, [bookCollection, toolCollection, weaponCollection, equipmentCollection, vehicleCollection]);
+	}, [
+		bookCollection,
+		toolCollection,
+		weaponCollection,
+		equipmentCollection,
+		vehicleCollection,
+		cassetteCollection,
+	]);
 
+	
 	const totalStats = useMemo(() => {
 		const totalCollected =
 			stats.books.collected +
 			stats.tools.collected +
 			stats.weapons.collected +
 			stats.equipment.collected +
-			stats.vehicles.collected;
+			stats.vehicles.collected +
+			stats.cassettes.collected;
 
 		const totalItems =
 			stats.books.total +
 			stats.tools.total +
 			stats.weapons.total +
 			stats.equipment.total +
-			stats.vehicles.total;
+			stats.vehicles.total +
+			stats.cassettes.total;
 
 		return {
 			collected: totalCollected,
@@ -111,6 +137,7 @@ const GearAndEquipmentStats: React.FC<GearAndEquipmentStatsProps> = ({
 		weapons: "red",
 		equipment: "green",
 		vehicles: "purple",
+		cassettes: "yellow",
 	};
 
 	const mostCompleteCategory = useMemo(() => {
@@ -163,6 +190,9 @@ const GearAndEquipmentStats: React.FC<GearAndEquipmentStatsProps> = ({
 											<GiBackpack className="h-4 w-4" />
 										)}
 										{category === "vehicles" && <FaCar className="h-4 w-4" />}
+										{category === "cassettes" && (
+											<BsCassette className="h-4 w-4" />
+										)}
 										{category} ({data.collected}/{data.total})
 									</span>
 									<span className="font-medium">{data.percentage}%</span>

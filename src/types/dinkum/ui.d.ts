@@ -20,4 +20,5 @@ export interface GearAndEquipmentStatsProps {
   weaponCollection: BooleanCollection;
   equipmentCollection: BooleanCollection;
   vehicleCollection: BooleanCollection;
+  cassetteCollection: BooleanCollection;
 }

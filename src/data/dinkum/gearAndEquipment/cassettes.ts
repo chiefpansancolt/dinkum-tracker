@@ -1,4 +1,4 @@
-import { Cassette } from "@/types";
+import { Cassette, FilterArray } from "@/types";
 
 export const cassettes: Cassette[] = [
   {
@@ -107,3 +107,37 @@ export const cassettes: Cassette[] = [
     buyPrice: 3200,
   },
 ];
+
+export const getUniqueCassetteSources = (): FilterArray => {
+  const sources = new Set<string>();
+  sources.add("All");
+
+  cassettes.forEach((cassette) => {
+    if (cassette.source) {
+      cassette.source.forEach((source) => {
+        sources.add(source);
+      });
+    }
+  });
+
+  return Array.from(sources).sort();
+};
+
+export const getCassettesBySource = (
+  items: Cassette[],
+  source: string,
+): Cassette[] => {
+  return items.filter(
+    (cassette) => cassette.source && cassette.source.includes(source),
+  );
+};
+
+export const getCassettesBySearchValue = (
+  items: Cassette[],
+  searchValue: string,
+): Cassette[] => {
+  const lowercaseSearch = searchValue.toLowerCase();
+  return items.filter((cassette) =>
+    cassette.name.toLowerCase().includes(lowercaseSearch),
+  );
+};

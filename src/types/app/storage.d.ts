@@ -24,6 +24,7 @@ export interface Playthrough {
   vehicles: Record<string, boolean>;
   clothing: Record<string, boolean>;
   furniture: Record<string, boolean>;
+  cassettes: Record<string, boolean>;
 }
 
 export interface PlaythroughCardProps {
@@ -54,6 +55,7 @@ export interface PlaythroughUpdateData {
   vehicles?: Record<string, boolean>;
   clothing?: Record<string, boolean>;
   furniture?: Record<string, boolean>;
+  cassettes?: Record<string, boolean>;
 }
 
 export interface ImportData {

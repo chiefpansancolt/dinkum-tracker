@@ -105,6 +105,7 @@ export const createEmptyPlaythrough = (name: string): Playthrough => {
     vehicles: {},
     clothing: {},
     furniture: {},
+    cassettes: {},
   };
 };
 
@@ -129,6 +130,7 @@ export const updatePlaythroughData = (
     vehicles?: Record<string, boolean>;
     clothing?: Record<string, boolean>;
     furniture?: Record<string, boolean>;
+    cassettes?: Record<string, boolean>;
   },
 ): boolean => {
   if (typeof window === "undefined") {
@@ -274,6 +276,13 @@ export const updatePlaythroughData = (
     updatedPlaythrough.furniture = {
       ...(updatedPlaythrough.furniture || {}),
       ...updates.furniture,
+    };
+  }
+
+  if (updates.cassettes) {
+    updatedPlaythrough.cassettes = {
+      ...(updatedPlaythrough.cassettes || {}),
+      ...updates.cassettes,
     };
   }
 

@@ -61,6 +61,7 @@ export default function DashboardPage() {
 						weaponCollection={playthrough.weapons || {}}
 						equipmentCollection={playthrough.equipment || {}}
 						vehicleCollection={playthrough.vehicles || {}}
+						cassetteCollection={playthrough.cassettes || {}}
 					/>
 
 					<BuildingStats collected={playthrough.buildings || {}} />

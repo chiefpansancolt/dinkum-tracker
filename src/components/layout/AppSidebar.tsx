@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { BsCassette } from "react-icons/bs";
 import { FaToolbox, FaTools } from "react-icons/fa";
 import {
 	FaAward,
@@ -98,7 +99,8 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 					pathname.includes("/tools") ||
 					pathname.includes("/weapons") ||
 					pathname.includes("/equipment") ||
-					pathname.includes("/vehicles")
+					pathname.includes("/vehicles") ||
+					pathname.includes("/cassettes")
 			);
 
 			setDecorOpen(
@@ -338,7 +340,12 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 										pathname?.includes(
 											`/playthrough/${playthroughId}/equipment`
 										) ||
-										pathname?.includes(`/playthrough/${playthroughId}/vehicles`)
+										pathname?.includes(
+											`/playthrough/${playthroughId}/vehicles`
+										) ||
+										pathname?.includes(
+											`/playthrough/${playthroughId}/cassettes`
+										)
 									}
 								>
 									<SidebarLink
@@ -348,6 +355,15 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 										indented
 									>
 										Books
+									</SidebarLink>
+
+									<SidebarLink
+										href={`/playthrough/${playthroughId}/cassettes`}
+										currentPath={pathname}
+										icon={<BsCassette />}
+										indented
+									>
+										Cassettes
 									</SidebarLink>
 
 									<SidebarLink
