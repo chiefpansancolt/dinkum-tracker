@@ -2,6 +2,13 @@ import { Mineral } from "@/types";
 
 export const minerals: Mineral[] = [
   {
+    id: "amber_chunk",
+    name: "Amber Chunk",
+    img: "https://static.wikia.nocookie.net/dinkum/images/7/76/Amber_Chunk.png",
+    source: ["Metal Detecting"],
+    baseSellPrice: 15000,
+  },
+  {
     id: "aquamarine_gemstone",
     name: "Aquamarine Gemstone",
     img: "https://static.wikia.nocookie.net/dinkum/images/a/a2/Aquamarine.png",
@@ -33,14 +40,14 @@ export const minerals: Mineral[] = [
     id: "gold_nugget",
     name: "Gold Nugget",
     img: "https://static.wikia.nocookie.net/dinkum/images/7/7f/Inv_Gold_Nugget.png",
-    source: ["Heat Wave"],
+    source: ["Heat Wave", "Metal Detecting"],
     baseSellPrice: 8500,
   },
   {
     id: "gold_ore",
     name: "Gold Ore",
     img: "https://static.wikia.nocookie.net/dinkum/images/a/a6/Inv_Gold_Ore.png",
-    source: ["Heat Wave"],
+    source: ["Heat Wave", "Metal Detecting"],
     baseSellPrice: 50000,
   },
   {

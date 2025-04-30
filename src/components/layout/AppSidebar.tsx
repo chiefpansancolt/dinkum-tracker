@@ -300,7 +300,7 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 										icon={<LuCookingPot />}
 										indented
 									>
-										Cooking Recipes
+										Cooking
 									</SidebarLink>
 
 									<SidebarLink
@@ -309,7 +309,7 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 										icon={<GiStoneCrafting />}
 										indented
 									>
-										Crafting Recipes
+										Crafting
 									</SidebarLink>
 
 									<SidebarLink
@@ -318,7 +318,7 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 										icon={<FaSignsPost />}
 										indented
 									>
-										Sign Writing Recipes
+										Sign Writing
 									</SidebarLink>
 								</SidebarCollapse>
 							</li>

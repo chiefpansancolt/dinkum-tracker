@@ -27,6 +27,13 @@ export const foragables: Foragable[] = [
     },
   },
   {
+    id: "bee_hive",
+    name: "Bee Hive",
+    img: "https://static.wikia.nocookie.net/dinkum/images/8/82/Bee_Hive.png",
+    source: ["Gum Trees", "Blackwood Trees", "Coral Acacia Trees"],
+    baseSellPrice: 8000,
+  },
+  {
     id: "bottle_brush",
     name: "Bottle Brush",
     img: "https://static.wikia.nocookie.net/dinkum/images/e/e3/Inv_Bottle_Brush_Flower.png",
