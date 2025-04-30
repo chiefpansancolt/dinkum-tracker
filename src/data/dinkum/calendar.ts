@@ -212,7 +212,6 @@ export class GameCalendar {
       const checkDay = this.days[checkIndex];
 
       checkDay.events.forEach((event) => {
-        // Only add an event once (for multi-day events)
         const eventKey = `${event.name}-${event.season}-${event.startDay}`;
         if (!eventSet.has(eventKey)) {
           upcomingEvents.push(event);
