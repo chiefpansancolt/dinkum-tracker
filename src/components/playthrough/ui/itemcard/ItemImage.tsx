@@ -1,6 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
-import { ItemImageProps } from "@/types";
 import { HiCheck } from "react-icons/hi2";
+import { ItemImageProps } from "@/types";
 
 const ItemImage = ({ src, name, isCollected }: ItemImageProps) => {
 	return (

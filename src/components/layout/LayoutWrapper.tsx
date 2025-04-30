@@ -1,10 +1,10 @@
 "use client";
 
-import { ThemeProvider } from "flowbite-react";
 import { customTheme } from "@/app/theme";
-import AppContainer from "./AppContainer";
+import { ThemeProvider } from "flowbite-react";
 import { ToastContainer } from "react-toastify";
 import FAB from "@/comps/FAB";
+import AppContainer from "./AppContainer";
 
 export default function LayoutWrapper({ children }: { children: React.ReactNode }) {
 	return (

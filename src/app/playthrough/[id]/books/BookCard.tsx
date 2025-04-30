@@ -1,10 +1,10 @@
-import { CollectionCardProps, Book } from "@/types";
-import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
-import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
-import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
-import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
+import { Book, CollectionCardProps } from "@/types";
 import DinkValue from "@/playthrough/ui/itemcard/DinkValue";
+import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
+import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
 import ItemFooter from "@/playthrough/ui/itemcard/ItemFooter";
+import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
+import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
 
 const BookCard = ({ record, isCollected = false, onToggleCollected }: CollectionCardProps) => {
 	const book = record as Book;

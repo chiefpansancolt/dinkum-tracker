@@ -1,4 +1,5 @@
-import { Fish } from "@/types";
+import { Biome, FilterArray, Fish, Season, TimePeriod } from "@/types";
+import { SEASONS, TIME_PERIODS } from "@/data/constants";
 
 export const fish: Fish[] = [
   {
@@ -338,6 +339,30 @@ export const fish: Fish[] = [
     cookedPieces: 2,
   },
   {
+    id: "lungfish",
+    name: "Lungfish",
+    img: "https://static.wikia.nocookie.net/dinkum/images/0/0b/Inv_Lungfish.png",
+    biome: ["Rivers", "Billabongs"],
+    timeFound: ["Night"],
+    seasons: ["All"],
+    rarity: "Rare",
+    baseSellPrice: 50000,
+    cookedPrice: 52000,
+    cookedPieces: 26,
+  },
+  {
+    id: "macquarie_perch",
+    name: "Macquire Perch",
+    img: "https://static.wikia.nocookie.net/dinkum/images/1/15/Inv_Macquarie_Perch.png",
+    biome: ["Rivers"],
+    timeFound: ["Day"],
+    seasons: ["Summer", "Autumn"],
+    rarity: "Rare",
+    baseSellPrice: 12400,
+    cookedPrice: 14000,
+    cookedPieces: 7,
+  },
+  {
     id: "mangrove_jack",
     name: "Mangrove Jack",
     img: "https://static.wikia.nocookie.net/dinkum/images/4/43/Inv_Mangrove_Jack.png",
@@ -446,6 +471,18 @@ export const fish: Fish[] = [
     cookedPieces: 1,
   },
   {
+    id: "spotted_handfish",
+    name: "Spotted Handfish",
+    img: "https://static.wikia.nocookie.net/dinkum/images/8/83/Inv_Spotted_Handfish.png",
+    biome: ["Ocean"],
+    timeFound: ["Morning", "Day"],
+    seasons: ["All"],
+    rarity: "Rare",
+    baseSellPrice: 16000,
+    cookedPrice: 16800,
+    cookedPieces: 6,
+  },
+  {
     id: "stingray",
     name: "Stingray",
     img: "https://static.wikia.nocookie.net/dinkum/images/9/9f/Inv_Stingray.png",
@@ -505,40 +542,53 @@ export const fish: Fish[] = [
     cookedPrice: 2800,
     cookedPieces: 9,
   },
-  {
-    id: "lungfish",
-    name: "Lungfish",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/0b/Inv_Lungfish.png",
-    biome: ["Rivers", "Billabongs"],
-    timeFound: ["Night"],
-    seasons: ["All"],
-    rarity: "Rare",
-    baseSellPrice: 50000,
-    cookedPrice: 52000,
-    cookedPieces: 26,
-  },
-  {
-    id: "macquarie_perch",
-    name: "Macquire Perch",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/15/Inv_Macquarie_Perch.png",
-    biome: ["Rivers"],
-    timeFound: ["Day"],
-    seasons: ["Summer", "Autumn"],
-    rarity: "Rare",
-    baseSellPrice: 12400,
-    cookedPrice: 14000,
-    cookedPieces: 7,
-  },
-  {
-    id: "spotted_handfish",
-    name: "Spotted Handfish",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/83/Inv_Spotted_Handfish.png",
-    biome: ["Ocean"],
-    timeFound: ["Morning", "Day"],
-    seasons: ["All"],
-    rarity: "Rare",
-    baseSellPrice: 16000,
-    cookedPrice: 16800,
-    cookedPieces: 6,
-  },
 ];
+
+export const getFishByBiome = (data: Fish[], biome: Biome): Fish[] => {
+  return data.filter((item) => item.biome.includes(biome));
+};
+
+export const getFishByRarity = (data: Fish[], rarity: string): Fish[] => {
+  return data.filter((item) => item.rarity === rarity);
+};
+
+export const getFishBySeason = (data: Fish[], season: Season): Fish[] => {
+  return data.filter((item) => item.seasons.includes(season));
+};
+
+export const getFishByTime = (data: Fish[], timePeriod: TimePeriod): Fish[] => {
+  return data.filter((item) => item.timeFound.includes(timePeriod));
+};
+
+export const getFishBySearchValue = (
+  data: Fish[],
+  searchValue: string,
+): Fish[] => {
+  return data.filter((item) =>
+    item.name.toLowerCase().includes(searchValue.toLowerCase()),
+  );
+};
+
+export const getUniqueFishBiomes = (): FilterArray => {
+  const biomes = new Set<string>();
+  fish.forEach((item) => {
+    item.biome.forEach((b) => biomes.add(b));
+  });
+
+  return ["All", ...Array.from(biomes)].sort();
+};
+
+export const getUniqueFishRarities = (): FilterArray => {
+  const rarities = new Set<string>();
+  fish.forEach((item) => rarities.add(item.rarity));
+
+  return ["All", ...Array.from(rarities)].sort();
+};
+
+export const getUniqueFishSeasons = (): FilterArray => {
+  return Object.values(SEASONS);
+};
+
+export const getUniqueFishTimePeriods = (): FilterArray => {
+  return Object.values(TIME_PERIODS);
+};

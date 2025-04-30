@@ -1,12 +1,12 @@
 import { Badge } from "flowbite-react";
-import { CookingRecipe, CollectionCardProps } from "@/types";
-import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
-import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
-import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
+import { CollectionCardProps, CookingRecipe } from "@/types";
 import DinkValue from "@/playthrough/ui/itemcard/DinkValue";
-import ItemFooter from "@/playthrough/ui/itemcard/ItemFooter";
-import ItemResources from "@/playthrough/ui/itemcard/ItemResources";
 import ItemBuffs from "@/playthrough/ui/itemcard/ItemBuffs";
+import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
+import ItemFooter from "@/playthrough/ui/itemcard/ItemFooter";
+import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
+import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
+import ItemResources from "@/playthrough/ui/itemcard/ItemResources";
 
 const CookingRecipeCard = ({
 	record,

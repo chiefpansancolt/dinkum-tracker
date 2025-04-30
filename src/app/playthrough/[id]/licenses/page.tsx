@@ -1,22 +1,29 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { Badge } from "flowbite-react";
 import { useParams } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
+import { License, Playthrough } from "@/types";
 import { getPlaythroughById, updatePlaythroughData } from "@/lib/localStorage";
-import { licenses } from "@/data/dinkum";
-import { Playthrough, License } from "@/types";
-import TabHeader from "@/playthrough/ui/TabHeader";
-import LicenseCard from "./LicenseCard";
+import { getQueryParams, setQueryParam } from "@/service/urlService";
+import { collectedFilter } from "@/data/constants";
+import {
+	getLicenseByCategory,
+	getLicenseBySearchValue,
+	getLicenseCategories,
+	getLicenseTotalLevels,
+	getLicenseTotalPermitPoints,
+	licenses,
+} from "@/data/dinkum";
+import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
 import SaveFAB from "@/playthrough/SaveFAB";
-import NotFoundCard from "@/comps/NotFoundCard";
-import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
 import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
-import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
-import { getHashQueryParams, setHashQueryParam } from "@/service/urlService";
-import { Badge } from "flowbite-react";
+import TabHeader from "@/playthrough/ui/TabHeader";
+import LicenseCard from "./LicenseCard";
 
 export default function LicensesPage() {
 	const params = useParams();
@@ -24,9 +31,23 @@ export default function LicensesPage() {
 	const [playthrough, setPlaythrough] = useState<Playthrough | null>(null);
 	const [isLoading, setIsLoading] = useState(true);
 	const [searchQuery, setSearchQuery] = useState("");
-	const [categoryFilter, setCategoryFilter] = useState<string>("All Licenses");
-	const [licenseCollection, setLicenseCollection] = useState<Record<string, boolean>>({});
+	const [categoryFilter, setCategoryFilter] = useState<string>("All");
+	const [collectionFilter, setCollectionFilter] = useState<string>("All");
+	const [localState, setLocalState] = useState<Record<string, boolean>>({});
 	const [isDirty, setIsDirty] = useState(false);
+
+	const filters = {
+		category: {
+			value: categoryFilter,
+			options: getLicenseCategories(),
+			label: "Category",
+		},
+		collection: {
+			value: collectionFilter,
+			options: collectedFilter,
+			label: "Collected",
+		},
+	};
 
 	useEffect(() => {
 		if (playthroughId) {
@@ -34,23 +55,23 @@ export default function LicensesPage() {
 			setPlaythrough(data);
 
 			if (data) {
-				setLicenseCollection(data.licenses || {});
+				setLocalState(data.licenses || {});
 			}
 
 			setIsLoading(false);
 
-			const hashParams = getHashQueryParams();
-			if (hashParams.q) {
-				setSearchQuery(hashParams.q);
+			const params = getQueryParams();
+			if (params.q) {
+				setSearchQuery(params.q);
 			}
 		}
 	}, [playthroughId]);
 
 	useEffect(() => {
 		if (searchQuery) {
-			setHashQueryParam("q", searchQuery);
+			setQueryParam("q", searchQuery);
 		} else {
-			setHashQueryParam("q", "");
+			setQueryParam("q", "");
 		}
 	}, [searchQuery]);
 
@@ -60,13 +81,13 @@ export default function LicensesPage() {
 		const previousLevel = level - 1;
 		const previousLicenseKey = `${licenseId}_level_${previousLevel}`;
 
-		return licenseCollection[previousLicenseKey] === true;
+		return localState[previousLicenseKey] === true;
 	};
 
 	const handleToggleLicenseLevel = (licenseId: string, level: number, isObtained: boolean) => {
 		const licenseKey = `${licenseId}_level_${level}`;
 
-		setLicenseCollection((prev) => {
+		setLocalState((prev) => {
 			if (isObtained && level > 1 && !isPreviousLevelObtained(licenseId, level)) {
 				return prev;
 			}
@@ -98,7 +119,7 @@ export default function LicensesPage() {
 	};
 
 	const handleToggleAllLevels = (license: License, obtainAll: boolean) => {
-		setLicenseCollection((prev) => {
+		setLocalState((prev) => {
 			const updates: Record<string, boolean> = {};
 
 			if (obtainAll) {
@@ -126,7 +147,7 @@ export default function LicensesPage() {
 	const areAllLevelsComplete = (license: License) => {
 		return license.levels.every((level) => {
 			const licenseKey = `${license.id}_level_${level.level}`;
-			return licenseCollection[licenseKey] === true;
+			return localState[licenseKey] === true;
 		});
 	};
 
@@ -134,7 +155,7 @@ export default function LicensesPage() {
 		if (!isDirty) return false;
 
 		const success = updatePlaythroughData(playthroughId, {
-			licenses: licenseCollection,
+			licenses: localState,
 		});
 
 		if (success) {
@@ -144,66 +165,48 @@ export default function LicensesPage() {
 		return success;
 	};
 
-	const filters = {
-		category: {
-			value: categoryFilter,
-			options: [
-				"All Licenses",
-				"Mining",
-				"Fishing",
-				"Farming",
-				"Logging",
-				"Hunting",
-				"Building",
-				"Vehicle",
-				"Commerce",
-			],
-			label: "Category",
-		},
-	};
-
 	const handleFilterChange = (name: string, value: string) => {
 		if (name === "category") {
 			setCategoryFilter(value);
+		} else if (name === "collection") {
+			setCollectionFilter(value);
 		}
 	};
 
 	const filteredLicenses = useMemo(() => {
-		return licenses.filter((license) => {
-			if (categoryFilter !== "All Licenses") {
-				if (!license.id.includes(categoryFilter.toLowerCase())) {
-					return false;
-				}
+		let filtered = [...licenses];
+
+		if (categoryFilter !== "All") {
+			filtered = getLicenseByCategory(filtered, categoryFilter);
+		}
+
+		if (collectionFilter !== "All") {
+			if (collectionFilter === "collected") {
+				filtered = filtered.filter((license) => {
+					return license.levels.some((level) => {
+						const licenseKey = `${license.id}_level_${level.level}`;
+						return localState[licenseKey] === true;
+					});
+				});
+			} else if (collectionFilter === "not_collected") {
+				filtered = filtered.filter((license) => {
+					return license.levels.every((level) => {
+						const licenseKey = `${license.id}_level_${level.level}`;
+						return !localState[licenseKey];
+					});
+				});
 			}
+		}
 
-			if (searchQuery) {
-				const query = searchQuery.toLowerCase();
-				return (
-					license.name.toLowerCase().includes(query) ||
-					license.requirements.toLowerCase().includes(query)
-				);
-			}
+		if (searchQuery) {
+			filtered = getLicenseBySearchValue(filtered, searchQuery);
+		}
 
-			return true;
-		});
-	}, [categoryFilter, searchQuery]);
-
-	const getTotalLevels = () => {
-		return licenses.reduce((total, license) => total + license.levels.length, 0);
-	};
+		return filtered;
+	}, [categoryFilter, collectionFilter, localState, searchQuery]);
 
 	const getCompletedLevels = () => {
-		return Object.keys(licenseCollection).filter((key) => licenseCollection[key]).length;
-	};
-
-	const getTotalPermitPoints = () => {
-		let total = 0;
-		licenses.forEach((license) => {
-			license.levels.forEach((level) => {
-				total += level.permitPointCost;
-			});
-		});
-		return total;
+		return Object.keys(localState).filter((key) => localState[key]).length;
 	};
 
 	const getSpentPermitPoints = () => {
@@ -211,7 +214,7 @@ export default function LicensesPage() {
 		licenses.forEach((license) => {
 			license.levels.forEach((level) => {
 				const licenseKey = `${license.id}_level_${level.level}`;
-				if (licenseCollection[licenseKey]) {
+				if (localState[licenseKey]) {
 					spent += level.permitPointCost;
 				}
 			});
@@ -238,7 +241,7 @@ export default function LicensesPage() {
 					enableSaveAlert={true}
 					isDirty={isDirty}
 					collectedCount={getCompletedLevels()}
-					collectionTotal={getTotalLevels()}
+					collectionTotal={getLicenseTotalLevels()}
 					dirtyMessage="Your license progress has not been saved yet."
 				/>
 
@@ -248,13 +251,14 @@ export default function LicensesPage() {
 							<h3 className="font-medium">Permit Points Spent</h3>
 							<p className="text-sm">
 								You&apos;ve spent {getSpentPermitPoints().toLocaleString()} of{" "}
-								{getTotalPermitPoints().toLocaleString()} needed permit points.
+								{getLicenseTotalPermitPoints().toLocaleString()} needed permit
+								points.
 							</p>
 						</div>
 						<Badge color="indigo" size="xl">
 							<span className="flex items-center">
 								{getSpentPermitPoints().toLocaleString()} /{" "}
-								{getTotalPermitPoints().toLocaleString()}
+								{getLicenseTotalPermitPoints().toLocaleString()}
 								<img
 									src="https://static.wikia.nocookie.net/dinkum/images/9/97/Permit_Points.png"
 									alt="Permit Points"
@@ -272,7 +276,7 @@ export default function LicensesPage() {
 					showSearch={true}
 					searchValue={searchQuery}
 					onSearchChange={(value) => setSearchQuery(value)}
-					searchPlaceholder="Search licenses by name or requirement..."
+					searchPlaceholder="Search licenses by name..."
 				/>
 
 				<FilterDetails
@@ -283,13 +287,15 @@ export default function LicensesPage() {
 					collectedCount={getCompletedLevels()}
 				/>
 
-				{filteredLicenses.length > 0 ? (
+				{filteredLicenses.length === 0 ? (
+					<EmptyFilterCard />
+				) : (
 					<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
 						{filteredLicenses.map((license) => (
 							<LicenseCard
 								key={license.id}
 								license={license}
-								licenseCollection={licenseCollection}
+								licenseCollection={localState}
 								isPreviousLevelObtained={isPreviousLevelObtained}
 								onToggleLicenseLevel={handleToggleLicenseLevel}
 								onToggleAllLevels={handleToggleAllLevels}
@@ -297,8 +303,6 @@ export default function LicensesPage() {
 							/>
 						))}
 					</div>
-				) : (
-					<EmptyFilterCard />
 				)}
 
 				<SaveFAB isDirty={isDirty} onSave={handleSave} />

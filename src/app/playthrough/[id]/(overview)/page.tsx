@@ -1,21 +1,21 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
+import { useEffect, useState } from "react";
 import { Playthrough } from "@/types";
 import { getPlaythroughById } from "@/lib/localStorage";
-import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
-import NotFoundCard from "@/comps/NotFoundCard";
 import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
-import CollectionStats from "@/playthrough/dashboard/CollectionStats";
-import MilestoneStats from "@/playthrough/dashboard/MilestoneStats";
-import SkillStats from "@/playthrough/dashboard/SkillStats";
-import LicenseStats from "@/playthrough/dashboard/LicenseStats";
-import NPCStats from "@/playthrough/dashboard/NPCStats";
+import NotFoundCard from "@/comps/NotFoundCard";
 import BuildingStats from "@/playthrough/dashboard/BuildingStats";
+import CollectionStats from "@/playthrough/dashboard/CollectionStats";
 import GameInfoCard from "@/playthrough/dashboard/GameInfoCard";
 import GearAndEquipmentStats from "@/playthrough/dashboard/GearAndEquipmentStats";
+import LicenseStats from "@/playthrough/dashboard/LicenseStats";
+import MilestoneStats from "@/playthrough/dashboard/MilestoneStats";
+import NPCStats from "@/playthrough/dashboard/NPCStats";
 import RecipeStats from "@/playthrough/dashboard/RecipesStats";
+import SkillStats from "@/playthrough/dashboard/SkillStats";
+import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
 
 export default function DashboardPage() {
 	const params = useParams();

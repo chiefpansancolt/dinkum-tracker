@@ -1,8 +1,8 @@
-import { useState } from "react";
 import { Spinner } from "flowbite-react";
+import { useState } from "react";
 import { FaRegSave } from "react-icons/fa";
 import { SaveFABProps } from "@/types";
-import { successToast, errorToast } from "@/lib/notifications";
+import { errorToast, successToast } from "@/lib/notifications";
 
 export default function SaveFAB({ isDirty, onSave }: SaveFABProps) {
 	const [isSaving, setIsSaving] = useState(false);

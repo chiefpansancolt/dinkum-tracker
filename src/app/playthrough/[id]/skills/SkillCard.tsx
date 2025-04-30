@@ -1,8 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
-import React from "react";
 import { Button } from "flowbite-react";
-import { SkillCardProps } from "@/types";
+import React from "react";
 import { HiMinusSm, HiPlusSm } from "react-icons/hi";
+import { SkillCardProps } from "@/types";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
 
 const SkillCard = ({ skill, level, onLevelChange }: SkillCardProps) => {

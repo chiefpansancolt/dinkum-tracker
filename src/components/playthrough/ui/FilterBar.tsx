@@ -1,6 +1,6 @@
-import { FilterBarProps, FilterArray, FilterObject } from "@/types";
-import { Label, Select, TextInput, Button } from "flowbite-react";
-import { HiSearch, HiFilter } from "react-icons/hi";
+import { Button, Label, Select, TextInput } from "flowbite-react";
+import { HiFilter, HiSearch } from "react-icons/hi";
+import { FilterArray, FilterBarProps, FilterObject } from "@/types";
 
 const isFilterObjectArray = (options: FilterArray | FilterObject[]): options is FilterObject[] => {
 	return options.length > 0 && typeof options[0] === "object" && "id" in options[0];

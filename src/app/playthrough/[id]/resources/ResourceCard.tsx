@@ -1,12 +1,12 @@
 import { Badge } from "flowbite-react";
-import { ResourceItem, CollectionCardProps } from "@/types";
-import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
-import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
-import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
-import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
+import { CollectionCardProps, ResourceItem } from "@/types";
 import DinkValue from "@/playthrough/ui/itemcard/DinkValue";
-import ItemResources from "@/playthrough/ui/itemcard/ItemResources";
 import ItemBuffs from "@/playthrough/ui/itemcard/ItemBuffs";
+import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
+import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
+import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
+import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
+import ItemResources from "@/playthrough/ui/itemcard/ItemResources";
 
 const ResourceCard = ({ record, isCollected = false, getTypeColor }: CollectionCardProps) => {
 	const resource = record as ResourceItem;

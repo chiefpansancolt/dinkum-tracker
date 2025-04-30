@@ -1,6 +1,6 @@
-import { TabHeaderProps } from "@/types";
-import { Badge } from "flowbite-react";
 import SaveAlert from "@/components/SaveAlert";
+import { Badge } from "flowbite-react";
+import { TabHeaderProps } from "@/types";
 
 const TabHeader = ({
 	title,

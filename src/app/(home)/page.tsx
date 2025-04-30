@@ -1,13 +1,13 @@
-import Link from "next/link";
 import { Button } from "flowbite-react";
-import { FaCalendarDays, FaBuilding, FaIdCard } from "react-icons/fa6";
-import { GiPartyPopper, GiCrab, GiStoneCrafting, GiClothes, GiBackpack } from "react-icons/gi";
-import { MdDashboard } from "react-icons/md";
-import { FaUsers, FaTools } from "react-icons/fa";
+import Image from "next/image";
+import Link from "next/link";
+import { FaTools, FaUsers } from "react-icons/fa";
+import { FaAward } from "react-icons/fa";
+import { FaBuilding, FaCalendarDays, FaIdCard } from "react-icons/fa6";
+import { GiBackpack, GiClothes, GiCrab, GiPartyPopper, GiStoneCrafting } from "react-icons/gi";
 import { HiPlus } from "react-icons/hi";
 import { LuCookingPot } from "react-icons/lu";
-import { FaAward } from "react-icons/fa";
-import Image from "next/image";
+import { MdDashboard } from "react-icons/md";
 
 export default function Home() {
 	return (

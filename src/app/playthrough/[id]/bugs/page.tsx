@@ -1,20 +1,31 @@
 "use client";
 
-import { useMemo, useState, useEffect } from "react";
 import { useParams } from "next/navigation";
-import { bugs } from "@/data/dinkum/pedia/bugs";
-import { TIME_PERIODS, SEASONS } from "@/data/constants";
-import { Biome, Season, TimePeriod, Playthrough } from "@/types";
+import { useEffect, useMemo, useState } from "react";
+import { Biome, FilterArray, FilterObject, Playthrough, Season, TimePeriod } from "@/types";
 import { getPlaythroughById, updatePlaythroughData } from "@/lib/localStorage";
-import { getHashQueryParams, setHashQueryParam } from "@/service/urlService";
-import TabHeader from "@/playthrough/ui/TabHeader";
-import FilterBar from "@/playthrough/ui/FilterBar";
-import FilterDetails from "@/playthrough/ui/FilterDetails";
-import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
+import { getQueryParams, setQueryParam } from "@/service/urlService";
+import { collectedFilter, donatedFilter } from "@/data/constants";
+import {
+	bugs,
+	getBugsByBiome,
+	getBugsByRarity,
+	getBugsBySearchValue,
+	getBugsBySeason,
+	getBugsByTime,
+	getUniqueBugBiomes,
+	getUniqueBugRarities,
+	getUniqueBugSeasons,
+	getUniqueBugTimePeriods,
+} from "@/data/dinkum";
+import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
 import SaveFAB from "@/playthrough/SaveFAB";
-import NotFoundCard from "@/comps/NotFoundCard";
-import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
+import FilterBar from "@/playthrough/ui/FilterBar";
+import FilterDetails from "@/playthrough/ui/FilterDetails";
+import TabHeader from "@/playthrough/ui/TabHeader";
 import BugCard from "./BugCard";
 
 export default function BugsPage() {
@@ -28,56 +39,44 @@ export default function BugsPage() {
 	const [isDirty, setIsDirty] = useState(false);
 
 	const [filters, setFilters] = useState<{
-		biome: { value: string; options: string[]; label: string };
-		rarity: { value: string; options: string[]; label: string };
-		season: { value: string; options: string[]; label: string };
-		time: { value: string; options: string[]; label: string };
+		biome: { value: string; options: FilterArray; label: string };
+		rarity: { value: string; options: FilterArray; label: string };
+		season: { value: string; options: FilterArray; label: string };
+		time: { value: string; options: FilterArray; label: string };
+		collection: { value: string; options: FilterObject[]; label: string };
+		donation: { value: string; options: FilterObject[]; label: string };
 	}>({
 		biome: {
 			value: "All",
-			options: [],
+			options: getUniqueBugBiomes(),
 			label: "Biome",
 		},
 		rarity: {
 			value: "All",
-			options: [],
+			options: getUniqueBugRarities(),
 			label: "Rarity",
 		},
 		season: {
 			value: "All",
-			options: Object.values(SEASONS),
+			options: getUniqueBugSeasons(),
 			label: "Season",
 		},
 		time: {
 			value: "All",
-			options: Object.values(TIME_PERIODS),
+			options: getUniqueBugTimePeriods(),
 			label: "Time",
 		},
+		collection: {
+			value: "All",
+			options: collectedFilter,
+			label: "Collected",
+		},
+		donation: {
+			value: "All",
+			options: donatedFilter,
+			label: "Donated",
+		},
 	});
-
-	useEffect(() => {
-		const biomes = new Set<string>();
-		bugs.forEach((item) => {
-			item.biome.forEach((b) => biomes.add(b));
-		});
-		const biomeOptions = ["All", ...Array.from(biomes)].sort();
-
-		const rarities = new Set<string>();
-		bugs.forEach((item) => rarities.add(item.rarity));
-		const rarityOptions = ["All", ...Array.from(rarities)].sort();
-
-		setFilters((prev) => ({
-			...prev,
-			biome: {
-				...prev.biome,
-				options: biomeOptions,
-			},
-			rarity: {
-				...prev.rarity,
-				options: rarityOptions,
-			},
-		}));
-	}, []);
 
 	useEffect(() => {
 		if (playthroughId) {
@@ -91,18 +90,18 @@ export default function BugsPage() {
 
 			setIsLoading(false);
 
-			const hashParams = getHashQueryParams();
-			if (hashParams.q) {
-				setSearchQuery(hashParams.q);
+			const params = getQueryParams();
+			if (params.q) {
+				setSearchQuery(params.q);
 			}
 		}
 	}, [playthroughId]);
 
 	useEffect(() => {
 		if (searchQuery) {
-			setHashQueryParam("q", searchQuery);
+			setQueryParam("q", searchQuery);
 		} else {
-			setHashQueryParam("q", "");
+			setQueryParam("q", "");
 		}
 	}, [searchQuery]);
 
@@ -117,41 +116,46 @@ export default function BugsPage() {
 	};
 
 	const filteredItems = useMemo(() => {
-		return bugs.filter((item) => {
-			if (
-				filters.biome.value !== "All" &&
-				!item.biome.includes(filters.biome.value as Biome)
-			) {
-				return false;
-			}
+		let filtered = [...bugs];
 
-			if (filters.rarity.value !== "All" && item.rarity !== filters.rarity.value) {
-				return false;
-			}
+		if (filters.biome.value !== "All") {
+			filtered = getBugsByBiome(filtered, filters.biome.value as Biome);
+		}
 
-			if (
-				filters.season.value !== "All" &&
-				!item.seasons.includes(filters.season.value as Season) &&
-				!item.seasons.includes("All" as Season)
-			) {
-				return false;
-			}
+		if (filters.rarity.value !== "All") {
+			filtered = getBugsByRarity(filtered, filters.rarity.value);
+		}
 
-			if (
-				filters.time.value !== "All" &&
-				!item.timeFound.includes(filters.time.value as TimePeriod) &&
-				!item.timeFound.includes("All")
-			) {
-				return false;
-			}
+		if (filters.season.value !== "All") {
+			filtered = getBugsBySeason(filtered, filters.season.value as Season);
+		}
 
-			if (searchQuery && !item.name.toLowerCase().includes(searchQuery.toLowerCase())) {
-				return false;
-			}
+		if (filters.time.value !== "All") {
+			filtered = getBugsByTime(filtered, filters.time.value as TimePeriod);
+		}
 
-			return true;
-		});
-	}, [filters, searchQuery]);
+		if (filters.collection.value !== "All") {
+			if (filters.collection.value === "collected") {
+				filtered = filtered.filter((item) => collectedState.includes(item.id));
+			} else if (filters.collection.value === "not_collected") {
+				filtered = filtered.filter((item) => !collectedState.includes(item.id));
+			}
+		}
+
+		if (filters.donation.value !== "All") {
+			if (filters.donation.value === "donated") {
+				filtered = filtered.filter((item) => donatedState.includes(item.id));
+			} else if (filters.donation.value === "not_donated") {
+				filtered = filtered.filter((item) => !donatedState.includes(item.id));
+			}
+		}
+
+		if (searchQuery) {
+			filtered = getBugsBySearchValue(filtered, searchQuery);
+		}
+
+		return filtered;
+	}, [filters, collectedState, donatedState, searchQuery]);
 
 	const handleCollectedChange = (id: string, isCollected: boolean) => {
 		setCollectedState((prev) => {

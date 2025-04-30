@@ -42,3 +42,14 @@ export enum DeedTypes {
   Movable = "Movable",
   Reference = "Reference",
 }
+
+export const LICENSE_TYPES = [
+  "Mining",
+  "Fishing",
+  "Farming",
+  "Logging",
+  "Hunting",
+  "Building",
+  "Vehicle",
+  "Commerce",
+] as const;

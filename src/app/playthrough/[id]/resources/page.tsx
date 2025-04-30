@@ -1,29 +1,29 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { Button, Card, Checkbox } from "flowbite-react";
 import { useParams } from "next/navigation";
-import { Card, Checkbox, Button } from "flowbite-react";
+import { useEffect, useMemo, useState } from "react";
+import { HiX } from "react-icons/hi";
+import { Playthrough, ResourceItem } from "@/types";
+import { getPlaythroughById } from "@/lib/localStorage";
+import { getQueryParams, setQueryParam } from "@/service/urlService";
+import { ResourceType } from "@/data/constants";
 import {
 	animalProducts,
 	foragables,
 	minerals,
+	otherCraftables,
 	relics,
 	trophies,
-	otherCraftables,
 } from "@/data/dinkum";
-import { ResourceType } from "@/data/constants";
-import { getPlaythroughById } from "@/lib/localStorage";
-import { getHashQueryParams, setHashQueryParam } from "@/service/urlService";
-import TabHeader from "@/playthrough/ui/TabHeader";
+import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import NotFoundCard from "@/comps/NotFoundCard";
+import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
+import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
 import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
-import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
-import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
-import NotFoundCard from "@/comps/NotFoundCard";
-import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import TabHeader from "@/playthrough/ui/TabHeader";
 import ResourceCard from "./ResourceCard";
-import { HiX } from "react-icons/hi";
-import { Playthrough, ResourceItem } from "@/types";
 
 export default function ResourcesPage() {
 	const params = useParams();
@@ -43,18 +43,18 @@ export default function ResourcesPage() {
 			setPlaythrough(data);
 			setIsLoading(false);
 
-			const hashParams = getHashQueryParams();
-			if (hashParams.q) {
-				setSearchQuery(hashParams.q);
+			const params = getQueryParams();
+			if (params.q) {
+				setSearchQuery(params.q);
 			}
 		}
 	}, [playthroughId]);
 
 	useEffect(() => {
 		if (searchQuery) {
-			setHashQueryParam("q", searchQuery);
+			setQueryParam("q", searchQuery);
 		} else {
-			setHashQueryParam("q", "");
+			setQueryParam("q", "");
 		}
 	}, [searchQuery]);
 
@@ -336,19 +336,19 @@ export default function ResourcesPage() {
 					totalCount={allResources.length}
 				/>
 
-				{sortedResources.length > 0 ? (
+				{sortedResources.length === 0 ? (
+					<EmptyFilterCard />
+				) : (
 					<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-						{sortedResources.map((resource) => (
+						{sortedResources.map((item) => (
 							<ResourceCard
-								key={resource.id}
-								record={resource}
+								key={item.id}
+								record={item}
 								isCollected={false}
 								getTypeColor={getTypeColor}
 							/>
 						))}
 					</div>
-				) : (
-					<EmptyFilterCard />
 				)}
 			</div>
 		</>

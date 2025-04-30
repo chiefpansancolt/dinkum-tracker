@@ -1,8 +1,8 @@
 "use client";
 
-import { Card, Badge } from "flowbite-react";
+import { Badge, Card } from "flowbite-react";
 import { DayDetailsProps } from "@/types";
-import { getSeasonStyles, getSeasonEmoji } from "@/service/seasonalTheme";
+import { getSeasonEmoji, getSeasonStyles } from "@/service/seasonalTheme";
 
 export default function DayDetails({ day }: DayDetailsProps) {
 	const seasonStyles = getSeasonStyles(day.season);

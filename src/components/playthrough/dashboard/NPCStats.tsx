@@ -1,9 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
-import React, { useMemo } from "react";
 import { Card } from "flowbite-react";
-import { npcs } from "@/data/dinkum";
-import { CollectNumberTabProps } from "@/types";
+import React, { useMemo } from "react";
 import { HiHeart } from "react-icons/hi";
+import { CollectNumberTabProps } from "@/types";
+import { npcs } from "@/data/dinkum";
 
 const NPCStats: React.FC<CollectNumberTabProps> = ({ collected }) => {
 	const residents = useMemo(() => npcs, []);

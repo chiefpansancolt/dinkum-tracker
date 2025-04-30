@@ -1,16 +1,16 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
+import { useEffect, useState } from "react";
+import { Playthrough } from "@/types";
 import { getPlaythroughById, updatePlaythroughData } from "@/lib/localStorage";
 import { skills } from "@/data/dinkum";
-import { Playthrough } from "@/types";
-import TabHeader from "@/playthrough/ui/TabHeader";
-import SkillCard from "./SkillCard";
+import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
 import SaveFAB from "@/playthrough/SaveFAB";
-import NotFoundCard from "@/comps/NotFoundCard";
-import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import TabHeader from "@/playthrough/ui/TabHeader";
+import SkillCard from "./SkillCard";
 
 export default function SkillsPage() {
 	const params = useParams();
@@ -86,12 +86,12 @@ export default function SkillsPage() {
 				/>
 
 				<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-					{skills.map((skill) => (
+					{skills.map((item) => (
 						<SkillCard
-							key={skill.id}
-							skill={skill}
-							level={skillLevels[skill.id] || 0}
-							onLevelChange={(delta) => handleSkillLevelChange(skill.id, delta)}
+							key={item.id}
+							skill={item}
+							level={skillLevels[item.id] || 0}
+							onLevelChange={(delta) => handleSkillLevelChange(item.id, delta)}
 						/>
 					))}
 				</div>

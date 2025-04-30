@@ -1,34 +1,34 @@
 "use client";
 
+import { Badge, Button, Card, Modal, ModalBody, ModalHeader, Progress } from "flowbite-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { Card, Button, Badge, Progress, Modal, ModalHeader, ModalBody } from "flowbite-react";
-import { deletePlaythrough } from "@/lib/localStorage";
-import { PlaythroughCardProps } from "@/types";
+import { FaAward, FaBug, FaBuilding, FaFish, FaIdCard } from "react-icons/fa";
+import { GiCrab } from "react-icons/gi";
 import {
 	HiOutlineCalendar,
-	HiOutlineRefresh,
 	HiOutlinePencil,
+	HiOutlineRefresh,
 	HiOutlineTrash,
 } from "react-icons/hi";
-import { FaBug, FaFish, FaIdCard, FaAward, FaBuilding } from "react-icons/fa";
-import { GiCrab } from "react-icons/gi";
+import { PlaythroughCardProps } from "@/types";
+import { deletePlaythrough } from "@/lib/localStorage";
 import { getSeasonEmoji } from "@/service/seasonalTheme";
 import {
+	books,
 	bugs,
+	buildings,
+	cookingRecipes,
+	craftingRecipes,
 	critters,
+	equipment,
 	fish,
 	licenses,
 	milestones,
-	buildings,
-	books,
-	tools,
-	weapons,
-	equipment,
-	vehicles,
-	craftingRecipes,
 	signWritingRecipes,
-	cookingRecipes,
+	tools,
+	vehicles,
+	weapons,
 } from "@/data/dinkum";
 
 export default function PlaythroughCard({ playthrough, onDelete }: PlaythroughCardProps) {

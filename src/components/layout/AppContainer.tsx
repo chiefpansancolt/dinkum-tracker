@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import AppSidebar from "./AppSidebar";
-import AppNav from "./AppNav";
 import Footer from "../Footer";
+import AppNav from "./AppNav";
+import AppSidebar from "./AppSidebar";
 
 export default function AppContainer({ children }: { children: React.ReactNode }) {
 	const [sidebarOpen, setSidebarOpen] = useState(false);

@@ -1,4 +1,4 @@
-import { Recipe } from "@/types";
+import { FilterObject, Recipe } from "@/types";
 
 export const craftingRecipes: Recipe[] = [
   {
@@ -217,6 +217,56 @@ export const craftingRecipes: Recipe[] = [
     ],
   },
   {
+    id: "animal_shower",
+    name: "Animal Shower",
+    img: "https://static.wikia.nocookie.net/dinkum/images/2/2e/Inv_Animal_Shower.png",
+    baseSellPrice: 0,
+    source: ["Irrigation Licence Level 1"],
+    outputCount: 1,
+    variants: [
+      {
+        id: "standard",
+        inputs: [
+          {
+            name: "Old Gear",
+            count: 10,
+            img: "https://static.wikia.nocookie.net/dinkum/images/9/90/Inv_Old_Gear.png",
+          },
+          {
+            name: "Old Spring",
+            count: 5,
+            img: "https://static.wikia.nocookie.net/dinkum/images/1/11/Inv_Old_Spring.png",
+          },
+          {
+            name: "Gum Wood Plank",
+            count: 5,
+            img: "https://static.wikia.nocookie.net/dinkum/images/3/38/Inv_Gum_Wood_Plank.png",
+          },
+          {
+            name: "Quartz Crystal",
+            count: 5,
+            img: "https://static.wikia.nocookie.net/dinkum/images/5/5a/Inv_Quartz_Crystal.png",
+          },
+          {
+            name: "Iron Bar",
+            count: 3,
+            img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Inv_Iron_Bar.png",
+          },
+          {
+            name: "Iron Watering Can",
+            count: 1,
+            img: "https://static.wikia.nocookie.net/dinkum/images/7/7a/Inv_Iron_Watering_Can.png",
+          },
+          {
+            name: "Opal",
+            count: 1,
+            img: "https://static.wikia.nocookie.net/dinkum/images/a/a7/Inv_Opal.png",
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: "animal_stall",
     name: "Animal Stall",
     img: "https://static.wikia.nocookie.net/dinkum/images/a/a1/Inv_Animal_Stall.png",
@@ -318,6 +368,38 @@ export const craftingRecipes: Recipe[] = [
             name: "Ruby Shard",
             count: 1,
             img: "https://static.wikia.nocookie.net/dinkum/images/5/50/Inv_Ruby_Shard.png",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "barbed_wire_fence",
+    name: "Barbed Wire Fence",
+    img: "https://static.wikia.nocookie.net/dinkum/images/9/93/Inv_Barbed_Wire_Fence.png",
+    baseSellPrice: 0,
+    source: [
+      "NPC Jobs",
+      "Franklyn's Lab",
+      "Jimmy's Boat",
+      "Undergrove",
+      "Island Reef",
+      "Hot Hot Hot",
+    ],
+    outputCount: 8,
+    variants: [
+      {
+        id: "standard",
+        inputs: [
+          {
+            name: "Gum Wood Plank",
+            count: 2,
+            img: "https://static.wikia.nocookie.net/dinkum/images/3/38/Inv_Gum_Wood_Plank.png",
+          },
+          {
+            name: "Tin Bar",
+            count: 2,
+            img: "https://static.wikia.nocookie.net/dinkum/images/b/b8/Inv_Tin_Bar.png",
           },
         ],
       },
@@ -612,6 +694,38 @@ export const craftingRecipes: Recipe[] = [
     ],
   },
   {
+    id: "board_fence",
+    name: "Board Fence",
+    img: "https://static.wikia.nocookie.net/dinkum/images/f/f7/Inv_Board_Fence.png",
+    baseSellPrice: 0,
+    source: [
+      "NPC Jobs",
+      "Franklyn's Lab",
+      "Jimmy's Boat",
+      "Undergrove",
+      "Island Reef",
+      "Hot Hot Hot",
+    ],
+    outputCount: 8,
+    variants: [
+      {
+        id: "standard",
+        inputs: [
+          {
+            name: "Palm Wood Plank",
+            count: 4,
+            img: "https://static.wikia.nocookie.net/dinkum/images/3/39/Inv_Palm_Wood_Plank.png",
+          },
+          {
+            name: "Nails",
+            count: 4,
+            img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Nails.png",
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: "brick_bridge",
     name: "Brick Bridge",
     img: "https://static.wikia.nocookie.net/dinkum/images/f/f7/Inv_Brick_Bridge.png",
@@ -745,31 +859,6 @@ export const craftingRecipes: Recipe[] = [
             name: "Stone",
             count: 2,
             img: "https://static.wikia.nocookie.net/dinkum/images/0/09/Inv_Stone.png",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: "stone_steps",
-    name: "Stone Steps",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6f/Inv_Brick_Steps.png",
-    baseSellPrice: 6,
-    source: ["Landscaping Licence Level 1"],
-    outputCount: 4,
-    variants: [
-      {
-        id: "standard",
-        inputs: [
-          {
-            name: "Stone",
-            count: 1,
-            img: "https://static.wikia.nocookie.net/dinkum/images/0/09/Inv_Stone.png",
-          },
-          {
-            name: "Bag of Cement",
-            count: 1,
-            img: "https://static.wikia.nocookie.net/dinkum/images/e/eb/Inv_Bag_of_Cement.png",
           },
         ],
       },
@@ -4647,6 +4736,31 @@ export const craftingRecipes: Recipe[] = [
     ],
   },
   {
+    id: "palm_wood_bridge",
+    name: "Palm Wood Bridge",
+    img: "https://static.wikia.nocookie.net/dinkum/images/1/1d/Inv_Palm_Wood_Bridge.png",
+    baseSellPrice: 5681,
+    source: ["Building Licence Level 1"],
+    outputCount: 1,
+    variants: [
+      {
+        id: "standard",
+        inputs: [
+          {
+            name: "Nails",
+            count: 15,
+            img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Nails.png",
+          },
+          {
+            name: "Palm Wood Plank",
+            count: 15,
+            img: "https://static.wikia.nocookie.net/dinkum/images/3/39/Inv_Palm_Wood_Plank.png",
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: "palm_wood_bridge_multi",
     name: "Palm Wood Bridge (Multi)",
     img: "https://static.wikia.nocookie.net/dinkum/images/1/1d/Inv_Palm_Wood_Bridge.png",
@@ -4673,31 +4787,6 @@ export const craftingRecipes: Recipe[] = [
             name: "Palm Wood",
             count: 15,
             img: "https://static.wikia.nocookie.net/dinkum/images/0/02/Inv_Palm_Wood.png",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: "palm_wood_bridge",
-    name: "Palm Wood Bridge",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1d/Inv_Palm_Wood_Bridge.png",
-    baseSellPrice: 5681,
-    source: ["Building Licence Level 1"],
-    outputCount: 1,
-    variants: [
-      {
-        id: "standard",
-        inputs: [
-          {
-            name: "Nails",
-            count: 15,
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Nails.png",
-          },
-          {
-            name: "Palm Wood Plank",
-            count: 15,
-            img: "https://static.wikia.nocookie.net/dinkum/images/3/39/Inv_Palm_Wood_Plank.png",
           },
         ],
       },
@@ -5223,6 +5312,38 @@ export const craftingRecipes: Recipe[] = [
     ],
   },
   {
+    id: "pontoon_bridge",
+    name: "Pontoon Bridge",
+    img: "https://static.wikia.nocookie.net/dinkum/images/3/38/Inv_Pontoon_Bridge.png",
+    baseSellPrice: 0,
+    source: [
+      "NPC Jobs",
+      "Franklyn's Lab",
+      "Jimmy's Boat",
+      "Undergrove",
+      "Island Reef",
+      "Hot Hot Hot",
+    ],
+    outputCount: 16,
+    variants: [
+      {
+        id: "standard",
+        inputs: [
+          {
+            name: "Button Board",
+            count: 3,
+            img: "https://static.wikia.nocookie.net/dinkum/images/7/7c/Inv_Button_Board.png",
+          },
+          {
+            name: "Sliding Handle",
+            count: 1,
+            img: "https://static.wikia.nocookie.net/dinkum/images/d/dc/Inv_Sliding_Handle.png",
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: "post_box",
     name: "Post Box",
     img: "https://static.wikia.nocookie.net/dinkum/images/f/ff/Inv_Post_Box.png",
@@ -5459,6 +5580,43 @@ export const craftingRecipes: Recipe[] = [
             name: "Bag of Cement",
             count: 1,
             img: "https://static.wikia.nocookie.net/dinkum/images/e/eb/Inv_Bag_of_Cement.png",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "road_lamp",
+    name: "Road Lamp",
+    img: "https://static.wikia.nocookie.net/dinkum/images/2/26/Inv_Road_Lamp.png",
+    baseSellPrice: 0,
+    source: [
+      "NPC Jobs",
+      "Franklyn's Lab",
+      "Jimmy's Boat",
+      "Undergrove",
+      "Island Reef",
+      "Hot Hot Hot",
+    ],
+    outputCount: 1,
+    variants: [
+      {
+        id: "standard",
+        inputs: [
+          {
+            name: "Quartz Crystal",
+            count: 1,
+            img: "https://static.wikia.nocookie.net/dinkum/images/5/5a/Inv_Quartz_Crystal.png",
+          },
+          {
+            name: "Iron Bar",
+            count: 1,
+            img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Inv_Iron_Bar.png",
+          },
+          {
+            name: "Glass Bulb",
+            count: 1,
+            img: "https://static.wikia.nocookie.net/dinkum/images/2/2f/Inv_Glass_Bulb.png",
           },
         ],
       },
@@ -6037,6 +6195,31 @@ export const craftingRecipes: Recipe[] = [
             name: "Old Gear",
             count: 4,
             img: "https://static.wikia.nocookie.net/dinkum/images/9/90/Inv_Old_Gear.png",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "stone_steps",
+    name: "Stone Steps",
+    img: "https://static.wikia.nocookie.net/dinkum/images/6/6f/Inv_Brick_Steps.png",
+    baseSellPrice: 6,
+    source: ["Landscaping Licence Level 1"],
+    outputCount: 4,
+    variants: [
+      {
+        id: "standard",
+        inputs: [
+          {
+            name: "Stone",
+            count: 1,
+            img: "https://static.wikia.nocookie.net/dinkum/images/0/09/Inv_Stone.png",
+          },
+          {
+            name: "Bag of Cement",
+            count: 1,
+            img: "https://static.wikia.nocookie.net/dinkum/images/e/eb/Inv_Bag_of_Cement.png",
           },
         ],
       },
@@ -7119,187 +7302,40 @@ export const craftingRecipes: Recipe[] = [
       },
     ],
   },
-  {
-    id: "pontoon_bridge",
-    name: "Pontoon Bridge",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/38/Inv_Pontoon_Bridge.png",
-    baseSellPrice: 0,
-    source: [
-      "NPC Jobs",
-      "Franklyn's Lab",
-      "Jimmy's Boat",
-      "Undergrove",
-      "Island Reef",
-      "Hot Hot Hot",
-    ],
-    outputCount: 16,
-    variants: [
-      {
-        id: "standard",
-        inputs: [
-          {
-            name: "Button Board",
-            count: 3,
-            img: "https://static.wikia.nocookie.net/dinkum/images/7/7c/Inv_Button_Board.png",
-          },
-          {
-            name: "Sliding Handle",
-            count: 1,
-            img: "https://static.wikia.nocookie.net/dinkum/images/d/dc/Inv_Sliding_Handle.png",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: "road_lamp",
-    name: "Road Lamp",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/26/Inv_Road_Lamp.png",
-    baseSellPrice: 0,
-    source: [
-      "NPC Jobs",
-      "Franklyn's Lab",
-      "Jimmy's Boat",
-      "Undergrove",
-      "Island Reef",
-      "Hot Hot Hot",
-    ],
-    outputCount: 1,
-    variants: [
-      {
-        id: "standard",
-        inputs: [
-          {
-            name: "Quartz Crystal",
-            count: 1,
-            img: "https://static.wikia.nocookie.net/dinkum/images/5/5a/Inv_Quartz_Crystal.png",
-          },
-          {
-            name: "Iron Bar",
-            count: 1,
-            img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Inv_Iron_Bar.png",
-          },
-          {
-            name: "Glass Bulb",
-            count: 1,
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2f/Inv_Glass_Bulb.png",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: "barbed_wire_fence",
-    name: "Barbed Wire Fence",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/93/Inv_Barbed_Wire_Fence.png",
-    baseSellPrice: 0,
-    source: [
-      "NPC Jobs",
-      "Franklyn's Lab",
-      "Jimmy's Boat",
-      "Undergrove",
-      "Island Reef",
-      "Hot Hot Hot",
-    ],
-    outputCount: 8,
-    variants: [
-      {
-        id: "standard",
-        inputs: [
-          {
-            name: "Gum Wood Plank",
-            count: 2,
-            img: "https://static.wikia.nocookie.net/dinkum/images/3/38/Inv_Gum_Wood_Plank.png",
-          },
-          {
-            name: "Tin Bar",
-            count: 2,
-            img: "https://static.wikia.nocookie.net/dinkum/images/b/b8/Inv_Tin_Bar.png",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: "board_fence",
-    name: "Board Fence",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f7/Inv_Board_Fence.png",
-    baseSellPrice: 0,
-    source: [
-      "NPC Jobs",
-      "Franklyn's Lab",
-      "Jimmy's Boat",
-      "Undergrove",
-      "Island Reef",
-      "Hot Hot Hot",
-    ],
-    outputCount: 8,
-    variants: [
-      {
-        id: "standard",
-        inputs: [
-          {
-            name: "Palm Wood Plank",
-            count: 4,
-            img: "https://static.wikia.nocookie.net/dinkum/images/3/39/Inv_Palm_Wood_Plank.png",
-          },
-          {
-            name: "Nails",
-            count: 4,
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Nails.png",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: "animal_shower",
-    name: "Animal Shower",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2e/Inv_Animal_Shower.png",
-    baseSellPrice: 0,
-    source: ["Irrigation Licence Level 1"],
-    outputCount: 1,
-    variants: [
-      {
-        id: "standard",
-        inputs: [
-          {
-            name: "Old Gear",
-            count: 10,
-            img: "https://static.wikia.nocookie.net/dinkum/images/9/90/Inv_Old_Gear.png",
-          },
-          {
-            name: "Old Spring",
-            count: 5,
-            img: "https://static.wikia.nocookie.net/dinkum/images/1/11/Inv_Old_Spring.png",
-          },
-          {
-            name: "Gum Wood Plank",
-            count: 5,
-            img: "https://static.wikia.nocookie.net/dinkum/images/3/38/Inv_Gum_Wood_Plank.png",
-          },
-          {
-            name: "Quartz Crystal",
-            count: 5,
-            img: "https://static.wikia.nocookie.net/dinkum/images/5/5a/Inv_Quartz_Crystal.png",
-          },
-          {
-            name: "Iron Bar",
-            count: 3,
-            img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Inv_Iron_Bar.png",
-          },
-          {
-            name: "Iron Watering Can",
-            count: 1,
-            img: "https://static.wikia.nocookie.net/dinkum/images/7/7a/Inv_Iron_Watering_Can.png",
-          },
-          {
-            name: "Opal",
-            count: 1,
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/a7/Inv_Opal.png",
-          },
-        ],
-      },
-    ],
-  },
 ];
+
+export const getCraftingRecipesBySource = (
+  data: Recipe[],
+  value: string,
+): Recipe[] => {
+  return data.filter((item) => item.source?.includes(value));
+};
+
+export const getCraftingRecipesBySearchValue = (
+  data: Recipe[],
+  searchValue: string,
+): Recipe[] => {
+  return data.filter((item) =>
+    item.name.toLowerCase().includes(searchValue.toLowerCase()),
+  );
+};
+
+export const getUniqueCraftingRecipeSources = (): FilterObject[] => {
+  const sources = new Set<string>();
+  craftingRecipes.forEach((recipe) => {
+    if (recipe.source && recipe.source.length > 0) {
+      recipe.source.forEach((src) => {
+        sources.add(src);
+      });
+    }
+  });
+  return [
+    { id: "All", value: "All Sources" },
+    ...Array.from(sources)
+      .sort()
+      .map((source) => ({
+        id: source,
+        value: source,
+      })),
+  ];
+};

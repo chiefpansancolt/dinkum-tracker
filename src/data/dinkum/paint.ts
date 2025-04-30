@@ -46,6 +46,13 @@ export const paint: BaseResource[] = [
     baseSellPrice: 200,
   },
   {
+    id: "paint_remover",
+    name: "Paint Remover",
+    img: "https://static.wikia.nocookie.net/dinkum/images/6/6e/Inv_Paint_Remover.png",
+    source: ["Deep Mine", "Island Reef"],
+    baseSellPrice: 200,
+  },
+  {
     id: "pink_paint",
     name: "Pink Paint",
     img: "https://static.wikia.nocookie.net/dinkum/images/b/b2/Inv_Pink_Paint.png",
@@ -77,13 +84,6 @@ export const paint: BaseResource[] = [
     id: "yellow_paint",
     name: "Yellow Paint",
     img: "https://static.wikia.nocookie.net/dinkum/images/3/30/Inv_Yellow_Paint.png",
-    source: ["Deep Mine", "Island Reef"],
-    baseSellPrice: 200,
-  },
-  {
-    id: "paint_remover",
-    name: "Paint Remover",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6e/Inv_Paint_Remover.png",
     source: ["Deep Mine", "Island Reef"],
     baseSellPrice: 200,
   },

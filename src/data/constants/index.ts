@@ -5,3 +5,4 @@ export * from "./milestoneCategories";
 export * from "./clothing";
 export * from "./relics";
 export * from "./buffIcons";
+export * from "./filters";

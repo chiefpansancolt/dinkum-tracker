@@ -1,15 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
-import { ItemFranklynProps, ResourceItemProps, Resource } from "@/types";
-import { twMerge } from "flowbite-react/helpers/tailwind-merge";
+import { ItemFranklynProps, Resource, ResourceItemProps } from "@/types";
 
-const Item = ({ input, isVariantUsage = false }: ResourceItemProps) => {
+const Item = ({ input }: ResourceItemProps) => {
 	return (
-		<div
-			className={twMerge(
-				"flex items-center gap-2 rounded-lg p-2",
-				isVariantUsage ? "bg-white dark:bg-gray-700" : "bg-gray-100 dark:bg-gray-900"
-			)}
-		>
+		<div className="flex items-center gap-2 rounded-lg bg-gray-100 p-2 dark:bg-gray-900">
 			{input.img && (
 				<img src={input.img} alt={input.name} className="h-6 w-6 object-contain" />
 			)}

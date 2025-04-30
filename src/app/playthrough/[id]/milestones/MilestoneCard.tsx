@@ -1,10 +1,10 @@
-import { Button, Badge, Checkbox, Tooltip } from "flowbite-react";
-import { MilestoneCardProps } from "@/types";
+import { Badge, Button, Checkbox, Tooltip } from "flowbite-react";
 import { HiOutlineLockClosed } from "react-icons/hi";
+import { MilestoneCardProps } from "@/types";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
 import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
 import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
-import PermiteValue from "@/playthrough/ui/itemcard/PermiteValue";
+import PermitValue from "@/playthrough/ui/itemcard/PermitValue";
 
 const MilestoneCard = ({
 	milestone,
@@ -76,7 +76,7 @@ const MilestoneCard = ({
 										{level.unit && <span className="ml-1">{level.unit}</span>}
 									</label>
 									<Badge color="indigo">
-										<PermiteValue price={level.permitPoints} />
+										<PermitValue price={level.permitPoints} />
 									</Badge>
 								</div>
 							</div>

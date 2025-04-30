@@ -1,5 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
-import { PermitValueProps, DinkPriceProps } from "@/types";
+import { DinkPriceProps, PermitValueProps } from "@/types";
 
 const PermitPrice = ({ price }: DinkPriceProps) => {
 	return (
@@ -14,7 +13,7 @@ const PermitPrice = ({ price }: DinkPriceProps) => {
 	);
 };
 
-const PermiteValue = ({ label, price }: PermitValueProps) => {
+const PermitValue = ({ label, price }: PermitValueProps) => {
 	if (label) {
 		return (
 			<div className="grid grid-cols-12">
@@ -29,4 +28,4 @@ const PermiteValue = ({ label, price }: PermitValueProps) => {
 	return <PermitPrice price={price} />;
 };
 
-export default PermiteValue;
+export default PermitValue;

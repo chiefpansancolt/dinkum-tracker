@@ -1,9 +1,9 @@
+import { Badge, Card, Progress } from "flowbite-react";
 import React, { useMemo } from "react";
-import { Card, Progress, Badge } from "flowbite-react";
-import { cookingRecipes, craftingRecipes, signWritingRecipes } from "@/data/dinkum";
-import { RecipeStatsProps } from "@/types";
+import { GiPaintBrush, GiStoneCrafting } from "react-icons/gi";
 import { LuCookingPot } from "react-icons/lu";
-import { GiStoneCrafting, GiPaintBrush } from "react-icons/gi";
+import { RecipeStatsProps } from "@/types";
+import { cookingRecipes, craftingRecipes, signWritingRecipes } from "@/data/dinkum";
 
 const RecipeStats: React.FC<RecipeStatsProps> = ({
 	unlockedCookingRecipes,

@@ -1,7 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
 import { ItemBuffsProps } from "@/types";
-import { BuffIcons } from "@/data/constants";
 import { getBuffIcon } from "@/lib/services/buffIconService";
+import { BuffIcons } from "@/data/constants";
 
 const ItemBuffs = ({ id, buffs }: ItemBuffsProps) => {
 	return (

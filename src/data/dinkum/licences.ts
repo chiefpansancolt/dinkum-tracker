@@ -1,4 +1,5 @@
-import { License } from "@/types";
+import { FilterArray, License } from "@/types";
+import { LICENSE_TYPES } from "../constants";
 
 export const licenses: License[] = [
   {
@@ -535,3 +536,38 @@ export const licenses: License[] = [
     ],
   },
 ];
+
+export const getLicenseTotalLevels = (): number => {
+  return licenses.reduce((total, license) => total + license.levels.length, 0);
+};
+
+export const getLicenseTotalPermitPoints = (): number => {
+  let total = 0;
+  licenses.forEach((license) => {
+    license.levels.forEach((level) => {
+      total += level.permitPointCost;
+    });
+  });
+
+  return total;
+};
+
+export const getLicenseByCategory = (
+  data: License[],
+  value: string,
+): License[] => {
+  return data.filter((item) => item.id.includes(value.toLowerCase()));
+};
+
+export const getLicenseBySearchValue = (
+  data: License[],
+  searchValue: string,
+): License[] => {
+  return data.filter((item) =>
+    item.name.toLowerCase().includes(searchValue.toLowerCase()),
+  );
+};
+
+export const getLicenseCategories = (): FilterArray => {
+  return ["All", ...LICENSE_TYPES];
+};

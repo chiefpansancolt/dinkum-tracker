@@ -1,6 +1,6 @@
-import type { CustomFlowbiteTheme } from "flowbite-react/types";
 import { createTheme, theme } from "flowbite-react";
 import { twMerge } from "flowbite-react/helpers/tailwind-merge";
+import type { CustomFlowbiteTheme } from "flowbite-react/types";
 
 export const customTheme: CustomFlowbiteTheme = createTheme({
   button: {

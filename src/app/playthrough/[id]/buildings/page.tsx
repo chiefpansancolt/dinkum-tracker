@@ -1,20 +1,29 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
 import { useParams } from "next/navigation";
-import { buildings, getCollectableBuildingsCount } from "@/data/dinkum";
-import { updatePlaythroughData, getPlaythroughById } from "@/lib/localStorage";
-import TabHeader from "@/playthrough/ui/TabHeader";
-import BuildingCard from "./BuildingCard";
+import { useEffect, useMemo, useState } from "react";
+import { DeedType, Playthrough } from "@/types";
+import { getPlaythroughById, updatePlaythroughData } from "@/lib/localStorage";
+import { getQueryParams, setQueryParam } from "@/service/urlService";
+import { collectedFilter } from "@/data/constants";
+import {
+	buildings,
+	getBuidlingsByDeedType,
+	getBuidlingsByNPC,
+	getBuildingsBySearchValue,
+	getCollectableBuildingsCount,
+	getUniqueDeedTypes,
+	getUniqueNPCs,
+} from "@/data/dinkum";
+import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
 import SaveFAB from "@/playthrough/SaveFAB";
-import NotFoundCard from "@/comps/NotFoundCard";
-import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
 import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
-import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
-import { getHashQueryParams, setHashQueryParam } from "@/service/urlService";
-import { Playthrough } from "@/types";
+import TabHeader from "@/playthrough/ui/TabHeader";
+import BuildingCard from "./BuildingCard";
 
 export default function BuildingsPage() {
 	const params = useParams();
@@ -24,18 +33,27 @@ export default function BuildingsPage() {
 	const [searchQuery, setSearchQuery] = useState("");
 	const [deedTypeFilter, setDeedTypeFilter] = useState<string>("All");
 	const [npcFilter, setNpcFilter] = useState<string>("All");
-	const [buildingCollection, setBuildingCollection] = useState<Record<string, boolean>>({});
+	const [collectionFilter, setCollectionFilter] = useState("All");
+	const [localState, setLocalState] = useState<Record<string, boolean>>({});
 	const [isDirty, setIsDirty] = useState(false);
 
-	const uniqueNpcs = useMemo(() => {
-		const npcs = new Set<string>();
-		buildings.forEach((building) => {
-			if (building.npc && building.npc.trim() !== "") {
-				npcs.add(building.npc);
-			}
-		});
-		return ["All", ...Array.from(npcs).sort()];
-	}, []);
+	const filters = {
+		deedType: {
+			value: deedTypeFilter,
+			options: getUniqueDeedTypes(),
+			label: "Deed Type",
+		},
+		npc: {
+			value: npcFilter,
+			options: getUniqueNPCs(),
+			label: "NPC",
+		},
+		collection: {
+			value: collectionFilter,
+			options: collectedFilter,
+			label: "Collected",
+		},
+	};
 
 	useEffect(() => {
 		if (playthroughId) {
@@ -43,28 +61,28 @@ export default function BuildingsPage() {
 			setPlaythrough(data);
 
 			if (data) {
-				setBuildingCollection(data.buildings || {});
+				setLocalState(data.buildings || {});
 			}
 
 			setIsLoading(false);
 
-			const hashParams = getHashQueryParams();
-			if (hashParams.q) {
-				setSearchQuery(hashParams.q);
+			const params = getQueryParams();
+			if (params.q) {
+				setSearchQuery(params.q);
 			}
 		}
 	}, [playthroughId]);
 
 	useEffect(() => {
 		if (searchQuery) {
-			setHashQueryParam("q", searchQuery);
+			setQueryParam("q", searchQuery);
 		} else {
-			setHashQueryParam("q", "");
+			setQueryParam("q", "");
 		}
 	}, [searchQuery]);
 
 	const handleToggleInstalled = (buildingId: string, isInstalled: boolean) => {
-		setBuildingCollection((prev) => {
+		setLocalState((prev) => {
 			if (prev[buildingId] !== isInstalled) {
 				setIsDirty(true);
 			}
@@ -79,7 +97,7 @@ export default function BuildingsPage() {
 		if (!isDirty) return false;
 
 		const success = updatePlaythroughData(playthroughId, {
-			buildings: buildingCollection,
+			buildings: localState,
 		});
 
 		if (success) {
@@ -89,47 +107,44 @@ export default function BuildingsPage() {
 		return success;
 	};
 
-	const filters = {
-		deedType: {
-			value: deedTypeFilter,
-			options: ["All", "Collectable", "Movable", "Reference"],
-			label: "Deed Type",
-		},
-		npc: {
-			value: npcFilter,
-			options: uniqueNpcs,
-			label: "NPC",
-		},
-	};
-
 	const handleFilterChange = (name: string, value: string) => {
 		if (name === "deedType") {
 			setDeedTypeFilter(value);
 		} else if (name === "npc") {
 			setNpcFilter(value);
+		} else if (name === "collection") {
+			setCollectionFilter(value);
 		}
 	};
 
-	const filteredBuildings = useMemo(() => {
-		return buildings.filter((building) => {
-			if (deedTypeFilter !== "All" && building.deedType !== deedTypeFilter) {
-				return false;
-			}
+	const filteredData = useMemo(() => {
+		let filtered = [...buildings];
 
-			if (npcFilter !== "All" && building.npc !== npcFilter) {
-				return false;
-			}
+		if (deedTypeFilter !== "All") {
+			filtered = getBuidlingsByDeedType(filtered, deedTypeFilter as DeedType);
+		}
 
-			if (searchQuery && !building.name.toLowerCase().includes(searchQuery.toLowerCase())) {
-				return false;
-			}
+		if (npcFilter !== "All") {
+			filtered = getBuidlingsByNPC(filtered, npcFilter);
+		}
 
-			return true;
-		});
-	}, [deedTypeFilter, npcFilter, searchQuery]);
+		if (collectionFilter !== "All") {
+			if (collectionFilter === "collected") {
+				filtered = filtered.filter((item) => localState[item.id] === true);
+			} else if (collectionFilter === "not_collected") {
+				filtered = filtered.filter((item) => !localState[item.id]);
+			}
+		}
+
+		if (searchQuery) {
+			filtered = getBuildingsBySearchValue(filtered, searchQuery);
+		}
+
+		return filtered;
+	}, [deedTypeFilter, npcFilter, collectionFilter, localState, searchQuery]);
 
 	const getInstalledCount = () => {
-		return Object.keys(buildingCollection).filter((key) => buildingCollection[key]).length;
+		return Object.keys(localState).filter((key) => localState[key]).length;
 	};
 
 	if (isLoading) {
@@ -167,25 +182,25 @@ export default function BuildingsPage() {
 
 				<FilterDetails
 					title="buildings"
-					filteredCount={filteredBuildings.length}
-					totalCount={getCollectableBuildingsCount()}
+					filteredCount={filteredData.length}
+					totalCount={buildings.length}
 					collectedLabel="Installed"
 					collectedCount={getInstalledCount()}
 				/>
 
-				{filteredBuildings.length > 0 ? (
+				{filteredData.length === 0 ? (
+					<EmptyFilterCard />
+				) : (
 					<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-						{filteredBuildings.map((building) => (
+						{filteredData.map((item) => (
 							<BuildingCard
-								key={building.id}
-								record={building}
-								isCollected={buildingCollection[building.id] || false}
+								key={item.id}
+								record={item}
+								isCollected={localState[item.id] || false}
 								onToggleCollected={handleToggleInstalled}
 							/>
 						))}
 					</div>
-				) : (
-					<EmptyFilterCard />
 				)}
 
 				<SaveFAB isDirty={isDirty} onSave={handleSave} />

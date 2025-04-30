@@ -1,18 +1,18 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { useParams } from "next/navigation";
-import { Alert } from "flowbite-react";
-import { getPlaythroughById, updatePlaythroughData } from "@/lib/localStorage";
-import { useCalendarStore, getSeasonDays } from "@/service/calendar";
-import { getSeasonStyles, getSeasonEmoji } from "@/service/seasonalTheme";
+import NotFoundCard from "@/components/NotFoundCard";
 import DayDetails from "@/components/playthrough/DayDetails";
 import LoadingPlaythrough from "@/components/playthrough/LoadingPlaythrough";
-import NotFoundCard from "@/components/NotFoundCard";
-import SaveFAB from "@/playthrough/SaveFAB";
+import { Alert } from "flowbite-react";
+import { useParams } from "next/navigation";
+import { useEffect, useState } from "react";
 import { HiInformationCircle } from "react-icons/hi";
-import { Season, CalendarDay, Playthrough } from "@/types";
+import { CalendarDay, Playthrough, Season } from "@/types";
+import { getPlaythroughById, updatePlaythroughData } from "@/lib/localStorage";
+import { getSeasonDays, useCalendarStore } from "@/service/calendar";
+import { getSeasonEmoji, getSeasonStyles } from "@/service/seasonalTheme";
 import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import SaveFAB from "@/playthrough/SaveFAB";
 
 export default function CalendarPage() {
 	const params = useParams();
@@ -21,7 +21,6 @@ export default function CalendarPage() {
 	const [isLoading, setIsLoading] = useState(true);
 	const [isDirty, setIsDirty] = useState(false);
 	const [initialized, setInitialized] = useState(false);
-
 	const { currentDay, selectedSeason, setSelectedSeason, setDate } = useCalendarStore();
 	const [seasonDays, setSeasonDays] = useState(getSeasonDays(selectedSeason));
 	const [selectedDay, setSelectedDay] = useState<CalendarDay | null>(null);

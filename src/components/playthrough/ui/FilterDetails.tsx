@@ -1,5 +1,5 @@
-import { FilterDetailsProps } from "@/types";
 import { Badge } from "flowbite-react";
+import { FilterDetailsProps } from "@/types";
 
 const FilterDetails: React.FC<FilterDetailsProps> = ({
 	title,

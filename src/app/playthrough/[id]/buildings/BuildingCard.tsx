@@ -1,16 +1,15 @@
-/* eslint-disable @next/next/no-img-element */
 import { Badge } from "flowbite-react";
+import { HiCalendarDays, HiClock } from "react-icons/hi2";
 import { Building, CollectionCardProps } from "@/types";
-import { getDeedBadgeColor } from "@/data/dinkum";
 import { DeedTypes } from "@/data/constants";
-import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
-import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
-import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
-import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
+import { getDeedBadgeColor } from "@/data/dinkum";
 import DinkValue from "@/playthrough/ui/itemcard/DinkValue";
+import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
+import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
 import ItemFooter from "@/playthrough/ui/itemcard/ItemFooter";
+import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
+import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
 import ItemResources from "@/playthrough/ui/itemcard/ItemResources";
-import { HiClock, HiCalendarDays } from "react-icons/hi2";
 
 const BuildingCard = ({ record, isCollected = false, onToggleCollected }: CollectionCardProps) => {
 	const building = record as Building;

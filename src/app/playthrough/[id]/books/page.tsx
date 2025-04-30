@@ -1,17 +1,21 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
-import { getPlaythroughById, updatePlaythroughData } from "@/lib/localStorage";
-import { books } from "@/data/dinkum";
+import { useEffect, useMemo, useState } from "react";
 import { Playthrough } from "@/types";
-import TabHeader from "@/playthrough/ui/TabHeader";
-import BookCard from "./BookCard";
+import { getPlaythroughById, updatePlaythroughData } from "@/lib/localStorage";
+import { getQueryParams, setQueryParam } from "@/service/urlService";
+import { collectedFilter } from "@/data/constants";
+import { books, getBooksBySearchValue } from "@/data/dinkum";
+import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
 import SaveFAB from "@/playthrough/SaveFAB";
-import NotFoundCard from "@/comps/NotFoundCard";
-import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
-import { getHashQueryParams, setHashQueryParam } from "@/service/urlService";
+import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
+import FilterBar from "@/playthrough/ui/FilterBar";
+import FilterDetails from "@/playthrough/ui/FilterDetails";
+import TabHeader from "@/playthrough/ui/TabHeader";
+import BookCard from "./BookCard";
 
 export default function BooksPage() {
 	const params = useParams();
@@ -19,8 +23,17 @@ export default function BooksPage() {
 	const [playthrough, setPlaythrough] = useState<Playthrough | null>(null);
 	const [isLoading, setIsLoading] = useState(true);
 	const [searchQuery, setSearchQuery] = useState("");
-	const [bookCollection, setBookCollection] = useState<Record<string, boolean>>({});
+	const [localState, setLocalState] = useState<Record<string, boolean>>({});
+	const [collectionFilter, setCollectionFilter] = useState("All");
 	const [isDirty, setIsDirty] = useState(false);
+
+	const filters = {
+		collection: {
+			value: collectionFilter,
+			options: collectedFilter,
+			label: "Collected",
+		},
+	};
 
 	useEffect(() => {
 		if (playthroughId) {
@@ -28,28 +41,28 @@ export default function BooksPage() {
 			setPlaythrough(data);
 
 			if (data) {
-				setBookCollection(data.books || {});
+				setLocalState(data.books || {});
 			}
 
 			setIsLoading(false);
 
-			const hashParams = getHashQueryParams();
-			if (hashParams.q) {
-				setSearchQuery(hashParams.q);
+			const params = getQueryParams();
+			if (params.q) {
+				setSearchQuery(params.q);
 			}
 		}
 	}, [playthroughId]);
 
 	useEffect(() => {
 		if (searchQuery) {
-			setHashQueryParam("q", searchQuery);
+			setQueryParam("q", searchQuery);
 		} else {
-			setHashQueryParam("q", "");
+			setQueryParam("q", "");
 		}
 	}, [searchQuery]);
 
 	const handleToggleCollected = (id: string, isCollected: boolean) => {
-		setBookCollection((prev) => {
+		setLocalState((prev) => {
 			if (prev[id] !== isCollected) {
 				setIsDirty(true);
 			}
@@ -64,7 +77,7 @@ export default function BooksPage() {
 		if (!isDirty) return false;
 
 		const success = updatePlaythroughData(playthroughId, {
-			books: bookCollection,
+			books: localState,
 		});
 
 		if (success) {
@@ -74,12 +87,32 @@ export default function BooksPage() {
 		return success;
 	};
 
-	const filteredBooks = searchQuery
-		? books.filter((book) => book.name.toLowerCase().includes(searchQuery.toLowerCase()))
-		: books;
+	const handleFilterChange = (name: string, value: string) => {
+		if (name === "collection") {
+			setCollectionFilter(value);
+		}
+	};
+
+	const filteredData = useMemo(() => {
+		let filtered = [...books];
+
+		if (collectionFilter !== "All") {
+			if (collectionFilter === "collected") {
+				filtered = filtered.filter((item) => localState[item.id] === true);
+			} else if (collectionFilter === "not_collected") {
+				filtered = filtered.filter((item) => !localState[item.id]);
+			}
+		}
+
+		if (searchQuery) {
+			filtered = getBooksBySearchValue(filtered, searchQuery);
+		}
+
+		return filtered;
+	}, [collectionFilter, localState, searchQuery]);
 
 	const getCollectedCount = () => {
-		return Object.keys(bookCollection).filter((key) => bookCollection[key]).length;
+		return Object.keys(localState).filter((key) => localState[key]).length;
 	};
 
 	if (isLoading) {
@@ -105,54 +138,38 @@ export default function BooksPage() {
 					dirtyMessage="Your book collection has not been saved yet."
 				/>
 
-				<div className="mb-4">
-					<div className="relative">
-						<div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-							<svg
-								className="h-4 w-4 text-gray-500 dark:text-gray-400"
-								aria-hidden="true"
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 20 20"
-							>
-								<path
-									stroke="currentColor"
-									strokeLinecap="round"
-									strokeLinejoin="round"
-									strokeWidth="2"
-									d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-								/>
-							</svg>
-						</div>
-						<input
-							type="search"
-							className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-4 pl-10 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-							placeholder="Search books by name..."
-							value={searchQuery}
-							onChange={(e) => setSearchQuery(e.target.value)}
-						/>
+				<FilterBar
+					showFilters={true}
+					filters={filters}
+					onFilterChange={handleFilterChange}
+					showSearch={true}
+					searchValue={searchQuery}
+					onSearchChange={(value) => setSearchQuery(value)}
+					searchPlaceholder="Search books by name..."
+				/>
+
+				<FilterDetails
+					title="books"
+					filteredCount={filteredData.length}
+					totalCount={books.length}
+					collectedLabel="Collected"
+					collectedCount={getCollectedCount()}
+				/>
+
+				{filteredData.length === 0 ? (
+					<EmptyFilterCard />
+				) : (
+					<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+						{filteredData.map((item) => (
+							<BookCard
+								key={item.id}
+								record={item}
+								isCollected={localState[item.id] || false}
+								onToggleCollected={handleToggleCollected}
+							/>
+						))}
 					</div>
-				</div>
-
-				<div className="mb-4">
-					<p className="text-primary font-medium">
-						Showing {filteredBooks.length} of {books.length} books
-						{getCollectedCount() > 0 && (
-							<span className="ml-1">• Collected: {getCollectedCount()}</span>
-						)}
-					</p>
-				</div>
-
-				<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-					{filteredBooks.map((book) => (
-						<BookCard
-							key={book.id}
-							record={book}
-							isCollected={bookCollection[book.id] || false}
-							onToggleCollected={handleToggleCollected}
-						/>
-					))}
-				</div>
+				)}
 
 				<SaveFAB isDirty={isDirty} onSave={handleSave} />
 			</div>

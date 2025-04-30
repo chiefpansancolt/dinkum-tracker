@@ -1,23 +1,29 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { useMemo, useState, useEffect } from "react";
+import { Button, Card, Checkbox, ToggleSwitch } from "flowbite-react";
 import { useParams } from "next/navigation";
-import { Card, Checkbox, Button, ToggleSwitch } from "flowbite-react";
-import { cookingRecipes } from "@/data/dinkum";
-import { Playthrough } from "@/types";
-import { updatePlaythroughData, getPlaythroughById } from "@/lib/localStorage";
+import { useEffect, useMemo, useState } from "react";
 import { HiX } from "react-icons/hi";
-import { getHashQueryParams, setHashQueryParam } from "@/service/urlService";
+import { Playthrough } from "@/types";
+import { getPlaythroughById, updatePlaythroughData } from "@/lib/localStorage";
 import { getBuffIcon } from "@/lib/services/buffIconService";
-import TabHeader from "@/playthrough/ui/TabHeader";
-import FilterBar from "@/playthrough/ui/FilterBar";
-import FilterDetails from "@/playthrough/ui/FilterDetails";
-import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
+import { getQueryParams, setQueryParam } from "@/service/urlService";
+import { unlockedFilter } from "@/data/constants";
+import {
+	cookingRecipes,
+	getCookingRecipesByLocation,
+	getCookingRecipesBySearchValue,
+	getUniqueCookingBuffs,
+	getUniqueCookingLocations,
+} from "@/data/dinkum";
+import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
 import SaveFAB from "@/playthrough/SaveFAB";
-import NotFoundCard from "@/comps/NotFoundCard";
-import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
+import FilterBar from "@/playthrough/ui/FilterBar";
+import FilterDetails from "@/playthrough/ui/FilterDetails";
+import TabHeader from "@/playthrough/ui/TabHeader";
 import CookingRecipeCard from "./CookingRecipeCard";
 
 export default function CookingRecipesPage() {
@@ -27,45 +33,25 @@ export default function CookingRecipesPage() {
 	const [isLoading, setIsLoading] = useState(true);
 	const [searchQuery, setSearchQuery] = useState("");
 	const [locationFilter, setLocationFilter] = useState<string>("All");
+	const [unlockFilter, setUnlockFilter] = useState<string>("All");
 	const [selectedBuffs, setSelectedBuffs] = useState<string[]>([]);
 	const [matchAllBuffs, setMatchAllBuffs] = useState<boolean>(false);
 	const [showBuffFilter, setShowBuffFilter] = useState<boolean>(false);
-	const [cookingRecipesCollection, setCookingRecipesCollection] = useState<
-		Record<string, boolean>
-	>({});
+	const [localState, setLocalState] = useState<Record<string, boolean>>({});
 	const [isDirty, setIsDirty] = useState(false);
 
-	const uniqueLocations = useMemo(() => {
-		const locations = new Set<string>();
-		cookingRecipes.forEach((recipe) => {
-			if (recipe.cookingLocation && recipe.cookingLocation.length > 0) {
-				recipe.cookingLocation.forEach((loc) => locations.add(loc));
-			}
-		});
-		return [
-			{ id: "All", value: "All Locations" },
-			...Array.from(locations)
-				.sort()
-				.map((location) => ({
-					id: location,
-					value: location,
-				})),
-		];
-	}, []);
-
-	const uniqueBuffs = useMemo(() => {
-		const buffs = new Set<string>();
-		cookingRecipes.forEach((recipe) => {
-			if (recipe.buffs) {
-				Object.keys(recipe.buffs).forEach((buff) => {
-					if (buff !== "length") {
-						buffs.add(buff);
-					}
-				});
-			}
-		});
-		return Array.from(buffs).sort();
-	}, []);
+	const filters = {
+		location: {
+			value: locationFilter,
+			options: getUniqueCookingLocations(),
+			label: "Cooking Locations",
+		},
+		unlocked: {
+			value: unlockFilter,
+			options: unlockedFilter,
+			label: "Unlocked",
+		},
+	};
 
 	useEffect(() => {
 		if (playthroughId) {
@@ -73,28 +59,28 @@ export default function CookingRecipesPage() {
 			setPlaythrough(data);
 
 			if (data) {
-				setCookingRecipesCollection(data.cookingRecipes || {});
+				setLocalState(data.cookingRecipes || {});
 			}
 
 			setIsLoading(false);
 
-			const hashParams = getHashQueryParams();
-			if (hashParams.q) {
-				setSearchQuery(hashParams.q);
+			const params = getQueryParams();
+			if (params.q) {
+				setSearchQuery(params.q);
 			}
 		}
 	}, [playthroughId]);
 
 	useEffect(() => {
 		if (searchQuery) {
-			setHashQueryParam("q", searchQuery);
+			setQueryParam("q", searchQuery);
 		} else {
-			setHashQueryParam("q", "");
+			setQueryParam("q", "");
 		}
 	}, [searchQuery]);
 
 	const handleToggleUnlocked = (id: string, isUnlocked: boolean) => {
-		setCookingRecipesCollection((prev) => {
+		setLocalState((prev) => {
 			if (prev[id] !== isUnlocked) {
 				setIsDirty(true);
 			}
@@ -109,7 +95,7 @@ export default function CookingRecipesPage() {
 		if (!isDirty) return false;
 
 		const success = updatePlaythroughData(playthroughId, {
-			cookingRecipes: cookingRecipesCollection,
+			cookingRecipes: localState,
 		});
 
 		if (success) {
@@ -133,55 +119,56 @@ export default function CookingRecipesPage() {
 		setSelectedBuffs([]);
 	};
 
-	const filters = {
-		location: {
-			value: locationFilter,
-			options: uniqueLocations,
-			label: "Cooking Locations",
-		},
-	};
-
 	const handleFilterChange = (name: string, value: string) => {
 		if (name === "location") {
 			setLocationFilter(value);
+		} else if (name === "unlocked") {
+			setUnlockFilter(value);
 		}
 	};
 
 	const filteredData = useMemo(() => {
-		return cookingRecipes.filter((recipe) => {
-			if (locationFilter !== "All" && !recipe.cookingLocation.includes(locationFilter)) {
-				return false;
-			}
+		let filtered = [...cookingRecipes];
 
-			if (selectedBuffs.length > 0) {
+		if (locationFilter !== "All") {
+			filtered = getCookingRecipesByLocation(filtered, locationFilter);
+		}
+
+		if (selectedBuffs.length > 0) {
+			filtered = filtered.filter((recipe) => {
 				if (!recipe.buffs || Object.keys(recipe.buffs).length <= 1) {
 					return false;
 				}
 
 				if (matchAllBuffs) {
-					const hasAllBuffs = selectedBuffs.every(
+					return selectedBuffs.every(
 						(buff) => recipe.buffs && recipe.buffs[buff as keyof typeof recipe.buffs]
 					);
-					if (!hasAllBuffs) return false;
 				} else {
-					const hasAnyBuff = selectedBuffs.some(
+					return selectedBuffs.some(
 						(buff) => recipe.buffs && recipe.buffs[buff as keyof typeof recipe.buffs]
 					);
-					if (!hasAnyBuff) return false;
 				}
-			}
+			});
+		}
 
-			if (searchQuery && !recipe.name.toLowerCase().includes(searchQuery.toLowerCase())) {
-				return false;
+		if (unlockFilter !== "All") {
+			if (unlockFilter === "unlocked") {
+				filtered = filtered.filter((item) => localState[item.id] === true);
+			} else if (unlockFilter === "not_unlocked") {
+				filtered = filtered.filter((item) => !localState[item.id]);
 			}
+		}
 
-			return true;
-		});
-	}, [locationFilter, selectedBuffs, matchAllBuffs, searchQuery]);
+		if (searchQuery) {
+			filtered = getCookingRecipesBySearchValue(filtered, searchQuery);
+		}
+
+		return filtered;
+	}, [locationFilter, selectedBuffs, matchAllBuffs, unlockFilter, localState, searchQuery]);
 
 	const getUnlockedCount = () => {
-		return Object.keys(cookingRecipesCollection).filter((key) => cookingRecipesCollection[key])
-			.length;
+		return Object.keys(localState).filter((key) => localState[key]).length;
 	};
 
 	const toggleFilter = () => {
@@ -222,7 +209,7 @@ export default function CookingRecipesPage() {
 					showSearch={true}
 					searchValue={searchQuery}
 					onSearchChange={(value) => setSearchQuery(value)}
-					searchPlaceholder="Search by name..."
+					searchPlaceholder="Search recipe by name..."
 					showActionButton={true}
 					actionButtonLabel="Buffs"
 					filterActive={showBuffFilter}
@@ -262,7 +249,7 @@ export default function CookingRecipesPage() {
 							</div>
 						</div>
 						<div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-							{uniqueBuffs.map((buff) => {
+							{getUniqueCookingBuffs().map((buff) => {
 								const isSelected = selectedBuffs.includes(buff);
 								const { icon } = getBuffIcon(buff, 1);
 
@@ -309,19 +296,19 @@ export default function CookingRecipesPage() {
 					collectedCount={getUnlockedCount()}
 				/>
 
-				{filteredData.length > 0 ? (
+				{filteredData.length === 0 ? (
+					<EmptyFilterCard />
+				) : (
 					<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-						{filteredData.map((recipe) => (
+						{filteredData.map((item) => (
 							<CookingRecipeCard
-								key={recipe.id}
-								record={recipe}
-								isCollected={cookingRecipesCollection[recipe.id] || false}
+								key={item.id}
+								record={item}
+								isCollected={localState[item.id] || false}
 								onToggleCollected={handleToggleUnlocked}
 							/>
 						))}
 					</div>
-				) : (
-					<EmptyFilterCard />
 				)}
 
 				<SaveFAB isDirty={isDirty} onSave={handleSave} />

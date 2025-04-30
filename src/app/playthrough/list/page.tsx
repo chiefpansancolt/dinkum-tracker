@@ -1,18 +1,18 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
-import Link from "next/link";
-import { Button, Card } from "flowbite-react";
-import { getPlaythroughs } from "@/lib/localStorage";
-import { Playthrough } from "@/types/app";
-import PlaythroughCard from "./Card";
-import { HiPlus } from "react-icons/hi";
-import { getDefaultSortPreference } from "@/lib/services/dataService";
 import LoadingPlaythrough from "@/components/playthrough/LoadingPlaythrough";
 import EmptyFilterCard from "@/components/playthrough/ui/EmptyFilterCard";
 import FilterBar from "@/components/playthrough/ui/FilterBar";
 import FilterDetails from "@/components/playthrough/ui/FilterDetails";
+import { Button, Card } from "flowbite-react";
 import Image from "next/image";
+import Link from "next/link";
+import { useCallback, useEffect, useState } from "react";
+import { HiPlus } from "react-icons/hi";
+import { Playthrough } from "@/types/app";
+import { getPlaythroughs } from "@/lib/localStorage";
+import { getDefaultSortPreference } from "@/lib/services/dataService";
+import PlaythroughCard from "./Card";
 
 const calculateCompletion = (playthrough: Playthrough): number => {
 	const totalItems =

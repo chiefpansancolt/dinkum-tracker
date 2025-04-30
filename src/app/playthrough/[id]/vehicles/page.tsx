@@ -1,20 +1,27 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
 import { useParams } from "next/navigation";
-import { getPlaythroughById, updatePlaythroughData } from "@/lib/localStorage";
-import { vehicles } from "@/data/dinkum";
+import { useEffect, useMemo, useState } from "react";
 import { Playthrough } from "@/types";
-import TabHeader from "@/playthrough/ui/TabHeader";
-import VehicleCard from "./VehicleCard";
+import { getPlaythroughById, updatePlaythroughData } from "@/lib/localStorage";
+import { getQueryParams, setQueryParam } from "@/service/urlService";
+import {
+	getUniqueVehicleReqType,
+	getUniqueVehicleSources,
+	getVehicleByRequirmentType,
+	getVehicleBySearchValue,
+	getVehicleBySource,
+	vehicles,
+} from "@/data/dinkum";
+import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
 import SaveFAB from "@/playthrough/SaveFAB";
-import NotFoundCard from "@/comps/NotFoundCard";
-import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
 import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
-import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
-import { getHashQueryParams, setHashQueryParam } from "@/service/urlService";
+import TabHeader from "@/playthrough/ui/TabHeader";
+import VehicleCard from "./VehicleCard";
 
 export default function VehiclesPage() {
 	const params = useParams();
@@ -24,31 +31,22 @@ export default function VehiclesPage() {
 	const [searchQuery, setSearchQuery] = useState("");
 	const [sourceFilter, setSourceFilter] = useState<string>("All");
 	const [requirementFilter, setRequirementFilter] = useState<string>("All");
-	const [vehicleCollection, setVehicleCollection] = useState<Record<string, boolean>>({});
+	const [collectionFilter, setCollectionFilter] = useState<string>("All");
+	const [localState, setLocalState] = useState<Record<string, boolean>>({});
 	const [isDirty, setIsDirty] = useState(false);
 
-	const uniqueSources = useMemo(() => {
-		const sources = new Set<string>();
-		vehicles.forEach((vehicle) => {
-			if (vehicle.source && vehicle.source.length > 0) {
-				vehicle.source.forEach((src) => {
-					sources.add(src);
-				});
-			}
-		});
-		return ["All", ...Array.from(sources).sort()];
-	}, []);
-
-	// Get unique requirement types for filter
-	const uniqueRequirementTypes = useMemo(() => {
-		const types = new Set<string>();
-		vehicles.forEach((vehicle) => {
-			if (vehicle.requirementType) {
-				types.add(vehicle.requirementType);
-			}
-		});
-		return ["All", ...Array.from(types).sort()];
-	}, []);
+	const filters = {
+		source: {
+			value: sourceFilter,
+			options: getUniqueVehicleSources(),
+			label: "Source",
+		},
+		requirement: {
+			value: requirementFilter,
+			options: getUniqueVehicleReqType(),
+			label: "Requirement Type",
+		},
+	};
 
 	useEffect(() => {
 		if (playthroughId) {
@@ -56,28 +54,28 @@ export default function VehiclesPage() {
 			setPlaythrough(data);
 
 			if (data) {
-				setVehicleCollection(data.vehicles || {});
+				setLocalState(data.vehicles || {});
 			}
 
 			setIsLoading(false);
 
-			const hashParams = getHashQueryParams();
-			if (hashParams.q) {
-				setSearchQuery(hashParams.q);
+			const params = getQueryParams();
+			if (params.q) {
+				setSearchQuery(params.q);
 			}
 		}
 	}, [playthroughId]);
 
 	useEffect(() => {
 		if (searchQuery) {
-			setHashQueryParam("q", searchQuery);
+			setQueryParam("q", searchQuery);
 		} else {
-			setHashQueryParam("q", "");
+			setQueryParam("q", "");
 		}
 	}, [searchQuery]);
 
 	const handleToggleCollected = (id: string, isCollected: boolean) => {
-		setVehicleCollection((prev) => {
+		setLocalState((prev) => {
 			if (prev[id] !== isCollected) {
 				setIsDirty(true);
 			}
@@ -92,7 +90,7 @@ export default function VehiclesPage() {
 		if (!isDirty) return false;
 
 		const success = updatePlaythroughData(playthroughId, {
-			vehicles: vehicleCollection,
+			vehicles: localState,
 		});
 
 		if (success) {
@@ -102,47 +100,44 @@ export default function VehiclesPage() {
 		return success;
 	};
 
-	const filters = {
-		source: {
-			value: sourceFilter,
-			options: uniqueSources,
-			label: "Source",
-		},
-		requirement: {
-			value: requirementFilter,
-			options: uniqueRequirementTypes,
-			label: "Requirement Type",
-		},
-	};
-
 	const handleFilterChange = (name: string, value: string) => {
 		if (name === "source") {
 			setSourceFilter(value);
 		} else if (name === "requirement") {
 			setRequirementFilter(value);
+		} else if (name === "collection") {
+			setCollectionFilter(value);
 		}
 	};
 
-	const filteredVehicles = useMemo(() => {
-		return vehicles.filter((vehicle) => {
-			if (sourceFilter !== "All" && !vehicle.source.includes(sourceFilter)) {
-				return false;
-			}
+	const filteredData = useMemo(() => {
+		let filtered = [...vehicles];
 
-			if (requirementFilter !== "All" && vehicle.requirementType !== requirementFilter) {
-				return false;
-			}
+		if (sourceFilter !== "All") {
+			filtered = getVehicleBySource(filtered, sourceFilter);
+		}
 
-			if (searchQuery && !vehicle.name.toLowerCase().includes(searchQuery.toLowerCase())) {
-				return false;
-			}
+		if (requirementFilter !== "All") {
+			filtered = getVehicleByRequirmentType(filtered, requirementFilter);
+		}
 
-			return true;
-		});
-	}, [sourceFilter, requirementFilter, searchQuery]);
+		if (collectionFilter !== "All") {
+			if (collectionFilter === "collected") {
+				filtered = filtered.filter((item) => localState[item.id] === true);
+			} else if (collectionFilter === "not_collected") {
+				filtered = filtered.filter((item) => !localState[item.id]);
+			}
+		}
+
+		if (searchQuery) {
+			filtered = getVehicleBySearchValue(filtered, searchQuery);
+		}
+
+		return filtered;
+	}, [sourceFilter, requirementFilter, collectionFilter, localState, searchQuery]);
 
 	const getCollectedCount = () => {
-		return Object.keys(vehicleCollection).filter((key) => vehicleCollection[key]).length;
+		return Object.keys(localState).filter((key) => localState[key]).length;
 	};
 
 	if (isLoading) {
@@ -175,30 +170,30 @@ export default function VehiclesPage() {
 					showSearch={true}
 					searchValue={searchQuery}
 					onSearchChange={(value) => setSearchQuery(value)}
-					searchPlaceholder="Search by name..."
+					searchPlaceholder="Search vehicle by name..."
 				/>
 
 				<FilterDetails
 					title="vehicles"
-					filteredCount={filteredVehicles.length}
+					filteredCount={filteredData.length}
 					totalCount={vehicles.length}
 					collectedLabel="Collected"
 					collectedCount={getCollectedCount()}
 				/>
 
-				{filteredVehicles.length > 0 ? (
+				{filteredData.length === 0 ? (
+					<EmptyFilterCard />
+				) : (
 					<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-						{filteredVehicles.map((vehicle) => (
+						{filteredData.map((item) => (
 							<VehicleCard
-								key={vehicle.id}
-								record={vehicle}
-								isCollected={vehicleCollection[vehicle.id] || false}
+								key={item.id}
+								record={item}
+								isCollected={localState[item.id] || false}
 								onToggleCollected={handleToggleCollected}
 							/>
 						))}
 					</div>
-				) : (
-					<EmptyFilterCard />
 				)}
 
 				<SaveFAB isDirty={isDirty} onSave={handleSave} />

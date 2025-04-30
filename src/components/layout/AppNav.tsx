@@ -1,9 +1,10 @@
 "use client";
 
-import { DarkThemeToggle, Button } from "flowbite-react";
+import { Button, DarkThemeToggle } from "flowbite-react";
+import Image from "next/image";
 import Link from "next/link";
 import { HiMenu, HiX } from "react-icons/hi";
-import Image from "next/image";
+
 export default function AppNav({
 	sidebarOpen,
 	toggleSidebar,

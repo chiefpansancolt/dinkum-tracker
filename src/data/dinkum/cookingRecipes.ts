@@ -1,4 +1,4 @@
-import { CookingRecipe } from "@/types";
+import { CookingRecipe, FilterArray, FilterObject } from "@/types";
 
 export const cookingRecipes: CookingRecipe[] = [
   {
@@ -2200,47 +2200,6 @@ export const cookingRecipes: CookingRecipe[] = [
     },
   },
   {
-    id: "meat_pie",
-    name: "Meat Pie",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/5a/Inv_Meat_Pie.png",
-    outputCount: 1,
-    variants: [
-      {
-        id: "standard",
-        inputs: [
-          {
-            count: 1,
-            name: "Flour",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Inv_Flour.png",
-          },
-          {
-            count: 1,
-            name: "Raw Meat",
-            img: "https://static.wikia.nocookie.net/dinkum/images/c/cb/Inv_Raw_Meat.png",
-          },
-          {
-            count: 1,
-            name: "Raw Drumstick",
-            img: "https://static.wikia.nocookie.net/dinkum/images/0/0e/Inv_Raw_Drumstick.png",
-          },
-        ],
-      },
-    ],
-    cookingLocation: ["Cooking Table"],
-    baseSellPrice: 1830,
-    sheilasSellPrice: 4575,
-    tedsSellPrice: 3660,
-    jimmysSellPrice: 2745,
-    buffs: {
-      length: 20,
-      healthRegenRate: 2,
-      healthMax: 25,
-      staminaRegenRate: 4,
-      staminaMax: 5,
-      attackLevel: 1,
-    },
-  },
-  {
     id: "meat_on_a_stick",
     name: "Meat on a stick.",
     img: "https://static.wikia.nocookie.net/dinkum/images/6/69/Inv_Meat_on_a_Stick.png",
@@ -2287,6 +2246,47 @@ export const cookingRecipes: CookingRecipe[] = [
       healthRegenRate: 3,
       staminaRegenRate: 3,
       defenseLevel: 1,
+    },
+  },
+  {
+    id: "meat_pie",
+    name: "Meat Pie",
+    img: "https://static.wikia.nocookie.net/dinkum/images/5/5a/Inv_Meat_Pie.png",
+    outputCount: 1,
+    variants: [
+      {
+        id: "standard",
+        inputs: [
+          {
+            count: 1,
+            name: "Flour",
+            img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Inv_Flour.png",
+          },
+          {
+            count: 1,
+            name: "Raw Meat",
+            img: "https://static.wikia.nocookie.net/dinkum/images/c/cb/Inv_Raw_Meat.png",
+          },
+          {
+            count: 1,
+            name: "Raw Drumstick",
+            img: "https://static.wikia.nocookie.net/dinkum/images/0/0e/Inv_Raw_Drumstick.png",
+          },
+        ],
+      },
+    ],
+    cookingLocation: ["Cooking Table"],
+    baseSellPrice: 1830,
+    sheilasSellPrice: 4575,
+    tedsSellPrice: 3660,
+    jimmysSellPrice: 2745,
+    buffs: {
+      length: 20,
+      healthRegenRate: 2,
+      healthMax: 25,
+      staminaRegenRate: 4,
+      staminaMax: 5,
+      attackLevel: 1,
     },
   },
   {
@@ -3084,7 +3084,7 @@ export const cookingRecipes: CookingRecipe[] = [
         ],
       },
     ],
-    cookingLocation: ["Billy Can Kettle", "Cooking Kettle"],
+    cookingLocation: ["Billy Can Kit", "Cooking Kettle"],
     baseSellPrice: 1595,
     buffs: {
       length: 8,
@@ -3094,3 +3094,51 @@ export const cookingRecipes: CookingRecipe[] = [
     },
   },
 ];
+
+export const getCookingRecipesByLocation = (
+  data: CookingRecipe[],
+  value: string,
+): CookingRecipe[] => {
+  return data.filter((item) => item.cookingLocation.includes(value));
+};
+
+export const getCookingRecipesBySearchValue = (
+  data: CookingRecipe[],
+  searchValue: string,
+): CookingRecipe[] => {
+  return data.filter((item) =>
+    item.name.toLowerCase().includes(searchValue.toLowerCase()),
+  );
+};
+
+export const getUniqueCookingLocations = (): FilterObject[] => {
+  const locations = new Set<string>();
+  cookingRecipes.forEach((recipe) => {
+    if (recipe.cookingLocation && recipe.cookingLocation.length > 0) {
+      recipe.cookingLocation.forEach((loc) => locations.add(loc));
+    }
+  });
+  return [
+    { id: "All", value: "All Locations" },
+    ...Array.from(locations)
+      .sort()
+      .map((location) => ({
+        id: location,
+        value: location,
+      })),
+  ];
+};
+
+export const getUniqueCookingBuffs = (): FilterArray => {
+  const buffs = new Set<string>();
+  cookingRecipes.forEach((recipe) => {
+    if (recipe.buffs) {
+      Object.keys(recipe.buffs).forEach((buff) => {
+        if (buff !== "length") {
+          buffs.add(buff);
+        }
+      });
+    }
+  });
+  return Array.from(buffs).sort();
+};

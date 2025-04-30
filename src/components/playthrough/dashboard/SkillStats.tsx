@@ -1,8 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
+import { Badge, Card } from "flowbite-react";
 import React from "react";
-import { Card, Badge } from "flowbite-react";
-import { skills } from "@/data/dinkum";
 import { CollectNumberTabProps } from "@/types";
+import { skills } from "@/data/dinkum";
 
 const SkillStats: React.FC<CollectNumberTabProps> = ({ collected }) => {
 	const hasSkills = Object.keys(collected).length > 0;

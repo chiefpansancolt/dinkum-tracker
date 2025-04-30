@@ -86,3 +86,12 @@ export const books: Book[] = [
     ],
   },
 ];
+
+export const getBooksBySearchValue = (
+  data: Book[],
+  searchValue: string,
+): Book[] => {
+  return data.filter((item) =>
+    item.name.toLowerCase().includes(searchValue.toLowerCase()),
+  );
+};

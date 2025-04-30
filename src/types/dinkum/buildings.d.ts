@@ -1,5 +1,5 @@
-import { Base, Resource } from "./base";
 import { DeedTypes } from "@/data/constants";
+import { Base, Resource } from "./base";
 
 export type DeedType =
   | DeedTypes.Collectable

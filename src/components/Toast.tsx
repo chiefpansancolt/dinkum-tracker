@@ -1,6 +1,6 @@
 import { Toast, ToastToggle } from "flowbite-react";
-import { HiCheck, HiX, HiInformationCircle, HiExclamation } from "react-icons/hi";
 import { twMerge } from "flowbite-react/helpers/tailwind-merge";
+import { HiCheck, HiExclamation, HiInformationCircle, HiX } from "react-icons/hi";
 import { CustomToastProps } from "@/types";
 
 const CustomToast = ({ closeToast, data }: CustomToastProps) => {

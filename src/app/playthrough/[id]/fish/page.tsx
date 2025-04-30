@@ -1,20 +1,31 @@
 "use client";
 
-import { useMemo, useState, useEffect } from "react";
 import { useParams } from "next/navigation";
-import { fish } from "@/data/dinkum/pedia/fish";
-import { TIME_PERIODS, SEASONS } from "@/data/constants";
-import { Biome, Season, TimePeriod, Playthrough } from "@/types";
+import { useEffect, useMemo, useState } from "react";
+import { Biome, FilterArray, FilterObject, Playthrough, Season, TimePeriod } from "@/types";
 import { getPlaythroughById, updatePlaythroughData } from "@/lib/localStorage";
-import { getHashQueryParams, setHashQueryParam } from "@/service/urlService";
-import TabHeader from "@/playthrough/ui/TabHeader";
-import FilterBar from "@/playthrough/ui/FilterBar";
-import FilterDetails from "@/playthrough/ui/FilterDetails";
-import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
+import { getQueryParams, setQueryParam } from "@/service/urlService";
+import { collectedFilter, donatedFilter } from "@/data/constants";
+import {
+	fish,
+	getFishByBiome,
+	getFishByRarity,
+	getFishBySearchValue,
+	getFishBySeason,
+	getFishByTime,
+	getUniqueFishBiomes,
+	getUniqueFishRarities,
+	getUniqueFishSeasons,
+	getUniqueFishTimePeriods,
+} from "@/data/dinkum/pedia/fish";
+import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
 import SaveFAB from "@/playthrough/SaveFAB";
-import NotFoundCard from "@/comps/NotFoundCard";
-import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
+import FilterBar from "@/playthrough/ui/FilterBar";
+import FilterDetails from "@/playthrough/ui/FilterDetails";
+import TabHeader from "@/playthrough/ui/TabHeader";
 import FishCard from "./FishCard";
 
 export default function FishPage() {
@@ -28,56 +39,44 @@ export default function FishPage() {
 	const [isDirty, setIsDirty] = useState(false);
 
 	const [filters, setFilters] = useState<{
-		biome: { value: string; options: string[]; label: string };
-		rarity: { value: string; options: string[]; label: string };
-		season: { value: string; options: string[]; label: string };
-		time: { value: string; options: string[]; label: string };
+		biome: { value: string; options: FilterArray; label: string };
+		rarity: { value: string; options: FilterArray; label: string };
+		season: { value: string; options: FilterArray; label: string };
+		time: { value: string; options: FilterArray; label: string };
+		collection: { value: string; options: FilterObject[]; label: string };
+		donation: { value: string; options: FilterObject[]; label: string };
 	}>({
 		biome: {
 			value: "All",
-			options: [],
+			options: getUniqueFishBiomes(),
 			label: "Biome",
 		},
 		rarity: {
 			value: "All",
-			options: [],
+			options: getUniqueFishRarities(),
 			label: "Rarity",
 		},
 		season: {
 			value: "All",
-			options: Object.values(SEASONS),
+			options: getUniqueFishSeasons(),
 			label: "Season",
 		},
 		time: {
 			value: "All",
-			options: Object.values(TIME_PERIODS),
+			options: getUniqueFishTimePeriods(),
 			label: "Time",
 		},
+		collection: {
+			value: "All",
+			options: collectedFilter,
+			label: "Collected",
+		},
+		donation: {
+			value: "All",
+			options: donatedFilter,
+			label: "Donated",
+		},
 	});
-
-	useEffect(() => {
-		const biomes = new Set<string>();
-		fish.forEach((item) => {
-			item.biome.forEach((b) => biomes.add(b));
-		});
-		const biomeOptions = ["All", ...Array.from(biomes)].sort();
-
-		const rarities = new Set<string>();
-		fish.forEach((item) => rarities.add(item.rarity));
-		const rarityOptions = ["All", ...Array.from(rarities)].sort();
-
-		setFilters((prev) => ({
-			...prev,
-			biome: {
-				...prev.biome,
-				options: biomeOptions,
-			},
-			rarity: {
-				...prev.rarity,
-				options: rarityOptions,
-			},
-		}));
-	}, []);
 
 	useEffect(() => {
 		if (playthroughId) {
@@ -91,18 +90,18 @@ export default function FishPage() {
 
 			setIsLoading(false);
 
-			const hashParams = getHashQueryParams();
-			if (hashParams.q) {
-				setSearchQuery(hashParams.q);
+			const params = getQueryParams();
+			if (params.q) {
+				setSearchQuery(params.q);
 			}
 		}
 	}, [playthroughId]);
 
 	useEffect(() => {
 		if (searchQuery) {
-			setHashQueryParam("q", searchQuery);
+			setQueryParam("q", searchQuery);
 		} else {
-			setHashQueryParam("q", "");
+			setQueryParam("q", "");
 		}
 	}, [searchQuery]);
 
@@ -116,42 +115,47 @@ export default function FishPage() {
 		}));
 	};
 
-	const filteredItems = useMemo(() => {
-		return fish.filter((item) => {
-			if (
-				filters.biome.value !== "All" &&
-				!item.biome.includes(filters.biome.value as Biome)
-			) {
-				return false;
-			}
+	const filteredData = useMemo(() => {
+		let filtered = [...fish];
 
-			if (filters.rarity.value !== "All" && item.rarity !== filters.rarity.value) {
-				return false;
-			}
+		if (filters.biome.value !== "All") {
+			filtered = getFishByBiome(filtered, filters.biome.value as Biome);
+		}
 
-			if (
-				filters.season.value !== "All" &&
-				!item.seasons.includes(filters.season.value as Season) &&
-				!item.seasons.includes("All" as Season)
-			) {
-				return false;
-			}
+		if (filters.rarity.value !== "All") {
+			filtered = getFishByRarity(filtered, filters.rarity.value);
+		}
 
-			if (
-				filters.time.value !== "All" &&
-				!item.timeFound.includes(filters.time.value as TimePeriod) &&
-				!item.timeFound.includes("All")
-			) {
-				return false;
-			}
+		if (filters.season.value !== "All") {
+			filtered = getFishBySeason(filtered, filters.season.value as Season);
+		}
 
-			if (searchQuery && !item.name.toLowerCase().includes(searchQuery.toLowerCase())) {
-				return false;
-			}
+		if (filters.time.value !== "All") {
+			filtered = getFishByTime(filtered, filters.time.value as TimePeriod);
+		}
 
-			return true;
-		});
-	}, [filters, searchQuery]);
+		if (filters.collection.value !== "All") {
+			if (filters.collection.value === "collected") {
+				filtered = filtered.filter((item) => collectedState.includes(item.id));
+			} else if (filters.collection.value === "not_collected") {
+				filtered = filtered.filter((item) => !collectedState.includes(item.id));
+			}
+		}
+
+		if (filters.donation.value !== "All") {
+			if (filters.donation.value === "donated") {
+				filtered = filtered.filter((item) => donatedState.includes(item.id));
+			} else if (filters.donation.value === "not_donated") {
+				filtered = filtered.filter((item) => !donatedState.includes(item.id));
+			}
+		}
+
+		if (searchQuery) {
+			filtered = getFishBySearchValue(filtered, searchQuery);
+		}
+
+		return filtered;
+	}, [filters, collectedState, donatedState, searchQuery]);
 
 	const handleCollectedChange = (id: string, isCollected: boolean) => {
 		setCollectedState((prev) => {
@@ -248,7 +252,7 @@ export default function FishPage() {
 
 				<FilterDetails
 					title="fish"
-					filteredCount={filteredItems.length}
+					filteredCount={filteredData.length}
 					totalCount={fish.length}
 					collectedLabel="Captured"
 					collectedCount={collectedState.length}
@@ -256,9 +260,11 @@ export default function FishPage() {
 					donatedCount={donatedState.length}
 				/>
 
-				{filteredItems.length > 0 ? (
+				{filteredData.length === 0 ? (
+					<EmptyFilterCard />
+				) : (
 					<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-						{filteredItems.map((item) => (
+						{filteredData.map((item) => (
 							<FishCard
 								key={item.id}
 								record={item}
@@ -269,8 +275,6 @@ export default function FishPage() {
 							/>
 						))}
 					</div>
-				) : (
-					<EmptyFilterCard />
 				)}
 
 				<SaveFAB isDirty={isDirty} onSave={handleSave} />

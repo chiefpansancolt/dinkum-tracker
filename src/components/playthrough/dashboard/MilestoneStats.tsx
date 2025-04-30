@@ -1,8 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
+import { Badge, Card, Progress } from "flowbite-react";
 import React, { useMemo } from "react";
-import { Card, Progress, Badge } from "flowbite-react";
+import { CollectTabProps, Milestone } from "@/types";
 import { milestones } from "@/data/dinkum";
-import { Milestone, CollectTabProps } from "@/types";
 
 const MilestoneStats: React.FC<CollectTabProps> = ({ collected }) => {
 	const stats = useMemo(() => {

@@ -1,23 +1,28 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { Badge } from "flowbite-react";
 import { useParams } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
+import { Milestone, Playthrough } from "@/types";
 import { getPlaythroughById, updatePlaythroughData } from "@/lib/localStorage";
-import { milestones } from "@/data/dinkum";
-import { Playthrough, Milestone } from "@/types";
-import TabHeader from "@/playthrough/ui/TabHeader";
-import MilestoneCard from "./MilestoneCard";
+import { getQueryParams, setQueryParam } from "@/service/urlService";
+import { collectedFilter, MILESTONE_CATEGORIES } from "@/data/constants";
+import {
+	getMilestoneByCategory,
+	getMilestoneBySearchValue,
+	getMilestoneTotalLevels,
+	getMilestoneTotalPermitPoints,
+	milestones,
+} from "@/data/dinkum";
+import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
 import SaveFAB from "@/playthrough/SaveFAB";
-import NotFoundCard from "@/comps/NotFoundCard";
-import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
 import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
-import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
-import { getHashQueryParams, setHashQueryParam } from "@/service/urlService";
-import { Badge } from "flowbite-react";
-import { MILESTONE_CATEGORIES } from "@/data/constants";
+import TabHeader from "@/playthrough/ui/TabHeader";
+import MilestoneCard from "./MilestoneCard";
 
 export default function MilestonesPage() {
 	const params = useParams();
@@ -26,9 +31,31 @@ export default function MilestonesPage() {
 	const [isLoading, setIsLoading] = useState(true);
 	const [searchQuery, setSearchQuery] = useState("");
 	const [categoryFilter, setCategoryFilter] = useState("all");
+	const [collectionFilter, setCollectionFilter] = useState("All");
 	const [viewMode, setViewMode] = useState<"all" | "grouped">("grouped");
-	const [milestoneCollection, setMilestoneCollection] = useState<Record<string, boolean>>({});
+	const [localState, setLocalState] = useState<Record<string, boolean>>({});
 	const [isDirty, setIsDirty] = useState(false);
+
+	const filters = {
+		category: {
+			value: categoryFilter,
+			options: MILESTONE_CATEGORIES,
+			label: "Category",
+		},
+		view: {
+			value: viewMode,
+			options: [
+				{ id: "grouped", value: "Grouped by Letter" },
+				{ id: "all", value: "All Milestones" },
+			],
+			label: "View Mode",
+		},
+		collection: {
+			value: collectionFilter,
+			options: collectedFilter,
+			label: "Collected",
+		},
+	};
 
 	useEffect(() => {
 		if (playthroughId) {
@@ -36,23 +63,23 @@ export default function MilestonesPage() {
 			setPlaythrough(data);
 
 			if (data) {
-				setMilestoneCollection(data.milestones || {});
+				setLocalState(data.milestones || {});
 			}
 
 			setIsLoading(false);
 
-			const hashParams = getHashQueryParams();
-			if (hashParams.q) {
-				setSearchQuery(hashParams.q);
+			const params = getQueryParams();
+			if (params.q) {
+				setSearchQuery(params.q);
 			}
 		}
 	}, [playthroughId]);
 
 	useEffect(() => {
 		if (searchQuery) {
-			setHashQueryParam("q", searchQuery);
+			setQueryParam("q", searchQuery);
 		} else {
-			setHashQueryParam("q", "");
+			setQueryParam("q", "");
 		}
 	}, [searchQuery]);
 
@@ -62,14 +89,14 @@ export default function MilestonesPage() {
 		const previousLevel = level - 1;
 		const previousMilestoneKey = `${milestoneId}_level_${previousLevel}`;
 
-		return milestoneCollection[previousMilestoneKey] === true;
+		return localState[previousMilestoneKey] === true;
 	};
 
 	const handleToggleMilestoneLevel = (milestoneId: string, level: number) => {
 		const milestoneKey = `${milestoneId}_level_${level}`;
-		const currentValue = milestoneCollection[milestoneKey] || false;
+		const currentValue = localState[milestoneKey] || false;
 
-		setMilestoneCollection((prev) => {
+		setLocalState((prev) => {
 			if (!currentValue && level > 1 && !isPreviousLevelObtained(milestoneId, level)) {
 				return prev;
 			}
@@ -101,7 +128,7 @@ export default function MilestonesPage() {
 	};
 
 	const toggleAllLevelsForMilestone = (milestone: Milestone, setToValue: boolean) => {
-		setMilestoneCollection((prev) => {
+		setLocalState((prev) => {
 			const updates: Record<string, boolean> = {};
 
 			milestone.levels.forEach((level) => {
@@ -122,7 +149,7 @@ export default function MilestonesPage() {
 	const areAllLevelsComplete = (milestone: Milestone) => {
 		return milestone.levels.every((level) => {
 			const milestoneKey = `${milestone.id}_level_${level.level}`;
-			return milestoneCollection[milestoneKey] === true;
+			return localState[milestoneKey] === true;
 		});
 	};
 
@@ -130,7 +157,7 @@ export default function MilestonesPage() {
 		if (!isDirty) return false;
 
 		const success = updatePlaythroughData(playthroughId, {
-			milestones: milestoneCollection,
+			milestones: localState,
 		});
 
 		if (success) {
@@ -140,50 +167,50 @@ export default function MilestonesPage() {
 		return success;
 	};
 
-	const filters = {
-		category: {
-			value: categoryFilter,
-			options: MILESTONE_CATEGORIES,
-			label: "Category",
-		},
-		view: {
-			value: viewMode,
-			options: [
-				{ id: "grouped", value: "Grouped by Letter" },
-				{ id: "all", value: "All Milestones" },
-			],
-			label: "View Mode",
-		},
-	};
-
 	const handleFilterChange = (name: string, value: string) => {
 		if (name === "category") {
 			setCategoryFilter(value);
 		} else if (name === "view") {
 			setViewMode(value as "all" | "grouped");
+		} else if (name === "collection") {
+			setCollectionFilter(value);
 		}
 	};
 
-	const filteredMilestones = useMemo(() => {
-		return milestones.filter((milestone) => {
-			if (categoryFilter !== "all" && !milestone.id.includes(categoryFilter)) {
-				return false;
-			}
+	const filteredData = useMemo(() => {
+		let filtered = [...milestones];
 
-			if (searchQuery) {
-				const query = searchQuery.toLowerCase();
-				return (
-					milestone.name.toLowerCase().includes(query) ||
-					milestone.description.toLowerCase().includes(query)
-				);
-			}
+		if (categoryFilter !== "all") {
+			filtered = getMilestoneByCategory(filtered, categoryFilter);
+		}
 
-			return true;
-		});
-	}, [categoryFilter, searchQuery]);
+		if (collectionFilter !== "All") {
+			if (collectionFilter === "collected") {
+				filtered = filtered.filter((milestone) => {
+					return milestone.levels.some((level) => {
+						const milestoneKey = `${milestone.id}_level_${level.level}`;
+						return localState[milestoneKey] === true;
+					});
+				});
+			} else if (collectionFilter === "not_collected") {
+				filtered = filtered.filter((milestone) => {
+					return milestone.levels.every((level) => {
+						const milestoneKey = `${milestone.id}_level_${level.level}`;
+						return !localState[milestoneKey];
+					});
+				});
+			}
+		}
+
+		if (searchQuery) {
+			filtered = getMilestoneBySearchValue(filtered, searchQuery);
+		}
+
+		return filtered;
+	}, [categoryFilter, collectionFilter, localState, searchQuery]);
 
 	const groupedMilestones = useMemo(() => {
-		return filteredMilestones.reduce<Record<string, Milestone[]>>((groups, milestone) => {
+		return filteredData.reduce<Record<string, Milestone[]>>((groups, milestone) => {
 			const firstLetter = milestone.name.charAt(0).toUpperCase();
 			if (!groups[firstLetter]) {
 				groups[firstLetter] = [];
@@ -191,28 +218,14 @@ export default function MilestonesPage() {
 			groups[firstLetter].push(milestone);
 			return groups;
 		}, {});
-	}, [filteredMilestones]);
+	}, [filteredData]);
 
 	const sortedLetters = useMemo(() => {
 		return Object.keys(groupedMilestones).sort();
 	}, [groupedMilestones]);
 
-	const getTotalLevels = () => {
-		return milestones.reduce((total, milestone) => total + milestone.levels.length, 0);
-	};
-
 	const getCompletedLevels = () => {
-		return Object.keys(milestoneCollection).filter((key) => milestoneCollection[key]).length;
-	};
-
-	const getTotalPermitPoints = () => {
-		let total = 0;
-		milestones.forEach((milestone) => {
-			milestone.levels.forEach((level) => {
-				total += level.permitPoints;
-			});
-		});
-		return total;
+		return Object.keys(localState).filter((key) => localState[key]).length;
 	};
 
 	const getEarnedPermitPoints = () => {
@@ -220,7 +233,7 @@ export default function MilestonesPage() {
 		milestones.forEach((milestone) => {
 			milestone.levels.forEach((level) => {
 				const milestoneKey = `${milestone.id}_level_${level.level}`;
-				if (milestoneCollection[milestoneKey]) {
+				if (localState[milestoneKey]) {
 					earned += level.permitPoints;
 				}
 			});
@@ -247,7 +260,7 @@ export default function MilestonesPage() {
 					enableSaveAlert={true}
 					isDirty={isDirty}
 					collectedCount={getCompletedLevels()}
-					collectionTotal={getTotalLevels()}
+					collectionTotal={getMilestoneTotalLevels()}
 					dirtyMessage="Your milestones progress has not been saved yet."
 				/>
 
@@ -257,13 +270,14 @@ export default function MilestonesPage() {
 							<h3 className="font-medium">Permit Points Earned</h3>
 							<p className="text-sm">
 								You&apos;ve earned {getEarnedPermitPoints().toLocaleString()} of{" "}
-								{getTotalPermitPoints().toLocaleString()} available permit points.
+								{getMilestoneTotalPermitPoints().toLocaleString()} available permit
+								points.
 							</p>
 						</div>
 						<Badge color="indigo" size="xl">
 							<span className="flex items-center">
 								{getEarnedPermitPoints().toLocaleString()} /{" "}
-								{getTotalPermitPoints().toLocaleString()}
+								{getMilestoneTotalPermitPoints().toLocaleString()}
 								<img
 									src="https://static.wikia.nocookie.net/dinkum/images/9/97/Permit_Points.png"
 									alt="Permit Points"
@@ -286,13 +300,13 @@ export default function MilestonesPage() {
 
 				<FilterDetails
 					title="milestones"
-					filteredCount={filteredMilestones.length}
+					filteredCount={filteredData.length}
 					totalCount={milestones.length}
 					collectedLabel="Completed Levels"
 					collectedCount={getCompletedLevels()}
 				/>
 
-				{filteredMilestones.length > 0 ? (
+				{filteredData.length > 0 ? (
 					viewMode === "grouped" ? (
 						<div className="space-y-8">
 							{sortedLetters.map((letter) => (
@@ -305,11 +319,11 @@ export default function MilestonesPage() {
 										<div className="flex-grow border-t border-gray-200 dark:border-gray-700"></div>
 									</div>
 									<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-										{groupedMilestones[letter].map((milestone) => (
+										{groupedMilestones[letter].map((item) => (
 											<MilestoneCard
-												key={milestone.id}
-												milestone={milestone}
-												milestoneCollection={milestoneCollection}
+												key={item.id}
+												milestone={item}
+												milestoneCollection={localState}
 												isPreviousLevelObtained={isPreviousLevelObtained}
 												onToggleMilestoneLevel={handleToggleMilestoneLevel}
 												onToggleAllLevels={toggleAllLevelsForMilestone}
@@ -322,11 +336,11 @@ export default function MilestonesPage() {
 						</div>
 					) : (
 						<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-							{filteredMilestones.map((milestone) => (
+							{filteredData.map((item) => (
 								<MilestoneCard
-									key={milestone.id}
-									milestone={milestone}
-									milestoneCollection={milestoneCollection}
+									key={item.id}
+									milestone={item}
+									milestoneCollection={localState}
 									isPreviousLevelObtained={isPreviousLevelObtained}
 									onToggleMilestoneLevel={handleToggleMilestoneLevel}
 									onToggleAllLevels={toggleAllLevelsForMilestone}

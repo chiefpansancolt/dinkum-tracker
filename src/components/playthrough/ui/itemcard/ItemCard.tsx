@@ -1,5 +1,5 @@
-import React from "react";
 import { Card } from "flowbite-react";
+import React from "react";
 import { ItemCardProps } from "@/types";
 
 const ItemCard = ({ renderHeader, renderImage, renderDetails, renderFooter }: ItemCardProps) => {

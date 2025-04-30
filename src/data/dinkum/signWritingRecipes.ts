@@ -1,146 +1,6 @@
-import { Recipe } from "@/types";
+import { FilterObject, Recipe } from "@/types";
 
 export const signWritingRecipes: Recipe[] = [
-  {
-    id: "signwriting_pen",
-    name: "Signwriting Pen",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a5/Inv_Signwriting_Pen.png",
-    outputCount: 1,
-    source: ["Sign Writing Licence Level 1"],
-    baseSellPrice: 125,
-    variants: [
-      {
-        id: "standard",
-        inputs: [
-          {
-            count: 1,
-            name: "Mangrove Stick",
-            img: "https://static.wikia.nocookie.net/dinkum/images/b/b7/Inv_Mangrove_Stick.png",
-          },
-          {
-            count: 1,
-            name: "Spinifex Resin",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/a3/Inv_Spinifex_Resin.png",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: "hand_written_sign",
-    name: "Hand Written Sign",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Inv_Hand_Written_Sign.png",
-    outputCount: 1,
-    source: ["Sign Writing Licence Level 1"],
-    baseSellPrice: 612,
-    variants: [
-      {
-        id: "standard",
-        inputs: [
-          {
-            count: 1,
-            name: "Hard Wood Plank",
-            img: "https://static.wikia.nocookie.net/dinkum/images/d/de/Inv_Hard_Wood_Plank.png",
-          },
-          {
-            count: 1,
-            name: "Gum Wood Plank",
-            img: "https://static.wikia.nocookie.net/dinkum/images/3/38/Inv_Gum_Wood_Plank.png",
-          },
-          {
-            count: 1,
-            name: "Mangrove Stick",
-            img: "https://static.wikia.nocookie.net/dinkum/images/b/b7/Inv_Mangrove_Stick.png",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: "item_sign",
-    name: "Item Sign",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/95/Inv_Item_Sign.png",
-    outputCount: 1,
-    source: ["Sign Writing Licence Level 1"],
-    baseSellPrice: 612,
-    variants: [
-      {
-        id: "standard",
-        inputs: [
-          {
-            count: 1,
-            name: "Hard Wood Plank",
-            img: "https://static.wikia.nocookie.net/dinkum/images/d/de/Inv_Hard_Wood_Plank.png",
-          },
-          {
-            count: 1,
-            name: "Gum Wood Plank",
-            img: "https://static.wikia.nocookie.net/dinkum/images/3/38/Inv_Gum_Wood_Plank.png",
-          },
-          {
-            count: 1,
-            name: "Mangrove Stick",
-            img: "https://static.wikia.nocookie.net/dinkum/images/b/b7/Inv_Mangrove_Stick.png",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: "sandwich_chalkboard",
-    name: "Sandwich Chalkboard",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/df/Inv_Sandwich_Chalkboard.png",
-    outputCount: 1,
-    source: ["Sign Writing Licence Level 1"],
-    baseSellPrice: 588,
-    variants: [
-      {
-        id: "standard",
-        inputs: [
-          {
-            count: 2,
-            name: "Palm Wood Plank",
-            img: "https://static.wikia.nocookie.net/dinkum/images/3/39/Inv_Palm_Wood_Plank.png",
-          },
-          {
-            count: 2,
-            name: "Spinifex Resin",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/a3/Inv_Spinifex_Resin.png",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: "stone_sign",
-    name: "Stone Sign",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/41/Inv_Stone_Sign.png",
-    outputCount: 1,
-    source: ["Sign Writing Licence Level 1"],
-    baseSellPrice: 275,
-    variants: [
-      {
-        id: "standard",
-        inputs: [
-          {
-            count: 1,
-            name: "Stone",
-            img: "https://static.wikia.nocookie.net/dinkum/images/0/09/Inv_Stone.png",
-          },
-          {
-            count: 1,
-            name: "Bag of Cement",
-            img: "https://static.wikia.nocookie.net/dinkum/images/e/eb/Inv_Bag_of_Cement.png",
-          },
-          {
-            count: 1,
-            name: "Quartz Crystal",
-            img: "https://static.wikia.nocookie.net/dinkum/images/5/5a/Inv_Quartz_Crystal.png",
-          },
-        ],
-      },
-    ],
-  },
   {
     id: "floor_plaque",
     name: "Floor Plaque",
@@ -197,6 +57,36 @@ export const signWritingRecipes: Recipe[] = [
     ],
   },
   {
+    id: "hand_written_sign",
+    name: "Hand Written Sign",
+    img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Inv_Hand_Written_Sign.png",
+    outputCount: 1,
+    source: ["Sign Writing Licence Level 1"],
+    baseSellPrice: 612,
+    variants: [
+      {
+        id: "standard",
+        inputs: [
+          {
+            count: 1,
+            name: "Hard Wood Plank",
+            img: "https://static.wikia.nocookie.net/dinkum/images/d/de/Inv_Hard_Wood_Plank.png",
+          },
+          {
+            count: 1,
+            name: "Gum Wood Plank",
+            img: "https://static.wikia.nocookie.net/dinkum/images/3/38/Inv_Gum_Wood_Plank.png",
+          },
+          {
+            count: 1,
+            name: "Mangrove Stick",
+            img: "https://static.wikia.nocookie.net/dinkum/images/b/b7/Inv_Mangrove_Stick.png",
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: "hard_wood_direction_sign",
     name: "Hard Wood Direction Sign",
     img: "https://static.wikia.nocookie.net/dinkum/images/7/76/Inv_Hard_Wood_Direction_Sign.png",
@@ -246,6 +136,36 @@ export const signWritingRecipes: Recipe[] = [
             count: 1,
             name: "Tin Sheet",
             img: "https://static.wikia.nocookie.net/dinkum/images/3/3b/Inv_Tin_Sheet.png",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "item_sign",
+    name: "Item Sign",
+    img: "https://static.wikia.nocookie.net/dinkum/images/9/95/Inv_Item_Sign.png",
+    outputCount: 1,
+    source: ["Sign Writing Licence Level 1"],
+    baseSellPrice: 612,
+    variants: [
+      {
+        id: "standard",
+        inputs: [
+          {
+            count: 1,
+            name: "Hard Wood Plank",
+            img: "https://static.wikia.nocookie.net/dinkum/images/d/de/Inv_Hard_Wood_Plank.png",
+          },
+          {
+            count: 1,
+            name: "Gum Wood Plank",
+            img: "https://static.wikia.nocookie.net/dinkum/images/3/38/Inv_Gum_Wood_Plank.png",
+          },
+          {
+            count: 1,
+            name: "Mangrove Stick",
+            img: "https://static.wikia.nocookie.net/dinkum/images/b/b7/Inv_Mangrove_Stick.png",
           },
         ],
       },
@@ -352,6 +272,86 @@ export const signWritingRecipes: Recipe[] = [
     ],
   },
   {
+    id: "sandwich_chalkboard",
+    name: "Sandwich Chalkboard",
+    img: "https://static.wikia.nocookie.net/dinkum/images/d/df/Inv_Sandwich_Chalkboard.png",
+    outputCount: 1,
+    source: ["Sign Writing Licence Level 1"],
+    baseSellPrice: 588,
+    variants: [
+      {
+        id: "standard",
+        inputs: [
+          {
+            count: 2,
+            name: "Palm Wood Plank",
+            img: "https://static.wikia.nocookie.net/dinkum/images/3/39/Inv_Palm_Wood_Plank.png",
+          },
+          {
+            count: 2,
+            name: "Spinifex Resin",
+            img: "https://static.wikia.nocookie.net/dinkum/images/a/a3/Inv_Spinifex_Resin.png",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "signwriting_pen",
+    name: "Signwriting Pen",
+    img: "https://static.wikia.nocookie.net/dinkum/images/a/a5/Inv_Signwriting_Pen.png",
+    outputCount: 1,
+    source: ["Sign Writing Licence Level 1"],
+    baseSellPrice: 125,
+    variants: [
+      {
+        id: "standard",
+        inputs: [
+          {
+            count: 1,
+            name: "Mangrove Stick",
+            img: "https://static.wikia.nocookie.net/dinkum/images/b/b7/Inv_Mangrove_Stick.png",
+          },
+          {
+            count: 1,
+            name: "Spinifex Resin",
+            img: "https://static.wikia.nocookie.net/dinkum/images/a/a3/Inv_Spinifex_Resin.png",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "stone_sign",
+    name: "Stone Sign",
+    img: "https://static.wikia.nocookie.net/dinkum/images/4/41/Inv_Stone_Sign.png",
+    outputCount: 1,
+    source: ["Sign Writing Licence Level 1"],
+    baseSellPrice: 275,
+    variants: [
+      {
+        id: "standard",
+        inputs: [
+          {
+            count: 1,
+            name: "Stone",
+            img: "https://static.wikia.nocookie.net/dinkum/images/0/09/Inv_Stone.png",
+          },
+          {
+            count: 1,
+            name: "Bag of Cement",
+            img: "https://static.wikia.nocookie.net/dinkum/images/e/eb/Inv_Bag_of_Cement.png",
+          },
+          {
+            count: 1,
+            name: "Quartz Crystal",
+            img: "https://static.wikia.nocookie.net/dinkum/images/5/5a/Inv_Quartz_Crystal.png",
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: "tin_direction_sign",
     name: "Tin Direction Sign",
     img: "https://static.wikia.nocookie.net/dinkum/images/e/e6/Inv_Tin_Direction_Sign.png",
@@ -377,3 +377,39 @@ export const signWritingRecipes: Recipe[] = [
     ],
   },
 ];
+
+export const getSignRecipesBySource = (
+  data: Recipe[],
+  value: string,
+): Recipe[] => {
+  return data.filter((item) => item.source?.includes(value));
+};
+
+export const getSignRecipesBySearchValue = (
+  data: Recipe[],
+  searchValue: string,
+): Recipe[] => {
+  return data.filter((item) =>
+    item.name.toLowerCase().includes(searchValue.toLowerCase()),
+  );
+};
+
+export const getUniqueSignRecipeSources = (): FilterObject[] => {
+  const sources = new Set<string>();
+  signWritingRecipes.forEach((recipe) => {
+    if (recipe.source && recipe.source.length > 0) {
+      recipe.source.forEach((src) => {
+        sources.add(src);
+      });
+    }
+  });
+  return [
+    { id: "All", value: "All Sources" },
+    ...Array.from(sources)
+      .sort()
+      .map((source) => ({
+        id: source,
+        value: source,
+      })),
+  ];
+};

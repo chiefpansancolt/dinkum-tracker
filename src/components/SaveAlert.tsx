@@ -1,6 +1,6 @@
 import { Alert } from "flowbite-react";
-import { SaveAlertProps } from "@/types";
 import { HiInformationCircle } from "react-icons/hi";
+import { SaveAlertProps } from "@/types";
 
 const SaveAlert = ({ message }: SaveAlertProps) => {
 	return (

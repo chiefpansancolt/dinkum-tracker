@@ -1,38 +1,38 @@
 "use client";
 
-import { useState, useMemo } from "react";
-import { Card, Badge, Label, Checkbox, Button } from "flowbite-react";
+import LoadingPlaythrough from "@/components/playthrough/LoadingPlaythrough";
+import { Badge, Button, Card, Checkbox, Label } from "flowbite-react";
+import { useMemo, useState } from "react";
+import { HiX } from "react-icons/hi";
+import { ItemBreakdownResourceCardProps, Resource, UniqueResource } from "@/types";
+import { ResourceType } from "@/data/constants";
 import {
-	weapons,
-	vehicles,
-	tools,
-	signWritingRecipes,
-	equipment,
-	craftingRecipes,
-	cookingRecipes,
-	buildings,
-	fish,
-	relics,
-	crops,
 	animalProducts,
-	foragables,
-	critters,
 	bugs,
-	paint,
+	buildings,
+	cookingRecipes,
+	craftingRecipes,
+	critters,
+	crops,
+	equipment,
+	fish,
+	foragables,
 	minerals,
 	otherCraftables,
+	paint,
+	relics,
+	signWritingRecipes,
+	tools,
 	trophies,
+	vehicles,
+	weapons,
 } from "@/data/dinkum";
-import { ResourceType } from "@/data/constants";
-import { UniqueResource, Resource, ItemBreakdownResourceCardProps } from "@/types";
-import { HiX } from "react-icons/hi";
+import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
+import FilterBar from "@/playthrough/ui/FilterBar";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
 import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
 import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
-import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
 import TabHeader from "@/playthrough/ui/TabHeader";
-import FilterBar from "@/playthrough/ui/FilterBar";
-import LoadingPlaythrough from "@/components/playthrough/LoadingPlaythrough";
 
 export default function ItemsBreakdownPage() {
 	const [searchQuery, setSearchQuery] = useState<string>("");

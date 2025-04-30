@@ -1,19 +1,25 @@
 "use client";
 
-import { useMemo, useState, useEffect } from "react";
 import { useParams } from "next/navigation";
-import { signWritingRecipes } from "@/data/dinkum";
+import { useEffect, useMemo, useState } from "react";
 import { Playthrough } from "@/types";
-import { updatePlaythroughData, getPlaythroughById } from "@/lib/localStorage";
-import { getHashQueryParams, setHashQueryParam } from "@/service/urlService";
-import TabHeader from "@/playthrough/ui/TabHeader";
-import FilterBar from "@/playthrough/ui/FilterBar";
-import FilterDetails from "@/playthrough/ui/FilterDetails";
-import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
+import { getPlaythroughById, updatePlaythroughData } from "@/lib/localStorage";
+import { getQueryParams, setQueryParam } from "@/service/urlService";
+import { unlockedFilter } from "@/data/constants";
+import {
+	getSignRecipesBySearchValue,
+	getSignRecipesBySource,
+	getUniqueSignRecipeSources,
+	signWritingRecipes,
+} from "@/data/dinkum";
+import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
 import SaveFAB from "@/playthrough/SaveFAB";
-import NotFoundCard from "@/comps/NotFoundCard";
-import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
+import FilterBar from "@/playthrough/ui/FilterBar";
+import FilterDetails from "@/playthrough/ui/FilterDetails";
+import TabHeader from "@/playthrough/ui/TabHeader";
 import SignWritingRecipeCard from "./SignWritingRecipeCard";
 
 export default function SignWritingRecipesPage() {
@@ -23,30 +29,22 @@ export default function SignWritingRecipesPage() {
 	const [isLoading, setIsLoading] = useState(true);
 	const [searchQuery, setSearchQuery] = useState<string>("");
 	const [sourceFilter, setSourceFilter] = useState<string>("All");
-	const [signWritingRecipesCollection, setSignWritingRecipesCollection] = useState<
-		Record<string, boolean>
-	>({});
+	const [unlockFilter, setUnlockFilter] = useState<string>("All");
+	const [localState, setLocalState] = useState<Record<string, boolean>>({});
 	const [isDirty, setIsDirty] = useState(false);
 
-	const uniqueSources = useMemo(() => {
-		const sources = new Set<string>();
-		signWritingRecipes.forEach((recipe) => {
-			if (recipe.source && recipe.source.length > 0) {
-				recipe.source.forEach((src) => {
-					sources.add(src);
-				});
-			}
-		});
-		return [
-			{ id: "All", value: "All Sources" },
-			...Array.from(sources)
-				.sort()
-				.map((source) => ({
-					id: source,
-					value: source,
-				})),
-		];
-	}, []);
+	const filters = {
+		source: {
+			value: sourceFilter,
+			options: getUniqueSignRecipeSources(),
+			label: "Sources",
+		},
+		unlocked: {
+			value: unlockFilter,
+			options: unlockedFilter,
+			label: "Unlocked",
+		},
+	};
 
 	useEffect(() => {
 		if (playthroughId) {
@@ -54,28 +52,28 @@ export default function SignWritingRecipesPage() {
 			setPlaythrough(data);
 
 			if (data) {
-				setSignWritingRecipesCollection(data.signWritingRecipes || {});
+				setLocalState(data.signWritingRecipes || {});
 			}
 
 			setIsLoading(false);
 
-			const hashParams = getHashQueryParams();
-			if (hashParams.q) {
-				setSearchQuery(hashParams.q);
+			const params = getQueryParams();
+			if (params.q) {
+				setSearchQuery(params.q);
 			}
 		}
 	}, [playthroughId]);
 
 	useEffect(() => {
 		if (searchQuery) {
-			setHashQueryParam("q", searchQuery);
+			setQueryParam("q", searchQuery);
 		} else {
-			setHashQueryParam("q", "");
+			setQueryParam("q", "");
 		}
 	}, [searchQuery]);
 
 	const handleToggleUnlocked = (id: string, isUnlocked: boolean) => {
-		setSignWritingRecipesCollection((prev) => {
+		setLocalState((prev) => {
 			if (prev[id] !== isUnlocked) {
 				setIsDirty(true);
 			}
@@ -90,7 +88,7 @@ export default function SignWritingRecipesPage() {
 		if (!isDirty) return false;
 
 		const success = updatePlaythroughData(playthroughId, {
-			signWritingRecipes: signWritingRecipesCollection,
+			signWritingRecipes: localState,
 		});
 
 		if (success) {
@@ -100,38 +98,38 @@ export default function SignWritingRecipesPage() {
 		return success;
 	};
 
-	const filters = {
-		source: {
-			value: sourceFilter,
-			options: uniqueSources,
-			label: "Sources",
-		},
-	};
-
 	const handleFilterChange = (name: string, value: string) => {
 		if (name === "source") {
 			setSourceFilter(value);
+		} else if (name === "unlocked") {
+			setUnlockFilter(value);
 		}
 	};
 
 	const filteredData = useMemo(() => {
-		return signWritingRecipes.filter((recipe) => {
-			if (sourceFilter !== "All" && !recipe.source?.includes(sourceFilter)) {
-				return false;
-			}
+		let filtered = [...signWritingRecipes];
 
-			if (searchQuery) {
-				return recipe.name.toLowerCase().includes(searchQuery.toLowerCase());
-			}
+		if (sourceFilter !== "All") {
+			filtered = getSignRecipesBySource(filtered, sourceFilter);
+		}
 
-			return true;
-		});
-	}, [sourceFilter, searchQuery]);
+		if (unlockFilter !== "All") {
+			if (unlockFilter === "unlocked") {
+				filtered = filtered.filter((item) => localState[item.id] === true);
+			} else if (unlockFilter === "not_unlocked") {
+				filtered = filtered.filter((item) => !localState[item.id]);
+			}
+		}
+
+		if (searchQuery) {
+			filtered = getSignRecipesBySearchValue(filtered, searchQuery);
+		}
+
+		return filtered;
+	}, [sourceFilter, unlockFilter, localState, searchQuery]);
 
 	const getUnlockedCount = () => {
-		return Object.keys(signWritingRecipesCollection).filter(
-			(key) => signWritingRecipesCollection[key]
-		).length;
+		return Object.keys(localState).filter((key) => localState[key]).length;
 	};
 
 	if (isLoading) {
@@ -168,7 +166,7 @@ export default function SignWritingRecipesPage() {
 					showSearch={true}
 					searchValue={searchQuery}
 					onSearchChange={(value) => setSearchQuery(value)}
-					searchPlaceholder="Search by name..."
+					searchPlaceholder="Search recipe by name..."
 				/>
 
 				<FilterDetails
@@ -179,19 +177,19 @@ export default function SignWritingRecipesPage() {
 					collectedCount={getUnlockedCount()}
 				/>
 
-				{filteredData.length > 0 ? (
+				{filteredData.length === 0 ? (
+					<EmptyFilterCard />
+				) : (
 					<div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-						{filteredData.map((recipe) => (
+						{filteredData.map((item) => (
 							<SignWritingRecipeCard
-								key={recipe.id}
-								record={recipe}
-								isCollected={signWritingRecipesCollection[recipe.id] || false}
+								key={item.id}
+								record={item}
+								isCollected={localState[item.id] || false}
 								onToggleCollected={handleToggleUnlocked}
 							/>
 						))}
 					</div>
-				) : (
-					<EmptyFilterCard />
 				)}
 
 				<SaveFAB isDirty={isDirty} onSave={handleSave} />

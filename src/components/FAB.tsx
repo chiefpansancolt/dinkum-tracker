@@ -1,8 +1,8 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import { Button } from "flowbite-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { HiPlus } from "react-icons/hi2";
 
 export default function FAB() {

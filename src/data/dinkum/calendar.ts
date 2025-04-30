@@ -1,4 +1,4 @@
-import { Season, Weekday, Birthday, Event, CalendarDay } from "@/types";
+import { Birthday, CalendarDay, Event, Season, Weekday } from "@/types";
 
 export class GameCalendar {
   private currentDay: number = 1;
@@ -51,7 +51,12 @@ export class GameCalendar {
       },
       { day: 3, season: "Spring", character: "Irwin", likes: "Bananas" },
       { day: 20, season: "Spring", character: "Rayne", likes: "Corn" },
-      { day: 16, season: "Autumn", character: "River", likes: "Cooked Saltwater Fish" },
+      {
+        day: 16,
+        season: "Autumn",
+        character: "River",
+        likes: "Cooked Saltwater Fish",
+      },
       { day: 7, season: "Spring", character: "Forest", likes: "Pastie" },
       { day: 5, season: "Winter", character: "Doug", likes: "Banana Jam" },
       { day: 14, season: "Summer", character: "Mason", likes: "Roe Nigiri" },

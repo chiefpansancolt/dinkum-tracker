@@ -1,4 +1,4 @@
-import { DailyMilestones, DailyMilestone } from "@/types";
+import { DailyMilestone, DailyMilestones } from "@/types";
 
 const dayOneMilestones: DailyMilestone[] = [
   { id: "day_one_1", name: "Harvest 3 Bush Lime", permitPoints: 30 },

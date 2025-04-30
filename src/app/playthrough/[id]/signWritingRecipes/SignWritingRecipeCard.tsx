@@ -1,10 +1,10 @@
 import { Badge } from "flowbite-react";
-import { Recipe, CollectionCardProps } from "@/types";
-import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
-import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
-import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
+import { CollectionCardProps, Recipe } from "@/types";
 import DinkValue from "@/playthrough/ui/itemcard/DinkValue";
+import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
 import ItemFooter from "@/playthrough/ui/itemcard/ItemFooter";
+import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
+import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
 import ItemResources from "@/playthrough/ui/itemcard/ItemResources";
 
 const SignWritingRecipeCard = ({

@@ -1,17 +1,17 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { Alert, Card, Button, Label, FileInput, Select, Badge } from "flowbite-react";
-import { HiInformationCircle, HiDownload, HiUpload, HiTrash } from "react-icons/hi";
+import { Alert, Badge, Button, Card, FileInput, Label, Select } from "flowbite-react";
 import Link from "next/link";
-import {
-	downloadData,
-	importData,
-	clearAllData,
-	saveDefaultSortPreference,
-	getDefaultSortPreference,
-} from "@/lib/services/dataService";
+import { useEffect, useRef, useState } from "react";
+import { HiDownload, HiInformationCircle, HiTrash, HiUpload } from "react-icons/hi";
 import { getPlaythroughs } from "@/lib/localStorage";
+import {
+	clearAllData,
+	downloadData,
+	getDefaultSortPreference,
+	importData,
+	saveDefaultSortPreference,
+} from "@/lib/services/dataService";
 
 const SettingsPage = () => {
 	const fileInputRef = useRef<HTMLInputElement>(null);

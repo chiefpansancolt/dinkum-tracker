@@ -1,10 +1,27 @@
-// prettier.config.mjs
-
 /** @type {import('prettier').Config} */
 const config = {
-  plugins: ["prettier-plugin-tailwindcss"],
+  plugins: [
+    "@trivago/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss",
+  ],
   tailwindAttributes: ["theme"],
   tailwindFunctions: ["twMerge", "createTheme"],
+  importOrder: [
+    "<THIRD_PARTY_MODULES>",
+    "^(react|next)(.*)$",
+    "^@/types(.*)$",
+    "^@/lib(.*)$",
+    "^@/service(.*)$",
+    "^@/data(.*)$",
+    "^@/comps(.*)$",
+    "^@/playthrough(.*)$",
+    "^[./]",
+  ],
+  importOrderSeparation: false,
+  importOrderSortSpecifiers: true,
+  importOrderGroupNamespaceSpecifiers: true,
+  importOrderCaseInsensitive: true,
+  importOrderParserPlugins: ["typescript", "jsx", "decorators-legacy"],
   overrides: [
     {
       files: ["*.js", "*.jsx", "*.tsx"],
@@ -24,7 +41,7 @@ const config = {
       files: ["*.json"],
       options: {
         tabWidth: 4,
-        useTabs: false, // usually best for JSON
+        useTabs: false,
         trailingComma: "none",
         printWidth: 100,
       },

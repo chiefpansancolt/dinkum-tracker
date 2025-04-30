@@ -1,29 +1,26 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { usePathname, useParams } from "next/navigation";
-import { HiHome, HiViewList, HiCog } from "react-icons/hi";
+import Link from "next/link";
+import { useParams, usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import { FaToolbox, FaTools } from "react-icons/fa";
 import {
-	FaFish,
-	FaBug,
-	FaCalendarDays,
-	FaUsers,
-	FaIdCard,
-	FaBuildingColumns,
-	FaBuilding,
 	FaAward,
-	FaReceipt,
 	FaBook,
+	FaBoxOpen,
+	FaBug,
+	FaBuilding,
+	FaBuildingColumns,
+	FaCalendarDays,
 	FaCar,
 	FaCouch,
+	FaFish,
+	FaIdCard,
+	FaReceipt,
 	FaSeedling,
-	FaBoxOpen,
 	FaSignsPost,
+	FaUsers,
 } from "react-icons/fa6";
-import { MdDashboard } from "react-icons/md";
-import { FaTools, FaToolbox } from "react-icons/fa";
-import { GoStarFill } from "react-icons/go";
-import { LuCookingPot } from "react-icons/lu";
 import {
 	GiBackpack,
 	GiClothes,
@@ -34,8 +31,11 @@ import {
 	GiSwordman,
 	GiWheat,
 } from "react-icons/gi";
+import { GoStarFill } from "react-icons/go";
+import { HiCog, HiHome, HiViewList } from "react-icons/hi";
+import { LuCookingPot } from "react-icons/lu";
+import { MdDashboard } from "react-icons/md";
 import SidebarCollapse from "./SidebarCollapse";
-import Link from "next/link";
 
 interface SidebarLinkProps {
 	href: string;

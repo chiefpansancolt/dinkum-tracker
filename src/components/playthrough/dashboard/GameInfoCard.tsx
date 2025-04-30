@@ -1,5 +1,5 @@
-import React from "react";
 import { Card } from "flowbite-react";
+import React from "react";
 import { GameInfoCardProps } from "@/types";
 
 const GameInfoCard: React.FC<GameInfoCardProps> = ({ playthrough }) => {

@@ -1,6 +1,6 @@
 import { create } from "zustand";
+import { CalendarDay, CalendarState, Season } from "@/types/dinkum";
 import { GameCalendar } from "@/data/dinkum";
-import { Season, CalendarDay, CalendarState } from "@/types/dinkum";
 
 export const useCalendarStore = create<CalendarState>((set, get) => {
   const calendar = new GameCalendar();

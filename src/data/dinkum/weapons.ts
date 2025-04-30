@@ -1,4 +1,4 @@
-import { Weapon } from "@/types";
+import { FilterArray, Weapon } from "@/types";
 
 export const weapons: Weapon[] = [
   {
@@ -283,6 +283,15 @@ export const weapons: Weapon[] = [
     baseSellPrice: 125000,
   },
   {
+    id: "battle_fish",
+    name: "Battle Fish",
+    img: "https://static.wikia.nocookie.net/dinkum/images/7/79/Inv_Battle_Fish.png",
+    damage: 14,
+    licenceLevel: null,
+    source: ["Hunting Sharks"],
+    baseSellPrice: 125000,
+  },
+  {
     id: "battle_shovel",
     name: "Battle Shovel",
     img: "https://static.wikia.nocookie.net/dinkum/images/5/56/Inv_Battle_Shovel.png",
@@ -313,15 +322,6 @@ export const weapons: Weapon[] = [
     ],
     buyPrice: 150000,
     baseSellPrice: 75000,
-  },
-  {
-    id: "battle_fish",
-    name: "Battle Fish",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/79/Inv_Battle_Fish.png",
-    damage: 14,
-    licenceLevel: null,
-    source: ["Hunting Sharks"],
-    baseSellPrice: 125000,
   },
   {
     id: "berkonium_wand",
@@ -575,3 +575,28 @@ export const weapons: Weapon[] = [
     baseSellPrice: 212,
   },
 ];
+
+export const getWeaponBySource = (data: Weapon[], value: string): Weapon[] => {
+  return data.filter((item) => item.source.includes(value));
+};
+
+export const getWeaponBySearchValue = (
+  data: Weapon[],
+  searchValue: string,
+): Weapon[] => {
+  return data.filter((item) =>
+    item.name.toLowerCase().includes(searchValue.toLowerCase()),
+  );
+};
+
+export const getUniqueWeaponSources = (): FilterArray => {
+  const sources = new Set<string>();
+  weapons.forEach((item) => {
+    if (item.source && item.source.length > 0) {
+      item.source.forEach((src) => {
+        sources.add(src);
+      });
+    }
+  });
+  return ["All", ...Array.from(sources).sort()];
+};

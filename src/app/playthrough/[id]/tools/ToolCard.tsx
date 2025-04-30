@@ -1,16 +1,17 @@
+import { Button } from "flowbite-react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { Button } from "flowbite-react";
-import { Tool, CollectionCardProps } from "@/types";
-import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
-import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
-import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
-import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
+import { CollectionCardProps, Tool } from "@/types";
 import DinkValue from "@/playthrough/ui/itemcard/DinkValue";
-import ItemFooter from "@/playthrough/ui/itemcard/ItemFooter";
-import ItemResources from "@/playthrough/ui/itemcard/ItemResources";
-import ItemFranklyn from "@/playthrough/ui/itemcard/ItemFranklyn";
+import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
 import ItemDamage from "@/playthrough/ui/itemcard/ItemDamage";
+import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
+import ItemFooter from "@/playthrough/ui/itemcard/ItemFooter";
+import ItemFranklyn from "@/playthrough/ui/itemcard/ItemFranklyn";
+import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
+import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
+import ItemResources from "@/playthrough/ui/itemcard/ItemResources";
+import PermitValue from "@/playthrough/ui/itemcard/PermitValue";
 
 const ToolCard = ({ record, isCollected = false, onToggleCollected }: CollectionCardProps) => {
 	const tool = record as Tool;
@@ -63,9 +64,12 @@ const ToolCard = ({ record, isCollected = false, onToggleCollected }: Collection
 						<ItemResources id={tool.id} label="Ingredients" items={tool.inputs} />
 					)}
 
-					{tool.buyPrice !== undefined && (
-						<DinkValue label="Buy Price" price={tool.buyPrice} />
-					)}
+					{tool.buyPrice !== undefined &&
+						(tool.buyUnits === "Permit Points" ? (
+							<PermitValue label="Buy Price" price={tool.buyPrice} />
+						) : (
+							<DinkValue label="Buy Price" price={tool.buyPrice} />
+						))}
 
 					{tool.baseSellPrice !== null && (
 						<DinkValue

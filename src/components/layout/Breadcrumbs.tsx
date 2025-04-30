@@ -1,6 +1,6 @@
-import { BreadCrumbsProps } from "@/types";
 import { Breadcrumb, BreadcrumbItem } from "flowbite-react";
 import { HiHome } from "react-icons/hi";
+import { BreadCrumbsProps } from "@/types";
 
 const BreadcrumbsComp = ({ name, overview = false, routeName, id }: BreadCrumbsProps) => {
 	return (

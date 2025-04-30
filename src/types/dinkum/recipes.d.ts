@@ -1,4 +1,4 @@
-import { BaseResource, ResourceVariant, Buffs } from "./base";
+import { BaseResource, Buffs, ResourceVariant } from "./base";
 
 export interface Recipe extends BaseResource {
   outputCount?: number | "Varies";

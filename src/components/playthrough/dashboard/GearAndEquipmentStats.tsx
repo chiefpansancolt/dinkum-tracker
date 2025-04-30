@@ -1,10 +1,10 @@
+import { Badge, Card, Progress } from "flowbite-react";
 import React, { useMemo } from "react";
-import { Card, Progress, Badge } from "flowbite-react";
-import { books, tools, weapons, equipment, vehicles } from "@/data/dinkum";
-import { GearAndEquipmentStatsProps } from "@/types";
-import { FaTools, FaBook } from "react-icons/fa";
-import { GiSwordman, GiBackpack } from "react-icons/gi";
+import { FaBook, FaTools } from "react-icons/fa";
 import { FaCar } from "react-icons/fa6";
+import { GiBackpack, GiSwordman } from "react-icons/gi";
+import { GearAndEquipmentStatsProps } from "@/types";
+import { books, equipment, tools, vehicles, weapons } from "@/data/dinkum";
 
 const GearAndEquipmentStats: React.FC<GearAndEquipmentStatsProps> = ({
 	bookCollection,

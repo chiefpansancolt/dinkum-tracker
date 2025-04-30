@@ -1,4 +1,5 @@
-import { PediaItem } from "@/types";
+import { Biome, FilterArray, PediaItem, Season, TimePeriod } from "@/types";
+import { SEASONS, TIME_PERIODS } from "@/data/constants";
 
 export const critters: PediaItem[] = [
   {
@@ -252,3 +253,64 @@ export const critters: PediaItem[] = [
     baseSellPrice: 1899,
   },
 ];
+
+export const getCrittersByBiome = (
+  data: PediaItem[],
+  biome: Biome,
+): PediaItem[] => {
+  return data.filter((item) => item.biome.includes(biome));
+};
+
+export const getCrittersByRarity = (
+  data: PediaItem[],
+  rarity: string,
+): PediaItem[] => {
+  return data.filter((item) => item.rarity === rarity);
+};
+
+export const getCrittersBySeason = (
+  data: PediaItem[],
+  season: Season,
+): PediaItem[] => {
+  return data.filter((item) => item.seasons.includes(season));
+};
+
+export const getCrittersByTime = (
+  data: PediaItem[],
+  timePeriod: TimePeriod,
+): PediaItem[] => {
+  return data.filter((item) => item.timeFound.includes(timePeriod));
+};
+
+export const getCrittersBySearchValue = (
+  data: PediaItem[],
+  searchValue: string,
+): PediaItem[] => {
+  return data.filter((item) =>
+    item.name.toLowerCase().includes(searchValue.toLowerCase()),
+  );
+};
+
+export const getUniqueCritterBiomes = (): FilterArray => {
+  const biomes = new Set<string>();
+  critters.forEach((item) => {
+    item.biome.forEach((b) => biomes.add(b));
+  });
+
+  return ["All", ...Array.from(biomes)].sort();
+};
+
+export const getUniqueCritterRarities = (): FilterArray => {
+  const rarities = new Set<string>();
+  critters.forEach((item) => rarities.add(item.rarity));
+
+  return ["All", ...Array.from(rarities)].sort();
+};
+
+export const getUniqueCritterSeasons = (): FilterArray => {
+  return Object.values(SEASONS);
+};
+
+export const getUniqueCritterTimePeriods = (): FilterArray => {
+  return Object.values(TIME_PERIODS);
+};

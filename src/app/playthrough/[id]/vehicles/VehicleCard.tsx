@@ -1,15 +1,15 @@
+import { Button } from "flowbite-react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { Button } from "flowbite-react";
-import { Vehicle, CollectionCardProps } from "@/types";
-import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
-import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
-import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
-import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
+import { CollectionCardProps, Vehicle } from "@/types";
 import DinkValue from "@/playthrough/ui/itemcard/DinkValue";
+import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
+import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
 import ItemFooter from "@/playthrough/ui/itemcard/ItemFooter";
-import ItemResources from "@/playthrough/ui/itemcard/ItemResources";
 import ItemFranklyn from "@/playthrough/ui/itemcard/ItemFranklyn";
+import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
+import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
+import ItemResources from "@/playthrough/ui/itemcard/ItemResources";
 
 const VehicleCard = ({ record, isCollected = false, onToggleCollected }: CollectionCardProps) => {
 	const vehicle = record as Vehicle;

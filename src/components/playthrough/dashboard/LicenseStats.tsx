@@ -1,8 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
+import { Badge, Card, Progress } from "flowbite-react";
 import React, { useMemo } from "react";
-import { Card, Progress, Badge } from "flowbite-react";
+import { CollectTabProps, License } from "@/types";
 import { licenses } from "@/data/dinkum";
-import { License, CollectTabProps } from "@/types";
 
 const LicenseStats: React.FC<CollectTabProps> = ({ collected }) => {
 	const stats = useMemo(() => {

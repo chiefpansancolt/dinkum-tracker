@@ -1,6 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
-import { DinkValueProps, DinkPriceProps } from "@/types";
 import { Popover } from "flowbite-react";
+import { DinkPriceProps, DinkValueProps } from "@/types";
 
 const DinkPrice = ({ price }: DinkPriceProps) => {
 	return (

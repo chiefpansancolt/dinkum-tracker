@@ -1,11 +1,11 @@
 import { Badge } from "flowbite-react";
 import { Clothing, CollectionCardProps } from "@/types";
-import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
-import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
-import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
-import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
 import DinkValue from "@/playthrough/ui/itemcard/DinkValue";
+import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
+import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
 import ItemFooter from "@/playthrough/ui/itemcard/ItemFooter";
+import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
+import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
 
 const ClothingCard = ({ record, isCollected = false, onToggleCollected }: CollectionCardProps) => {
 	const clothing = record as Clothing;

@@ -402,3 +402,7 @@ export const npcs: NPC[] = [
 export const getNPCById = (id: string): NPC | undefined => {
   return npcs.find((npc) => npc.id === id);
 };
+
+export const getNPCMaxPossibleHearts = (): number => {
+  return npcs.length * 5;
+};

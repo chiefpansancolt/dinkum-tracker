@@ -1,13 +1,13 @@
 import React from "react";
 import {
-  Resource,
-  ResourceVariant,
   Buffs,
-  ResourceItem,
   License,
   Milestone,
-  Skill,
   NPC,
+  Resource,
+  ResourceItem,
+  ResourceVariant,
+  Skill,
 } from "../dinkum";
 
 export type FilterArray = string[];

@@ -1,20 +1,28 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
 import { useParams } from "next/navigation";
-import { getPlaythroughById, updatePlaythroughData } from "@/lib/localStorage";
-import { clothing, getClothingBySlot, getClothingByType, getClothingBySet } from "@/data/dinkum";
-import { ClothingSlots } from "@/data/constants";
+import { useEffect, useMemo, useState } from "react";
 import { ClothingSlot, Playthrough } from "@/types";
-import { getHashQueryParams, setHashQueryParam } from "@/service/urlService";
-import TabHeader from "@/playthrough/ui/TabHeader";
-import FilterBar from "@/playthrough/ui/FilterBar";
-import FilterDetails from "@/playthrough/ui/FilterDetails";
-import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
+import { getPlaythroughById, updatePlaythroughData } from "@/lib/localStorage";
+import { getQueryParams, setQueryParam } from "@/service/urlService";
+import { ClothingSlots, collectedFilter } from "@/data/constants";
+import {
+	clothing,
+	getClothingBySearchValue,
+	getClothingBySet,
+	getClothingBySlot,
+	getClothingByType,
+	getUniqueClothingSets,
+	getUniqueClothingSlots,
+} from "@/data/dinkum";
+import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
 import SaveFAB from "@/playthrough/SaveFAB";
-import NotFoundCard from "@/comps/NotFoundCard";
-import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
+import FilterBar from "@/playthrough/ui/FilterBar";
+import FilterDetails from "@/playthrough/ui/FilterDetails";
+import TabHeader from "@/playthrough/ui/TabHeader";
 import ClothingCard from "./ClothingCard";
 
 export default function ClothingPage() {
@@ -26,19 +34,33 @@ export default function ClothingPage() {
 	const [slotFilter, setSlotFilter] = useState<string>("All");
 	const [typeFilter, setTypeFilter] = useState<string>("All");
 	const [setFilter, setSetFilter] = useState<string>("All");
-	const [clothingCollection, setClothingCollection] = useState<Record<string, boolean>>({});
+	const [collectionFilter, setCollectionFilter] = useState<string>("All");
+	const [localState, setLocalState] = useState<Record<string, boolean>>({});
 	const [availableTypes, setAvailableTypes] = useState<string[]>([]);
 	const [isDirty, setIsDirty] = useState(false);
 
-	const uniqueSets = useMemo(() => {
-		const sets = new Set<string>();
-		clothing.forEach((item) => {
-			if (item.set) {
-				sets.add(item.set);
-			}
-		});
-		return ["All", ...Array.from(sets).sort()];
-	}, []);
+	const filters = {
+		slot: {
+			value: slotFilter,
+			options: getUniqueClothingSlots(),
+			label: "Slot",
+		},
+		type: {
+			value: typeFilter,
+			options: availableTypes,
+			label: "Type",
+		},
+		set: {
+			value: setFilter,
+			options: getUniqueClothingSets(),
+			label: "Set",
+		},
+		collection: {
+			value: collectionFilter,
+			options: collectedFilter,
+			label: "Collected",
+		},
+	};
 
 	useEffect(() => {
 		if (playthroughId) {
@@ -46,14 +68,14 @@ export default function ClothingPage() {
 			setPlaythrough(data);
 
 			if (data) {
-				setClothingCollection(data.clothing || {});
+				setLocalState(data.clothing || {});
 			}
 
 			setIsLoading(false);
 
-			const hashParams = getHashQueryParams();
-			if (hashParams.q) {
-				setSearchQuery(hashParams.q);
+			const params = getQueryParams();
+			if (params.q) {
+				setSearchQuery(params.q);
 			}
 		}
 	}, [playthroughId]);
@@ -71,14 +93,14 @@ export default function ClothingPage() {
 
 	useEffect(() => {
 		if (searchQuery) {
-			setHashQueryParam("q", searchQuery);
+			setQueryParam("q", searchQuery);
 		} else {
-			setHashQueryParam("q", "");
+			setQueryParam("q", "");
 		}
 	}, [searchQuery]);
 
 	const handleToggleCollected = (id: string, isCollected: boolean) => {
-		setClothingCollection((prev) => {
+		setLocalState((prev) => {
 			if (prev[id] !== isCollected) {
 				setIsDirty(true);
 			}
@@ -93,7 +115,7 @@ export default function ClothingPage() {
 		if (!isDirty) return false;
 
 		const success = updatePlaythroughData(playthroughId, {
-			clothing: clothingCollection,
+			clothing: localState,
 		});
 
 		if (success) {
@@ -103,24 +125,6 @@ export default function ClothingPage() {
 		return success;
 	};
 
-	const filters = {
-		slot: {
-			value: slotFilter,
-			options: ["All", ...Object.keys(ClothingSlots)],
-			label: "Slot",
-		},
-		type: {
-			value: typeFilter,
-			options: availableTypes,
-			label: "Type",
-		},
-		set: {
-			value: setFilter,
-			options: uniqueSets,
-			label: "Set",
-		},
-	};
-
 	const handleFilterChange = (name: string, value: string) => {
 		if (name === "slot") {
 			setSlotFilter(value);
@@ -128,6 +132,8 @@ export default function ClothingPage() {
 			setTypeFilter(value);
 		} else if (name === "set") {
 			setSetFilter(value);
+		} else if (name === "collection") {
+			setCollectionFilter(value);
 		}
 	};
 
@@ -135,28 +141,34 @@ export default function ClothingPage() {
 		let filtered = [...clothing];
 
 		if (slotFilter !== "All") {
-			filtered = getClothingBySlot(slotFilter as ClothingSlot);
+			filtered = getClothingBySlot(filtered, slotFilter as ClothingSlot);
 		}
 
 		if (typeFilter !== "All") {
-			filtered = getClothingByType(typeFilter);
+			filtered = getClothingByType(filtered, typeFilter);
 		}
 
 		if (setFilter !== "All") {
-			filtered = getClothingBySet(setFilter);
+			filtered = getClothingBySet(filtered, setFilter);
+		}
+
+		if (collectionFilter !== "All") {
+			if (collectionFilter === "collected") {
+				filtered = filtered.filter((item) => localState[item.id] === true);
+			} else if (collectionFilter === "not_collected") {
+				filtered = filtered.filter((item) => !localState[item.id]);
+			}
 		}
 
 		if (searchQuery) {
-			filtered = filtered.filter((item) =>
-				item.name.toLowerCase().includes(searchQuery.toLowerCase())
-			);
+			filtered = getClothingBySearchValue(filtered, searchQuery);
 		}
 
 		return filtered;
-	}, [slotFilter, typeFilter, setFilter, searchQuery]);
+	}, [slotFilter, typeFilter, setFilter, collectionFilter, localState, searchQuery]);
 
 	const getCollectedCount = () => {
-		return Object.keys(clothingCollection).filter((key) => clothingCollection[key]).length;
+		return Object.keys(localState).filter((key) => localState[key]).length;
 	};
 
 	if (isLoading) {
@@ -200,19 +212,19 @@ export default function ClothingPage() {
 					collectedCount={getCollectedCount()}
 				/>
 
-				{filteredData.length > 0 ? (
+				{filteredData.length === 0 ? (
+					<EmptyFilterCard />
+				) : (
 					<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 						{filteredData.map((item) => (
 							<ClothingCard
 								key={item.id}
 								record={item}
-								isCollected={clothingCollection[item.id] || false}
+								isCollected={localState[item.id] || false}
 								onToggleCollected={handleToggleCollected}
 							/>
 						))}
 					</div>
-				) : (
-					<EmptyFilterCard />
 				)}
 
 				<SaveFAB isDirty={isDirty} onSave={handleSave} />

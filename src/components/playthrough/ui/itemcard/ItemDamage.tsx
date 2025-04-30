@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import { ItemDamageProps } from "@/types";
 
 const ItemDamage = ({ label, damage }: ItemDamageProps) => {

@@ -1,20 +1,28 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
 import { useParams } from "next/navigation";
-import { getPlaythroughById, updatePlaythroughData } from "@/lib/localStorage";
-import { tools } from "@/data/dinkum";
+import { useEffect, useMemo, useState } from "react";
 import { Playthrough } from "@/types";
-import TabHeader from "@/playthrough/ui/TabHeader";
-import ToolCard from "./ToolCard";
+import { getPlaythroughById, updatePlaythroughData } from "@/lib/localStorage";
+import { getQueryParams, setQueryParam } from "@/service/urlService";
+import { collectedFilter } from "@/data/constants";
+import {
+	getToolByLicense,
+	getToolBySearchValue,
+	getToolBySource,
+	getUniqueToolsLicenses,
+	getUniqueToolsSources,
+	tools,
+} from "@/data/dinkum";
+import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
 import SaveFAB from "@/playthrough/SaveFAB";
-import NotFoundCard from "@/comps/NotFoundCard";
-import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
 import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
-import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
-import { getHashQueryParams, setHashQueryParam } from "@/service/urlService";
+import TabHeader from "@/playthrough/ui/TabHeader";
+import ToolCard from "./ToolCard";
 
 export default function ToolsPage() {
 	const params = useParams();
@@ -25,30 +33,32 @@ export default function ToolsPage() {
 	const [licenseFilter, setLicenseFilter] = useState<string>("All");
 	const [sourceFilter, setSourceFilter] = useState<string>("All");
 	const [buyUnitFilter, setBuyUnitFilter] = useState<string>("All");
-	const [toolCollection, setToolCollection] = useState<Record<string, boolean>>({});
+	const [collectionFilter, setCollectionFilter] = useState<string>("All");
+	const [localState, setLocalState] = useState<Record<string, boolean>>({});
 	const [isDirty, setIsDirty] = useState(false);
 
-	const uniqueLicenses = useMemo(() => {
-		const licenses = new Set<string>();
-		tools.forEach((tool) => {
-			if (tool.licence) {
-				licenses.add(tool.licence);
-			}
-		});
-		return ["All", ...Array.from(licenses).sort()];
-	}, []);
-
-	const uniqueSources = useMemo(() => {
-		const sources = new Set<string>();
-		tools.forEach((tool) => {
-			if (tool.source && tool.source.length > 0) {
-				tool.source.forEach((src) => {
-					sources.add(src);
-				});
-			}
-		});
-		return ["All", ...Array.from(sources).sort()];
-	}, []);
+	const filters = {
+		license: {
+			value: licenseFilter,
+			options: getUniqueToolsLicenses(),
+			label: "License",
+		},
+		source: {
+			value: sourceFilter,
+			options: getUniqueToolsSources(),
+			label: "Source",
+		},
+		buyUnit: {
+			value: buyUnitFilter,
+			options: ["All", "Purchasable", "Dinks", "Permit Points"],
+			label: "Purchase Type",
+		},
+		collection: {
+			value: collectionFilter,
+			options: collectedFilter,
+			label: "Collected",
+		},
+	};
 
 	useEffect(() => {
 		if (playthroughId) {
@@ -56,28 +66,28 @@ export default function ToolsPage() {
 			setPlaythrough(data);
 
 			if (data) {
-				setToolCollection(data.tools || {});
+				setLocalState(data.tools || {});
 			}
 
 			setIsLoading(false);
 
-			const hashParams = getHashQueryParams();
-			if (hashParams.q) {
-				setSearchQuery(hashParams.q);
+			const params = getQueryParams();
+			if (params.q) {
+				setSearchQuery(params.q);
 			}
 		}
 	}, [playthroughId]);
 
 	useEffect(() => {
 		if (searchQuery) {
-			setHashQueryParam("q", searchQuery);
+			setQueryParam("q", searchQuery);
 		} else {
-			setHashQueryParam("q", "");
+			setQueryParam("q", "");
 		}
 	}, [searchQuery]);
 
 	const handleToggleCollected = (id: string, isCollected: boolean) => {
-		setToolCollection((prev) => {
+		setLocalState((prev) => {
 			if (prev[id] !== isCollected) {
 				setIsDirty(true);
 			}
@@ -92,7 +102,7 @@ export default function ToolsPage() {
 		if (!isDirty) return false;
 
 		const success = updatePlaythroughData(playthroughId, {
-			tools: toolCollection,
+			tools: localState,
 		});
 
 		if (success) {
@@ -102,24 +112,6 @@ export default function ToolsPage() {
 		return success;
 	};
 
-	const filters = {
-		license: {
-			value: licenseFilter,
-			options: uniqueLicenses,
-			label: "License",
-		},
-		source: {
-			value: sourceFilter,
-			options: uniqueSources,
-			label: "Source",
-		},
-		buyUnit: {
-			value: buyUnitFilter,
-			options: ["All", "Purchasable", "Dinks", "Permit Points"],
-			label: "Purchase Type",
-		},
-	};
-
 	const handleFilterChange = (name: string, value: string) => {
 		if (name === "license") {
 			setLicenseFilter(value);
@@ -127,20 +119,24 @@ export default function ToolsPage() {
 			setSourceFilter(value);
 		} else if (name === "buyUnit") {
 			setBuyUnitFilter(value);
+		} else if (name === "collection") {
+			setCollectionFilter(value);
 		}
 	};
 
-	const filteredTools = useMemo(() => {
-		return tools.filter((tool) => {
-			if (licenseFilter !== "All" && tool.licence !== licenseFilter) {
-				return false;
-			}
+	const filteredData = useMemo(() => {
+		let filtered = [...tools];
 
-			if (sourceFilter !== "All" && !tool.source.includes(sourceFilter)) {
-				return false;
-			}
+		if (sourceFilter !== "All") {
+			filtered = getToolBySource(filtered, sourceFilter);
+		}
 
-			if (buyUnitFilter !== "All") {
+		if (licenseFilter !== "All") {
+			filtered = getToolByLicense(filtered, licenseFilter);
+		}
+
+		if (buyUnitFilter !== "All") {
+			filtered = filtered.filter((tool) => {
 				if (buyUnitFilter === "Dinks" && tool.buyUnits !== "Dinks") {
 					return false;
 				}
@@ -150,18 +146,27 @@ export default function ToolsPage() {
 				if (buyUnitFilter === "Purchasable" && tool.buyPrice === undefined) {
 					return false;
 				}
-			}
+				return true;
+			});
+		}
 
-			if (searchQuery && !tool.name.toLowerCase().includes(searchQuery.toLowerCase())) {
-				return false;
+		if (collectionFilter !== "All") {
+			if (collectionFilter === "collected") {
+				filtered = filtered.filter((item) => localState[item.id] === true);
+			} else if (collectionFilter === "not_collected") {
+				filtered = filtered.filter((item) => !localState[item.id]);
 			}
+		}
 
-			return true;
-		});
-	}, [licenseFilter, sourceFilter, buyUnitFilter, searchQuery]);
+		if (searchQuery) {
+			filtered = getToolBySearchValue(filtered, searchQuery);
+		}
+
+		return filtered;
+	}, [licenseFilter, sourceFilter, buyUnitFilter, collectionFilter, localState, searchQuery]);
 
 	const getCollectedCount = () => {
-		return Object.keys(toolCollection).filter((key) => toolCollection[key]).length;
+		return Object.keys(localState).filter((key) => localState[key]).length;
 	};
 
 	if (isLoading) {
@@ -194,30 +199,30 @@ export default function ToolsPage() {
 					showSearch={true}
 					searchValue={searchQuery}
 					onSearchChange={(value) => setSearchQuery(value)}
-					searchPlaceholder="Search by name..."
+					searchPlaceholder="Search tool by name..."
 				/>
 
 				<FilterDetails
 					title="tools"
-					filteredCount={filteredTools.length}
+					filteredCount={filteredData.length}
 					totalCount={tools.length}
 					collectedLabel="Collected"
 					collectedCount={getCollectedCount()}
 				/>
 
-				{filteredTools.length > 0 ? (
+				{filteredData.length === 0 ? (
+					<EmptyFilterCard />
+				) : (
 					<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-						{filteredTools.map((tool) => (
+						{filteredData.map((item) => (
 							<ToolCard
-								key={tool.id}
-								record={tool}
-								isCollected={toolCollection[tool.id] || false}
+								key={item.id}
+								record={item}
+								isCollected={localState[item.id] || false}
 								onToggleCollected={handleToggleCollected}
 							/>
 						))}
 					</div>
-				) : (
-					<EmptyFilterCard />
 				)}
 
 				<SaveFAB isDirty={isDirty} onSave={handleSave} />

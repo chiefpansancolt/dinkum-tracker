@@ -1,11 +1,11 @@
-import { Button, Badge, Checkbox, Tooltip } from "flowbite-react";
-import { LicenseCardProps } from "@/types";
+import { Badge, Button, Checkbox, Tooltip } from "flowbite-react";
 import { HiOutlineLockClosed } from "react-icons/hi";
+import { LicenseCardProps } from "@/types";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
+import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
 import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
 import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
-import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
-import PermiteValue from "@/playthrough/ui/itemcard/PermiteValue";
+import PermitValue from "@/playthrough/ui/itemcard/PermitValue";
 
 const LicenseCard = ({
 	license,
@@ -84,7 +84,7 @@ const LicenseCard = ({
 											</label>
 										</div>
 										<Badge color="indigo">
-											<PermiteValue price={level.permitPointCost} />
+											<PermitValue price={level.permitPointCost} />
 										</Badge>
 									</div>
 

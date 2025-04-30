@@ -1,16 +1,16 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
-import { getPlaythroughById, updatePlaythroughData } from "@/lib/localStorage";
-import { npcs } from "@/data/dinkum";
+import { useEffect, useState } from "react";
 import { Playthrough } from "@/types";
-import TabHeader from "@/playthrough/ui/TabHeader";
-import NPCCard from "./NPCCard";
+import { getPlaythroughById, updatePlaythroughData } from "@/lib/localStorage";
+import { getNPCMaxPossibleHearts, npcs } from "@/data/dinkum";
+import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
 import SaveFAB from "@/playthrough/SaveFAB";
-import NotFoundCard from "@/comps/NotFoundCard";
-import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import TabHeader from "@/playthrough/ui/TabHeader";
+import NPCCard from "./NPCCard";
 
 export default function NPCsPage() {
 	const params = useParams();
@@ -63,10 +63,6 @@ export default function NPCsPage() {
 		return Object.values(relationships).reduce((sum, hearts) => sum + hearts, 0);
 	};
 
-	const getMaxPossibleHearts = () => {
-		return npcs.length * 5;
-	};
-
 	if (isLoading) {
 		return <LoadingPlaythrough message="Loading NPC relationships..." />;
 	}
@@ -86,7 +82,7 @@ export default function NPCsPage() {
 					enableSaveAlert={true}
 					isDirty={isDirty}
 					collectedCount={getTotalHearts()}
-					collectionTotal={getMaxPossibleHearts()}
+					collectionTotal={getNPCMaxPossibleHearts()}
 					dirtyMessage="Your NPC relationship changes have not been saved yet."
 				/>
 				<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">

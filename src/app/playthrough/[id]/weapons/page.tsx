@@ -1,20 +1,26 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
 import { useParams } from "next/navigation";
-import { getPlaythroughById, updatePlaythroughData } from "@/lib/localStorage";
-import { weapons } from "@/data/dinkum";
+import { useEffect, useMemo, useState } from "react";
 import { Playthrough } from "@/types";
-import TabHeader from "@/playthrough/ui/TabHeader";
-import WeaponCard from "./WeaponCard";
+import { getPlaythroughById, updatePlaythroughData } from "@/lib/localStorage";
+import { getQueryParams, setQueryParam } from "@/service/urlService";
+import { collectedFilter } from "@/data/constants";
+import {
+	getUniqueWeaponSources,
+	getWeaponBySearchValue,
+	getWeaponBySource,
+	weapons,
+} from "@/data/dinkum";
+import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
 import SaveFAB from "@/playthrough/SaveFAB";
-import NotFoundCard from "@/comps/NotFoundCard";
-import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
 import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
-import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
-import { getHashQueryParams, setHashQueryParam } from "@/service/urlService";
+import TabHeader from "@/playthrough/ui/TabHeader";
+import WeaponCard from "./WeaponCard";
 
 export default function WeaponsPage() {
 	const params = useParams();
@@ -24,20 +30,27 @@ export default function WeaponsPage() {
 	const [searchQuery, setSearchQuery] = useState("");
 	const [sourceFilter, setSourceFilter] = useState<string>("All");
 	const [damageFilter, setDamageFilter] = useState<string>("All");
-	const [weaponCollection, setWeaponCollection] = useState<Record<string, boolean>>({});
+	const [collectionFilter, setCollectionFilter] = useState<string>("All");
+	const [localState, setLocalState] = useState<Record<string, boolean>>({});
 	const [isDirty, setIsDirty] = useState(false);
 
-	const uniqueSources = useMemo(() => {
-		const sources = new Set<string>();
-		weapons.forEach((weapon) => {
-			if (weapon.source && weapon.source.length > 0) {
-				weapon.source.forEach((src) => {
-					sources.add(src);
-				});
-			}
-		});
-		return ["All", ...Array.from(sources).sort()];
-	}, []);
+	const filters = {
+		source: {
+			value: sourceFilter,
+			options: getUniqueWeaponSources(),
+			label: "Source",
+		},
+		damage: {
+			value: damageFilter,
+			options: ["All", "High", "Medium", "Low"],
+			label: "Damage",
+		},
+		collection: {
+			value: collectionFilter,
+			options: collectedFilter,
+			label: "Collected",
+		},
+	};
 
 	useEffect(() => {
 		if (playthroughId) {
@@ -45,12 +58,12 @@ export default function WeaponsPage() {
 			setPlaythrough(data);
 
 			if (data) {
-				setWeaponCollection(data.weapons || {});
+				setLocalState(data.weapons || {});
 			}
 
 			setIsLoading(false);
 
-			const hashParams = getHashQueryParams();
+			const hashParams = getQueryParams();
 			if (hashParams.q) {
 				setSearchQuery(hashParams.q);
 			}
@@ -59,14 +72,14 @@ export default function WeaponsPage() {
 
 	useEffect(() => {
 		if (searchQuery) {
-			setHashQueryParam("q", searchQuery);
+			setQueryParam("q", searchQuery);
 		} else {
-			setHashQueryParam("q", "");
+			setQueryParam("q", "");
 		}
 	}, [searchQuery]);
 
 	const handleToggleCollected = (id: string, isCollected: boolean) => {
-		setWeaponCollection((prev) => {
+		setLocalState((prev) => {
 			if (prev[id] !== isCollected) {
 				setIsDirty(true);
 			}
@@ -81,7 +94,7 @@ export default function WeaponsPage() {
 		if (!isDirty) return false;
 
 		const success = updatePlaythroughData(playthroughId, {
-			weapons: weaponCollection,
+			weapons: localState,
 		});
 
 		if (success) {
@@ -91,34 +104,25 @@ export default function WeaponsPage() {
 		return success;
 	};
 
-	const filters = {
-		source: {
-			value: sourceFilter,
-			options: uniqueSources,
-			label: "Source",
-		},
-		damage: {
-			value: damageFilter,
-			options: ["All", "High", "Medium", "Low"],
-			label: "Damage",
-		},
-	};
-
 	const handleFilterChange = (name: string, value: string) => {
 		if (name === "source") {
 			setSourceFilter(value);
 		} else if (name === "damage") {
 			setDamageFilter(value);
+		} else if (name === "collection") {
+			setCollectionFilter(value);
 		}
 	};
 
-	const filteredWeapons = useMemo(() => {
-		return weapons.filter((weapon) => {
-			if (sourceFilter !== "All" && !weapon.source.includes(sourceFilter)) {
-				return false;
-			}
+	const filteredData = useMemo(() => {
+		let filtered = [...weapons];
 
-			if (damageFilter !== "All") {
+		if (sourceFilter !== "All") {
+			filtered = getWeaponBySource(filtered, sourceFilter);
+		}
+
+		if (damageFilter !== "All") {
+			filtered = filtered.filter((weapon) => {
 				if (damageFilter === "High" && (weapon.damage === null || weapon.damage < 20)) {
 					return false;
 				}
@@ -131,18 +135,27 @@ export default function WeaponsPage() {
 				if (damageFilter === "Low" && (weapon.damage === null || weapon.damage >= 10)) {
 					return false;
 				}
-			}
+				return true;
+			});
+		}
 
-			if (searchQuery && !weapon.name.toLowerCase().includes(searchQuery.toLowerCase())) {
-				return false;
+		if (collectionFilter !== "All") {
+			if (collectionFilter === "collected") {
+				filtered = filtered.filter((item) => localState[item.id] === true);
+			} else if (collectionFilter === "not_collected") {
+				filtered = filtered.filter((item) => !localState[item.id]);
 			}
+		}
 
-			return true;
-		});
-	}, [sourceFilter, damageFilter, searchQuery]);
+		if (searchQuery) {
+			filtered = getWeaponBySearchValue(filtered, searchQuery);
+		}
+
+		return filtered;
+	}, [sourceFilter, damageFilter, collectionFilter, localState, searchQuery]);
 
 	const getCollectedCount = () => {
-		return Object.keys(weaponCollection).filter((key) => weaponCollection[key]).length;
+		return Object.keys(localState).filter((key) => localState[key]).length;
 	};
 
 	if (isLoading) {
@@ -175,30 +188,30 @@ export default function WeaponsPage() {
 					showSearch={true}
 					searchValue={searchQuery}
 					onSearchChange={(value) => setSearchQuery(value)}
-					searchPlaceholder="Search by name..."
+					searchPlaceholder="Search weapon by name..."
 				/>
 
 				<FilterDetails
 					title="weapons"
-					filteredCount={filteredWeapons.length}
+					filteredCount={filteredData.length}
 					totalCount={weapons.length}
 					collectedLabel="Collected"
 					collectedCount={getCollectedCount()}
 				/>
 
-				{filteredWeapons.length > 0 ? (
+				{filteredData.length === 0 ? (
+					<EmptyFilterCard />
+				) : (
 					<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-						{filteredWeapons.map((weapon) => (
+						{filteredData.map((item) => (
 							<WeaponCard
-								key={weapon.id}
-								record={weapon}
-								isCollected={weaponCollection[weapon.id] || false}
+								key={item.id}
+								record={item}
+								isCollected={localState[item.id] || false}
 								onToggleCollected={handleToggleCollected}
 							/>
 						))}
 					</div>
-				) : (
-					<EmptyFilterCard />
 				)}
 
 				<SaveFAB isDirty={isDirty} onSave={handleSave} />

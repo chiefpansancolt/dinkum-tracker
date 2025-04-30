@@ -1,6 +1,17 @@
-import { Equipment } from "@/types";
+import { Equipment, FilterArray } from "@/types";
 
 export const equipment: Equipment[] = [
+  {
+    id: "adm",
+    name: "A.D.M",
+    img: "https://static.wikia.nocookie.net/dinkum/images/5/58/Inv_A.D.M.png",
+    description: "Make withdrawals from your bank account",
+    requirementLevel: null,
+    source: ["Milburn"],
+    buyPrice: 50000,
+    buyUnits: "Dinks",
+    baseSellPrice: 25000,
+  },
   {
     id: "advanced_sprinkler",
     name: "Advanced Sprinkler",
@@ -22,17 +33,6 @@ export const equipment: Equipment[] = [
     baseSellPrice: 1285,
   },
   {
-    id: "adm",
-    name: "A.D.M",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/58/Inv_A.D.M.png",
-    description: "Make withdrawals from your bank account",
-    requirementLevel: null,
-    source: ["Milburn"],
-    buyPrice: 50000,
-    buyUnits: "Dinks",
-    baseSellPrice: 25000,
-  },
-  {
     id: "animal_feeder",
     name: "Animal Feeder",
     img: "https://static.wikia.nocookie.net/dinkum/images/2/2f/Inv_Animal_Feeder.png",
@@ -42,6 +42,16 @@ export const equipment: Equipment[] = [
     buyPrice: 1516,
     buyUnits: "Dinks",
     baseSellPrice: 758,
+  },
+  {
+    id: "animal_shower",
+    name: "Animal Shower",
+    img: "https://static.wikia.nocookie.net/dinkum/images/2/2e/Inv_Animal_Shower.png",
+    description: "Cleans animals when they walk through it",
+    requirementLevel: 1,
+    requirementType: "Irrigation License",
+    source: ["Crafting Table"],
+    baseSellPrice: 0,
   },
   {
     id: "bbq",
@@ -225,6 +235,15 @@ export const equipment: Equipment[] = [
     baseSellPrice: 2570,
   },
   {
+    id: "crafting_table",
+    name: "Crafting Table",
+    img: "https://static.wikia.nocookie.net/dinkum/images/3/36/Inv_Crafting_Table.png",
+    description: "Craft various recipes.",
+    requirementLevel: null,
+    source: ["Crafting Table"],
+    baseSellPrice: 1480,
+  },
+  {
     id: "croco_berley_box",
     name: "Croco Berley Box",
     img: "https://static.wikia.nocookie.net/dinkum/images/7/71/Inv_Croco_Berley_Box.png",
@@ -256,15 +275,6 @@ export const equipment: Equipment[] = [
     buyPrice: 2000,
     buyUnits: "Dinks",
     baseSellPrice: 1000,
-  },
-  {
-    id: "crafting_table",
-    name: "Crafting Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/36/Inv_Crafting_Table.png",
-    description: "Craft various recipes.",
-    requirementLevel: null,
-    source: ["Crafting Table"],
-    baseSellPrice: 1480,
   },
   {
     id: "crude_furnace",
@@ -307,6 +317,17 @@ export const equipment: Equipment[] = [
     buyPrice: 2400,
     buyUnits: "Dinks",
     baseSellPrice: 1200,
+  },
+  {
+    id: "dog_kennel",
+    name: "Dog Kennel",
+    img: "https://static.wikia.nocookie.net/dinkum/images/6/6d/Inv_Dog_Kennel.png/revision/latest?cb=20230704012908",
+    description: "A house for a pupper.",
+    requirementLevel: null,
+    source: ["Irwin's Barn"],
+    buyPrice: 5550,
+    buyUnits: "Dinks",
+    baseSellPrice: 2775,
   },
   {
     id: "doggo_collar",
@@ -450,6 +471,16 @@ export const equipment: Equipment[] = [
     requirementType: "Logging Licence",
     source: ["Crafting Table"],
     baseSellPrice: 14062,
+  },
+  {
+    id: "key_cutter",
+    name: "Key Cutter",
+    img: "https://static.wikia.nocookie.net/dinkum/images/3/3e/Inv_Key_Cutter.png",
+    description: "Creates a key every now and again",
+    requirementLevel: null,
+    solarPanelCompatable: true,
+    source: ["Hot Hot Hot"],
+    baseSellPrice: 23938,
   },
   {
     id: "key_cycler",
@@ -833,35 +864,49 @@ export const equipment: Equipment[] = [
     source: ["Crafting Table"],
     baseSellPrice: 23938,
   },
-  {
-    id: "dog_kennel",
-    name: "Dog Kennel",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6d/Inv_Dog_Kennel.png/revision/latest?cb=20230704012908",
-    description: "A house for a pupper.",
-    requirementLevel: null,
-    source: ["Irwin's Barn"],
-    buyPrice: 5550,
-    buyUnits: "Dinks",
-    baseSellPrice: 2775,
-  },
-  {
-    id: "animal_shower",
-    name: "Animal Shower",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2e/Inv_Animal_Shower.png",
-    description: "Cleans animals when they walk through it",
-    requirementLevel: 1,
-    requirementType: "Irrigation License",
-    source: ["Crafting Table"],
-    baseSellPrice: 0,
-  },
-  {
-    id: "key_cutter",
-    name: "Key Cutter",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3e/Inv_Key_Cutter.png",
-    description: "Creates a key every now and again",
-    requirementLevel: null,
-    solarPanelCompatable: true,
-    source: ["Hot Hot Hot"],
-    baseSellPrice: 23938,
-  },
 ];
+
+export const getEquipmentBySource = (
+  data: Equipment[],
+  value: string,
+): Equipment[] => {
+  return data.filter((item) => item.source.includes(value));
+};
+
+export const getEquipmentByRequirmentType = (
+  data: Equipment[],
+  value: string,
+): Equipment[] => {
+  return data.filter((item) => item.requirementType === value);
+};
+
+export const getEquipmentBySearchValue = (
+  data: Equipment[],
+  searchValue: string,
+): Equipment[] => {
+  return data.filter((item) =>
+    item.name.toLowerCase().includes(searchValue.toLowerCase()),
+  );
+};
+
+export const getUniqueEquipmentSources = (): FilterArray => {
+  const sources = new Set<string>();
+  equipment.forEach((item) => {
+    if (item.source && item.source.length > 0) {
+      item.source.forEach((src) => {
+        sources.add(src);
+      });
+    }
+  });
+  return ["All", ...Array.from(sources).sort()];
+};
+
+export const getUniqueEquipmentReqType = (): FilterArray => {
+  const types = new Set<string>();
+  equipment.forEach((item) => {
+    if (item.requirementType) {
+      types.add(item.requirementType);
+    }
+  });
+  return ["All", ...Array.from(types).sort()];
+};

@@ -1,4 +1,4 @@
-import { Tool } from "@/types";
+import { FilterArray, Tool } from "@/types";
 
 export const tools: Tool[] = [
   {
@@ -11,17 +11,6 @@ export const tools: Tool[] = [
     buyPrice: 3200,
     buyUnits: "Dinks",
     baseSellPrice: 1600,
-  },
-  {
-    id: "dog_bowl",
-    name: "Dog Bowl",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/fb/Inv_Doggo_Bowl.png",
-    damage: null,
-    licence: "",
-    source: ["Irwin's Barn"],
-    buyPrice: 1516,
-    buyUnits: "Dinks",
-    baseSellPrice: 758,
   },
   {
     id: "animal_trap",
@@ -358,6 +347,17 @@ export const tools: Tool[] = [
     buyPrice: 300000,
     buyUnits: "Dinks",
     baseSellPrice: 150000,
+  },
+  {
+    id: "dog_bowl",
+    name: "Dog Bowl",
+    img: "https://static.wikia.nocookie.net/dinkum/images/f/fb/Inv_Doggo_Bowl.png",
+    damage: null,
+    licence: "",
+    source: ["Irwin's Barn"],
+    buyPrice: 1516,
+    buyUnits: "Dinks",
+    baseSellPrice: 758,
   },
   {
     id: "fishing_rod",
@@ -884,3 +884,42 @@ export const tools: Tool[] = [
     baseSellPrice: 3098,
   },
 ];
+
+export const getToolBySource = (data: Tool[], value: string): Tool[] => {
+  return data.filter((item) => item.source.includes(value));
+};
+
+export const getToolByLicense = (data: Tool[], value: string): Tool[] => {
+  return data.filter((item) => item.licence === value);
+};
+
+export const getToolBySearchValue = (
+  data: Tool[],
+  searchValue: string,
+): Tool[] => {
+  return data.filter((item) =>
+    item.name.toLowerCase().includes(searchValue.toLowerCase()),
+  );
+};
+
+export const getUniqueToolsLicenses = (): FilterArray => {
+  const licenses = new Set<string>();
+  tools.forEach((tool) => {
+    if (tool.licence) {
+      licenses.add(tool.licence);
+    }
+  });
+  return ["All", ...Array.from(licenses).sort()];
+};
+
+export const getUniqueToolsSources = (): FilterArray => {
+  const sources = new Set<string>();
+  tools.forEach((item) => {
+    if (item.source && item.source.length > 0) {
+      item.source.forEach((src) => {
+        sources.add(src);
+      });
+    }
+  });
+  return ["All", ...Array.from(sources).sort()];
+};

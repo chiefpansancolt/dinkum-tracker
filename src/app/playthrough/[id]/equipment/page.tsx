@@ -1,20 +1,28 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
 import { useParams } from "next/navigation";
-import { getPlaythroughById, updatePlaythroughData } from "@/lib/localStorage";
-import { equipment } from "@/data/dinkum";
+import { useEffect, useMemo, useState } from "react";
 import { Playthrough } from "@/types";
-import TabHeader from "@/playthrough/ui/TabHeader";
-import EquipmentCard from "./EquipmentCard";
+import { getPlaythroughById, updatePlaythroughData } from "@/lib/localStorage";
+import { getQueryParams, setQueryParam } from "@/service/urlService";
+import { collectedFilter } from "@/data/constants";
+import {
+	equipment,
+	getEquipmentByRequirmentType,
+	getEquipmentBySearchValue,
+	getEquipmentBySource,
+	getUniqueEquipmentReqType,
+	getUniqueEquipmentSources,
+} from "@/data/dinkum";
+import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
 import SaveFAB from "@/playthrough/SaveFAB";
-import NotFoundCard from "@/comps/NotFoundCard";
-import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
 import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
-import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
-import { getHashQueryParams, setHashQueryParam } from "@/service/urlService";
+import TabHeader from "@/playthrough/ui/TabHeader";
+import EquipmentCard from "./EquipmentCard";
 
 export default function EquipmentPage() {
 	const params = useParams();
@@ -24,30 +32,27 @@ export default function EquipmentPage() {
 	const [searchQuery, setSearchQuery] = useState("");
 	const [sourceFilter, setSourceFilter] = useState<string>("All");
 	const [requirementFilter, setRequirementFilter] = useState<string>("All");
-	const [equipmentCollection, setEquipmentCollection] = useState<Record<string, boolean>>({});
+	const [collectionFilter, setCollectionFilter] = useState<string>("All");
+	const [localState, setLocalState] = useState<Record<string, boolean>>({});
 	const [isDirty, setIsDirty] = useState(false);
 
-	const uniqueSources = useMemo(() => {
-		const sources = new Set<string>();
-		equipment.forEach((item) => {
-			if (item.source && item.source.length > 0) {
-				item.source.forEach((src) => {
-					sources.add(src);
-				});
-			}
-		});
-		return ["All", ...Array.from(sources).sort()];
-	}, []);
-
-	const uniqueRequirementTypes = useMemo(() => {
-		const types = new Set<string>();
-		equipment.forEach((item) => {
-			if (item.requirementType) {
-				types.add(item.requirementType);
-			}
-		});
-		return ["All", ...Array.from(types).sort()];
-	}, []);
+	const filters = {
+		source: {
+			value: sourceFilter,
+			options: getUniqueEquipmentSources(),
+			label: "Source",
+		},
+		requirement: {
+			value: requirementFilter,
+			options: getUniqueEquipmentReqType(),
+			label: "Requirement Type",
+		},
+		collection: {
+			value: collectionFilter,
+			options: collectedFilter,
+			label: "Collected",
+		},
+	};
 
 	useEffect(() => {
 		if (playthroughId) {
@@ -55,28 +60,28 @@ export default function EquipmentPage() {
 			setPlaythrough(data);
 
 			if (data) {
-				setEquipmentCollection(data.equipment || {});
+				setLocalState(data.equipment || {});
 			}
 
 			setIsLoading(false);
 
-			const hashParams = getHashQueryParams();
-			if (hashParams.q) {
-				setSearchQuery(hashParams.q);
+			const params = getQueryParams();
+			if (params.q) {
+				setSearchQuery(params.q);
 			}
 		}
 	}, [playthroughId]);
 
 	useEffect(() => {
 		if (searchQuery) {
-			setHashQueryParam("q", searchQuery);
+			setQueryParam("q", searchQuery);
 		} else {
-			setHashQueryParam("q", "");
+			setQueryParam("q", "");
 		}
 	}, [searchQuery]);
 
 	const handleToggleCollected = (id: string, isCollected: boolean) => {
-		setEquipmentCollection((prev) => {
+		setLocalState((prev) => {
 			if (prev[id] !== isCollected) {
 				setIsDirty(true);
 			}
@@ -91,7 +96,7 @@ export default function EquipmentPage() {
 		if (!isDirty) return false;
 
 		const success = updatePlaythroughData(playthroughId, {
-			equipment: equipmentCollection,
+			equipment: localState,
 		});
 
 		if (success) {
@@ -101,47 +106,44 @@ export default function EquipmentPage() {
 		return success;
 	};
 
-	const filters = {
-		source: {
-			value: sourceFilter,
-			options: uniqueSources,
-			label: "Source",
-		},
-		requirement: {
-			value: requirementFilter,
-			options: uniqueRequirementTypes,
-			label: "Requirement Type",
-		},
-	};
-
 	const handleFilterChange = (name: string, value: string) => {
 		if (name === "source") {
 			setSourceFilter(value);
 		} else if (name === "requirement") {
 			setRequirementFilter(value);
+		} else if (name === "collection") {
+			setCollectionFilter(value);
 		}
 	};
 
-	const filteredEquipment = useMemo(() => {
-		return equipment.filter((item) => {
-			if (sourceFilter !== "All" && !item.source.includes(sourceFilter)) {
-				return false;
-			}
+	const filteredData = useMemo(() => {
+		let filtered = [...equipment];
 
-			if (requirementFilter !== "All" && item.requirementType !== requirementFilter) {
-				return false;
-			}
+		if (sourceFilter !== "All") {
+			filtered = getEquipmentBySource(filtered, sourceFilter);
+		}
 
-			if (searchQuery && !item.name.toLowerCase().includes(searchQuery.toLowerCase())) {
-				return false;
-			}
+		if (requirementFilter !== "All") {
+			filtered = getEquipmentByRequirmentType(filtered, requirementFilter);
+		}
 
-			return true;
-		});
-	}, [sourceFilter, requirementFilter, searchQuery]);
+		if (collectionFilter !== "All") {
+			if (collectionFilter === "collected") {
+				filtered = filtered.filter((item) => localState[item.id] === true);
+			} else if (collectionFilter === "not_collected") {
+				filtered = filtered.filter((item) => !localState[item.id]);
+			}
+		}
+
+		if (searchQuery) {
+			filtered = getEquipmentBySearchValue(filtered, searchQuery);
+		}
+
+		return filtered;
+	}, [sourceFilter, requirementFilter, collectionFilter, localState, searchQuery]);
 
 	const getCollectedCount = () => {
-		return Object.keys(equipmentCollection).filter((key) => equipmentCollection[key]).length;
+		return Object.keys(localState).filter((key) => localState[key]).length;
 	};
 
 	if (isLoading) {
@@ -174,31 +176,31 @@ export default function EquipmentPage() {
 					showSearch={true}
 					searchValue={searchQuery}
 					onSearchChange={(value) => setSearchQuery(value)}
-					searchPlaceholder="Search by name..."
+					searchPlaceholder="Search equipment by name..."
 				/>
 
 				<FilterDetails
 					title="equipment items"
-					filteredCount={filteredEquipment.length}
+					filteredCount={filteredData.length}
 					totalCount={equipment.length}
 					collectedLabel="Collected"
 					collectedCount={getCollectedCount()}
 				/>
 
-				<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-					{filteredEquipment.length === 0 ? (
-						<EmptyFilterCard />
-					) : (
-						filteredEquipment.map((item) => (
+				{filteredData.length === 0 ? (
+					<EmptyFilterCard />
+				) : (
+					<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+						{filteredData.map((item) => (
 							<EquipmentCard
 								key={item.id}
 								record={item}
-								isCollected={equipmentCollection[item.id] || false}
+								isCollected={localState[item.id] || false}
 								onToggleCollected={handleToggleCollected}
 							/>
-						))
-					)}
-				</div>
+						))}
+					</div>
+				)}
 
 				<SaveFAB isDirty={isDirty} onSave={handleSave} />
 			</div>

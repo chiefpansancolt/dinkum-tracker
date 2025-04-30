@@ -1,8 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
+import { Badge, Card, Progress } from "flowbite-react";
 import React, { useMemo } from "react";
-import { Card, Progress, Badge } from "flowbite-react";
-import { critters, fish, bugs } from "@/data/dinkum";
 import { CollectionStatsProps } from "@/types";
+import { bugs, critters, fish } from "@/data/dinkum";
 
 const CollectionStats: React.FC<CollectionStatsProps> = ({ collections, donations }) => {
 	const stats = useMemo(() => {
