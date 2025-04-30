@@ -1,8 +1,8 @@
 import { Badge, Card, Progress } from "flowbite-react";
 import React, { useMemo } from "react";
+import { BsCassette } from "react-icons/bs";
 import { FaBook, FaTools } from "react-icons/fa";
 import { FaCar } from "react-icons/fa6";
-import { BsCassette } from "react-icons/bs";
 import { GiBackpack, GiSwordman } from "react-icons/gi";
 import { GearAndEquipmentStatsProps } from "@/types";
 import { books, cassettes, equipment, tools, vehicles, weapons } from "@/data/dinkum";
@@ -106,7 +106,6 @@ const GearAndEquipmentStats: React.FC<GearAndEquipmentStatsProps> = ({
 		cassetteCollection,
 	]);
 
-	
 	const totalStats = useMemo(() => {
 		const totalCollected =
 			stats.books.collected +

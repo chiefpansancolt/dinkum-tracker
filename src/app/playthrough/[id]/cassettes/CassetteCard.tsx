@@ -1,10 +1,10 @@
 import { Cassette, CollectionCardProps } from "@/types";
-import PermitValue from "@/playthrough/ui/itemcard/PermitValue";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
 import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
 import ItemFooter from "@/playthrough/ui/itemcard/ItemFooter";
 import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
 import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
+import PermitValue from "@/playthrough/ui/itemcard/PermitValue";
 
 const CassetteCard = ({ record, isCollected = false, onToggleCollected }: CollectionCardProps) => {
 	const cassette = record as Cassette;
