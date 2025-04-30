@@ -84,6 +84,13 @@ export const animalProducts: AnimalProduct[] = [
     },
   },
   {
+    id: "cocoon",
+    name: "Cocoon",
+    img: "https://static.wikia.nocookie.net/dinkum/images/3/31/Inv_Cocoon.png",
+    source: ["Bug Terrarium"],
+    baseSellPrice: 0,
+  },
+  {
     id: "croco_meat",
     name: "Croco Meat",
     img: "https://static.wikia.nocookie.net/dinkum/images/3/35/Inv_Croco_Meat.png",

@@ -727,6 +727,25 @@ export const otherCraftables: Recipe[] = [
     baseSellPrice: 2000,
   },
   {
+    id: "silk",
+    name: "Silk",
+    img: "https://static.wikia.nocookie.net/dinkum/images/5/51/Inv_Silk.png/revision",
+    source: ["Spinning Wheel"],
+    variants: [
+      {
+        id: "standard",
+        inputs: [
+          {
+            count: 10,
+            name: "Cocoon",
+            img: "https://static.wikia.nocookie.net/dinkum/images/3/31/Inv_Cocoon.png",
+          },
+        ],
+      },
+    ],
+    baseSellPrice: 0,
+  },
+  {
     id: "spinifex_resin",
     name: "Spinifex Resin",
     img: "https://static.wikia.nocookie.net/dinkum/images/a/a3/Inv_Spinifex_Resin.png",
