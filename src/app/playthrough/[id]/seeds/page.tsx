@@ -164,8 +164,8 @@ export default function SeedsPage() {
 					<EmptyFilterCard />
 				) : (
 					<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-						{sortedData.map((seed) => (
-							<SeedCard key={seed.id} seed={seed} />
+						{sortedData.map((item) => (
+							<SeedCard key={item.id} record={item} />
 						))}
 					</div>
 				)}

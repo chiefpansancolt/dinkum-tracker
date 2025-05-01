@@ -128,8 +128,8 @@ export default function CropsPage() {
 					<EmptyFilterCard />
 				) : (
 					<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-						{sortedData.map((crop) => (
-							<CropCard key={crop.id} crop={crop} />
+						{sortedData.map((item) => (
+							<CropCard key={item.id} record={item} />
 						))}
 					</div>
 				)}

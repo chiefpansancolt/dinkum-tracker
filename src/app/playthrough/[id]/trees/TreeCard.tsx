@@ -1,50 +1,48 @@
 import { Badge } from "flowbite-react";
-import { Seed, Tree } from "@/types";
+import { CollectionCardProps, Seed } from "@/types";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
 import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
 import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
 import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
 import ItemResources from "@/playthrough/ui/itemcard/ItemResources";
 
-interface TreeCardProps {
-	tree: Tree;
-}
-
-const TreeCard = ({ tree }: TreeCardProps) => {
-	const seedType = tree.seed && "growthPeriod" in tree.seed ? (tree.seed as Seed) : null;
+const TreeCard = ({ record }: CollectionCardProps) => {
+	const seedType = record.seed && "growthPeriod" in record.seed ? (record.seed as Seed) : null;
 
 	return (
 		<ItemCard
-			renderHeader={() => <ItemHeader title={tree.name} />}
-			renderImage={() => <ItemImage src={tree.img} name={tree.name} isCollected={false} />}
+			renderHeader={() => <ItemHeader title={record.name} />}
+			renderImage={() => (
+				<ItemImage src={record.img} name={record.name} isCollected={false} />
+			)}
 			renderDetails={() => (
 				<div className="grid grid-cols-1 gap-2">
-					{tree.seed && (
+					{record.seed && (
 						<div className="grid grid-cols-12">
 							<div className="col-span-4 font-medium">Seed:</div>
 							<div className="col-span-8">
 								<div className="flex items-center">
-									{tree.seed.img && (
+									{record.seed.img && (
 										<img
-											src={tree.seed.img}
-											alt={tree.seed.name}
+											src={record.seed.img}
+											alt={record.seed.name}
 											className="mr-1 h-5 w-5 object-contain"
 										/>
 									)}
-									<span>{tree.seed.name}</span>
+									<span>{record.seed.name}</span>
 								</div>
 							</div>
 						</div>
 					)}
 
-					{tree.locations && tree.locations.length > 0 && (
+					{record.locations && record.locations.length > 0 && (
 						<div className="grid grid-cols-12">
 							<div className="col-span-4 font-medium">Locations:</div>
 							<div className="col-span-8">
 								<div className="flex flex-wrap gap-1">
-									{tree.locations.map((location, index) => (
+									{record.locations.map((location: string, index: number) => (
 										<Badge
-											key={`${tree.id}-location-${index}`}
+											key={`${record.id}-location-${index}`}
 											color="blue"
 											className="mr-1"
 										>
@@ -56,12 +54,12 @@ const TreeCard = ({ tree }: TreeCardProps) => {
 						</div>
 					)}
 
-					{tree.growthPeriod && (
-						<ItemDetail label="Growth Period" details={`${tree.growthPeriod} days`} />
+					{record.growthPeriod && (
+						<ItemDetail label="Growth Period" details={`${record.growthPeriod} days`} />
 					)}
 
-					{tree.regrowth && (
-						<ItemDetail label="Regrowth" details={`${tree.regrowth} days`} />
+					{record.regrowth && (
+						<ItemDetail label="Regrowth" details={`${record.regrowth} days`} />
 					)}
 
 					{seedType && seedType.growthPeriod && (
@@ -71,8 +69,8 @@ const TreeCard = ({ tree }: TreeCardProps) => {
 						/>
 					)}
 
-					{tree.itemsDropped && tree.itemsDropped.length > 0 && (
-						<ItemResources id={tree.id} label="Drops" items={tree.itemsDropped} />
+					{record.itemsDropped && record.itemsDropped.length > 0 && (
+						<ItemResources id={record.id} label="Drops" items={record.itemsDropped} />
 					)}
 				</div>
 			)}

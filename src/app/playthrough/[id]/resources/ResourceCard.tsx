@@ -8,7 +8,7 @@ import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
 import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
 import ItemResources from "@/playthrough/ui/itemcard/ItemResources";
 
-const ResourceCard = ({ record, isCollected = false, getTypeColor }: CollectionCardProps) => {
+const ResourceCard = ({ record, getTypeColor }: CollectionCardProps) => {
 	const resource = record as ResourceItem;
 
 	return (
@@ -24,7 +24,7 @@ const ResourceCard = ({ record, isCollected = false, getTypeColor }: CollectionC
 				/>
 			)}
 			renderImage={() => (
-				<ItemImage src={resource.img} name={resource.name} isCollected={isCollected} />
+				<ItemImage src={resource.img} name={resource.name} isCollected={false} />
 			)}
 			renderDetails={() => (
 				<div className="grid grid-cols-1 gap-2">

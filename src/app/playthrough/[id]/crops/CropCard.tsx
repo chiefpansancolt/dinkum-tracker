@@ -1,5 +1,5 @@
 import { Badge } from "flowbite-react";
-import { Crop } from "@/types";
+import { CollectionCardProps } from "@/types";
 import DinkValue from "@/playthrough/ui/itemcard/DinkValue";
 import ItemBuffs from "@/playthrough/ui/itemcard/ItemBuffs";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
@@ -7,43 +7,41 @@ import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
 import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
 import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
 
-interface CropCardProps {
-	crop: Crop;
-}
-
-const CropCard = ({ crop }: CropCardProps) => {
+const CropCard = ({ record }: CollectionCardProps) => {
 	return (
 		<ItemCard
-			renderHeader={() => <ItemHeader title={crop.name} />}
-			renderImage={() => <ItemImage src={crop.img} name={crop.name} isCollected={false} />}
+			renderHeader={() => <ItemHeader title={record.name} />}
+			renderImage={() => (
+				<ItemImage src={record.img} name={record.name} isCollected={false} />
+			)}
 			renderDetails={() => (
 				<div className="grid grid-cols-1 gap-2">
-					{crop.seed && (
+					{record.seed && (
 						<div className="grid grid-cols-12">
 							<div className="col-span-4 font-medium">Seed:</div>
 							<div className="col-span-8">
 								<div className="flex items-center">
-									{crop.seed.img && (
+									{record.seed.img && (
 										<img
-											src={crop.seed.img}
-											alt={crop.seed.name}
+											src={record.seed.img}
+											alt={record.seed.name}
 											className="mr-1 h-5 w-5 object-contain"
 										/>
 									)}
-									<span>{crop.seed.name}</span>
+									<span>{record.seed.name}</span>
 								</div>
 							</div>
 						</div>
 					)}
 
-					{crop.seed && crop.seed.season && crop.seed.season.length > 0 && (
+					{record.seed && record.seed.season && record.seed.season.length > 0 && (
 						<div className="grid grid-cols-12">
 							<div className="col-span-4 font-medium">Seasons:</div>
 							<div className="col-span-8">
 								<div className="flex flex-wrap gap-1">
-									{crop.seed.season.map((season, index) => (
+									{record.seed.season.map((season: string, index: number) => (
 										<Badge
-											key={`${crop.id}-season-${index}`}
+											key={`${record.id}-season-${index}`}
 											color={
 												season === "Spring"
 													? "success"
@@ -63,25 +61,25 @@ const CropCard = ({ crop }: CropCardProps) => {
 						</div>
 					)}
 
-					{crop.seed && crop.seed.growthPeriod && (
+					{record.seed && record.seed.growthPeriod && (
 						<ItemDetail
 							label="Growth Period"
-							details={`${crop.seed.growthPeriod} days`}
+							details={`${record.seed.growthPeriod} days`}
 						/>
 					)}
 
-					{crop.seed && crop.seed.regrowth && (
-						<ItemDetail label="Regrowth" details={`${crop.seed.regrowth} days`} />
+					{record.seed && record.seed.regrowth && (
+						<ItemDetail label="Regrowth" details={`${record.seed.regrowth} days`} />
 					)}
 
-					{crop.seed && (crop.seed.outputCountMin || crop.seed.outputCountMax) && (
+					{record.seed && (record.seed.outputCountMin || record.seed.outputCountMax) && (
 						<ItemDetail
 							label="Output Count"
 							details={
-								crop.seed.outputCountMin === crop.seed.outputCountMax
-									? `${crop.seed.outputCountMin}`
-									: `${crop.seed.outputCountMin || "?"}-${
-											crop.seed.outputCountMax || "?"
+								record.seed.outputCountMin === record.seed.outputCountMax
+									? `${record.seed.outputCountMin}`
+									: `${record.seed.outputCountMin || "?"}-${
+											record.seed.outputCountMax || "?"
 										}`
 							}
 						/>
@@ -89,16 +87,16 @@ const CropCard = ({ crop }: CropCardProps) => {
 
 					<DinkValue
 						label="Sell Price"
-						price={crop.baseSellPrice}
+						price={record.baseSellPrice}
 						showCommerceLicenses={true}
 					/>
 
-					{crop.source && crop.source.length > 0 && (
-						<ItemDetail label="Source" details={crop.source.join(", ")} />
+					{record.source && record.source.length > 0 && (
+						<ItemDetail label="Source" details={record.source.join(", ")} />
 					)}
 
-					{crop.buffs && Object.keys(crop.buffs).length > 0 && (
-						<ItemBuffs id={crop.id} buffs={crop.buffs} />
+					{record.buffs && Object.keys(record.buffs).length > 0 && (
+						<ItemBuffs id={record.id} buffs={record.buffs} />
 					)}
 				</div>
 			)}

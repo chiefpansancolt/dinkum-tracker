@@ -137,8 +137,8 @@ export default function TreesPage() {
 					<EmptyFilterCard />
 				) : (
 					<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-						{sortedData.map((tree) => (
-							<TreeCard key={tree.id} tree={tree} />
+						{sortedData.map((item) => (
+							<TreeCard key={item.id} record={item} />
 						))}
 					</div>
 				)}

@@ -1,12 +1,15 @@
 import React from "react";
 import {
   Buffs,
+  Crop,
+  Flower,
   License,
   Milestone,
   NPC,
   Resource,
   ResourceItem,
   ResourceVariant,
+  Seed,
   Skill,
 } from "../dinkum";
 
@@ -170,7 +173,11 @@ export interface CollectionCardProps {
     | ResourceItem
     | Tool
     | Vehicle
-    | Weapon;
+    | Weapon
+    | Flower
+    | Seed
+    | Crop
+    | Tree;
   isCollected?: boolean;
   isDonated?: boolean;
   onToggleCollected?: (id: string, isCollected: boolean) => void;

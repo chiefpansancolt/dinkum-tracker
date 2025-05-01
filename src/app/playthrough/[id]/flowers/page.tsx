@@ -133,8 +133,8 @@ export default function FlowersPage() {
 					<EmptyFilterCard />
 				) : (
 					<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-						{sortedData.map((flower) => (
-							<FlowerCard key={flower.id} flower={flower} />
+						{sortedData.map((item) => (
+							<FlowerCard key={item.id} record={item} />
 						))}
 					</div>
 				)}
