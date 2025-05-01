@@ -133,6 +133,15 @@ export const equipment: Equipment[] = [
     baseSellPrice: 400000,
   },
   {
+    id: "boogie_board",
+    name: "Boogie Board",
+    img: "https://static.wikia.nocookie.net/dinkum/images/c/cf/Inv_Boogie_Board.png",
+    description: "Float your day away.",
+    requirementLevel: null,
+    source: ["Deep Mine"],
+    baseSellPrice: 10000,
+  },
+  {
     id: "boom_box",
     name: "Boom Box",
     img: "https://static.wikia.nocookie.net/dinkum/images/0/02/Inv_Boom_Box.png",
@@ -321,7 +330,7 @@ export const equipment: Equipment[] = [
   {
     id: "dog_kennel",
     name: "Dog Kennel",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6d/Inv_Dog_Kennel.png/revision/latest?cb=20230704012908",
+    img: "https://static.wikia.nocookie.net/dinkum/images/6/6d/Inv_Dog_Kennel.png",
     description: "A house for a pupper.",
     requirementLevel: null,
     source: ["Irwin's Barn"],
@@ -503,6 +512,17 @@ export const equipment: Equipment[] = [
     requirementType: "Farming Licence",
     source: ["Crafting Table"],
     baseSellPrice: 4200,
+  },
+  {
+    id: "mu_saddle",
+    name: "Mu Saddle",
+    img: "https://static.wikia.nocookie.net/dinkum/images/3/3a/Inv_Mu_Saddle.png",
+    description: "Save a horse, ride a Mu.",
+    requirementLevel: null,
+    source: ["Deep Mine", "Island Reed", "Jimmy's Boat"],
+    buyPrice: 500000,
+    buyUnits: "Dinks",
+    baseSellPrice: 25000,
   },
   {
     id: "post_box",
@@ -755,6 +775,15 @@ export const equipment: Equipment[] = [
     buyPrice: 5000,
     buyUnits: "Dinks",
     baseSellPrice: 4281,
+  },
+  {
+    id: "striped_boogie_board",
+    name: "Striped Boogie Board",
+    img: "https://static.wikia.nocookie.net/dinkum/images/9/92/Inv_Striped_Boogie_Board.png",
+    description: "Float your day away.",
+    requirementLevel: null,
+    source: ["Jolly Sack"],
+    baseSellPrice: 10000,
   },
   {
     id: "table_saw",

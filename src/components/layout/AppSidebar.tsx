@@ -453,7 +453,7 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 
 							<li>
 								<SidebarCollapse
-									label="Resources & Crops"
+									label="Resources & Plants"
 									icon={<FaBoxOpen className="h-5 w-5" />}
 									open={resourcesOpen}
 									onToggle={() => setResourcesOpen(!resourcesOpen)}

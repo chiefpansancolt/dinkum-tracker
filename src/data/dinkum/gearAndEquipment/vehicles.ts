@@ -274,7 +274,7 @@ export const vehicles: Vehicle[] = [
       },
       {
         count: 15,
-        name: "Bright Wires",
+        name: "Bright Wire",
         img: "https://static.wikia.nocookie.net/dinkum/images/8/8f/Inv_Bright_Wire.png",
       },
       {

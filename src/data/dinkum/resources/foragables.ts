@@ -42,6 +42,13 @@ export const foragables: Foragable[] = [
     baseSellPrice: 245,
   },
   {
+    id: "bottle_of_clouds",
+    name: "Bottle of Clouds",
+    img: "https://static.wikia.nocookie.net/dinkum/images/d/de/Inv_Bottle_of_Clouds.png",
+    locations: ["Undergrove"],
+    baseSellPrice: 30250,
+  },
+  {
     id: "bottle_tree_wood",
     name: "Bottle Tree Wood",
     img: "https://static.wikia.nocookie.net/dinkum/images/e/e0/Inv_Bottle_Tree_Wood.png",
@@ -210,17 +217,6 @@ export const foragables: Foragable[] = [
     baseSellPrice: 150,
   },
   {
-    id: "pineapple",
-    name: "Pineapple",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/87/Inv_Pineapple.png",
-    source: ["Island Reef"],
-    baseSellPrice: 15000,
-    buffs: {
-      length: 8,
-      staminaRegenRate: 3,
-    },
-  },
-  {
     id: "quandong",
     name: "Quandong",
     img: "https://static.wikia.nocookie.net/dinkum/images/c/cf/Inv_Quandong.png",
@@ -348,3 +344,7 @@ export const foragables: Foragable[] = [
     baseSellPrice: 145,
   },
 ];
+
+export const getForagableById = (id: string): Foragable | undefined => {
+  return foragables.find((item) => item.id === id);
+};

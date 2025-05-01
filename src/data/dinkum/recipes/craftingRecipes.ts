@@ -933,7 +933,7 @@ export const craftingRecipes: Recipe[] = [
             img: "https://static.wikia.nocookie.net/dinkum/images/5/5a/Inv_Quartz_Crystal.png",
           },
           {
-            name: "Fir Grass Seeds",
+            name: "Fir Grass Seed",
             count: 10,
             img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Fir_Grass_Seeds.png",
           },
@@ -973,7 +973,7 @@ export const craftingRecipes: Recipe[] = [
             img: "https://static.wikia.nocookie.net/dinkum/images/5/5a/Inv_Quartz_Crystal.png",
           },
           {
-            name: "Fir Grass Seeds",
+            name: "Fir Grass Seed",
             count: 10,
             img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Fir_Grass_Seeds.png",
           },
@@ -1013,7 +1013,7 @@ export const craftingRecipes: Recipe[] = [
             img: "https://static.wikia.nocookie.net/dinkum/images/5/5a/Inv_Quartz_Crystal.png",
           },
           {
-            name: "Fir Grass Seeds",
+            name: "Fir Grass Seed",
             count: 10,
             img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Fir_Grass_Seeds.png",
           },

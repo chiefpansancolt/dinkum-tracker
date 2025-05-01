@@ -37,5 +37,7 @@ export enum ResourceType {
   MINERAL = "Mineral",
   CRAFTABLE = "Craftable",
   TROPHY = "Trophy",
+  SEED = "Seed",
+  FLOWER = "Flower",
   RESOURCE = "Resource",
 }

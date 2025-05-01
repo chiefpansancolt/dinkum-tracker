@@ -729,7 +729,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "silk",
     name: "Silk",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/51/Inv_Silk.png/revision",
+    img: "https://static.wikia.nocookie.net/dinkum/images/5/51/Inv_Silk.png",
     source: ["Spinning Wheel"],
     variants: [
       {

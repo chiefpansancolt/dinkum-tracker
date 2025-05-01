@@ -811,7 +811,7 @@ export const tools: Tool[] = [
     img: "https://static.wikia.nocookie.net/dinkum/images/8/82/Inv_Stone_Wand.png",
     damage: null,
     licence: "",
-    source: ["Undergrove Deep Mine"],
+    source: ["Undergrove", "Island Reef"],
     baseSellPrice: 45000,
   },
   {

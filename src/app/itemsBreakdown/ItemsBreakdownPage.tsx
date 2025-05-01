@@ -21,6 +21,8 @@ import {
 	otherCraftables,
 	paint,
 	relics,
+	seeds,
+	flowers,
 	signWritingRecipes,
 	tools,
 	trophies,
@@ -57,6 +59,8 @@ export default function ItemsBreakdownPage() {
 		const paintNames = new Set<string>();
 		const mineralNames = new Set<string>();
 		const trophyNames = new Set<string>();
+		const seedNames = new Set<string>();
+		const flowerNames = new Set<string>();
 
 		const collectItemNames = () => {
 			weapons.forEach((item) => craftableItemNames.add(item.name));
@@ -78,6 +82,8 @@ export default function ItemsBreakdownPage() {
 			paint.forEach((item) => paintNames.add(item.name));
 			minerals.forEach((item) => mineralNames.add(item.name));
 			trophies.forEach((item) => trophyNames.add(item.name));
+			seeds.forEach((item) => seedNames.add(item.name));
+			flowers.forEach((item) => flowerNames.add(item.name));
 		};
 
 		collectItemNames();
@@ -94,6 +100,8 @@ export default function ItemsBreakdownPage() {
 			if (mineralNames.has(resourceName)) return ResourceType.MINERAL;
 			if (trophyNames.has(resourceName)) return ResourceType.TROPHY;
 			if (craftableItemNames.has(resourceName)) return ResourceType.CRAFTABLE;
+			if (seedNames.has(resourceName)) return ResourceType.SEED;
+			if (flowerNames.has(resourceName)) return ResourceType.FLOWER;
 			return ResourceType.RESOURCE;
 		};
 

@@ -1,9 +1,35 @@
 import { ResourceType } from "@/data/constants";
-import { BaseResource, Biome, Buffs, Resource, ResourceVariant } from "./base";
+import { Base, BaseResource, Biome, Buffs, Resource, ResourceVariant, Season } from "./base";
+
+export interface Seed extends BaseResource {
+  category: string;
+  growthPeriod: number;
+  outputCountMin?: number;
+  outputCountMax?: number;
+  regrowth?: number;
+  season: Season[];
+}
 
 export interface Crop extends BaseResource {
   buffs?: Buffs;
-  seed: string;
+  seed: Seed | undefined;
+}
+
+export interface Tree extends Base {
+  seed: Seed | Foragable | undefined;
+  itemsDropped: Resource[];
+  locations?: Biome[];
+  growthPeriod?: number;
+  regrowth?: number;
+}
+
+export interface Flower extends BaseResource {
+  seed?: Seed | Foragable | undefined;
+  itemsDropped?: Resource[];
+  locations: Biome[];
+  conditions?: string;
+  growthPeriod?: number;
+  regrowth?: number;
 }
 
 export interface Relic extends BaseResource {

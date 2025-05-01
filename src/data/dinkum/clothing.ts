@@ -101,7 +101,7 @@ export const clothing: Clothing[] = [
   {
     id: "bird_bill",
     name: "Bird Bill",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4a/Inv_Bird_Bill.png/revision/latest?cb=20250423084637",
+    img: "https://static.wikia.nocookie.net/dinkum/images/4/4a/Inv_Bird_Bill.png",
     displayPrice: 0,
     cataloguePrice: 0,
     baseSellPrice: 0,
@@ -185,7 +185,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_capri_pants",
     name: "Black Capri Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/52/Inv_Black_Capri_Pants.png/revision/latest?cb=20250423084638",
+    img: "https://static.wikia.nocookie.net/dinkum/images/5/52/Inv_Black_Capri_Pants.png",
     displayPrice: 0,
     cataloguePrice: 0,
     baseSellPrice: 0,
@@ -365,7 +365,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_raglan_sleeve",
     name: "Black Raglan Sleeve",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3c/Inv_Black_Raglan_Sleeve.png/revision/latest?cb=20250423084639",
+    img: "https://static.wikia.nocookie.net/dinkum/images/3/3c/Inv_Black_Raglan_Sleeve.png",
     displayPrice: 0,
     cataloguePrice: 0,
     baseSellPrice: 0,
@@ -593,7 +593,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_capri_pants",
     name: "Blue Capri Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c5/Inv_Blue_Capri_Pants.png/revision/latest?cb=20250423084640",
+    img: "https://static.wikia.nocookie.net/dinkum/images/c/c5/Inv_Blue_Capri_Pants.png",
     displayPrice: 0,
     cataloguePrice: 0,
     baseSellPrice: 0,
@@ -773,7 +773,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_raglan_sleeve",
     name: "Blue Raglan Sleeve",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1b/Inv_Blue_Raglan_Sleeve.png/revision/latest?cb=20250423084641",
+    img: "https://static.wikia.nocookie.net/dinkum/images/1/1b/Inv_Blue_Raglan_Sleeve.png",
     displayPrice: 0,
     cataloguePrice: 0,
     baseSellPrice: 0,
@@ -1865,7 +1865,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_capri_pants",
     name: "Green Capri Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2c/Inv_Green_Capri_Pants.png/revision/latest?cb=20250423084708",
+    img: "https://static.wikia.nocookie.net/dinkum/images/2/2c/Inv_Green_Capri_Pants.png",
     displayPrice: 0,
     cataloguePrice: 0,
     baseSellPrice: 0,
@@ -2069,7 +2069,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_raglan_sleeve",
     name: "Green Raglan Sleeve",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4d/Inv_Green_Raglan_Sleeve.png/revision/latest?cb=20250423084709",
+    img: "https://static.wikia.nocookie.net/dinkum/images/4/4d/Inv_Green_Raglan_Sleeve.png",
     displayPrice: 0,
     cataloguePrice: 0,
     baseSellPrice: 0,
@@ -2693,7 +2693,7 @@ export const clothing: Clothing[] = [
   {
     id: "medieval_boots",
     name: "Medieval Boots",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f6/Inv_Medieval_Boots.png/revision/latest?cb=20250423085003",
+    img: "https://static.wikia.nocookie.net/dinkum/images/f/f6/Inv_Medieval_Boots.png",
     displayPrice: 0,
     cataloguePrice: 0,
     baseSellPrice: 0,
@@ -2705,7 +2705,7 @@ export const clothing: Clothing[] = [
   {
     id: "medieval_breastplate",
     name: "Medieval Breastplate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/06/Inv_Medieval_Breastplate.png/revision/latest?cb=20250423085004",
+    img: "https://static.wikia.nocookie.net/dinkum/images/0/06/Inv_Medieval_Breastplate.png",
     displayPrice: 0,
     cataloguePrice: 0,
     baseSellPrice: 0,
@@ -2717,7 +2717,7 @@ export const clothing: Clothing[] = [
   {
     id: "medieval_helmet",
     name: "Medieval Helmet",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/fa/Inv_Medieval_Helmet.png/revision/latest?cb=20250423085005",
+    img: "https://static.wikia.nocookie.net/dinkum/images/f/fa/Inv_Medieval_Helmet.png",
     displayPrice: 0,
     cataloguePrice: 0,
     baseSellPrice: 0,
@@ -2729,7 +2729,7 @@ export const clothing: Clothing[] = [
   {
     id: "medieval_leggings",
     name: "Medieval Leggings",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/5e/Inv_Medieval_Leggings.png/revision/latest?cb=20250423085005",
+    img: "https://static.wikia.nocookie.net/dinkum/images/5/5e/Inv_Medieval_Leggings.png",
     displayPrice: 0,
     cataloguePrice: 0,
     baseSellPrice: 0,
@@ -2957,7 +2957,7 @@ export const clothing: Clothing[] = [
   {
     id: "orange_capri_pants",
     name: "Orange Capri Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/91/Inv_Orange_Capri_Pants.png/revision/latest?cb=20250423085010",
+    img: "https://static.wikia.nocookie.net/dinkum/images/9/91/Inv_Orange_Capri_Pants.png",
     displayPrice: 0,
     cataloguePrice: 0,
     baseSellPrice: 0,
@@ -3101,7 +3101,7 @@ export const clothing: Clothing[] = [
   {
     id: "orange_raglan_sleeve",
     name: "Orange Raglan Sleeve",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/ee/Inv_Orange_Raglan_Sleeve.png/revision/latest?cb=20250423085012",
+    img: "https://static.wikia.nocookie.net/dinkum/images/e/ee/Inv_Orange_Raglan_Sleeve.png",
     displayPrice: 0,
     cataloguePrice: 0,
     baseSellPrice: 0,
@@ -3401,7 +3401,7 @@ export const clothing: Clothing[] = [
   {
     id: "pink_capri_pants",
     name: "Pink Capri Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/48/Inv_Pink_Capri_Pants.png/revision/latest?cb=20250423085014",
+    img: "https://static.wikia.nocookie.net/dinkum/images/4/48/Inv_Pink_Capri_Pants.png",
     displayPrice: 0,
     cataloguePrice: 0,
     baseSellPrice: 0,
@@ -3545,7 +3545,7 @@ export const clothing: Clothing[] = [
   {
     id: "pink_raglan_sleeve",
     name: "Pink Raglan Sleeve",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/23/Inv_Pink_Raglan_Sleeve.png/revision/latest?cb=20250423085015",
+    img: "https://static.wikia.nocookie.net/dinkum/images/2/23/Inv_Pink_Raglan_Sleeve.png",
     displayPrice: 0,
     cataloguePrice: 0,
     baseSellPrice: 0,
@@ -3785,7 +3785,7 @@ export const clothing: Clothing[] = [
   {
     id: "purple_capri_pants",
     name: "Purple Capri Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/69/Inv_Purple_Capri_Pants.png/revision/latest?cb=20250423084731",
+    img: "https://static.wikia.nocookie.net/dinkum/images/6/69/Inv_Purple_Capri_Pants.png",
     displayPrice: 0,
     cataloguePrice: 0,
     baseSellPrice: 0,
@@ -3929,7 +3929,7 @@ export const clothing: Clothing[] = [
   {
     id: "purple_raglan_sleeve",
     name: "Purple Raglan Sleeve",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f4/Inv_Purple_Raglan_Sleeve.png/revision/latest?cb=20250423084732",
+    img: "https://static.wikia.nocookie.net/dinkum/images/f/f4/Inv_Purple_Raglan_Sleeve.png",
     displayPrice: 0,
     cataloguePrice: 0,
     baseSellPrice: 0,
@@ -4205,7 +4205,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_capri_pants",
     name: "Red Capri Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/78/Inv_Red_Capri_Pants.png/revision/latest?cb=20250423084744",
+    img: "https://static.wikia.nocookie.net/dinkum/images/7/78/Inv_Red_Capri_Pants.png",
     displayPrice: 0,
     cataloguePrice: 0,
     baseSellPrice: 0,
@@ -4397,7 +4397,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_raglan_sleeve",
     name: "Red Raglan Sleeve",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/07/Inv_Red_Raglan_Sleeve.png/revision/latest?cb=20250423084751",
+    img: "https://static.wikia.nocookie.net/dinkum/images/0/07/Inv_Red_Raglan_Sleeve.png",
     displayPrice: 0,
     cataloguePrice: 0,
     baseSellPrice: 0,
@@ -4625,7 +4625,7 @@ export const clothing: Clothing[] = [
   {
     id: "royal_crown",
     name: "Royal Crown",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6f/Inv_Royal_Crown.png/revision/latest?cb=20250423084757",
+    img: "https://static.wikia.nocookie.net/dinkum/images/6/6f/Inv_Royal_Crown.png",
     displayPrice: 3000000,
     cataloguePrice: 0,
     baseSellPrice: 60000,
@@ -5513,7 +5513,7 @@ export const clothing: Clothing[] = [
   {
     id: "yellow_capri_pants",
     name: "Yellow Capri Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/91/Inv_Yellow_Capri_Pants.png/revision/latest?cb=20250423084810",
+    img: "https://static.wikia.nocookie.net/dinkum/images/9/91/Inv_Yellow_Capri_Pants.png",
     displayPrice: 0,
     cataloguePrice: 0,
     baseSellPrice: 0,
@@ -5645,7 +5645,7 @@ export const clothing: Clothing[] = [
   {
     id: "yellow_raglan_sleeve",
     name: "Yellow Raglan Sleeve",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/da/Inv_Yellow_Raglan_Sleeve.png/revision/latest?cb=20250423084812",
+    img: "https://static.wikia.nocookie.net/dinkum/images/d/da/Inv_Yellow_Raglan_Sleeve.png",
     displayPrice: 0,
     cataloguePrice: 0,
     baseSellPrice: 0,
