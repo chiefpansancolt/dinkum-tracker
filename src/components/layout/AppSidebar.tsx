@@ -21,6 +21,7 @@ import {
 	FaSeedling,
 	FaSignsPost,
 	FaUsers,
+	FaTree,
 } from "react-icons/fa6";
 import {
 	GiBackpack,
@@ -34,7 +35,7 @@ import {
 } from "react-icons/gi";
 import { GoStarFill } from "react-icons/go";
 import { HiCog, HiHome, HiViewList } from "react-icons/hi";
-import { LuCookingPot } from "react-icons/lu";
+import { LuCookingPot, LuFlower2 } from "react-icons/lu";
 import { MdDashboard } from "react-icons/md";
 import SidebarCollapse from "./SidebarCollapse";
 
@@ -490,6 +491,22 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 										indented
 									>
 										Crops
+									</SidebarLink>
+									<SidebarLink
+										href={`/playthrough/${playthroughId}/flowers`}
+										currentPath={pathname}
+										icon={<LuFlower2 />}
+										indented
+									>
+										Flowers
+									</SidebarLink>
+									<SidebarLink
+										href={`/playthrough/${playthroughId}/trees`}
+										currentPath={pathname}
+										icon={<FaTree />}
+										indented
+									>
+										Trees
 									</SidebarLink>
 								</SidebarCollapse>
 							</li>
