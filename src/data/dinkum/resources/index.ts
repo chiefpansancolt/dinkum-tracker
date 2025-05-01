@@ -7,4 +7,3 @@ export * from "./trophies";
 export * from "./foragables";
 export * from "./otherCraftables";
 export * from "./seeds";
-export * from "./flowers";

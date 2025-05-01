@@ -1,5 +1,13 @@
 import { ResourceType } from "@/data/constants";
-import { Base, BaseResource, Biome, Buffs, Resource, ResourceVariant, Season } from "./base";
+import {
+  Base,
+  BaseResource,
+  Biome,
+  Buffs,
+  Resource,
+  ResourceVariant,
+  Season,
+} from "./base";
 
 export interface Seed extends BaseResource {
   category: string;

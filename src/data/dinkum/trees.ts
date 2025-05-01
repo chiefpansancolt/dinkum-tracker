@@ -3,6 +3,36 @@ import { getForagableById, getSeedById } from "./resources";
 
 export const trees: Tree[] = [
   {
+    id: "apple_tree",
+    name: "Apple Tree",
+    img: "https://static.wikia.nocookie.net/dinkum/images/b/bb/Apple_Tree.png",
+    itemsDropped: [
+      {
+        name: "Apple",
+        count: 4,
+        img: "https://static.wikia.nocookie.net/dinkum/images/9/90/Inv_Apple.png",
+      },
+    ],
+    seed: getForagableById("apple"),
+    growthPeriod: 12,
+    regrowth: 6,
+  },
+  {
+    id: "banana_tree",
+    name: "Banana Tree",
+    img: "https://static.wikia.nocookie.net/dinkum/images/e/eb/Banana_Tree.png",
+    itemsDropped: [
+      {
+        name: "Banana",
+        count: 2,
+        img: "https://static.wikia.nocookie.net/dinkum/images/6/62/Inv_Bananas.png",
+      },
+    ],
+    seed: getForagableById("banana"),
+    growthPeriod: 12,
+    regrowth: 6,
+  },
+  {
     id: "blackwood_tree",
     name: "Blackwood Tree",
     img: "https://static.wikia.nocookie.net/dinkum/images/3/39/Blackwood_Tree.png",
@@ -39,6 +69,51 @@ export const trees: Tree[] = [
       },
     ],
     seed: getSeedById("bottle_tree_seed"),
+  },
+  {
+    id: "bush_lime_tree",
+    name: "Bush Lime Tree",
+    img: "https://static.wikia.nocookie.net/dinkum/images/e/e4/Bush_Lime_Tree.png",
+    itemsDropped: [
+      {
+        name: "Bush Lime",
+        count: 3,
+        img: "https://static.wikia.nocookie.net/dinkum/images/a/af/Inv_Bush_Lime.png",
+      },
+    ],
+    seed: getForagableById("bush_lime"),
+    growthPeriod: 12,
+    regrowth: 6,
+  },
+  {
+    id: "cherry_tree",
+    name: "Cherry Tree",
+    img: "https://static.wikia.nocookie.net/dinkum/images/d/d3/Cherry_Tree.png",
+    itemsDropped: [
+      {
+        name: "Cherry",
+        count: 4,
+        img: "https://static.wikia.nocookie.net/dinkum/images/b/b5/Inv_Cherries.png",
+      },
+    ],
+    seed: getForagableById("cherry"),
+    growthPeriod: 12,
+    regrowth: 6,
+  },
+  {
+    id: "coconut_tree",
+    name: "Coconut Tree",
+    img: "https://static.wikia.nocookie.net/dinkum/images/4/41/Coconut_Tree.png",
+    itemsDropped: [
+      {
+        name: "Coconut",
+        count: 3,
+        img: "https://static.wikia.nocookie.net/dinkum/images/4/4a/Inv_Coconut.png",
+      },
+    ],
+    seed: getForagableById("coconut"),
+    growthPeriod: 5,
+    regrowth: 10,
   },
   {
     id: "coral_acacia_tree",
@@ -187,95 +262,6 @@ export const trees: Tree[] = [
     seed: getSeedById("pine_cone"),
   },
   {
-    id: "small_lilly_pilly_tree",
-    name: "Small Lilly Pilly Tree",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/14/Small_Lilly_Pilly_Tree.png",
-    locations: ["Undergrove"],
-    itemsDropped: [
-      {
-        name: "Small Lilly Pilly Seed",
-        count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/e/e6/Inv_Small_Lilly_Pilly_Seed.png",
-      },
-    ],
-    seed: getSeedById("lilly_pilly_seed"),
-  },
-  {
-    id: "apple_tree",
-    name: "Apple Tree",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/bb/Apple_Tree.png",
-    itemsDropped: [
-      {
-        name: "Apple",
-        count: 4,
-        img: "https://static.wikia.nocookie.net/dinkum/images/9/90/Inv_Apple.png",
-      },
-    ],
-    seed: getForagableById("apple"),
-    growthPeriod: 12,
-    regrowth: 6,
-  },
-  {
-    id: "banana_tree",
-    name: "Banana Tree",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/eb/Banana_Tree.png",
-    itemsDropped: [
-      {
-        name: "Banana",
-        count: 2,
-        img: "https://static.wikia.nocookie.net/dinkum/images/6/62/Inv_Bananas.png",
-      },
-    ],
-    seed: getForagableById("banana"),
-    growthPeriod: 12,
-    regrowth: 6,
-  },
-  {
-    id: "bush_lime_tree",
-    name: "Bush Lime Tree",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e4/Bush_Lime_Tree.png",
-    itemsDropped: [
-      {
-        name: "Bush Lime",
-        count: 3,
-        img: "https://static.wikia.nocookie.net/dinkum/images/a/af/Inv_Bush_Lime.png",
-      },
-    ],
-    seed: getForagableById("bush_lime"),
-    growthPeriod: 12,
-    regrowth: 6,
-  },
-  {
-    id: "cherry_tree",
-    name: "Cherry Tree",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d3/Cherry_Tree.png",
-    itemsDropped: [
-      {
-        name: "Cherry",
-        count: 4,
-        img: "https://static.wikia.nocookie.net/dinkum/images/b/b5/Inv_Cherries.png",
-      },
-    ],
-    seed: getForagableById("cherry"),
-    growthPeriod: 12,
-    regrowth: 6,
-  },
-  {
-    id: "coconut_tree",
-    name: "Coconut Tree",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/41/Coconut_Tree.png",
-    itemsDropped: [
-      {
-        name: "Coconut",
-        count: 3,
-        img: "https://static.wikia.nocookie.net/dinkum/images/4/4a/Inv_Coconut.png",
-      },
-    ],
-    seed: getForagableById("coconut"),
-    growthPeriod: 5,
-    regrowth: 10,
-  },
-  {
     id: "quandong_tree",
     name: "Quandong Tree",
     img: "https://static.wikia.nocookie.net/dinkum/images/0/0c/Quandong_Tree.png",
@@ -289,5 +275,19 @@ export const trees: Tree[] = [
     seed: getForagableById("quandong"),
     growthPeriod: 12,
     regrowth: 6,
+  },
+  {
+    id: "small_lilly_pilly_tree",
+    name: "Small Lilly Pilly Tree",
+    img: "https://static.wikia.nocookie.net/dinkum/images/1/14/Small_Lilly_Pilly_Tree.png",
+    locations: ["Undergrove"],
+    itemsDropped: [
+      {
+        name: "Small Lilly Pilly Seed",
+        count: 1,
+        img: "https://static.wikia.nocookie.net/dinkum/images/e/e6/Inv_Small_Lilly_Pilly_Seed.png",
+      },
+    ],
+    seed: getSeedById("lilly_pilly_seed"),
   },
 ];
