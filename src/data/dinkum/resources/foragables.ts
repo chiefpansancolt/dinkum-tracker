@@ -97,8 +97,8 @@ export const foragables: Foragable[] = [
     baseSellPrice: 7,
   },
   {
-    id: "cherries",
-    name: "Cherries",
+    id: "cherry",
+    name: "Cherry",
     img: "https://static.wikia.nocookie.net/dinkum/images/b/b5/Inv_Cherries.png",
     source: ["Cherry Tree"],
     baseSellPrice: 117,

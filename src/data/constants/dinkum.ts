@@ -27,7 +27,7 @@ export const TIME_PERIODS = [
   "All",
 ] as const;
 
-export const SEASONS = ["Spring", "Summer", "Autumn", "Winter", "All"] as const;
+export const SEASONS = ["All", "Spring", "Summer", "Autumn", "Winter"] as const;
 
 export const RARITY_LEVELS = [
   "Common",

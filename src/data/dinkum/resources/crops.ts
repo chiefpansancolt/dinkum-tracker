@@ -1,4 +1,4 @@
-import { Crop } from "@/types";
+import { Crop, Season } from "@/types";
 import { getSeedById } from "./seeds";
 
 export const crops: Crop[] = [
@@ -196,3 +196,19 @@ export const crops: Crop[] = [
     },
   },
 ];
+
+export const getCropsBySeason = (data: Crop[], season: Season): Crop[] => {
+  return data.filter(
+    (item) =>
+      item.seed && item.seed.season && item.seed.season.includes(season),
+  );
+};
+
+export const getCropsBySearchValue = (
+  data: Crop[],
+  searchValue: string,
+): Crop[] => {
+  return data.filter((item) =>
+    item.name.toLowerCase().includes(searchValue.toLowerCase()),
+  );
+};

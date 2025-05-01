@@ -1,4 +1,4 @@
-import { Tree } from "@/types";
+import { Biome, FilterArray, Tree } from "@/types";
 import { getForagableById, getSeedById } from "./resources";
 
 export const trees: Tree[] = [
@@ -291,3 +291,33 @@ export const trees: Tree[] = [
     seed: getSeedById("lilly_pilly_seed"),
   },
 ];
+
+export const getUniqueTreeLocations = (): FilterArray => {
+  const locations = new Set<string>();
+  locations.add("All");
+
+  trees.forEach((tree) => {
+    if (tree.locations) {
+      tree.locations.forEach((location) => {
+        locations.add(location);
+      });
+    }
+  });
+
+  return Array.from(locations);
+};
+
+export const getTreesByLocation = (data: Tree[], biome: Biome): Tree[] => {
+  return data.filter(
+    (item) => item.locations && item.locations.includes(biome),
+  );
+};
+
+export const getTreesBySearchValue = (
+  data: Tree[],
+  searchValue: string,
+): Tree[] => {
+  return data.filter((item) =>
+    item.name.toLowerCase().includes(searchValue.toLowerCase()),
+  );
+};

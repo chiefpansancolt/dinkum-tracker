@@ -17,3 +17,15 @@ export const donatedFilter: FilterObject[] = [
   { id: "donated", value: "Donated" },
   { id: "not_donated", value: "To Be Donated" },
 ];
+
+export const sellBySort: FilterObject[] = [
+  { id: "name", value: "Name (A-Z)" },
+  { id: "sellPriceDesc", value: "Sell Price (High to Low)" },
+  { id: "sellPriceAsc", value: "Sell Price (Low to High)" },
+];
+
+export const sortByGrowth: FilterObject[] = [
+  { id: "name", value: "Name (A-Z)" },
+  { id: "growthPeriodAsc", value: "Growth Period (Fastest)" },
+  { id: "growthPeriodDesc", value: "Growth Period (Longest)" },
+];

@@ -1,4 +1,4 @@
-import { Seed } from "@/types";
+import { FilterArray, Season, Seed } from "@/types";
 
 export const seeds: Seed[] = [
   {
@@ -411,4 +411,34 @@ export const seeds: Seed[] = [
 
 export const getSeedById = (id: string): Seed | undefined => {
   return seeds.find((item) => item.id === id);
+};
+
+export const getUniqueSeedCategories = (): FilterArray => {
+  const categories = new Set<string>();
+  categories.add("All");
+
+  seeds.forEach((seed) => {
+    if (seed.category) {
+      categories.add(seed.category);
+    }
+  });
+
+  return Array.from(categories);
+};
+
+export const getSeedsBySeason = (data: Seed[], season: Season): Seed[] => {
+  return data.filter((item) => item.season && item.season.includes(season));
+};
+
+export const getSeedsByCategory = (data: Seed[], category: string): Seed[] => {
+  return data.filter((item) => item.category === category);
+};
+
+export const getSeedsBySearchValue = (
+  data: Seed[],
+  searchValue: string,
+): Seed[] => {
+  return data.filter((item) =>
+    item.name.toLowerCase().includes(searchValue.toLowerCase()),
+  );
 };
