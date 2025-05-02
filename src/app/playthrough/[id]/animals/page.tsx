@@ -1,0 +1,207 @@
+"use client";
+
+import { useParams } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
+import { Playthrough } from "@/types";
+import { getPlaythroughById } from "@/lib/localStorage";
+import { getQueryParams, setQueryParam } from "@/service/urlService";
+import { ANIMAL_TYPES, TEMPERAMENTS } from "@/data/constants";
+import { animals } from "@/data/dinkum";
+import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import NotFoundCard from "@/comps/NotFoundCard";
+import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
+import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
+import FilterBar from "@/playthrough/ui/FilterBar";
+import FilterDetails from "@/playthrough/ui/FilterDetails";
+import TabHeader from "@/playthrough/ui/TabHeader";
+import AnimalCard from "./AnimalCard";
+
+export default function AnimalsPage() {
+	const params = useParams();
+	const playthroughId = typeof params.id === "string" ? params.id : "";
+	const [playthrough, setPlaythrough] = useState<Playthrough | null>(null);
+	const [isLoading, setIsLoading] = useState(true);
+	const [searchQuery, setSearchQuery] = useState<string>("");
+	const [temperamentFilter, setTemperamentFilter] = useState<string>("All");
+	const [typeFilter, setTypeFilter] = useState<string>("All");
+	const [habitatFilter, setHabitatFilter] = useState<string>("All");
+	const [sortBy, setSortBy] = useState<string>("name");
+
+	const uniqueHabitats = useMemo(() => {
+		const habitats = new Set<string>();
+		habitats.add("All");
+
+		animals.forEach((animal) => {
+			if (animal.habitat) {
+				animal.habitat.forEach((habitat) => {
+					habitats.add(habitat);
+				});
+			}
+		});
+
+		return Array.from(habitats);
+	}, []);
+
+	const filters = {
+		temperament: {
+			value: temperamentFilter,
+			options: ["All", ...TEMPERAMENTS],
+			label: "Temperament",
+		},
+		type: {
+			value: typeFilter,
+			options: ["All", ...ANIMAL_TYPES],
+			label: "Type",
+		},
+		habitat: {
+			value: habitatFilter,
+			options: uniqueHabitats,
+			label: "Habitat",
+		},
+		sort: {
+			value: sortBy,
+			options: [
+				{ id: "name", value: "Name (A-Z)" },
+				{ id: "sellPriceDesc", value: "Sell Price (High to Low)" },
+				{ id: "sellPriceAsc", value: "Sell Price (Low to High)" },
+				{ id: "healthDesc", value: "Health (High to Low)" },
+				{ id: "healthAsc", value: "Health (Low to High)" },
+			],
+			label: "Sort By",
+		},
+	};
+
+	useEffect(() => {
+		if (playthroughId) {
+			const data = getPlaythroughById(playthroughId);
+			setPlaythrough(data);
+			setIsLoading(false);
+
+			const params = getQueryParams();
+			if (params.q) {
+				setSearchQuery(params.q);
+			}
+		}
+	}, [playthroughId]);
+
+	useEffect(() => {
+		if (searchQuery) {
+			setQueryParam("q", searchQuery);
+		} else {
+			setQueryParam("q", "");
+		}
+	}, [searchQuery]);
+
+	const handleFilterChange = (name: string, value: string) => {
+		if (name === "temperament") {
+			setTemperamentFilter(value);
+		} else if (name === "type") {
+			setTypeFilter(value);
+		} else if (name === "habitat") {
+			setHabitatFilter(value);
+		} else if (name === "sort") {
+			setSortBy(value);
+		}
+	};
+
+	const filteredData = useMemo(() => {
+		let filtered = [...animals];
+
+		// Filter by temperament
+		if (temperamentFilter !== "All") {
+			filtered = filtered.filter((animal) => animal.temperament === temperamentFilter);
+		}
+
+		// Filter by type
+		if (typeFilter !== "All") {
+			filtered = filtered.filter((animal) => animal.type === typeFilter);
+		}
+
+		// Filter by habitat
+		if (habitatFilter !== "All") {
+			filtered = filtered.filter((animal) => animal.habitat?.includes(habitatFilter));
+		}
+
+		// Filter by search query
+		if (searchQuery) {
+			const query = searchQuery.toLowerCase();
+			filtered = filtered.filter(
+				(animal) =>
+					animal.name.toLowerCase().includes(query) ||
+					animal.type.toLowerCase().includes(query) ||
+					animal.temperament.toLowerCase().includes(query) ||
+					animal.habitat?.some((h) => h.toLowerCase().includes(query))
+			);
+		}
+
+		return filtered;
+	}, [temperamentFilter, typeFilter, habitatFilter, searchQuery]);
+
+	const sortedData = useMemo(() => {
+		return [...filteredData].sort((a, b) => {
+			if (sortBy === "name") {
+				return a.name.localeCompare(b.name);
+			} else if (sortBy === "sellPriceAsc") {
+				const aPrice = a.baseSellPrice || 0;
+				const bPrice = b.baseSellPrice || 0;
+				return aPrice - bPrice;
+			} else if (sortBy === "sellPriceDesc") {
+				const aPrice = a.baseSellPrice || 0;
+				const bPrice = b.baseSellPrice || 0;
+				return bPrice - aPrice;
+			} else if (sortBy === "healthAsc") {
+				const aHealth = a.health || 0;
+				const bHealth = b.health || 0;
+				return aHealth - bHealth;
+			} else if (sortBy === "healthDesc") {
+				const aHealth = a.health || 0;
+				const bHealth = b.health || 0;
+				return bHealth - aHealth;
+			}
+			return 0;
+		});
+	}, [filteredData, sortBy]);
+
+	if (isLoading) {
+		return <LoadingPlaythrough message="Loading animals information..." />;
+	}
+
+	if (!playthrough) {
+		return <NotFoundCard message="Playthrough not found" />;
+	}
+
+	return (
+		<>
+			<BreadcrumbsComp id={playthroughId} name={playthrough.name} routeName="Animals" />
+			<div className="space-y-6 p-6">
+				<TabHeader title="Animals" enableCollectionCount={false} enableSaveAlert={false} />
+
+				<FilterBar
+					showFilters={true}
+					filters={filters}
+					onFilterChange={handleFilterChange}
+					showSearch={true}
+					searchValue={searchQuery}
+					onSearchChange={(value) => setSearchQuery(value)}
+					searchPlaceholder="Search animals by name, type, or habitat..."
+				/>
+
+				<FilterDetails
+					title="animals"
+					filteredCount={sortedData.length}
+					totalCount={animals.length}
+				/>
+
+				{sortedData.length === 0 ? (
+					<EmptyFilterCard />
+				) : (
+					<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+						{sortedData.map((animal) => (
+							<AnimalCard key={animal.id} animal={animal} />
+						))}
+					</div>
+				)}
+			</div>
+		</>
+	);
+}

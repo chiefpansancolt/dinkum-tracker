@@ -12,3 +12,4 @@ export * from "./recipes";
 export * from "./gearAndEquipment";
 export * from "./trees";
 export * from "./flowers";
+export * from "./animals";

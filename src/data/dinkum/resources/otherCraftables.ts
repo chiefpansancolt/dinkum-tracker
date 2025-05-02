@@ -387,7 +387,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "flame_jelly_bed",
     name: "Flame Jelly Bed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/35/Inv_Flame_Jelly_Bed.png/revision/latest/scale-to-width-down/40?cb=20240929032039",
+    img: "https://static.wikia.nocookie.net/dinkum/images/3/35/Inv_Flame_Jelly_Bed.png",
     outputCount: 5,
     variants: [
       {
@@ -396,7 +396,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "Flame Jelly",
-            img: "https://static.wikia.nocookie.net/dinkum/images/0/05/Inv_Flame_Jelly.png/revision/latest?cb=20240929032111",
+            img: "https://static.wikia.nocookie.net/dinkum/images/0/05/Inv_Flame_Jelly.png",
           },
         ],
       },

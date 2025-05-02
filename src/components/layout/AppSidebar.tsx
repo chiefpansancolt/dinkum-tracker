@@ -17,6 +17,7 @@ import {
 	FaCouch,
 	FaFish,
 	FaIdCard,
+	FaOtter,
 	FaReceipt,
 	FaSeedling,
 	FaSignsPost,
@@ -276,6 +277,16 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 									icon={<FaTools />}
 								>
 									Skills
+								</SidebarLink>
+							</li>
+
+							<li>
+								<SidebarLink
+									href={`/playthrough/${playthroughId}/animals`}
+									currentPath={pathname}
+									icon={<FaOtter />}
+								>
+									Animals
 								</SidebarLink>
 							</li>
 

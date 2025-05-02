@@ -109,7 +109,7 @@ export const animalProducts: AnimalProduct[] = [
   {
     id: "feather",
     name: "Feather",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4a/Inv_Feather.png/revision/latest/scale-to-width-down/40?cb=20241029203411",
+    img: "https://static.wikia.nocookie.net/dinkum/images/4/4a/Inv_Feather.png",
     source: [
       "Bin Chook",
       "Cockatoo",
@@ -131,7 +131,7 @@ export const animalProducts: AnimalProduct[] = [
   {
     id: "flame_jelly",
     name: "Flame Jelly",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/05/Inv_Flame_Jelly.png/revision/latest/scale-to-width-down/40?cb=20240929032111",
+    img: "https://static.wikia.nocookie.net/dinkum/images/0/05/Inv_Flame_Jelly.png",
     source: ["Flame Slime"],
     baseSellPrice: 10,
   },
@@ -166,7 +166,7 @@ export const animalProducts: AnimalProduct[] = [
   {
     id: "maggie_egg",
     name: "Maggie Egg",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/9c/Inv_Maggie_Egg.png/revision/latest/scale-to-width-down/40?cb=20231118022130",
+    img: "https://static.wikia.nocookie.net/dinkum/images/9/9c/Inv_Maggie_Egg.png",
     source: ["Magpie", "Mailbox", "Gocha Machine"],
     baseSellPrice: 16000,
   },
@@ -241,7 +241,7 @@ export const animalProducts: AnimalProduct[] = [
   {
     id: "shark_egg",
     name: "Shark Egg",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2b/Inv_Shark_Egg.png/revision/latest/scale-to-width-down/40?cb=20231118022132",
+    img: "https://static.wikia.nocookie.net/dinkum/images/2/2b/Inv_Shark_Egg.png",
     source: ["Alpha Shark"],
     baseSellPrice: 16000,
   },
