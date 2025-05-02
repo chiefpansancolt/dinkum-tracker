@@ -385,6 +385,26 @@ export const otherCraftables: Recipe[] = [
     baseSellPrice: 156,
   },
   {
+    id: "flame_jelly_bed",
+    name: "Flame Jelly Bed",
+    img: "https://static.wikia.nocookie.net/dinkum/images/3/35/Inv_Flame_Jelly_Bed.png/revision/latest/scale-to-width-down/40?cb=20240929032039",
+    outputCount: 5,
+    variants: [
+      {
+        id: "standard",
+        inputs: [
+          {
+            count: 1,
+            name: "Flame Jelly",
+            img: "https://static.wikia.nocookie.net/dinkum/images/0/05/Inv_Flame_Jelly.png/revision/latest?cb=20240929032111",
+          },
+        ],
+      },
+    ],
+    source: ["Furnace", "Blast Furnace"],
+    baseSellPrice: 940,
+  },
+  {
     id: "flour",
     name: "Flour",
     img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Inv_Flour.png",

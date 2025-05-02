@@ -53,3 +53,11 @@ export const LICENSE_TYPES = [
   "Vehicle",
   "Commerce",
 ] as const;
+
+export const TEMPERAMENTS = ["Passive", "Neutral", "Aggressive"] as const;
+
+export const ANIMAL_TYPES = [
+  "Wild Animal",
+  "Farm Animal",
+  "Tammed Animal",
+] as const;

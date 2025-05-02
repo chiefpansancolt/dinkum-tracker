@@ -13,3 +13,4 @@ export * from "./clothing";
 export * from "./milestones";
 export * from "./license";
 export * from "./cassettes";
+export * from "./animal";
