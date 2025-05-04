@@ -3113,11 +3113,13 @@ export const getCookingRecipesBySearchValue = (
 
 export const getUniqueCookingLocations = (): FilterObject[] => {
   const locations = new Set<string>();
+
   cookingRecipes.forEach((recipe) => {
     if (recipe.cookingLocation && recipe.cookingLocation.length > 0) {
       recipe.cookingLocation.forEach((loc) => locations.add(loc));
     }
   });
+
   return [
     { id: "All", value: "All Locations" },
     ...Array.from(locations)
@@ -3131,6 +3133,7 @@ export const getUniqueCookingLocations = (): FilterObject[] => {
 
 export const getUniqueCookingBuffs = (): FilterArray => {
   const buffs = new Set<string>();
+
   cookingRecipes.forEach((recipe) => {
     if (recipe.buffs) {
       Object.keys(recipe.buffs).forEach((buff) => {
@@ -3140,5 +3143,6 @@ export const getUniqueCookingBuffs = (): FilterArray => {
       });
     }
   });
+
   return Array.from(buffs).sort();
 };

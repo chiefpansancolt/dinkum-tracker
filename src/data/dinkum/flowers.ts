@@ -445,7 +445,6 @@ export const flowers: Flower[] = [
 
 export const getUniqueFlowerLocations = (): FilterArray => {
   const locations = new Set<string>();
-  locations.add("All");
 
   flowers.forEach((flower) => {
     if (flower.locations) {
@@ -455,7 +454,7 @@ export const getUniqueFlowerLocations = (): FilterArray => {
     }
   });
 
-  return Array.from(locations);
+  return ["All", ...Array.from(locations).sort()];
 };
 
 export const getFlowersByLocation = (

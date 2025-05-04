@@ -256,30 +256,30 @@ export const critters: PediaItem[] = [
 
 export const getCrittersByBiome = (
   data: PediaItem[],
-  biome: Biome,
+  value: Biome,
 ): PediaItem[] => {
-  return data.filter((item) => item.biome.includes(biome));
+  return data.filter((item) => item.biome.includes(value));
 };
 
 export const getCrittersByRarity = (
   data: PediaItem[],
-  rarity: string,
+  value: string,
 ): PediaItem[] => {
-  return data.filter((item) => item.rarity === rarity);
+  return data.filter((item) => item.rarity === value);
 };
 
 export const getCrittersBySeason = (
   data: PediaItem[],
-  season: Season,
+  value: Season,
 ): PediaItem[] => {
-  return data.filter((item) => item.seasons.includes(season));
+  return data.filter((item) => item.seasons.includes(value));
 };
 
 export const getCrittersByTime = (
   data: PediaItem[],
-  timePeriod: TimePeriod,
+  value: TimePeriod,
 ): PediaItem[] => {
-  return data.filter((item) => item.timeFound.includes(timePeriod));
+  return data.filter((item) => item.timeFound.includes(value));
 };
 
 export const getCrittersBySearchValue = (
@@ -293,6 +293,7 @@ export const getCrittersBySearchValue = (
 
 export const getUniqueCritterBiomes = (): FilterArray => {
   const biomes = new Set<string>();
+
   critters.forEach((item) => {
     item.biome.forEach((b) => biomes.add(b));
   });
@@ -302,6 +303,7 @@ export const getUniqueCritterBiomes = (): FilterArray => {
 
 export const getUniqueCritterRarities = (): FilterArray => {
   const rarities = new Set<string>();
+
   critters.forEach((item) => rarities.add(item.rarity));
 
   return ["All", ...Array.from(rarities)].sort();

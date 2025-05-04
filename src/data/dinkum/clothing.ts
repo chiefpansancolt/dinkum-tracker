@@ -5734,16 +5734,16 @@ export const getClothingById = (id: string): Clothing | undefined => {
 
 export const getClothingByType = (
   data: Clothing[],
-  type: string,
+  value: string,
 ): Clothing[] => {
-  return data.filter((item) => item.type === type);
+  return data.filter((item) => item.type === value);
 };
 
 export const getClothingBySlot = (
   data: Clothing[],
-  slot: ClothingSlot,
+  value: ClothingSlot,
 ): Clothing[] => {
-  return data.filter((item) => item.slot.includes(slot));
+  return data.filter((item) => item.slot.includes(value));
 };
 
 export const getClothingBySet = (data: Clothing[], set: string): Clothing[] => {
@@ -5760,7 +5760,7 @@ export const getClothingBySearchValue = (
 };
 
 export const getUniqueClothingSlots = (): FilterArray => {
-  return ["All", ...Object.keys(ClothingSlots)];
+  return ["All", ...Object.keys(ClothingSlots).sort()];
 };
 
 export const getUniqueClothingSets = (): FilterArray => {

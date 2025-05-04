@@ -197,10 +197,9 @@ export const crops: Crop[] = [
   },
 ];
 
-export const getCropsBySeason = (data: Crop[], season: Season): Crop[] => {
+export const getCropsBySeason = (data: Crop[], value: Season): Crop[] => {
   return data.filter(
-    (item) =>
-      item.seed && item.seed.season && item.seed.season.includes(season),
+    (item) => item.seed && item.seed.season && item.seed.season.includes(value),
   );
 };
 

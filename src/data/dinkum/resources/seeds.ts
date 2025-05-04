@@ -415,7 +415,6 @@ export const getSeedById = (id: string): Seed | undefined => {
 
 export const getUniqueSeedCategories = (): FilterArray => {
   const categories = new Set<string>();
-  categories.add("All");
 
   seeds.forEach((seed) => {
     if (seed.category) {
@@ -423,15 +422,15 @@ export const getUniqueSeedCategories = (): FilterArray => {
     }
   });
 
-  return Array.from(categories);
+  return ["All", ...Array.from(categories).sort()];
 };
 
-export const getSeedsBySeason = (data: Seed[], season: Season): Seed[] => {
-  return data.filter((item) => item.season && item.season.includes(season));
+export const getSeedsBySeason = (data: Seed[], value: Season): Seed[] => {
+  return data.filter((item) => item.season && item.season.includes(value));
 };
 
-export const getSeedsByCategory = (data: Seed[], category: string): Seed[] => {
-  return data.filter((item) => item.category === category);
+export const getSeedsByCategory = (data: Seed[], value: string): Seed[] => {
+  return data.filter((item) => item.category === value);
 };
 
 export const getSeedsBySearchValue = (

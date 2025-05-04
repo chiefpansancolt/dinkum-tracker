@@ -506,30 +506,30 @@ export const bugs: PediaItem[] = [
 
 export const getBugsByBiome = (
   data: PediaItem[],
-  biome: Biome,
+  value: Biome,
 ): PediaItem[] => {
-  return data.filter((item) => item.biome.includes(biome));
+  return data.filter((item) => item.biome.includes(value));
 };
 
 export const getBugsByRarity = (
   data: PediaItem[],
-  rarity: string,
+  value: string,
 ): PediaItem[] => {
-  return data.filter((item) => item.rarity === rarity);
+  return data.filter((item) => item.rarity === value);
 };
 
 export const getBugsBySeason = (
   data: PediaItem[],
-  season: Season,
+  value: Season,
 ): PediaItem[] => {
-  return data.filter((item) => item.seasons.includes(season));
+  return data.filter((item) => item.seasons.includes(value));
 };
 
 export const getBugsByTime = (
   data: PediaItem[],
-  timePeriod: TimePeriod,
+  value: TimePeriod,
 ): PediaItem[] => {
-  return data.filter((item) => item.timeFound.includes(timePeriod));
+  return data.filter((item) => item.timeFound.includes(value));
 };
 
 export const getBugsBySearchValue = (
@@ -543,6 +543,7 @@ export const getBugsBySearchValue = (
 
 export const getUniqueBugBiomes = (): FilterArray => {
   const biomes = new Set<string>();
+
   bugs.forEach((item) => {
     item.biome.forEach((b) => biomes.add(b));
   });
@@ -552,6 +553,7 @@ export const getUniqueBugBiomes = (): FilterArray => {
 
 export const getUniqueBugRarities = (): FilterArray => {
   const rarities = new Set<string>();
+
   bugs.forEach((item) => rarities.add(item.rarity));
 
   return ["All", ...Array.from(rarities)].sort();

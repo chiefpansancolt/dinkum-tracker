@@ -5,8 +5,15 @@ import { useEffect, useMemo, useState } from "react";
 import { Playthrough } from "@/types";
 import { getPlaythroughById } from "@/lib/localStorage";
 import { getQueryParams, setQueryParam } from "@/service/urlService";
-import { ANIMAL_TYPES, TEMPERAMENTS } from "@/data/constants";
-import { animals } from "@/data/dinkum";
+import { ANIMAL_TYPES, sortBySellHealth, TEMPERAMENTS } from "@/data/constants";
+import {
+	animals,
+	getAnimalByHabitat,
+	getAnimalBySearchValue,
+	getAnimalByTemperament,
+	getAnimalByType,
+	getUniqueAnimalHabitat,
+} from "@/data/dinkum";
 import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
 import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
@@ -27,21 +34,6 @@ export default function AnimalsPage() {
 	const [habitatFilter, setHabitatFilter] = useState<string>("All");
 	const [sortBy, setSortBy] = useState<string>("name");
 
-	const uniqueHabitats = useMemo(() => {
-		const habitats = new Set<string>();
-		habitats.add("All");
-
-		animals.forEach((animal) => {
-			if (animal.habitat) {
-				animal.habitat.forEach((habitat) => {
-					habitats.add(habitat);
-				});
-			}
-		});
-
-		return Array.from(habitats);
-	}, []);
-
 	const filters = {
 		temperament: {
 			value: temperamentFilter,
@@ -55,18 +47,12 @@ export default function AnimalsPage() {
 		},
 		habitat: {
 			value: habitatFilter,
-			options: uniqueHabitats,
+			options: getUniqueAnimalHabitat(),
 			label: "Habitat",
 		},
 		sort: {
 			value: sortBy,
-			options: [
-				{ id: "name", value: "Name (A-Z)" },
-				{ id: "sellPriceDesc", value: "Sell Price (High to Low)" },
-				{ id: "sellPriceAsc", value: "Sell Price (Low to High)" },
-				{ id: "healthDesc", value: "Health (High to Low)" },
-				{ id: "healthAsc", value: "Health (Low to High)" },
-			],
+			options: sortBySellHealth,
 			label: "Sort By",
 		},
 	};
@@ -107,31 +93,20 @@ export default function AnimalsPage() {
 	const filteredData = useMemo(() => {
 		let filtered = [...animals];
 
-		// Filter by temperament
 		if (temperamentFilter !== "All") {
-			filtered = filtered.filter((animal) => animal.temperament === temperamentFilter);
+			filtered = getAnimalByTemperament(filtered, temperamentFilter);
 		}
 
-		// Filter by type
 		if (typeFilter !== "All") {
-			filtered = filtered.filter((animal) => animal.type === typeFilter);
+			filtered = getAnimalByType(filtered, typeFilter);
 		}
 
-		// Filter by habitat
 		if (habitatFilter !== "All") {
-			filtered = filtered.filter((animal) => animal.habitat?.includes(habitatFilter));
+			filtered = getAnimalByHabitat(filtered, habitatFilter);
 		}
 
-		// Filter by search query
 		if (searchQuery) {
-			const query = searchQuery.toLowerCase();
-			filtered = filtered.filter(
-				(animal) =>
-					animal.name.toLowerCase().includes(query) ||
-					animal.type.toLowerCase().includes(query) ||
-					animal.temperament.toLowerCase().includes(query) ||
-					animal.habitat?.some((h) => h.toLowerCase().includes(query))
-			);
+			filtered = getAnimalBySearchValue(filtered, searchQuery);
 		}
 
 		return filtered;

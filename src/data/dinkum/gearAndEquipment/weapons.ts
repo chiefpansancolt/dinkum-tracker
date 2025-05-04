@@ -591,6 +591,7 @@ export const getWeaponBySearchValue = (
 
 export const getUniqueWeaponSources = (): FilterArray => {
   const sources = new Set<string>();
+
   weapons.forEach((item) => {
     if (item.source && item.source.length > 0) {
       item.source.forEach((src) => {
@@ -598,5 +599,6 @@ export const getUniqueWeaponSources = (): FilterArray => {
       });
     }
   });
+
   return ["All", ...Array.from(sources).sort()];
 };

@@ -934,3 +934,41 @@ export const animals: Animal[] = [
     type: "Tammed Animal",
   },
 ];
+
+export const getAnimalByTemperament = (
+  data: Animal[],
+  value: string,
+): Animal[] => {
+  return data.filter((item) => item.temperament === value);
+};
+
+export const getAnimalByType = (data: Animal[], value: string): Animal[] => {
+  return data.filter((item) => item.type === value);
+};
+
+export const getAnimalByHabitat = (data: Animal[], value: string): Animal[] => {
+  return data.filter((item) => item.source?.includes(value));
+};
+
+export const getAnimalBySearchValue = (
+  data: Animal[],
+  searchValue: string,
+): Animal[] => {
+  return data.filter((item) =>
+    item.name.toLowerCase().includes(searchValue.toLowerCase()),
+  );
+};
+
+export const getUniqueAnimalHabitat = () => {
+  const habitats = new Set<string>();
+
+  animals.forEach((animal) => {
+    if (animal.habitat) {
+      animal.habitat.forEach((habitat) => {
+        habitats.add(habitat);
+      });
+    }
+  });
+
+  return ["All", ...Array.from(habitats).sort()];
+};

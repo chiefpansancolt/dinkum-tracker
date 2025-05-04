@@ -544,20 +544,20 @@ export const fish: Fish[] = [
   },
 ];
 
-export const getFishByBiome = (data: Fish[], biome: Biome): Fish[] => {
-  return data.filter((item) => item.biome.includes(biome));
+export const getFishByBiome = (data: Fish[], value: Biome): Fish[] => {
+  return data.filter((item) => item.biome.includes(value));
 };
 
-export const getFishByRarity = (data: Fish[], rarity: string): Fish[] => {
-  return data.filter((item) => item.rarity === rarity);
+export const getFishByRarity = (data: Fish[], value: string): Fish[] => {
+  return data.filter((item) => item.rarity === value);
 };
 
-export const getFishBySeason = (data: Fish[], season: Season): Fish[] => {
-  return data.filter((item) => item.seasons.includes(season));
+export const getFishBySeason = (data: Fish[], value: Season): Fish[] => {
+  return data.filter((item) => item.seasons.includes(value));
 };
 
-export const getFishByTime = (data: Fish[], timePeriod: TimePeriod): Fish[] => {
-  return data.filter((item) => item.timeFound.includes(timePeriod));
+export const getFishByTime = (data: Fish[], value: TimePeriod): Fish[] => {
+  return data.filter((item) => item.timeFound.includes(value));
 };
 
 export const getFishBySearchValue = (
@@ -571,6 +571,7 @@ export const getFishBySearchValue = (
 
 export const getUniqueFishBiomes = (): FilterArray => {
   const biomes = new Set<string>();
+
   fish.forEach((item) => {
     item.biome.forEach((b) => biomes.add(b));
   });
@@ -580,6 +581,7 @@ export const getUniqueFishBiomes = (): FilterArray => {
 
 export const getUniqueFishRarities = (): FilterArray => {
   const rarities = new Set<string>();
+
   fish.forEach((item) => rarities.add(item.rarity));
 
   return ["All", ...Array.from(rarities)].sort();

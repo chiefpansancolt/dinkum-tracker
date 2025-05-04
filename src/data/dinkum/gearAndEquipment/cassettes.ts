@@ -108,9 +108,26 @@ export const cassettes: Cassette[] = [
   },
 ];
 
+export const getCassettesBySource = (
+  data: Cassette[],
+  value: string,
+): Cassette[] => {
+  return data.filter(
+    (cassette) => cassette.source && cassette.source.includes(value),
+  );
+};
+
+export const getCassettesBySearchValue = (
+  items: Cassette[],
+  searchValue: string,
+): Cassette[] => {
+  return items.filter((cassette) =>
+    cassette.name.toLowerCase().includes(searchValue.toLowerCase()),
+  );
+};
+
 export const getUniqueCassetteSources = (): FilterArray => {
   const sources = new Set<string>();
-  sources.add("All");
 
   cassettes.forEach((cassette) => {
     if (cassette.source) {
@@ -120,24 +137,5 @@ export const getUniqueCassetteSources = (): FilterArray => {
     }
   });
 
-  return Array.from(sources).sort();
-};
-
-export const getCassettesBySource = (
-  items: Cassette[],
-  source: string,
-): Cassette[] => {
-  return items.filter(
-    (cassette) => cassette.source && cassette.source.includes(source),
-  );
-};
-
-export const getCassettesBySearchValue = (
-  items: Cassette[],
-  searchValue: string,
-): Cassette[] => {
-  const lowercaseSearch = searchValue.toLowerCase();
-  return items.filter((cassette) =>
-    cassette.name.toLowerCase().includes(lowercaseSearch),
-  );
+  return ["All", ...Array.from(sources).sort()];
 };

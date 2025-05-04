@@ -7322,6 +7322,7 @@ export const getCraftingRecipesBySearchValue = (
 
 export const getUniqueCraftingRecipeSources = (): FilterObject[] => {
   const sources = new Set<string>();
+
   craftingRecipes.forEach((recipe) => {
     if (recipe.source && recipe.source.length > 0) {
       recipe.source.forEach((src) => {
@@ -7329,6 +7330,7 @@ export const getUniqueCraftingRecipeSources = (): FilterObject[] => {
       });
     }
   });
+
   return [
     { id: "All", value: "All Sources" },
     ...Array.from(sources)

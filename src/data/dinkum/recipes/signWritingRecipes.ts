@@ -396,6 +396,7 @@ export const getSignRecipesBySearchValue = (
 
 export const getUniqueSignRecipeSources = (): FilterObject[] => {
   const sources = new Set<string>();
+
   signWritingRecipes.forEach((recipe) => {
     if (recipe.source && recipe.source.length > 0) {
       recipe.source.forEach((src) => {
@@ -403,6 +404,7 @@ export const getUniqueSignRecipeSources = (): FilterObject[] => {
       });
     }
   });
+
   return [
     { id: "All", value: "All Sources" },
     ...Array.from(sources)

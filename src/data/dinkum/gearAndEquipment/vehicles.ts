@@ -545,6 +545,7 @@ export const getVehicleBySearchValue = (
 
 export const getUniqueVehicleSources = (): FilterArray => {
   const sources = new Set<string>();
+
   vehicles.forEach((item) => {
     if (item.source && item.source.length > 0) {
       item.source.forEach((src) => {
@@ -552,15 +553,18 @@ export const getUniqueVehicleSources = (): FilterArray => {
       });
     }
   });
+
   return ["All", ...Array.from(sources).sort()];
 };
 
 export const getUniqueVehicleReqType = (): FilterArray => {
   const types = new Set<string>();
+
   vehicles.forEach((item) => {
     if (item.requirementType) {
       types.add(item.requirementType);
     }
   });
+
   return ["All", ...Array.from(types).sort()];
 };

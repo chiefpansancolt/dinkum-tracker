@@ -1158,16 +1158,16 @@ export const getCollectableBuildings = (): Building[] => {
 
 export const getBuidlingsByDeedType = (
   data: Building[],
-  deedType: DeedType,
+  value: DeedType,
 ): Building[] => {
-  return data.filter((item) => item.deedType === deedType);
+  return data.filter((item) => item.deedType === value);
 };
 
 export const getBuidlingsByNPC = (
   data: Building[],
-  npc: string,
+  value: string,
 ): Building[] => {
-  return data.filter((item) => item.npc === npc);
+  return data.filter((item) => item.npc === value);
 };
 
 export const getBuildingsBySearchValue = (

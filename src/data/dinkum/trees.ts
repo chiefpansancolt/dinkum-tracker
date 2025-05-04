@@ -294,7 +294,6 @@ export const trees: Tree[] = [
 
 export const getUniqueTreeLocations = (): FilterArray => {
   const locations = new Set<string>();
-  locations.add("All");
 
   trees.forEach((tree) => {
     if (tree.locations) {
@@ -304,12 +303,12 @@ export const getUniqueTreeLocations = (): FilterArray => {
     }
   });
 
-  return Array.from(locations);
+  return ["All", ...Array.from(locations).sort()];
 };
 
-export const getTreesByLocation = (data: Tree[], biome: Biome): Tree[] => {
+export const getTreesByLocation = (data: Tree[], value: Biome): Tree[] => {
   return data.filter(
-    (item) => item.locations && item.locations.includes(biome),
+    (item) => item.locations && item.locations.includes(value),
   );
 };
 

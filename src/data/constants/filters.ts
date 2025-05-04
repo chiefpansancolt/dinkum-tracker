@@ -29,3 +29,11 @@ export const sortByGrowth: FilterObject[] = [
   { id: "growthPeriodAsc", value: "Growth Period (Fastest)" },
   { id: "growthPeriodDesc", value: "Growth Period (Longest)" },
 ];
+
+export const sortBySellHealth: FilterObject[] = [
+  { id: "name", value: "Name (A-Z)" },
+  { id: "sellPriceDesc", value: "Sell Price (High to Low)" },
+  { id: "sellPriceAsc", value: "Sell Price (Low to High)" },
+  { id: "healthDesc", value: "Health (High to Low)" },
+  { id: "healthAsc", value: "Health (Low to High)" },
+];
