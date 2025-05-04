@@ -2,7 +2,7 @@
 
 A comprehensive tracking application for your Dinkum adventures. Manage multiple playthroughs, track collections, and monitor progress all in one place - all saved locally in your browser.
 
-[Dinkum Tracker Overview](.github/images/Dinkum_Tracker_Overview.png)
+![Dinkum Tracker Overview](.github/images/Dinkum_Tracker_Overview.png)
 
 ## 🌟 Features
 
