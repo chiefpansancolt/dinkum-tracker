@@ -2,22 +2,19 @@
 
 import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
-import { Biome, FilterArray, FilterObject, Playthrough, Season, TimePeriod } from "@/types";
+import {
+	Biome,
+	FilterArray,
+	FilterKey,
+	FilterObject,
+	Playthrough,
+	Season,
+	TimePeriod,
+} from "@/types";
 import { getPlaythroughById, updatePlaythroughData } from "@/lib/storage";
 import { getQueryParams, setQueryParam } from "@/service/urlService";
 import { collectedFilter, donatedFilter } from "@/data/constants";
-import {
-	fish,
-	getFishByBiome,
-	getFishByRarity,
-	getFishBySearchValue,
-	getFishBySeason,
-	getFishByTime,
-	getUniqueFishBiomes,
-	getUniqueFishRarities,
-	getUniqueFishSeasons,
-	getUniqueFishTimePeriods,
-} from "@/data/dinkum/pedia/fish";
+import { fish, getFishByBiome, getFishByRarity, getFishBySearchValue, getFishBySeason, getFishByTime, getUniqueFishBiomes, getUniqueFishRarities, getUniqueFishSeasons, getUniqueFishTimePeriods } from "@/data/dinkum/pedia/fish";
 import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
 import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
@@ -109,8 +106,8 @@ export default function FishPage() {
 	const handleFilterChange = (name: string, value: string) => {
 		setFilters((prev) => ({
 			...prev,
-			[name]: {
-				...prev[name],
+			[name as FilterKey]: {
+				...prev[name as FilterKey],
 				value,
 			},
 		}));

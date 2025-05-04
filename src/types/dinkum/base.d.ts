@@ -1,5 +1,6 @@
 import { BIOMES, RARITY_LEVELS, SEASONS, TIME_PERIODS } from "@/data/constants";
 
+
 export type BuyUnits = "Dinks" | "Permit Points";
 export type Biome = (typeof BIOMES)[number];
 export type TimePeriod = (typeof TIME_PERIODS)[number];
@@ -13,6 +14,14 @@ export type Weekday =
   | "Thursday"
   | "Friday"
   | "Saturday";
+  
+export type FilterKey =
+  | "biome"
+  | "rarity"
+  | "season"
+  | "time"
+  | "collection"
+  | "donation";
 
 export interface Resource {
   name: string;
