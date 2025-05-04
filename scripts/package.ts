@@ -1,5 +1,6 @@
 import { build } from "electron-builder";
 
+
 async function packageApp() {
   try {
     await import("./build-electron");
@@ -8,7 +9,7 @@ async function packageApp() {
       config: {
         appId: "com.dinkumtracker.app",
         productName: "Dinkum Tracker",
-        files: ["dist/**/*", "electron/next/**/*"],
+        files: ["dist/**/*", "!dist/electron", "package.json"],
         directories: {
           output: "release",
         },

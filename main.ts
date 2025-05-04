@@ -59,7 +59,7 @@ async function createWindow() {
   const startUrl = isDev
     ? "http://localhost:3000"
     : url.format({
-        pathname: path.join(__dirname, "../next/index.html"),
+        pathname: path.join(__dirname, "next/index.html"),
         protocol: "file:",
         slashes: true,
       });

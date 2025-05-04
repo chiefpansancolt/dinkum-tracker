@@ -3,13 +3,14 @@
         "target": "ES2018",
         "module": "CommonJS",
         "moduleResolution": "node",
-        "outDir": "../dist",
+        "outDir": "dist",
         "rootDir": ".",
         "strict": true,
         "esModuleInterop": true,
         "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true
+        "forceConsistentCasingInFileNames": true,
+        "types": ["node"]
     },
-    "include": ["./**/*.ts"],
+    "include": ["main.ts", "preload.ts"],
     "exclude": ["node_modules"]
 }

@@ -12,7 +12,7 @@
         "format:check": "prettier . --check",
         "postinstall": "flowbite-react patch",
         "electron": "electron .",
-        "electron:dev": "concurrently \"pnpm dev\" \"wait-on http://localhost:3000 && electron .\"",
+        "electron:dev": "concurrently \"pnpm dev\" \"tsc -p electron-tsconfig.json && wait-on http://localhost:3000 && electron .\"",
         "electron:build": "ts-node scripts/build-electron.ts",
         "package": "electron-builder build --publish never",
         "package:publish": "electron-builder build --publish always"
@@ -22,14 +22,14 @@
         "productName": "Dinkum Tracker",
         "files": [
             "dist/**/*",
-            "electron/next/**/*"
+            "package.json"
         ],
         "directories": {
             "output": "release"
         },
         "mac": {
-            "category": "public.app-category.lifestyle",
-            "icon": "public/icon.icns"
+            "category": "public.app.category.lifestyle",
+            "icon": "public/icon.ico"
         },
         "win": {
             "icon": "public/icon.ico"

@@ -57,3 +57,7 @@ Thumbs.db
 # Logs
 logs
 *.log
+
+# Electron
+/dist
+/release

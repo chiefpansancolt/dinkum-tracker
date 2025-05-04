@@ -2,7 +2,7 @@ import * as fs from "fs";
 import * as path from "path";
 import { exec } from "child_process";
 
-exec("next build && next export -o electron/next", (error, stdout, stderr) => {
+exec("next build && next export -o dist/next", (error, stdout, stderr) => {
   if (error) {
     console.error(`Error building Next.js app: ${error}`);
     return;
@@ -16,7 +16,7 @@ exec("next build && next export -o electron/next", (error, stdout, stderr) => {
     fs.mkdirSync(outDir, { recursive: true });
   }
 
-  exec("tsc --project electron/tsconfig.json", (error, stdout, stderr) => {
+  exec("tsc --project electron-tsconfig.json", (error, stdout, stderr) => {
     if (error) {
       console.error(`Error building Electron: ${error}`);
       return;
