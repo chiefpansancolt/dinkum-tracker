@@ -77,7 +77,7 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 	const [recipesOpen, setRecipesOpen] = useState(false);
 	const [gearOpen, setGearOpen] = useState(false);
 	const [decorOpen, setDecorOpen] = useState(false);
-	const [resourcesOpen, setResourcesOpen] = useState(false);
+	const [plansOpen, setPlantsOpen] = useState(false);
 
 	const playthroughId = params?.id as string;
 	const isPlaythroughRoute = pathname?.includes("/playthrough/") && playthroughId;
@@ -111,10 +111,11 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 					pathname.includes("/furniture")
 			);
 
-			setResourcesOpen(
-				pathname.includes("/resources") ||
+			setPlantsOpen(
+				pathname.includes("/trees") ||
 					pathname.includes("/seeds") ||
-					pathname.includes("/crops")
+					pathname.includes("/crops") ||
+					pathname.includes("/flowers")
 			);
 		}
 	}, [pathname]);
@@ -157,6 +158,81 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 						>
 							Items Breakdown
 						</SidebarLink>
+					</li>
+
+					<div className="mt-6 mb-2 border-t border-gray-200 pt-3 dark:border-gray-700">
+						<p className="px-2 text-sm font-semibold text-gray-200">
+							Resource References
+						</p>
+					</div>
+
+					<li>
+						<SidebarLink
+							href="/dinkum/animals"
+							currentPath={pathname}
+							icon={<FaOtter />}
+						>
+							Animals
+						</SidebarLink>
+					</li>
+
+					<li>
+						<SidebarLink
+							href="/dinkum/resources"
+							currentPath={pathname}
+							icon={<GiMineralPearls />}
+						>
+							Resources
+						</SidebarLink>
+					</li>
+
+					<li>
+						<SidebarCollapse
+							label="Plants"
+							icon={<FaSeedling className="h-5 w-5" />}
+							open={plansOpen}
+							onToggle={() => setPlantsOpen(!plansOpen)}
+							active={
+								pathname?.includes("/dinkum/trees") ||
+								pathname?.includes("/dinkum/seeds") ||
+								pathname?.includes("/dinkum/crops") ||
+								pathname?.includes("/dinkum/flowers")
+							}
+						>
+							<SidebarLink
+								href="/dinkum/seeds"
+								currentPath={pathname}
+								icon={<FaSeedling />}
+								indented
+							>
+								Seeds
+							</SidebarLink>
+
+							<SidebarLink
+								href="/dinkum/crops"
+								currentPath={pathname}
+								icon={<GiWheat />}
+								indented
+							>
+								Crops
+							</SidebarLink>
+							<SidebarLink
+								href="/dinkum/flowers"
+								currentPath={pathname}
+								icon={<LuFlower2 />}
+								indented
+							>
+								Flowers
+							</SidebarLink>
+							<SidebarLink
+								href="/dinkum/trees"
+								currentPath={pathname}
+								icon={<FaTree />}
+								indented
+							>
+								Trees
+							</SidebarLink>
+						</SidebarCollapse>
 					</li>
 
 					{isPlaythroughRoute && (
@@ -277,16 +353,6 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 									icon={<FaTools />}
 								>
 									Skills
-								</SidebarLink>
-							</li>
-
-							<li>
-								<SidebarLink
-									href={`/playthrough/${playthroughId}/animals`}
-									currentPath={pathname}
-									icon={<FaOtter />}
-								>
-									Animals
 								</SidebarLink>
 							</li>
 
@@ -462,70 +528,11 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 									</SidebarLink>
 								</SidebarCollapse>
 							</li>
-
-							<li>
-								<SidebarCollapse
-									label="Resources & Plants"
-									icon={<FaBoxOpen className="h-5 w-5" />}
-									open={resourcesOpen}
-									onToggle={() => setResourcesOpen(!resourcesOpen)}
-									active={
-										pathname?.includes(
-											`/playthrough/${playthroughId}/resources`
-										) ||
-										pathname?.includes(`/playthrough/${playthroughId}/seeds`) ||
-										pathname?.includes(`/playthrough/${playthroughId}/crops`)
-									}
-								>
-									<SidebarLink
-										href={`/playthrough/${playthroughId}/resources`}
-										currentPath={pathname}
-										icon={<GiMineralPearls />}
-										indented
-									>
-										Resources
-									</SidebarLink>
-
-									<SidebarLink
-										href={`/playthrough/${playthroughId}/seeds`}
-										currentPath={pathname}
-										icon={<FaSeedling />}
-										indented
-									>
-										Seeds
-									</SidebarLink>
-
-									<SidebarLink
-										href={`/playthrough/${playthroughId}/crops`}
-										currentPath={pathname}
-										icon={<GiWheat />}
-										indented
-									>
-										Crops
-									</SidebarLink>
-									<SidebarLink
-										href={`/playthrough/${playthroughId}/flowers`}
-										currentPath={pathname}
-										icon={<LuFlower2 />}
-										indented
-									>
-										Flowers
-									</SidebarLink>
-									<SidebarLink
-										href={`/playthrough/${playthroughId}/trees`}
-										currentPath={pathname}
-										icon={<FaTree />}
-										indented
-									>
-										Trees
-									</SidebarLink>
-								</SidebarCollapse>
-							</li>
 						</>
 					)}
 				</ul>
 
-				<div className="bg-accent dark:border-primary absolute right-0 bottom-0 left-0 border-t border-gray-200 p-4">
+				<div className="bg-accent border-t border-gray-200 dark:border-gray-700 absolute right-0 bottom-0 left-0 p-4">
 					<ul className="space-y-2">
 						<li>
 							<SidebarLink

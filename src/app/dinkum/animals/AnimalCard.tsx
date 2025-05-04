@@ -1,5 +1,5 @@
 import { Badge } from "flowbite-react";
-import { Animal } from "@/types";
+import { CollectionCardProps } from "@/types";
 import DinkValue from "@/playthrough/ui/itemcard/DinkValue";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
 import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
@@ -7,11 +7,7 @@ import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
 import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
 import ItemResources from "@/playthrough/ui/itemcard/ItemResources";
 
-interface AnimalCardProps {
-	animal: Animal;
-}
-
-const AnimalCard: React.FC<AnimalCardProps> = ({ animal }) => {
+const AnimalCard = ({ record }: CollectionCardProps) => {
 	const getTemperamentColor = (temperament: string) => {
 		switch (temperament) {
 			case "Passive":
@@ -42,34 +38,34 @@ const AnimalCard: React.FC<AnimalCardProps> = ({ animal }) => {
 		<ItemCard
 			renderHeader={() => (
 				<ItemHeader
-					title={animal.name}
+					title={record.name}
 					renderRightComp={() => (
 						<div className="flex flex-col gap-1">
-							<Badge color={getTemperamentColor(animal.temperament)}>
-								{animal.temperament}
+							<Badge color={getTemperamentColor(record.temperament)}>
+								{record.temperament}
 							</Badge>
-							<Badge color={getTypeColor(animal.type)}>{animal.type}</Badge>
+							<Badge color={getTypeColor(record.type)}>{record.type}</Badge>
 						</div>
 					)}
 				/>
 			)}
 			renderImage={() => (
-				<ItemImage src={animal.img} name={animal.name} isCollected={false} />
+				<ItemImage src={record.img} name={record.name} isCollected={false} />
 			)}
 			renderDetails={() => (
 				<div className="grid grid-cols-1 gap-2">
-					{animal.health && (
-						<ItemDetail label="Health" details={animal.health.toString()} />
+					{record.health && (
+						<ItemDetail label="Health" details={record.health.toString()} />
 					)}
 
-					{animal.habitat && animal.habitat.length > 0 && (
+					{record.habitat && record.habitat.length > 0 && (
 						<div className="grid grid-cols-12">
 							<div className="col-span-4 font-medium">Habitat:</div>
 							<div className="col-span-8">
 								<div className="flex flex-wrap gap-1">
-									{animal.habitat.map((habitat, index) => (
+									{record.habitat.map((habitat: string, index: number) => (
 										<Badge
-											key={`${animal.id}-habitat-${index}`}
+											key={`${record.id}-habitat-${index}`}
 											color="blue"
 											className="mr-1"
 										>
@@ -81,41 +77,41 @@ const AnimalCard: React.FC<AnimalCardProps> = ({ animal }) => {
 						</div>
 					)}
 
-					{animal.source && <ItemDetail label="Source" details={animal.source} />}
+					{record.source && <ItemDetail label="Source" details={record.source} />}
 
-					{animal.buyPrice && <DinkValue label="Buy Price" price={animal.buyPrice} />}
+					{record.buyPrice && <DinkValue label="Buy Price" price={record.buyPrice} />}
 
-					{animal.baseSellPrice && (
+					{record.baseSellPrice && (
 						<DinkValue
 							label="Sell Price"
-							price={animal.baseSellPrice}
+							price={record.baseSellPrice}
 							showCommerceLicenses
 						/>
 					)}
 
-					{animal.maxSellPrice && animal.maxSellPrice !== animal.baseSellPrice && (
+					{record.maxSellPrice && record.maxSellPrice !== record.baseSellPrice && (
 						<ItemDetail
 							label="Max Sell Price"
-							details={`${animal.maxSellPrice.toLocaleString()} Dinks`}
+							details={`${record.maxSellPrice.toLocaleString()} Dinks`}
 						/>
 					)}
 
-					{animal.researchReward && (
+					{record.researchReward && (
 						<ItemDetail
 							label="Research Reward"
-							details={`${animal.researchReward.toLocaleString()} Dinks`}
+							details={`${record.researchReward.toLocaleString()} Dinks`}
 						/>
 					)}
 
-					{animal.drops && animal.drops.length > 0 && (
-						<ItemResources id={animal.id} label="Drops" items={animal.drops} />
+					{record.drops && record.drops.length > 0 && (
+						<ItemResources id={record.id} label="Drops" items={record.drops} />
 					)}
 
-					{animal.produces && animal.produces.length > 0 && (
+					{record.produces && record.produces.length > 0 && (
 						<ItemResources
-							id={`${animal.id}-prod`}
+							id={`${record.id}-prod`}
 							label="Produces"
-							items={animal.produces}
+							items={record.produces}
 						/>
 					)}
 				</div>

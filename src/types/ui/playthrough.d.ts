@@ -177,7 +177,8 @@ export interface CollectionCardProps {
     | Flower
     | Seed
     | Crop
-    | Tree;
+    | Tree
+    | Animal;
   isCollected?: boolean;
   isDonated?: boolean;
   onToggleCollected?: (id: string, isCollected: boolean) => void;

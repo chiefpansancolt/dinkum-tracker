@@ -1,9 +1,6 @@
 "use client";
 
-import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
-import { Playthrough } from "@/types";
-import { getPlaythroughById } from "@/lib/localStorage";
 import { getQueryParams, setQueryParam } from "@/service/urlService";
 import { ANIMAL_TYPES, sortBySellHealth, TEMPERAMENTS } from "@/data/constants";
 import {
@@ -14,8 +11,6 @@ import {
 	getAnimalByType,
 	getUniqueAnimalHabitat,
 } from "@/data/dinkum";
-import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
-import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
 import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
 import FilterBar from "@/playthrough/ui/FilterBar";
@@ -24,9 +19,6 @@ import TabHeader from "@/playthrough/ui/TabHeader";
 import AnimalCard from "./AnimalCard";
 
 export default function AnimalsPage() {
-	const params = useParams();
-	const playthroughId = typeof params.id === "string" ? params.id : "";
-	const [playthrough, setPlaythrough] = useState<Playthrough | null>(null);
 	const [isLoading, setIsLoading] = useState(true);
 	const [searchQuery, setSearchQuery] = useState<string>("");
 	const [temperamentFilter, setTemperamentFilter] = useState<string>("All");
@@ -58,17 +50,13 @@ export default function AnimalsPage() {
 	};
 
 	useEffect(() => {
-		if (playthroughId) {
-			const data = getPlaythroughById(playthroughId);
-			setPlaythrough(data);
-			setIsLoading(false);
+		setIsLoading(false);
 
-			const params = getQueryParams();
-			if (params.q) {
-				setSearchQuery(params.q);
-			}
+		const params = getQueryParams();
+		if (params.q) {
+			setSearchQuery(params.q);
 		}
-	}, [playthroughId]);
+	}, []);
 
 	useEffect(() => {
 		if (searchQuery) {
@@ -141,42 +129,35 @@ export default function AnimalsPage() {
 		return <LoadingPlaythrough message="Loading animals information..." />;
 	}
 
-	if (!playthrough) {
-		return <NotFoundCard message="Playthrough not found" />;
-	}
-
 	return (
-		<>
-			<BreadcrumbsComp id={playthroughId} name={playthrough.name} routeName="Animals" />
-			<div className="space-y-6 p-6">
-				<TabHeader title="Animals" enableCollectionCount={false} enableSaveAlert={false} />
+		<div className="space-y-6 p-6">
+			<TabHeader title="Animals" enableCollectionCount={false} enableSaveAlert={false} />
 
-				<FilterBar
-					showFilters={true}
-					filters={filters}
-					onFilterChange={handleFilterChange}
-					showSearch={true}
-					searchValue={searchQuery}
-					onSearchChange={(value) => setSearchQuery(value)}
-					searchPlaceholder="Search animals by name, type, or habitat..."
-				/>
+			<FilterBar
+				showFilters={true}
+				filters={filters}
+				onFilterChange={handleFilterChange}
+				showSearch={true}
+				searchValue={searchQuery}
+				onSearchChange={(value) => setSearchQuery(value)}
+				searchPlaceholder="Search animals by name, type, or habitat..."
+			/>
 
-				<FilterDetails
-					title="animals"
-					filteredCount={sortedData.length}
-					totalCount={animals.length}
-				/>
+			<FilterDetails
+				title="animals"
+				filteredCount={sortedData.length}
+				totalCount={animals.length}
+			/>
 
-				{sortedData.length === 0 ? (
-					<EmptyFilterCard />
-				) : (
-					<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-						{sortedData.map((animal) => (
-							<AnimalCard key={animal.id} animal={animal} />
-						))}
-					</div>
-				)}
-			</div>
-		</>
+			{sortedData.length === 0 ? (
+				<EmptyFilterCard />
+			) : (
+				<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+					{sortedData.map((animal) => (
+						<AnimalCard key={animal.id} record={animal} />
+					))}
+				</div>
+			)}
+		</div>
 	);
 }

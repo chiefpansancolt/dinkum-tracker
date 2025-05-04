@@ -1,9 +1,7 @@
 "use client";
 
-import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
-import { Biome, Playthrough } from "@/types";
-import { getPlaythroughById } from "@/lib/localStorage";
+import { Biome } from "@/types";
 import { getQueryParams, setQueryParam } from "@/service/urlService";
 import { sortByGrowth } from "@/data/constants";
 import {
@@ -12,8 +10,6 @@ import {
 	getUniqueTreeLocations,
 	trees,
 } from "@/data/dinkum";
-import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
-import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
 import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
 import FilterBar from "@/playthrough/ui/FilterBar";
@@ -22,9 +18,6 @@ import TabHeader from "@/playthrough/ui/TabHeader";
 import TreeCard from "./TreeCard";
 
 export default function TreesPage() {
-	const params = useParams();
-	const playthroughId = typeof params.id === "string" ? params.id : "";
-	const [playthrough, setPlaythrough] = useState<Playthrough | null>(null);
 	const [isLoading, setIsLoading] = useState(true);
 	const [searchQuery, setSearchQuery] = useState<string>("");
 	const [locationFilter, setLocationFilter] = useState<string>("All");
@@ -44,17 +37,13 @@ export default function TreesPage() {
 	};
 
 	useEffect(() => {
-		if (playthroughId) {
-			const data = getPlaythroughById(playthroughId);
-			setPlaythrough(data);
-			setIsLoading(false);
+		setIsLoading(false);
 
-			const params = getQueryParams();
-			if (params.q) {
-				setSearchQuery(params.q);
-			}
+		const params = getQueryParams();
+		if (params.q) {
+			setSearchQuery(params.q);
 		}
-	}, [playthroughId]);
+	}, []);
 
 	useEffect(() => {
 		if (searchQuery) {
@@ -107,42 +96,35 @@ export default function TreesPage() {
 		return <LoadingPlaythrough message="Loading trees information..." />;
 	}
 
-	if (!playthrough) {
-		return <NotFoundCard message="Playthrough not found" />;
-	}
-
 	return (
-		<>
-			<BreadcrumbsComp id={playthroughId} name={playthrough.name} routeName="Trees" />
-			<div className="space-y-6 p-6">
-				<TabHeader title="Trees" enableCollectionCount={false} enableSaveAlert={false} />
+		<div className="space-y-6 p-6">
+			<TabHeader title="Trees" enableCollectionCount={false} enableSaveAlert={false} />
 
-				<FilterBar
-					showFilters={true}
-					filters={filters}
-					onFilterChange={handleFilterChange}
-					showSearch={true}
-					searchValue={searchQuery}
-					onSearchChange={(value) => setSearchQuery(value)}
-					searchPlaceholder="Search trees by name..."
-				/>
+			<FilterBar
+				showFilters={true}
+				filters={filters}
+				onFilterChange={handleFilterChange}
+				showSearch={true}
+				searchValue={searchQuery}
+				onSearchChange={(value) => setSearchQuery(value)}
+				searchPlaceholder="Search trees by name..."
+			/>
 
-				<FilterDetails
-					title="trees"
-					filteredCount={sortedData.length}
-					totalCount={trees.length}
-				/>
+			<FilterDetails
+				title="trees"
+				filteredCount={sortedData.length}
+				totalCount={trees.length}
+			/>
 
-				{sortedData.length === 0 ? (
-					<EmptyFilterCard />
-				) : (
-					<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-						{sortedData.map((item) => (
-							<TreeCard key={item.id} record={item} />
-						))}
-					</div>
-				)}
-			</div>
-		</>
+			{sortedData.length === 0 ? (
+				<EmptyFilterCard />
+			) : (
+				<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+					{sortedData.map((item) => (
+						<TreeCard key={item.id} record={item} />
+					))}
+				</div>
+			)}
+		</div>
 	);
 }

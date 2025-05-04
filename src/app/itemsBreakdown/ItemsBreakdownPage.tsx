@@ -321,7 +321,7 @@ export default function ItemsBreakdownPage() {
 
 	return (
 		<div className="space-y-6">
-			<TabHeader title="Buildings" enableCollectionCount={false} enableSaveAlert={false} />
+			<TabHeader title="Items Breakdown" enableCollectionCount={false} enableSaveAlert={false} />
 
 			<FilterBar
 				showFilters={true}

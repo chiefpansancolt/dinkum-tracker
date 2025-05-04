@@ -1,9 +1,7 @@
 "use client";
 
-import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
-import { Playthrough, Season } from "@/types";
-import { getPlaythroughById } from "@/lib/localStorage";
+import { Season } from "@/types";
 import { getQueryParams, setQueryParam } from "@/service/urlService";
 import { SEASONS } from "@/data/constants";
 import {
@@ -13,8 +11,6 @@ import {
 	getUniqueSeedCategories,
 	seeds,
 } from "@/data/dinkum";
-import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
-import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
 import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
 import FilterBar from "@/playthrough/ui/FilterBar";
@@ -23,9 +19,6 @@ import TabHeader from "@/playthrough/ui/TabHeader";
 import SeedCard from "./SeedCard";
 
 export default function SeedsPage() {
-	const params = useParams();
-	const playthroughId = typeof params.id === "string" ? params.id : "";
-	const [playthrough, setPlaythrough] = useState<Playthrough | null>(null);
 	const [isLoading, setIsLoading] = useState(true);
 	const [searchQuery, setSearchQuery] = useState<string>("");
 	const [seasonFilter, setSeasonFilter] = useState<string>("All");
@@ -57,17 +50,13 @@ export default function SeedsPage() {
 	};
 
 	useEffect(() => {
-		if (playthroughId) {
-			const data = getPlaythroughById(playthroughId);
-			setPlaythrough(data);
-			setIsLoading(false);
+		setIsLoading(false);
 
-			const params = getQueryParams();
-			if (params.q) {
-				setSearchQuery(params.q);
-			}
+		const params = getQueryParams();
+		if (params.q) {
+			setSearchQuery(params.q);
 		}
-	}, [playthroughId]);
+	}, []);
 
 	useEffect(() => {
 		if (searchQuery) {
@@ -134,42 +123,35 @@ export default function SeedsPage() {
 		return <LoadingPlaythrough message="Loading seeds information..." />;
 	}
 
-	if (!playthrough) {
-		return <NotFoundCard message="Playthrough not found" />;
-	}
-
 	return (
-		<>
-			<BreadcrumbsComp id={playthroughId} name={playthrough.name} routeName="Seeds" />
-			<div className="space-y-6 p-6">
-				<TabHeader title="Seeds" enableCollectionCount={false} enableSaveAlert={false} />
+		<div className="space-y-6 p-6">
+			<TabHeader title="Seeds" enableCollectionCount={false} enableSaveAlert={false} />
 
-				<FilterBar
-					showFilters={true}
-					filters={filters}
-					onFilterChange={handleFilterChange}
-					showSearch={true}
-					searchValue={searchQuery}
-					onSearchChange={(value) => setSearchQuery(value)}
-					searchPlaceholder="Search seeds by name..."
-				/>
+			<FilterBar
+				showFilters={true}
+				filters={filters}
+				onFilterChange={handleFilterChange}
+				showSearch={true}
+				searchValue={searchQuery}
+				onSearchChange={(value) => setSearchQuery(value)}
+				searchPlaceholder="Search seeds by name..."
+			/>
 
-				<FilterDetails
-					title="seeds"
-					filteredCount={sortedData.length}
-					totalCount={seeds.length}
-				/>
+			<FilterDetails
+				title="seeds"
+				filteredCount={sortedData.length}
+				totalCount={seeds.length}
+			/>
 
-				{sortedData.length === 0 ? (
-					<EmptyFilterCard />
-				) : (
-					<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-						{sortedData.map((item) => (
-							<SeedCard key={item.id} record={item} />
-						))}
-					</div>
-				)}
-			</div>
-		</>
+			{sortedData.length === 0 ? (
+				<EmptyFilterCard />
+			) : (
+				<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+					{sortedData.map((item) => (
+						<SeedCard key={item.id} record={item} />
+					))}
+				</div>
+			)}
+		</div>
 	);
 }

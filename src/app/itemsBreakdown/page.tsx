@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function ResourcesRoute() {
 	return (
-		<div className="m-4">
+		<div className="m-6">
 			<ItemsBreakdownPage />
 		</div>
 	);
