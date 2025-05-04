@@ -1,3 +1,3 @@
-export default function PlaythroughLayout({ children }: { children: React.ReactNode }) {
+export default function DinkumLayout({ children }: { children: React.ReactNode }) {
 	return <div className="relative">{children}</div>;
 }
