@@ -10,8 +10,8 @@ import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { HiPlus } from "react-icons/hi";
 import { Playthrough } from "@/types/app";
-import { getPlaythroughs } from "@/lib/localStorage";
 import { getDefaultSortPreference } from "@/lib/services/dataService";
+import { getPlaythroughs } from "@/lib/storage";
 import PlaythroughCard from "./Card";
 
 const calculateCompletion = (playthrough: Playthrough): number => {
@@ -60,11 +60,14 @@ export default function PlaythroughsPage() {
 
 	useEffect(() => {
 		if (typeof window !== "undefined") {
-			const defaultSort = getDefaultSortPreference();
-			setSortOption(defaultSort);
+			getDefaultSortPreference().then((defaultSort) => {
+				setSortOption(defaultSort);
+			});
 
-			setPlaythroughs(getPlaythroughs());
-			setIsLoading(false);
+			getPlaythroughs().then((data) => {
+				setPlaythroughs(data);
+				setIsLoading(false);
+			});
 		}
 	}, []);
 
@@ -81,7 +84,9 @@ export default function PlaythroughsPage() {
 	}, [playthroughs, searchQuery, sortOption, sortPlaythroughs]);
 
 	const handleDelete = () => {
-		setPlaythroughs(getPlaythroughs());
+		getPlaythroughs().then((data) => {
+			setPlaythroughs(data);
+		});
 	};
 
 	const handleFilterChange = (name: string, value: string) => {

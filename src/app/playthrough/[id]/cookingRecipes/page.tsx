@@ -5,8 +5,8 @@ import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { HiX } from "react-icons/hi";
 import { Playthrough } from "@/types";
-import { getPlaythroughById, updatePlaythroughData } from "@/lib/localStorage";
 import { getBuffIcon } from "@/lib/services/buffIconService";
+import { getPlaythroughById, updatePlaythroughData } from "@/lib/storage";
 import { getQueryParams, setQueryParam } from "@/service/urlService";
 import { unlockedFilter } from "@/data/constants";
 import {
@@ -55,14 +55,15 @@ export default function CookingRecipesPage() {
 
 	useEffect(() => {
 		if (playthroughId) {
-			const data = getPlaythroughById(playthroughId);
-			setPlaythrough(data);
+			getPlaythroughById(playthroughId).then((data) => {
+				setPlaythrough(data);
 
-			if (data) {
-				setLocalState(data.cookingRecipes || {});
-			}
+				if (data) {
+					setLocalState(data.cookingRecipes || {});
+				}
 
-			setIsLoading(false);
+				setIsLoading(false);
+			});
 
 			const params = getQueryParams();
 			if (params.q) {
@@ -91,10 +92,10 @@ export default function CookingRecipesPage() {
 		});
 	};
 
-	const handleSave = () => {
+	const handleSave = async () => {
 		if (!isDirty) return false;
 
-		const success = updatePlaythroughData(playthroughId, {
+		const success = await updatePlaythroughData(playthroughId, {
 			cookingRecipes: localState,
 		});
 

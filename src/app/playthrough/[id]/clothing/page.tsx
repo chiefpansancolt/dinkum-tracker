@@ -3,7 +3,7 @@
 import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { ClothingSlot, Playthrough } from "@/types";
-import { getPlaythroughById, updatePlaythroughData } from "@/lib/localStorage";
+import { getPlaythroughById, updatePlaythroughData } from "@/lib/storage";
 import { getQueryParams, setQueryParam } from "@/service/urlService";
 import { ClothingSlots, collectedFilter } from "@/data/constants";
 import {
@@ -64,14 +64,15 @@ export default function ClothingPage() {
 
 	useEffect(() => {
 		if (playthroughId) {
-			const data = getPlaythroughById(playthroughId);
-			setPlaythrough(data);
+			getPlaythroughById(playthroughId).then((data) => {
+				setPlaythrough(data);
 
-			if (data) {
-				setLocalState(data.clothing || {});
-			}
+				if (data) {
+					setLocalState(data.clothing || {});
+				}
 
-			setIsLoading(false);
+				setIsLoading(false);
+			});
 
 			const params = getQueryParams();
 			if (params.q) {
@@ -111,10 +112,10 @@ export default function ClothingPage() {
 		});
 	};
 
-	const handleSave = () => {
+	const handleSave = async () => {
 		if (!isDirty) return false;
 
-		const success = updatePlaythroughData(playthroughId, {
+		const success = await updatePlaythroughData(playthroughId, {
 			clothing: localState,
 		});
 

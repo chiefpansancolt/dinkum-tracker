@@ -4,7 +4,6 @@ import { Alert, Badge, Button, Card, FileInput, Label, Select } from "flowbite-r
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { HiDownload, HiInformationCircle, HiTrash, HiUpload } from "react-icons/hi";
-import { getPlaythroughs } from "@/lib/localStorage";
 import {
 	clearAllData,
 	downloadData,
@@ -12,6 +11,7 @@ import {
 	importData,
 	saveDefaultSortPreference,
 } from "@/lib/services/dataService";
+import { getPlaythroughs } from "@/lib/storage";
 
 const SettingsPage = () => {
 	const fileInputRef = useRef<HTMLInputElement>(null);
@@ -25,8 +25,10 @@ const SettingsPage = () => {
 
 	useEffect(() => {
 		if (typeof window !== "undefined") {
-			setDefaultSort(getDefaultSortPreference());
-			setPlaythroughCount(getPlaythroughs().length);
+			getDefaultSortPreference().then((defaultSort) => {
+				setDefaultSort(defaultSort);
+			});
+			getPlaythroughs().then((playthroughs) => setPlaythroughCount(playthroughs.length));
 		}
 	}, []);
 
@@ -43,30 +45,44 @@ const SettingsPage = () => {
 	};
 
 	const handleImportData = async () => {
-		if (!fileInputRef.current?.files?.length) {
-			return;
-		}
-
-		try {
-			const file = fileInputRef.current.files[0];
-			const success = await importData(file);
-
+		if (typeof window !== "undefined" && "electron" in window) {
+			const success = await importData();
 			if (success) {
 				setImportSuccess(true);
 				setImportError(false);
-				setPlaythroughCount(getPlaythroughs().length);
-
-				if (fileInputRef.current) {
-					fileInputRef.current.value = "";
-				}
+				getPlaythroughs().then((playthroughs) => setPlaythroughCount(playthroughs.length));
 			} else {
 				setImportError(true);
 				setImportSuccess(false);
 			}
-		} catch (error) {
-			console.error("Import error:", error);
-			setImportError(true);
-			setImportSuccess(false);
+		} else {
+			if (!fileInputRef.current?.files?.length) {
+				return;
+			}
+
+			try {
+				const file = fileInputRef.current.files[0];
+				const success = await importData(file);
+
+				if (success) {
+					setImportSuccess(true);
+					setImportError(false);
+					getPlaythroughs().then((playthroughs) =>
+						setPlaythroughCount(playthroughs.length)
+					);
+
+					if (fileInputRef.current) {
+						fileInputRef.current.value = "";
+					}
+				} else {
+					setImportError(true);
+					setImportSuccess(false);
+				}
+			} catch (error) {
+				console.error("Import error:", error);
+				setImportError(true);
+				setImportSuccess(false);
+			}
 		}
 
 		setTimeout(() => {

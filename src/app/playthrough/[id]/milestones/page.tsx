@@ -4,7 +4,7 @@ import { Badge } from "flowbite-react";
 import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { Milestone, Playthrough } from "@/types";
-import { getPlaythroughById, updatePlaythroughData } from "@/lib/localStorage";
+import { getPlaythroughById, updatePlaythroughData } from "@/lib/storage";
 import { getQueryParams, setQueryParam } from "@/service/urlService";
 import { collectedFilter, MILESTONE_CATEGORIES } from "@/data/constants";
 import {
@@ -59,14 +59,15 @@ export default function MilestonesPage() {
 
 	useEffect(() => {
 		if (playthroughId) {
-			const data = getPlaythroughById(playthroughId);
-			setPlaythrough(data);
+			getPlaythroughById(playthroughId).then((data) => {
+				setPlaythrough(data);
 
-			if (data) {
-				setLocalState(data.milestones || {});
-			}
+				if (data) {
+					setLocalState(data.milestones || {});
+				}
 
-			setIsLoading(false);
+				setIsLoading(false);
+			});
 
 			const params = getQueryParams();
 			if (params.q) {
@@ -153,10 +154,10 @@ export default function MilestonesPage() {
 		});
 	};
 
-	const handleSave = () => {
+	const handleSave = async () => {
 		if (!isDirty) return false;
 
-		const success = updatePlaythroughData(playthroughId, {
+		const success = await updatePlaythroughData(playthroughId, {
 			milestones: localState,
 		});
 

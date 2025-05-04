@@ -8,7 +8,7 @@ import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { HiInformationCircle } from "react-icons/hi";
 import { CalendarDay, Playthrough, Season } from "@/types";
-import { getPlaythroughById, updatePlaythroughData } from "@/lib/localStorage";
+import { getPlaythroughById, updatePlaythroughData } from "@/lib/storage";
 import { getSeasonDays, useCalendarStore } from "@/service/calendar";
 import { getSeasonEmoji, getSeasonStyles } from "@/service/seasonalTheme";
 import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
@@ -27,18 +27,20 @@ export default function CalendarPage() {
 
 	useEffect(() => {
 		if (playthroughId) {
-			const data = getPlaythroughById(playthroughId);
-			setPlaythrough(data);
-			setIsLoading(false);
+			getPlaythroughById(playthroughId).then((data) => {
+				setPlaythrough(data);
 
-			if (data && data.calendar && !initialized) {
-				try {
-					setDate(data.calendar.currentDay, data.calendar.currentSeason);
-					setInitialized(true);
-				} catch (error) {
-					console.error("Error setting calendar date from props:", error);
+				if (data && data.calendar && !initialized) {
+					try {
+						setDate(data.calendar.currentDay, data.calendar.currentSeason);
+						setInitialized(true);
+					} catch (error) {
+						console.error("Error setting calendar date from props:", error);
+					}
 				}
-			}
+
+				setIsLoading(false);
+			});
 		}
 	}, [playthroughId, setDate, initialized]);
 
@@ -63,12 +65,12 @@ export default function CalendarPage() {
 		}
 	};
 
-	const handleSave = () => {
+	const handleSave = async () => {
 		if (!selectedDay || !isDirty) return false;
 
 		setDate(selectedDay.day, selectedDay.season);
 
-		const success = updatePlaythroughData(playthroughId, {
+		const success = await updatePlaythroughData(playthroughId, {
 			calendar: {
 				currentDay: selectedDay.day,
 				currentSeason: selectedDay.season,

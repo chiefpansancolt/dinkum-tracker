@@ -3,7 +3,7 @@
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Playthrough } from "@/types";
-import { getPlaythroughById, updatePlaythroughData } from "@/lib/localStorage";
+import { getPlaythroughById, updatePlaythroughData } from "@/lib/storage";
 import { getNPCMaxPossibleHearts, npcs } from "@/data/dinkum";
 import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
 import NotFoundCard from "@/comps/NotFoundCard";
@@ -22,14 +22,15 @@ export default function NPCsPage() {
 
 	useEffect(() => {
 		if (playthroughId) {
-			const data = getPlaythroughById(playthroughId);
-			setPlaythrough(data);
+			getPlaythroughById(playthroughId).then((data) => {
+				setPlaythrough(data);
 
-			if (data) {
-				setRelationships(data.relationships || {});
-			}
+				if (data) {
+					setRelationships(data.relationships || {});
+				}
 
-			setIsLoading(false);
+				setIsLoading(false);
+			});
 		}
 	}, [playthroughId]);
 
@@ -45,10 +46,10 @@ export default function NPCsPage() {
 		});
 	};
 
-	const handleSave = () => {
+	const handleSave = async () => {
 		if (!isDirty) return false;
 
-		const success = updatePlaythroughData(playthroughId, {
+		const success = await updatePlaythroughData(playthroughId, {
 			relationships: relationships,
 		});
 

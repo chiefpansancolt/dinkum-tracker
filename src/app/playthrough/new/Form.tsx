@@ -3,7 +3,7 @@
 import { Alert, Button, Card, Label, TextInput } from "flowbite-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { createEmptyPlaythrough, savePlaythrough } from "@/lib/localStorage";
+import { createEmptyPlaythrough, savePlaythrough } from "@/lib/storage";
 
 export default function NewPlaythroughForm() {
 	const router = useRouter();

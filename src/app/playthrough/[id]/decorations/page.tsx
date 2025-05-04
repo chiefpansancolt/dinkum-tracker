@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { FaHammer, FaRegClock } from "react-icons/fa6";
 import { GiPartyPopper } from "react-icons/gi";
 import { Playthrough } from "@/types";
-import { getPlaythroughById } from "@/lib/localStorage";
+import { getPlaythroughById } from "@/lib/storage";
 import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
 import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
@@ -20,9 +20,10 @@ export default function DecorationsPage() {
 
 	useEffect(() => {
 		if (playthroughId) {
-			const data = getPlaythroughById(playthroughId);
-			setPlaythrough(data);
-			setIsLoading(false);
+			getPlaythroughById(playthroughId).then((data) => {
+				setPlaythrough(data);
+				setIsLoading(false);
+			});
 		}
 	}, [playthroughId]);
 
@@ -52,8 +53,8 @@ export default function DecorationsPage() {
 						<div className="mb-8 flex items-center gap-3 rounded-lg bg-blue-50 p-4 dark:bg-blue-900/20">
 							<FaRegClock className="h-6 w-6 text-blue-500 dark:text-blue-300" />
 							<p className="text-sm text-blue-700 dark:text-blue-300">
-								We&apos;re working hard to bring you a comprehensive tracking system for
-								all decorative items in Dinkum.
+								We&apos;re working hard to bring you a comprehensive tracking system
+								for all decorative items in Dinkum.
 							</p>
 						</div>
 

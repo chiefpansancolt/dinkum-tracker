@@ -4,7 +4,7 @@ import { Badge } from "flowbite-react";
 import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { License, Playthrough } from "@/types";
-import { getPlaythroughById, updatePlaythroughData } from "@/lib/localStorage";
+import { getPlaythroughById, updatePlaythroughData } from "@/lib/storage";
 import { getQueryParams, setQueryParam } from "@/service/urlService";
 import { collectedFilter } from "@/data/constants";
 import {
@@ -51,14 +51,15 @@ export default function LicensesPage() {
 
 	useEffect(() => {
 		if (playthroughId) {
-			const data = getPlaythroughById(playthroughId);
-			setPlaythrough(data);
+			getPlaythroughById(playthroughId).then((data) => {
+				setPlaythrough(data);
 
-			if (data) {
-				setLocalState(data.licenses || {});
-			}
+				if (data) {
+					setLocalState(data.licenses || {});
+				}
 
-			setIsLoading(false);
+				setIsLoading(false);
+			});
 
 			const params = getQueryParams();
 			if (params.q) {
@@ -151,10 +152,10 @@ export default function LicensesPage() {
 		});
 	};
 
-	const handleSave = () => {
+	const handleSave = async () => {
 		if (!isDirty) return false;
 
-		const success = updatePlaythroughData(playthroughId, {
+		const success = await updatePlaythroughData(playthroughId, {
 			licenses: localState,
 		});
 

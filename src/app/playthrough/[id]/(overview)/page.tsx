@@ -3,7 +3,7 @@
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Playthrough } from "@/types";
-import { getPlaythroughById } from "@/lib/localStorage";
+import { getPlaythroughById } from "@/lib/storage";
 import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
 import NotFoundCard from "@/comps/NotFoundCard";
 import BuildingStats from "@/playthrough/dashboard/BuildingStats";
@@ -25,9 +25,10 @@ export default function DashboardPage() {
 
 	useEffect(() => {
 		if (playthroughId) {
-			const data = getPlaythroughById(playthroughId);
-			setPlaythrough(data);
-			setIsLoading(false);
+			getPlaythroughById(playthroughId).then((data) => {
+				setPlaythrough(data);
+				setIsLoading(false);
+			});
 		}
 	}, [playthroughId]);
 

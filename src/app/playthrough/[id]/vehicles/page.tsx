@@ -3,7 +3,7 @@
 import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { Playthrough } from "@/types";
-import { getPlaythroughById, updatePlaythroughData } from "@/lib/localStorage";
+import { getPlaythroughById, updatePlaythroughData } from "@/lib/storage";
 import { getQueryParams, setQueryParam } from "@/service/urlService";
 import {
 	getUniqueVehicleReqType,
@@ -50,14 +50,15 @@ export default function VehiclesPage() {
 
 	useEffect(() => {
 		if (playthroughId) {
-			const data = getPlaythroughById(playthroughId);
-			setPlaythrough(data);
+			getPlaythroughById(playthroughId).then((data) => {
+				setPlaythrough(data);
 
-			if (data) {
-				setLocalState(data.vehicles || {});
-			}
+				if (data) {
+					setLocalState(data.vehicles || {});
+				}
 
-			setIsLoading(false);
+				setIsLoading(false);
+			});
 
 			const params = getQueryParams();
 			if (params.q) {
@@ -86,10 +87,10 @@ export default function VehiclesPage() {
 		});
 	};
 
-	const handleSave = () => {
+	const handleSave = async () => {
 		if (!isDirty) return false;
 
-		const success = updatePlaythroughData(playthroughId, {
+		const success = await updatePlaythroughData(playthroughId, {
 			vehicles: localState,
 		});
 

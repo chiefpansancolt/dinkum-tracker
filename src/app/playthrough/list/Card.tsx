@@ -12,7 +12,7 @@ import {
 	HiOutlineTrash,
 } from "react-icons/hi";
 import { PlaythroughCardProps } from "@/types";
-import { deletePlaythrough } from "@/lib/localStorage";
+import { deletePlaythrough } from "@/lib/storage";
 import { getSeasonEmoji } from "@/service/seasonalTheme";
 import {
 	books,

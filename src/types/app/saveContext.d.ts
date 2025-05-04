@@ -1,4 +1,4 @@
 export interface SaveFABProps {
   isDirty: boolean;
-  onSave: () => boolean;
+  onSave: () => boolean | Promise<boolean>;
 }
