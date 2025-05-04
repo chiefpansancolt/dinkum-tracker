@@ -13,3 +13,4 @@ export * from "./gearAndEquipment";
 export * from "./trees";
 export * from "./flowers";
 export * from "./animals";
+export * from "./furniture";
