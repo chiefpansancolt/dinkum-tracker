@@ -2,7 +2,6 @@
     "name": "dinkum-tracker",
     "version": "0.1.0",
     "private": true,
-    "main": "dist/main.js",
     "scripts": {
         "dev": "next dev",
         "build": "next build",
@@ -12,33 +11,10 @@
         "format:check": "prettier . --check",
         "postinstall": "flowbite-react patch",
         "electron": "electron .",
-        "electron:dev": "concurrently \"pnpm dev\" \"tsc -p electron-tsconfig.json && wait-on http://localhost:3000 && electron .\"",
+        "electron:dev": "concurrently \"pnpm dev\" \"npx tsc -p electron-tsconfig.json && electron .\"",
         "electron:build": "ts-node scripts/build-electron.ts",
         "package": "electron-builder build --publish never",
         "package:publish": "electron-builder build --publish always"
-    },
-    "build": {
-        "appId": "com.dinkumtracker.app",
-        "productName": "Dinkum Tracker",
-        "files": [
-            "dist/**/*",
-            "package.json"
-        ],
-        "directories": {
-            "output": "release"
-        },
-        "mac": {
-            "category": "public.app.category.lifestyle",
-            "icon": "public/icon.ico"
-        },
-        "win": {
-            "icon": "public/icon.ico"
-        },
-        "publish": {
-            "provider": "github",
-            "owner": "chiefpansancolt",
-            "repo": "dinkum-tracker"
-        }
     },
     "dependencies": {
         "flowbite-react": "^0.11.7",
@@ -46,7 +22,7 @@
         "react": "^19.1.0",
         "react-dom": "^19.1.0",
         "react-toastify": "^11.0.5",
-        "zustand": "^5.0.3"
+        "zustand": "^5.0.4"
     },
     "devDependencies": {
         "@eslint/eslintrc": "^3",
@@ -56,9 +32,6 @@
         "@types/react": "^19",
         "@types/react-dom": "^19",
         "concurrently": "^9.1.2",
-        "electron": "^36.1.0",
-        "electron-builder": "^26.0.12",
-        "electron-updater": "^6.6.2",
         "eslint": "^9",
         "eslint-config-next": "15.3.1",
         "prettier": "^3.5.3",

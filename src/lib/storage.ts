@@ -3,7 +3,7 @@ import * as electronStore from "./electronStorage";
 import * as browserStorage from "./localStorage";
 
 const isElectron = (): boolean => {
-  return typeof window !== "undefined" && window.electron !== undefined;
+  return false;
 };
 
 export const STORAGE_KEY = "dinkum-tracker-playthroughs";
