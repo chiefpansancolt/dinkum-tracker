@@ -532,7 +532,7 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 					)}
 				</ul>
 
-				<div className="bg-accent border-t border-gray-200 dark:border-gray-700 absolute right-0 bottom-0 left-0 p-4">
+				<div className="bg-accent absolute right-0 bottom-0 left-0 border-t border-gray-200 p-4 dark:border-gray-700">
 					<ul className="space-y-2">
 						<li>
 							<SidebarLink

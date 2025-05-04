@@ -103,7 +103,9 @@ export default function ResourcesPage() {
 				type !== ResourceType.CRITTER &&
 				type !== ResourceType.CROP &&
 				type !== ResourceType.PAINT &&
-				type !== ResourceType.RESOURCE
+				type !== ResourceType.RESOURCE &&
+				type !== ResourceType.SEED &&
+				type !== ResourceType.FLOWER
 		);
 	}, []);
 
@@ -226,11 +228,7 @@ export default function ResourcesPage() {
 
 	return (
 		<div className="space-y-6 p-6">
-			<TabHeader
-				title="Resources"
-				enableCollectionCount={false}
-				enableSaveAlert={false}
-			/>
+			<TabHeader title="Resources" enableCollectionCount={false} enableSaveAlert={false} />
 
 			<FilterBar
 				showFilters={true}
