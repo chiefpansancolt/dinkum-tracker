@@ -3,17 +3,40 @@
 import { Button, Card } from "flowbite-react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
+import { useEffect, useState } from "react";
 import { FaHammer, FaRegClock } from "react-icons/fa6";
 import { GiPartyPopper } from "react-icons/gi";
+import { Playthrough } from "@/types";
+import { getPlaythroughById } from "@/lib/localStorage";
 import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
+import NotFoundCard from "@/comps/NotFoundCard";
+import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
 
 export default function DecorationsPage() {
 	const params = useParams();
-	const playthroughId = params?.id as string;
+	const playthroughId = typeof params.id === "string" ? params.id : "";
+	const [playthrough, setPlaythrough] = useState<Playthrough | null>(null);
+	const [isLoading, setIsLoading] = useState(true);
+
+	useEffect(() => {
+		if (playthroughId) {
+			const data = getPlaythroughById(playthroughId);
+			setPlaythrough(data);
+			setIsLoading(false);
+		}
+	}, [playthroughId]);
+
+	if (isLoading) {
+		return <LoadingPlaythrough message="Loading critters collection..." />;
+	}
+
+	if (!playthrough) {
+		return <NotFoundCard message="Playthrough not found" />;
+	}
 
 	return (
 		<>
-			<BreadcrumbsComp id={playthroughId} name="Your Playthrough" routeName="Decorations" />
+			<BreadcrumbsComp id={playthroughId} name={playthrough.name} routeName="Decorations" />
 			<div className="flex min-h-[70vh] items-center justify-center p-6">
 				<Card className="mx-auto max-w-lg text-center">
 					<div className="mb-6 flex flex-col items-center">
