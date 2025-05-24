@@ -6930,7 +6930,7 @@ export const craftingRecipes: Recipe[] = [
         ]
       },
     ],
-  }
+  },
   {
     id: "windmill",
     name: "Windmill",
