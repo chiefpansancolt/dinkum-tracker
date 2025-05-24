@@ -54,6 +54,7 @@ export const customTheme: CustomFlowbiteTheme = createTheme({
       indigo: "bg-indigo-600",
       red: "bg-red-600",
       purple: "bg-purple-600",
+      orange: "bg-orange-600",
     },
     size: {
       sm: "h-1.5",

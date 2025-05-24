@@ -5677,6 +5677,32 @@ export const craftingRecipes: Recipe[] = [
     ],
   },
   {
+    id: "rope_bridge",
+    name: "Rope Bridge",
+    img: "https://static.wikia.nocookie.net/dinkum/images/0/04/Inv_Rope_Bridge.png",
+    baseSellPrice: 0,
+    source: [
+      "Building License Level 1"
+    ],
+    outputCount: 1,
+    variants: [
+      { id: "standard",
+        inputs: [
+          {
+            name: "Palm Wood Plank",
+            count: 15,
+            img: "https://static.wikia.nocookie.net/dinkum/images/3/39/Inv_Palm_Wood_Plank.png",
+          },
+          {
+            name: "Vine",
+            count: 10,
+            img: "https://static.wikia.nocookie.net/dinkum/images/e/ea/Inv_Vine.png",
+          },
+        ]
+      },
+    ],
+  },
+  {
     id: "rope_fence",
     name: "Rope Fence",
     img: "https://static.wikia.nocookie.net/dinkum/images/6/68/Inv_Rock_Path.png",
@@ -5748,7 +5774,7 @@ export const craftingRecipes: Recipe[] = [
   {
     id: "rowboat",
     name: "Rowboat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c8/Inv_Rope_Ladder.png",
+    img: "https://static.wikia.nocookie.net/dinkum/images/9/97/Inv_Rowboat.png",
     baseSellPrice: 6328,
     source: ["Vehicle Licence Level 1"],
     outputCount: 1,
@@ -5783,7 +5809,7 @@ export const craftingRecipes: Recipe[] = [
   {
     id: "sail_boat",
     name: "Sail Boat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/97/Inv_Rowboat.png",
+    img: "https://static.wikia.nocookie.net/dinkum/images/d/d6/Inv_Sail_Boat.png",
     baseSellPrice: 116344,
     source: [
       "NPC Jobs",
@@ -5877,7 +5903,7 @@ export const craftingRecipes: Recipe[] = [
   {
     id: "scarecrow",
     name: "Scarecrow",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1b/Inv_Sand_Fence.png",
+    img: "https://static.wikia.nocookie.net/dinkum/images/8/85/Inv_Scarecrow.png",
     baseSellPrice: 4250,
     source: ["Farming Licence Level 1"],
     outputCount: 1,
@@ -5907,7 +5933,7 @@ export const craftingRecipes: Recipe[] = [
   {
     id: "scythe",
     name: "Scythe",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/85/Inv_Scarecrow.png",
+    img: "https://static.wikia.nocookie.net/dinkum/images/7/74/Inv_Scythe.png",
     baseSellPrice: 906,
     source: ["Farming Licence Level 1"],
     outputCount: 1,
@@ -5932,7 +5958,7 @@ export const craftingRecipes: Recipe[] = [
   {
     id: "signwriting_table",
     name: "Signwriting Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/74/Inv_Scythe.png",
+    img: "https://static.wikia.nocookie.net/dinkum/images/5/5f/Inv_Signwriting_Table.png",
     baseSellPrice: 6092,
     source: ["Sign Writing Licence Level 1"],
     outputCount: 1,
@@ -5967,7 +5993,7 @@ export const craftingRecipes: Recipe[] = [
   {
     id: "silo",
     name: "Silo",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/5f/Inv_Signwriting_Table.png",
+    img: "https://static.wikia.nocookie.net/dinkum/images/e/e7/Inv_Silo.png",
     baseSellPrice: 20094,
     source: ["Handling Licence Level 3"],
     outputCount: 1,
@@ -6007,7 +6033,7 @@ export const craftingRecipes: Recipe[] = [
   {
     id: "simple_animal_trap",
     name: "Simple Animal Trap",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e7/Inv_Silo.png",
+    img: "https://static.wikia.nocookie.net/dinkum/images/f/f2/Inv_Simple_Animal_Trap.png",
     baseSellPrice: 2131,
     source: ["Trapping Licence Level 1"],
     outputCount: 1,
@@ -6037,7 +6063,7 @@ export const craftingRecipes: Recipe[] = [
   {
     id: "slippery_jack_lamp",
     name: "Slippery Jack Lamp",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f2/Inv_Simple_Animal_Trap.png",
+    img: "https://static.wikia.nocookie.net/dinkum/images/9/92/Inv_Slippery_Jack_Lamp.png",
     baseSellPrice: 4919,
     source: [
       "NPC Jobs",
@@ -6876,6 +6902,32 @@ export const craftingRecipes: Recipe[] = [
             img: "https://static.wikia.nocookie.net/dinkum/images/3/39/Inv_Palm_Wood_Plank.png",
           },
         ],
+      },
+    ],
+  },
+  {
+    id: "widerope_bridge",
+    name: "Wide Rope Bridge",
+    img: "https://static.wikia.nocookie.net/dinkum/images/5/57/Inv_Wide_Rope_Bridge.png",
+    baseSellPrice: 0,
+    source: [
+      "Building License Level 1"
+    ],
+    outputCount: 1,
+    variants: [
+      { id: "standard",
+        inputs: [
+          {
+            name: "Palm Wood Plank",
+            count: 15,
+            img: "https://static.wikia.nocookie.net/dinkum/images/3/39/Inv_Palm_Wood_Plank.png",
+          },
+          {
+            name: "Vine",
+            count: 10,
+            img: "https://static.wikia.nocookie.net/dinkum/images/e/ea/Inv_Vine.png",
+          },
+        ]
       },
     ],
   },
