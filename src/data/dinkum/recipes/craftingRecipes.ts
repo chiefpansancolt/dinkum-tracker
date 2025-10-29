@@ -5681,12 +5681,11 @@ export const craftingRecipes: Recipe[] = [
     name: "Rope Bridge",
     img: "https://static.wikia.nocookie.net/dinkum/images/0/04/Inv_Rope_Bridge.png",
     baseSellPrice: 0,
-    source: [
-      "Building License Level 1"
-    ],
+    source: ["Building License Level 1"],
     outputCount: 1,
     variants: [
-      { id: "standard",
+      {
+        id: "standard",
         inputs: [
           {
             name: "Palm Wood Plank",
@@ -5698,7 +5697,7 @@ export const craftingRecipes: Recipe[] = [
             count: 10,
             img: "https://static.wikia.nocookie.net/dinkum/images/e/ea/Inv_Vine.png",
           },
-        ]
+        ],
       },
     ],
   },
@@ -6910,12 +6909,11 @@ export const craftingRecipes: Recipe[] = [
     name: "Wide Rope Bridge",
     img: "https://static.wikia.nocookie.net/dinkum/images/5/57/Inv_Wide_Rope_Bridge.png",
     baseSellPrice: 0,
-    source: [
-      "Building License Level 1"
-    ],
+    source: ["Building License Level 1"],
     outputCount: 1,
     variants: [
-      { id: "standard",
+      {
+        id: "standard",
         inputs: [
           {
             name: "Palm Wood Plank",
@@ -6927,7 +6925,7 @@ export const craftingRecipes: Recipe[] = [
             count: 10,
             img: "https://static.wikia.nocookie.net/dinkum/images/e/ea/Inv_Vine.png",
           },
-        ]
+        ],
       },
     ],
   },

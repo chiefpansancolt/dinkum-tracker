@@ -14,7 +14,18 @@ import {
 import { getPlaythroughById, updatePlaythroughData } from "@/lib/storage";
 import { getQueryParams, setQueryParam } from "@/service/urlService";
 import { collectedFilter, donatedFilter } from "@/data/constants";
-import { bugs, getBugsByBiome, getBugsByRarity, getBugsBySearchValue, getBugsBySeason, getBugsByTime, getUniqueBugBiomes, getUniqueBugRarities, getUniqueBugSeasons, getUniqueBugTimePeriods } from "@/data/dinkum";
+import {
+	bugs,
+	getBugsByBiome,
+	getBugsByRarity,
+	getBugsBySearchValue,
+	getBugsBySeason,
+	getBugsByTime,
+	getUniqueBugBiomes,
+	getUniqueBugRarities,
+	getUniqueBugSeasons,
+	getUniqueBugTimePeriods,
+} from "@/data/dinkum";
 import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
 import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
@@ -24,7 +35,6 @@ import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
 import TabHeader from "@/playthrough/ui/TabHeader";
 import BugCard from "./BugCard";
-
 
 export default function BugsPage() {
 	const params = useParams();
