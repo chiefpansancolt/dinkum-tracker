@@ -37,7 +37,7 @@ import {
 import { GoStarFill } from "react-icons/go";
 import { HiCog, HiHome, HiViewList } from "react-icons/hi";
 import { LuCookingPot, LuFlower2 } from "react-icons/lu";
-import { MdDashboard } from "react-icons/md";
+import { MdDashboard, MdScale } from "react-icons/md";
 import SidebarCollapse from "./SidebarCollapse";
 
 interface SidebarLinkProps {
@@ -157,6 +157,16 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 							icon={<FaBoxOpen className="h-5 w-5" />}
 						>
 							Items Breakdown
+						</SidebarLink>
+					</li>
+
+					<li>
+						<SidebarLink
+							href="/weight-calculator"
+							currentPath={pathname}
+							icon={<MdScale className="h-5 w-5" />}
+						>
+							Weight Calculator
 						</SidebarLink>
 					</li>
 

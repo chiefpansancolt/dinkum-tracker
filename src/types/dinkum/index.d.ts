@@ -15,3 +15,4 @@ export * from "./license";
 export * from "./cassettes";
 export * from "./animal";
 export * from "./furniture";
+export * from "./weightItem";
