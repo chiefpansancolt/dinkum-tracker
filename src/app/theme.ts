@@ -1,10 +1,9 @@
-import { createTheme, theme } from "flowbite-react";
-import { twMerge } from "flowbite-react/helpers/tailwind-merge";
+import { createTheme } from "flowbite-react";
 import type { CustomFlowbiteTheme } from "flowbite-react/types";
 
 export const customTheme: CustomFlowbiteTheme = createTheme({
   button: {
-    base: twMerge(theme.button.base, "cursor-pointer"),
+    base: "cursor-pointer",
     color: {
       primary: "bg-primary hover:bg-primary/80 focus:ring-primary text-white",
       secondary:
@@ -13,11 +12,11 @@ export const customTheme: CustomFlowbiteTheme = createTheme({
     },
   },
   dropdown: {
-    inlineWrapper: twMerge(theme.dropdown.inlineWrapper, "cursor-pointer"),
+    inlineWrapper: "cursor-pointer",
   },
   toast: {
     toggle: {
-      base: twMerge(theme.toast.toggle.base, "cursor-pointer"),
+      base: "cursor-pointer",
     },
   },
   sidebar: {
@@ -72,6 +71,7 @@ export const customTheme: CustomFlowbiteTheme = createTheme({
   },
   badge: {
     root: {
+      base: "rounded",
       color: {
         orange:
           "bg-orange-100 text-orange-800 hover:bg-orange-200 dark:bg-orange-200 dark:text-orange-800 dark:hover:bg-orange-300",

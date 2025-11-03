@@ -3093,6 +3093,33 @@ export const cookingRecipes: CookingRecipe[] = [
       miningLevel: 1,
     },
   },
+  {
+    id: "pineapple_jam",
+    name: "Pineapple Jam",
+    img: "https://static.wikia.nocookie.net/dinkum/images/9/90/Inv_Pineapple_Jam.png",
+    outputCount: 1,
+    variants: [
+      {
+        id: "standard",
+        inputs: [
+          {
+            count: 1,
+            name: "Pineapple",
+            img: "https://static.wikia.nocookie.net/dinkum/images/8/87/Inv_Pineapple.png",
+          },
+        ],
+      },
+    ],
+    cookingLocation: ["Billy Can Kit", "Cooking Kettle"],
+    baseSellPrice: 0,
+    buffs: {
+      length: 30,
+      healthRegenRate: 2,
+      staminaRegenRate: 10,
+      speedLevel: 2,
+      charged: true,
+    },
+  },
 ];
 
 export const getCookingRecipesByLocation = (

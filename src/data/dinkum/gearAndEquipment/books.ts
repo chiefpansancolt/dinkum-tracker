@@ -9,7 +9,7 @@ export const books: Book[] = [
       {
         aquiredFrom: "Fletch",
         requirements: "Tutorial at the beginning of a new island.",
-        buyingPrice: 0,
+        buyingPrice: "Gift",
         sellingPrice: 0,
       },
     ],
@@ -74,7 +74,7 @@ export const books: Book[] = [
       {
         aquiredFrom: "Rayne from Rayne's Greenhouse",
         requirements: "After gaining 2 ♥️ hearts with Rayne",
-        buyingPrice: 0,
+        buyingPrice: "Gift",
         sellingPrice: 18000,
       },
       {

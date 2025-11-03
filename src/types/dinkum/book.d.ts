@@ -3,7 +3,7 @@ import { Base } from "./base";
 interface BookData {
   aquiredFrom: string;
   requirements: string;
-  buyingPrice: number;
+  buyingPrice: number | "Gift";
   sellingPrice: number;
 }
 

@@ -55,12 +55,14 @@ const DinkValue = ({ label, price, showCommerceLicenses = false }: DinkValueProp
 					<Popover
 						trigger="hover"
 						placement="top"
-						content={<CommerceContent price={price} />}
+						content={<CommerceContent price={price as number} />}
 					>
 						<a className="cursor-pointer">
-							<DinkPrice price={price} />
+							<DinkPrice price={price as number} />
 						</a>
 					</Popover>
+				) : price === "Gift" ? (
+					<span>🎁 Gift</span>
 				) : (
 					<DinkPrice price={price} />
 				)}

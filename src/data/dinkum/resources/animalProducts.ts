@@ -1,5 +1,6 @@
 import { AnimalProduct } from "@/types";
 
+
 export const animalProducts: AnimalProduct[] = [
   {
     id: "alpha_antler",
@@ -281,5 +282,39 @@ export const animalProducts: AnimalProduct[] = [
     img: "https://static.wikia.nocookie.net/dinkum/images/a/a2/Inv_Wool.png",
     source: ["Pleep"],
     baseSellPrice: 2150,
+  },
+  {
+    id: "fertilised_chicken_egg",
+    name: "Fertilised Chicken Egg",
+    img: "https://static.wikia.nocookie.net/dinkum/images/9/9c/Inv_Fertilised_Chicken_Egg.png",
+    source: ["Chook"],
+    baseSellPrice: 900,
+  },
+  {
+    id: "native_bread",
+    name: "Native Bread",
+    img: "https://static.wikia.nocookie.net/dinkum/images/4/48/Inv_Native_Bread.png",
+    source: ["Burrowcoot", "Boaricoot"],
+    baseSellPrice: 5000,
+    buffs: {
+      length: 15,
+      healthRegenRate: 2,
+      staminaRegenRate: 6,
+      miningLevel: 3,
+    },
+  },
+  {
+    id: "pretty_pebble",
+    name: "Pretty Pebble",
+    img: "https://static.wikia.nocookie.net/dinkum/images/3/3d/Inv_Pretty_Pebble.png",
+    source: ["Penguin"],
+    baseSellPrice: 545,
+  },
+  {
+    id: "worms",
+    name: "Worms",
+    img: "https://static.wikia.nocookie.net/dinkum/images/5/55/Inv_Worms.png",
+    source: ["Boaricoot", "Burrowcoot"],
+    baseSellPrice: 250,
   },
 ];

@@ -1,5 +1,6 @@
 import { Recipe } from "@/types";
 
+
 export const otherCraftables: Recipe[] = [
   {
     id: "animal_food",
@@ -908,5 +909,80 @@ export const otherCraftables: Recipe[] = [
       staminaMax: 10,
       coolLevel: 2,
     },
+  },
+  {
+    id: "insta_grow",
+    name: "Insta-Grow",
+    img: "https://static.wikia.nocookie.net/dinkum/images/4/41/Inv_Insta-Grow.png",
+    outputCount: "Varies",
+    variants: [
+      {
+        id: "alpha_antler",
+        outputCount: 10,
+        inputs: [
+          {
+            count: 1,
+            name: "Alpha Antler",
+            img: "https://static.wikia.nocookie.net/dinkum/images/9/9c/Inv_Alpha_Antler.png",
+          },
+        ],
+      },
+      {
+        id: "alpha_eye",
+        outputCount: 10,
+        inputs: [
+          {
+            count: 1,
+            name: "Alpha Eye",
+            img: "https://static.wikia.nocookie.net/dinkum/images/4/4c/Inv_Alpha_Eye.png",
+          },
+        ],
+      },
+      {
+        id: "alpha_scale",
+        outputCount: 10,
+        inputs: [
+          {
+            count: 1,
+            name: "Alpha Scale",
+            img: "https://static.wikia.nocookie.net/dinkum/images/3/31/Inv_Alpha_Scale.png",
+          },
+        ],
+      },
+      {
+        id: "alpha_shark_tooth",
+        outputCount: 10,
+        inputs: [
+          {
+            count: 1,
+            name: "Alpha Shark Tooth",
+            img: "https://static.wikia.nocookie.net/dinkum/images/2/2b/Inv_Alpha_Shark_Tooth.png",
+          },
+        ],
+      },
+    ],
+    source: ["Compost Bin"],
+    baseSellPrice: 1200,
+  },
+  {
+    id: "season_all",
+    name: "Season-All",
+    img: "https://static.wikia.nocookie.net/dinkum/images/1/11/Inv_Season-All.png",
+    outputCount: "Varies",
+    variants: [
+      {
+        id: "tropical_grass_turf_roll",
+        outputCount: 1,
+        inputs: [
+          {
+            count: 1,
+            name: "Tropical Grass Turf Roll",
+            img: "https://static.wikia.nocookie.net/dinkum/images/1/1a/Inv_Tropical_Grass_Turf_Roll.png",
+          },
+        ],
+      },
+    ],
+    source: ["Compost Bin"],
+    baseSellPrice: 156,
   },
 ];

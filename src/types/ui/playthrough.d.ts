@@ -77,7 +77,7 @@ export interface ItemDetailProps {
 
 export interface DinkValueProps {
   label: string;
-  price: number;
+  price: number | "Gift";
   showCommerceLicenses?: boolean;
 }
 

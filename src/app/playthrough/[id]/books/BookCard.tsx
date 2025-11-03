@@ -26,7 +26,7 @@ const BookCard = ({ record, isCollected = false, onToggleCollected }: Collection
 
 							<ItemDetail label="Requirements" details={detail.requirements} />
 
-							{detail.buyingPrice > 0 && (
+							{detail.buyingPrice != 0 && (
 								<DinkValue label="Buy Price" price={detail.buyingPrice} />
 							)}
 

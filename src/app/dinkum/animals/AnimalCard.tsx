@@ -54,8 +54,12 @@ const AnimalCard = ({ record }: CollectionCardProps) => {
 			)}
 			renderDetails={() => (
 				<div className="grid grid-cols-1 gap-2">
-					{record.health && (
+					{record.health != null && (
 						<ItemDetail label="Health" details={record.health.toString()} />
+					)}
+
+					{record.domesticable && (
+						<ItemDetail label="Domesticable" details="Yes" />
 					)}
 
 					{record.habitat && record.habitat.length > 0 && (

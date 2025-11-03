@@ -1,6 +1,7 @@
 import { FilterArray, License } from "@/types";
 import { LICENSE_TYPES } from "../constants";
 
+
 export const licenses: License[] = [
   {
     id: "mining_licence",
@@ -295,6 +296,28 @@ export const licenses: License[] = [
     ],
   },
   {
+    id: "animal_breeding_licence",
+    name: "Animal Breeding Licence",
+    img: "https://static.wikia.nocookie.net/dinkum/images/f/fe/Animal_Breeding_Licence.png",
+    requirements:
+      "Unlocked after purchasing Animal Handling Licence 3 and Animal Processing Licence 2",
+    levels: [
+      {
+        level: 1,
+        skillLevel: 0,
+        permitPointCost: 500,
+        description: "Unlocks the recipe for an Egg Incubator to breed Chooks.",
+      },
+      {
+        level: 2,
+        skillLevel: 0,
+        permitPointCost: 1000,
+        description:
+          "Allows the holder to buy Duff Dust. Given to male animals to encourage breeding.",
+      },
+    ],
+  },
+  {
     id: "cargo_licence",
     name: "Cargo Licence",
     img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Cargo_Licence.png",
@@ -532,6 +555,21 @@ export const licenses: License[] = [
         skillLevel: 0,
         permitPointCost: 2000,
         description: "Unlocks the Keg recipe used for brewing advanced drinks.",
+      },
+    ],
+  },
+  {
+    id: "locomotive_licence",
+    name: "Locomotive Licence",
+    img: "https://static.wikia.nocookie.net/dinkum/images/0/0d/Locomotive_Licence.png",
+    requirements: "Unlocked after purchasing Vehicle Licence 2",
+    levels: [
+      {
+        level: 1,
+        skillLevel: 0,
+        permitPointCost: 250,
+        description:
+          "Allows the holder to buy Trains. Unlocks the recipe for railway tracks",
       },
     ],
   },

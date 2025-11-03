@@ -4110,6 +4110,14 @@ export const furniture: Furniture[] = [
     melvinsCatalogue: true,
     furnitureSet: "Flower and Plant Set",
   },
+  {
+    id: "pineapple_jam_set",
+    name: "Pineapple Jam Set",
+    img: "https://static.wikia.nocookie.net/dinkum/images/9/9c/Inv_Pineapple_Jam_Set.png",
+    source: ["Food Modeller", "Recycling Bin"],
+    baseSellPrice: 100,
+    melvinsCatalogue: false,
+  },
 ];
 
 export const getFurnitureBySource = (

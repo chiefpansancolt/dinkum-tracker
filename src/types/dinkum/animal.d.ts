@@ -16,4 +16,5 @@ export interface Animal extends Base {
   maxSellPrice?: number;
   source?: string;
   type: AnimalType;
+  domesticable?: boolean;
 }

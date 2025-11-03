@@ -7137,9 +7137,9 @@ export const craftingRecipes: Recipe[] = [
         id: "standard",
         inputs: [
           {
-            name: "Roo Poo",
-            count: 25,
-            img: "https://static.wikia.nocookie.net/dinkum/images/9/9b/Inv_Roo_Poo.png",
+            name: "Worms",
+            count: 4,
+            img: "https://static.wikia.nocookie.net/dinkum/images/5/55/Inv_Worms.png",
           },
           {
             name: "Bone",
@@ -7347,6 +7347,131 @@ export const craftingRecipes: Recipe[] = [
             name: "Bag of Cement",
             count: 1,
             img: "https://static.wikia.nocookie.net/dinkum/images/e/eb/Inv_Bag_of_Cement.png",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "curved_railway_track",
+    name: "Curved Railway Track",
+    img: "https://static.wikia.nocookie.net/dinkum/images/c/cc/Inv_Curved_Railway_Track.png",
+    baseSellPrice: 335,
+    source: ["Locomotive Licence Level 1"],
+    outputCount: 8,
+    variants: [
+      {
+        id: "standard",
+        inputs: [
+          {
+            name: "Iron Bar",
+            count: 1,
+            img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Inv_Iron_Bar.png",
+          },
+          {
+            name: "Gum Wood Plank",
+            count: 1,
+            img: "https://static.wikia.nocookie.net/dinkum/images/3/38/Inv_Gum_Wood_Plank.png",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "railway_bridge",
+    name: "Railway Bridge",
+    img: "https://static.wikia.nocookie.net/dinkum/images/5/57/Inv_Railway_Bridge.png",
+    baseSellPrice: 5938,
+    source: ["Locomotive Licence Level 1"],
+    outputCount: 1,
+    variants: [
+      {
+        id: "standard",
+        inputs: [
+          {
+            name: "Iron Bar",
+            count: 2,
+            img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Inv_Iron_Bar.png",
+          },
+          {
+            name: "Gum Wood Plank",
+            count: 5,
+            img: "https://static.wikia.nocookie.net/dinkum/images/3/38/Inv_Gum_Wood_Plank.png",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "railway_track",
+    name: "Railway Track",
+    img: "https://static.wikia.nocookie.net/dinkum/images/0/04/Inv_Railway_Track.png",
+    baseSellPrice: 335,
+    source: ["Locomotive Licence Level 1"],
+    outputCount: 8,
+    variants: [
+      {
+        id: "standard",
+        inputs: [
+          {
+            name: "Iron Bar",
+            count: 1,
+            img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Inv_Iron_Bar.png",
+          },
+          {
+            name: "Gum Wood Plank",
+            count: 1,
+            img: "https://static.wikia.nocookie.net/dinkum/images/3/38/Inv_Gum_Wood_Plank.png",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "egg_incubator",
+    name: "Egg Incubator",
+    img: "https://static.wikia.nocookie.net/dinkum/images/7/76/Inv_Egg_Incubator.png",
+    baseSellPrice: 21325,
+    source: ["Animal Breeding Licence Level 1"],
+    outputCount: 1,
+    variants: [
+      {
+        id: "standard",
+        inputs: [
+          {
+            name: "Iron Bar",
+            count: 5,
+            img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Inv_Iron_Bar.png",
+          },
+          {
+            name: "Hard Wood Plank",
+            count: 5,
+            img: "https://static.wikia.nocookie.net/dinkum/images/d/de/Inv_Hard_Wood_Plank.png",
+          },
+          {
+            name: "Quartz Crystal",
+            count: 5,
+            img: "https://static.wikia.nocookie.net/dinkum/images/5/5a/Inv_Quartz_Crystal.png",
+          },
+          {
+            name: "Spinifex Resin",
+            count: 5,
+            img: "https://static.wikia.nocookie.net/dinkum/images/0/06/Inv_Spinifex_Tuft.png",
+          },
+          {
+            name: "Glass Bulb",
+            count: 1,
+            img: "https://static.wikia.nocookie.net/dinkum/images/2/2f/Inv_Glass_Bulb.png",
+          },
+          {
+            name: "Hot Cylinder",
+            count: 1,
+            img: "https://static.wikia.nocookie.net/dinkum/images/4/46/Inv_Hot_Cylinder.png",
+          },
+          {
+            name: "Bright Wire",
+            count: 1,
+            img: "https://static.wikia.nocookie.net/dinkum/images/8/8f/Inv_Bright_Wire.png",
           },
         ],
       },

@@ -1,5 +1,6 @@
 import { Equipment, FilterArray } from "@/types";
 
+
 export const equipment: Equipment[] = [
   {
     id: "adm",
@@ -892,6 +893,104 @@ export const equipment: Equipment[] = [
     requirementType: "Bug Catching Skill",
     source: ["Crafting Table"],
     baseSellPrice: 23938,
+  },
+  {
+    id: "auto_placer",
+    name: "Auto Placer",
+    img: "https://static.wikia.nocookie.net/dinkum/images/8/89/Inv_Auto_Placer.png",
+    description: "Places items into 3 neighbouring processors",
+    source: ["Franklyn's Lab"],
+    requirementLevel: null,
+    shinyDiscCount: 1,
+    berkoniumOreCount: 10,
+    buyPrice: 500000,
+    baseSellPrice: 250000,
+    inputs: [
+      {
+        count: 8,
+        name: "Green Board",
+        img: "https://static.wikia.nocookie.net/dinkum/images/1/1a/Inv_Green_Board.png",
+      },
+      {
+        count: 8,
+        name: "Hot Cylinder",
+        img: "https://static.wikia.nocookie.net/dinkum/images/4/46/Inv_Hot_Cylinder.png",
+      },
+      {
+        count: 10,
+        name: "Button Board",
+        img: "https://static.wikia.nocookie.net/dinkum/images/7/7c/Inv_Button_Board.png",
+      },
+      {
+        count: 25,
+        name: "Copper Bar",
+        img: "https://static.wikia.nocookie.net/dinkum/images/7/7a/Inv_Copper_Bar.png",
+      },
+      {
+        count: 25,
+        name: "Iron Bar",
+        img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Inv_Iron_Bar.png",
+      },
+      {
+        count: 1,
+        name: "Advanced Sling Shot",
+        img: "https://static.wikia.nocookie.net/dinkum/images/7/7d/Inv_Advanced_Sling_Shot.png",
+      },
+      {
+        count: 1,
+        name: "Berkonium Bar",
+        img: "https://static.wikia.nocookie.net/dinkum/images/b/ba/Inv_Berkonium_Bar.png",
+      },
+    ],
+  },
+  {
+    id: "auto_sorter",
+    name: "Auto Sorter",
+    img: "https://static.wikia.nocookie.net/dinkum/images/8/85/Inv_Auto_Sorter.png",
+    description: "Sorts your items for you",
+    source: ["Franklyn's Lab"],
+    requirementLevel: null,
+    shinyDiscCount: 1,
+    berkoniumOreCount: 10,
+    buyPrice: 1000000,
+    baseSellPrice: 500000,
+    inputs: [
+      {
+        count: 8,
+        name: "Green Board",
+        img: "https://static.wikia.nocookie.net/dinkum/images/1/1a/Inv_Green_Board.png",
+      },
+      {
+        count: 8,
+        name: "Hot Cylinder",
+        img: "https://static.wikia.nocookie.net/dinkum/images/4/46/Inv_Hot_Cylinder.png",
+      },
+      {
+        count: 10,
+        name: "Button Board",
+        img: "https://static.wikia.nocookie.net/dinkum/images/7/7c/Inv_Button_Board.png",
+      },
+      {
+        count: 25,
+        name: "Copper Bar",
+        img: "https://static.wikia.nocookie.net/dinkum/images/7/7a/Inv_Copper_Bar.png",
+      },
+      {
+        count: 25,
+        name: "Iron Bar",
+        img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Inv_Iron_Bar.png",
+      },
+      {
+        count: 2,
+        name: "Advanced Sling Shot",
+        img: "https://static.wikia.nocookie.net/dinkum/images/7/7d/Inv_Advanced_Sling_Shot.png",
+      },
+      {
+        count: 5,
+        name: "Berkonium Bar",
+        img: "https://static.wikia.nocookie.net/dinkum/images/b/ba/Inv_Berkonium_Bar.png",
+      },
+    ],
   },
 ];
 

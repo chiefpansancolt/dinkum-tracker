@@ -12,7 +12,7 @@ export const buildings: Building[] = [
     npcImg:
       "https://static.wikia.nocookie.net/dinkum/images/9/9f/NPC_Nancy.png",
     description: "From Year 2 after all NPCs have moved in",
-    buildTime: "2 nights",
+    buildTime: "2 Nights",
     deedPrice: 2500000,
     deedType: DeedTypes.Collectable,
     inputs: [
@@ -65,7 +65,7 @@ export const buildings: Building[] = [
     npcImg: "",
     description:
       "Outdoor Community Centre. Unlocks after 3 permanent residents move onto the island.",
-    buildTime: "2 nights",
+    buildTime: "2 Nights",
     deedPrice: 25000,
     deedType: DeedTypes.Collectable,
     inputs: [
@@ -113,7 +113,7 @@ export const buildings: Building[] = [
     npcImg:
       "https://static.wikia.nocookie.net/dinkum/images/0/03/NPC_Milburn.png",
     description: "Store Dinks for interest. Economy > 35%.",
-    buildTime: "2 nights",
+    buildTime: "2 Nights",
     deedPrice: 100000,
     deedType: DeedTypes.Collectable,
     inputs: [
@@ -226,7 +226,7 @@ export const buildings: Building[] = [
       "https://static.wikia.nocookie.net/dinkum/images/4/4b/NPC_Franklyn.png",
     description:
       "Research Center. Spend > 190,000 Dinks (sold Shiny Discs included). Relationship > 3/4 heart with Franklyn.",
-    buildTime: "2 nights",
+    buildTime: "2 Nights",
     deedPrice: 250000,
     deedType: DeedTypes.Collectable,
     inputs: [
@@ -459,7 +459,7 @@ export const buildings: Building[] = [
       "https://static.wikia.nocookie.net/dinkum/images/6/65/NPC_Irwin.png",
     description:
       "Animal Store. Spend > 25,000 Dinks with Irwin. Relationship > 1/2 heart.",
-    buildTime: "2 nights",
+    buildTime: "2 Nights",
     deedPrice: 150000,
     deedType: DeedTypes.Collectable,
     inputs: [
@@ -524,7 +524,7 @@ export const buildings: Building[] = [
     npc: "John",
     npcImg: "https://static.wikia.nocookie.net/dinkum/images/5/59/NPC_John.png",
     description: "General Store. Relationship > 1/4 heart with John.",
-    buildTime: "2 nights",
+    buildTime: "2 Nights",
     deedPrice: 75000,
     deedType: DeedTypes.Collectable,
     inputs: [
@@ -563,7 +563,7 @@ export const buildings: Building[] = [
       "https://static.wikia.nocookie.net/dinkum/images/0/09/NPC_Melvin.png",
     description:
       "Furniture Store. Spend > 800 Dinks with Melvin. Relationship > 1 heart.",
-    buildTime: "2 nights",
+    buildTime: "2 Nights",
     deedPrice: 145000,
     deedType: DeedTypes.Collectable,
     inputs: [
@@ -601,7 +601,7 @@ export const buildings: Building[] = [
     npcImg: "",
     description:
       "Elevator to access mines containing ore and treasure. Unlocked after purchasing the Deep Mining Licence from Fletch.",
-    buildTime: "2 nights",
+    buildTime: "2 Nights",
     deedPrice: 250000,
     deedType: DeedTypes.Collectable,
     inputs: [
@@ -650,7 +650,7 @@ export const buildings: Building[] = [
       "https://static.wikia.nocookie.net/dinkum/images/9/98/NPC_Theodore.png",
     description:
       "Unlocked after John has moved in and the player talks to Theodore for the first time. Display Bugs, Critters, and Fish.",
-    buildTime: "2 nights",
+    buildTime: "2 Nights",
     deedPrice: 125000,
     deedType: DeedTypes.Collectable,
     inputs: [
@@ -689,7 +689,7 @@ export const buildings: Building[] = [
       "https://static.wikia.nocookie.net/dinkum/images/b/b7/NPC_Rayne.png",
     description:
       "Seeds and Gardening Tools. Spend > 18,000 Dinks with Rayne. Relationship > 1/2 heart.",
-    buildTime: "2 nights",
+    buildTime: "2 Nights",
     deedPrice: 200000,
     deedType: DeedTypes.Collectable,
     inputs: [
@@ -889,7 +889,7 @@ export const buildings: Building[] = [
       "https://static.wikia.nocookie.net/dinkum/images/4/4c/NPC_Clover.png",
     description:
       "Clothes. Spend > 10,000 Dinks with Clover. Relationship > 1 heart.",
-    buildTime: "2 nights",
+    buildTime: "2 Nights",
     deedPrice: 180000,
     deedType: DeedTypes.Collectable,
     inputs: [
@@ -938,7 +938,7 @@ export const buildings: Building[] = [
       "https://static.wikia.nocookie.net/dinkum/images/c/c4/NPC_Fletch.png",
     description:
       "The Town Bell Deed is unlocked after completing the Town Hall.",
-    buildTime: "2 nights",
+    buildTime: "2 Nights",
     deedPrice: 125000,
     deedType: DeedTypes.Collectable,
     inputs: [
@@ -1054,7 +1054,7 @@ export const buildings: Building[] = [
       "https://static.wikia.nocookie.net/dinkum/images/4/46/NPC_Sheila.png",
     description:
       "A place to get tucker and yarns. Relationship > 1 1/4 hearts  with Sheila.",
-    buildTime: "2 nights",
+    buildTime: "2 Nights",
     deedPrice: 750000,
     deedType: DeedTypes.Collectable,
     inputs: [

@@ -1,5 +1,6 @@
 import { Animal } from "@/types";
 
+
 export const animals: Animal[] = [
   {
     id: "bin_chook",
@@ -301,6 +302,7 @@ export const animals: Animal[] = [
     ],
     researchReward: 8000,
     type: "Wild Animal",
+    domesticable: true,
   },
   {
     id: "alpha_bush_devil",
@@ -673,7 +675,7 @@ export const animals: Animal[] = [
   {
     id: "chook_baby",
     name: "Chook Baby",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/95/Chick.png",
+    img: "https://static.wikia.nocookie.net/dinkum/images/5/51/Baby_Chook.png",
     temperament: "Passive",
     health: 55,
     drops: [
@@ -932,6 +934,146 @@ export const animals: Animal[] = [
     ],
     source: "A Wary Mu tamed with a Mu Saddle",
     type: "Tammed Animal",
+  },
+  {
+    id: "wild_boaricoot",
+    name: "Wild Boaricoot",
+    img: "https://static.wikia.nocookie.net/dinkum/images/a/ad/Boaricoot_Grey.png",
+    temperament: "Neutral",
+    habitat: ["Desert"],
+    health: 0,
+    drops: [
+      {
+        name: "Raw Meat",
+        count: 1,
+        img: "https://static.wikia.nocookie.net/dinkum/images/c/cb/Inv_Raw_Meat.png",
+      },
+      {
+        name: "Bone",
+        count: 1,
+        img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Bone.png",
+      },
+    ],
+    researchReward: 24000,
+    type: "Wild Animal",
+    domesticable: true,
+  },
+  {
+    id: "wild_plunk",
+    name: "Wild Plunk",
+    img: "https://static.wikia.nocookie.net/dinkum/images/2/20/Plunk.png",
+    temperament: "Neutral",
+    habitat: ["Southern Rivers"],
+    health: 0,
+    drops: [
+      {
+        name: "Raw Meat",
+        count: 1,
+        img: "https://static.wikia.nocookie.net/dinkum/images/c/cb/Inv_Raw_Meat.png",
+      },
+      {
+        name: "Bone",
+        count: 1,
+        img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Bone.png",
+      },
+    ],
+    researchReward: 31200,
+    type: "Wild Animal",
+    domesticable: true,
+  },
+  {
+    id: "wild_vombull",
+    name: "Wild Vombull",
+    img: "https://static.wikia.nocookie.net/dinkum/images/0/01/Vombull_Black_White.png",
+    temperament: "Neutral",
+    habitat: ["Plains"],
+    health: 0,
+    drops: [
+      {
+        name: "Raw Meat",
+        count: 1,
+        img: "https://static.wikia.nocookie.net/dinkum/images/c/cb/Inv_Raw_Meat.png",
+      },
+      {
+        name: "Raw Prime Meat",
+        count: 1,
+        img: "https://static.wikia.nocookie.net/dinkum/images/0/07/Inv_Raw_Prime_Meat.png",
+      },
+    ],
+    type: "Wild Animal",
+    domesticable: true,
+  },
+  {
+    id: "wild_rooster",
+    name: "Wild Rooster",
+    img: "https://static.wikia.nocookie.net/dinkum/images/2/2c/Rooster.png",
+    temperament: "Passive",
+    habitat: ["Tropics"],
+    health: 0,
+    drops: [
+      {
+        name: "Raw Drumstick",
+        count: 1,
+        img: "https://static.wikia.nocookie.net/dinkum/images/0/0e/Inv_Raw_Drumstick.png",
+      },
+      {
+        name: "Feather",
+        count: 1,
+        img: "https://static.wikia.nocookie.net/dinkum/images/4/4a/Inv_Feather.png",
+      },
+      {
+        name: "Bone",
+        count: 1,
+        img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Bone.png",
+      },
+    ],
+    researchReward: 22400,
+    type: "Wild Animal",
+    domesticable: true,
+  },
+  {
+    id: "buttowcoot",
+    name: "Buttowcoot",
+    img: "https://static.wikia.nocookie.net/dinkum/images/8/8b/Burrowcoot_White.png",
+    temperament: "Passive",
+    health: 0,
+    drops: [],
+    produces: [
+      {
+        name: "Worms",
+        count: 1,
+        img: "https://static.wikia.nocookie.net/dinkum/images/5/55/Inv_Worms.png",
+      },
+      {
+        name: "Native Bread",
+        count: 1,
+        img: "https://static.wikia.nocookie.net/dinkum/images/4/48/Inv_Native_Bread.png",
+      },
+    ],
+    buyPrice: 35000,
+    type: "Farm Animal",
+  },
+  {
+    id: "buttowcoot_joey",
+    name: "Buttowcoot Joey",
+    img: "https://static.wikia.nocookie.net/dinkum/images/2/24/Burrowcoot_Joey.png",
+    temperament: "Passive",
+    health: 0,
+    drops: [],
+    produces: [
+      {
+        name: "Worms",
+        count: 1,
+        img: "https://static.wikia.nocookie.net/dinkum/images/5/55/Inv_Worms.png",
+      },
+      {
+        name: "Native Bread",
+        count: 1,
+        img: "https://static.wikia.nocookie.net/dinkum/images/4/48/Inv_Native_Bread.png",
+      },
+    ],
+    buyPrice: 35000,
+    type: "Farm Animal",
   },
 ];
 

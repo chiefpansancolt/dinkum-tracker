@@ -1,5 +1,6 @@
 import { FilterArray, Vehicle } from "@/types";
 
+
 export const vehicles: Vehicle[] = [
   {
     id: "bat_glider",
@@ -81,6 +82,7 @@ export const vehicles: Vehicle[] = [
     img: "https://static.wikia.nocookie.net/dinkum/images/f/f9/Inv_Helicopter.png",
     requirementLevel: 3,
     requirementType: "Vehicle Licence",
+    shinyDiscCount: 28,
     source: ["Franklyn's Lab"],
     inputs: [
       {
@@ -118,6 +120,7 @@ export const vehicles: Vehicle[] = [
     img: "https://static.wikia.nocookie.net/dinkum/images/1/19/Inv_Hot_Air_Balloon.png",
     requirementLevel: 3,
     requirementType: "Vehicle Licence",
+    shinyDiscCount: 28,
     source: ["Franklyn's Lab"],
     inputs: [
       {
@@ -160,6 +163,7 @@ export const vehicles: Vehicle[] = [
     img: "https://static.wikia.nocookie.net/dinkum/images/c/c1/Inv_Jet_Ski.png",
     requirementLevel: 1,
     requirementType: "Vehicle Licence",
+    shinyDiscCount: 3,
     source: ["Franklyn's Lab"],
     inputs: [
       {
@@ -210,6 +214,7 @@ export const vehicles: Vehicle[] = [
     img: "https://static.wikia.nocookie.net/dinkum/images/9/99/Inv_Motor_Bike.png",
     requirementLevel: 2,
     requirementType: "Vehicle Licence",
+    shinyDiscCount: 3,
     source: ["Franklyn's Lab"],
     inputs: [
       {
@@ -255,6 +260,7 @@ export const vehicles: Vehicle[] = [
     img: "https://static.wikia.nocookie.net/dinkum/images/9/9e/Inv_Plane.png",
     requirementLevel: 3,
     requirementType: "Vehicle Licence",
+    shinyDiscCount: 50,
     source: ["Franklyn's Lab"],
     inputs: [
       {
@@ -323,6 +329,7 @@ export const vehicles: Vehicle[] = [
     name: "Ride On Lawn Mower",
     img: "https://static.wikia.nocookie.net/dinkum/images/e/e8/Inv_Ride_On_Lawn_Mower.png",
     requirementLevel: null,
+    shinyDiscCount: 1,
     source: ["Franklyn's Lab"],
     inputs: [
       {
@@ -437,6 +444,7 @@ export const vehicles: Vehicle[] = [
     img: "https://static.wikia.nocookie.net/dinkum/images/a/a8/Inv_Tractor.png",
     requirementLevel: 1,
     requirementType: "Agriculture Licence",
+    shinyDiscCount: 20,
     source: ["Franklyn's Lab"],
     inputs: [
       {
@@ -474,6 +482,50 @@ export const vehicles: Vehicle[] = [
     img: "https://static.wikia.nocookie.net/dinkum/images/9/9a/Inv_Ute.png",
     requirementLevel: 2,
     requirementType: "Vehicle Licence",
+    shinyDiscCount: 7,
+    source: ["Franklyn's Lab"],
+    inputs: [
+      {
+        count: 10,
+        name: "Old Gear",
+        img: "https://static.wikia.nocookie.net/dinkum/images/9/90/Inv_Old_Gear.png",
+      },
+      {
+        count: 8,
+        name: "Old Spring",
+        img: "https://static.wikia.nocookie.net/dinkum/images/1/11/Inv_Old_Spring.png",
+      },
+      {
+        count: 10,
+        name: "Iron Bar",
+        img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Inv_Iron_Bar.png",
+      },
+      {
+        count: 1,
+        name: "Old Contraption",
+        img: "https://static.wikia.nocookie.net/dinkum/images/7/7d/Inv_Old_Contraption.png",
+      },
+      {
+        count: 4,
+        name: "Old Wheel",
+        img: "https://static.wikia.nocookie.net/dinkum/images/2/22/Inv_Old_Wheel.png",
+      },
+      {
+        count: 4,
+        name: "Tin Sheet",
+        img: "https://static.wikia.nocookie.net/dinkum/images/3/3b/Inv_Tin_Sheet.png",
+      },
+    ],
+    buyPrice: 320000,
+    baseSellPrice: 160000,
+  },
+  {
+    id: "train",
+    name: "Train",
+    img: "https://static.wikia.nocookie.net/dinkum/images/1/18/Inv_Train.png",
+    requirementLevel: 1,
+    requirementType: "Locomotive Licence",
+    shinyDiscCount: 7,
     source: ["Franklyn's Lab"],
     inputs: [
       {
