@@ -38,6 +38,7 @@ A comprehensive tracking application for your Dinkum adventures. Manage multiple
   - 🔄 Reset functionality
 - **Responsive Design**: Works on desktop and mobile devices
 - **Dark Mode Support**: Toggle between light and dark themes
+- **Weight Calculator**: Ability to calculate Weighted Items price
 
 ## 🔧 Technology Stack
 
@@ -56,40 +57,41 @@ A comprehensive tracking application for your Dinkum adventures. Manage multiple
 ```text
 dinkum-tracker/
 ├── app/                   # Next.js pages
-│   ├── (home)/           # Home page components
-│   ├── playthrough/      # Playthrough management
-│   │   ├── [id]/         # Dynamic routes for each playthrough
-│   │   ├── list/         # Playthrough listing
-│   │   └── new/          # Create new playthrough
-│   ├── settings/         # App settings
-│   ├── itemsBreakdown/   # Items analysis
-│   └── globals.css       # Global styles
-├── components/           # React components
-│   ├── playthrough/      # Playthrough-specific components
-│   │   ├── dashboard/    # Dashboard components
-│   │   └── ui/           # Reusable UI components for playthrough
-│   └── layout/           # Layout components (Sidebar, Navigation)
-├── data/                 # Game data
-│   ├── constants/        # App constants
-│   └── dinkum/           # Game-specific data
-│       ├── pedia/        # Collectible item data
-│       └── ...           # Other game data (buildings, licenses, etc.)
-├── lib/                  # Utility functions
-│   ├── localStorage.ts   # Storage operations
-│   └── services/         # Application services
-├── types/                # TypeScript type definitions
-│   ├── app/              # Application-specific types
-│   ├── dinkum/           # Game data types
-│   └── ui/               # UI component types
-└── public/               # Static assets
+│   ├── (home)/            # Home page components
+│   ├── playthrough/       # Playthrough management
+│   │   ├── [id]/          # Dynamic routes for each playthrough
+│   │   ├── list/          # Playthrough listing
+│   │   └── new/           # Create new playthrough
+│   ├── settings/          # App settings
+│   ├── itemsBreakdown/    # Items analysis
+│   ├── weight-calculator/ # Weight Calculator for weighted items
+│   └── globals.css        # Global styles
+├── components/            # React components
+│   ├── playthrough/       # Playthrough-specific components
+│   │   ├── dashboard/     # Dashboard components
+│   │   └── ui/            # Reusable UI components for playthrough
+│   └── layout/            # Layout components (Sidebar, Navigation)
+├── data/                  # Game data
+│   ├── constants/         # App constants
+│   └── dinkum/            # Game-specific data
+│       ├── pedia/         # Collectible item data
+│       └── ...            # Other game data (buildings, licenses, etc.)
+├── lib/                   # Utility functions
+│   ├── localStorage.ts    # Storage operations
+│   └── services/          # Application services
+├── types/                 # TypeScript type definitions
+│   ├── app/               # Application-specific types
+│   ├── dinkum/            # Game data types
+│   └── ui/                # UI component types
+└── public/                # Static assets
 ```
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js 18.17.0 or later
-- pnpm 8.0.0 or later (recommended) or npm/yarn
+- Node.js 22 or later
+- pnpm 10.0.0 or later (recommended) or npm/yarn
 
 ### Installation
 
