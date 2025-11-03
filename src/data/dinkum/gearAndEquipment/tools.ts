@@ -1,5 +1,6 @@
 import { FilterArray, Tool } from "@/types";
 
+
 export const tools: Tool[] = [
   {
     id: "animal_brush",
@@ -895,6 +896,17 @@ export const tools: Tool[] = [
     buyPrice: 45000,
     buyUnits: "Dinks",
     baseSellPrice: 22500,
+  },
+  {
+    id: "first_aid_kit",
+    name: "First Aid Kit",
+    img: "https://static.wikia.nocookie.net/dinkum/images/6/68/Inv_First_Aid_Kit.png/",
+    damage: null,
+    licence: "",
+    source: ["John's Goods"],
+    buyPrice: 7000,
+    buyUnits: "Dinks",
+    baseSellPrice: 3500,
   },
 ];
 
