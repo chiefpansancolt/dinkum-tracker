@@ -1,6 +1,5 @@
 import { Recipe } from "@/types";
 
-
 export const otherCraftables: Recipe[] = [
   {
     id: "animal_food",

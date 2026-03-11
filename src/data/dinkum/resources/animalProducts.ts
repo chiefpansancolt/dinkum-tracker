@@ -1,6 +1,5 @@
 import { AnimalProduct } from "@/types";
 
-
 export const animalProducts: AnimalProduct[] = [
   {
     id: "alpha_antler",

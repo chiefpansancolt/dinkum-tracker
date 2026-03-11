@@ -58,9 +58,7 @@ const AnimalCard = ({ record }: CollectionCardProps) => {
 						<ItemDetail label="Health" details={record.health.toString()} />
 					)}
 
-					{record.domesticable && (
-						<ItemDetail label="Domesticable" details="Yes" />
-					)}
+					{record.domesticable && <ItemDetail label="Domesticable" details="Yes" />}
 
 					{record.habitat && record.habitat.length > 0 && (
 						<div className="grid grid-cols-12">

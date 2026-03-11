@@ -1,6 +1,5 @@
 import { FilterArray, Vehicle } from "@/types";
 
-
 export const vehicles: Vehicle[] = [
   {
     id: "bat_glider",

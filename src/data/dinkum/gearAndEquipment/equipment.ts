@@ -1,6 +1,5 @@
 import { Equipment, FilterArray } from "@/types";
 
-
 export const equipment: Equipment[] = [
   {
     id: "adm",

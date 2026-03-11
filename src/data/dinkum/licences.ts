@@ -1,7 +1,6 @@
 import { FilterArray, License } from "@/types";
 import { LICENSE_TYPES } from "../constants";
 
-
 export const licenses: License[] = [
   {
     id: "mining_licence",

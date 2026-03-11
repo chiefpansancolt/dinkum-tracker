@@ -344,13 +344,13 @@ export const foragables: Foragable[] = [
     baseSellPrice: 145,
   },
   {
-      id: "tropical_grass_turf_roll",
-      name: "Tropical Grass Turf Roll",
-      img: "https://static.wikia.nocookie.net/dinkum/images/1/1a/Inv_Tropical_Grass_Turf_Roll.png",
-      source: ["Blue Chest in Island Reef"],
-      locations: ["Island Reef"],
-      baseSellPrice: 2,
-    },
+    id: "tropical_grass_turf_roll",
+    name: "Tropical Grass Turf Roll",
+    img: "https://static.wikia.nocookie.net/dinkum/images/1/1a/Inv_Tropical_Grass_Turf_Roll.png",
+    source: ["Blue Chest in Island Reef"],
+    locations: ["Island Reef"],
+    baseSellPrice: 2,
+  },
 ];
 
 export const getForagableById = (id: string): Foragable | undefined => {

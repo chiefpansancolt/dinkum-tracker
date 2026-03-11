@@ -1,6 +1,5 @@
 import { Animal } from "@/types";
 
-
 export const animals: Animal[] = [
   {
     id: "bin_chook",

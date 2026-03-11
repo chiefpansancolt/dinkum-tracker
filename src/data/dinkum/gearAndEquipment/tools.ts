@@ -1,6 +1,5 @@
 import { FilterArray, Tool } from "@/types";
 
-
 export const tools: Tool[] = [
   {
     id: "animal_brush",

@@ -1,6 +1,5 @@
 import { WeightItem } from "@/types";
 
-
 export const weightItems: WeightItem[] = [
   {
     id: "amber_chunk",

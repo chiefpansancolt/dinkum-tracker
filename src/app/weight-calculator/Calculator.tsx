@@ -108,10 +108,13 @@ export default function CalculatorPage() {
 											alt="Dinks"
 											className="mr-1 h-4 w-4"
 										/>
-										<span>{selectedItem.pricePerKg.toLocaleString()} per kg</span>
+										<span>
+											{selectedItem.pricePerKg.toLocaleString()} per kg
+										</span>
 									</div>
 									<p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
-										Weight Range: {selectedItem.minWeight}kg - {selectedItem.maxWeight}kg
+										Weight Range: {selectedItem.minWeight}kg -{" "}
+										{selectedItem.maxWeight}kg
 									</p>
 								</div>
 							</div>

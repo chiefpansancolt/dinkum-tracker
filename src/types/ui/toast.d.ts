@@ -8,8 +8,7 @@ export interface ToastProps {
   message: string;
 }
 
-export interface CustomToastProps
-  extends ToastContentProps<{
-    message: string;
-    type?: ToastTypes;
-  }> {}
+export interface CustomToastProps extends ToastContentProps<{
+  message: string;
+  type?: ToastTypes;
+}> {}
