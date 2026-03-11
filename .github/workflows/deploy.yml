@@ -34,12 +34,12 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: 24
-          cache: npm
+          cache: pnpm
 
-      - run: npm ci
+      - run: pnpm install --frozen-lockfile
 
       - name: Install Vercel CLI
-        run: npm install -g vercel
+        run: pnpm add --global vercel@latest
 
       - name: Pull Vercel environment
         run: vercel pull --yes --environment=${{ github.event.inputs.environment }} --token=${{ secrets.VERCEL_TOKEN }}
