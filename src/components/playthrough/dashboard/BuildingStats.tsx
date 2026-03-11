@@ -1,4 +1,5 @@
 import { Badge, Card, Progress } from "flowbite-react";
+import Image from "next/image";
 import React, { useMemo } from "react";
 import { HiOutlineHome, HiOutlineOfficeBuilding, HiOutlineShoppingBag } from "react-icons/hi";
 import { CollectTabProps } from "@/types/dinkum";
@@ -116,10 +117,13 @@ const BuildingStats: React.FC<CollectTabProps> = ({ collected }) => {
 								>
 									<div className="flex items-center">
 										{building.img ? (
-											<img
+											<Image
 												src={building.img}
 												alt={building.name}
+												width={24}
+												height={24}
 												className="mr-2 h-6 w-6 object-contain"
+												unoptimized
 											/>
 										) : (
 											<div className="mr-2 h-6 w-6 bg-gray-200 dark:bg-gray-700"></div>
@@ -128,9 +132,11 @@ const BuildingStats: React.FC<CollectTabProps> = ({ collected }) => {
 									</div>
 									<Badge color="indigo">
 										<span className="flex">
-											<img
+											<Image
 												src="https://static.wikia.nocookie.net/dinkum/images/4/42/Inv_Dinks.png"
 												alt="Dinks"
+												width={16}
+												height={16}
 												className="mr-1 h-4 w-4"
 											/>
 											{building.deedPrice.toLocaleString()}

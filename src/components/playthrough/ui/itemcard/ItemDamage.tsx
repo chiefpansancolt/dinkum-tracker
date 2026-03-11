@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ItemDamageProps } from "@/types";
 
 const ItemDamage = ({ label, damage }: ItemDamageProps) => {
@@ -6,9 +7,11 @@ const ItemDamage = ({ label, damage }: ItemDamageProps) => {
 			<div className="col-span-4 font-medium">{label}:</div>
 			<div className="col-span-8 flex items-center">
 				<span className="mr-1">+{damage}</span>
-				<img
+				<Image
 					src="https://static.wikia.nocookie.net/dinkum/images/3/32/Attack_Buff.png"
 					alt="Attack"
+					width={20}
+					height={20}
 					className="w-5"
 				/>
 			</div>

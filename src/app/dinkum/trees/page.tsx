@@ -10,7 +10,6 @@ import {
 	getUniqueTreeLocations,
 	trees,
 } from "@/data/dinkum";
-import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
 import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
 import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
@@ -18,8 +17,7 @@ import TabHeader from "@/playthrough/ui/TabHeader";
 import TreeCard from "./TreeCard";
 
 export default function TreesPage() {
-	const [isLoading, setIsLoading] = useState(true);
-	const [searchQuery, setSearchQuery] = useState<string>("");
+	const [searchQuery, setSearchQuery] = useState<string>(() => getQueryParams().q || "");
 	const [locationFilter, setLocationFilter] = useState<string>("All");
 	const [sortBy, setSortBy] = useState<string>("name");
 
@@ -35,15 +33,6 @@ export default function TreesPage() {
 			label: "Sort By",
 		},
 	};
-
-	useEffect(() => {
-		setIsLoading(false);
-
-		const params = getQueryParams();
-		if (params.q) {
-			setSearchQuery(params.q);
-		}
-	}, []);
 
 	useEffect(() => {
 		if (searchQuery) {
@@ -91,10 +80,6 @@ export default function TreesPage() {
 			return 0;
 		});
 	}, [filteredData, sortBy]);
-
-	if (isLoading) {
-		return <LoadingPlaythrough message="Loading trees information..." />;
-	}
 
 	return (
 		<div className="space-y-6 p-6">

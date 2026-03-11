@@ -1,6 +1,7 @@
 "use client";
 
 import { Button, Card, Checkbox, ToggleSwitch } from "flowbite-react";
+import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { HiX } from "react-icons/hi";
@@ -31,7 +32,7 @@ export default function CookingRecipesPage() {
 	const playthroughId = typeof params.id === "string" ? params.id : "";
 	const [playthrough, setPlaythrough] = useState<Playthrough | null>(null);
 	const [isLoading, setIsLoading] = useState(true);
-	const [searchQuery, setSearchQuery] = useState("");
+	const [searchQuery, setSearchQuery] = useState(() => getQueryParams().q || "");
 	const [locationFilter, setLocationFilter] = useState<string>("All");
 	const [unlockFilter, setUnlockFilter] = useState<string>("All");
 	const [selectedBuffs, setSelectedBuffs] = useState<string[]>([]);
@@ -64,11 +65,6 @@ export default function CookingRecipesPage() {
 
 				setIsLoading(false);
 			});
-
-			const params = getQueryParams();
-			if (params.q) {
-				setSearchQuery(params.q);
-			}
 		}
 	}, [playthroughId]);
 
@@ -265,10 +261,13 @@ export default function CookingRecipesPage() {
 										onClick={() => toggleBuffFilter(buff)}
 									>
 										{icon && (
-											<img
+											<Image
 												src={icon}
 												alt={buff}
+												width={20}
+												height={20}
 												className="h-5 w-5 object-contain"
+												unoptimized
 											/>
 										)}
 										<span className="text-sm">

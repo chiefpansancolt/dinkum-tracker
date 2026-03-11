@@ -43,7 +43,7 @@ export default function ItemsBreakdownPage() {
 	const [sortBy, setSortBy] = useState<string>("name");
 	const [showCommonOnly, setShowCommonOnly] = useState<boolean>(false);
 	const [showFilter, setShowFilter] = useState<boolean>(false);
-	const [isLoading, setIsLoading] = useState(true);
+	const [isLoading] = useState(false);
 
 	const allUniqueResources = useMemo(() => {
 		const resourceMap = new Map<string, UniqueResource>();
@@ -181,8 +181,6 @@ export default function ItemsBreakdownPage() {
 				addResources(variant.inputs, recipe.name, "Other Craftables");
 			});
 		});
-
-		setIsLoading(false);
 
 		return Array.from(resourceMap.values());
 	}, []);

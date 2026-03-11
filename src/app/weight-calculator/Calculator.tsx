@@ -1,6 +1,7 @@
 "use client";
 
 import { Card, Label } from "flowbite-react";
+import Image from "next/image";
 import { useMemo, useState } from "react";
 import { weightItems } from "@/data/dinkum/weightItems";
 import TabHeader from "@/playthrough/ui/TabHeader";
@@ -73,10 +74,13 @@ export default function CalculatorPage() {
 											: "border-gray-200 bg-white hover:border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:hover:border-gray-600"
 									}`}
 								>
-									<img
+									<Image
 										src={item.img}
 										alt={item.name}
+										width={64}
+										height={64}
 										className="h-16 w-16 object-contain"
+										unoptimized
 									/>
 									<span className="mt-2 text-center text-xs font-medium dark:text-white">
 										{item.name}
@@ -93,19 +97,24 @@ export default function CalculatorPage() {
 						<div className="space-y-6">
 							{/* Item Display */}
 							<div className="flex flex-col items-center space-y-4 border-b border-gray-200 pb-6 dark:border-gray-700">
-								<img
+								<Image
 									src={selectedItem.img}
 									alt={selectedItem.name}
+									width={128}
+									height={128}
 									className="h-32 w-32 object-contain"
+									unoptimized
 								/>
 								<div className="text-center">
 									<h3 className="text-2xl font-semibold dark:text-white">
 										{selectedItem.name}
 									</h3>
 									<div className="mt-2 flex items-center justify-center text-sm text-gray-600 dark:text-gray-400">
-										<img
+										<Image
 											src="https://static.wikia.nocookie.net/dinkum/images/4/42/Inv_Dinks.png"
 											alt="Dinks"
+											width={16}
+											height={16}
 											className="mr-1 h-4 w-4"
 										/>
 										<span>
@@ -158,18 +167,22 @@ export default function CalculatorPage() {
 										Total Price
 									</p>
 									<div className="mt-2 flex items-center justify-center text-4xl font-bold text-cyan-600 dark:text-cyan-400">
-										<img
+										<Image
 											src="https://static.wikia.nocookie.net/dinkum/images/4/42/Inv_Dinks.png"
 											alt="Dinks"
+											width={40}
+											height={40}
 											className="mr-3 h-10 w-10"
 										/>
 										<span>{calculatedPrice.toLocaleString()}</span>
 									</div>
 									<div className="mt-3 flex items-center justify-center text-xs text-gray-500 dark:text-gray-500">
 										<span>{weight.toFixed(2)}kg × </span>
-										<img
+										<Image
 											src="https://static.wikia.nocookie.net/dinkum/images/4/42/Inv_Dinks.png"
 											alt="Dinks"
+											width={12}
+											height={12}
 											className="mx-1 h-3 w-3"
 										/>
 										<span>{selectedItem.pricePerKg.toLocaleString()}/kg</span>

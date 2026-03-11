@@ -7,7 +7,7 @@ import FilterDetails from "@/components/playthrough/ui/FilterDetails";
 import { Button, Card } from "flowbite-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { HiPlus } from "react-icons/hi";
 import { Playthrough } from "@/types/app";
 import { getDefaultSortPreference } from "@/lib/services/dataService";
@@ -32,7 +32,6 @@ export default function PlaythroughsPage() {
 	const [isLoading, setIsLoading] = useState(true);
 	const [searchQuery, setSearchQuery] = useState("");
 	const [sortOption, setSortOption] = useState<string>("lastUpdated");
-	const [filteredPlaythroughs, setFilteredPlaythroughs] = useState<Playthrough[]>([]);
 
 	const sortPlaythroughs = useCallback(
 		(playthroughsList: Playthrough[], sort: string): Playthrough[] => {
@@ -71,16 +70,14 @@ export default function PlaythroughsPage() {
 		}
 	}, []);
 
-	useEffect(() => {
+	const filteredPlaythroughs = useMemo(() => {
 		let result = [...playthroughs];
 
 		if (searchQuery) {
 			result = result.filter((p) => p.name.toLowerCase().includes(searchQuery.toLowerCase()));
 		}
 
-		result = sortPlaythroughs(result, sortOption);
-
-		setFilteredPlaythroughs(result);
+		return sortPlaythroughs(result, sortOption);
 	}, [playthroughs, searchQuery, sortOption, sortPlaythroughs]);
 
 	const handleDelete = () => {

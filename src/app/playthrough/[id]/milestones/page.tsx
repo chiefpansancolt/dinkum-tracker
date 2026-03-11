@@ -1,6 +1,7 @@
 "use client";
 
 import { Badge } from "flowbite-react";
+import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { Milestone, Playthrough } from "@/types";
@@ -29,7 +30,7 @@ export default function MilestonesPage() {
 	const playthroughId = typeof params.id === "string" ? params.id : "";
 	const [playthrough, setPlaythrough] = useState<Playthrough | null>(null);
 	const [isLoading, setIsLoading] = useState(true);
-	const [searchQuery, setSearchQuery] = useState("");
+	const [searchQuery, setSearchQuery] = useState(() => getQueryParams().q || "");
 	const [categoryFilter, setCategoryFilter] = useState("all");
 	const [collectionFilter, setCollectionFilter] = useState("All");
 	const [viewMode, setViewMode] = useState<"all" | "grouped">("grouped");
@@ -68,11 +69,6 @@ export default function MilestonesPage() {
 
 				setIsLoading(false);
 			});
-
-			const params = getQueryParams();
-			if (params.q) {
-				setSearchQuery(params.q);
-			}
 		}
 	}, [playthroughId]);
 
@@ -279,9 +275,11 @@ export default function MilestonesPage() {
 							<span className="flex items-center">
 								{getEarnedPermitPoints().toLocaleString()} /{" "}
 								{getMilestoneTotalPermitPoints().toLocaleString()}
-								<img
+								<Image
 									src="https://static.wikia.nocookie.net/dinkum/images/9/97/Permit_Points.png"
 									alt="Permit Points"
+									width={28}
+									height={28}
 									className="ml-2 w-7"
 								/>
 							</span>

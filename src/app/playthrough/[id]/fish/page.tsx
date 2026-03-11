@@ -41,7 +41,7 @@ export default function FishPage() {
 	const playthroughId = typeof params.id === "string" ? params.id : "";
 	const [playthrough, setPlaythrough] = useState<Playthrough | null>(null);
 	const [isLoading, setIsLoading] = useState(true);
-	const [searchQuery, setSearchQuery] = useState("");
+	const [searchQuery, setSearchQuery] = useState(() => getQueryParams().q || "");
 	const [collectedState, setCollectedState] = useState<string[]>([]);
 	const [donatedState, setDonatedState] = useState<string[]>([]);
 	const [isDirty, setIsDirty] = useState(false);
@@ -98,11 +98,6 @@ export default function FishPage() {
 
 				setIsLoading(false);
 			});
-
-			const params = getQueryParams();
-			if (params.q) {
-				setSearchQuery(params.q);
-			}
 		}
 	}, [playthroughId]);
 

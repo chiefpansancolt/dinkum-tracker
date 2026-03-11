@@ -27,7 +27,7 @@ export default function CraftingRecipesPage() {
 	const playthroughId = typeof params.id === "string" ? params.id : "";
 	const [playthrough, setPlaythrough] = useState<Playthrough | null>(null);
 	const [isLoading, setIsLoading] = useState(true);
-	const [searchQuery, setSearchQuery] = useState<string>("");
+	const [searchQuery, setSearchQuery] = useState<string>(() => getQueryParams().q || "");
 	const [sourceFilter, setSourceFilter] = useState<string>("All");
 	const [unlockFilter, setUnlockFilter] = useState<string>("All");
 	const [localState, setLocalState] = useState<Record<string, boolean>>({});
@@ -57,11 +57,6 @@ export default function CraftingRecipesPage() {
 
 				setIsLoading(false);
 			});
-
-			const params = getQueryParams();
-			if (params.q) {
-				setSearchQuery(params.q);
-			}
 		}
 	}, [playthroughId]);
 

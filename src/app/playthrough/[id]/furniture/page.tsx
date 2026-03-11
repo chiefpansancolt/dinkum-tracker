@@ -29,7 +29,7 @@ export default function FurniturePage() {
 	const playthroughId = typeof params.id === "string" ? params.id : "";
 	const [playthrough, setPlaythrough] = useState<Playthrough | null>(null);
 	const [isLoading, setIsLoading] = useState(true);
-	const [searchQuery, setSearchQuery] = useState("");
+	const [searchQuery, setSearchQuery] = useState(() => getQueryParams().q || "");
 	const [setFilter, setSetFilter] = useState<string>("All");
 	const [sourceFilter, setSourceFilter] = useState<string>("All");
 	const [melvinsCatalogueFilter, setMelvinsCatalogueFilter] = useState<string>("All");
@@ -71,11 +71,6 @@ export default function FurniturePage() {
 
 				setIsLoading(false);
 			});
-
-			const params = getQueryParams();
-			if (params.q) {
-				setSearchQuery(params.q);
-			}
 		}
 	}, [playthroughId]);
 

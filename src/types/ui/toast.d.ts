@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-empty-object-type */
 import { ToastContentProps } from "react-toastify";
 import { TOAST_TYPES } from "@/data/constants";
 

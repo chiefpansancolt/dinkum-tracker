@@ -1,10 +1,18 @@
+import Image from "next/image";
 import { ItemFranklynProps, Resource, ResourceItemProps } from "@/types";
 
 const Item = ({ input }: ResourceItemProps) => {
 	return (
 		<div className="flex items-center gap-2 rounded-lg bg-gray-100 p-2 dark:bg-gray-900">
 			{input.img && (
-				<img src={input.img} alt={input.name} className="h-6 w-6 object-contain" />
+				<Image
+					src={input.img}
+					alt={input.name}
+					width={24}
+					height={24}
+					className="h-6 w-6 object-contain"
+					unoptimized
+				/>
 			)}
 			<span className="text-sm">
 				{input.count}x {input.name}

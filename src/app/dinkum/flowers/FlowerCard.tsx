@@ -1,4 +1,5 @@
 import { Badge } from "flowbite-react";
+import Image from "next/image";
 import { CollectionCardProps } from "@/types";
 import DinkValue from "@/playthrough/ui/itemcard/DinkValue";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
@@ -41,10 +42,13 @@ const FlowerCard = ({ record }: CollectionCardProps) => {
 							<div className="col-span-8">
 								<div className="flex items-center">
 									{record.seed.img && (
-										<img
+										<Image
 											src={record.seed.img}
 											alt={record.seed.name}
+											width={20}
+											height={20}
 											className="mr-1 h-5 w-5 object-contain"
+											unoptimized
 										/>
 									)}
 									<span>{record.seed.name}</span>

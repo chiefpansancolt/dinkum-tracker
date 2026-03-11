@@ -1,4 +1,5 @@
 import { Badge, Card } from "flowbite-react";
+import Image from "next/image";
 import React from "react";
 import { CollectNumberTabProps } from "@/types";
 import { skills } from "@/data/dinkum";
@@ -28,10 +29,13 @@ const SkillStats: React.FC<CollectNumberTabProps> = ({ collected }) => {
 									>
 										<div className="flex items-center">
 											{skill.img && (
-												<img
+												<Image
 													src={skill.img}
 													alt={skill.name}
+													width={24}
+													height={24}
 													className="mr-2 h-6 w-6 object-contain"
+													unoptimized
 												/>
 											)}
 											<span className="font-medium">{skill.name}</span>

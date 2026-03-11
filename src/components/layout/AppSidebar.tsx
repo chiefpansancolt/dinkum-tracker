@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { BsCassette } from "react-icons/bs";
 import { FaToolbox, FaTools } from "react-icons/fa";
 import {
@@ -73,52 +73,53 @@ const SidebarLink = ({ href, currentPath, icon, indented = false, children }: Si
 export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 	const pathname = usePathname();
 	const params = useParams();
-	const [pedieOpen, setPedieOpen] = useState(false);
-	const [recipesOpen, setRecipesOpen] = useState(false);
-	const [gearOpen, setGearOpen] = useState(false);
-	const [decorOpen, setDecorOpen] = useState(false);
-	const [plansOpen, setPlantsOpen] = useState(false);
+	const [pedieOpen, setPedieOpen] = useState(
+		() =>
+			!!(
+				pathname?.includes("/fish") ||
+				pathname?.includes("/bugs") ||
+				pathname?.includes("/critters")
+			)
+	);
+	const [recipesOpen, setRecipesOpen] = useState(
+		() =>
+			!!(
+				pathname?.includes("/cookingRecipes") ||
+				pathname?.includes("/craftingRecipes") ||
+				pathname?.includes("/signWritingRecipes")
+			)
+	);
+	const [gearOpen, setGearOpen] = useState(
+		() =>
+			!!(
+				pathname?.includes("/books") ||
+				pathname?.includes("/tools") ||
+				pathname?.includes("/weapons") ||
+				pathname?.includes("/equipment") ||
+				pathname?.includes("/vehicles") ||
+				pathname?.includes("/cassettes")
+			)
+	);
+	const [decorOpen, setDecorOpen] = useState(
+		() =>
+			!!(
+				pathname?.includes("/clothing") ||
+				pathname?.includes("/decorations") ||
+				pathname?.includes("/furniture")
+			)
+	);
+	const [plansOpen, setPlantsOpen] = useState(
+		() =>
+			!!(
+				pathname?.includes("/trees") ||
+				pathname?.includes("/seeds") ||
+				pathname?.includes("/crops") ||
+				pathname?.includes("/flowers")
+			)
+	);
 
 	const playthroughId = params?.id as string;
 	const isPlaythroughRoute = pathname?.includes("/playthrough/") && playthroughId;
-
-	useEffect(() => {
-		if (pathname) {
-			setPedieOpen(
-				pathname.includes("/fish") ||
-					pathname.includes("/bugs") ||
-					pathname.includes("/critters")
-			);
-
-			setRecipesOpen(
-				pathname.includes("/cookingRecipes") ||
-					pathname.includes("/craftingRecipes") ||
-					pathname.includes("/signWritingRecipes")
-			);
-
-			setGearOpen(
-				pathname.includes("/books") ||
-					pathname.includes("/tools") ||
-					pathname.includes("/weapons") ||
-					pathname.includes("/equipment") ||
-					pathname.includes("/vehicles") ||
-					pathname.includes("/cassettes")
-			);
-
-			setDecorOpen(
-				pathname.includes("/clothing") ||
-					pathname.includes("/decorations") ||
-					pathname.includes("/furniture")
-			);
-
-			setPlantsOpen(
-				pathname.includes("/trees") ||
-					pathname.includes("/seeds") ||
-					pathname.includes("/crops") ||
-					pathname.includes("/flowers")
-			);
-		}
-	}, [pathname]);
 
 	return (
 		<aside

@@ -11,7 +11,6 @@ import {
 	getAnimalByType,
 	getUniqueAnimalHabitat,
 } from "@/data/dinkum";
-import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
 import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
 import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
@@ -19,8 +18,7 @@ import TabHeader from "@/playthrough/ui/TabHeader";
 import AnimalCard from "./AnimalCard";
 
 export default function AnimalsPage() {
-	const [isLoading, setIsLoading] = useState(true);
-	const [searchQuery, setSearchQuery] = useState<string>("");
+	const [searchQuery, setSearchQuery] = useState<string>(() => getQueryParams().q || "");
 	const [temperamentFilter, setTemperamentFilter] = useState<string>("All");
 	const [typeFilter, setTypeFilter] = useState<string>("All");
 	const [habitatFilter, setHabitatFilter] = useState<string>("All");
@@ -48,15 +46,6 @@ export default function AnimalsPage() {
 			label: "Sort By",
 		},
 	};
-
-	useEffect(() => {
-		setIsLoading(false);
-
-		const params = getQueryParams();
-		if (params.q) {
-			setSearchQuery(params.q);
-		}
-	}, []);
 
 	useEffect(() => {
 		if (searchQuery) {
@@ -124,10 +113,6 @@ export default function AnimalsPage() {
 			return 0;
 		});
 	}, [filteredData, sortBy]);
-
-	if (isLoading) {
-		return <LoadingPlaythrough message="Loading animals information..." />;
-	}
 
 	return (
 		<div className="space-y-6 p-6">

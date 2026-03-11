@@ -1,6 +1,7 @@
 "use client";
 
 import { Badge } from "flowbite-react";
+import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { License, Playthrough } from "@/types";
@@ -30,7 +31,7 @@ export default function LicensesPage() {
 	const playthroughId = typeof params.id === "string" ? params.id : "";
 	const [playthrough, setPlaythrough] = useState<Playthrough | null>(null);
 	const [isLoading, setIsLoading] = useState(true);
-	const [searchQuery, setSearchQuery] = useState("");
+	const [searchQuery, setSearchQuery] = useState(() => getQueryParams().q || "");
 	const [categoryFilter, setCategoryFilter] = useState<string>("All");
 	const [collectionFilter, setCollectionFilter] = useState<string>("All");
 	const [localState, setLocalState] = useState<Record<string, boolean>>({});
@@ -60,11 +61,6 @@ export default function LicensesPage() {
 
 				setIsLoading(false);
 			});
-
-			const params = getQueryParams();
-			if (params.q) {
-				setSearchQuery(params.q);
-			}
 		}
 	}, [playthroughId]);
 
@@ -260,9 +256,11 @@ export default function LicensesPage() {
 							<span className="flex items-center">
 								{getSpentPermitPoints().toLocaleString()} /{" "}
 								{getLicenseTotalPermitPoints().toLocaleString()}
-								<img
+								<Image
 									src="https://static.wikia.nocookie.net/dinkum/images/9/97/Permit_Points.png"
 									alt="Permit Points"
+									width={28}
+									height={28}
 									className="ml-2 w-7"
 								/>
 							</span>

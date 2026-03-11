@@ -28,7 +28,7 @@ export default function VehiclesPage() {
 	const playthroughId = params?.id as string;
 	const [playthrough, setPlaythrough] = useState<Playthrough | null>(null);
 	const [isLoading, setIsLoading] = useState(true);
-	const [searchQuery, setSearchQuery] = useState("");
+	const [searchQuery, setSearchQuery] = useState(() => getQueryParams().q || "");
 	const [sourceFilter, setSourceFilter] = useState<string>("All");
 	const [requirementFilter, setRequirementFilter] = useState<string>("All");
 	const [collectionFilter, setCollectionFilter] = useState<string>("All");
@@ -59,11 +59,6 @@ export default function VehiclesPage() {
 
 				setIsLoading(false);
 			});
-
-			const params = getQueryParams();
-			if (params.q) {
-				setSearchQuery(params.q);
-			}
 		}
 	}, [playthroughId]);
 

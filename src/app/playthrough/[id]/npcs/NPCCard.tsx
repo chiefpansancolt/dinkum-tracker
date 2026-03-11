@@ -1,4 +1,5 @@
 import { Button } from "flowbite-react";
+import Image from "next/image";
 import { HiHeart, HiOutlineHeart } from "react-icons/hi";
 import { NPCCardProps } from "@/types";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
@@ -128,10 +129,13 @@ const NPCCard = ({ npc, hearts, onHeartsChange }: NPCCardProps) => {
 									iconComp={
 										npc.foodPreferences.likesImg
 											? () => (
-													<img
-														src={npc.foodPreferences.likesImg}
+													<Image
+														src={npc.foodPreferences.likesImg!}
 														alt={`${npc.foodPreferences.likes} icon`}
+														width={20}
+														height={20}
 														className="mr-1 h-5 w-5 object-contain"
+														unoptimized
 													/>
 												)
 											: undefined
@@ -148,10 +152,13 @@ const NPCCard = ({ npc, hearts, onHeartsChange }: NPCCardProps) => {
 									iconComp={
 										npc.foodPreferences.dislikesImg
 											? () => (
-													<img
-														src={npc.foodPreferences.dislikesImg}
+													<Image
+														src={npc.foodPreferences.dislikesImg!}
 														alt={`${npc.foodPreferences.dislikes} icon`}
+														width={20}
+														height={20}
 														className="mr-1 h-5 w-5 object-contain"
+														unoptimized
 													/>
 												)
 											: undefined

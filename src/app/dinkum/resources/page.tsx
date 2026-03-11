@@ -14,7 +14,6 @@ import {
 	relics,
 	trophies,
 } from "@/data/dinkum";
-import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
 import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
 import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
@@ -22,22 +21,12 @@ import TabHeader from "@/playthrough/ui/TabHeader";
 import ResourceCard from "./ResourceCard";
 
 export default function ResourcesPage() {
-	const [isLoading, setIsLoading] = useState(true);
-	const [searchQuery, setSearchQuery] = useState<string>("");
+	const [searchQuery, setSearchQuery] = useState<string>(() => getQueryParams().q || "");
 	const [selectedTypes, setSelectedTypes] = useState<ResourceType[]>([]);
 	const [sourceFilter, setSourceFilter] = useState<string>("All");
 	const [sortBy, setSortBy] = useState<string>("name");
 	const [showCommonOnly, setShowCommonOnly] = useState<boolean>(false);
 	const [showFilter, setShowFilter] = useState<boolean>(false);
-
-	useEffect(() => {
-		setIsLoading(false);
-
-		const params = getQueryParams();
-		if (params.q) {
-			setSearchQuery(params.q);
-		}
-	}, []);
 
 	useEffect(() => {
 		if (searchQuery) {
@@ -221,10 +210,6 @@ export default function ResourcesPage() {
 				return "gray";
 		}
 	};
-
-	if (isLoading) {
-		return <LoadingPlaythrough message="Loading resources..." />;
-	}
 
 	return (
 		<div className="space-y-6 p-6">

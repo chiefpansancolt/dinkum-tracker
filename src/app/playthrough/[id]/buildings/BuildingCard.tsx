@@ -1,4 +1,5 @@
 import { Badge } from "flowbite-react";
+import Image from "next/image";
 import { HiCalendarDays, HiClock } from "react-icons/hi2";
 import { Building, CollectionCardProps } from "@/types";
 import { DeedTypes } from "@/data/constants";
@@ -41,10 +42,13 @@ const BuildingCard = ({ record, isCollected = false, onToggleCollected }: Collec
 							details={building.npc}
 							iconComp={() =>
 								building.npcImg && (
-									<img
+									<Image
 										src={building.npcImg}
 										alt={building.npc}
+										width={20}
+										height={20}
 										className="h-5 w-5 object-contain"
+										unoptimized
 									/>
 								)
 							}

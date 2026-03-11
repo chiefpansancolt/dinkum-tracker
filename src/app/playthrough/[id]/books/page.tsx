@@ -22,7 +22,7 @@ export default function BooksPage() {
 	const playthroughId = params?.id as string;
 	const [playthrough, setPlaythrough] = useState<Playthrough | null>(null);
 	const [isLoading, setIsLoading] = useState(true);
-	const [searchQuery, setSearchQuery] = useState("");
+	const [searchQuery, setSearchQuery] = useState(() => getQueryParams().q || "");
 	const [localState, setLocalState] = useState<Record<string, boolean>>({});
 	const [collectionFilter, setCollectionFilter] = useState("All");
 	const [isDirty, setIsDirty] = useState(false);
@@ -46,11 +46,6 @@ export default function BooksPage() {
 
 				setIsLoading(false);
 			});
-
-			const params = getQueryParams();
-			if (params.q) {
-				setSearchQuery(params.q);
-			}
 		}
 	}, [playthroughId]);
 

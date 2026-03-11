@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ItemBuffsProps } from "@/types";
 import { getBuffIcon } from "@/lib/services/buffIconService";
 import { BuffIcons } from "@/data/constants";
@@ -16,10 +17,13 @@ const ItemBuffs = ({ id, buffs }: ItemBuffsProps) => {
 									className="flex items-center"
 									title="Buff Duration"
 								>
-									<img
+									<Image
 										src={BuffIcons.length}
 										alt="Buff Duration"
+										width={28}
+										height={28}
 										className="h-7 w-7 object-contain"
+										unoptimized
 									/>
 									<span className="ml-1 text-xs">{buffs.length} min(s)</span>
 								</div>
@@ -39,10 +43,13 @@ const ItemBuffs = ({ id, buffs }: ItemBuffsProps) => {
 											.replace(/^./, (str) => str.toUpperCase())}
 									>
 										{icon && (
-											<img
+											<Image
 												src={icon}
 												alt={buffName}
+												width={20}
+												height={20}
 												className="h-5 w-5 object-contain"
+												unoptimized
 											/>
 										)}
 										{typeof value === "number" && !level && (

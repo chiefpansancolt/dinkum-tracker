@@ -1,12 +1,15 @@
+import Image from "next/image";
 import { DinkPriceProps, PermitValueProps } from "@/types";
 
 const PermitPrice = ({ price }: DinkPriceProps) => {
 	return (
 		<div className="flex items-center">
 			<span>{price.toLocaleString()}</span>
-			<img
+			<Image
 				src="https://static.wikia.nocookie.net/dinkum/images/9/97/Permit_Points.png"
 				alt="Permit Points"
+				width={16}
+				height={20}
 				className="ml-1 w-4"
 			/>
 		</div>

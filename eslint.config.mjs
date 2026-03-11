@@ -11,6 +11,7 @@ const config = [
       "*.config.js",
       "*.config.mjs",
       ".flowbite-react/",
+      "dist/",
     ],
   },
 ];

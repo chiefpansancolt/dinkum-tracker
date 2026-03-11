@@ -1,4 +1,5 @@
 import { Badge, Card, Progress } from "flowbite-react";
+import Image from "next/image";
 import React, { useMemo } from "react";
 import { CollectionStatsProps } from "@/types";
 import { bugs, critters, fish } from "@/data/dinkum";
@@ -139,9 +140,11 @@ const CollectionStats: React.FC<CollectionStatsProps> = ({ collections, donation
 									<span className="flex items-center">
 										{totalStats.earnedPermitPoints.toLocaleString()} /{" "}
 										{totalStats.totalPossiblePermitPoints.toLocaleString()}{" "}
-										<img
+										<Image
 											src="https://static.wikia.nocookie.net/dinkum/images/9/97/Permit_Points.png"
 											alt="Permit Points"
+											width={28}
+											height={20}
 											className="ml-2 w-7"
 										/>
 									</span>

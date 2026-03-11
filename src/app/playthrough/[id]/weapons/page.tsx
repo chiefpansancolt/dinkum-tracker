@@ -27,7 +27,7 @@ export default function WeaponsPage() {
 	const playthroughId = params?.id as string;
 	const [playthrough, setPlaythrough] = useState<Playthrough | null>(null);
 	const [isLoading, setIsLoading] = useState(true);
-	const [searchQuery, setSearchQuery] = useState("");
+	const [searchQuery, setSearchQuery] = useState(() => getQueryParams().q || "");
 	const [sourceFilter, setSourceFilter] = useState<string>("All");
 	const [damageFilter, setDamageFilter] = useState<string>("All");
 	const [collectionFilter, setCollectionFilter] = useState<string>("All");
@@ -63,11 +63,6 @@ export default function WeaponsPage() {
 
 				setIsLoading(false);
 			});
-
-			const hashParams = getQueryParams();
-			if (hashParams.q) {
-				setSearchQuery(hashParams.q);
-			}
 		}
 	}, [playthroughId]);
 

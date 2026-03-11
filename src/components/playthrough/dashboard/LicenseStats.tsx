@@ -1,4 +1,5 @@
 import { Badge, Card, Progress } from "flowbite-react";
+import Image from "next/image";
 import React, { useMemo } from "react";
 import { CollectTabProps, License } from "@/types";
 import { licenses } from "@/data/dinkum";
@@ -88,9 +89,11 @@ const LicenseStats: React.FC<CollectTabProps> = ({ collected }) => {
 								<span className="flex items-center">
 									{stats.spentPermitPoints.toLocaleString()} /{" "}
 									{stats.totalPermitPoints.toLocaleString()}{" "}
-									<img
+									<Image
 										src="https://static.wikia.nocookie.net/dinkum/images/9/97/Permit_Points.png"
 										alt="Permit Points"
+										width={28}
+										height={20}
 										className="ml-2 w-7"
 									/>
 								</span>

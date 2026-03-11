@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ImportData } from "@/types";
 import { getPlaythroughs, STORAGE_KEY } from "@/lib/storage";
 

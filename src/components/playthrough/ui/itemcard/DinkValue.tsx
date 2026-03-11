@@ -1,12 +1,15 @@
 import { Popover } from "flowbite-react";
+import Image from "next/image";
 import { DinkPriceProps, DinkValueProps } from "@/types";
 
 const DinkPrice = ({ price }: DinkPriceProps) => {
 	return (
 		<div className="flex items-center">
-			<img
+			<Image
 				src="https://static.wikia.nocookie.net/dinkum/images/4/42/Inv_Dinks.png"
 				alt="Dinks"
+				width={16}
+				height={16}
 				className="mr-1 h-4 w-4"
 			/>
 			<span>{price.toLocaleString()}</span>

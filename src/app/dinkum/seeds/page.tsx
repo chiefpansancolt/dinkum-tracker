@@ -11,7 +11,6 @@ import {
 	getUniqueSeedCategories,
 	seeds,
 } from "@/data/dinkum";
-import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
 import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
 import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
@@ -19,8 +18,7 @@ import TabHeader from "@/playthrough/ui/TabHeader";
 import SeedCard from "./SeedCard";
 
 export default function SeedsPage() {
-	const [isLoading, setIsLoading] = useState(true);
-	const [searchQuery, setSearchQuery] = useState<string>("");
+	const [searchQuery, setSearchQuery] = useState<string>(() => getQueryParams().q || "");
 	const [seasonFilter, setSeasonFilter] = useState<string>("All");
 	const [categoryFilter, setCategoryFilter] = useState<string>("All");
 	const [sortBy, setSortBy] = useState<string>("name");
@@ -48,15 +46,6 @@ export default function SeedsPage() {
 			label: "Sort By",
 		},
 	};
-
-	useEffect(() => {
-		setIsLoading(false);
-
-		const params = getQueryParams();
-		if (params.q) {
-			setSearchQuery(params.q);
-		}
-	}, []);
 
 	useEffect(() => {
 		if (searchQuery) {
@@ -118,10 +107,6 @@ export default function SeedsPage() {
 			return 0;
 		});
 	}, [filteredData, sortBy]);
-
-	if (isLoading) {
-		return <LoadingPlaythrough message="Loading seeds information..." />;
-	}
 
 	return (
 		<div className="space-y-6 p-6">

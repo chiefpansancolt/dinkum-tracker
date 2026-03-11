@@ -30,7 +30,7 @@ export default function BuildingsPage() {
 	const playthroughId = typeof params.id === "string" ? params.id : "";
 	const [playthrough, setPlaythrough] = useState<Playthrough | null>(null);
 	const [isLoading, setIsLoading] = useState(true);
-	const [searchQuery, setSearchQuery] = useState("");
+	const [searchQuery, setSearchQuery] = useState(() => getQueryParams().q || "");
 	const [deedTypeFilter, setDeedTypeFilter] = useState<string>("All");
 	const [npcFilter, setNpcFilter] = useState<string>("All");
 	const [collectionFilter, setCollectionFilter] = useState("All");
@@ -66,11 +66,6 @@ export default function BuildingsPage() {
 
 				setIsLoading(false);
 			});
-
-			const params = getQueryParams();
-			if (params.q) {
-				setSearchQuery(params.q);
-			}
 		}
 	}, [playthroughId]);
 

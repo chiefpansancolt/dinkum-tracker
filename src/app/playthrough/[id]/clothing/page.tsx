@@ -30,14 +30,18 @@ export default function ClothingPage() {
 	const playthroughId = typeof params.id === "string" ? params.id : "";
 	const [playthrough, setPlaythrough] = useState<Playthrough | null>(null);
 	const [isLoading, setIsLoading] = useState(true);
-	const [searchQuery, setSearchQuery] = useState("");
+	const [searchQuery, setSearchQuery] = useState(() => getQueryParams().q || "");
 	const [slotFilter, setSlotFilter] = useState<string>("All");
 	const [typeFilter, setTypeFilter] = useState<string>("All");
 	const [setFilter, setSetFilter] = useState<string>("All");
 	const [collectionFilter, setCollectionFilter] = useState<string>("All");
 	const [localState, setLocalState] = useState<Record<string, boolean>>({});
-	const [availableTypes, setAvailableTypes] = useState<string[]>([]);
 	const [isDirty, setIsDirty] = useState(false);
+
+	const availableTypes = useMemo(() => {
+		if (slotFilter === "All") return ["All"];
+		return ["All", ...(ClothingSlots[slotFilter as ClothingSlot] || [])];
+	}, [slotFilter]);
 
 	const filters = {
 		slot: {
@@ -73,24 +77,8 @@ export default function ClothingPage() {
 
 				setIsLoading(false);
 			});
-
-			const params = getQueryParams();
-			if (params.q) {
-				setSearchQuery(params.q);
-			}
 		}
 	}, [playthroughId]);
-
-	useEffect(() => {
-		if (slotFilter === "All") {
-			setAvailableTypes(["All"]);
-			setTypeFilter("All");
-		} else {
-			const types = ClothingSlots[slotFilter as ClothingSlot] || [];
-			setAvailableTypes(["All", ...types]);
-			setTypeFilter("All");
-		}
-	}, [slotFilter]);
 
 	useEffect(() => {
 		if (searchQuery) {
@@ -129,6 +117,7 @@ export default function ClothingPage() {
 	const handleFilterChange = (name: string, value: string) => {
 		if (name === "slot") {
 			setSlotFilter(value);
+			setTypeFilter("All");
 		} else if (name === "type") {
 			setTypeFilter(value);
 		} else if (name === "set") {

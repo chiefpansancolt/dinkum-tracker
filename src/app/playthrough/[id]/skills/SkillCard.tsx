@@ -1,4 +1,5 @@
 import { Button } from "flowbite-react";
+import Image from "next/image";
 import React from "react";
 import { HiMinusSm, HiPlusSm } from "react-icons/hi";
 import { SkillCardProps } from "@/types";
@@ -10,10 +11,13 @@ const SkillCard = ({ skill, level, onLevelChange }: SkillCardProps) => {
 			renderHeader={() => (
 				<div className="flex items-center">
 					{skill.img && (
-						<img
+						<Image
 							src={skill.img}
 							alt={skill.name}
+							width={40}
+							height={40}
 							className="mr-3 h-10 w-10 object-contain"
+							unoptimized
 						/>
 					)}
 					<h3 className="text-lg font-bold text-gray-900 dark:text-gray-50">

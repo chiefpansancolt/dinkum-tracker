@@ -1,4 +1,5 @@
 import { Card } from "flowbite-react";
+import Image from "next/image";
 import React, { useMemo } from "react";
 import { HiHeart } from "react-icons/hi";
 import { CollectNumberTabProps } from "@/types";
@@ -104,10 +105,13 @@ const NPCStats: React.FC<CollectNumberTabProps> = ({ collected }) => {
 												className="flex items-center justify-between rounded-lg bg-gray-50 p-2 dark:bg-gray-800"
 											>
 												<div className="flex items-center">
-													<img
+													<Image
 														src={npc.img}
 														alt={npc.name}
+														width={24}
+														height={24}
 														className="mr-2 h-6 w-6 object-contain"
+														unoptimized
 													/>
 													<span className="font-medium">{npc.name}</span>
 												</div>
