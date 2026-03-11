@@ -1,0 +1,50 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 10
+    groups:
+      next:
+        patterns:
+          - next
+          - eslint-config-next
+      react:
+        patterns:
+          - react
+          - react-dom
+          - "@types/react"
+          - "@types/react-dom"
+      tailwind:
+        patterns:
+          - tailwindcss
+          - "@tailwindcss/*"
+      flowbite:
+        patterns:
+          - flowbite-react
+      vercel:
+        patterns:
+          - "@vercel/*"
+      prettier:
+        patterns:
+          - prettier
+          - prettier-plugin-tailwindcss
+          - "@trivago/prettier-plugin-sort-imports"
+      dev-dependencies:
+        dependency-type: development
+        exclude-patterns:
+          - eslint-config-next
+          - "@types/react"
+          - "@types/react-dom"
+          - tailwindcss
+          - "@tailwindcss/*"
+          - prettier
+          - prettier-plugin-tailwindcss
+          - "@trivago/prettier-plugin-sort-imports"
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
