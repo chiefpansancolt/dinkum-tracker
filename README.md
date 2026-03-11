@@ -164,9 +164,13 @@ This application stores all data in your browser's localStorage. This means:
 - **Events**: View upcoming events and birthdays
 - **Planning**: Plan your activities based on seasonal availability
 
+## 📋 Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for a full history of releases and changes.
+
 ## 🌐 Live Demo
 
-[Try Dinkum Tracker Online](https://your-deployment-url.vercel.app)
+[Try Dinkum Tracker Online](https://dinkum-tracker.app)
 
 ## 🤝 Contributing
 

@@ -63,3 +63,5 @@ logs
 /release
 
 CLAUDE.md
+.claude/
+memory/
