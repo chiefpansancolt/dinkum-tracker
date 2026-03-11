@@ -6,6 +6,24 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-03-11
+
+### Features
+
+- Add GitHub Actions CI workflow with separate lint and build jobs
+- Add GitHub Actions Deploy workflow with manual trigger and preview/production environment selection
+
+### Fixed
+
+- Replace all `<img>` elements with Next.js `<Image />` across the entire codebase for optimized image loading
+- Fix synchronous setState calls inside useEffect hooks (use lazy initializers and useMemo instead)
+- Fix derived state computed inside useMemo callbacks
+- Remove unused eslint-disable directives
+
+### Chore
+
+- Bump Dependencies
+
 ## [1.1.0] - 2025-11-03
 
 ### Features

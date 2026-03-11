@@ -1,7 +1,27 @@
 {
     "name": "dinkum-tracker",
     "version": "1.2.0",
+    "description": "A progress tracker for the game Dinkum — manage playthroughs, track collections, milestones, licenses, and more.",
     "private": true,
+    "author": "chiefpansancolt",
+    "homepage": "https://github.com/chiefpansancolt/dinkum-tracker#readme",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/chiefpansancolt/dinkum-tracker.git"
+    },
+    "bugs": {
+        "url": "https://github.com/chiefpansancolt/dinkum-tracker/issues"
+    },
+    "keywords": [
+        "dinkum",
+        "tracker",
+        "game",
+        "nextjs",
+        "react"
+    ],
+    "engines": {
+        "node": ">=24"
+    },
     "scripts": {
         "dev": "next dev",
         "build": "next build",
