@@ -5,14 +5,20 @@ import { useEffect, useState } from "react";
 import { HiArrowRight, HiX } from "react-icons/hi";
 
 const DISMISSED_KEY = "dinkum-tracker-domain-migration-dismissed";
+const EXPIRY_DATE = new Date("2027-05-01");
 
 export default function DomainMigrationBanner() {
 	const [visible, setVisible] = useState(false);
 
 	useEffect(() => {
 		const dismissed = localStorage.getItem(DISMISSED_KEY);
-		// eslint-disable-next-line react-hooks/set-state-in-effect
-		if (!dismissed) setVisible(true);
+		if (
+			!dismissed &&
+			new Date() < EXPIRY_DATE &&
+			window.location.hostname === "dinkum-tracker.app"
+		)
+			// eslint-disable-next-line react-hooks/set-state-in-effect
+			setVisible(true);
 	}, []);
 
 	const handleDismiss = () => {
@@ -32,7 +38,8 @@ export default function DomainMigrationBanner() {
 					<Link href="/settings" className="font-semibold underline hover:no-underline">
 						export your data
 					</Link>{" "}
-					from this site, then import it on the new domain.
+					from this site and import it on the new domain. This domain will be retired in{" "}
+					<span className="font-semibold">April 2027</span>.{" "}
 					<a
 						href="https://dinkum.gamerdex.app"
 						target="_blank"
