@@ -4,6 +4,7 @@ import { useState } from "react";
 import Footer from "../Footer";
 import AppNav from "./AppNav";
 import AppSidebar from "./AppSidebar";
+import DomainMigrationBanner from "./DomainMigrationBanner";
 
 export default function AppContainer({ children }: { children: React.ReactNode }) {
 	const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -19,6 +20,7 @@ export default function AppContainer({ children }: { children: React.ReactNode }
 			<AppSidebar sidebarOpen={sidebarOpen} />
 
 			<main className="mt-15 flex min-h-screen flex-col md:ml-64">
+				<DomainMigrationBanner />
 				<div className="flex-grow">{children}</div>
 				<Footer />
 			</main>
