@@ -111,7 +111,7 @@ export default function CalculatorPage() {
 									</h3>
 									<div className="mt-2 flex items-center justify-center text-sm text-gray-600 dark:text-gray-400">
 										<Image
-											src="https://static.wikia.nocookie.net/dinkum/images/4/42/Inv_Dinks.png"
+											src="/images/other/Inv_Dinks.png"
 											alt="Dinks"
 											width={16}
 											height={16}
@@ -168,7 +168,7 @@ export default function CalculatorPage() {
 									</p>
 									<div className="mt-2 flex items-center justify-center text-4xl font-bold text-cyan-600 dark:text-cyan-400">
 										<Image
-											src="https://static.wikia.nocookie.net/dinkum/images/4/42/Inv_Dinks.png"
+											src="/images/other/Inv_Dinks.png"
 											alt="Dinks"
 											width={40}
 											height={40}
@@ -179,7 +179,7 @@ export default function CalculatorPage() {
 									<div className="mt-3 flex items-center justify-center text-xs text-gray-500 dark:text-gray-500">
 										<span>{weight.toFixed(2)}kg × </span>
 										<Image
-											src="https://static.wikia.nocookie.net/dinkum/images/4/42/Inv_Dinks.png"
+											src="/images/other/Inv_Dinks.png"
 											alt="Dinks"
 											width={12}
 											height={12}

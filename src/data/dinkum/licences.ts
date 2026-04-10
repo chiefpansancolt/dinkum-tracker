@@ -5,7 +5,7 @@ export const licenses: License[] = [
   {
     id: "mining_licence",
     name: "Mining Licence",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/26/Mining_Licence.png",
+    img: "/images/licences/Mining_Licence.png",
     requirements: "Based on character Mining skill",
     levels: [
       {
@@ -32,7 +32,7 @@ export const licenses: License[] = [
   {
     id: "deep_mining_licence",
     name: "Deep Mining Licence",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b9/Deep_Mining_Licence.png",
+    img: "/images/licences/Deep_Mining_Licence.png",
     requirements: "Unlocked after purchasing Mining Licence 2",
     levels: [
       {
@@ -46,7 +46,7 @@ export const licenses: License[] = [
   {
     id: "logging_licence",
     name: "Logging Licence",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/5c/Logging_Licence.png",
+    img: "/images/licences/Logging_Licence.png",
     requirements: "Based on character Foraging skill",
     levels: [
       {
@@ -73,7 +73,7 @@ export const licenses: License[] = [
   {
     id: "fishing_licence",
     name: "Fishing Licence",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/05/Fishing_Licence.png",
+    img: "/images/licences/Fishing_Licence.png",
     requirements: "Based on character Fishing skill",
     levels: [
       {
@@ -101,7 +101,7 @@ export const licenses: License[] = [
   {
     id: "fish_farming_licence",
     name: "Fish Farming Licence",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/78/Fish_Farming_Licence.png",
+    img: "/images/licences/Fish_Farming_Licence.png",
     requirements:
       "Unlocked after purchasing Fishing Licence 3 and Water Scaping Licence",
     levels: [
@@ -117,7 +117,7 @@ export const licenses: License[] = [
   {
     id: "excavation_licence",
     name: "Excavation Licence",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/20/Excavation_Licence.png",
+    img: "/images/licences/Excavation_Licence.png",
     requirements: "",
     levels: [
       {
@@ -131,7 +131,7 @@ export const licenses: License[] = [
   {
     id: "metal_detecting_licence",
     name: "Metal Detecting Licence",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c2/Metal_Detecting_Licence.png",
+    img: "/images/licences/Metal_Detecting_Licence.png",
     requirements: "Unlocked after purchasing Excavation Licence 1",
     levels: [
       {
@@ -153,7 +153,7 @@ export const licenses: License[] = [
   {
     id: "hunting_licence",
     name: "Hunting Licence",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d6/Hunting_Licence.png",
+    img: "/images/licences/Hunting_Licence.png",
     requirements: "Based on character Hunting skill",
     levels: [
       {
@@ -181,7 +181,7 @@ export const licenses: License[] = [
   {
     id: "trapping_licence",
     name: "Trapping Licence",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/20/Trapping_Licence.png",
+    img: "/images/licences/Trapping_Licence.png",
     requirements: "Unlocked after purchasing Hunting Licence 1",
     levels: [
       {
@@ -203,7 +203,7 @@ export const licenses: License[] = [
   {
     id: "farming_licence",
     name: "Farming Licence",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3a/Farming_Licence.png",
+    img: "/images/licences/Farming_Licence.png",
     requirements: "Based on character Farming skill",
     levels: [
       {
@@ -231,7 +231,7 @@ export const licenses: License[] = [
   {
     id: "irrigation_licence",
     name: "Irrigation Licence",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e0/Irrigation_Licence.png",
+    img: "/images/licences/Irrigation_Licence.png",
     requirements: "Unlocked after purchasing Farming Licence 3",
     levels: [
       {
@@ -251,7 +251,7 @@ export const licenses: License[] = [
   {
     id: "handling_licence",
     name: "Handling Licence",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/01/Handling_Licence.png",
+    img: "/images/licences/Handling_Licence.png",
     requirements: "Unlocked after purchasing Farming Licence 1",
     levels: [
       {
@@ -277,7 +277,7 @@ export const licenses: License[] = [
   {
     id: "animal_processing_licence",
     name: "Animal Processing Licence",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2d/Animal_Processing_Licence.png",
+    img: "/images/licences/Animal_Processing_Licence.png",
     requirements: "Unlocked after purchasing Handling Licence 2",
     levels: [
       {
@@ -297,7 +297,7 @@ export const licenses: License[] = [
   {
     id: "animal_breeding_licence",
     name: "Animal Breeding Licence",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/fe/Animal_Breeding_Licence.png",
+    img: "/images/licences/Animal_Breeding_Licence.png",
     requirements:
       "Unlocked after purchasing Animal Handling Licence 3 and Animal Processing Licence 2",
     levels: [
@@ -319,7 +319,7 @@ export const licenses: License[] = [
   {
     id: "cargo_licence",
     name: "Cargo Licence",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Cargo_Licence.png",
+    img: "/images/licences/Cargo_Licence.png",
     requirements: "Unlocked after purchasing Toolbelt Licence 1",
     levels: [
       {
@@ -345,7 +345,7 @@ export const licenses: License[] = [
   {
     id: "toolbelt_licence",
     name: "Toolbelt Licence",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/fd/Toolbelt_Licence.png",
+    img: "/images/licences/Toolbelt_Licence.png",
     requirements:
       "Unlocked after purchasing Fishing Hunting Logging and Mining Licence 1",
     levels: [
@@ -372,7 +372,7 @@ export const licenses: License[] = [
   {
     id: "landscaping_licence",
     name: "Landscaping Licence",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/9c/Landscaping_Licence.png",
+    img: "/images/licences/Landscaping_Licence.png",
     requirements: "Unlocked after purchasing Logging Licence 1",
     levels: [
       {
@@ -392,7 +392,7 @@ export const licenses: License[] = [
   {
     id: "building_licence",
     name: "Building Licence",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d4/Building_Licence.png",
+    img: "/images/licences/Building_Licence.png",
     requirements: "Unlocked after purchasing Logging Licence 1",
     levels: [
       {
@@ -420,7 +420,7 @@ export const licenses: License[] = [
   {
     id: "vehicle_licence",
     name: "Vehicle Licence",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/ff/Vehicle_Licence.png",
+    img: "/images/licences/Vehicle_Licence.png",
     requirements: "",
     levels: [
       {
@@ -446,7 +446,7 @@ export const licenses: License[] = [
   {
     id: "commerce_licence",
     name: "Commerce Licence",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2e/Commerce_Licence.png",
+    img: "/images/licences/Commerce_Licence.png",
     requirements:
       "Unlocked after purchasing Fishing Hunting Logging and Mining Licence 2",
     levels: [
@@ -473,7 +473,7 @@ export const licenses: License[] = [
   {
     id: "agriculture_vehicle_licence",
     name: "Agriculture Vehicle Licence",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4e/Agriculture_Vehicles_Licence.png",
+    img: "/images/licences/Agriculture_Vehicles_Licence.png",
     requirements:
       "Unlocked after purchasing Farming Licence 3, Vehicle Licence 2, and Irrigation Licence 2",
     levels: [
@@ -503,7 +503,7 @@ export const licenses: License[] = [
   {
     id: "sign_writing_licence",
     name: "Sign Writing Licence",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/71/Sign_Writing_Licence.png",
+    img: "/images/licences/Sign_Writing_Licence.png",
     requirements: "Unlocked after purchasing Landscaping Licence 2",
     levels: [
       {
@@ -524,7 +524,7 @@ export const licenses: License[] = [
   {
     id: "water_scaping_licence",
     name: "Water Scaping Licence",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8c/Water_Scaping_Licence.png",
+    img: "/images/licences/Water_Scaping_Licence.png",
     requirements: "Unlocked after purchasing Landscaping Licence 2",
     levels: [
       {
@@ -539,7 +539,7 @@ export const licenses: License[] = [
   {
     id: "brewing_licence",
     name: "Brewing Licence",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/7c/Brewing_Licence.png",
+    img: "/images/licences/Brewing_Licence.png",
     requirements: "Unlocked after purchasing Logging Licence 2",
     levels: [
       {
@@ -560,7 +560,7 @@ export const licenses: License[] = [
   {
     id: "locomotive_licence",
     name: "Locomotive Licence",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/0d/Locomotive_Licence.png",
+    img: "/images/licences/Locomotive_Licence.png",
     requirements: "Unlocked after purchasing Vehicle Licence 2",
     levels: [
       {

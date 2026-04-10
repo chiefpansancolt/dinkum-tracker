@@ -25,13 +25,13 @@ const ItemFranklyn = ({ shinyDiscCount, berkoniumOreCount }: ItemFranklynProps) 
 	const shinyDisc: Resource = {
 		name: "Shiny Disc",
 		count: shinyDiscCount || 0,
-		img: "https://static.wikia.nocookie.net/dinkum/images/8/83/Inv_Shiny_Disc.png",
+		img: "/images/resources/relics/Inv_Shiny_Disc.png",
 	};
 
 	const berkonium: Resource = {
 		name: "Berkonium Ore",
 		count: berkoniumOreCount || 0,
-		img: "https://static.wikia.nocookie.net/dinkum/images/c/cc/Inv_Berkonium_Ore.png",
+		img: "/images/resources/minerals/Inv_Berkonium_Ore.png",
 	};
 
 	return (

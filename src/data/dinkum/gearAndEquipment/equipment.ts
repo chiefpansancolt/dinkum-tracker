@@ -4,7 +4,7 @@ export const equipment: Equipment[] = [
   {
     id: "adm",
     name: "A.D.M",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/58/Inv_A.D.M.png",
+    img: "/images/gearAndEquipment/equipment/Inv_A.D.M.png",
     description: "Make withdrawals from your bank account",
     requirementLevel: null,
     source: ["Milburn"],
@@ -15,7 +15,7 @@ export const equipment: Equipment[] = [
   {
     id: "advanced_sprinkler",
     name: "Advanced Sprinkler",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e8/Inv_Advanced_Sprinkler.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Advanced_Sprinkler.png",
     description: "Waters a 5x5 area around it.Needs a Water Tank to operate.",
     requirementLevel: 2,
     requirementType: "Irrigation Licence",
@@ -25,7 +25,7 @@ export const equipment: Equipment[] = [
   {
     id: "animal_collection_point",
     name: "Animal Collection Point",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1a/Inv_Animal_Collection_Point.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Animal_Collection_Point.png",
     description:
       "The animal collection point is used once an animal has been caught in a simple animal trap or animal trap. Deposit full traps into the animal collection point to send animals off to the animal research centre. Letters are received in the mailbox with a reward and the returned trap the next day.",
     requirementLevel: null,
@@ -35,7 +35,7 @@ export const equipment: Equipment[] = [
   {
     id: "animal_feeder",
     name: "Animal Feeder",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2f/Inv_Animal_Feeder.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Animal_Feeder.png",
     description: "Put animal food in here to feed animals.",
     requirementLevel: null,
     source: ["Irwin's Barn", "Crafting Table"],
@@ -46,7 +46,7 @@ export const equipment: Equipment[] = [
   {
     id: "animal_shower",
     name: "Animal Shower",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2e/Inv_Animal_Shower.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Animal_Shower.png",
     description: "Cleans animals when they walk through it",
     requirementLevel: 1,
     requirementType: "Irrigation License",
@@ -56,7 +56,7 @@ export const equipment: Equipment[] = [
   {
     id: "bbq",
     name: "BBQ",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/82/Inv_BBQ.png",
+    img: "/images/gearAndEquipment/equipment/Inv_BBQ.png",
     description: "Cook things faster.Windmill Compatible",
     requirementLevel: null,
     windmillCompatable: true,
@@ -68,7 +68,7 @@ export const equipment: Equipment[] = [
   {
     id: "bee_house",
     name: "Bee House",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/08/Inv_Bee_House.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Bee_House.png",
     description: "Once placed on the ground it produces Honey every 6 days.",
     requirementLevel: 10,
     requirementType: "Bug Catching Skill",
@@ -78,7 +78,7 @@ export const equipment: Equipment[] = [
   {
     id: "billy_can_kit",
     name: "Billy Can Kit",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/0c/Inv_Billy_Can_Kit.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Billy_Can_Kit.png",
     description: "Makes tea & coffee",
     requirementLevel: 1,
     requirementType: "Brewing License",
@@ -88,7 +88,7 @@ export const equipment: Equipment[] = [
   {
     id: "blast_furnace",
     name: "Blast Furnace",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6f/Inv_Blast_Furnace.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Blast_Furnace.png",
     description: "Insert ore.\nWindmill Compatible",
     requirementLevel: null,
     shinyDiscCount: 1,
@@ -100,32 +100,32 @@ export const equipment: Equipment[] = [
       {
         count: 1,
         name: "Furnace",
-        img: "https://static.wikia.nocookie.net/dinkum/images/3/38/Inv_Furnace.png",
+        img: "/images/gearAndEquipment/equipment/Inv_Furnace.png",
       },
       {
         count: 10,
         name: "Berkonium Ore",
-        img: "https://static.wikia.nocookie.net/dinkum/images/c/cc/Inv_Berkonium_Ore.png",
+        img: "/images/resources/minerals/Inv_Berkonium_Ore.png",
       },
       {
         count: 4,
         name: "Hot Cylinder",
-        img: "https://static.wikia.nocookie.net/dinkum/images/4/46/Inv_Hot_Cylinder.png",
+        img: "/images/resources/otherCraftables/Inv_Hot_Cylinder.png",
       },
       {
         count: 10,
         name: "Copper Bar",
-        img: "https://static.wikia.nocookie.net/dinkum/images/7/7a/Inv_Copper_Bar.png",
+        img: "/images/resources/otherCraftables/Inv_Copper_Bar.png",
       },
       {
         count: 10,
         name: "Iron Bar",
-        img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Inv_Iron_Bar.png",
+        img: "/images/resources/otherCraftables/Inv_Iron_Bar.png",
       },
       {
         count: 4,
         name: "Old Contraption",
-        img: "https://static.wikia.nocookie.net/dinkum/images/7/7d/Inv_Old_Contraption.png",
+        img: "/images/resources/relics/Inv_Old_Contraption.png",
       },
     ],
     buyPrice: 800000,
@@ -135,7 +135,7 @@ export const equipment: Equipment[] = [
   {
     id: "boogie_board",
     name: "Boogie Board",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/cf/Inv_Boogie_Board.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Boogie_Board.png",
     description: "Float your day away.",
     requirementLevel: null,
     source: ["Deep Mine"],
@@ -144,7 +144,7 @@ export const equipment: Equipment[] = [
   {
     id: "boom_box",
     name: "Boom Box",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/02/Inv_Boom_Box.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Boom_Box.png",
     description: "Plays music.",
     requirementLevel: null,
     source: ["Jimmy's Boat"],
@@ -155,7 +155,7 @@ export const equipment: Equipment[] = [
   {
     id: "campfire",
     name: "Campfire",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/65/Inv_Campfire.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Campfire.png",
     description: "Cook things.",
     requirementLevel: null,
     source: ["Crafting Table"],
@@ -164,7 +164,7 @@ export const equipment: Equipment[] = [
   {
     id: "charging_station",
     name: "Charging Station",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/be/Inv_Charging_Station.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Charging_Station.png",
     description: "Charge power tools.",
     requirementLevel: null,
     shinyDiscCount: 10,
@@ -174,27 +174,27 @@ export const equipment: Equipment[] = [
       {
         count: 8,
         name: "Copper Bar",
-        img: "https://static.wikia.nocookie.net/dinkum/images/7/7a/Inv_Copper_Bar.png",
+        img: "/images/resources/otherCraftables/Inv_Copper_Bar.png",
       },
       {
         count: 8,
         name: "Iron Bar",
-        img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Inv_Iron_Bar.png",
+        img: "/images/resources/otherCraftables/Inv_Iron_Bar.png",
       },
       {
         count: 8,
         name: "Bright Wire",
-        img: "https://static.wikia.nocookie.net/dinkum/images/8/8f/Inv_Bright_Wire.png",
+        img: "/images/resources/otherCraftables/Inv_Bright_Wire.png",
       },
       {
         count: 2,
         name: "Green Board",
-        img: "https://static.wikia.nocookie.net/dinkum/images/1/1a/Inv_Green_Board.png",
+        img: "/images/resources/relics/Inv_Green_Board.png",
       },
       {
         count: 3,
         name: "Hot Cylinder",
-        img: "https://static.wikia.nocookie.net/dinkum/images/4/46/Inv_Hot_Cylinder.png",
+        img: "/images/resources/otherCraftables/Inv_Hot_Cylinder.png",
       },
     ],
     buyPrice: 100000,
@@ -204,7 +204,7 @@ export const equipment: Equipment[] = [
   {
     id: "cheese_maker",
     name: "Cheese Maker",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/75/Inv_Cheese_Maker.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Cheese_Maker.png",
     description: "Makes cheese from milk.",
     requirementLevel: 1,
     requirementType: "Animal Processing Licence",
@@ -214,7 +214,7 @@ export const equipment: Equipment[] = [
   {
     id: "compost_bin",
     name: "Compost Bin",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/86/Inv_Compost_Bin.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Compost_Bin.png",
     description: "Makes fertilizer.",
     requirementLevel: 2,
     requirementType: "Farming Licence",
@@ -224,7 +224,7 @@ export const equipment: Equipment[] = [
   {
     id: "cooking_kettle",
     name: "Cooking Kettle",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b9/Inv_Cooking_Kettle.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Cooking_Kettle.png",
     description: "Make soup, tea and jams faster",
     requirementLevel: null,
     windmillCompatable: true,
@@ -237,7 +237,7 @@ export const equipment: Equipment[] = [
   {
     id: "cooking_table",
     name: "Cooking Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2b/Inv_Cooking_Table.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Cooking_Table.png",
     description: "Cook various recipes.",
     requirementLevel: null,
     source: ["Crafting Table"],
@@ -246,7 +246,7 @@ export const equipment: Equipment[] = [
   {
     id: "crafting_table",
     name: "Crafting Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/36/Inv_Crafting_Table.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Crafting_Table.png",
     description: "Craft various recipes.",
     requirementLevel: null,
     source: ["Crafting Table"],
@@ -255,7 +255,7 @@ export const equipment: Equipment[] = [
   {
     id: "croco_berley_box",
     name: "Croco Berley Box",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/71/Inv_Croco_Berley_Box.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Croco_Berley_Box.png",
     description: "Spawns 1-3 animals.",
     requirementLevel: null,
     source: ["Ted Selly"],
@@ -263,22 +263,22 @@ export const equipment: Equipment[] = [
       {
         count: 2,
         name: "Gum Log",
-        img: "https://static.wikia.nocookie.net/dinkum/images/f/ff/Inv_Gum_Log.png",
+        img: "/images/resources/foragables/Inv_Gum_Log.png",
       },
       {
         count: 4,
         name: "Copper Ore",
-        img: "https://static.wikia.nocookie.net/dinkum/images/6/60/Inv_Copper_Ore.png",
+        img: "/images/resources/minerals/Inv_Copper_Ore.png",
       },
       {
         count: 3,
         name: "Raw Drumstick",
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/0e/Inv_Raw_Drumstick.png",
+        img: "/images/animals/Inv_Raw_Drumstick.png",
       },
       {
         count: 2,
         name: "Spinifex Resin",
-        img: "https://static.wikia.nocookie.net/dinkum/images/a/a3/Inv_Spinifex_Resin.png",
+        img: "/images/resources/otherCraftables/Inv_Spinifex_Resin.png",
       },
     ],
     buyPrice: 2000,
@@ -288,7 +288,7 @@ export const equipment: Equipment[] = [
   {
     id: "crude_furnace",
     name: "Crude Furnace",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4d/Inv_Crude_Furnace.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Crude_Furnace.png",
     description: "Insert ore.",
     requirementLevel: null,
     source: ["Crafting Table"],
@@ -297,7 +297,7 @@ export const equipment: Equipment[] = [
   {
     id: "devil_berley_box",
     name: "Devil Berley Box",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1c/Inv_Devil_Berley_Box.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Devil_Berley_Box.png",
     description: "Spawns 1-3 animals.",
     requirementLevel: null,
     source: ["Ted Selly"],
@@ -305,22 +305,22 @@ export const equipment: Equipment[] = [
       {
         count: 2,
         name: "Hard Wood Log",
-        img: "https://static.wikia.nocookie.net/dinkum/images/2/27/Inv_Hard_Wood_Log.png",
+        img: "/images/resources/foragables/Inv_Hard_Wood_Log.png",
       },
       {
         count: 4,
         name: "Copper Ore",
-        img: "https://static.wikia.nocookie.net/dinkum/images/6/60/Inv_Copper_Ore.png",
+        img: "/images/resources/minerals/Inv_Copper_Ore.png",
       },
       {
         count: 3,
         name: "Raw Meat",
-        img: "https://static.wikia.nocookie.net/dinkum/images/c/cb/Inv_Raw_Meat.png",
+        img: "/images/animals/Inv_Raw_Meat.png",
       },
       {
         count: 2,
         name: "Spinifex Resin",
-        img: "https://static.wikia.nocookie.net/dinkum/images/a/a3/Inv_Spinifex_Resin.png",
+        img: "/images/resources/otherCraftables/Inv_Spinifex_Resin.png",
       },
     ],
     buyPrice: 2400,
@@ -330,7 +330,7 @@ export const equipment: Equipment[] = [
   {
     id: "dog_kennel",
     name: "Dog Kennel",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6d/Inv_Dog_Kennel.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Dog_Kennel.png",
     description: "A house for a pupper.",
     requirementLevel: null,
     source: ["Irwin's Barn"],
@@ -341,7 +341,7 @@ export const equipment: Equipment[] = [
   {
     id: "doggo_collar",
     name: "Doggo Collar",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f9/Inv_Doggo_Collar.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Doggo_Collar.png",
     description: "A pet diggo",
     requirementLevel: null,
     source: ["Deep Mine", "Jimmy's Boat"],
@@ -352,7 +352,7 @@ export const equipment: Equipment[] = [
   {
     id: "food_modeller",
     name: "Food Modeller",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Inv_Food_Modeller.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Food_Modeller.png",
     description: "Put food in it to make display food",
     requirementLevel: null,
     source: ["Tuckerbox"],
@@ -363,7 +363,7 @@ export const equipment: Equipment[] = [
   {
     id: "furnace",
     name: "Furnace",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/38/Inv_Furnace.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Furnace.png",
     description: "Insert ore.\nWindmill Compatible",
     requirementLevel: null,
     windmillCompatable: true,
@@ -375,7 +375,7 @@ export const equipment: Equipment[] = [
   {
     id: "gacha_machine",
     name: "Gacha Machine",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/99/Inv_Gacha_Machine.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Gacha_Machine.png",
     description: "Put in Dinks, get random prize.",
     requirementLevel: null,
     shinyDiscCount: 7,
@@ -384,27 +384,27 @@ export const equipment: Equipment[] = [
       {
         count: 5,
         name: "Old Gear",
-        img: "https://static.wikia.nocookie.net/dinkum/images/9/90/Inv_Old_Gear.png",
+        img: "/images/resources/relics/Inv_Old_Gear.png",
       },
       {
         count: 3,
         name: "Iron Bar",
-        img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Inv_Iron_Bar.png",
+        img: "/images/resources/otherCraftables/Inv_Iron_Bar.png",
       },
       {
         count: 1,
         name: "Glass Bulb",
-        img: "https://static.wikia.nocookie.net/dinkum/images/2/2f/Inv_Glass_Bulb.png",
+        img: "/images/resources/relics/Inv_Glass_Bulb.png",
       },
       {
         count: 1,
         name: "Button Board",
-        img: "https://static.wikia.nocookie.net/dinkum/images/7/7c/Inv_Button_Board.png",
+        img: "/images/resources/relics/Inv_Button_Board.png",
       },
       {
         count: 1,
         name: "Old Toy",
-        img: "https://static.wikia.nocookie.net/dinkum/images/8/85/Inv_Old_Toy.png",
+        img: "/images/resources/relics/Inv_Old_Toy.png",
       },
     ],
     buyPrice: 70000,
@@ -414,7 +414,7 @@ export const equipment: Equipment[] = [
   {
     id: "grain_mill",
     name: "Grain Mill",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/dd/Inv_Grain_Mill.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Grain_Mill.png",
     description: "Insert various crops.\nWindmill Compatible",
     requirementLevel: 1,
     requirementType: "Farming Licence",
@@ -425,7 +425,7 @@ export const equipment: Equipment[] = [
   {
     id: "ice_cream_maker",
     name: "Ice Cream Maker",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/98/Inv_Ice_Cream_Maker.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Ice_Cream_Maker.png",
     description: "Turns high quality milk into ice cream.",
     requirementLevel: null,
     source: ["Island Reef"],
@@ -434,7 +434,7 @@ export const equipment: Equipment[] = [
   {
     id: "improved_table_saw",
     name: "Improved Table Saw",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/cd/Inv_Improved_Table_Saw.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Improved_Table_Saw.png",
     description: "Cuts wood logs into planks.",
     requirementLevel: null,
     shinyDiscCount: 1,
@@ -444,27 +444,27 @@ export const equipment: Equipment[] = [
       {
         count: 1,
         name: "Table Saw",
-        img: "https://static.wikia.nocookie.net/dinkum/images/8/85/Inv_Table_Saw.png",
+        img: "/images/gearAndEquipment/equipment/Inv_Table_Saw.png",
       },
       {
         count: 1,
         name: "Berkonium Bar",
-        img: "https://static.wikia.nocookie.net/dinkum/images/b/ba/Inv_Berkonium_Bar.png",
+        img: "/images/resources/otherCraftables/Inv_Berkonium_Bar.png",
       },
       {
         count: 4,
         name: "Hot Cylinder",
-        img: "https://static.wikia.nocookie.net/dinkum/images/4/46/Inv_Hot_Cylinder.png",
+        img: "/images/resources/otherCraftables/Inv_Hot_Cylinder.png",
       },
       {
         count: 5,
         name: "Copper Bar",
-        img: "https://static.wikia.nocookie.net/dinkum/images/7/7a/Inv_Copper_Bar.png",
+        img: "/images/resources/otherCraftables/Inv_Copper_Bar.png",
       },
       {
         count: 5,
         name: "Iron Bar",
-        img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Inv_Iron_Bar.png",
+        img: "/images/resources/otherCraftables/Inv_Iron_Bar.png",
       },
     ],
     buyPrice: 300000,
@@ -474,7 +474,7 @@ export const equipment: Equipment[] = [
   {
     id: "keg",
     name: "Keg",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/03/Inv_Keg.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Keg.png",
     description: "Make some drinks.",
     requirementLevel: 2,
     requirementType: "Logging Licence",
@@ -484,7 +484,7 @@ export const equipment: Equipment[] = [
   {
     id: "key_cutter",
     name: "Key Cutter",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3e/Inv_Key_Cutter.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Key_Cutter.png",
     description: "Creates a key every now and again",
     requirementLevel: null,
     solarPanelCompatable: true,
@@ -494,7 +494,7 @@ export const equipment: Equipment[] = [
   {
     id: "key_cycler",
     name: "Key Cycler",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a3/Inv_Key-Cycler.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Key-Cycler.png",
     description: "Transforms unwanted relics into keys",
     requirementLevel: null,
     solarPanelCompatable: true,
@@ -506,7 +506,7 @@ export const equipment: Equipment[] = [
   {
     id: "melon_scarecrow",
     name: "Melon Scarecrow",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/9e/Inv_Melon_Scarecrow.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Melon_Scarecrow.png",
     description: "Scares animals away in a 11x11 area around it.",
     requirementLevel: 1,
     requirementType: "Farming Licence",
@@ -516,7 +516,7 @@ export const equipment: Equipment[] = [
   {
     id: "mu_saddle",
     name: "Mu Saddle",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3a/Inv_Mu_Saddle.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Mu_Saddle.png",
     description: "Save a horse, ride a Mu.",
     requirementLevel: null,
     source: ["Deep Mine", "Island Reed", "Jimmy's Boat"],
@@ -527,7 +527,7 @@ export const equipment: Equipment[] = [
   {
     id: "post_box",
     name: "Post Box",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/ff/Inv_Post_Box.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Post_Box.png",
     description: "Access mailbox away from home.",
     requirementLevel: null,
     source: ["Crafting Table"],
@@ -536,7 +536,7 @@ export const equipment: Equipment[] = [
   {
     id: "quarry",
     name: "Quarry",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/41/Inv_Quarry.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Quarry.png",
     description: "Brings up ore and barrels.",
     requirementLevel: null,
     shinyDiscCount: 7,
@@ -545,32 +545,32 @@ export const equipment: Equipment[] = [
       {
         count: 5,
         name: "Old Gear",
-        img: "https://static.wikia.nocookie.net/dinkum/images/9/90/Inv_Old_Gear.png",
+        img: "/images/resources/relics/Inv_Old_Gear.png",
       },
       {
         count: 1,
         name: "Old Contraption",
-        img: "https://static.wikia.nocookie.net/dinkum/images/7/7d/Inv_Old_Contraption.png",
+        img: "/images/resources/relics/Inv_Old_Contraption.png",
       },
       {
         count: 4,
         name: "Iron Bar",
-        img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Inv_Iron_Bar.png",
+        img: "/images/resources/otherCraftables/Inv_Iron_Bar.png",
       },
       {
         count: 2,
         name: "Bright Wire",
-        img: "https://static.wikia.nocookie.net/dinkum/images/8/8f/Inv_Bright_Wire.png",
+        img: "/images/resources/otherCraftables/Inv_Bright_Wire.png",
       },
       {
         count: 3,
         name: "Button Board",
-        img: "https://static.wikia.nocookie.net/dinkum/images/7/7c/Inv_Button_Board.png",
+        img: "/images/resources/relics/Inv_Button_Board.png",
       },
       {
         count: 3,
         name: "Old Toy",
-        img: "https://static.wikia.nocookie.net/dinkum/images/8/85/Inv_Old_Toy.png",
+        img: "/images/resources/relics/Inv_Old_Toy.png",
       },
     ],
     buyPrice: 70000,
@@ -580,7 +580,7 @@ export const equipment: Equipment[] = [
   {
     id: "recycling_bin",
     name: "Recycling Bin",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/64/Inv_Recycling_Bin.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Recycling_Bin.png",
     description: "Get random stuff here.",
     requirementLevel: null,
     source: ["John 4 Heart Reputation"],
@@ -589,7 +589,7 @@ export const equipment: Equipment[] = [
   {
     id: "repair_table",
     name: "Repair Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/74/Inv_Repair_Table.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Repair_Table.png",
     description: "Repairs all tools in inventory.",
     requirementLevel: null,
     source: ["Franklyn's Lab"],
@@ -597,27 +597,27 @@ export const equipment: Equipment[] = [
       {
         count: 5,
         name: "Gum Wood Plank",
-        img: "https://static.wikia.nocookie.net/dinkum/images/3/38/Inv_Gum_Wood_Plank.png",
+        img: "/images/resources/otherCraftables/Inv_Gum_Wood_Plank.png",
       },
       {
         count: 4,
         name: "Tin Bar",
-        img: "https://static.wikia.nocookie.net/dinkum/images/b/b8/Inv_Tin_Bar.png",
+        img: "/images/resources/otherCraftables/Inv_Tin_Bar.png",
       },
       {
         count: 4,
         name: "Copper Bar",
-        img: "https://static.wikia.nocookie.net/dinkum/images/7/7a/Inv_Copper_Bar.png",
+        img: "/images/resources/otherCraftables/Inv_Copper_Bar.png",
       },
       {
         count: 5,
         name: "Old Gear",
-        img: "https://static.wikia.nocookie.net/dinkum/images/9/90/Inv_Old_Gear.png",
+        img: "/images/resources/relics/Inv_Old_Gear.png",
       },
       {
         count: 16,
         name: "Nails",
-        img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Nails.png",
+        img: "/images/gearAndEquipment/equipment/Inv_Nails.png",
       },
     ],
     buyPrice: 60000,
@@ -627,7 +627,7 @@ export const equipment: Equipment[] = [
   {
     id: "scarecrow",
     name: "Scarecrow",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/85/Inv_Scarecrow.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Scarecrow.png",
     description: "Scares animals away in a 11x11 area around it.",
     requirementLevel: 1,
     requirementType: "Farming Licence",
@@ -637,7 +637,7 @@ export const equipment: Equipment[] = [
   {
     id: "shark_berley_box",
     name: "Shark Berley Box",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/02/Inv_Shark_Berley_Box.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Shark_Berley_Box.png",
     description: "Spawns 1-3 animals.",
     requirementLevel: null,
     source: ["Ted Selly"],
@@ -645,22 +645,22 @@ export const equipment: Equipment[] = [
       {
         count: 2,
         name: "Palm Wood",
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/02/Inv_Palm_Wood.png",
+        img: "/images/resources/foragables/Inv_Palm_Wood.png",
       },
       {
         count: 4,
         name: "Copper Ore",
-        img: "https://static.wikia.nocookie.net/dinkum/images/6/60/Inv_Copper_Ore.png",
+        img: "/images/resources/minerals/Inv_Copper_Ore.png",
       },
       {
         count: 1,
         name: "Raw Giant Drumstick",
-        img: "https://static.wikia.nocookie.net/dinkum/images/a/a7/Inv_Raw_Giant_Drumstick.png",
+        img: "/images/animals/Inv_Raw_Giant_Drumstick.png",
       },
       {
         count: 2,
         name: "Spinifex Resin",
-        img: "https://static.wikia.nocookie.net/dinkum/images/a/a3/Inv_Spinifex_Resin.png",
+        img: "/images/resources/otherCraftables/Inv_Spinifex_Resin.png",
       },
     ],
     buyPrice: 2200,
@@ -670,7 +670,7 @@ export const equipment: Equipment[] = [
   {
     id: "signwriting_table",
     name: "Signwriting Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/5f/Inv_Signwriting_Table.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Signwriting_Table.png",
     description: "Used to craft customisable signs",
     requirementLevel: 1,
     requirementType: "Sign Writing License",
@@ -680,7 +680,7 @@ export const equipment: Equipment[] = [
   {
     id: "silo",
     name: "Silo",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e7/Inv_Silo.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Silo.png",
     description: "Put food into animal feeders",
     requirementLevel: 3,
     requirementType: "Handling Licence",
@@ -690,7 +690,7 @@ export const equipment: Equipment[] = [
   {
     id: "solar_Panel",
     name: "Solar Panel",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/97/Inv_Solar_Panel.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Solar_Panel.png",
     description:
       "The solar panel speeds up certain production devices within its vicinity, covering up to 8 tiles. The solar panel does not work with machines inside a house.",
     requirementLevel: null,
@@ -701,32 +701,32 @@ export const equipment: Equipment[] = [
       {
         count: 8,
         name: "Green Board",
-        img: "https://static.wikia.nocookie.net/dinkum/images/1/1a/Inv_Green_Board.png",
+        img: "/images/resources/relics/Inv_Green_Board.png",
       },
       {
         count: 8,
         name: "Hot Cylinder",
-        img: "https://static.wikia.nocookie.net/dinkum/images/4/46/Inv_Hot_Cylinder.png",
+        img: "/images/resources/otherCraftables/Inv_Hot_Cylinder.png",
       },
       {
         count: 8,
         name: "Bright Wire",
-        img: "https://static.wikia.nocookie.net/dinkum/images/8/8f/Inv_Bright_Wire.png",
+        img: "/images/resources/otherCraftables/Inv_Bright_Wire.png",
       },
       {
         count: 5,
         name: "Copper Bar",
-        img: "https://static.wikia.nocookie.net/dinkum/images/7/7a/Inv_Copper_Bar.png",
+        img: "/images/resources/otherCraftables/Inv_Copper_Bar.png",
       },
       {
         count: 5,
         name: "Iron Bar",
-        img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Inv_Iron_Bar.png",
+        img: "/images/resources/otherCraftables/Inv_Iron_Bar.png",
       },
       {
         count: 1,
         name: "Berkonium Bar",
-        img: "https://static.wikia.nocookie.net/dinkum/images/b/ba/Inv_Berkonium_Bar.png",
+        img: "/images/resources/otherCraftables/Inv_Berkonium_Bar.png",
       },
     ],
     buyPrice: 400000,
@@ -736,7 +736,7 @@ export const equipment: Equipment[] = [
   {
     id: "spinning_wheel",
     name: "Spinning Wheel",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/74/Inv_Spinning_Wheel.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Spinning_Wheel.png",
     description: "Turns wool into cloth.",
     requirementLevel: 2,
     requirementType: "Animal Processing Licence",
@@ -746,7 +746,7 @@ export const equipment: Equipment[] = [
   {
     id: "sprinkler",
     name: "Sprinkler",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/0e/Inv_Sprinkler.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Sprinkler.png",
     description: "Waters in a 3x3 area.\nNeeds a Water Tank to operate.",
     requirementLevel: 1,
     requirementType: "Irrigation Licence",
@@ -756,7 +756,7 @@ export const equipment: Equipment[] = [
   {
     id: "stone_grinder",
     name: "Stone Grinder",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/11/Inv_Stone_Grinder.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Stone_Grinder.png",
     description: "Insert stones.\nWindmill Compatible",
     requirementLevel: null,
     windmillCompatable: true,
@@ -768,7 +768,7 @@ export const equipment: Equipment[] = [
   {
     id: "storage_barrel",
     name: "Storage Barrel",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/42/Inv_Storage_Barrel.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Storage_Barrel.png",
     description: "Holds 24 items. Can be painted.",
     requirementLevel: null,
     source: ["Crafting Table", "Franklyn's Lab", "Jimmy's Boat"],
@@ -779,7 +779,7 @@ export const equipment: Equipment[] = [
   {
     id: "striped_boogie_board",
     name: "Striped Boogie Board",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/92/Inv_Striped_Boogie_Board.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Striped_Boogie_Board.png",
     description: "Float your day away.",
     requirementLevel: null,
     source: ["Jolly Sack"],
@@ -788,7 +788,7 @@ export const equipment: Equipment[] = [
   {
     id: "table_saw",
     name: "Table Saw",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/85/Inv_Table_Saw.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Table_Saw.png",
     description: "Cuts wood logs into planks.",
     requirementLevel: null,
     source: ["John's Goods"],
@@ -799,7 +799,7 @@ export const equipment: Equipment[] = [
   {
     id: "water_tank",
     name: "Water Tank",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/65/Inv_Water_Tank.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Water_Tank.png",
     description: "Covers a 22x22 area around it.",
     requirementLevel: 1,
     requirementType: "Irrigation Licence",
@@ -809,7 +809,7 @@ export const equipment: Equipment[] = [
   {
     id: "weather_station",
     name: "Weather Station",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/20/Inv_Weather_Station.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Weather_Station.png",
     description: "Tells the weather.",
     requirementLevel: null,
     source: ["Franklyn's Lab"],
@@ -817,27 +817,27 @@ export const equipment: Equipment[] = [
       {
         count: 4,
         name: "Gum Wood Plank",
-        img: "https://static.wikia.nocookie.net/dinkum/images/3/38/Inv_Gum_Wood_Plank.png",
+        img: "/images/resources/otherCraftables/Inv_Gum_Wood_Plank.png",
       },
       {
         count: 2,
         name: "Old Gear",
-        img: "https://static.wikia.nocookie.net/dinkum/images/9/90/Inv_Old_Gear.png",
+        img: "/images/resources/relics/Inv_Old_Gear.png",
       },
       {
         count: 1,
         name: "Nails",
-        img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Nails.png",
+        img: "/images/gearAndEquipment/equipment/Inv_Nails.png",
       },
       {
         count: 1,
         name: "Smooth Slate",
-        img: "https://static.wikia.nocookie.net/dinkum/images/c/c8/Inv_Smooth_Slate.png",
+        img: "/images/resources/relics/Inv_Smooth_Slate.png",
       },
       {
         count: 2,
         name: "Quartz Crystal",
-        img: "https://static.wikia.nocookie.net/dinkum/images/5/5a/Inv_Quartz_Crystal.png",
+        img: "/images/resources/minerals/Inv_Quartz_Crystal.png",
       },
     ],
     buyPrice: 5000,
@@ -847,7 +847,7 @@ export const equipment: Equipment[] = [
   {
     id: "wheelbarrow",
     name: "Wheelbarrow",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/76/Inv_Wheelbarrow.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Wheelbarrow.png",
     description: "Used to transport up to 11 tiles of dirt/sand/mud",
     requirementLevel: null,
     source: ["John's Goods"],
@@ -858,7 +858,7 @@ export const equipment: Equipment[] = [
   {
     id: "windmill",
     name: "Windmill",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/04/Inv_Windmill.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Windmill.png",
     description: "Covers a 26x26 area around it.",
     requirementLevel: 2,
     requirementType: "Building Licence",
@@ -868,7 +868,7 @@ export const equipment: Equipment[] = [
   {
     id: "wooden_chest",
     name: "Wooden Chest",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b2/Inv_Wooden_Chest.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Wooden_Chest.png",
     description: "Holds 24 items. Can be painted.",
     requirementLevel: null,
     source: ["Deep Mine"],
@@ -877,7 +877,7 @@ export const equipment: Equipment[] = [
   {
     id: "wooden_crate",
     name: "Wooden Crate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/02/Inv_Wooden_Crate.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Wooden_Crate.png",
     description: "Holds 24 items. Can be painted.",
     requirementLevel: null,
     source: ["Crafting Table"],
@@ -886,7 +886,7 @@ export const equipment: Equipment[] = [
   {
     id: "worm_farm",
     name: "Worm Farm",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/9c/Inv_Worm_Farm.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Worm_Farm.png",
     description: "Makes fertilizer every few days.",
     requirementLevel: 20,
     requirementType: "Bug Catching Skill",
@@ -896,7 +896,7 @@ export const equipment: Equipment[] = [
   {
     id: "auto_placer",
     name: "Auto Placer",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/89/Inv_Auto_Placer.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Auto_Placer.png",
     description: "Places items into 3 neighbouring processors",
     source: ["Franklyn's Lab"],
     requirementLevel: null,
@@ -908,44 +908,44 @@ export const equipment: Equipment[] = [
       {
         count: 8,
         name: "Green Board",
-        img: "https://static.wikia.nocookie.net/dinkum/images/1/1a/Inv_Green_Board.png",
+        img: "/images/resources/relics/Inv_Green_Board.png",
       },
       {
         count: 8,
         name: "Hot Cylinder",
-        img: "https://static.wikia.nocookie.net/dinkum/images/4/46/Inv_Hot_Cylinder.png",
+        img: "/images/resources/otherCraftables/Inv_Hot_Cylinder.png",
       },
       {
         count: 10,
         name: "Button Board",
-        img: "https://static.wikia.nocookie.net/dinkum/images/7/7c/Inv_Button_Board.png",
+        img: "/images/resources/relics/Inv_Button_Board.png",
       },
       {
         count: 25,
         name: "Copper Bar",
-        img: "https://static.wikia.nocookie.net/dinkum/images/7/7a/Inv_Copper_Bar.png",
+        img: "/images/resources/otherCraftables/Inv_Copper_Bar.png",
       },
       {
         count: 25,
         name: "Iron Bar",
-        img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Inv_Iron_Bar.png",
+        img: "/images/resources/otherCraftables/Inv_Iron_Bar.png",
       },
       {
         count: 1,
         name: "Advanced Sling Shot",
-        img: "https://static.wikia.nocookie.net/dinkum/images/7/7d/Inv_Advanced_Sling_Shot.png",
+        img: "/images/gearAndEquipment/weapons/Inv_Advanced_Sling_Shot.png",
       },
       {
         count: 1,
         name: "Berkonium Bar",
-        img: "https://static.wikia.nocookie.net/dinkum/images/b/ba/Inv_Berkonium_Bar.png",
+        img: "/images/resources/otherCraftables/Inv_Berkonium_Bar.png",
       },
     ],
   },
   {
     id: "auto_sorter",
     name: "Auto Sorter",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/85/Inv_Auto_Sorter.png",
+    img: "/images/gearAndEquipment/equipment/Inv_Auto_Sorter.png",
     description: "Sorts your items for you",
     source: ["Franklyn's Lab"],
     requirementLevel: null,
@@ -957,37 +957,37 @@ export const equipment: Equipment[] = [
       {
         count: 8,
         name: "Green Board",
-        img: "https://static.wikia.nocookie.net/dinkum/images/1/1a/Inv_Green_Board.png",
+        img: "/images/resources/relics/Inv_Green_Board.png",
       },
       {
         count: 8,
         name: "Hot Cylinder",
-        img: "https://static.wikia.nocookie.net/dinkum/images/4/46/Inv_Hot_Cylinder.png",
+        img: "/images/resources/otherCraftables/Inv_Hot_Cylinder.png",
       },
       {
         count: 10,
         name: "Button Board",
-        img: "https://static.wikia.nocookie.net/dinkum/images/7/7c/Inv_Button_Board.png",
+        img: "/images/resources/relics/Inv_Button_Board.png",
       },
       {
         count: 25,
         name: "Copper Bar",
-        img: "https://static.wikia.nocookie.net/dinkum/images/7/7a/Inv_Copper_Bar.png",
+        img: "/images/resources/otherCraftables/Inv_Copper_Bar.png",
       },
       {
         count: 25,
         name: "Iron Bar",
-        img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Inv_Iron_Bar.png",
+        img: "/images/resources/otherCraftables/Inv_Iron_Bar.png",
       },
       {
         count: 2,
         name: "Advanced Sling Shot",
-        img: "https://static.wikia.nocookie.net/dinkum/images/7/7d/Inv_Advanced_Sling_Shot.png",
+        img: "/images/gearAndEquipment/weapons/Inv_Advanced_Sling_Shot.png",
       },
       {
         count: 5,
         name: "Berkonium Bar",
-        img: "https://static.wikia.nocookie.net/dinkum/images/b/ba/Inv_Berkonium_Bar.png",
+        img: "/images/resources/otherCraftables/Inv_Berkonium_Bar.png",
       },
     ],
   },

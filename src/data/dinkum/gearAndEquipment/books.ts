@@ -4,7 +4,7 @@ export const books: Book[] = [
   {
     id: "adventurers_journal",
     name: "Adventurer's Journal",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/ee/Inv_Adventurer%27s_Journal.png",
+    img: "/images/gearAndEquipment/books/Inv_Adventurer%27s_Journal.png",
     details: [
       {
         aquiredFrom: "Fletch",
@@ -17,7 +17,7 @@ export const books: Book[] = [
   {
     id: "bug_book",
     name: "Bug Book",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/0c/Inv_Bug_Book.png",
+    img: "/images/gearAndEquipment/books/Inv_Bug_Book.png",
     details: [
       {
         aquiredFrom: "Theodore at the Museum",
@@ -30,7 +30,7 @@ export const books: Book[] = [
   {
     id: "fish_book",
     name: "Fish Book",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/58/Inv_Fish_Book.png",
+    img: "/images/gearAndEquipment/books/Inv_Fish_Book.png",
     details: [
       {
         aquiredFrom: "Theodore at the Museum",
@@ -43,7 +43,7 @@ export const books: Book[] = [
   {
     id: "machine_manual",
     name: "Machine Manual",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d7/Inv_Machine_Manual.png",
+    img: "/images/gearAndEquipment/books/Inv_Machine_Manual.png",
     details: [
       {
         aquiredFrom: "John fom John's Goods",
@@ -56,7 +56,7 @@ export const books: Book[] = [
   {
     id: "magic_tome",
     name: "Magic Tome",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/ae/Inv_Magic_Tome.png",
+    img: "/images/gearAndEquipment/books/Inv_Magic_Tome.png",
     details: [
       {
         aquiredFrom: "Yobbolin Healers in Hot Hot Hot",
@@ -69,7 +69,7 @@ export const books: Book[] = [
   {
     id: "plant_book",
     name: "Plant Book",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6d/Inv_Plant_Book.png",
+    img: "/images/gearAndEquipment/books/Inv_Plant_Book.png",
     details: [
       {
         aquiredFrom: "Rayne from Rayne's Greenhouse",

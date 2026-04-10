@@ -5,7 +5,7 @@ export const crops: Crop[] = [
   {
     id: "beetroot",
     name: "Beetroot",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/93/Inv_Beetroot.png",
+    img: "/images/resources/crops/Inv_Beetroot.png",
     baseSellPrice: 1425,
     seed: getSeedById("beetroot_seed"),
     buffs: {
@@ -17,7 +17,7 @@ export const crops: Crop[] = [
   {
     id: "cabbage",
     name: "Cabbage",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/77/Inv_Cabbage.png",
+    img: "/images/resources/crops/Inv_Cabbage.png",
     baseSellPrice: 1750,
     seed: getSeedById("cabbage_seed"),
     buffs: {
@@ -29,7 +29,7 @@ export const crops: Crop[] = [
   {
     id: "carrot",
     name: "Carrot",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/06/Inv_Carrot.png",
+    img: "/images/resources/crops/Inv_Carrot.png",
     baseSellPrice: 475,
     seed: getSeedById("carrot_seed"),
     buffs: {
@@ -40,14 +40,14 @@ export const crops: Crop[] = [
   {
     id: "coffee_bean",
     name: "Coffee Bean",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e4/Inv_Coffee_Bean.png",
+    img: "/images/resources/crops/Inv_Coffee_Bean.png",
     baseSellPrice: 295,
     seed: getSeedById("coffee_seed"),
   },
   {
     id: "corn",
     name: "Corn",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/5c/Inv_Corn.png",
+    img: "/images/resources/crops/Inv_Corn.png",
     baseSellPrice: 358,
     seed: getSeedById("corn_seed"),
     buffs: {
@@ -59,7 +59,7 @@ export const crops: Crop[] = [
   {
     id: "green_bean",
     name: "Green Bean",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b2/Inv_Green_Bean.png",
+    img: "/images/resources/crops/Inv_Green_Bean.png",
     seed: getSeedById("green_bean_seed"),
     baseSellPrice: 295,
     buffs: {
@@ -71,7 +71,7 @@ export const crops: Crop[] = [
   {
     id: "kale",
     name: "Kale",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a0/Inv_Kale.png",
+    img: "/images/resources/crops/Inv_Kale.png",
     seed: getSeedById("kale_seed"),
     buyPrice: 9120,
     baseSellPrice: 1520,
@@ -84,7 +84,7 @@ export const crops: Crop[] = [
   {
     id: "mighty_spread",
     name: "Mighty Spread",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/17/Inv_Mighty_Spread.png",
+    img: "/images/resources/crops/Inv_Mighty_Spread.png",
     seed: getSeedById("mighty_seed"),
     baseSellPrice: 120000,
     buffs: {
@@ -102,7 +102,7 @@ export const crops: Crop[] = [
   {
     id: "onion",
     name: "Onion",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/ad/Inv_Onion.png",
+    img: "/images/resources/crops/Inv_Onion.png",
     seed: getSeedById("onion_seed"),
     baseSellPrice: 450,
     buffs: {
@@ -114,7 +114,7 @@ export const crops: Crop[] = [
   {
     id: "pineapple",
     name: "Pineapple",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/87/Inv_Pineapple.png",
+    img: "/images/resources/crops/Inv_Pineapple.png",
     source: ["Island Reef"],
     seed: undefined,
     baseSellPrice: 15000,
@@ -126,7 +126,7 @@ export const crops: Crop[] = [
   {
     id: "potato",
     name: "Potato",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/41/Inv_Potato.png",
+    img: "/images/resources/crops/Inv_Potato.png",
     seed: getSeedById("potato_seed"),
     baseSellPrice: 640,
     buffs: {
@@ -138,7 +138,7 @@ export const crops: Crop[] = [
   {
     id: "pumpkin",
     name: "Pumpkin",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a3/Inv_Pumpkin.png",
+    img: "/images/resources/crops/Inv_Pumpkin.png",
     seed: getSeedById("pumpkin_seed"),
     baseSellPrice: 3120,
     buffs: {
@@ -150,7 +150,7 @@ export const crops: Crop[] = [
   {
     id: "sugar_cane",
     name: "Sugar Cane",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/84/Inv_Sugar_Cane.png",
+    img: "/images/resources/crops/Inv_Sugar_Cane.png",
     seed: getSeedById("sugar_cane_seed"),
     baseSellPrice: 560,
     buffs: {
@@ -162,7 +162,7 @@ export const crops: Crop[] = [
   {
     id: "tomato",
     name: "Tomato",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4e/Inv_Tomato.png",
+    img: "/images/resources/crops/Inv_Tomato.png",
     seed: getSeedById("tomato_seed"),
     baseSellPrice: 351,
     buffs: {
@@ -174,7 +174,7 @@ export const crops: Crop[] = [
   {
     id: "watermelon",
     name: "Watermelon",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/da/Inv_Watermelon.png",
+    img: "/images/resources/crops/Inv_Watermelon.png",
     seed: getSeedById("watermelon_seed"),
     baseSellPrice: 3080,
     buffs: {
@@ -187,7 +187,7 @@ export const crops: Crop[] = [
   {
     id: "wheat",
     name: "Wheat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/78/Inv_Wheat.png",
+    img: "/images/resources/crops/Inv_Wheat.png",
     seed: getSeedById("wheat_seed"),
     baseSellPrice: 216,
     buffs: {

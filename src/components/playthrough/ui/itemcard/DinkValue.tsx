@@ -6,7 +6,7 @@ const DinkPrice = ({ price }: DinkPriceProps) => {
 	return (
 		<div className="flex items-center">
 			<Image
-				src="https://static.wikia.nocookie.net/dinkum/images/4/42/Inv_Dinks.png"
+				src="/images/other/Inv_Dinks.png"
 				alt="Dinks"
 				width={16}
 				height={16}

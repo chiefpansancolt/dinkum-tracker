@@ -5,7 +5,7 @@ export const fish: Fish[] = [
   {
     id: "anchovy",
     name: "Anchovy",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/56/Inv_Anchovy.png",
+    img: "/images/pedia/fish/Inv_Anchovy.png",
     biome: ["Ocean"],
     timeFound: ["Morning", "Night"],
     seasons: ["Winter", "Autumn"],
@@ -17,7 +17,7 @@ export const fish: Fish[] = [
   {
     id: "banded_morwong",
     name: "Banded Morwong",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/ff/Inv_Banded_Morwong.png",
+    img: "/images/pedia/fish/Inv_Banded_Morwong.png",
     biome: ["Ocean"],
     timeFound: ["All"],
     seasons: ["Winter"],
@@ -29,7 +29,7 @@ export const fish: Fish[] = [
   {
     id: "barcoo_grunter",
     name: "Barcoo Grunter",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/bd/Inv_Barcoo_Grunter.png",
+    img: "/images/pedia/fish/Inv_Barcoo_Grunter.png",
     biome: ["Rivers", "Billabongs", "Mangroves"],
     timeFound: ["All"],
     seasons: ["All"],
@@ -41,7 +41,7 @@ export const fish: Fish[] = [
   {
     id: "barracuda",
     name: "Barracuda",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/63/Inv_Barracuda.png",
+    img: "/images/pedia/fish/Inv_Barracuda.png",
     biome: ["Ocean"],
     timeFound: ["Night"],
     seasons: ["Summer", "Spring"],
@@ -53,7 +53,7 @@ export const fish: Fish[] = [
   {
     id: "barramundi",
     name: "Barramundi",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/15/Inv_Barramundi.png",
+    img: "/images/pedia/fish/Inv_Barramundi.png",
     biome: ["Rivers"],
     timeFound: ["All"],
     seasons: ["Autumn", "Winter", "Spring"],
@@ -65,7 +65,7 @@ export const fish: Fish[] = [
   {
     id: "black_white_snapper",
     name: "Black & White Snapper",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/ca/Inv_Black_%26_White_Snapper.png",
+    img: "/images/pedia/fish/Inv_Black_%26_White_Snapper.png",
     biome: ["Ocean"],
     timeFound: ["Day"],
     seasons: ["Autumn", "Spring"],
@@ -77,7 +77,7 @@ export const fish: Fish[] = [
   {
     id: "blackfish",
     name: "Blackfish",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/15/Inv_Blackfish.png",
+    img: "/images/pedia/fish/Inv_Blackfish.png",
     biome: ["Billabongs", "Rivers"],
     timeFound: ["All"],
     seasons: ["Spring"],
@@ -89,7 +89,7 @@ export const fish: Fish[] = [
   {
     id: "blob_fish",
     name: "Blob Fish",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6d/Inv_Blob_Fish.png",
+    img: "/images/pedia/fish/Inv_Blob_Fish.png",
     biome: ["Ocean"],
     timeFound: ["Night"],
     seasons: ["Winter", "Autumn"],
@@ -101,7 +101,7 @@ export const fish: Fish[] = [
   {
     id: "blue_spot_flathead",
     name: "Blue Spot Flathead",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/db/Inv_Blue_Spot_Flathead.png",
+    img: "/images/pedia/fish/Inv_Blue_Spot_Flathead.png",
     biome: ["Ocean"],
     timeFound: ["Morning", "Day"],
     seasons: ["Summer", "Autumn", "Spring"],
@@ -113,7 +113,7 @@ export const fish: Fish[] = [
   {
     id: "blue_tang",
     name: "Blue Tang",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/cf/Inv_Blue_Tang.png",
+    img: "/images/pedia/fish/Inv_Blue_Tang.png",
     biome: ["Island Reef"],
     timeFound: ["All"],
     seasons: ["All"],
@@ -125,7 +125,7 @@ export const fish: Fish[] = [
   {
     id: "bluefish",
     name: "Bluefish",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e6/Inv_Bluefish.png",
+    img: "/images/pedia/fish/Inv_Bluefish.png",
     biome: ["Ocean"],
     timeFound: ["All"],
     seasons: ["All"],
@@ -137,7 +137,7 @@ export const fish: Fish[] = [
   {
     id: "bonytongue",
     name: "Bonytongue",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e7/Inv_Bonytongue.png",
+    img: "/images/pedia/fish/Inv_Bonytongue.png",
     biome: ["Billabongs"],
     timeFound: ["All"],
     seasons: ["All"],
@@ -149,7 +149,7 @@ export const fish: Fish[] = [
   {
     id: "boofhead_catfish",
     name: "Boofhead Catfish",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/34/Inv_Boofhead_Catfish.png",
+    img: "/images/pedia/fish/Inv_Boofhead_Catfish.png",
     biome: ["Mangroves"],
     timeFound: ["Night"],
     seasons: ["Summer", "Autumn", "Spring"],
@@ -161,7 +161,7 @@ export const fish: Fish[] = [
   {
     id: "carp",
     name: "Carp",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/15/Inv_Carp.png",
+    img: "/images/pedia/fish/Inv_Carp.png",
     biome: ["Rivers", "Mangroves"],
     timeFound: ["All"],
     seasons: ["All"],
@@ -173,7 +173,7 @@ export const fish: Fish[] = [
   {
     id: "clown_fish",
     name: "Clown Fish",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/7b/Inv_Clown_Fish.png",
+    img: "/images/pedia/fish/Inv_Clown_Fish.png",
     biome: ["Island Reef"],
     timeFound: ["All"],
     seasons: ["All"],
@@ -185,7 +185,7 @@ export const fish: Fish[] = [
   {
     id: "deep_fish",
     name: "Deep Fish",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b1/Inv_Deep_Fish.png",
+    img: "/images/pedia/fish/Inv_Deep_Fish.png",
     biome: ["Underground"],
     timeFound: ["All"],
     seasons: ["All"],
@@ -197,7 +197,7 @@ export const fish: Fish[] = [
   {
     id: "eel_tailed_catfish",
     name: "Eel Tailed Catfish",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a8/Inv_Eel_Tailed_Catfish.png",
+    img: "/images/pedia/fish/Inv_Eel_Tailed_Catfish.png",
     biome: ["Mangroves"],
     timeFound: ["All"],
     seasons: ["All"],
@@ -209,7 +209,7 @@ export const fish: Fish[] = [
   {
     id: "empire_gudgeon",
     name: "Empire Gudgeon",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e1/Inv_Empire_Gudgeon.png",
+    img: "/images/pedia/fish/Inv_Empire_Gudgeon.png",
     biome: ["Billabongs"],
     timeFound: ["All"],
     seasons: ["All"],
@@ -221,7 +221,7 @@ export const fish: Fish[] = [
   {
     id: "eyestripe_surgeonfish",
     name: "Eyestripe Surgeonfish",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/07/Inv_Eyestripe_Surgeonfish.png",
+    img: "/images/pedia/fish/Inv_Eyestripe_Surgeonfish.png",
     biome: ["Ocean"],
     timeFound: ["Day"],
     seasons: ["Summer", "Spring"],
@@ -233,7 +233,7 @@ export const fish: Fish[] = [
   {
     id: "galaxias",
     name: "Galaxias",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/91/Inv_Galaxias.png",
+    img: "/images/pedia/fish/Inv_Galaxias.png",
     biome: ["Rivers"],
     timeFound: ["All"],
     seasons: ["Winter"],
@@ -245,7 +245,7 @@ export const fish: Fish[] = [
   {
     id: "garfish",
     name: "Garfish",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/75/Inv_Garfish.png",
+    img: "/images/pedia/fish/Inv_Garfish.png",
     biome: ["Ocean"],
     timeFound: ["All"],
     seasons: ["Winter", "Spring"],
@@ -257,7 +257,7 @@ export const fish: Fish[] = [
   {
     id: "goat_fish",
     name: "Goat Fish",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/ed/Inv_Goat_Fish.png",
+    img: "/images/pedia/fish/Inv_Goat_Fish.png",
     biome: ["Ocean"],
     timeFound: ["All"],
     seasons: ["Summer", "Spring"],
@@ -269,7 +269,7 @@ export const fish: Fish[] = [
   {
     id: "golden_perch",
     name: "Golden Perch",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/15/Inv_Golden_Perch.png",
+    img: "/images/pedia/fish/Inv_Golden_Perch.png",
     biome: ["Rivers"],
     timeFound: ["Morning"],
     seasons: ["Spring"],
@@ -281,7 +281,7 @@ export const fish: Fish[] = [
   {
     id: "grayling",
     name: "Grayling",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a5/Inv_Grayling.png",
+    img: "/images/pedia/fish/Inv_Grayling.png",
     biome: ["Billabongs", "Rivers"],
     timeFound: ["Day"],
     seasons: ["Autumn", "Winter"],
@@ -293,7 +293,7 @@ export const fish: Fish[] = [
   {
     id: "humphead_wrasse",
     name: "Humphead Wrasse",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f2/Inv_Humphead_Wrasse.png",
+    img: "/images/pedia/fish/Inv_Humphead_Wrasse.png",
     biome: ["Island Reef"],
     timeFound: ["All"],
     seasons: ["All"],
@@ -305,7 +305,7 @@ export const fish: Fish[] = [
   {
     id: "jungle_perch",
     name: "Jungle Perch",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/dc/Inv_Jungle_Perch.png",
+    img: "/images/pedia/fish/Inv_Jungle_Perch.png",
     biome: ["Rivers", "Billabongs"],
     timeFound: ["All"],
     seasons: ["All"],
@@ -317,7 +317,7 @@ export const fish: Fish[] = [
   {
     id: "lionfish",
     name: "Lionfish",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4e/Inv_Lionfish.png",
+    img: "/images/pedia/fish/Inv_Lionfish.png",
     biome: ["Ocean", "Mangroves"],
     timeFound: ["Day", "Night"],
     seasons: ["Autumn", "Summer"],
@@ -329,7 +329,7 @@ export const fish: Fish[] = [
   {
     id: "luderick",
     name: "Luderick",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/01/Inv_Luderick.png",
+    img: "/images/pedia/fish/Inv_Luderick.png",
     biome: ["Ocean"],
     timeFound: ["Day"],
     seasons: ["Winter"],
@@ -341,7 +341,7 @@ export const fish: Fish[] = [
   {
     id: "lungfish",
     name: "Lungfish",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/0b/Inv_Lungfish.png",
+    img: "/images/pedia/fish/Inv_Lungfish.png",
     biome: ["Rivers", "Billabongs"],
     timeFound: ["Night"],
     seasons: ["All"],
@@ -353,7 +353,7 @@ export const fish: Fish[] = [
   {
     id: "macquarie_perch",
     name: "Macquire Perch",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/15/Inv_Macquarie_Perch.png",
+    img: "/images/pedia/fish/Inv_Macquarie_Perch.png",
     biome: ["Rivers"],
     timeFound: ["Day"],
     seasons: ["Summer", "Autumn"],
@@ -365,7 +365,7 @@ export const fish: Fish[] = [
   {
     id: "mangrove_jack",
     name: "Mangrove Jack",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/43/Inv_Mangrove_Jack.png",
+    img: "/images/pedia/fish/Inv_Mangrove_Jack.png",
     biome: ["Mangroves"],
     timeFound: ["All"],
     seasons: ["All"],
@@ -377,7 +377,7 @@ export const fish: Fish[] = [
   {
     id: "marlin",
     name: "Marlin",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/51/Inv_Marlin.png",
+    img: "/images/pedia/fish/Inv_Marlin.png",
     biome: ["Ocean"],
     timeFound: ["Day"],
     seasons: ["Winter", "Summer"],
@@ -389,7 +389,7 @@ export const fish: Fish[] = [
   {
     id: "mouth_almighty",
     name: "Mouth Almighty",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1b/Inv_Mouth_Almighty.png",
+    img: "/images/pedia/fish/Inv_Mouth_Almighty.png",
     biome: ["Mangroves"],
     timeFound: ["Day", "Night"],
     seasons: ["Autumn", "Winter"],
@@ -401,7 +401,7 @@ export const fish: Fish[] = [
   {
     id: "murray_cod",
     name: "Murray Cod",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4d/Inv_Murray_Cod.png",
+    img: "/images/pedia/fish/Inv_Murray_Cod.png",
     biome: ["Rivers"],
     timeFound: ["Morning"],
     seasons: ["Winter", "Spring"],
@@ -413,7 +413,7 @@ export const fish: Fish[] = [
   {
     id: "rainbow_fish",
     name: "Rainbow Fish",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2b/Inv_Rainbow_Fish.png",
+    img: "/images/pedia/fish/Inv_Rainbow_Fish.png",
     biome: ["Rivers", "Billabongs"],
     timeFound: ["All"],
     seasons: ["Summer", "Autumn"],
@@ -425,7 +425,7 @@ export const fish: Fish[] = [
   {
     id: "river_bass",
     name: "River Bass",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/88/Inv_River_Bass.png",
+    img: "/images/pedia/fish/Inv_River_Bass.png",
     biome: ["Rivers", "Mangroves"],
     timeFound: ["All"],
     seasons: ["Summer", "Spring"],
@@ -437,7 +437,7 @@ export const fish: Fish[] = [
   {
     id: "saratoga",
     name: "Saratoga",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/dc/Inv_Saratoga.png",
+    img: "/images/pedia/fish/Inv_Saratoga.png",
     biome: ["Billabongs"],
     timeFound: ["Night"],
     seasons: ["Summer", "Autumn"],
@@ -449,7 +449,7 @@ export const fish: Fish[] = [
   {
     id: "short_finned_eel",
     name: "Short Finned Eel",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1e/Inv_Short_Finned_Eel.png",
+    img: "/images/pedia/fish/Inv_Short_Finned_Eel.png",
     biome: ["Billabongs"],
     timeFound: ["Night"],
     seasons: ["All"],
@@ -461,7 +461,7 @@ export const fish: Fish[] = [
   {
     id: "silver_perch",
     name: "Silver Perch",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/95/Inv_Silver_Perch.png",
+    img: "/images/pedia/fish/Inv_Silver_Perch.png",
     biome: ["Rivers", "Billabongs"],
     timeFound: ["All"],
     seasons: ["Winter", "Autumn"],
@@ -473,7 +473,7 @@ export const fish: Fish[] = [
   {
     id: "spotted_handfish",
     name: "Spotted Handfish",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/83/Inv_Spotted_Handfish.png",
+    img: "/images/pedia/fish/Inv_Spotted_Handfish.png",
     biome: ["Ocean"],
     timeFound: ["Morning", "Day"],
     seasons: ["All"],
@@ -485,7 +485,7 @@ export const fish: Fish[] = [
   {
     id: "stingray",
     name: "Stingray",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/9f/Inv_Stingray.png",
+    img: "/images/pedia/fish/Inv_Stingray.png",
     biome: ["Ocean"],
     timeFound: ["Night"],
     seasons: ["Summer", "Autumn"],
@@ -497,7 +497,7 @@ export const fish: Fish[] = [
   {
     id: "tarpon",
     name: "Tarpon",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/19/Inv_Tarpon.png",
+    img: "/images/pedia/fish/Inv_Tarpon.png",
     biome: ["Billabongs"],
     timeFound: ["All"],
     seasons: ["All"],
@@ -509,7 +509,7 @@ export const fish: Fish[] = [
   {
     id: "travalla",
     name: "Travalla",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1e/Inv_Travalla.png",
+    img: "/images/pedia/fish/Inv_Travalla.png",
     biome: ["Ocean"],
     timeFound: ["All"],
     seasons: ["Autumn", "Spring"],
@@ -521,7 +521,7 @@ export const fish: Fish[] = [
   {
     id: "yellow_tang",
     name: "Yellow Tang",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/37/Inv_Yellow_Tang.png",
+    img: "/images/pedia/fish/Inv_Yellow_Tang.png",
     biome: ["Island Reef"],
     timeFound: ["All"],
     seasons: ["All"],
@@ -533,7 +533,7 @@ export const fish: Fish[] = [
   {
     id: "yellowfin_tuna",
     name: "Yellowfin Tuna",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Yellowfin_Tuna.png",
+    img: "/images/pedia/fish/Inv_Yellowfin_Tuna.png",
     biome: ["Ocean"],
     timeFound: ["Morning", "Night"],
     seasons: ["Spring", "Autumn"],

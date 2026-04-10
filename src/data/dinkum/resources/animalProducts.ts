@@ -4,7 +4,7 @@ export const animalProducts: AnimalProduct[] = [
   {
     id: "alpha_antler",
     name: "Alpha Antler",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/9c/Inv_Alpha_Antler.png",
+    img: "/images/resources/animalProducts/Inv_Alpha_Antler.png",
     source: ["Alpha Jackaroo"],
     locations: ["Bushlands"],
     baseSellPrice: 12500,
@@ -12,7 +12,7 @@ export const animalProducts: AnimalProduct[] = [
   {
     id: "alpha_eye",
     name: "Alpha Eye",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4c/Inv_Alpha_Eye.png",
+    img: "/images/resources/animalProducts/Inv_Alpha_Eye.png",
     source: ["Alpha Bush Devil"],
     locations: ["Pine Forests"],
     baseSellPrice: 25000,
@@ -20,7 +20,7 @@ export const animalProducts: AnimalProduct[] = [
   {
     id: "alpha_scale",
     name: "Alpha Scale",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/31/Inv_Alpha_Scale.png",
+    img: "/images/resources/animalProducts/Inv_Alpha_Scale.png",
     source: ["Alpha Croco"],
     locations: ["Billabongs", "Rivers"],
     baseSellPrice: 15500,
@@ -28,7 +28,7 @@ export const animalProducts: AnimalProduct[] = [
   {
     id: "alpha_shark_tooth",
     name: "Alpha Shark Tooth",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2b/Inv_Alpha_Shark_Tooth.png",
+    img: "/images/resources/animalProducts/Inv_Alpha_Shark_Tooth.png",
     source: ["Alpha Shark"],
     locations: ["Island Reef"],
     baseSellPrice: 25000,
@@ -36,7 +36,7 @@ export const animalProducts: AnimalProduct[] = [
   {
     id: "bat_wing",
     name: "Bat Wing",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2d/Inv_Bat_Wing.png",
+    img: "/images/resources/animalProducts/Inv_Bat_Wing.png",
     source: ["Cave Bats"],
     locations: ["Deep Mine"],
     baseSellPrice: 900,
@@ -44,7 +44,7 @@ export const animalProducts: AnimalProduct[] = [
   {
     id: "big_chicken_egg",
     name: "Big Chicken Egg",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2d/Inv_Big_Chicken_Egg.png",
+    img: "/images/animals/Inv_Big_Chicken_Egg.png",
     source: ["Chook"],
     baseSellPrice: 545,
     buffs: {
@@ -56,7 +56,7 @@ export const animalProducts: AnimalProduct[] = [
   {
     id: "bone",
     name: "Bone",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Bone.png",
+    img: "/images/resources/animalProducts/Inv_Bone.png",
     source: [
       "Bush Devil",
       "Croco",
@@ -74,7 +74,7 @@ export const animalProducts: AnimalProduct[] = [
   {
     id: "chicken_egg",
     name: "Chicken Egg",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/43/Inv_Chicken_Egg.png",
+    img: "/images/resources/animalProducts/Inv_Chicken_Egg.png",
     source: ["Chook"],
     baseSellPrice: 350,
     buffs: {
@@ -86,14 +86,14 @@ export const animalProducts: AnimalProduct[] = [
   {
     id: "cocoon",
     name: "Cocoon",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/31/Inv_Cocoon.png",
+    img: "/images/resources/animalProducts/Inv_Cocoon.png",
     source: ["Bug Terrarium"],
     baseSellPrice: 0,
   },
   {
     id: "croco_meat",
     name: "Croco Meat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/35/Inv_Croco_Meat.png",
+    img: "/images/animals/Inv_Croco_Meat.png",
     source: ["Croco", "Glowing Croco"],
     locations: ["Billabongs", "Mangroves", "Rivers", "Deep Mine"],
     baseSellPrice: 625,
@@ -101,7 +101,7 @@ export const animalProducts: AnimalProduct[] = [
   {
     id: "crocodile_tooth",
     name: "Crocodile Tooth",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/0b/Inv_Crocodile_Tooth.png",
+    img: "/images/resources/animalProducts/Inv_Crocodile_Tooth.png",
     source: ["Croco", "Glowing Croco"],
     locations: ["Billabongs", "Mangroves", "Rivers", "Deep Mine"],
     baseSellPrice: 3650,
@@ -109,7 +109,7 @@ export const animalProducts: AnimalProduct[] = [
   {
     id: "feather",
     name: "Feather",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4a/Inv_Feather.png",
+    img: "/images/resources/animalProducts/Inv_Feather.png",
     source: [
       "Bin Chook",
       "Cockatoo",
@@ -123,7 +123,7 @@ export const animalProducts: AnimalProduct[] = [
   {
     id: "flake",
     name: "Flake",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f6/Inv_Flake.png",
+    img: "/images/animals/Inv_Flake.png",
     source: ["Shark"],
     locations: ["Ocean"],
     baseSellPrice: 950,
@@ -131,14 +131,14 @@ export const animalProducts: AnimalProduct[] = [
   {
     id: "flame_jelly",
     name: "Flame Jelly",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/05/Inv_Flame_Jelly.png",
+    img: "/images/resources/animalProducts/Inv_Flame_Jelly.png",
     source: ["Flame Slime"],
     baseSellPrice: 10,
   },
   {
     id: "flame_sac",
     name: "Flame Sac",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/7c/Inv_Flame_Sac.png",
+    img: "/images/resources/animalProducts/Inv_Flame_Sac.png",
     source: ["Bush Devil"],
     locations: ["Pine Forests", "Deep Mine"],
     baseSellPrice: 5250,
@@ -146,7 +146,7 @@ export const animalProducts: AnimalProduct[] = [
   {
     id: "high_quality_milk",
     name: "High Quality Milk",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/ab/Inv_High_Quality_Milk.png",
+    img: "/images/resources/animalProducts/Inv_High_Quality_Milk.png",
     source: ["Vombat"],
     baseSellPrice: 2300,
     buffs: {
@@ -158,7 +158,7 @@ export const animalProducts: AnimalProduct[] = [
   {
     id: "jelly",
     name: "Jelly",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a5/Inv_Jelly.png",
+    img: "/images/resources/animalProducts/Inv_Jelly.png",
     source: ["Jelly Fish"],
     locations: ["Ocean"],
     baseSellPrice: 400,
@@ -166,14 +166,14 @@ export const animalProducts: AnimalProduct[] = [
   {
     id: "maggie_egg",
     name: "Maggie Egg",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/9c/Inv_Maggie_Egg.png",
+    img: "/images/resources/animalProducts/Inv_Maggie_Egg.png",
     source: ["Magpie", "Mailbox", "Gocha Machine"],
     baseSellPrice: 16000,
   },
   {
     id: "milk",
     name: "Milk",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c6/Inv_Milk.png",
+    img: "/images/resources/animalProducts/Inv_Milk.png",
     source: ["Vombat"],
     baseSellPrice: 1500,
     buffs: {
@@ -185,7 +185,7 @@ export const animalProducts: AnimalProduct[] = [
   {
     id: "pearl",
     name: "Pearl",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/14/Inv_Pearl.png",
+    img: "/images/resources/animalProducts/Inv_Pearl.png",
     source: ["Oyster"],
     locations: ["Ocean", "Island Reef"],
     baseSellPrice: 5000,
@@ -193,21 +193,21 @@ export const animalProducts: AnimalProduct[] = [
   {
     id: "raw_drumstick",
     name: "Raw Drumstick",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/0e/Inv_Raw_Drumstick.png",
+    img: "/images/animals/Inv_Raw_Drumstick.png",
     source: ["Scrub Turkey"],
     baseSellPrice: 350,
   },
   {
     id: "raw_giant_drumstick",
     name: "Raw Giant Drumstick",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a7/Inv_Raw_Giant_Drumstick.png",
+    img: "/images/animals/Inv_Raw_Giant_Drumstick.png",
     source: ["Mus", "Wary Mus"],
     baseSellPrice: 500,
   },
   {
     id: "raw_grub_meat",
     name: "Raw Grub Meat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/91/Inv_Raw_Grub_Meat.png",
+    img: "/images/animals/Inv_Raw_Grub_Meat.png",
     source: ["Grub"],
     locations: ["Undergrove"],
     baseSellPrice: 350,
@@ -220,35 +220,35 @@ export const animalProducts: AnimalProduct[] = [
   {
     id: "raw_meat",
     name: "Raw Meat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/cb/Inv_Raw_Meat.png",
+    img: "/images/animals/Inv_Raw_Meat.png",
     source: ["Jackaroo", "Bush Devil", "Diggo"],
     baseSellPrice: 400,
   },
   {
     id: "raw_prime_meat",
     name: "Raw Prime Meat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/07/Inv_Raw_Prime_Meat.png",
+    img: "/images/animals/Inv_Raw_Prime_Meat.png",
     source: ["Alpha Jackaroo", "Alpha Bush Devil", "Alpha Croco"],
     baseSellPrice: 2000,
   },
   {
     id: "roo_poo",
     name: "Roo Poo",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/9b/Inv_Roo_Poo.png",
+    img: "/images/resources/animalProducts/Inv_Roo_Poo.png",
     source: ["Jackaroo", "Pleep"],
     baseSellPrice: 1,
   },
   {
     id: "shark_egg",
     name: "Shark Egg",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2b/Inv_Shark_Egg.png",
+    img: "/images/resources/animalProducts/Inv_Shark_Egg.png",
     source: ["Alpha Shark"],
     baseSellPrice: 16000,
   },
   {
     id: "thunder_sac",
     name: "Thunder Sac",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c7/Inv_Thunder_Sac.png",
+    img: "/images/resources/animalProducts/Inv_Thunder_Sac.png",
     source: ["Frilly"],
     locations: ["Desert"],
     baseSellPrice: 3250,
@@ -256,14 +256,14 @@ export const animalProducts: AnimalProduct[] = [
   {
     id: "toad_skin",
     name: "Toad Skin",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/24/Inv_Toad_Skin.png",
+    img: "/images/resources/animalProducts/Inv_Toad_Skin.png",
     source: ["Toad"],
     baseSellPrice: 200,
   },
   {
     id: "tongue",
     name: "Tongue",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/cf/Inv_Tongue.png",
+    img: "/images/resources/animalProducts/Inv_Tongue.png",
     source: ["Blooming Frilly"],
     locations: ["Undergrove"],
     baseSellPrice: 2500,
@@ -271,28 +271,28 @@ export const animalProducts: AnimalProduct[] = [
   {
     id: "vombat_poo",
     name: "Vombat Poo",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/48/Inv_Vombat_Poo.png",
+    img: "/images/resources/animalProducts/Inv_Vombat_Poo.png",
     source: ["Vombat"],
     baseSellPrice: 25,
   },
   {
     id: "wool",
     name: "Wool",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a2/Inv_Wool.png",
+    img: "/images/resources/animalProducts/Inv_Wool.png",
     source: ["Pleep"],
     baseSellPrice: 2150,
   },
   {
     id: "fertilised_chicken_egg",
     name: "Fertilised Chicken Egg",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/9c/Inv_Fertilised_Chicken_Egg.png",
+    img: "/images/resources/animalProducts/Inv_Fertilised_Chicken_Egg.png",
     source: ["Chook"],
     baseSellPrice: 900,
   },
   {
     id: "native_bread",
     name: "Native Bread",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/48/Inv_Native_Bread.png",
+    img: "/images/resources/animalProducts/Inv_Native_Bread.png",
     source: ["Burrowcoot", "Boaricoot"],
     baseSellPrice: 5000,
     buffs: {
@@ -305,14 +305,14 @@ export const animalProducts: AnimalProduct[] = [
   {
     id: "pretty_pebble",
     name: "Pretty Pebble",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3d/Inv_Pretty_Pebble.png",
+    img: "/images/resources/animalProducts/Inv_Pretty_Pebble.png",
     source: ["Penguin"],
     baseSellPrice: 545,
   },
   {
     id: "worms",
     name: "Worms",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/55/Inv_Worms.png",
+    img: "/images/resources/animalProducts/Inv_Worms.png",
     source: ["Boaricoot", "Burrowcoot"],
     baseSellPrice: 250,
   },

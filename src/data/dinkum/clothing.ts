@@ -5,7 +5,7 @@ export const clothing: Clothing[] = [
   {
     id: "adventure_hood",
     name: "Adventure Hood",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/96/Inv_Adventure_Hood.png",
+    img: "/images/clothing/Inv_Adventure_Hood.png",
     displayPrice: 14400,
     cataloguePrice: 18000,
     baseSellPrice: 7200,
@@ -17,7 +17,7 @@ export const clothing: Clothing[] = [
   {
     id: "aurora_baseball_cap",
     name: "Aurora Baseball Cap",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/03/Inv_Aurora_Baseball_Cap.png",
+    img: "/images/clothing/Inv_Aurora_Baseball_Cap.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 2500,
@@ -29,7 +29,7 @@ export const clothing: Clothing[] = [
   {
     id: "aurora_shirt",
     name: "Aurora Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d2/Inv_Aurora_Shirt.png",
+    img: "/images/clothing/Inv_Aurora_Shirt.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 2500,
@@ -41,7 +41,7 @@ export const clothing: Clothing[] = [
   {
     id: "aussie_hat",
     name: "Aussie Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/70/Inv_Aussie_Hat.png",
+    img: "/images/clothing/Inv_Aussie_Hat.png",
     displayPrice: 4500,
     cataloguePrice: 5625,
     baseSellPrice: 2250,
@@ -53,7 +53,7 @@ export const clothing: Clothing[] = [
   {
     id: "aviator_sunglasses",
     name: "Aviator Sunglasses",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8a/Inv_Aviator_Sunglasses.png",
+    img: "/images/clothing/Inv_Aviator_Sunglasses.png",
     displayPrice: 2500,
     cataloguePrice: 3125,
     baseSellPrice: 1250,
@@ -65,7 +65,7 @@ export const clothing: Clothing[] = [
   {
     id: "beach_straw_hat",
     name: "Beach Straw Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/71/Inv_Beach_Straw_Hat.png",
+    img: "/images/clothing/Inv_Beach_Straw_Hat.png",
     displayPrice: 2700,
     cataloguePrice: 3375,
     baseSellPrice: 1350,
@@ -77,7 +77,7 @@ export const clothing: Clothing[] = [
   {
     id: "beak",
     name: "Beak",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d3/Inv_Beak.png",
+    img: "/images/clothing/Inv_Beak.png",
     displayPrice: 10800,
     cataloguePrice: 13500,
     baseSellPrice: 5400,
@@ -89,7 +89,7 @@ export const clothing: Clothing[] = [
   {
     id: "bee_hood",
     name: "Bee Hood",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a2/Inv_Bee_Hood.png",
+    img: "/images/clothing/Inv_Bee_Hood.png",
     displayPrice: 19750,
     cataloguePrice: 24687,
     baseSellPrice: 9875,
@@ -101,7 +101,7 @@ export const clothing: Clothing[] = [
   {
     id: "bird_bill",
     name: "Bird Bill",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4a/Inv_Bird_Bill.png",
+    img: "/images/clothing/Inv_Bird_Bill.png",
     displayPrice: 10800,
     cataloguePrice: 13500,
     baseSellPrice: 5400,
@@ -113,7 +113,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_and_white_scarf",
     name: "Black And White Scarf",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/74/Inv_Black_And_White_Scarf.png",
+    img: "/images/clothing/Inv_Black_And_White_Scarf.png",
     displayPrice: 9000,
     cataloguePrice: 11250,
     baseSellPrice: 4500,
@@ -125,7 +125,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_bandana",
     name: "Black Bandana",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b4/Inv_Black_Bandana.png",
+    img: "/images/clothing/Inv_Black_Bandana.png",
     displayPrice: 1500,
     cataloguePrice: 1875,
     baseSellPrice: 750,
@@ -137,7 +137,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_baseball_cap",
     name: "Black Baseball Cap",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/20/Inv_Black_Baseball_Cap.png",
+    img: "/images/clothing/Inv_Black_Baseball_Cap.png",
     displayPrice: 3080,
     cataloguePrice: 3850,
     baseSellPrice: 1540,
@@ -149,7 +149,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_boat_shoes",
     name: "Black Boat Shoes",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6b/Inv_Black_Boat_Shoes.png",
+    img: "/images/clothing/Inv_Black_Boat_Shoes.png",
     displayPrice: 2400,
     cataloguePrice: 3000,
     baseSellPrice: 1200,
@@ -161,7 +161,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_boots",
     name: "Black Boots",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/9f/Inv_Black_Boots.png",
+    img: "/images/clothing/Inv_Black_Boots.png",
     displayPrice: 3600,
     cataloguePrice: 4500,
     baseSellPrice: 1800,
@@ -173,7 +173,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_bucket_hat",
     name: "Black Bucket Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/95/Inv_Black_Bucket_Hat.png",
+    img: "/images/clothing/Inv_Black_Bucket_Hat.png",
     displayPrice: 330,
     cataloguePrice: 412,
     baseSellPrice: 165,
@@ -185,7 +185,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_capri_pants",
     name: "Black Capri Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/52/Inv_Black_Capri_Pants.png",
+    img: "/images/clothing/Inv_Black_Capri_Pants.png",
     displayPrice: 3000,
     cataloguePrice: 3750,
     baseSellPrice: 1500,
@@ -197,7 +197,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_coat",
     name: "Black Coat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/89/Inv_Black_Coat.png",
+    img: "/images/clothing/Inv_Black_Coat.png",
     displayPrice: 5120,
     cataloguePrice: 6400,
     baseSellPrice: 2560,
@@ -209,7 +209,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_comfy_shoes",
     name: "Black Comfy Shoes",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/78/Inv_Black_Comfy_Shoes.png",
+    img: "/images/clothing/Inv_Black_Comfy_Shoes.png",
     displayPrice: 2400,
     cataloguePrice: 3000,
     baseSellPrice: 1200,
@@ -221,7 +221,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_flanney_shirt",
     name: "Black Flanney Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e6/Inv_Black_Flanney_Shirt.png",
+    img: "/images/clothing/Inv_Black_Flanney_Shirt.png",
     displayPrice: 2360,
     cataloguePrice: 2950,
     baseSellPrice: 1180,
@@ -233,7 +233,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_flat_cap",
     name: "Black Flat Cap",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/bf/Inv_Black_Flat_Cap.png",
+    img: "/images/clothing/Inv_Black_Flat_Cap.png",
     displayPrice: 1050,
     cataloguePrice: 1312,
     baseSellPrice: 525,
@@ -245,7 +245,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_flats",
     name: "Black Flats",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/36/Inv_Black_Flats.png",
+    img: "/images/clothing/Inv_Black_Flats.png",
     displayPrice: 3350,
     cataloguePrice: 4187,
     baseSellPrice: 1675,
@@ -257,7 +257,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_hair_bow",
     name: "Black Hair Bow",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/5d/Inv_Black_Hair_Bow.png",
+    img: "/images/clothing/Inv_Black_Hair_Bow.png",
     displayPrice: 3000,
     cataloguePrice: 3750,
     baseSellPrice: 1500,
@@ -269,7 +269,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_hood",
     name: "Black Hood",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/91/Inv_Black_Hood.png",
+    img: "/images/clothing/Inv_Black_Hood.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 1500,
@@ -281,7 +281,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_hoodie",
     name: "Black Hoodie",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/59/Inv_Black_Hoodie.png",
+    img: "/images/clothing/Inv_Black_Hoodie.png",
     displayPrice: 2306,
     cataloguePrice: 2882,
     baseSellPrice: 1153,
@@ -293,7 +293,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_jacket",
     name: "Black Jacket",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/82/Inv_Black_Jacket.png",
+    img: "/images/clothing/Inv_Black_Jacket.png",
     displayPrice: 5120,
     cataloguePrice: 6400,
     baseSellPrice: 2560,
@@ -305,7 +305,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_jeans",
     name: "Black Jeans",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e8/Inv_Black_Jeans.png",
+    img: "/images/clothing/Inv_Black_Jeans.png",
     displayPrice: 2900,
     cataloguePrice: 3625,
     baseSellPrice: 1450,
@@ -317,7 +317,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_mask",
     name: "Black Mask",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/64/Inv_Black_Mask.png",
+    img: "/images/clothing/Inv_Black_Mask.png",
     displayPrice: 10800,
     cataloguePrice: 13500,
     baseSellPrice: 5400,
@@ -329,7 +329,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_pants",
     name: "Black Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8a/Inv_Black_Pants.png",
+    img: "/images/clothing/Inv_Black_Pants.png",
     displayPrice: 4000,
     cataloguePrice: 5000,
     baseSellPrice: 2000,
@@ -341,7 +341,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_plaid_dress",
     name: "Black Plaid Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e3/Inv_Black_Plaid_Dress.png",
+    img: "/images/clothing/Inv_Black_Plaid_Dress.png",
     displayPrice: 2130,
     cataloguePrice: 2662,
     baseSellPrice: 1065,
@@ -353,7 +353,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_plaid_pants",
     name: "Black Plaid Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a4/Inv_Black_Plaid_Pants.png",
+    img: "/images/clothing/Inv_Black_Plaid_Pants.png",
     displayPrice: 1600,
     cataloguePrice: 2000,
     baseSellPrice: 800,
@@ -365,7 +365,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_raglan_sleeve",
     name: "Black Raglan Sleeve",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3c/Inv_Black_Raglan_Sleeve.png",
+    img: "/images/clothing/Inv_Black_Raglan_Sleeve.png",
     displayPrice: 3200,
     cataloguePrice: 4000,
     baseSellPrice: 1600,
@@ -377,7 +377,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_renaissance_dress",
     name: "Black Renaissance Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/32/Inv_Black_Renaissance_Dress.png",
+    img: "/images/clothing/Inv_Black_Renaissance_Dress.png",
     displayPrice: 3390,
     cataloguePrice: 4237,
     baseSellPrice: 1695,
@@ -389,7 +389,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_ripped_jeans",
     name: "Black Ripped Jeans",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d2/Inv_Black_Ripped_Jeans.png",
+    img: "/images/clothing/Inv_Black_Ripped_Jeans.png",
     displayPrice: 3202,
     cataloguePrice: 4002,
     baseSellPrice: 1601,
@@ -401,7 +401,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_scarf",
     name: "Black Scarf",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/62/Inv_Black_Scarf.png",
+    img: "/images/clothing/Inv_Black_Scarf.png",
     displayPrice: 9000,
     cataloguePrice: 11250,
     baseSellPrice: 4500,
@@ -413,7 +413,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_shirt",
     name: "Black Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Black_Shirt.png",
+    img: "/images/clothing/Inv_Black_Shirt.png",
     displayPrice: 6000,
     cataloguePrice: 7500,
     baseSellPrice: 3000,
@@ -425,7 +425,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_shorts",
     name: "Black Shorts",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/40/Inv_Black_Shorts.png",
+    img: "/images/clothing/Inv_Black_Shorts.png",
     displayPrice: 1806,
     cataloguePrice: 2257,
     baseSellPrice: 903,
@@ -437,7 +437,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_singlet",
     name: "Black Singlet",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/39/Inv_Black_Singlet.png",
+    img: "/images/clothing/Inv_Black_Singlet.png",
     displayPrice: 1200,
     cataloguePrice: 1500,
     baseSellPrice: 600,
@@ -449,7 +449,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_sneakers",
     name: "Black Sneakers",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6a/Inv_Black_Sneakers.png",
+    img: "/images/clothing/Inv_Black_Sneakers.png",
     displayPrice: 2400,
     cataloguePrice: 3000,
     baseSellPrice: 1200,
@@ -461,7 +461,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_striped_pants",
     name: "Black Striped Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8c/Inv_Black_Striped_Pants.png",
+    img: "/images/clothing/Inv_Black_Striped_Pants.png",
     displayPrice: 2000,
     cataloguePrice: 2500,
     baseSellPrice: 1000,
@@ -473,7 +473,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_sweat_pants",
     name: "Black Sweat Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6b/Inv_Black_Sweat_Pants.png",
+    img: "/images/clothing/Inv_Black_Sweat_Pants.png",
     displayPrice: 1060,
     cataloguePrice: 1325,
     baseSellPrice: 530,
@@ -485,7 +485,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_victorian_bonnet",
     name: "Black Victorian Bonnet",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/81/Inv_Black_Victorian_Bonnet.png",
+    img: "/images/clothing/Inv_Black_Victorian_Bonnet.png",
     displayPrice: 39500,
     cataloguePrice: 49375,
     baseSellPrice: 19750,
@@ -497,7 +497,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_victorian_boots",
     name: "Black Victorian Boots",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/bb/Inv_Black_Victorian_Boots.png",
+    img: "/images/clothing/Inv_Black_Victorian_Boots.png",
     displayPrice: 1500,
     cataloguePrice: 1875,
     baseSellPrice: 750,
@@ -509,7 +509,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_victorian_dress",
     name: "Black Victorian Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a0/Inv_Black_Victorian_Dress.png",
+    img: "/images/clothing/Inv_Black_Victorian_Dress.png",
     displayPrice: 10170,
     cataloguePrice: 12712,
     baseSellPrice: 5085,
@@ -521,7 +521,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_victorian_jacket",
     name: "Black Victorian Jacket",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/89/Inv_Black_Victorian_Jacket.png",
+    img: "/images/clothing/Inv_Black_Victorian_Jacket.png",
     displayPrice: 12000,
     cataloguePrice: 15000,
     baseSellPrice: 6000,
@@ -533,7 +533,7 @@ export const clothing: Clothing[] = [
   {
     id: "black_victorian_pants",
     name: "Black Victorian Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/fa/Inv_Black_Victorian_Pants.png",
+    img: "/images/clothing/Inv_Black_Victorian_Pants.png",
     displayPrice: 1600,
     cataloguePrice: 2000,
     baseSellPrice: 800,
@@ -545,7 +545,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_and_yellow_shirt",
     name: "Blue and Yellow Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3a/Inv_Blue_and_Yellow_Shirt.png",
+    img: "/images/clothing/Inv_Blue_and_Yellow_Shirt.png",
     displayPrice: 2400,
     cataloguePrice: 3000,
     baseSellPrice: 1200,
@@ -557,7 +557,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_bandana",
     name: "Blue Bandana",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/27/Inv_Blue_Bandana.png",
+    img: "/images/clothing/Inv_Blue_Bandana.png",
     displayPrice: 1500,
     cataloguePrice: 1875,
     baseSellPrice: 750,
@@ -569,7 +569,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_beanie",
     name: "Blue Beanie",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/54/Inv_Blue_Beanie.png",
+    img: "/images/clothing/Inv_Blue_Beanie.png",
     displayPrice: 1650,
     cataloguePrice: 2062,
     baseSellPrice: 825,
@@ -581,7 +581,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_bucket_hat",
     name: "Blue Bucket Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b4/Inv_Blue_Bucket_Hat.png",
+    img: "/images/clothing/Inv_Blue_Bucket_Hat.png",
     displayPrice: 330,
     cataloguePrice: 412,
     baseSellPrice: 165,
@@ -593,7 +593,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_capri_pants",
     name: "Blue Capri Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c5/Inv_Blue_Capri_Pants.png",
+    img: "/images/clothing/Inv_Blue_Capri_Pants.png",
     displayPrice: 3000,
     cataloguePrice: 3750,
     baseSellPrice: 1500,
@@ -605,7 +605,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_comfy_shoes",
     name: "Blue Comfy Shoes",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4b/Inv_Blue_Comfy_Shoes.png",
+    img: "/images/clothing/Inv_Blue_Comfy_Shoes.png",
     displayPrice: 2400,
     cataloguePrice: 3000,
     baseSellPrice: 1200,
@@ -617,7 +617,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_cuffed_pants",
     name: "Blue Cuffed Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/92/Inv_Blue_Cuffed_Pants.png",
+    img: "/images/clothing/Inv_Blue_Cuffed_Pants.png",
     displayPrice: 3014,
     cataloguePrice: 3767,
     baseSellPrice: 1507,
@@ -629,7 +629,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_dress",
     name: "Blue Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/68/Inv_Blue_Dress.png",
+    img: "/images/clothing/Inv_Blue_Dress.png",
     displayPrice: 1130,
     cataloguePrice: 1412,
     baseSellPrice: 565,
@@ -641,7 +641,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_flannelette_shirt",
     name: "Blue Flannelette Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/18/Inv_Blue_Flannelette_Shirt.png",
+    img: "/images/clothing/Inv_Blue_Flannelette_Shirt.png",
     displayPrice: 2360,
     cataloguePrice: 2950,
     baseSellPrice: 1180,
@@ -653,7 +653,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_flanney_dress",
     name: "Blue Flanney Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/ed/Inv_Blue_Flanney_Dress.png",
+    img: "/images/clothing/Inv_Blue_Flanney_Dress.png",
     displayPrice: 2160,
     cataloguePrice: 2700,
     baseSellPrice: 1080,
@@ -665,7 +665,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_flat_cap",
     name: "Blue Flat Cap",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/45/Inv_Blue_Flat_Cap.png",
+    img: "/images/clothing/Inv_Blue_Flat_Cap.png",
     displayPrice: 1050,
     cataloguePrice: 1312,
     baseSellPrice: 525,
@@ -677,7 +677,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_hair_bow",
     name: "Blue Hair Bow",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c2/Inv_Blue_Hair_Bow.png",
+    img: "/images/clothing/Inv_Blue_Hair_Bow.png",
     displayPrice: 3000,
     cataloguePrice: 3750,
     baseSellPrice: 1500,
@@ -689,7 +689,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_holiday_shirt",
     name: "Blue Holiday Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2d/Inv_Blue_Holiday_Shirt.png",
+    img: "/images/clothing/Inv_Blue_Holiday_Shirt.png",
     displayPrice: 1360,
     cataloguePrice: 1700,
     baseSellPrice: 680,
@@ -701,7 +701,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_holiday_shorts",
     name: "Blue Holiday Shorts",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/89/Inv_Blue_Holiday_Shorts.png",
+    img: "/images/clothing/Inv_Blue_Holiday_Shorts.png",
     displayPrice: 1330,
     cataloguePrice: 1662,
     baseSellPrice: 665,
@@ -713,7 +713,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_hoodie",
     name: "Blue Hoodie",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c2/Inv_Blue_Hoodie.png",
+    img: "/images/clothing/Inv_Blue_Hoodie.png",
     displayPrice: 2306,
     cataloguePrice: 2882,
     baseSellPrice: 1153,
@@ -725,7 +725,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_jeans",
     name: "Blue Jeans",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1c/Inv_Blue_Jeans.png",
+    img: "/images/clothing/Inv_Blue_Jeans.png",
     displayPrice: 900,
     cataloguePrice: 1125,
     baseSellPrice: 450,
@@ -737,7 +737,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_plaid_dress",
     name: "Blue Plaid Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f6/Inv_Blue_Plaid_Dress.png",
+    img: "/images/clothing/Inv_Blue_Plaid_Dress.png",
     displayPrice: 2130,
     cataloguePrice: 2662,
     baseSellPrice: 1065,
@@ -749,7 +749,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_plaid_pants",
     name: "Blue Plaid Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a9/Inv_Blue_Plaid_Pants.png",
+    img: "/images/clothing/Inv_Blue_Plaid_Pants.png",
     displayPrice: 1600,
     cataloguePrice: 2000,
     baseSellPrice: 800,
@@ -761,7 +761,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_puffy_jacket",
     name: "Blue Puffy Jacket",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/43/Inv_Blue_Puffy_Jacket.png",
+    img: "/images/clothing/Inv_Blue_Puffy_Jacket.png",
     displayPrice: 3000,
     cataloguePrice: 3750,
     baseSellPrice: 1500,
@@ -773,7 +773,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_raglan_sleeve",
     name: "Blue Raglan Sleeve",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1b/Inv_Blue_Raglan_Sleeve.png",
+    img: "/images/clothing/Inv_Blue_Raglan_Sleeve.png",
     displayPrice: 3200,
     cataloguePrice: 4000,
     baseSellPrice: 1600,
@@ -785,7 +785,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_shorts",
     name: "Blue Shorts",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4c/Inv_Blue_Shorts.png",
+    img: "/images/clothing/Inv_Blue_Shorts.png",
     displayPrice: 1806,
     cataloguePrice: 2257,
     baseSellPrice: 903,
@@ -797,7 +797,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_sneakers",
     name: "Blue Sneakers",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f7/Inv_Blue_Sneakers.png",
+    img: "/images/clothing/Inv_Blue_Sneakers.png",
     displayPrice: 1500,
     cataloguePrice: 1875,
     baseSellPrice: 750,
@@ -809,7 +809,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_stripe_dress",
     name: "Blue Stripe Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/67/Inv_Blue_Stripe_Dress.png",
+    img: "/images/clothing/Inv_Blue_Stripe_Dress.png",
     displayPrice: 1530,
     cataloguePrice: 1912,
     baseSellPrice: 765,
@@ -821,7 +821,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_stripe_jumper",
     name: "Blue Stripe Jumper",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/eb/Inv_Blue_Stripe_Jumper.png",
+    img: "/images/clothing/Inv_Blue_Stripe_Jumper.png",
     displayPrice: 2306,
     cataloguePrice: 2882,
     baseSellPrice: 1153,
@@ -833,7 +833,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_stripe_shirt",
     name: "Blue Stripe Shirt.",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b8/Inv_Blue_Stripe_Shirt..png",
+    img: "/images/clothing/Inv_Blue_Stripe_Shirt..png",
     displayPrice: 2800,
     cataloguePrice: 3500,
     baseSellPrice: 1400,
@@ -845,7 +845,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_summer_dress",
     name: "Blue Summer Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/51/Inv_Blue_Summer_Dress.png",
+    img: "/images/clothing/Inv_Blue_Summer_Dress.png",
     displayPrice: 4320,
     cataloguePrice: 5400,
     baseSellPrice: 2160,
@@ -857,7 +857,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_sun_glasses",
     name: "Blue Sun Glasses",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4d/Inv_Blue_Sun_Glasses.png",
+    img: "/images/clothing/Inv_Blue_Sun_Glasses.png",
     displayPrice: 2400,
     cataloguePrice: 3000,
     baseSellPrice: 1200,
@@ -869,7 +869,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_sweat_pants",
     name: "Blue Sweat Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Blue_Sweat_Pants.png",
+    img: "/images/clothing/Inv_Blue_Sweat_Pants.png",
     displayPrice: 1060,
     cataloguePrice: 1325,
     baseSellPrice: 530,
@@ -881,7 +881,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_tshirt",
     name: "Blue T-Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/eb/Inv_Blue_T-Shirt.png",
+    img: "/images/clothing/Inv_Blue_T-Shirt.png",
     displayPrice: 2150,
     cataloguePrice: 2687,
     baseSellPrice: 1075,
@@ -893,7 +893,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_ugly_sweater",
     name: "Blue Ugly Sweater",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d2/Inv_Blue_Ugly_Sweater.png",
+    img: "/images/clothing/Inv_Blue_Ugly_Sweater.png",
     displayPrice: 2306,
     cataloguePrice: 2882,
     baseSellPrice: 1153,
@@ -905,7 +905,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_vintage_dress",
     name: "Blue Vintage Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/18/Inv_Blue_Vintage_Dress.png",
+    img: "/images/clothing/Inv_Blue_Vintage_Dress.png",
     displayPrice: 3390,
     cataloguePrice: 4237,
     baseSellPrice: 1695,
@@ -917,7 +917,7 @@ export const clothing: Clothing[] = [
   {
     id: "brown_apron_dress",
     name: "Brown Apron Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1c/Inv_Brown_Apron_Dress.png",
+    img: "/images/clothing/Inv_Brown_Apron_Dress.png",
     displayPrice: 3390,
     cataloguePrice: 4237,
     baseSellPrice: 1695,
@@ -929,7 +929,7 @@ export const clothing: Clothing[] = [
   {
     id: "brown_boat_shoes",
     name: "Brown Boat Shoes",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/0d/Inv_Brown_Boat_Shoes.png",
+    img: "/images/clothing/Inv_Brown_Boat_Shoes.png",
     displayPrice: 2400,
     cataloguePrice: 3000,
     baseSellPrice: 1200,
@@ -941,7 +941,7 @@ export const clothing: Clothing[] = [
   {
     id: "brown_overall_dress",
     name: "Brown Overall Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b2/Inv_Brown_Overall_Dress.png",
+    img: "/images/clothing/Inv_Brown_Overall_Dress.png",
     displayPrice: 2250,
     cataloguePrice: 2812,
     baseSellPrice: 1125,
@@ -953,7 +953,7 @@ export const clothing: Clothing[] = [
   {
     id: "brown_pants",
     name: "Brown Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4c/Inv_Brown_Pants.png",
+    img: "/images/clothing/Inv_Brown_Pants.png",
     displayPrice: 2000,
     cataloguePrice: 2500,
     baseSellPrice: 1000,
@@ -965,7 +965,7 @@ export const clothing: Clothing[] = [
   {
     id: "brown_sand_shoes",
     name: "Brown Sand Shoes",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4a/Inv_Brown_Sand_Shoes.png",
+    img: "/images/clothing/Inv_Brown_Sand_Shoes.png",
     displayPrice: 806,
     cataloguePrice: 1007,
     baseSellPrice: 403,
@@ -977,7 +977,7 @@ export const clothing: Clothing[] = [
   {
     id: "brown_sandals",
     name: "Brown Sandals",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/42/Inv_Brown_Sandals.png",
+    img: "/images/clothing/Inv_Brown_Sandals.png",
     displayPrice: 1430,
     cataloguePrice: 1787,
     baseSellPrice: 715,
@@ -989,7 +989,7 @@ export const clothing: Clothing[] = [
   {
     id: "brown_tights",
     name: "Brown Tights",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/46/Inv_Brown_Tights.png",
+    img: "/images/clothing/Inv_Brown_Tights.png",
     displayPrice: 2000,
     cataloguePrice: 2500,
     baseSellPrice: 1000,
@@ -1001,7 +1001,7 @@ export const clothing: Clothing[] = [
   {
     id: "brown_victorian_boots",
     name: "Brown Victorian Boots",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/11/Inv_Brown_Victorian_Boots.png",
+    img: "/images/clothing/Inv_Brown_Victorian_Boots.png",
     displayPrice: 1500,
     cataloguePrice: 1875,
     baseSellPrice: 750,
@@ -1013,7 +1013,7 @@ export const clothing: Clothing[] = [
   {
     id: "bunny_hood",
     name: "Bunny Hood",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/62/Inv_Bunny_Hood.png",
+    img: "/images/clothing/Inv_Bunny_Hood.png",
     displayPrice: 19750,
     cataloguePrice: 24687,
     baseSellPrice: 9875,
@@ -1025,7 +1025,7 @@ export const clothing: Clothing[] = [
   {
     id: "bush_devil_hood",
     name: "Bush Devil Hood",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/ec/Inv_Bush_Devil_Hood.png",
+    img: "/images/clothing/Inv_Bush_Devil_Hood.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 9875,
@@ -1037,7 +1037,7 @@ export const clothing: Clothing[] = [
   {
     id: "business_pants",
     name: "Business Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/ba/Inv_Business_Pants.png",
+    img: "/images/clothing/Inv_Business_Pants.png",
     displayPrice: 2000,
     cataloguePrice: 2500,
     baseSellPrice: 1000,
@@ -1049,7 +1049,7 @@ export const clothing: Clothing[] = [
   {
     id: "business_shirt",
     name: "Business Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/ec/Inv_Business_Shirt.png",
+    img: "/images/clothing/Inv_Business_Shirt.png",
     displayPrice: 2000,
     cataloguePrice: 2500,
     baseSellPrice: 1000,
@@ -1061,7 +1061,7 @@ export const clothing: Clothing[] = [
   {
     id: "business_shoes",
     name: "Business Shoes",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/27/Inv_Business_Shoes.png",
+    img: "/images/clothing/Inv_Business_Shoes.png",
     displayPrice: 2000,
     cataloguePrice: 2500,
     baseSellPrice: 1000,
@@ -1073,7 +1073,7 @@ export const clothing: Clothing[] = [
   {
     id: "caito_shirt",
     name: "Caito Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c8/Inv_Caito_Shirt.png",
+    img: "/images/clothing/Inv_Caito_Shirt.png",
     displayPrice: 3240,
     cataloguePrice: 4050,
     baseSellPrice: 1620,
@@ -1085,7 +1085,7 @@ export const clothing: Clothing[] = [
   {
     id: "camo_boots",
     name: "Camo Boots",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8a/Inv_Camo_Boots.png",
+    img: "/images/clothing/Inv_Camo_Boots.png",
     displayPrice: 1310,
     cataloguePrice: 1637,
     baseSellPrice: 655,
@@ -1097,7 +1097,7 @@ export const clothing: Clothing[] = [
   {
     id: "camo_cap",
     name: "Camo Cap",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/50/Inv_Camo_Cap.png",
+    img: "/images/clothing/Inv_Camo_Cap.png",
     displayPrice: 3080,
     cataloguePrice: 3850,
     baseSellPrice: 1540,
@@ -1109,7 +1109,7 @@ export const clothing: Clothing[] = [
   {
     id: "camo_dress",
     name: "Camo Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/50/Inv_Camo_Dress.png",
+    img: "/images/clothing/Inv_Camo_Dress.png",
     displayPrice: 1330,
     cataloguePrice: 1662,
     baseSellPrice: 665,
@@ -1121,7 +1121,7 @@ export const clothing: Clothing[] = [
   {
     id: "camo_pants",
     name: "Camo Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f2/Inv_Camo_Pants.png",
+    img: "/images/clothing/Inv_Camo_Pants.png",
     displayPrice: 2600,
     cataloguePrice: 3250,
     baseSellPrice: 1300,
@@ -1133,7 +1133,7 @@ export const clothing: Clothing[] = [
   {
     id: "camo_shirt",
     name: "Camo Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/9d/Inv_Camo_Shirt.png",
+    img: "/images/clothing/Inv_Camo_Shirt.png",
     displayPrice: 2800,
     cataloguePrice: 3500,
     baseSellPrice: 1400,
@@ -1145,7 +1145,7 @@ export const clothing: Clothing[] = [
   {
     id: "candle_hat",
     name: "Candle hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/fc/Inv_Candle_hat.png",
+    img: "/images/clothing/Inv_Candle_hat.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 16000,
@@ -1157,7 +1157,7 @@ export const clothing: Clothing[] = [
   {
     id: "cape",
     name: "Cape",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d4/Inv_Cape.png",
+    img: "/images/clothing/Inv_Cape.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 1500,
@@ -1169,7 +1169,7 @@ export const clothing: Clothing[] = [
   {
     id: "cargo_pants",
     name: "Cargo Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/99/Inv_Cargo_Pants.png",
+    img: "/images/clothing/Inv_Cargo_Pants.png",
     displayPrice: 2414,
     cataloguePrice: 3017,
     baseSellPrice: 1207,
@@ -1181,7 +1181,7 @@ export const clothing: Clothing[] = [
   {
     id: "cat_hood",
     name: "Cat Hood",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f2/Inv_Cat_Hood.png",
+    img: "/images/clothing/Inv_Cat_Hood.png",
     displayPrice: 19750,
     cataloguePrice: 24687,
     baseSellPrice: 9875,
@@ -1193,7 +1193,7 @@ export const clothing: Clothing[] = [
   {
     id: "charcoal_tights",
     name: "Charcoal Tights",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/44/Inv_Charcoal_Tights.png",
+    img: "/images/clothing/Inv_Charcoal_Tights.png",
     displayPrice: 2000,
     cataloguePrice: 2500,
     baseSellPrice: 1000,
@@ -1205,7 +1205,7 @@ export const clothing: Clothing[] = [
   {
     id: "chef_hat",
     name: "Chef Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/32/Inv_Chef_Hat.png",
+    img: "/images/clothing/Inv_Chef_Hat.png",
     displayPrice: 6050,
     cataloguePrice: 7562,
     baseSellPrice: 3025,
@@ -1217,7 +1217,7 @@ export const clothing: Clothing[] = [
   {
     id: "chef_jacket",
     name: "Chef Jacket",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8e/Inv_Chef_Jacket.png",
+    img: "/images/clothing/Inv_Chef_Jacket.png",
     displayPrice: 8100,
     cataloguePrice: 10125,
     baseSellPrice: 4050,
@@ -1229,7 +1229,7 @@ export const clothing: Clothing[] = [
   {
     id: "chef_pants",
     name: "Chef Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/56/Inv_Chef_Pants.png",
+    img: "/images/clothing/Inv_Chef_Pants.png",
     displayPrice: 4800,
     cataloguePrice: 6000,
     baseSellPrice: 2400,
@@ -1241,7 +1241,7 @@ export const clothing: Clothing[] = [
   {
     id: "chequer_vest",
     name: "Chequer Vest",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/94/Inv_Chequer_Vest.png",
+    img: "/images/clothing/Inv_Chequer_Vest.png",
     displayPrice: 2000,
     cataloguePrice: 2500,
     baseSellPrice: 1000,
@@ -1253,7 +1253,7 @@ export const clothing: Clothing[] = [
   {
     id: "chicken_hood",
     name: "Chicken Hood",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/86/Inv_Chicken_Hood.png",
+    img: "/images/clothing/Inv_Chicken_Hood.png",
     displayPrice: 19750,
     cataloguePrice: 24687,
     baseSellPrice: 9875,
@@ -1265,7 +1265,7 @@ export const clothing: Clothing[] = [
   {
     id: "concierge_hat",
     name: "Concierge Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/33/Inv_Concierge_Hat.png",
+    img: "/images/clothing/Inv_Concierge_Hat.png",
     displayPrice: 25500,
     cataloguePrice: 31875,
     baseSellPrice: 12750,
@@ -1277,7 +1277,7 @@ export const clothing: Clothing[] = [
   {
     id: "concierge_jacket",
     name: "Concierge Jacket",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2d/Inv_Concierge_Jacket.png",
+    img: "/images/clothing/Inv_Concierge_Jacket.png",
     displayPrice: 10000,
     cataloguePrice: 12500,
     baseSellPrice: 5000,
@@ -1289,7 +1289,7 @@ export const clothing: Clothing[] = [
   {
     id: "cool_cap",
     name: "Cool Cap",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/23/Inv_Cool_Cap.png",
+    img: "/images/clothing/Inv_Cool_Cap.png",
     displayPrice: 2250,
     cataloguePrice: 2812,
     baseSellPrice: 1125,
@@ -1301,7 +1301,7 @@ export const clothing: Clothing[] = [
   {
     id: "cream_victorian_pants",
     name: "Cream Victorian Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/fc/Inv_Cream_Victorian_Pants.png",
+    img: "/images/clothing/Inv_Cream_Victorian_Pants.png",
     displayPrice: 1600,
     cataloguePrice: 2000,
     baseSellPrice: 800,
@@ -1313,7 +1313,7 @@ export const clothing: Clothing[] = [
   {
     id: "daisy_shorts",
     name: "Daisy Shorts",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1d/Inv_Daisy_Shorts.png",
+    img: "/images/clothing/Inv_Daisy_Shorts.png",
     displayPrice: 5000,
     cataloguePrice: 6250,
     baseSellPrice: 2500,
@@ -1325,7 +1325,7 @@ export const clothing: Clothing[] = [
   {
     id: "dark_blue_button_dress",
     name: "Dark Blue Button Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4b/Inv_Dark_Blue_Button_Dress.png",
+    img: "/images/clothing/Inv_Dark_Blue_Button_Dress.png",
     displayPrice: 1130,
     cataloguePrice: 1412,
     baseSellPrice: 565,
@@ -1337,7 +1337,7 @@ export const clothing: Clothing[] = [
   {
     id: "dark_detective_pants",
     name: "Dark Detective Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f3/Inv_Dark_Detective_Pants.png",
+    img: "/images/clothing/Inv_Dark_Detective_Pants.png",
     displayPrice: 4800,
     cataloguePrice: 6000,
     baseSellPrice: 2400,
@@ -1349,7 +1349,7 @@ export const clothing: Clothing[] = [
   {
     id: "dark_pi_hat",
     name: "Dark P.I Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1f/Inv_Dark_P.I_Hat.png",
+    img: "/images/clothing/Inv_Dark_P.I_Hat.png",
     displayPrice: 7400,
     cataloguePrice: 9250,
     baseSellPrice: 3700,
@@ -1361,7 +1361,7 @@ export const clothing: Clothing[] = [
   {
     id: "dark_shorts",
     name: "Dark Shorts",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4f/Inv_Dark_Shorts.png",
+    img: "/images/clothing/Inv_Dark_Shorts.png",
     displayPrice: 1080,
     cataloguePrice: 1350,
     baseSellPrice: 540,
@@ -1373,7 +1373,7 @@ export const clothing: Clothing[] = [
   {
     id: "dark_trench_coat",
     name: "Dark Trench Coat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/89/Inv_Dark_Trench_Coat.png",
+    img: "/images/clothing/Inv_Dark_Trench_Coat.png",
     displayPrice: 10240,
     cataloguePrice: 12800,
     baseSellPrice: 5120,
@@ -1385,7 +1385,7 @@ export const clothing: Clothing[] = [
   {
     id: "detective_pants",
     name: "Detective Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/aa/Inv_Detective_Pants.png",
+    img: "/images/clothing/Inv_Detective_Pants.png",
     displayPrice: 4800,
     cataloguePrice: 6000,
     baseSellPrice: 2400,
@@ -1397,7 +1397,7 @@ export const clothing: Clothing[] = [
   {
     id: "dinkum_cap",
     name: "Dinkum Cap",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/bc/Inv_Dinkum_Cap.png",
+    img: "/images/clothing/Inv_Dinkum_Cap.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 1500,
@@ -1409,7 +1409,7 @@ export const clothing: Clothing[] = [
   {
     id: "dinkum_shirt",
     name: "Dinkum Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/16/Inv_Dinkum_Shirt.png",
+    img: "/images/clothing/Inv_Dinkum_Shirt.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 1500,
@@ -1421,7 +1421,7 @@ export const clothing: Clothing[] = [
   {
     id: "diving_helmet",
     name: "Diving Helmet",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/72/Inv_Diving_Helmet.png",
+    img: "/images/clothing/Inv_Diving_Helmet.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 22750,
@@ -1433,7 +1433,7 @@ export const clothing: Clothing[] = [
   {
     id: "dog_hat",
     name: "Dog Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/89/Inv_Dog_Hat.png",
+    img: "/images/clothing/Inv_Dog_Hat.png",
     displayPrice: 8800,
     cataloguePrice: 11000,
     baseSellPrice: 4400,
@@ -1445,7 +1445,7 @@ export const clothing: Clothing[] = [
   {
     id: "duck_canyon_shirt",
     name: "Duck Canyon Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/09/Inv_Duck_Canyon_Shirt.png",
+    img: "/images/clothing/Inv_Duck_Canyon_Shirt.png",
     displayPrice: 3240,
     cataloguePrice: 4050,
     baseSellPrice: 1620,
@@ -1457,7 +1457,7 @@ export const clothing: Clothing[] = [
   {
     id: "elf_ears",
     name: "Elf Ears",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/de/Inv_Elf_Ears.png",
+    img: "/images/clothing/Inv_Elf_Ears.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 32850,
@@ -1469,7 +1469,7 @@ export const clothing: Clothing[] = [
   {
     id: "elf_hat",
     name: "Elf Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c1/Inv_Elf_Hat.png",
+    img: "/images/clothing/Inv_Elf_Hat.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 6020,
@@ -1481,7 +1481,7 @@ export const clothing: Clothing[] = [
   {
     id: "elf_pants",
     name: "Elf Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/ac/Inv_Elf_Pants.png",
+    img: "/images/clothing/Inv_Elf_Pants.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 8000,
@@ -1493,7 +1493,7 @@ export const clothing: Clothing[] = [
   {
     id: "elf_shirt",
     name: "Elf Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f7/Inv_Elf_Shirt.png",
+    img: "/images/clothing/Inv_Elf_Shirt.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 8000,
@@ -1505,7 +1505,7 @@ export const clothing: Clothing[] = [
   {
     id: "elf_shoes",
     name: "Elf Shoes",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/aa/Inv_Elf_Shoes.png",
+    img: "/images/clothing/Inv_Elf_Shoes.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 8000,
@@ -1517,7 +1517,7 @@ export const clothing: Clothing[] = [
   {
     id: "empty_miners_helmet",
     name: "Empty Miners Helmet",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/69/Inv_Empty_Miners_Helmet.png",
+    img: "/images/clothing/Inv_Empty_Miners_Helmet.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 5000,
@@ -1529,7 +1529,7 @@ export const clothing: Clothing[] = [
   {
     id: "eye_patch",
     name: "Eye Patch",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3d/Inv_Eye_Patch.png",
+    img: "/images/clothing/Inv_Eye_Patch.png",
     displayPrice: 2300,
     cataloguePrice: 2875,
     baseSellPrice: 1150,
@@ -1541,7 +1541,7 @@ export const clothing: Clothing[] = [
   {
     id: "face_bandana_black",
     name: "Face Bandana Black",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6a/Inv_Face_Bandana_Black.png",
+    img: "/images/clothing/Inv_Face_Bandana_Black.png",
     displayPrice: 5200,
     cataloguePrice: 6500,
     baseSellPrice: 2600,
@@ -1553,7 +1553,7 @@ export const clothing: Clothing[] = [
   {
     id: "face_bandana_blue",
     name: "Face Bandana Blue",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/14/Inv_Face_Bandana_Blue.png",
+    img: "/images/clothing/Inv_Face_Bandana_Blue.png",
     displayPrice: 5200,
     cataloguePrice: 6500,
     baseSellPrice: 2600,
@@ -1565,7 +1565,7 @@ export const clothing: Clothing[] = [
   {
     id: "face_bandana_green",
     name: "Face Bandana Green",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/67/Inv_Face_Bandana_Green.png",
+    img: "/images/clothing/Inv_Face_Bandana_Green.png",
     displayPrice: 5200,
     cataloguePrice: 6500,
     baseSellPrice: 2600,
@@ -1577,7 +1577,7 @@ export const clothing: Clothing[] = [
   {
     id: "face_bandana_orange",
     name: "Face Bandana Orange",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/20/Inv_Face_Bandana_Orange.png",
+    img: "/images/clothing/Inv_Face_Bandana_Orange.png",
     displayPrice: 5200,
     cataloguePrice: 6500,
     baseSellPrice: 2600,
@@ -1589,7 +1589,7 @@ export const clothing: Clothing[] = [
   {
     id: "face_bandana_red",
     name: "Face Bandana Red",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/21/Inv_Face_Bandana_Red.png",
+    img: "/images/clothing/Inv_Face_Bandana_Red.png",
     displayPrice: 5200,
     cataloguePrice: 6500,
     baseSellPrice: 2600,
@@ -1601,7 +1601,7 @@ export const clothing: Clothing[] = [
   {
     id: "fairest_dress",
     name: "Fairest Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/9e/Inv_Fairest_Dress.png",
+    img: "/images/clothing/Inv_Fairest_Dress.png",
     displayPrice: 2030,
     cataloguePrice: 2537,
     baseSellPrice: 1015,
@@ -1613,7 +1613,7 @@ export const clothing: Clothing[] = [
   {
     id: "fake_beard",
     name: "Fake Beard",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/54/Inv_Fake_Beard.png",
+    img: "/images/clothing/Inv_Fake_Beard.png",
     displayPrice: 4000,
     cataloguePrice: 5000,
     baseSellPrice: 2000,
@@ -1625,7 +1625,7 @@ export const clothing: Clothing[] = [
   {
     id: "fake_goatee",
     name: "Fake Goatee",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/28/Inv_Fake_Goatee.png",
+    img: "/images/clothing/Inv_Fake_Goatee.png",
     displayPrice: 4000,
     cataloguePrice: 5000,
     baseSellPrice: 2000,
@@ -1637,7 +1637,7 @@ export const clothing: Clothing[] = [
   {
     id: "fake_mustache",
     name: "Fake Mustache",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/05/Inv_Fake_Mustache.png",
+    img: "/images/clothing/Inv_Fake_Mustache.png",
     displayPrice: 2800,
     cataloguePrice: 3500,
     baseSellPrice: 1400,
@@ -1649,7 +1649,7 @@ export const clothing: Clothing[] = [
   {
     id: "feather_shirt",
     name: "Feather Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c1/Inv_Feather_Shirt.png",
+    img: "/images/clothing/Inv_Feather_Shirt.png",
     displayPrice: 1868,
     cataloguePrice: 2335,
     baseSellPrice: 934,
@@ -1661,7 +1661,7 @@ export const clothing: Clothing[] = [
   {
     id: "finch_hood",
     name: "Finch Hood",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2f/Inv_Finch_Hood.png",
+    img: "/images/clothing/Inv_Finch_Hood.png",
     displayPrice: 19750,
     cataloguePrice: 24687,
     baseSellPrice: 9875,
@@ -1673,7 +1673,7 @@ export const clothing: Clothing[] = [
   {
     id: "flame_jelly_hood",
     name: "Flame Jelly Hood",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f2/Inv_Flame_Jelly_Hood.png",
+    img: "/images/clothing/Inv_Flame_Jelly_Hood.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 6000,
@@ -1685,7 +1685,7 @@ export const clothing: Clothing[] = [
   {
     id: "flapper_hat",
     name: "Flapper Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/47/Inv_Flapper_Hat.png",
+    img: "/images/clothing/Inv_Flapper_Hat.png",
     displayPrice: 2250,
     cataloguePrice: 2812,
     baseSellPrice: 1125,
@@ -1697,7 +1697,7 @@ export const clothing: Clothing[] = [
   {
     id: "floppy_straw_hat",
     name: "Floppy Straw Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b9/Inv_Floppy_Straw_Hat.png",
+    img: "/images/clothing/Inv_Floppy_Straw_Hat.png",
     displayPrice: 3700,
     cataloguePrice: 4625,
     baseSellPrice: 1850,
@@ -1709,7 +1709,7 @@ export const clothing: Clothing[] = [
   {
     id: "flower_crown",
     name: "Flower Crown",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/78/Inv_Flower_Crown.png",
+    img: "/images/clothing/Inv_Flower_Crown.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 1000,
@@ -1721,7 +1721,7 @@ export const clothing: Clothing[] = [
   {
     id: "foil_hat",
     name: "Foil Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a8/Inv_Foil_Hat.png",
+    img: "/images/clothing/Inv_Foil_Hat.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 2500,
@@ -1733,7 +1733,7 @@ export const clothing: Clothing[] = [
   {
     id: "froggy_hood",
     name: "Froggy Hood",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/21/Inv_Froggy_Hood.png",
+    img: "/images/clothing/Inv_Froggy_Hood.png",
     displayPrice: 19750,
     cataloguePrice: 24687,
     baseSellPrice: 9875,
@@ -1745,7 +1745,7 @@ export const clothing: Clothing[] = [
   {
     id: "galaxy_hood",
     name: "Galaxy Hood",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/99/Inv_Galaxy_Hood.png",
+    img: "/images/clothing/Inv_Galaxy_Hood.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 1500,
@@ -1757,7 +1757,7 @@ export const clothing: Clothing[] = [
   {
     id: "gangsta_hat",
     name: "Gangsta Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/0f/Inv_Gangsta_Hat.png",
+    img: "/images/clothing/Inv_Gangsta_Hat.png",
     displayPrice: 3700,
     cataloguePrice: 4625,
     baseSellPrice: 1850,
@@ -1769,7 +1769,7 @@ export const clothing: Clothing[] = [
   {
     id: "gerse_shirt",
     name: "Gerse Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/73/Inv_Gerse_Shirt.png",
+    img: "/images/clothing/Inv_Gerse_Shirt.png",
     displayPrice: 3240,
     cataloguePrice: 4050,
     baseSellPrice: 1620,
@@ -1781,7 +1781,7 @@ export const clothing: Clothing[] = [
   {
     id: "ginger_shirt",
     name: "Ginger Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/fa/Inv_Ginger_Shirt.png",
+    img: "/images/clothing/Inv_Ginger_Shirt.png",
     displayPrice: 3240,
     cataloguePrice: 4050,
     baseSellPrice: 1620,
@@ -1793,7 +1793,7 @@ export const clothing: Clothing[] = [
   {
     id: "googly_eyes",
     name: "Googly Eyes",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/04/Inv_Googly_Eyes.png",
+    img: "/images/clothing/Inv_Googly_Eyes.png",
     displayPrice: 13530,
     cataloguePrice: 16912,
     baseSellPrice: 6765,
@@ -1805,7 +1805,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_bandana",
     name: "Green Bandana",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a6/Inv_Green_Bandana.png",
+    img: "/images/clothing/Inv_Green_Bandana.png",
     displayPrice: 1500,
     cataloguePrice: 1875,
     baseSellPrice: 750,
@@ -1817,7 +1817,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_baseball_cap",
     name: "Green Baseball Cap",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/9d/Inv_Green_Baseball_Cap.png",
+    img: "/images/clothing/Inv_Green_Baseball_Cap.png",
     displayPrice: 750,
     cataloguePrice: 937,
     baseSellPrice: 375,
@@ -1829,7 +1829,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_beanie",
     name: "Green Beanie",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d6/Inv_Green_Beanie.png",
+    img: "/images/clothing/Inv_Green_Beanie.png",
     displayPrice: 1650,
     cataloguePrice: 2062,
     baseSellPrice: 825,
@@ -1841,7 +1841,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_boots",
     name: "Green Boots",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/50/Inv_Green_Boots.png",
+    img: "/images/clothing/Inv_Green_Boots.png",
     displayPrice: 1500,
     cataloguePrice: 1875,
     baseSellPrice: 750,
@@ -1853,7 +1853,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_bow_hat",
     name: "Green Bow Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Inv_Green_Bow_Hat.png",
+    img: "/images/clothing/Inv_Green_Bow_Hat.png",
     displayPrice: 2250,
     cataloguePrice: 2812,
     baseSellPrice: 1125,
@@ -1865,7 +1865,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_capri_pants",
     name: "Green Capri Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2c/Inv_Green_Capri_Pants.png",
+    img: "/images/clothing/Inv_Green_Capri_Pants.png",
     displayPrice: 3000,
     cataloguePrice: 3750,
     baseSellPrice: 1500,
@@ -1877,7 +1877,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_cardigan_dress",
     name: "Green Cardigan Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/44/Inv_Green_Cardigan_Dress.png",
+    img: "/images/clothing/Inv_Green_Cardigan_Dress.png",
     displayPrice: 2450,
     cataloguePrice: 3062,
     baseSellPrice: 1225,
@@ -1889,7 +1889,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_comfy_shoes",
     name: "Green Comfy Shoes",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e1/Inv_Green_Comfy_Shoes.png",
+    img: "/images/clothing/Inv_Green_Comfy_Shoes.png",
     displayPrice: 2400,
     cataloguePrice: 3000,
     baseSellPrice: 1200,
@@ -1901,7 +1901,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_cuffed_pants",
     name: "Green Cuffed Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/bd/Inv_Green_Cuffed_Pants.png",
+    img: "/images/clothing/Inv_Green_Cuffed_Pants.png",
     displayPrice: 3014,
     cataloguePrice: 3767,
     baseSellPrice: 1507,
@@ -1913,7 +1913,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_festive_sweater",
     name: "Green Festive Sweater",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a7/Inv_Green_Festive_Sweater.png",
+    img: "/images/clothing/Inv_Green_Festive_Sweater.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 1153,
@@ -1925,7 +1925,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_flannelette_dress",
     name: "Green Flannelette Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/42/Inv_Green_Flannelette_Dress.png",
+    img: "/images/clothing/Inv_Green_Flannelette_Dress.png",
     displayPrice: 2360,
     cataloguePrice: 2950,
     baseSellPrice: 1180,
@@ -1937,7 +1937,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_flannelette_shirt",
     name: "Green Flannelette Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4e/Inv_Green_Flannelette_Shirt.png",
+    img: "/images/clothing/Inv_Green_Flannelette_Shirt.png",
     displayPrice: 2360,
     cataloguePrice: 2950,
     baseSellPrice: 1180,
@@ -1949,7 +1949,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_flat_cap",
     name: "Green Flat Cap",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/47/Inv_Green_Flat_Cap.png",
+    img: "/images/clothing/Inv_Green_Flat_Cap.png",
     displayPrice: 1050,
     cataloguePrice: 1312,
     baseSellPrice: 525,
@@ -1961,7 +1961,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_hair_bow",
     name: "Green Hair Bow",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/98/Inv_Green_Hair_Bow.png",
+    img: "/images/clothing/Inv_Green_Hair_Bow.png",
     displayPrice: 3000,
     cataloguePrice: 3750,
     baseSellPrice: 1500,
@@ -1973,7 +1973,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_holiday_shirt",
     name: "Green Holiday Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6f/Inv_Green_Holiday_Shirt.png",
+    img: "/images/clothing/Inv_Green_Holiday_Shirt.png",
     displayPrice: 1360,
     cataloguePrice: 1700,
     baseSellPrice: 680,
@@ -1985,7 +1985,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_holiday_shorts",
     name: "Green Holiday Shorts",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/5a/Inv_Green_Holiday_Shorts.png",
+    img: "/images/clothing/Inv_Green_Holiday_Shorts.png",
     displayPrice: 1330,
     cataloguePrice: 1662,
     baseSellPrice: 665,
@@ -1997,7 +1997,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_hoodie",
     name: "Green Hoodie",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2d/Inv_Green_Hoodie.png",
+    img: "/images/clothing/Inv_Green_Hoodie.png",
     displayPrice: 2306,
     cataloguePrice: 2882,
     baseSellPrice: 1153,
@@ -2009,7 +2009,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_jacket",
     name: "Green Jacket",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/71/Inv_Green_Jacket.png",
+    img: "/images/clothing/Inv_Green_Jacket.png",
     displayPrice: 5120,
     cataloguePrice: 6400,
     baseSellPrice: 2560,
@@ -2021,7 +2021,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_overall_dress",
     name: "Green Overall Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/47/Inv_Green_Overall_Dress.png",
+    img: "/images/clothing/Inv_Green_Overall_Dress.png",
     displayPrice: 2250,
     cataloguePrice: 2812,
     baseSellPrice: 1125,
@@ -2033,7 +2033,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_pants",
     name: "Green Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/16/Inv_Green_Pants.png",
+    img: "/images/clothing/Inv_Green_Pants.png",
     displayPrice: 2000,
     cataloguePrice: 2500,
     baseSellPrice: 1000,
@@ -2045,7 +2045,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_plaid_pants",
     name: "Green Plaid Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/bd/Inv_Green_Plaid_Pants.png",
+    img: "/images/clothing/Inv_Green_Plaid_Pants.png",
     displayPrice: 1600,
     cataloguePrice: 2000,
     baseSellPrice: 800,
@@ -2057,7 +2057,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_puffy_jacket",
     name: "Green Puffy Jacket",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Inv_Green_Puffy_Jacket.png",
+    img: "/images/clothing/Inv_Green_Puffy_Jacket.png",
     displayPrice: 3000,
     cataloguePrice: 3750,
     baseSellPrice: 1500,
@@ -2069,7 +2069,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_raglan_sleeve",
     name: "Green Raglan Sleeve",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4d/Inv_Green_Raglan_Sleeve.png",
+    img: "/images/clothing/Inv_Green_Raglan_Sleeve.png",
     displayPrice: 3200,
     cataloguePrice: 4000,
     baseSellPrice: 1600,
@@ -2081,7 +2081,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_renaissance_dress",
     name: "Green Renaissance Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/fe/Inv_Green_Renaissance_Dress.png",
+    img: "/images/clothing/Inv_Green_Renaissance_Dress.png",
     displayPrice: 3390,
     cataloguePrice: 4237,
     baseSellPrice: 1695,
@@ -2093,7 +2093,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_sand_shoes",
     name: "Green Sand Shoes",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e8/Inv_Green_Sand_Shoes.png",
+    img: "/images/clothing/Inv_Green_Sand_Shoes.png",
     displayPrice: 806,
     cataloguePrice: 1007,
     baseSellPrice: 403,
@@ -2105,7 +2105,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_shoes",
     name: "Green Shoes",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a4/Inv_Green_Shoes.png",
+    img: "/images/clothing/Inv_Green_Shoes.png",
     displayPrice: 800,
     cataloguePrice: 1000,
     baseSellPrice: 400,
@@ -2117,7 +2117,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_stripe_jumper",
     name: "Green Stripe Jumper",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/81/Inv_Green_Stripe_Jumper.png",
+    img: "/images/clothing/Inv_Green_Stripe_Jumper.png",
     displayPrice: 2306,
     cataloguePrice: 2882,
     baseSellPrice: 1153,
@@ -2129,7 +2129,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_summer_dress",
     name: "Green Summer Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/47/Inv_Green_Summer_Dress.png",
+    img: "/images/clothing/Inv_Green_Summer_Dress.png",
     displayPrice: 4320,
     cataloguePrice: 5400,
     baseSellPrice: 2160,
@@ -2141,7 +2141,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_sun_glasses",
     name: "Green Sun Glasses",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/37/Inv_Green_Sun_Glasses.png",
+    img: "/images/clothing/Inv_Green_Sun_Glasses.png",
     displayPrice: 2400,
     cataloguePrice: 3000,
     baseSellPrice: 1200,
@@ -2153,7 +2153,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_sweat_pants",
     name: "Green Sweat Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/12/Inv_Green_Sweat_Pants.png",
+    img: "/images/clothing/Inv_Green_Sweat_Pants.png",
     displayPrice: 1060,
     cataloguePrice: 1325,
     baseSellPrice: 530,
@@ -2165,7 +2165,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_sweater",
     name: "Green Sweater",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d5/Inv_Green_Sweater.png",
+    img: "/images/clothing/Inv_Green_Sweater.png",
     displayPrice: 2000,
     cataloguePrice: 2500,
     baseSellPrice: 1000,
@@ -2177,7 +2177,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_victorian_bonnet",
     name: "Green Victorian Bonnet",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2f/Inv_Green_Victorian_Bonnet.png",
+    img: "/images/clothing/Inv_Green_Victorian_Bonnet.png",
     displayPrice: 39500,
     cataloguePrice: 49375,
     baseSellPrice: 19750,
@@ -2189,7 +2189,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_victorian_dress",
     name: "Green Victorian Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4f/Inv_Green_Victorian_Dress.png",
+    img: "/images/clothing/Inv_Green_Victorian_Dress.png",
     displayPrice: 10170,
     cataloguePrice: 12712,
     baseSellPrice: 5085,
@@ -2201,7 +2201,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_victorian_jacket",
     name: "Green Victorian Jacket",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/55/Inv_Green_Victorian_Jacket.png",
+    img: "/images/clothing/Inv_Green_Victorian_Jacket.png",
     displayPrice: 12000,
     cataloguePrice: 15000,
     baseSellPrice: 6000,
@@ -2213,7 +2213,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_vintage_dress",
     name: "Green Vintage Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/5b/Inv_Green_Vintage_Dress.png",
+    img: "/images/clothing/Inv_Green_Vintage_Dress.png",
     displayPrice: 3390,
     cataloguePrice: 4237,
     baseSellPrice: 1695,
@@ -2225,7 +2225,7 @@ export const clothing: Clothing[] = [
   {
     id: "grey_scarf",
     name: "Grey Scarf",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/14/Inv_Grey_Scarf.png",
+    img: "/images/clothing/Inv_Grey_Scarf.png",
     displayPrice: 9000,
     cataloguePrice: 11250,
     baseSellPrice: 4500,
@@ -2237,7 +2237,7 @@ export const clothing: Clothing[] = [
   {
     id: "grey_tights",
     name: "Grey Tights",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b1/Inv_Grey_Tights.png",
+    img: "/images/clothing/Inv_Grey_Tights.png",
     displayPrice: 2000,
     cataloguePrice: 2500,
     baseSellPrice: 1000,
@@ -2249,7 +2249,7 @@ export const clothing: Clothing[] = [
   {
     id: "halo",
     name: "Halo",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Inv_Halo.png",
+    img: "/images/clothing/Inv_Halo.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 1000000,
@@ -2261,7 +2261,7 @@ export const clothing: Clothing[] = [
   {
     id: "hazmat_hood",
     name: "Hazmat Hood",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/52/Inv_Hazmat_Hood.png",
+    img: "/images/clothing/Inv_Hazmat_Hood.png",
     displayPrice: 39500,
     cataloguePrice: 49375,
     baseSellPrice: 19750,
@@ -2273,7 +2273,7 @@ export const clothing: Clothing[] = [
   {
     id: "hazmat_pants",
     name: "Hazmat Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/36/Inv_Hazmat_Pants.png",
+    img: "/images/clothing/Inv_Hazmat_Pants.png",
     displayPrice: 10000,
     cataloguePrice: 12500,
     baseSellPrice: 5000,
@@ -2285,7 +2285,7 @@ export const clothing: Clothing[] = [
   {
     id: "hazmat_shirt",
     name: "Hazmat Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/65/Inv_Hazmat_Shirt.png",
+    img: "/images/clothing/Inv_Hazmat_Shirt.png",
     displayPrice: 10000,
     cataloguePrice: 12500,
     baseSellPrice: 5000,
@@ -2297,7 +2297,7 @@ export const clothing: Clothing[] = [
   {
     id: "hazmat_shoes",
     name: "Hazmat Shoes",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/33/Inv_Hazmat_Shoes.png",
+    img: "/images/clothing/Inv_Hazmat_Shoes.png",
     displayPrice: 5000,
     cataloguePrice: 6250,
     baseSellPrice: 2500,
@@ -2309,7 +2309,7 @@ export const clothing: Clothing[] = [
   {
     id: "heart_sun_glasses",
     name: "Heart Sun Glasses",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/cc/Inv_Heart_Sun_Glasses.png",
+    img: "/images/clothing/Inv_Heart_Sun_Glasses.png",
     displayPrice: 2400,
     cataloguePrice: 3000,
     baseSellPrice: 1200,
@@ -2321,7 +2321,7 @@ export const clothing: Clothing[] = [
   {
     id: "helmet",
     name: "Helmet",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e0/Inv_Helmet.png",
+    img: "/images/clothing/Inv_Helmet.png",
     displayPrice: 45500,
     cataloguePrice: 56875,
     baseSellPrice: 22750,
@@ -2333,7 +2333,7 @@ export const clothing: Clothing[] = [
   {
     id: "hero_mask",
     name: "Hero Mask",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Hero_Mask.png",
+    img: "/images/clothing/Inv_Hero_Mask.png",
     displayPrice: 10800,
     cataloguePrice: 13500,
     baseSellPrice: 5400,
@@ -2345,7 +2345,7 @@ export const clothing: Clothing[] = [
   {
     id: "holiday_hat",
     name: "Holiday Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/97/Inv_Holiday_Hat.png",
+    img: "/images/clothing/Inv_Holiday_Hat.png",
     displayPrice: 1460,
     cataloguePrice: 1825,
     baseSellPrice: 730,
@@ -2357,7 +2357,7 @@ export const clothing: Clothing[] = [
   {
     id: "holly_wreath",
     name: "Holly Wreath",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1d/Inv_Holly_Wreath.png",
+    img: "/images/clothing/Inv_Holly_Wreath.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 3110,
@@ -2369,7 +2369,7 @@ export const clothing: Clothing[] = [
   {
     id: "horn_helmet",
     name: "Horn Helmet",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/68/Inv_Horn_Helmet.png",
+    img: "/images/clothing/Inv_Horn_Helmet.png",
     displayPrice: 36000,
     cataloguePrice: 45000,
     baseSellPrice: 18000,
@@ -2381,7 +2381,7 @@ export const clothing: Clothing[] = [
   {
     id: "jackaroo_hood",
     name: "Jackaroo Hood",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a6/Inv_Jackaroo_Hood.png",
+    img: "/images/clothing/Inv_Jackaroo_Hood.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 9875,
@@ -2393,7 +2393,7 @@ export const clothing: Clothing[] = [
   {
     id: "jb_shirt",
     name: "JB Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/88/Inv_JB_Shirt.png",
+    img: "/images/clothing/Inv_JB_Shirt.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 1500,
@@ -2405,7 +2405,7 @@ export const clothing: Clothing[] = [
   {
     id: "jolly_beard",
     name: "Jolly Beard",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/39/Inv_Jolly_Beard.png",
+    img: "/images/clothing/Inv_Jolly_Beard.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 657,
@@ -2417,7 +2417,7 @@ export const clothing: Clothing[] = [
   {
     id: "jolly_dress",
     name: "Jolly Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e2/Inv_Jolly_Dress.png",
+    img: "/images/clothing/Inv_Jolly_Dress.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 1695,
@@ -2429,7 +2429,7 @@ export const clothing: Clothing[] = [
   {
     id: "jolly_hat",
     name: "Jolly Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/ce/Inv_Jolly_Hat.png",
+    img: "/images/clothing/Inv_Jolly_Hat.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 3010,
@@ -2441,7 +2441,7 @@ export const clothing: Clothing[] = [
   {
     id: "jolly_pants",
     name: "Jolly Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a5/Inv_Jolly_Pants.png",
+    img: "/images/clothing/Inv_Jolly_Pants.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 1000,
@@ -2453,7 +2453,7 @@ export const clothing: Clothing[] = [
   {
     id: "jolly_shirt",
     name: "Jolly Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/27/Inv_Jolly_Shirt.png",
+    img: "/images/clothing/Inv_Jolly_Shirt.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 1000,
@@ -2465,7 +2465,7 @@ export const clothing: Clothing[] = [
   {
     id: "jolly_shoes",
     name: "Jolly Shoes",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/75/Inv_Jolly_Shoes.png",
+    img: "/images/clothing/Inv_Jolly_Shoes.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 400,
@@ -2477,7 +2477,7 @@ export const clothing: Clothing[] = [
   {
     id: "jurd_shirt",
     name: "Jurd Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c8/Inv_Jurd_Shirt.png",
+    img: "/images/clothing/Inv_Jurd_Shirt.png",
     displayPrice: 3240,
     cataloguePrice: 4050,
     baseSellPrice: 1620,
@@ -2489,7 +2489,7 @@ export const clothing: Clothing[] = [
   {
     id: "kanz_shirt",
     name: "Kanz Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3b/Inv_Kanz_Shirt.png",
+    img: "/images/clothing/Inv_Kanz_Shirt.png",
     displayPrice: 3240,
     cataloguePrice: 4050,
     baseSellPrice: 1620,
@@ -2501,7 +2501,7 @@ export const clothing: Clothing[] = [
   {
     id: "kd_shirt",
     name: "KD Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/5b/Inv_KD_Shirt.png",
+    img: "/images/clothing/Inv_KD_Shirt.png",
     displayPrice: 3240,
     cataloguePrice: 4050,
     baseSellPrice: 1620,
@@ -2513,7 +2513,7 @@ export const clothing: Clothing[] = [
   {
     id: "khaki_boots",
     name: "Khaki Boots",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/16/Inv_Khaki_Boots.png",
+    img: "/images/clothing/Inv_Khaki_Boots.png",
     displayPrice: 2000,
     cataloguePrice: 2500,
     baseSellPrice: 1000,
@@ -2525,7 +2525,7 @@ export const clothing: Clothing[] = [
   {
     id: "khaki_shirt",
     name: "Khaki Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/7c/Inv_Khaki_Shirt.png",
+    img: "/images/clothing/Inv_Khaki_Shirt.png",
     displayPrice: 2000,
     cataloguePrice: 2500,
     baseSellPrice: 1000,
@@ -2537,7 +2537,7 @@ export const clothing: Clothing[] = [
   {
     id: "khaki_shorts",
     name: "Khaki Shorts",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/dc/Inv_Khaki_Shorts.png",
+    img: "/images/clothing/Inv_Khaki_Shorts.png",
     displayPrice: 2000,
     cataloguePrice: 2500,
     baseSellPrice: 1000,
@@ -2549,7 +2549,7 @@ export const clothing: Clothing[] = [
   {
     id: "lab_coat",
     name: "Lab Coat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/bf/Inv_Lab_Coat.png",
+    img: "/images/clothing/Inv_Lab_Coat.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 500,
@@ -2561,7 +2561,7 @@ export const clothing: Clothing[] = [
   {
     id: "large_round_glasses",
     name: "Large Round Glasses",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6d/Inv_Large_Round_Glasses.png",
+    img: "/images/clothing/Inv_Large_Round_Glasses.png",
     displayPrice: 3200,
     cataloguePrice: 4000,
     baseSellPrice: 1600,
@@ -2573,7 +2573,7 @@ export const clothing: Clothing[] = [
   {
     id: "life_guard_hat",
     name: "Life Guard Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/9a/Inv_Life_Guard_Hat.png",
+    img: "/images/clothing/Inv_Life_Guard_Hat.png",
     displayPrice: 1460,
     cataloguePrice: 1825,
     baseSellPrice: 730,
@@ -2585,7 +2585,7 @@ export const clothing: Clothing[] = [
   {
     id: "life_guard_shirt",
     name: "Life Guard Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/7e/Inv_Life_Guard_Shirt.png",
+    img: "/images/clothing/Inv_Life_Guard_Shirt.png",
     displayPrice: 1360,
     cataloguePrice: 1700,
     baseSellPrice: 680,
@@ -2597,7 +2597,7 @@ export const clothing: Clothing[] = [
   {
     id: "life_guard_shorts",
     name: "Life Guard Shorts",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1a/Inv_Life_Guard_Shorts.png",
+    img: "/images/clothing/Inv_Life_Guard_Shorts.png",
     displayPrice: 1330,
     cataloguePrice: 1662,
     baseSellPrice: 665,
@@ -2609,7 +2609,7 @@ export const clothing: Clothing[] = [
   {
     id: "lil_top_hat",
     name: "Lil' Top Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/61/Inv_Lil%27_Top_Hat.png",
+    img: "/images/clothing/Inv_Lil%27_Top_Hat.png",
     displayPrice: 62000,
     cataloguePrice: 77500,
     baseSellPrice: 31000,
@@ -2621,7 +2621,7 @@ export const clothing: Clothing[] = [
   {
     id: "lime_sneakers",
     name: "Lime Sneakers",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3f/Inv_Lime_Sneakers.png",
+    img: "/images/clothing/Inv_Lime_Sneakers.png",
     displayPrice: 3600,
     cataloguePrice: 4500,
     baseSellPrice: 1800,
@@ -2633,7 +2633,7 @@ export const clothing: Clothing[] = [
   {
     id: "long_shoes",
     name: "Long Shoes",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/7a/Inv_Long_Shoes.png",
+    img: "/images/clothing/Inv_Long_Shoes.png",
     displayPrice: 3600,
     cataloguePrice: 4500,
     baseSellPrice: 1800,
@@ -2645,7 +2645,7 @@ export const clothing: Clothing[] = [
   {
     id: "maroon_pants",
     name: "Maroon Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/0e/Inv_Maroon_Pants.png",
+    img: "/images/clothing/Inv_Maroon_Pants.png",
     displayPrice: 2000,
     cataloguePrice: 2500,
     baseSellPrice: 1000,
@@ -2657,7 +2657,7 @@ export const clothing: Clothing[] = [
   {
     id: "mascot_head",
     name: "Mascot Head",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/80/Inv_Mascot_Head.png",
+    img: "/images/clothing/Inv_Mascot_Head.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 2000000,
@@ -2669,7 +2669,7 @@ export const clothing: Clothing[] = [
   {
     id: "mascot_legs",
     name: "Mascot Legs",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d9/Inv_Mascot_Legs.png",
+    img: "/images/clothing/Inv_Mascot_Legs.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 2000000,
@@ -2681,7 +2681,7 @@ export const clothing: Clothing[] = [
   {
     id: "mascot_torso",
     name: "Mascot Torso",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2f/Inv_Mascot_Torso.png",
+    img: "/images/clothing/Inv_Mascot_Torso.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 2000000,
@@ -2693,7 +2693,7 @@ export const clothing: Clothing[] = [
   {
     id: "medieval_boots",
     name: "Medieval Boots",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f6/Inv_Medieval_Boots.png",
+    img: "/images/clothing/Inv_Medieval_Boots.png",
     displayPrice: 28800,
     cataloguePrice: 36000,
     baseSellPrice: 14400,
@@ -2705,7 +2705,7 @@ export const clothing: Clothing[] = [
   {
     id: "medieval_breastplate",
     name: "Medieval Breastplate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/06/Inv_Medieval_Breastplate.png",
+    img: "/images/clothing/Inv_Medieval_Breastplate.png",
     displayPrice: 36000,
     cataloguePrice: 45000,
     baseSellPrice: 18000,
@@ -2717,7 +2717,7 @@ export const clothing: Clothing[] = [
   {
     id: "medieval_helmet",
     name: "Medieval Helmet",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/fa/Inv_Medieval_Helmet.png",
+    img: "/images/clothing/Inv_Medieval_Helmet.png",
     displayPrice: 32000,
     cataloguePrice: 40000,
     baseSellPrice: 16000,
@@ -2729,7 +2729,7 @@ export const clothing: Clothing[] = [
   {
     id: "medieval_leggings",
     name: "Medieval Leggings",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/5e/Inv_Medieval_Leggings.png",
+    img: "/images/clothing/Inv_Medieval_Leggings.png",
     displayPrice: 30400,
     cataloguePrice: 38000,
     baseSellPrice: 15200,
@@ -2741,7 +2741,7 @@ export const clothing: Clothing[] = [
   {
     id: "miners_helmet",
     name: "Miners Helmet",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/64/Inv_Miners_Helmet.png",
+    img: "/images/clothing/Inv_Miners_Helmet.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 5000,
@@ -2753,7 +2753,7 @@ export const clothing: Clothing[] = [
   {
     id: "modern_glasses",
     name: "Modern Glasses",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b4/Inv_Modern_Glasses.png",
+    img: "/images/clothing/Inv_Modern_Glasses.png",
     displayPrice: 5500,
     cataloguePrice: 6875,
     baseSellPrice: 2750,
@@ -2765,7 +2765,7 @@ export const clothing: Clothing[] = [
   {
     id: "modern_sunglasses",
     name: "Modern Sunglasses",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/59/Inv_Modern_Sunglasses.png",
+    img: "/images/clothing/Inv_Modern_Sunglasses.png",
     displayPrice: 4150,
     cataloguePrice: 5187,
     baseSellPrice: 2075,
@@ -2777,7 +2777,7 @@ export const clothing: Clothing[] = [
   {
     id: "monocle",
     name: "Monocle",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6b/Inv_Monocle.png",
+    img: "/images/clothing/Inv_Monocle.png",
     displayPrice: 4800,
     cataloguePrice: 6000,
     baseSellPrice: 2400,
@@ -2789,7 +2789,7 @@ export const clothing: Clothing[] = [
   {
     id: "moxie_shirt",
     name: "Moxie Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/0d/Inv_Moxie_Shirt.png",
+    img: "/images/clothing/Inv_Moxie_Shirt.png",
     displayPrice: 3240,
     cataloguePrice: 4050,
     baseSellPrice: 1620,
@@ -2801,7 +2801,7 @@ export const clothing: Clothing[] = [
   {
     id: "mummy_boots",
     name: "Mummy Boots",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b5/Inv_Mummy_Boots.png",
+    img: "/images/clothing/Inv_Mummy_Boots.png",
     displayPrice: 3600,
     cataloguePrice: 4500,
     baseSellPrice: 1800,
@@ -2813,7 +2813,7 @@ export const clothing: Clothing[] = [
   {
     id: "mummy_hood",
     name: "Mummy Hood",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/eb/Inv_Mummy_Hood.png",
+    img: "/images/clothing/Inv_Mummy_Hood.png",
     displayPrice: 25500,
     cataloguePrice: 31875,
     baseSellPrice: 12750,
@@ -2825,7 +2825,7 @@ export const clothing: Clothing[] = [
   {
     id: "mummy_pants",
     name: "Mummy Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/66/Inv_Mummy_Pants.png",
+    img: "/images/clothing/Inv_Mummy_Pants.png",
     displayPrice: 6000,
     cataloguePrice: 7500,
     baseSellPrice: 3000,
@@ -2837,7 +2837,7 @@ export const clothing: Clothing[] = [
   {
     id: "mummy_shirt",
     name: "Mummy Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3d/Inv_Mummy_Shirt.png",
+    img: "/images/clothing/Inv_Mummy_Shirt.png",
     displayPrice: 6000,
     cataloguePrice: 7500,
     baseSellPrice: 3000,
@@ -2849,7 +2849,7 @@ export const clothing: Clothing[] = [
   {
     id: "mustard_coat",
     name: "Mustard Coat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/47/Inv_Mustard_Coat.png",
+    img: "/images/clothing/Inv_Mustard_Coat.png",
     displayPrice: 5120,
     cataloguePrice: 6400,
     baseSellPrice: 2560,
@@ -2861,7 +2861,7 @@ export const clothing: Clothing[] = [
   {
     id: "ninja_boots",
     name: "Ninja Boots",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/0f/Inv_Ninja_Boots.png",
+    img: "/images/clothing/Inv_Ninja_Boots.png",
     displayPrice: 3600,
     cataloguePrice: 4500,
     baseSellPrice: 1800,
@@ -2873,7 +2873,7 @@ export const clothing: Clothing[] = [
   {
     id: "ninja_hood",
     name: "Ninja Hood",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/09/Inv_Ninja_Hood.png",
+    img: "/images/clothing/Inv_Ninja_Hood.png",
     displayPrice: 25500,
     cataloguePrice: 31875,
     baseSellPrice: 12750,
@@ -2885,7 +2885,7 @@ export const clothing: Clothing[] = [
   {
     id: "ninja_pants",
     name: "Ninja Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/0b/Inv_Ninja_Pants.png",
+    img: "/images/clothing/Inv_Ninja_Pants.png",
     displayPrice: 6000,
     cataloguePrice: 7500,
     baseSellPrice: 3000,
@@ -2897,7 +2897,7 @@ export const clothing: Clothing[] = [
   {
     id: "ninja_shirt",
     name: "Ninja Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/50/Inv_Ninja_Shirt.png",
+    img: "/images/clothing/Inv_Ninja_Shirt.png",
     displayPrice: 6000,
     cataloguePrice: 7500,
     baseSellPrice: 3000,
@@ -2909,7 +2909,7 @@ export const clothing: Clothing[] = [
   {
     id: "old_school_glasses",
     name: "Old School Glasses",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c8/Inv_Old_School_Glasses.png",
+    img: "/images/clothing/Inv_Old_School_Glasses.png",
     displayPrice: 2400,
     cataloguePrice: 3000,
     baseSellPrice: 1200,
@@ -2921,7 +2921,7 @@ export const clothing: Clothing[] = [
   {
     id: "old_straw_hat",
     name: "Old Straw Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c1/Inv_Old_Straw_Hat.png",
+    img: "/images/clothing/Inv_Old_Straw_Hat.png",
     displayPrice: 500,
     cataloguePrice: 625,
     baseSellPrice: 250,
@@ -2933,7 +2933,7 @@ export const clothing: Clothing[] = [
   {
     id: "orange_and_grey_jumper",
     name: "Orange And Grey Jumper",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e9/Inv_Orange_And_Grey_Jumper.png",
+    img: "/images/clothing/Inv_Orange_And_Grey_Jumper.png",
     displayPrice: 2306,
     cataloguePrice: 2882,
     baseSellPrice: 1153,
@@ -2945,7 +2945,7 @@ export const clothing: Clothing[] = [
   {
     id: "orange_bandana",
     name: "Orange Bandana",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/53/Inv_Orange_Bandana.png",
+    img: "/images/clothing/Inv_Orange_Bandana.png",
     displayPrice: 1500,
     cataloguePrice: 1875,
     baseSellPrice: 750,
@@ -2957,7 +2957,7 @@ export const clothing: Clothing[] = [
   {
     id: "orange_capri_pants",
     name: "Orange Capri Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/91/Inv_Orange_Capri_Pants.png",
+    img: "/images/clothing/Inv_Orange_Capri_Pants.png",
     displayPrice: 0,
     cataloguePrice: 0,
     baseSellPrice: 0,
@@ -2969,7 +2969,7 @@ export const clothing: Clothing[] = [
   {
     id: "orange_cargo_pants",
     name: "Orange Cargo Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4d/Inv_Orange_Cargo_Pants.png",
+    img: "/images/clothing/Inv_Orange_Cargo_Pants.png",
     displayPrice: 3014,
     cataloguePrice: 3767,
     baseSellPrice: 1507,
@@ -2981,7 +2981,7 @@ export const clothing: Clothing[] = [
   {
     id: "orange_comfy_shoes",
     name: "Orange Comfy Shoes",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c4/Inv_Orange_Comfy_Shoes.png",
+    img: "/images/clothing/Inv_Orange_Comfy_Shoes.png",
     displayPrice: 2400,
     cataloguePrice: 3000,
     baseSellPrice: 1200,
@@ -2993,7 +2993,7 @@ export const clothing: Clothing[] = [
   {
     id: "orange_dino_shirt",
     name: "Orange Dino Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b8/Inv_Orange_Dino_Shirt.png",
+    img: "/images/clothing/Inv_Orange_Dino_Shirt.png",
     displayPrice: 1968,
     cataloguePrice: 2460,
     baseSellPrice: 984,
@@ -3005,7 +3005,7 @@ export const clothing: Clothing[] = [
   {
     id: "orange_flanney_dress",
     name: "Orange Flanney Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/59/Inv_Orange_Flanney_Dress.png",
+    img: "/images/clothing/Inv_Orange_Flanney_Dress.png",
     displayPrice: 2360,
     cataloguePrice: 2950,
     baseSellPrice: 1180,
@@ -3017,7 +3017,7 @@ export const clothing: Clothing[] = [
   {
     id: "orange_flanney_shirt",
     name: "Orange Flanney Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6a/Inv_Orange_Flanney_Shirt.png",
+    img: "/images/clothing/Inv_Orange_Flanney_Shirt.png",
     displayPrice: 2360,
     cataloguePrice: 2950,
     baseSellPrice: 1180,
@@ -3029,7 +3029,7 @@ export const clothing: Clothing[] = [
   {
     id: "orange_flat_cap",
     name: "Orange Flat Cap",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4d/Inv_Orange_Flat_Cap.png",
+    img: "/images/clothing/Inv_Orange_Flat_Cap.png",
     displayPrice: 1050,
     cataloguePrice: 1312,
     baseSellPrice: 525,
@@ -3041,7 +3041,7 @@ export const clothing: Clothing[] = [
   {
     id: "orange_holiday_shirt",
     name: "Orange Holiday Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/89/Inv_Orange_Holiday_Shirt.png",
+    img: "/images/clothing/Inv_Orange_Holiday_Shirt.png",
     displayPrice: 1360,
     cataloguePrice: 1700,
     baseSellPrice: 680,
@@ -3053,7 +3053,7 @@ export const clothing: Clothing[] = [
   {
     id: "orange_holiday_shorts",
     name: "Orange Holiday Shorts",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c1/Inv_Orange_Holiday_Shorts.png",
+    img: "/images/clothing/Inv_Orange_Holiday_Shorts.png",
     displayPrice: 1330,
     cataloguePrice: 1662,
     baseSellPrice: 665,
@@ -3065,7 +3065,7 @@ export const clothing: Clothing[] = [
   {
     id: "orange_hoodie",
     name: "Orange Hoodie",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/36/Inv_Orange_Hoodie.png",
+    img: "/images/clothing/Inv_Orange_Hoodie.png",
     displayPrice: 2306,
     cataloguePrice: 2882,
     baseSellPrice: 1153,
@@ -3077,7 +3077,7 @@ export const clothing: Clothing[] = [
   {
     id: "orange_pants",
     name: "Orange Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/ea/Inv_Orange_Pants.png",
+    img: "/images/clothing/Inv_Orange_Pants.png",
     displayPrice: 3200,
     cataloguePrice: 4000,
     baseSellPrice: 1600,
@@ -3089,7 +3089,7 @@ export const clothing: Clothing[] = [
   {
     id: "orange_plaid_pants",
     name: "Orange Plaid Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8f/Inv_Orange_Plaid_Pants.png",
+    img: "/images/clothing/Inv_Orange_Plaid_Pants.png",
     displayPrice: 1600,
     cataloguePrice: 2000,
     baseSellPrice: 800,
@@ -3101,7 +3101,7 @@ export const clothing: Clothing[] = [
   {
     id: "orange_raglan_sleeve",
     name: "Orange Raglan Sleeve",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/ee/Inv_Orange_Raglan_Sleeve.png",
+    img: "/images/clothing/Inv_Orange_Raglan_Sleeve.png",
     displayPrice: 0,
     cataloguePrice: 0,
     baseSellPrice: 0,
@@ -3113,7 +3113,7 @@ export const clothing: Clothing[] = [
   {
     id: "orange_sand_shoes",
     name: "Orange Sand Shoes",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/11/Inv_Orange_Sand_Shoes.png",
+    img: "/images/clothing/Inv_Orange_Sand_Shoes.png",
     displayPrice: 814,
     cataloguePrice: 1017,
     baseSellPrice: 407,
@@ -3125,7 +3125,7 @@ export const clothing: Clothing[] = [
   {
     id: "orange_shorts",
     name: "Orange Shorts",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f4/Inv_Orange_Shorts.png",
+    img: "/images/clothing/Inv_Orange_Shorts.png",
     displayPrice: 1950,
     cataloguePrice: 2437,
     baseSellPrice: 975,
@@ -3137,7 +3137,7 @@ export const clothing: Clothing[] = [
   {
     id: "orange_sneakers",
     name: "Orange Sneakers",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Inv_Orange_Sneakers.png",
+    img: "/images/clothing/Inv_Orange_Sneakers.png",
     displayPrice: 3600,
     cataloguePrice: 4500,
     baseSellPrice: 1800,
@@ -3149,7 +3149,7 @@ export const clothing: Clothing[] = [
   {
     id: "orange_stripe_dress",
     name: "Orange Stripe Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/37/Inv_Orange_Stripe_Dress.png",
+    img: "/images/clothing/Inv_Orange_Stripe_Dress.png",
     displayPrice: 1530,
     cataloguePrice: 1912,
     baseSellPrice: 765,
@@ -3161,7 +3161,7 @@ export const clothing: Clothing[] = [
   {
     id: "orange_stripe_shirt",
     name: "Orange Stripe Shirt.",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/42/Inv_Orange_Stripe_Shirt..png",
+    img: "/images/clothing/Inv_Orange_Stripe_Shirt..png",
     displayPrice: 2800,
     cataloguePrice: 3500,
     baseSellPrice: 1400,
@@ -3173,7 +3173,7 @@ export const clothing: Clothing[] = [
   {
     id: "orange_sun_glasses",
     name: "Orange Sun Glasses",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/05/Inv_Orange_Sun_Glasses.png",
+    img: "/images/clothing/Inv_Orange_Sun_Glasses.png",
     displayPrice: 2400,
     cataloguePrice: 3000,
     baseSellPrice: 1200,
@@ -3185,7 +3185,7 @@ export const clothing: Clothing[] = [
   {
     id: "orange_sweat_pants",
     name: "Orange Sweat Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f7/Inv_Orange_Sweat_Pants.png",
+    img: "/images/clothing/Inv_Orange_Sweat_Pants.png",
     displayPrice: 1060,
     cataloguePrice: 1325,
     baseSellPrice: 530,
@@ -3197,7 +3197,7 @@ export const clothing: Clothing[] = [
   {
     id: "orange_tshirt",
     name: "Orange T-Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/62/Inv_Orange_T-Shirt.png",
+    img: "/images/clothing/Inv_Orange_T-Shirt.png",
     displayPrice: 2020,
     cataloguePrice: 2525,
     baseSellPrice: 1010,
@@ -3209,7 +3209,7 @@ export const clothing: Clothing[] = [
   {
     id: "overall_dress",
     name: "Overall Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/36/Inv_Overall_Dress.png",
+    img: "/images/clothing/Inv_Overall_Dress.png",
     displayPrice: 3160,
     cataloguePrice: 3950,
     baseSellPrice: 1580,
@@ -3221,7 +3221,7 @@ export const clothing: Clothing[] = [
   {
     id: "pi_hat",
     name: "P.I Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/fb/Inv_P.I_Hat.png",
+    img: "/images/clothing/Inv_P.I_Hat.png",
     displayPrice: 7400,
     cataloguePrice: 9250,
     baseSellPrice: 3700,
@@ -3233,7 +3233,7 @@ export const clothing: Clothing[] = [
   {
     id: "pajama_pants",
     name: "Pajama Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/66/Inv_Pajama_Pants.png",
+    img: "/images/clothing/Inv_Pajama_Pants.png",
     displayPrice: 1600,
     cataloguePrice: 2000,
     baseSellPrice: 800,
@@ -3245,7 +3245,7 @@ export const clothing: Clothing[] = [
   {
     id: "pajama_shirt",
     name: "Pajama Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a8/Inv_Pajama_Shirt.png",
+    img: "/images/clothing/Inv_Pajama_Shirt.png",
     displayPrice: 2360,
     cataloguePrice: 2950,
     baseSellPrice: 1180,
@@ -3257,7 +3257,7 @@ export const clothing: Clothing[] = [
   {
     id: "panda_hood",
     name: "Panda Hood",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1f/Inv_Panda_Hood.png",
+    img: "/images/clothing/Inv_Panda_Hood.png",
     displayPrice: 19750,
     cataloguePrice: 24687,
     baseSellPrice: 9875,
@@ -3269,7 +3269,7 @@ export const clothing: Clothing[] = [
   {
     id: "paper_bag_hat",
     name: "Paper Bag Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a4/Inv_Paper_Bag_Hat.png",
+    img: "/images/clothing/Inv_Paper_Bag_Hat.png",
     displayPrice: 19750,
     cataloguePrice: 24687,
     baseSellPrice: 9875,
@@ -3281,7 +3281,7 @@ export const clothing: Clothing[] = [
   {
     id: "party_hat",
     name: "Party Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e4/Inv_Party_Hat.png",
+    img: "/images/clothing/Inv_Party_Hat.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 500,
@@ -3293,7 +3293,7 @@ export const clothing: Clothing[] = [
   {
     id: "patterned_scarf",
     name: "Patterned Scarf",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6c/Inv_Patterned_Scarf.png",
+    img: "/images/clothing/Inv_Patterned_Scarf.png",
     displayPrice: 9000,
     cataloguePrice: 11250,
     baseSellPrice: 4500,
@@ -3305,7 +3305,7 @@ export const clothing: Clothing[] = [
   {
     id: "penguin_hood",
     name: "Penguin Hood",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/86/Inv_Penguin_Hood.png",
+    img: "/images/clothing/Inv_Penguin_Hood.png",
     displayPrice: 19750,
     cataloguePrice: 24687,
     baseSellPrice: 9875,
@@ -3317,7 +3317,7 @@ export const clothing: Clothing[] = [
   {
     id: "pilot_boots",
     name: "Pilot Boots",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c3/Inv_Pilot_Boots.png",
+    img: "/images/clothing/Inv_Pilot_Boots.png",
     displayPrice: 3600,
     cataloguePrice: 4500,
     baseSellPrice: 1800,
@@ -3329,7 +3329,7 @@ export const clothing: Clothing[] = [
   {
     id: "pilot_goggles",
     name: "Pilot Goggles",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/03/Inv_Pilot_Goggles.png",
+    img: "/images/clothing/Inv_Pilot_Goggles.png",
     displayPrice: 3810,
     cataloguePrice: 4762,
     baseSellPrice: 1905,
@@ -3341,7 +3341,7 @@ export const clothing: Clothing[] = [
   {
     id: "pilot_hat",
     name: "Pilot Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/65/Inv_Pilot_Hat.png",
+    img: "/images/clothing/Inv_Pilot_Hat.png",
     displayPrice: 25500,
     cataloguePrice: 31875,
     baseSellPrice: 12750,
@@ -3353,7 +3353,7 @@ export const clothing: Clothing[] = [
   {
     id: "pilot_pants",
     name: "Pilot Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/20/Inv_Pilot_Pants.png",
+    img: "/images/clothing/Inv_Pilot_Pants.png",
     displayPrice: 6000,
     cataloguePrice: 7500,
     baseSellPrice: 3000,
@@ -3365,7 +3365,7 @@ export const clothing: Clothing[] = [
   {
     id: "pilot_shirt",
     name: "Pilot Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8c/Inv_Pilot_Shirt.png",
+    img: "/images/clothing/Inv_Pilot_Shirt.png",
     displayPrice: 6000,
     cataloguePrice: 7500,
     baseSellPrice: 3000,
@@ -3377,7 +3377,7 @@ export const clothing: Clothing[] = [
   {
     id: "pincher_hood",
     name: "Pincher Hood",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/69/Inv_Pincher_Hood.png",
+    img: "/images/clothing/Inv_Pincher_Hood.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 9875,
@@ -3389,7 +3389,7 @@ export const clothing: Clothing[] = [
   {
     id: "pink_baseball_cap",
     name: "Pink Baseball Cap",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/26/Inv_Pink_Baseball_Cap.png",
+    img: "/images/clothing/Inv_Pink_Baseball_Cap.png",
     displayPrice: 3080,
     cataloguePrice: 3850,
     baseSellPrice: 1540,
@@ -3401,7 +3401,7 @@ export const clothing: Clothing[] = [
   {
     id: "pink_capri_pants",
     name: "Pink Capri Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/48/Inv_Pink_Capri_Pants.png",
+    img: "/images/clothing/Inv_Pink_Capri_Pants.png",
     displayPrice: 0,
     cataloguePrice: 0,
     baseSellPrice: 0,
@@ -3413,7 +3413,7 @@ export const clothing: Clothing[] = [
   {
     id: "pink_cardigan_dress",
     name: "Pink Cardigan Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/96/Inv_Pink_Cardigan_Dress.png",
+    img: "/images/clothing/Inv_Pink_Cardigan_Dress.png",
     displayPrice: 2450,
     cataloguePrice: 3062,
     baseSellPrice: 1225,
@@ -3425,7 +3425,7 @@ export const clothing: Clothing[] = [
   {
     id: "pink_comfy_shoes",
     name: "Pink Comfy Shoes",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/06/Inv_Pink_Comfy_Shoes.png",
+    img: "/images/clothing/Inv_Pink_Comfy_Shoes.png",
     displayPrice: 2400,
     cataloguePrice: 3000,
     baseSellPrice: 1200,
@@ -3437,7 +3437,7 @@ export const clothing: Clothing[] = [
   {
     id: "pink_gown",
     name: "Pink Gown",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4b/Inv_Pink_Gown.png",
+    img: "/images/clothing/Inv_Pink_Gown.png",
     displayPrice: 6000,
     cataloguePrice: 7500,
     baseSellPrice: 3000,
@@ -3449,7 +3449,7 @@ export const clothing: Clothing[] = [
   {
     id: "pink_hair_bow",
     name: "Pink Hair Bow",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/83/Inv_Pink_Hair_Bow.png",
+    img: "/images/clothing/Inv_Pink_Hair_Bow.png",
     displayPrice: 3000,
     cataloguePrice: 3750,
     baseSellPrice: 1500,
@@ -3461,7 +3461,7 @@ export const clothing: Clothing[] = [
   {
     id: "pink_holiday_shirt",
     name: "Pink Holiday Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/32/Inv_Pink_Holiday_Shirt.png",
+    img: "/images/clothing/Inv_Pink_Holiday_Shirt.png",
     displayPrice: 1360,
     cataloguePrice: 1700,
     baseSellPrice: 680,
@@ -3473,7 +3473,7 @@ export const clothing: Clothing[] = [
   {
     id: "pink_holiday_shorts",
     name: "Pink Holiday Shorts",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/64/Inv_Pink_Holiday_Shorts.png",
+    img: "/images/clothing/Inv_Pink_Holiday_Shorts.png",
     displayPrice: 1330,
     cataloguePrice: 1662,
     baseSellPrice: 665,
@@ -3485,7 +3485,7 @@ export const clothing: Clothing[] = [
   {
     id: "pink_hoodie",
     name: "Pink Hoodie",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/be/Inv_Pink_Hoodie.png",
+    img: "/images/clothing/Inv_Pink_Hoodie.png",
     displayPrice: 2306,
     cataloguePrice: 2882,
     baseSellPrice: 1153,
@@ -3497,7 +3497,7 @@ export const clothing: Clothing[] = [
   {
     id: "pink_polka_dot_dress",
     name: "Pink Polka Dot Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/68/Inv_Pink_Polka_Dot_Dress.png",
+    img: "/images/clothing/Inv_Pink_Polka_Dot_Dress.png",
     displayPrice: 1330,
     cataloguePrice: 1662,
     baseSellPrice: 665,
@@ -3509,7 +3509,7 @@ export const clothing: Clothing[] = [
   {
     id: "pink_polka_dot_pants",
     name: "Pink Polka Dot Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/af/Inv_Pink_Polka_Dot_Pants.png",
+    img: "/images/clothing/Inv_Pink_Polka_Dot_Pants.png",
     displayPrice: 2000,
     cataloguePrice: 2500,
     baseSellPrice: 1000,
@@ -3521,7 +3521,7 @@ export const clothing: Clothing[] = [
   {
     id: "pink_polka_dot_shirt",
     name: "Pink Polka Dot Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/95/Inv_Pink_Polka_Dot_Shirt.png",
+    img: "/images/clothing/Inv_Pink_Polka_Dot_Shirt.png",
     displayPrice: 2000,
     cataloguePrice: 2500,
     baseSellPrice: 1000,
@@ -3533,7 +3533,7 @@ export const clothing: Clothing[] = [
   {
     id: "pink_polka_dot_shoes",
     name: "Pink Polka dot Shoes",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e8/Inv_Pink_Polka_dot_Shoes.png",
+    img: "/images/clothing/Inv_Pink_Polka_dot_Shoes.png",
     displayPrice: 1200,
     cataloguePrice: 1500,
     baseSellPrice: 600,
@@ -3545,7 +3545,7 @@ export const clothing: Clothing[] = [
   {
     id: "pink_raglan_sleeve",
     name: "Pink Raglan Sleeve",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/23/Inv_Pink_Raglan_Sleeve.png",
+    img: "/images/clothing/Inv_Pink_Raglan_Sleeve.png",
     displayPrice: 0,
     cataloguePrice: 0,
     baseSellPrice: 0,
@@ -3557,7 +3557,7 @@ export const clothing: Clothing[] = [
   {
     id: "pink_shorts",
     name: "Pink Shorts",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/76/Inv_Pink_Shorts.png",
+    img: "/images/clothing/Inv_Pink_Shorts.png",
     displayPrice: 2400,
     cataloguePrice: 3000,
     baseSellPrice: 1200,
@@ -3569,7 +3569,7 @@ export const clothing: Clothing[] = [
   {
     id: "pink_singlet",
     name: "Pink Singlet",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/02/Inv_Pink_Singlet.png",
+    img: "/images/clothing/Inv_Pink_Singlet.png",
     displayPrice: 1200,
     cataloguePrice: 1500,
     baseSellPrice: 600,
@@ -3581,7 +3581,7 @@ export const clothing: Clothing[] = [
   {
     id: "pink_sneakers",
     name: "Pink Sneakers",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1e/Inv_Pink_Sneakers.png",
+    img: "/images/clothing/Inv_Pink_Sneakers.png",
     displayPrice: 1500,
     cataloguePrice: 1875,
     baseSellPrice: 750,
@@ -3593,7 +3593,7 @@ export const clothing: Clothing[] = [
   {
     id: "pink_sun_glasses",
     name: "Pink Sun Glasses",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/70/Inv_Pink_Sun_Glasses.png",
+    img: "/images/clothing/Inv_Pink_Sun_Glasses.png",
     displayPrice: 2400,
     cataloguePrice: 3000,
     baseSellPrice: 1200,
@@ -3605,7 +3605,7 @@ export const clothing: Clothing[] = [
   {
     id: "pink_sweat_pants",
     name: "Pink Sweat Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/84/Inv_Pink_Sweat_Pants.png",
+    img: "/images/clothing/Inv_Pink_Sweat_Pants.png",
     displayPrice: 1060,
     cataloguePrice: 1325,
     baseSellPrice: 530,
@@ -3617,7 +3617,7 @@ export const clothing: Clothing[] = [
   {
     id: "pink_tshirt",
     name: "Pink T-Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Inv_Pink_T-Shirt.png",
+    img: "/images/clothing/Inv_Pink_T-Shirt.png",
     displayPrice: 2150,
     cataloguePrice: 2687,
     baseSellPrice: 1075,
@@ -3629,7 +3629,7 @@ export const clothing: Clothing[] = [
   {
     id: "pinstripe_jacket",
     name: "Pinstripe Jacket",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/36/Inv_Pinstripe_Jacket.png",
+    img: "/images/clothing/Inv_Pinstripe_Jacket.png",
     displayPrice: 8000,
     cataloguePrice: 10000,
     baseSellPrice: 4000,
@@ -3641,7 +3641,7 @@ export const clothing: Clothing[] = [
   {
     id: "pinstripe_pants",
     name: "Pinstripe Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/38/Inv_Pinstripe_Pants.png",
+    img: "/images/clothing/Inv_Pinstripe_Pants.png",
     displayPrice: 8000,
     cataloguePrice: 10000,
     baseSellPrice: 4000,
@@ -3653,7 +3653,7 @@ export const clothing: Clothing[] = [
   {
     id: "pirate_boots",
     name: "Pirate Boots",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b1/Inv_Pirate_Boots.png",
+    img: "/images/clothing/Inv_Pirate_Boots.png",
     displayPrice: 2000,
     cataloguePrice: 2500,
     baseSellPrice: 1000,
@@ -3665,7 +3665,7 @@ export const clothing: Clothing[] = [
   {
     id: "pirate_coat",
     name: "Pirate Coat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f4/Inv_Pirate_Coat.png",
+    img: "/images/clothing/Inv_Pirate_Coat.png",
     displayPrice: 11880,
     cataloguePrice: 14850,
     baseSellPrice: 5940,
@@ -3677,7 +3677,7 @@ export const clothing: Clothing[] = [
   {
     id: "pirate_hat",
     name: "Pirate Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d4/Inv_Pirate_Hat.png",
+    img: "/images/clothing/Inv_Pirate_Hat.png",
     displayPrice: 5050,
     cataloguePrice: 6312,
     baseSellPrice: 2525,
@@ -3689,7 +3689,7 @@ export const clothing: Clothing[] = [
   {
     id: "pirate_pants",
     name: "Pirate Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a8/Inv_Pirate_Pants.png",
+    img: "/images/clothing/Inv_Pirate_Pants.png",
     displayPrice: 1460,
     cataloguePrice: 1825,
     baseSellPrice: 730,
@@ -3701,7 +3701,7 @@ export const clothing: Clothing[] = [
   {
     id: "police_boots",
     name: "Police Boots",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f6/Inv_Police_Boots.png",
+    img: "/images/clothing/Inv_Police_Boots.png",
     displayPrice: 3600,
     cataloguePrice: 4500,
     baseSellPrice: 1800,
@@ -3713,7 +3713,7 @@ export const clothing: Clothing[] = [
   {
     id: "police_hat",
     name: "Police Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d7/Inv_Police_Hat.png",
+    img: "/images/clothing/Inv_Police_Hat.png",
     displayPrice: 25500,
     cataloguePrice: 31875,
     baseSellPrice: 12750,
@@ -3725,7 +3725,7 @@ export const clothing: Clothing[] = [
   {
     id: "police_pants",
     name: "Police Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/24/Inv_Police_Pants.png",
+    img: "/images/clothing/Inv_Police_Pants.png",
     displayPrice: 6000,
     cataloguePrice: 7500,
     baseSellPrice: 3000,
@@ -3737,7 +3737,7 @@ export const clothing: Clothing[] = [
   {
     id: "police_shirt",
     name: "Police Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1e/Inv_Police_Shirt.png",
+    img: "/images/clothing/Inv_Police_Shirt.png",
     displayPrice: 6000,
     cataloguePrice: 7500,
     baseSellPrice: 3000,
@@ -3749,7 +3749,7 @@ export const clothing: Clothing[] = [
   {
     id: "punk_goggles",
     name: "Punk Goggles",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/de/Inv_Punk_Goggles.png",
+    img: "/images/clothing/Inv_Punk_Goggles.png",
     displayPrice: 5530,
     cataloguePrice: 6912,
     baseSellPrice: 2765,
@@ -3761,7 +3761,7 @@ export const clothing: Clothing[] = [
   {
     id: "purple_bucket_hat",
     name: "Purple Bucket Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b3/Inv_Purple_Bucket_Hat.png",
+    img: "/images/clothing/Inv_Purple_Bucket_Hat.png",
     displayPrice: 330,
     cataloguePrice: 412,
     baseSellPrice: 165,
@@ -3773,7 +3773,7 @@ export const clothing: Clothing[] = [
   {
     id: "purple_cap",
     name: "Purple Cap",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/76/Inv_Purple_Cap.png",
+    img: "/images/clothing/Inv_Purple_Cap.png",
     displayPrice: 3080,
     cataloguePrice: 3850,
     baseSellPrice: 1540,
@@ -3785,7 +3785,7 @@ export const clothing: Clothing[] = [
   {
     id: "purple_capri_pants",
     name: "Purple Capri Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/69/Inv_Purple_Capri_Pants.png",
+    img: "/images/clothing/Inv_Purple_Capri_Pants.png",
     displayPrice: 0,
     cataloguePrice: 0,
     baseSellPrice: 0,
@@ -3797,7 +3797,7 @@ export const clothing: Clothing[] = [
   {
     id: "purple_comfy_shoes",
     name: "Purple Comfy Shoes",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/22/Inv_Purple_Comfy_Shoes.png",
+    img: "/images/clothing/Inv_Purple_Comfy_Shoes.png",
     displayPrice: 2400,
     cataloguePrice: 3000,
     baseSellPrice: 1200,
@@ -3809,7 +3809,7 @@ export const clothing: Clothing[] = [
   {
     id: "purple_cuffed_pants",
     name: "Purple Cuffed Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/89/Inv_Purple_Cuffed_Pants.png",
+    img: "/images/clothing/Inv_Purple_Cuffed_Pants.png",
     displayPrice: 3014,
     cataloguePrice: 3767,
     baseSellPrice: 1507,
@@ -3821,7 +3821,7 @@ export const clothing: Clothing[] = [
   {
     id: "purple_dress",
     name: "Purple Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/83/Inv_Purple_Dress.png",
+    img: "/images/clothing/Inv_Purple_Dress.png",
     displayPrice: 1160,
     cataloguePrice: 1450,
     baseSellPrice: 580,
@@ -3833,7 +3833,7 @@ export const clothing: Clothing[] = [
   {
     id: "purple_flats",
     name: "Purple Flats",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4d/Inv_Purple_Flats.png",
+    img: "/images/clothing/Inv_Purple_Flats.png",
     displayPrice: 670,
     cataloguePrice: 837,
     baseSellPrice: 335,
@@ -3845,7 +3845,7 @@ export const clothing: Clothing[] = [
   {
     id: "purple_hair_bow",
     name: "Purple Hair Bow",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b5/Inv_Purple_Hair_Bow.png",
+    img: "/images/clothing/Inv_Purple_Hair_Bow.png",
     displayPrice: 3000,
     cataloguePrice: 3750,
     baseSellPrice: 1500,
@@ -3857,7 +3857,7 @@ export const clothing: Clothing[] = [
   {
     id: "purple_holiday_shirt",
     name: "Purple Holiday Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b6/Inv_Purple_Holiday_Shirt.png",
+    img: "/images/clothing/Inv_Purple_Holiday_Shirt.png",
     displayPrice: 1360,
     cataloguePrice: 1700,
     baseSellPrice: 680,
@@ -3869,7 +3869,7 @@ export const clothing: Clothing[] = [
   {
     id: "purple_holiday_shorts",
     name: "Purple Holiday Shorts",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/07/Inv_Purple_Holiday_Shorts.png",
+    img: "/images/clothing/Inv_Purple_Holiday_Shorts.png",
     displayPrice: 1330,
     cataloguePrice: 1662,
     baseSellPrice: 665,
@@ -3881,7 +3881,7 @@ export const clothing: Clothing[] = [
   {
     id: "purple_hoodie",
     name: "Purple Hoodie",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8d/Inv_Purple_Hoodie.png",
+    img: "/images/clothing/Inv_Purple_Hoodie.png",
     displayPrice: 2306,
     cataloguePrice: 2882,
     baseSellPrice: 1153,
@@ -3893,7 +3893,7 @@ export const clothing: Clothing[] = [
   {
     id: "purple_jeans",
     name: "Purple Jeans",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/32/Inv_Purple_Jeans.png",
+    img: "/images/clothing/Inv_Purple_Jeans.png",
     displayPrice: 4000,
     cataloguePrice: 5000,
     baseSellPrice: 2000,
@@ -3905,7 +3905,7 @@ export const clothing: Clothing[] = [
   {
     id: "purple_pants",
     name: "Purple Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3c/Inv_Purple_Pants.png",
+    img: "/images/clothing/Inv_Purple_Pants.png",
     displayPrice: 2000,
     cataloguePrice: 2500,
     baseSellPrice: 1000,
@@ -3917,7 +3917,7 @@ export const clothing: Clothing[] = [
   {
     id: "purple_puffy_jacket",
     name: "Purple Puffy Jacket",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d7/Inv_Purple_Puffy_Jacket.png",
+    img: "/images/clothing/Inv_Purple_Puffy_Jacket.png",
     displayPrice: 3000,
     cataloguePrice: 3750,
     baseSellPrice: 1500,
@@ -3929,7 +3929,7 @@ export const clothing: Clothing[] = [
   {
     id: "purple_raglan_sleeve",
     name: "Purple Raglan Sleeve",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f4/Inv_Purple_Raglan_Sleeve.png",
+    img: "/images/clothing/Inv_Purple_Raglan_Sleeve.png",
     displayPrice: 0,
     cataloguePrice: 0,
     baseSellPrice: 0,
@@ -3941,7 +3941,7 @@ export const clothing: Clothing[] = [
   {
     id: "purple_shirt",
     name: "Purple Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2f/Inv_Purple_Shirt.png",
+    img: "/images/clothing/Inv_Purple_Shirt.png",
     displayPrice: 1080,
     cataloguePrice: 1350,
     baseSellPrice: 540,
@@ -3953,7 +3953,7 @@ export const clothing: Clothing[] = [
   {
     id: "purple_shorts",
     name: "Purple Shorts",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d4/Inv_Purple_Shorts.png",
+    img: "/images/clothing/Inv_Purple_Shorts.png",
     displayPrice: 1806,
     cataloguePrice: 2257,
     baseSellPrice: 903,
@@ -3965,7 +3965,7 @@ export const clothing: Clothing[] = [
   {
     id: "purple_sneakers",
     name: "Purple Sneakers",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/42/Inv_Purple_Sneakers.png",
+    img: "/images/clothing/Inv_Purple_Sneakers.png",
     displayPrice: 3600,
     cataloguePrice: 4500,
     baseSellPrice: 1800,
@@ -3977,7 +3977,7 @@ export const clothing: Clothing[] = [
   {
     id: "purple_spotty_dress",
     name: "Purple Spotty Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/5d/Inv_Purple_Spotty_Dress.png",
+    img: "/images/clothing/Inv_Purple_Spotty_Dress.png",
     displayPrice: 3390,
     cataloguePrice: 4237,
     baseSellPrice: 1695,
@@ -3989,7 +3989,7 @@ export const clothing: Clothing[] = [
   {
     id: "purple_strap_shoes",
     name: "Purple Strap Shoes",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/17/Inv_Purple_Strap_Shoes.png",
+    img: "/images/clothing/Inv_Purple_Strap_Shoes.png",
     displayPrice: 1020,
     cataloguePrice: 1275,
     baseSellPrice: 510,
@@ -4001,7 +4001,7 @@ export const clothing: Clothing[] = [
   {
     id: "purple_sun_glasses",
     name: "Purple Sun Glasses",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/fa/Inv_Purple_Sun_Glasses.png",
+    img: "/images/clothing/Inv_Purple_Sun_Glasses.png",
     displayPrice: 2400,
     cataloguePrice: 3000,
     baseSellPrice: 1200,
@@ -4013,7 +4013,7 @@ export const clothing: Clothing[] = [
   {
     id: "purple_sweat_pants",
     name: "Purple Sweat Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/5a/Inv_Purple_Sweat_Pants.png",
+    img: "/images/clothing/Inv_Purple_Sweat_Pants.png",
     displayPrice: 1060,
     cataloguePrice: 1325,
     baseSellPrice: 530,
@@ -4025,7 +4025,7 @@ export const clothing: Clothing[] = [
   {
     id: "raggy_dress",
     name: "Raggy Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/20/Inv_Raggy_Dress.png",
+    img: "/images/clothing/Inv_Raggy_Dress.png",
     displayPrice: 10,
     cataloguePrice: 12,
     baseSellPrice: 5,
@@ -4037,7 +4037,7 @@ export const clothing: Clothing[] = [
   {
     id: "raggy_pants",
     name: "Raggy Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/88/Inv_Raggy_Pants.png",
+    img: "/images/clothing/Inv_Raggy_Pants.png",
     displayPrice: 10,
     cataloguePrice: 12,
     baseSellPrice: 5,
@@ -4049,7 +4049,7 @@ export const clothing: Clothing[] = [
   {
     id: "raggy_shirt",
     name: "Raggy Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Raggy_Shirt.png",
+    img: "/images/clothing/Inv_Raggy_Shirt.png",
     displayPrice: 12,
     cataloguePrice: 15,
     baseSellPrice: 6,
@@ -4061,7 +4061,7 @@ export const clothing: Clothing[] = [
   {
     id: "raggy_sneakers",
     name: "Raggy Sneakers",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/70/Inv_Raggy_Sneakers.png",
+    img: "/images/clothing/Inv_Raggy_Sneakers.png",
     displayPrice: 6,
     cataloguePrice: 7,
     baseSellPrice: 3,
@@ -4073,7 +4073,7 @@ export const clothing: Clothing[] = [
   {
     id: "rain_coat",
     name: "Rain Coat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3b/Inv_Rain_Coat.png",
+    img: "/images/clothing/Inv_Rain_Coat.png",
     displayPrice: 3200,
     cataloguePrice: 4000,
     baseSellPrice: 1600,
@@ -4085,7 +4085,7 @@ export const clothing: Clothing[] = [
   {
     id: "rain_hat",
     name: "Rain Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/66/Inv_Rain_Hat.png",
+    img: "/images/clothing/Inv_Rain_Hat.png",
     displayPrice: 2792,
     cataloguePrice: 3490,
     baseSellPrice: 1396,
@@ -4097,7 +4097,7 @@ export const clothing: Clothing[] = [
   {
     id: "rainbow_dress",
     name: "Rainbow Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8e/Inv_Rainbow_Dress.png",
+    img: "/images/clothing/Inv_Rainbow_Dress.png",
     displayPrice: 2130,
     cataloguePrice: 2662,
     baseSellPrice: 1065,
@@ -4109,7 +4109,7 @@ export const clothing: Clothing[] = [
   {
     id: "rainbow_pants",
     name: "Rainbow Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a4/Inv_Rainbow_Pants.png",
+    img: "/images/clothing/Inv_Rainbow_Pants.png",
     displayPrice: 2000,
     cataloguePrice: 2500,
     baseSellPrice: 1000,
@@ -4121,7 +4121,7 @@ export const clothing: Clothing[] = [
   {
     id: "rainbow_sneakers",
     name: "Rainbow Sneakers",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/0e/Inv_Rainbow_Sneakers.png",
+    img: "/images/clothing/Inv_Rainbow_Sneakers.png",
     displayPrice: 3600,
     cataloguePrice: 4500,
     baseSellPrice: 1800,
@@ -4133,7 +4133,7 @@ export const clothing: Clothing[] = [
   {
     id: "rainbow_tshirt",
     name: "Rainbow T-Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/ee/Inv_Rainbow_T_Shirt.png",
+    img: "/images/clothing/Inv_Rainbow_T_Shirt.png",
     displayPrice: 2608,
     cataloguePrice: 3260,
     baseSellPrice: 1304,
@@ -4145,7 +4145,7 @@ export const clothing: Clothing[] = [
   {
     id: "reaps_shirt",
     name: "Reaps Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4b/Inv_Reaps_Shirt.png",
+    img: "/images/clothing/Inv_Reaps_Shirt.png",
     displayPrice: 3240,
     cataloguePrice: 4050,
     baseSellPrice: 1620,
@@ -4157,7 +4157,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_and_black_scarf",
     name: "Red and Black Scarf",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/44/Inv_Red_and_Black_Scarf.png",
+    img: "/images/clothing/Inv_Red_and_Black_Scarf.png",
     displayPrice: 9000,
     cataloguePrice: 11250,
     baseSellPrice: 4500,
@@ -4169,7 +4169,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_bandana",
     name: "Red Bandana",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/38/Inv_Red_Bandana.png",
+    img: "/images/clothing/Inv_Red_Bandana.png",
     displayPrice: 1500,
     cataloguePrice: 1875,
     baseSellPrice: 750,
@@ -4181,7 +4181,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_baseball_cap",
     name: "Red Baseball Cap",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2d/Inv_Red_Baseball_Cap.png",
+    img: "/images/clothing/Inv_Red_Baseball_Cap.png",
     displayPrice: 3080,
     cataloguePrice: 3850,
     baseSellPrice: 1540,
@@ -4193,7 +4193,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_beanie",
     name: "Red Beanie",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6f/Inv_Red_Beanie.png",
+    img: "/images/clothing/Inv_Red_Beanie.png",
     displayPrice: 550,
     cataloguePrice: 687,
     baseSellPrice: 275,
@@ -4205,7 +4205,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_capri_pants",
     name: "Red Capri Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/78/Inv_Red_Capri_Pants.png",
+    img: "/images/clothing/Inv_Red_Capri_Pants.png",
     displayPrice: 0,
     cataloguePrice: 0,
     baseSellPrice: 0,
@@ -4217,7 +4217,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_comfy_shoes",
     name: "Red Comfy Shoes",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f2/Inv_Red_Comfy_Shoes.png",
+    img: "/images/clothing/Inv_Red_Comfy_Shoes.png",
     displayPrice: 2400,
     cataloguePrice: 3000,
     baseSellPrice: 1200,
@@ -4229,7 +4229,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_cuffed_pants",
     name: "Red Cuffed Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/73/Inv_Red_Cuffed_Pants.png",
+    img: "/images/clothing/Inv_Red_Cuffed_Pants.png",
     displayPrice: 3014,
     cataloguePrice: 3767,
     baseSellPrice: 1507,
@@ -4241,7 +4241,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_dress",
     name: "Red Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/9d/Inv_Red_Dress.png",
+    img: "/images/clothing/Inv_Red_Dress.png",
     displayPrice: 1590,
     cataloguePrice: 1987,
     baseSellPrice: 795,
@@ -4253,7 +4253,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_festive_sweater",
     name: "Red Festive Sweater",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6a/Inv_Red_Festive_Sweater.png",
+    img: "/images/clothing/Inv_Red_Festive_Sweater.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 1153,
@@ -4265,7 +4265,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_flanney",
     name: "Red Flanney",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Inv_Red_Flanney.png",
+    img: "/images/clothing/Inv_Red_Flanney.png",
     displayPrice: 2000,
     cataloguePrice: 2500,
     baseSellPrice: 1000,
@@ -4277,7 +4277,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_flanney_dress",
     name: "Red Flanney Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f9/Inv_Red_Flanney_Dress.png",
+    img: "/images/clothing/Inv_Red_Flanney_Dress.png",
     displayPrice: 2000,
     cataloguePrice: 2500,
     baseSellPrice: 1000,
@@ -4289,7 +4289,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_flat_cap",
     name: "Red Flat Cap",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/02/Inv_Red_Flat_Cap.png",
+    img: "/images/clothing/Inv_Red_Flat_Cap.png",
     displayPrice: 1050,
     cataloguePrice: 1312,
     baseSellPrice: 525,
@@ -4301,7 +4301,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_flats",
     name: "Red Flats",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/dd/Inv_Red_Flats.png",
+    img: "/images/clothing/Inv_Red_Flats.png",
     displayPrice: 850,
     cataloguePrice: 1062,
     baseSellPrice: 425,
@@ -4313,7 +4313,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_hair_bow",
     name: "Red Hair Bow",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4d/Inv_Red_Hair_Bow.png",
+    img: "/images/clothing/Inv_Red_Hair_Bow.png",
     displayPrice: 3000,
     cataloguePrice: 3750,
     baseSellPrice: 1500,
@@ -4325,7 +4325,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_hood",
     name: "Red Hood",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c6/Inv_Red_Hood.png",
+    img: "/images/clothing/Inv_Red_Hood.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 1500,
@@ -4337,7 +4337,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_hooded_cap",
     name: "Red Hooded Cap",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/5b/Inv_Red_Hooded_Cap.png",
+    img: "/images/clothing/Inv_Red_Hooded_Cap.png",
     displayPrice: 2250,
     cataloguePrice: 2812,
     baseSellPrice: 1125,
@@ -4349,7 +4349,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_hoodie",
     name: "Red Hoodie",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b9/Inv_Red_Hoodie.png",
+    img: "/images/clothing/Inv_Red_Hoodie.png",
     displayPrice: 2306,
     cataloguePrice: 2882,
     baseSellPrice: 1153,
@@ -4361,7 +4361,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_nose",
     name: "Red Nose",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f2/Inv_Red_Nose.png",
+    img: "/images/clothing/Inv_Red_Nose.png",
     displayPrice: 2200,
     cataloguePrice: 2750,
     baseSellPrice: 1100,
@@ -4373,7 +4373,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_plaid_pants",
     name: "Red Plaid Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/bd/Inv_Red_Plaid_Pants.png",
+    img: "/images/clothing/Inv_Red_Plaid_Pants.png",
     displayPrice: 1600,
     cataloguePrice: 2000,
     baseSellPrice: 800,
@@ -4385,7 +4385,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_puffy_jacket",
     name: "Red Puffy Jacket",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/25/Inv_Red_Puffy_Jacket.png",
+    img: "/images/clothing/Inv_Red_Puffy_Jacket.png",
     displayPrice: 3000,
     cataloguePrice: 3750,
     baseSellPrice: 1500,
@@ -4397,7 +4397,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_raglan_sleeve",
     name: "Red Raglan Sleeve",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/07/Inv_Red_Raglan_Sleeve.png",
+    img: "/images/clothing/Inv_Red_Raglan_Sleeve.png",
     displayPrice: 3200,
     cataloguePrice: 4000,
     baseSellPrice: 1600,
@@ -4409,7 +4409,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_renaissance_dress",
     name: "Red Renaissance Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/cf/Inv_Red_Renaissance_Dress.png",
+    img: "/images/clothing/Inv_Red_Renaissance_Dress.png",
     displayPrice: 3390,
     cataloguePrice: 4237,
     baseSellPrice: 1695,
@@ -4421,7 +4421,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_shorts",
     name: "Red Shorts",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/03/Inv_Red_Shorts.png",
+    img: "/images/clothing/Inv_Red_Shorts.png",
     displayPrice: 1806,
     cataloguePrice: 2257,
     baseSellPrice: 903,
@@ -4433,7 +4433,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_singlet",
     name: "Red Singlet",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/76/Inv_Red_Singlet.png",
+    img: "/images/clothing/Inv_Red_Singlet.png",
     displayPrice: 1200,
     cataloguePrice: 1500,
     baseSellPrice: 600,
@@ -4445,7 +4445,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_sneakers",
     name: "Red Sneakers",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f2/Inv_Red_Sneakers.png",
+    img: "/images/clothing/Inv_Red_Sneakers.png",
     displayPrice: 2260,
     cataloguePrice: 2825,
     baseSellPrice: 1130,
@@ -4457,7 +4457,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_spotty_dress",
     name: "Red Spotty Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4d/Inv_Red_Spotty_Dress.png",
+    img: "/images/clothing/Inv_Red_Spotty_Dress.png",
     displayPrice: 3390,
     cataloguePrice: 4237,
     baseSellPrice: 1695,
@@ -4469,7 +4469,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_strapped_shoes",
     name: "Red Strapped Shoes",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c1/Inv_Red_Strapped_Shoes.png",
+    img: "/images/clothing/Inv_Red_Strapped_Shoes.png",
     displayPrice: 930,
     cataloguePrice: 1162,
     baseSellPrice: 465,
@@ -4481,7 +4481,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_sweat_pants",
     name: "Red Sweat Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3b/Inv_Red_Sweat_Pants.png",
+    img: "/images/clothing/Inv_Red_Sweat_Pants.png",
     displayPrice: 1060,
     cataloguePrice: 1325,
     baseSellPrice: 530,
@@ -4493,7 +4493,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_victorian_bonnet",
     name: "Red Victorian Bonnet",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/09/Inv_Red_Victorian_Bonnet.png",
+    img: "/images/clothing/Inv_Red_Victorian_Bonnet.png",
     displayPrice: 39500,
     cataloguePrice: 49375,
     baseSellPrice: 19750,
@@ -4505,7 +4505,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_victorian_dress",
     name: "Red Victorian Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/0d/Inv_Red_Victorian_Dress.png",
+    img: "/images/clothing/Inv_Red_Victorian_Dress.png",
     displayPrice: 10170,
     cataloguePrice: 12712,
     baseSellPrice: 5085,
@@ -4517,7 +4517,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_victorian_jacket",
     name: "Red Victorian Jacket",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/55/Inv_Red_Victorian_Jacket.png",
+    img: "/images/clothing/Inv_Red_Victorian_Jacket.png",
     displayPrice: 12000,
     cataloguePrice: 15000,
     baseSellPrice: 6000,
@@ -4529,7 +4529,7 @@ export const clothing: Clothing[] = [
   {
     id: "retro_point_glasses",
     name: "Retro Point Glasses",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/9f/Inv_Retro_Point_Glasses.png",
+    img: "/images/clothing/Inv_Retro_Point_Glasses.png",
     displayPrice: 3200,
     cataloguePrice: 4000,
     baseSellPrice: 1600,
@@ -4541,7 +4541,7 @@ export const clothing: Clothing[] = [
   {
     id: "retro_point_sun_glasses",
     name: "Retro Point Sun Glasses",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/03/Inv_Retro_Point_Sun_Glasses.png",
+    img: "/images/clothing/Inv_Retro_Point_Sun_Glasses.png",
     displayPrice: 3200,
     cataloguePrice: 4000,
     baseSellPrice: 1600,
@@ -4553,7 +4553,7 @@ export const clothing: Clothing[] = [
   {
     id: "rileyks_shirt",
     name: "RileyKS Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8b/Inv_RileyKS_Shirt.png",
+    img: "/images/clothing/Inv_RileyKS_Shirt.png",
     displayPrice: 3240,
     cataloguePrice: 4050,
     baseSellPrice: 1620,
@@ -4565,7 +4565,7 @@ export const clothing: Clothing[] = [
   {
     id: "ripped_jeans",
     name: "Ripped Jeans",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1c/Inv_Ripped_Jeans.png",
+    img: "/images/clothing/Inv_Ripped_Jeans.png",
     displayPrice: 3210,
     cataloguePrice: 4012,
     baseSellPrice: 1605,
@@ -4577,7 +4577,7 @@ export const clothing: Clothing[] = [
   {
     id: "round_glasses",
     name: "Round Glasses",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/ef/Inv_Round_Glasses.png",
+    img: "/images/clothing/Inv_Round_Glasses.png",
     displayPrice: 1500,
     cataloguePrice: 1875,
     baseSellPrice: 750,
@@ -4589,7 +4589,7 @@ export const clothing: Clothing[] = [
   {
     id: "round_horned_glasses",
     name: "Round Horned Glasses",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/98/Inv_Round_Horned_Glasses.png",
+    img: "/images/clothing/Inv_Round_Horned_Glasses.png",
     displayPrice: 2500,
     cataloguePrice: 3125,
     baseSellPrice: 1250,
@@ -4601,7 +4601,7 @@ export const clothing: Clothing[] = [
   {
     id: "round_horned_sun_glasses",
     name: "Round Horned Sun Glasses",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/5c/Inv_Round_Horned_Sun_Glasses.png",
+    img: "/images/clothing/Inv_Round_Horned_Sun_Glasses.png",
     displayPrice: 2500,
     cataloguePrice: 3125,
     baseSellPrice: 1250,
@@ -4613,7 +4613,7 @@ export const clothing: Clothing[] = [
   {
     id: "round_sunglasses",
     name: "Round Sunglasses",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/bb/Inv_Round_Sunglasses.png",
+    img: "/images/clothing/Inv_Round_Sunglasses.png",
     displayPrice: 3100,
     cataloguePrice: 3875,
     baseSellPrice: 1550,
@@ -4625,7 +4625,7 @@ export const clothing: Clothing[] = [
   {
     id: "royal_crown",
     name: "Royal Crown",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6f/Inv_Royal_Crown.png",
+    img: "/images/clothing/Inv_Royal_Crown.png",
     displayPrice: 3000000,
     cataloguePrice: 0,
     baseSellPrice: 60000,
@@ -4637,7 +4637,7 @@ export const clothing: Clothing[] = [
   {
     id: "sailor_boots",
     name: "Sailor Boots",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/35/Inv_Sailor_Boots.png",
+    img: "/images/clothing/Inv_Sailor_Boots.png",
     displayPrice: 3600,
     cataloguePrice: 4500,
     baseSellPrice: 1800,
@@ -4649,7 +4649,7 @@ export const clothing: Clothing[] = [
   {
     id: "sailor_dress",
     name: "Sailor Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3e/Inv_Sailor_Dress.png",
+    img: "/images/clothing/Inv_Sailor_Dress.png",
     displayPrice: 6000,
     cataloguePrice: 7500,
     baseSellPrice: 3000,
@@ -4661,7 +4661,7 @@ export const clothing: Clothing[] = [
   {
     id: "sailor_hat",
     name: "Sailor Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/05/Inv_Sailor_Hat.png",
+    img: "/images/clothing/Inv_Sailor_Hat.png",
     displayPrice: 25500,
     cataloguePrice: 31875,
     baseSellPrice: 12750,
@@ -4673,7 +4673,7 @@ export const clothing: Clothing[] = [
   {
     id: "sailor_pants",
     name: "Sailor Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/76/Inv_Sailor_Pants.png",
+    img: "/images/clothing/Inv_Sailor_Pants.png",
     displayPrice: 6000,
     cataloguePrice: 7500,
     baseSellPrice: 3000,
@@ -4685,7 +4685,7 @@ export const clothing: Clothing[] = [
   {
     id: "sailor_shirt",
     name: "Sailor Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e5/Inv_Sailor_Shirt.png",
+    img: "/images/clothing/Inv_Sailor_Shirt.png",
     displayPrice: 6000,
     cataloguePrice: 7500,
     baseSellPrice: 3000,
@@ -4697,7 +4697,7 @@ export const clothing: Clothing[] = [
   {
     id: "seamstress_dress",
     name: "Seamstress Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e5/Inv_Seamstress_Dress.png",
+    img: "/images/clothing/Inv_Seamstress_Dress.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 500,
@@ -4709,7 +4709,7 @@ export const clothing: Clothing[] = [
   {
     id: "shutter_shades",
     name: "Shutter Shades",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/86/Inv_Shutter_Shades.png",
+    img: "/images/clothing/Inv_Shutter_Shades.png",
     displayPrice: 2500,
     cataloguePrice: 3125,
     baseSellPrice: 1250,
@@ -4721,7 +4721,7 @@ export const clothing: Clothing[] = [
   {
     id: "skull_mask",
     name: "Skull Mask",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/11/Inv_Skull_Mask.png",
+    img: "/images/clothing/Inv_Skull_Mask.png",
     displayPrice: 45500,
     cataloguePrice: 56875,
     baseSellPrice: 22750,
@@ -4733,7 +4733,7 @@ export const clothing: Clothing[] = [
   {
     id: "skull_shirt",
     name: "Skull Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/7d/Inv_Skull_Shirt.png",
+    img: "/images/clothing/Inv_Skull_Shirt.png",
     displayPrice: 2068,
     cataloguePrice: 2585,
     baseSellPrice: 1034,
@@ -4745,7 +4745,7 @@ export const clothing: Clothing[] = [
   {
     id: "sleeping_cap",
     name: "Sleeping Cap",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a6/Inv_Sleeping_Cap.png",
+    img: "/images/clothing/Inv_Sleeping_Cap.png",
     displayPrice: 4500,
     cataloguePrice: 5625,
     baseSellPrice: 2250,
@@ -4757,7 +4757,7 @@ export const clothing: Clothing[] = [
   {
     id: "sleeping_mask",
     name: "Sleeping Mask",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/04/Inv_Sleeping_Mask.png",
+    img: "/images/clothing/Inv_Sleeping_Mask.png",
     displayPrice: 2400,
     cataloguePrice: 3000,
     baseSellPrice: 1200,
@@ -4769,7 +4769,7 @@ export const clothing: Clothing[] = [
   {
     id: "slippers",
     name: "Slippers",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/26/Inv_Slippers.png",
+    img: "/images/clothing/Inv_Slippers.png",
     displayPrice: 2400,
     cataloguePrice: 3000,
     baseSellPrice: 1200,
@@ -4781,7 +4781,7 @@ export const clothing: Clothing[] = [
   {
     id: "small_glasses",
     name: "Small Glasses",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2e/Inv_Small_Glasses.png",
+    img: "/images/clothing/Inv_Small_Glasses.png",
     displayPrice: 1700,
     cataloguePrice: 2125,
     baseSellPrice: 850,
@@ -4793,7 +4793,7 @@ export const clothing: Clothing[] = [
   {
     id: "small_sunglasses",
     name: "Small Sunglasses",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d9/Inv_Small_Sunglasses.png",
+    img: "/images/clothing/Inv_Small_Sunglasses.png",
     displayPrice: 2400,
     cataloguePrice: 3000,
     baseSellPrice: 1200,
@@ -4805,7 +4805,7 @@ export const clothing: Clothing[] = [
   {
     id: "snow_hood",
     name: "Snow Hood",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/dd/Inv_Snow_Hood.png",
+    img: "/images/clothing/Inv_Snow_Hood.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 6000,
@@ -4817,7 +4817,7 @@ export const clothing: Clothing[] = [
   {
     id: "soho_shirt",
     name: "Soho Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c3/Inv_Soho_Shirt.png",
+    img: "/images/clothing/Inv_Soho_Shirt.png",
     displayPrice: 3240,
     cataloguePrice: 4050,
     baseSellPrice: 1620,
@@ -4829,7 +4829,7 @@ export const clothing: Clothing[] = [
   {
     id: "space_helmet",
     name: "Space Helmet",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/79/Inv_Space_Helmet.png",
+    img: "/images/clothing/Inv_Space_Helmet.png",
     displayPrice: 25500,
     cataloguePrice: 31875,
     baseSellPrice: 12750,
@@ -4841,7 +4841,7 @@ export const clothing: Clothing[] = [
   {
     id: "space_suit_pants",
     name: "Space Suit Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/92/Inv_Space_Suit_Pants.png",
+    img: "/images/clothing/Inv_Space_Suit_Pants.png",
     displayPrice: 6000,
     cataloguePrice: 7500,
     baseSellPrice: 3000,
@@ -4853,7 +4853,7 @@ export const clothing: Clothing[] = [
   {
     id: "space_suit_shirt",
     name: "Space Suit Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/09/Inv_Space_Suit_Shirt.png",
+    img: "/images/clothing/Inv_Space_Suit_Shirt.png",
     displayPrice: 9000,
     cataloguePrice: 11250,
     baseSellPrice: 4500,
@@ -4865,7 +4865,7 @@ export const clothing: Clothing[] = [
   {
     id: "space_suit_shoes",
     name: "Space Suit Shoes",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e7/Inv_Space_Suit_Shoes.png",
+    img: "/images/clothing/Inv_Space_Suit_Shoes.png",
     displayPrice: 5000,
     cataloguePrice: 6250,
     baseSellPrice: 2500,
@@ -4877,7 +4877,7 @@ export const clothing: Clothing[] = [
   {
     id: "spec_shirt",
     name: "Spec Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/68/Inv_Spec_Shirt.png",
+    img: "/images/clothing/Inv_Spec_Shirt.png",
     displayPrice: 3240,
     cataloguePrice: 4050,
     baseSellPrice: 1620,
@@ -4889,7 +4889,7 @@ export const clothing: Clothing[] = [
   {
     id: "sport_glasses",
     name: "Sport Glasses",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/32/Inv_Sport_Glasses.png",
+    img: "/images/clothing/Inv_Sport_Glasses.png",
     displayPrice: 7200,
     cataloguePrice: 9000,
     baseSellPrice: 3600,
@@ -4901,7 +4901,7 @@ export const clothing: Clothing[] = [
   {
     id: "square_glasses",
     name: "Square Glasses",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/db/Inv_Square_Glasses.png",
+    img: "/images/clothing/Inv_Square_Glasses.png",
     displayPrice: 2400,
     cataloguePrice: 3000,
     baseSellPrice: 1200,
@@ -4913,7 +4913,7 @@ export const clothing: Clothing[] = [
   {
     id: "square_sunglasses",
     name: "Square Sunglasses",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/5a/Inv_Square_Sunglasses.png",
+    img: "/images/clothing/Inv_Square_Sunglasses.png",
     displayPrice: 2400,
     cataloguePrice: 3000,
     baseSellPrice: 1200,
@@ -4925,7 +4925,7 @@ export const clothing: Clothing[] = [
   {
     id: "strapped_sandals",
     name: "Strapped Sandals",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/16/Inv_Strapped_Sandals.png",
+    img: "/images/clothing/Inv_Strapped_Sandals.png",
     displayPrice: 1200,
     cataloguePrice: 1500,
     baseSellPrice: 600,
@@ -4937,7 +4937,7 @@ export const clothing: Clothing[] = [
   {
     id: "straw_sun_hat",
     name: "Straw Sun Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/63/Inv_Straw_Sun_Hat.png",
+    img: "/images/clothing/Inv_Straw_Sun_Hat.png",
     displayPrice: 2700,
     cataloguePrice: 3375,
     baseSellPrice: 1350,
@@ -4949,7 +4949,7 @@ export const clothing: Clothing[] = [
   {
     id: "striped_tights",
     name: "Striped Tights",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d7/Inv_Striped_Tights.png",
+    img: "/images/clothing/Inv_Striped_Tights.png",
     displayPrice: 2000,
     cataloguePrice: 2500,
     baseSellPrice: 1000,
@@ -4961,7 +4961,7 @@ export const clothing: Clothing[] = [
   {
     id: "sun_hat",
     name: "Sun Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4f/Inv_Sun_Hat.png",
+    img: "/images/clothing/Inv_Sun_Hat.png",
     displayPrice: 3700,
     cataloguePrice: 4625,
     baseSellPrice: 1850,
@@ -4973,7 +4973,7 @@ export const clothing: Clothing[] = [
   {
     id: "swimming_goggles",
     name: "Swimming Goggles",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/5b/Inv_Swimming_Goggles.png",
+    img: "/images/clothing/Inv_Swimming_Goggles.png",
     displayPrice: 3530,
     cataloguePrice: 4412,
     baseSellPrice: 1765,
@@ -4985,7 +4985,7 @@ export const clothing: Clothing[] = [
   {
     id: "thongs",
     name: "Thongs",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/ae/Inv_Thongs.png",
+    img: "/images/clothing/Inv_Thongs.png",
     displayPrice: 1020,
     cataloguePrice: 1275,
     baseSellPrice: 510,
@@ -4997,7 +4997,7 @@ export const clothing: Clothing[] = [
   {
     id: "tie_dye_cap",
     name: "Tie Dye Cap",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3c/Inv_Tie_Dye_Cap.png",
+    img: "/images/clothing/Inv_Tie_Dye_Cap.png",
     displayPrice: 3080,
     cataloguePrice: 3850,
     baseSellPrice: 1540,
@@ -5009,7 +5009,7 @@ export const clothing: Clothing[] = [
   {
     id: "tie_dye_pants",
     name: "Tie Dye Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/76/Inv_Tie_Dye_Pants.png",
+    img: "/images/clothing/Inv_Tie_Dye_Pants.png",
     displayPrice: 4000,
     cataloguePrice: 5000,
     baseSellPrice: 2000,
@@ -5021,7 +5021,7 @@ export const clothing: Clothing[] = [
   {
     id: "tie_dye_shirt",
     name: "Tie Dye Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c2/Inv_Tie_Dye_Shirt.png",
+    img: "/images/clothing/Inv_Tie_Dye_Shirt.png",
     displayPrice: 6000,
     cataloguePrice: 7500,
     baseSellPrice: 3000,
@@ -5033,7 +5033,7 @@ export const clothing: Clothing[] = [
   {
     id: "tiger_hood",
     name: "Tiger Hood",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/42/Inv_Tiger_Hood.png",
+    img: "/images/clothing/Inv_Tiger_Hood.png",
     displayPrice: 19750,
     cataloguePrice: 24687,
     baseSellPrice: 9875,
@@ -5045,7 +5045,7 @@ export const clothing: Clothing[] = [
   {
     id: "tom_shirt",
     name: "Tom Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1d/Inv_Tom_Shirt.png",
+    img: "/images/clothing/Inv_Tom_Shirt.png",
     displayPrice: 3240,
     cataloguePrice: 4050,
     baseSellPrice: 1620,
@@ -5057,7 +5057,7 @@ export const clothing: Clothing[] = [
   {
     id: "top_hat",
     name: "Top Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/9b/Inv_Top_Hat.png",
+    img: "/images/clothing/Inv_Top_Hat.png",
     displayPrice: 12500,
     cataloguePrice: 15625,
     baseSellPrice: 6250,
@@ -5069,7 +5069,7 @@ export const clothing: Clothing[] = [
   {
     id: "tradie_boots",
     name: "Tradie Boots",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/25/Inv_Tradie_Boots.png",
+    img: "/images/clothing/Inv_Tradie_Boots.png",
     displayPrice: 1030,
     cataloguePrice: 1287,
     baseSellPrice: 515,
@@ -5081,7 +5081,7 @@ export const clothing: Clothing[] = [
   {
     id: "tradie_pants",
     name: "Tradie Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/97/Inv_Tradie_Pants.png",
+    img: "/images/clothing/Inv_Tradie_Pants.png",
     displayPrice: 1060,
     cataloguePrice: 1325,
     baseSellPrice: 530,
@@ -5093,7 +5093,7 @@ export const clothing: Clothing[] = [
   {
     id: "tradie_shirt",
     name: "Tradie Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/dd/Inv_Tradie_Shirt.png",
+    img: "/images/clothing/Inv_Tradie_Shirt.png",
     displayPrice: 2000,
     cataloguePrice: 2500,
     baseSellPrice: 1000,
@@ -5105,7 +5105,7 @@ export const clothing: Clothing[] = [
   {
     id: "tree_house_shirt",
     name: "Tree House Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d4/Inv_Tree_House_Shirt.png",
+    img: "/images/clothing/Inv_Tree_House_Shirt.png",
     displayPrice: 3240,
     cataloguePrice: 4050,
     baseSellPrice: 1620,
@@ -5117,7 +5117,7 @@ export const clothing: Clothing[] = [
   {
     id: "trench_coat",
     name: "Trench Coat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2c/Inv_Trench_Coat.png",
+    img: "/images/clothing/Inv_Trench_Coat.png",
     displayPrice: 10240,
     cataloguePrice: 12800,
     baseSellPrice: 5120,
@@ -5129,7 +5129,7 @@ export const clothing: Clothing[] = [
   {
     id: "triangle_glasses",
     name: "Triangle Glasses",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3b/Inv_Triangle_Glasses.png",
+    img: "/images/clothing/Inv_Triangle_Glasses.png",
     displayPrice: 7200,
     cataloguePrice: 9000,
     baseSellPrice: 3600,
@@ -5141,7 +5141,7 @@ export const clothing: Clothing[] = [
   {
     id: "tuxedo_jacket",
     name: "Tuxedo Jacket",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a8/Inv_Tuxedo_Jacket.png",
+    img: "/images/clothing/Inv_Tuxedo_Jacket.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 500,
@@ -5153,7 +5153,7 @@ export const clothing: Clothing[] = [
   {
     id: "tuxedo_pants",
     name: "Tuxedo Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/db/Inv_Tuxedo_Pants.png",
+    img: "/images/clothing/Inv_Tuxedo_Pants.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 500,
@@ -5165,7 +5165,7 @@ export const clothing: Clothing[] = [
   {
     id: "tuxedo_shoes",
     name: "Tuxedo Shoes",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e8/Inv_Tuxedo_Shoes.png",
+    img: "/images/clothing/Inv_Tuxedo_Shoes.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 500,
@@ -5177,7 +5177,7 @@ export const clothing: Clothing[] = [
   {
     id: "villain_mustache",
     name: "Villain Mustache",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/09/Inv_Villain_Mustache.png",
+    img: "/images/clothing/Inv_Villain_Mustache.png",
     displayPrice: 4000,
     cataloguePrice: 5000,
     baseSellPrice: 2000,
@@ -5189,7 +5189,7 @@ export const clothing: Clothing[] = [
   {
     id: "wheezing_shirt",
     name: "Wheezing Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/15/Inv_Wheezing_Shirt.png",
+    img: "/images/clothing/Inv_Wheezing_Shirt.png",
     displayPrice: 3240,
     cataloguePrice: 4050,
     baseSellPrice: 1620,
@@ -5201,7 +5201,7 @@ export const clothing: Clothing[] = [
   {
     id: "white_baseball_cap",
     name: "White Baseball Cap",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/25/Inv_White_Baseball_Cap.png",
+    img: "/images/clothing/Inv_White_Baseball_Cap.png",
     displayPrice: 3080,
     cataloguePrice: 3850,
     baseSellPrice: 1540,
@@ -5213,7 +5213,7 @@ export const clothing: Clothing[] = [
   {
     id: "white_boots",
     name: "White Boots",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/ba/Inv_White_Boots.png",
+    img: "/images/clothing/Inv_White_Boots.png",
     displayPrice: 1030,
     cataloguePrice: 1287,
     baseSellPrice: 515,
@@ -5225,7 +5225,7 @@ export const clothing: Clothing[] = [
   {
     id: "white_collar_dress",
     name: "White Collar Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/ea/Inv_White_Collar_Dress.png",
+    img: "/images/clothing/Inv_White_Collar_Dress.png",
     displayPrice: 3390,
     cataloguePrice: 4237,
     baseSellPrice: 1695,
@@ -5237,7 +5237,7 @@ export const clothing: Clothing[] = [
   {
     id: "white_comfy_shoes",
     name: "White Comfy Shoes",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/fd/Inv_White_Comfy_Shoes.png",
+    img: "/images/clothing/Inv_White_Comfy_Shoes.png",
     displayPrice: 2400,
     cataloguePrice: 3000,
     baseSellPrice: 1200,
@@ -5249,7 +5249,7 @@ export const clothing: Clothing[] = [
   {
     id: "white_dress",
     name: "White Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d7/Inv_White_Dress.png",
+    img: "/images/clothing/Inv_White_Dress.png",
     displayPrice: 1990,
     cataloguePrice: 2487,
     baseSellPrice: 995,
@@ -5261,7 +5261,7 @@ export const clothing: Clothing[] = [
   {
     id: "white_flats",
     name: "White Flats",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/77/Inv_White_Flats.png",
+    img: "/images/clothing/Inv_White_Flats.png",
     displayPrice: 3350,
     cataloguePrice: 4187,
     baseSellPrice: 1675,
@@ -5273,7 +5273,7 @@ export const clothing: Clothing[] = [
   {
     id: "white_gala_dress",
     name: "White Gala Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/be/Inv_White_Gala_Dress.png",
+    img: "/images/clothing/Inv_White_Gala_Dress.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 500,
@@ -5285,7 +5285,7 @@ export const clothing: Clothing[] = [
   {
     id: "white_hair_bow",
     name: "White Hair Bow",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/af/Inv_White_Hair_Bow.png",
+    img: "/images/clothing/Inv_White_Hair_Bow.png",
     displayPrice: 3000,
     cataloguePrice: 3750,
     baseSellPrice: 1500,
@@ -5297,7 +5297,7 @@ export const clothing: Clothing[] = [
   {
     id: "white_hoodie",
     name: "White Hoodie",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d8/Inv_White_Hoodie.png",
+    img: "/images/clothing/Inv_White_Hoodie.png",
     displayPrice: 2306,
     cataloguePrice: 2882,
     baseSellPrice: 1153,
@@ -5309,7 +5309,7 @@ export const clothing: Clothing[] = [
   {
     id: "white_mask",
     name: "White Mask",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/fa/Inv_White_Mask.png",
+    img: "/images/clothing/Inv_White_Mask.png",
     displayPrice: 10800,
     cataloguePrice: 13500,
     baseSellPrice: 5400,
@@ -5321,7 +5321,7 @@ export const clothing: Clothing[] = [
   {
     id: "white_pants",
     name: "White Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/ba/Inv_White_Pants.png",
+    img: "/images/clothing/Inv_White_Pants.png",
     displayPrice: 4000,
     cataloguePrice: 5000,
     baseSellPrice: 2000,
@@ -5333,7 +5333,7 @@ export const clothing: Clothing[] = [
   {
     id: "white_shorts",
     name: "White Shorts",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/be/Inv_White_Shorts.png",
+    img: "/images/clothing/Inv_White_Shorts.png",
     displayPrice: 1950,
     cataloguePrice: 2437,
     baseSellPrice: 975,
@@ -5345,7 +5345,7 @@ export const clothing: Clothing[] = [
   {
     id: "white_sneakers",
     name: "White Sneakers",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/28/Inv_White_Sneakers.png",
+    img: "/images/clothing/Inv_White_Sneakers.png",
     displayPrice: 2800,
     cataloguePrice: 3500,
     baseSellPrice: 1400,
@@ -5357,7 +5357,7 @@ export const clothing: Clothing[] = [
   {
     id: "white_strap_shoes",
     name: "White Strap Shoes",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/85/Inv_White_Strap_Shoes.png",
+    img: "/images/clothing/Inv_White_Strap_Shoes.png",
     displayPrice: 1020,
     cataloguePrice: 1275,
     baseSellPrice: 510,
@@ -5369,7 +5369,7 @@ export const clothing: Clothing[] = [
   {
     id: "white_sweatpants",
     name: "White Sweatpants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/44/Inv_White_Sweatpants.png",
+    img: "/images/clothing/Inv_White_Sweatpants.png",
     displayPrice: 1060,
     cataloguePrice: 1325,
     baseSellPrice: 530,
@@ -5381,7 +5381,7 @@ export const clothing: Clothing[] = [
   {
     id: "white_tshirt",
     name: "White T-Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2d/Inv_White_T-Shirt.png",
+    img: "/images/clothing/Inv_White_T-Shirt.png",
     displayPrice: 2000,
     cataloguePrice: 2500,
     baseSellPrice: 1000,
@@ -5393,7 +5393,7 @@ export const clothing: Clothing[] = [
   {
     id: "white_tights",
     name: "White Tights",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/72/Inv_White_Tights.png",
+    img: "/images/clothing/Inv_White_Tights.png",
     displayPrice: 2000,
     cataloguePrice: 2500,
     baseSellPrice: 1000,
@@ -5405,7 +5405,7 @@ export const clothing: Clothing[] = [
   {
     id: "white_victorian_boots",
     name: "White Victorian Boots",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/37/Inv_White_Victorian_Boots.png",
+    img: "/images/clothing/Inv_White_Victorian_Boots.png",
     displayPrice: 1500,
     cataloguePrice: 1875,
     baseSellPrice: 750,
@@ -5417,7 +5417,7 @@ export const clothing: Clothing[] = [
   {
     id: "white_victorian_pants",
     name: "White Victorian Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1c/Inv_White_Victorian_Pants.png",
+    img: "/images/clothing/Inv_White_Victorian_Pants.png",
     displayPrice: 1600,
     cataloguePrice: 2000,
     baseSellPrice: 800,
@@ -5429,7 +5429,7 @@ export const clothing: Clothing[] = [
   {
     id: "witch_hat",
     name: "Witch Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/7a/Inv_Witch_Hat.png",
+    img: "/images/clothing/Inv_Witch_Hat.png",
     displayPrice: 24500,
     cataloguePrice: 30625,
     baseSellPrice: 12250,
@@ -5441,7 +5441,7 @@ export const clothing: Clothing[] = [
   {
     id: "witch_robe",
     name: "Witch Robe",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/95/Inv_Witch_Robe.png",
+    img: "/images/clothing/Inv_Witch_Robe.png",
     displayPrice: 11880,
     cataloguePrice: 14850,
     baseSellPrice: 5940,
@@ -5453,7 +5453,7 @@ export const clothing: Clothing[] = [
   {
     id: "wizard_hat",
     name: "Wizard Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/40/Inv_Wizard_Hat.png",
+    img: "/images/clothing/Inv_Wizard_Hat.png",
     displayPrice: 24500,
     cataloguePrice: 30625,
     baseSellPrice: 12250,
@@ -5465,7 +5465,7 @@ export const clothing: Clothing[] = [
   {
     id: "wizard_robe",
     name: "Wizard Robe",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1d/Inv_Wizard_Robe.png",
+    img: "/images/clothing/Inv_Wizard_Robe.png",
     displayPrice: 11880,
     cataloguePrice: 14850,
     baseSellPrice: 5940,
@@ -5477,7 +5477,7 @@ export const clothing: Clothing[] = [
   {
     id: "yellow_b_shirt",
     name: "Yellow B Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/16/Inv_Yellow_B_Shirt.png",
+    img: "/images/clothing/Inv_Yellow_B_Shirt.png",
     displayPrice: 2608,
     cataloguePrice: 3260,
     baseSellPrice: 1304,
@@ -5489,7 +5489,7 @@ export const clothing: Clothing[] = [
   {
     id: "yellow_boots",
     name: "Yellow Boots",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e1/Inv_Yellow_Boots.png",
+    img: "/images/clothing/Inv_Yellow_Boots.png",
     displayPrice: 1030,
     cataloguePrice: 1287,
     baseSellPrice: 515,
@@ -5501,7 +5501,7 @@ export const clothing: Clothing[] = [
   {
     id: "yellow_bucket_hat",
     name: "Yellow Bucket Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/91/Inv_Yellow_Bucket_Hat.png",
+    img: "/images/clothing/Inv_Yellow_Bucket_Hat.png",
     displayPrice: 330,
     cataloguePrice: 412,
     baseSellPrice: 165,
@@ -5513,7 +5513,7 @@ export const clothing: Clothing[] = [
   {
     id: "yellow_capri_pants",
     name: "Yellow Capri Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/91/Inv_Yellow_Capri_Pants.png",
+    img: "/images/clothing/Inv_Yellow_Capri_Pants.png",
     displayPrice: 3000,
     cataloguePrice: 3750,
     baseSellPrice: 1500,
@@ -5525,7 +5525,7 @@ export const clothing: Clothing[] = [
   {
     id: "yellow_comfy_shoes",
     name: "Yellow Comfy Shoes",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/bd/Inv_Yellow_Comfy_Shoes.png",
+    img: "/images/clothing/Inv_Yellow_Comfy_Shoes.png",
     displayPrice: 2400,
     cataloguePrice: 3000,
     baseSellPrice: 1200,
@@ -5537,7 +5537,7 @@ export const clothing: Clothing[] = [
   {
     id: "yellow_dress",
     name: "Yellow Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/7a/Inv_Yellow_Dress.png",
+    img: "/images/clothing/Inv_Yellow_Dress.png",
     displayPrice: 2130,
     cataloguePrice: 2662,
     baseSellPrice: 1065,
@@ -5549,7 +5549,7 @@ export const clothing: Clothing[] = [
   {
     id: "yellow_flats",
     name: "Yellow Flats",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/16/Inv_Yellow_Flats.png",
+    img: "/images/clothing/Inv_Yellow_Flats.png",
     displayPrice: 3350,
     cataloguePrice: 4187,
     baseSellPrice: 1675,
@@ -5561,7 +5561,7 @@ export const clothing: Clothing[] = [
   {
     id: "yellow_gumboots",
     name: "Yellow Gumboots",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/0d/Inv_Yellow_Gumboots.png",
+    img: "/images/clothing/Inv_Yellow_Gumboots.png",
     displayPrice: 3600,
     cataloguePrice: 4500,
     baseSellPrice: 1800,
@@ -5573,7 +5573,7 @@ export const clothing: Clothing[] = [
   {
     id: "yellow_hair_bow",
     name: "Yellow Hair Bow",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/af/Inv_Yellow_Hair_Bow.png",
+    img: "/images/clothing/Inv_Yellow_Hair_Bow.png",
     displayPrice: 3000,
     cataloguePrice: 3750,
     baseSellPrice: 1500,
@@ -5585,7 +5585,7 @@ export const clothing: Clothing[] = [
   {
     id: "yellow_hoodie",
     name: "Yellow Hoodie",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/52/Inv_Yellow_Hoodie.png",
+    img: "/images/clothing/Inv_Yellow_Hoodie.png",
     displayPrice: 2306,
     cataloguePrice: 2882,
     baseSellPrice: 1153,
@@ -5597,7 +5597,7 @@ export const clothing: Clothing[] = [
   {
     id: "yellow_plaid_dress",
     name: "Yellow Plaid Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2c/Inv_Yellow_Plaid_Dress.png",
+    img: "/images/clothing/Inv_Yellow_Plaid_Dress.png",
     displayPrice: 2130,
     cataloguePrice: 2662,
     baseSellPrice: 1065,
@@ -5609,7 +5609,7 @@ export const clothing: Clothing[] = [
   {
     id: "yellow_polka_dot_dress",
     name: "Yellow Polka Dot Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/91/Inv_Yellow_Polka_Dot_Dress.png",
+    img: "/images/clothing/Inv_Yellow_Polka_Dot_Dress.png",
     displayPrice: 1730,
     cataloguePrice: 2162,
     baseSellPrice: 865,
@@ -5621,7 +5621,7 @@ export const clothing: Clothing[] = [
   {
     id: "yellow_print_dress",
     name: "Yellow Print Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6c/Inv_Yellow_Print_Dress.png",
+    img: "/images/clothing/Inv_Yellow_Print_Dress.png",
     displayPrice: 3390,
     cataloguePrice: 4237,
     baseSellPrice: 1695,
@@ -5633,7 +5633,7 @@ export const clothing: Clothing[] = [
   {
     id: "yellow_print_pants",
     name: "Yellow Print Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/83/Inv_Yellow_Print_Pants.png",
+    img: "/images/clothing/Inv_Yellow_Print_Pants.png",
     displayPrice: 1806,
     cataloguePrice: 2257,
     baseSellPrice: 903,
@@ -5645,7 +5645,7 @@ export const clothing: Clothing[] = [
   {
     id: "yellow_raglan_sleeve",
     name: "Yellow Raglan Sleeve",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/da/Inv_Yellow_Raglan_Sleeve.png",
+    img: "/images/clothing/Inv_Yellow_Raglan_Sleeve.png",
     displayPrice: 3200,
     cataloguePrice: 4000,
     baseSellPrice: 1600,
@@ -5657,7 +5657,7 @@ export const clothing: Clothing[] = [
   {
     id: "yellow_shorts",
     name: "Yellow Shorts",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/50/Inv_Yellow_Shorts.png",
+    img: "/images/clothing/Inv_Yellow_Shorts.png",
     displayPrice: 1806,
     cataloguePrice: 2257,
     baseSellPrice: 903,
@@ -5669,7 +5669,7 @@ export const clothing: Clothing[] = [
   {
     id: "yellow_sneakers",
     name: "Yellow Sneakers",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/30/Inv_Yellow_Sneakers.png",
+    img: "/images/clothing/Inv_Yellow_Sneakers.png",
     displayPrice: 3600,
     cataloguePrice: 4500,
     baseSellPrice: 1800,
@@ -5681,7 +5681,7 @@ export const clothing: Clothing[] = [
   {
     id: "yellow_stripe_jumper",
     name: "Yellow Stripe Jumper",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1f/Inv_Yellow_Stripe_Jumper.png",
+    img: "/images/clothing/Inv_Yellow_Stripe_Jumper.png",
     displayPrice: 2306,
     cataloguePrice: 2882,
     baseSellPrice: 1153,
@@ -5693,7 +5693,7 @@ export const clothing: Clothing[] = [
   {
     id: "yellow_sweat_pants",
     name: "Yellow Sweat Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/bb/Inv_Yellow_Sweat_Pants.png",
+    img: "/images/clothing/Inv_Yellow_Sweat_Pants.png",
     displayPrice: 1060,
     cataloguePrice: 1325,
     baseSellPrice: 530,
@@ -5705,7 +5705,7 @@ export const clothing: Clothing[] = [
   {
     id: "yellow_sweats",
     name: "Yellow Sweats",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1e/Inv_Yellow_Sweats.png",
+    img: "/images/clothing/Inv_Yellow_Sweats.png",
     displayPrice: 1800,
     cataloguePrice: 2250,
     baseSellPrice: 900,
@@ -5717,7 +5717,7 @@ export const clothing: Clothing[] = [
   {
     id: "yellow_tshirt",
     name: "Yellow T-Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/80/Inv_Yellow_T-Shirt.png",
+    img: "/images/clothing/Inv_Yellow_T-Shirt.png",
     displayPrice: 2608,
     cataloguePrice: 3260,
     baseSellPrice: 1304,
@@ -5729,7 +5729,7 @@ export const clothing: Clothing[] = [
   {
     id: "conductor_cap",
     name: "Conductor Cap",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/7e/Inv_Conductor_Cap.png",
+    img: "/images/clothing/Inv_Conductor_Cap.png",
     displayPrice: 6520,
     cataloguePrice: 8150,
     baseSellPrice: 3260,
@@ -5741,7 +5741,7 @@ export const clothing: Clothing[] = [
   {
     id: "conductor_pants",
     name: "Conductor Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/87/Inv_Conductor_Pants.png",
+    img: "/images/clothing/Inv_Conductor_Pants.png",
     displayPrice: 6306,
     cataloguePrice: 7882,
     baseSellPrice: 3153,
@@ -5753,7 +5753,7 @@ export const clothing: Clothing[] = [
   {
     id: "conductor_shirt",
     name: "Conductor Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/18/Inv_Conductor_Shirt.png",
+    img: "/images/clothing/Inv_Conductor_Shirt.png",
     displayPrice: 6306,
     cataloguePrice: 7882,
     baseSellPrice: 3153,
@@ -5765,7 +5765,7 @@ export const clothing: Clothing[] = [
   {
     id: "aquamarine_earrings",
     name: "Aquamarine Earrings",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8f/Inv_Aquamarine_Earrings.png",
+    img: "/images/clothing/Inv_Aquamarine_Earrings.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 810000,
@@ -5777,7 +5777,7 @@ export const clothing: Clothing[] = [
   {
     id: "blue_coat",
     name: "Blue Coat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/5d/Inv_Blue_Coat.png",
+    img: "/images/clothing/Inv_Blue_Coat.png",
     displayPrice: 5120,
     cataloguePrice: 6400,
     baseSellPrice: 2560,
@@ -5789,7 +5789,7 @@ export const clothing: Clothing[] = [
   {
     id: "bone_mask",
     name: "Bone Mask",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2d/Inv_Bone_Mask.png",
+    img: "/images/clothing/Inv_Bone_Mask.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 22750,
@@ -5801,7 +5801,7 @@ export const clothing: Clothing[] = [
   {
     id: "bone_pants",
     name: "Bone Pants",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2f/Inv_Bone_Pants.png",
+    img: "/images/clothing/Inv_Bone_Pants.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 800,
@@ -5813,7 +5813,7 @@ export const clothing: Clothing[] = [
   {
     id: "bone_shirt",
     name: "Bone Shirt",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/17/Inv_Bone_Shirt.png",
+    img: "/images/clothing/Inv_Bone_Shirt.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 1180,
@@ -5825,7 +5825,7 @@ export const clothing: Clothing[] = [
   {
     id: "bone_shoes",
     name: "Bone Shoes",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c0/Inv_Bone_Shoes.png",
+    img: "/images/clothing/Inv_Bone_Shoes.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 1200,
@@ -5837,7 +5837,7 @@ export const clothing: Clothing[] = [
   {
     id: "emerald_earrings",
     name: "Emerald Earrings",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/33/Inv_Emerald_Earrings.png",
+    img: "/images/clothing/Inv_Emerald_Earrings.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 810000,
@@ -5849,7 +5849,7 @@ export const clothing: Clothing[] = [
   {
     id: "face_bandage",
     name: "Face Bandage",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b5/Inv_Face_Bandage.png",
+    img: "/images/clothing/Inv_Face_Bandage.png",
     displayPrice: 10800,
     cataloguePrice: 13500,
     baseSellPrice: 5400,
@@ -5861,7 +5861,7 @@ export const clothing: Clothing[] = [
   {
     id: "fiery_halo_jimmys_boat",
     name: "Fiery Halo Jimmy's Boat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f4/Inv_Fiery_Halo.png",
+    img: "/images/clothing/Inv_Fiery_Halo.png",
     displayPrice: 50000000,
     cataloguePrice: null,
     baseSellPrice: 1000000,
@@ -5873,7 +5873,7 @@ export const clothing: Clothing[] = [
   {
     id: "giant_bat_wings",
     name: "Giant Bat Wings",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/be/Inv_Giant_Bat_Wings.png",
+    img: "/images/clothing/Inv_Giant_Bat_Wings.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 25500,
@@ -5885,7 +5885,7 @@ export const clothing: Clothing[] = [
   {
     id: "giant_feather_wings",
     name: "Giant Feather Wings",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8e/Inv_Giant_Feather_Wings.png",
+    img: "/images/clothing/Inv_Giant_Feather_Wings.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 25500,
@@ -5897,7 +5897,7 @@ export const clothing: Clothing[] = [
   {
     id: "glowing_coat",
     name: "Glowing Coat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1a/Inv_Glowing_Coat.png",
+    img: "/images/clothing/Inv_Glowing_Coat.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 7680,
@@ -5909,7 +5909,7 @@ export const clothing: Clothing[] = [
   {
     id: "glowing_dress",
     name: "Glowing Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a6/Inv_Glowing_Dress.png",
+    img: "/images/clothing/Inv_Glowing_Dress.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 15000,
@@ -5921,7 +5921,7 @@ export const clothing: Clothing[] = [
   {
     id: "glowing_glasses",
     name: "Glowing Glasses",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4b/Inv_Glowing_Glasses.png",
+    img: "/images/clothing/Inv_Glowing_Glasses.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 4800,
@@ -5933,7 +5933,7 @@ export const clothing: Clothing[] = [
   {
     id: "gold_crown_jimmys_boat",
     name: "Gold Crown Jimmy's Boat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f1/Inv_Gold_Crown.png",
+    img: "/images/clothing/Inv_Gold_Crown.png",
     displayPrice: 3000000,
     cataloguePrice: null,
     baseSellPrice: 60000,
@@ -5945,7 +5945,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_holiday_hat",
     name: "Green Holiday Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b4/Inv_Green_Holiday_Hat.png",
+    img: "/images/clothing/Inv_Green_Holiday_Hat.png",
     displayPrice: 1460,
     cataloguePrice: 1825,
     baseSellPrice: 730,
@@ -5957,7 +5957,7 @@ export const clothing: Clothing[] = [
   {
     id: "green_slip_dress",
     name: "Green Slip Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/55/Inv_Green_Slip_Dress.png",
+    img: "/images/clothing/Inv_Green_Slip_Dress.png",
     displayPrice: 4260,
     cataloguePrice: 5325,
     baseSellPrice: 2130,
@@ -5969,7 +5969,7 @@ export const clothing: Clothing[] = [
   {
     id: "halo_jimmys_boat",
     name: "Halo Jimmy's Boat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Inv_Halo.png",
+    img: "/images/clothing/Inv_Halo.png",
     displayPrice: 50000000,
     cataloguePrice: null,
     baseSellPrice: 1000000,
@@ -5981,7 +5981,7 @@ export const clothing: Clothing[] = [
   {
     id: "hoop_earrings",
     name: "Hoop Earrings",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/eb/Inv_Hoop_Earrings.png",
+    img: "/images/clothing/Inv_Hoop_Earrings.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 540000,
@@ -5993,7 +5993,7 @@ export const clothing: Clothing[] = [
   {
     id: "nose_bandage",
     name: "Nose Bandage",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/72/Inv_Nose_Bandage.png",
+    img: "/images/clothing/Inv_Nose_Bandage.png",
     displayPrice: 4800,
     cataloguePrice: 6000,
     baseSellPrice: 2400,
@@ -6005,7 +6005,7 @@ export const clothing: Clothing[] = [
   {
     id: "nose_ring",
     name: "Nose Ring",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/fe/Inv_Nose_Ring.png",
+    img: "/images/clothing/Inv_Nose_Ring.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 3600,
@@ -6017,7 +6017,7 @@ export const clothing: Clothing[] = [
   {
     id: "opal_earrings",
     name: "Opal Earrings",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/dd/Inv_Opal_Earrings.png",
+    img: "/images/clothing/Inv_Opal_Earrings.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 594000,
@@ -6029,7 +6029,7 @@ export const clothing: Clothing[] = [
   {
     id: "orange_coat",
     name: "Orange Coat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/84/Inv_Orange_Coat.png",
+    img: "/images/clothing/Inv_Orange_Coat.png",
     displayPrice: 5120,
     cataloguePrice: 6400,
     baseSellPrice: 2560,
@@ -6041,7 +6041,7 @@ export const clothing: Clothing[] = [
   {
     id: "orange_holiday_hat",
     name: "Orange Holiday Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b4/Inv_Orange_Holiday_Hat.png",
+    img: "/images/clothing/Inv_Orange_Holiday_Hat.png",
     displayPrice: 1460,
     cataloguePrice: 1825,
     baseSellPrice: 730,
@@ -6053,7 +6053,7 @@ export const clothing: Clothing[] = [
   {
     id: "orange_ripped_jeans",
     name: "Orange Ripped Jeans",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/58/Inv_Orange_Ripped_Jeans.png",
+    img: "/images/clothing/Inv_Orange_Ripped_Jeans.png",
     displayPrice: 3202,
     cataloguePrice: 4002,
     baseSellPrice: 1601,
@@ -6065,7 +6065,7 @@ export const clothing: Clothing[] = [
   {
     id: "paper_hat",
     name: "Paper Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e1/Inv_Paper_Hat.png",
+    img: "/images/clothing/Inv_Paper_Hat.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 1540,
@@ -6077,7 +6077,7 @@ export const clothing: Clothing[] = [
   {
     id: "pearl_earrings",
     name: "Pearl Earrings",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/7d/Inv_Pearl_Earrings.png",
+    img: "/images/clothing/Inv_Pearl_Earrings.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 558000,
@@ -6089,7 +6089,7 @@ export const clothing: Clothing[] = [
   {
     id: "pink_holiday_hat",
     name: "Pink Holiday Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/27/Inv_Pink_Holiday_Hat.png",
+    img: "/images/clothing/Inv_Pink_Holiday_Hat.png",
     displayPrice: 1460,
     cataloguePrice: 1825,
     baseSellPrice: 730,
@@ -6101,7 +6101,7 @@ export const clothing: Clothing[] = [
   {
     id: "purple_holiday_hat",
     name: "Purple Holiday Hat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/97/Inv_Purple_Holiday_Hat.png",
+    img: "/images/clothing/Inv_Purple_Holiday_Hat.png",
     displayPrice: 1460,
     cataloguePrice: 1825,
     baseSellPrice: 730,
@@ -6113,7 +6113,7 @@ export const clothing: Clothing[] = [
   {
     id: "red_slip_dress",
     name: "Red Slip Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e4/Inv_Red_Slip_Dress.png",
+    img: "/images/clothing/Inv_Red_Slip_Dress.png",
     displayPrice: 4260,
     cataloguePrice: 5325,
     baseSellPrice: 2130,
@@ -6125,7 +6125,7 @@ export const clothing: Clothing[] = [
   {
     id: "retro_sweater",
     name: "Retro Sweater",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/dd/Inv_Retro_Sweater.png",
+    img: "/images/clothing/Inv_Retro_Sweater.png",
     displayPrice: 2306,
     cataloguePrice: 2882,
     baseSellPrice: 1153,
@@ -6137,7 +6137,7 @@ export const clothing: Clothing[] = [
   {
     id: "royal_crown_jimmys_boat",
     name: "Royal Crown Jimmy's Boat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6f/Inv_Royal_Crown.png",
+    img: "/images/clothing/Inv_Royal_Crown.png",
     displayPrice: 3000000,
     cataloguePrice: null,
     baseSellPrice: 60000,
@@ -6149,7 +6149,7 @@ export const clothing: Clothing[] = [
   {
     id: "ruby_earrings",
     name: "Ruby Earrings",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/04/Inv_Ruby_Earrings.png",
+    img: "/images/clothing/Inv_Ruby_Earrings.png",
     displayPrice: null,
     cataloguePrice: null,
     baseSellPrice: 810000,
@@ -6161,7 +6161,7 @@ export const clothing: Clothing[] = [
   {
     id: "yellow_slip_dress",
     name: "Yellow Slip Dress",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/31/Inv_Yellow_Slip_Dress.png",
+    img: "/images/clothing/Inv_Yellow_Slip_Dress.png",
     displayPrice: 4260,
     cataloguePrice: 5325,
     baseSellPrice: 2130,

@@ -4,7 +4,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "animal_food",
     name: "Animal Food",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/55/Inv_Animal_Food.png",
+    img: "/images/resources/otherCraftables/Inv_Animal_Food.png",
     outputCount: "Varies",
     variants: [
       {
@@ -14,7 +14,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "Corn",
-            img: "https://static.wikia.nocookie.net/dinkum/images/5/5c/Inv_Corn.png",
+            img: "/images/resources/crops/Inv_Corn.png",
           },
         ],
       },
@@ -25,7 +25,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 5,
             name: "Fir Grass Seed",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Fir_Grass_Seeds.png",
+            img: "/images/resources/seeds/Inv_Fir_Grass_Seeds.png",
           },
         ],
       },
@@ -36,7 +36,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 5,
             name: "Grass Seed",
-            img: "https://static.wikia.nocookie.net/dinkum/images/8/8f/Inv_Grass_Seed.png",
+            img: "/images/resources/seeds/Inv_Grass_Seed.png",
           },
         ],
       },
@@ -47,7 +47,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 5,
             name: "Tropical Grass Seed",
-            img: "https://static.wikia.nocookie.net/dinkum/images/b/b3/Inv_Tropical_Grass_Seeds.png",
+            img: "/images/resources/seeds/Inv_Tropical_Grass_Seeds.png",
           },
         ],
       },
@@ -58,7 +58,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "aquamarine_shard",
     name: "Aquamarine Shard",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3c/Inv_Aquamarine_Shard.png",
+    img: "/images/resources/otherCraftables/Inv_Aquamarine_Shard.png",
     source: ["Crusher"],
     variants: [
       {
@@ -67,7 +67,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "Aquamarine Gemstone",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/a2/Aquamarine.png",
+            img: "/images/resources/minerals/Aquamarine.png",
           },
         ],
       },
@@ -77,7 +77,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "bag_of_cement",
     name: "Bag of Cement",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/eb/Inv_Bag_of_Cement.png",
+    img: "/images/resources/otherCraftables/Inv_Bag_of_Cement.png",
     source: ["Stone Grinder"],
     variants: [
       {
@@ -86,7 +86,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "Stone",
-            img: "https://static.wikia.nocookie.net/dinkum/images/0/09/Inv_Stone.png",
+            img: "/images/resources/minerals/Inv_Stone.png",
           },
         ],
       },
@@ -96,7 +96,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "berkonium_bar",
     name: "Berkonium Bar",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/ba/Inv_Berkonium_Bar.png",
+    img: "/images/resources/otherCraftables/Inv_Berkonium_Bar.png",
     source: ["Blast Furnace"],
     variants: [
       {
@@ -105,7 +105,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 5,
             name: "Berkonium Ore",
-            img: "https://static.wikia.nocookie.net/dinkum/images/c/cc/Inv_Berkonium_Ore.png",
+            img: "/images/resources/minerals/Inv_Berkonium_Ore.png",
           },
         ],
       },
@@ -115,7 +115,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "cheese",
     name: "Cheese",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a9/Inv_Cheese.png",
+    img: "/images/recipes/cookingRecipes/Inv_Cheese.png",
     outputCount: 1,
     variants: [
       {
@@ -124,7 +124,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "Milk",
-            img: "https://static.wikia.nocookie.net/dinkum/images/c/c6/Inv_Milk.png",
+            img: "/images/resources/animalProducts/Inv_Milk.png",
           },
         ],
       },
@@ -134,7 +134,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "High Quality Cheese",
-            img: "https://static.wikia.nocookie.net/dinkum/images/c/c1/Inv_High_Quality_Cheese.png",
+            img: "/images/recipes/cookingRecipes/Inv_High_Quality_Cheese.png",
           },
         ],
       },
@@ -152,7 +152,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "cloth",
     name: "Cloth",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8f/Inv_Cloth.png",
+    img: "/images/resources/otherCraftables/Inv_Cloth.png",
     source: ["Spinning Wheel"],
     variants: [
       {
@@ -161,7 +161,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "Wool",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/a2/Inv_Wool.png",
+            img: "/images/resources/animalProducts/Inv_Wool.png",
           },
         ],
       },
@@ -171,7 +171,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "copper_bar",
     name: "Copper Bar",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/7a/Inv_Copper_Bar.png",
+    img: "/images/resources/otherCraftables/Inv_Copper_Bar.png",
     source: ["John's Goods", "Crude Furnace", "Furnace", "Blast Furnace"],
     variants: [
       {
@@ -181,7 +181,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 5,
             name: "Copper Ore",
-            img: "https://static.wikia.nocookie.net/dinkum/images/6/60/Inv_Copper_Ore.png",
+            img: "/images/resources/minerals/Inv_Copper_Ore.png",
           },
         ],
       },
@@ -192,7 +192,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 5,
             name: "Copper Ore",
-            img: "https://static.wikia.nocookie.net/dinkum/images/6/60/Inv_Copper_Ore.png",
+            img: "/images/resources/minerals/Inv_Copper_Ore.png",
           },
         ],
       },
@@ -203,7 +203,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "Shiny Stone",
-            img: "https://static.wikia.nocookie.net/dinkum/images/1/16/Inv_Shiny_Stone.png",
+            img: "/images/resources/minerals/Inv_Shiny_Stone.png",
           },
         ],
       },
@@ -214,7 +214,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "emerald_shard",
     name: "Emerald Shard",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a8/Inv_Emerald_Shard.png",
+    img: "/images/resources/otherCraftables/Inv_Emerald_Shard.png",
     source: ["Crusher", "Jimmy's Boat"],
     variants: [
       {
@@ -223,7 +223,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "Emerald Gemstone",
-            img: "https://static.wikia.nocookie.net/dinkum/images/6/6a/Emerald.png",
+            img: "/images/resources/minerals/Emerald.png",
           },
         ],
       },
@@ -234,7 +234,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "fertilizer",
     name: "Fertilizer",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3f/Inv_Fertilizer.png",
+    img: "/images/resources/otherCraftables/Inv_Fertilizer.png",
     outputCount: "Varies",
     variants: [
       {
@@ -244,7 +244,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 8,
             name: "Alpha Antler",
-            img: "https://static.wikia.nocookie.net/dinkum/images/9/9c/Inv_Alpha_Antler.png",
+            img: "/images/resources/animalProducts/Inv_Alpha_Antler.png",
           },
         ],
       },
@@ -255,7 +255,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 8,
             name: "Alpha Eye",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/4c/Inv_Alpha_Eye.png",
+            img: "/images/resources/animalProducts/Inv_Alpha_Eye.png",
           },
         ],
       },
@@ -266,7 +266,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 8,
             name: "Alpha Scale",
-            img: "https://static.wikia.nocookie.net/dinkum/images/3/31/Inv_Alpha_Scale.png",
+            img: "/images/resources/animalProducts/Inv_Alpha_Scale.png",
           },
         ],
       },
@@ -277,7 +277,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 8,
             name: "Bone",
-            img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Bone.png",
+            img: "/images/resources/animalProducts/Inv_Bone.png",
           },
         ],
       },
@@ -288,7 +288,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 25,
             name: "Buccinidae Shell",
-            img: "https://static.wikia.nocookie.net/dinkum/images/0/0e/Inv_Buccinidae_Shell.png",
+            img: "/images/resources/foragables/Inv_Buccinidae_Shell.png",
           },
         ],
       },
@@ -299,7 +299,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 25,
             name: "Cassidae Shell",
-            img: "https://static.wikia.nocookie.net/dinkum/images/0/04/Inv_Cassidae_Shell.png",
+            img: "/images/resources/foragables/Inv_Cassidae_Shell.png",
           },
         ],
       },
@@ -310,7 +310,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 15,
             name: "Nautilus Shell",
-            img: "https://static.wikia.nocookie.net/dinkum/images/d/d8/Inv_Nautilus_Shell.png",
+            img: "/images/resources/foragables/Inv_Nautilus_Shell.png",
           },
         ],
       },
@@ -321,7 +321,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 4,
             name: "Roo Poo",
-            img: "https://static.wikia.nocookie.net/dinkum/images/9/9b/Inv_Roo_Poo.png",
+            img: "/images/resources/animalProducts/Inv_Roo_Poo.png",
           },
         ],
       },
@@ -332,7 +332,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 15,
             name: "Sand Dollar",
-            img: "https://static.wikia.nocookie.net/dinkum/images/3/3f/Inv_Sand_Dollar.png",
+            img: "/images/resources/foragables/Inv_Sand_Dollar.png",
           },
         ],
       },
@@ -343,7 +343,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 25,
             name: "Scallop Shell",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/20/Inv_Scallop_Shell.png",
+            img: "/images/resources/foragables/Inv_Scallop_Shell.png",
           },
         ],
       },
@@ -354,7 +354,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 10,
             name: "Syrinx Shell",
-            img: "https://static.wikia.nocookie.net/dinkum/images/6/6f/Inv_Syrinx_Shell.png",
+            img: "/images/resources/foragables/Inv_Syrinx_Shell.png",
           },
         ],
       },
@@ -365,7 +365,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 25,
             name: "Tonnidae Shell",
-            img: "https://static.wikia.nocookie.net/dinkum/images/6/6e/Inv_Tonnidae_Shell.png",
+            img: "/images/resources/foragables/Inv_Tonnidae_Shell.png",
           },
         ],
       },
@@ -376,7 +376,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 2,
             name: "Vombat Poo",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/48/Inv_Vombat_Poo.png",
+            img: "/images/resources/animalProducts/Inv_Vombat_Poo.png",
           },
         ],
       },
@@ -387,7 +387,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "flame_jelly_bed",
     name: "Flame Jelly Bed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/35/Inv_Flame_Jelly_Bed.png",
+    img: "/images/resources/otherCraftables/Inv_Flame_Jelly_Bed.png",
     outputCount: 5,
     variants: [
       {
@@ -396,7 +396,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "Flame Jelly",
-            img: "https://static.wikia.nocookie.net/dinkum/images/0/05/Inv_Flame_Jelly.png",
+            img: "/images/resources/animalProducts/Inv_Flame_Jelly.png",
           },
         ],
       },
@@ -407,7 +407,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "flour",
     name: "Flour",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Inv_Flour.png",
+    img: "/images/resources/otherCraftables/Inv_Flour.png",
     outputCount: 1,
     variants: [
       {
@@ -416,7 +416,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 4,
             name: "Wheat",
-            img: "https://static.wikia.nocookie.net/dinkum/images/7/78/Inv_Wheat.png",
+            img: "/images/resources/crops/Inv_Wheat.png",
           },
         ],
       },
@@ -432,7 +432,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "gold_bar",
     name: "Gold Bar",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/ec/Inv_Gold_Bar.png",
+    img: "/images/resources/otherCraftables/Inv_Gold_Bar.png",
     source: ["Furnace", "Blast Furnace"],
     variants: [
       {
@@ -442,7 +442,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 5,
             name: "Gold Ore",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/a6/Inv_Gold_Ore.png",
+            img: "/images/resources/minerals/Inv_Gold_Ore.png",
           },
         ],
       },
@@ -453,7 +453,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 5,
             name: "Gold Ore",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/a6/Inv_Gold_Ore.png",
+            img: "/images/resources/minerals/Inv_Gold_Ore.png",
           },
         ],
       },
@@ -463,7 +463,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "gum_wood_plank",
     name: "Gum Wood Plank",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/38/Inv_Gum_Wood_Plank.png",
+    img: "/images/resources/otherCraftables/Inv_Gum_Wood_Plank.png",
     source: ["Table Saw", "Improved Table Saw"],
     variants: [
       {
@@ -472,7 +472,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "Gum Log",
-            img: "https://static.wikia.nocookie.net/dinkum/images/f/ff/Inv_Gum_Log.png",
+            img: "/images/resources/foragables/Inv_Gum_Log.png",
           },
         ],
       },
@@ -482,7 +482,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "hard_wood_plank",
     name: "Hard Wood Plank",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/de/Inv_Hard_Wood_Plank.png",
+    img: "/images/resources/otherCraftables/Inv_Hard_Wood_Plank.png",
     source: ["Table Saw", "Improved Table Saw"],
     variants: [
       {
@@ -491,7 +491,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "Hard Wood Log",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/27/Inv_Hard_Wood_Log.png",
+            img: "/images/resources/foragables/Inv_Hard_Wood_Log.png",
           },
         ],
       },
@@ -501,7 +501,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "Bottle Tree Wood",
-            img: "https://static.wikia.nocookie.net/dinkum/images/e/e0/Inv_Bottle_Tree_Wood.png",
+            img: "/images/resources/foragables/Inv_Bottle_Tree_Wood.png",
           },
         ],
       },
@@ -511,7 +511,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "high_quality_cheese",
     name: "High Quality Cheese",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c1/Inv_High_Quality_Cheese.png",
+    img: "/images/recipes/cookingRecipes/Inv_High_Quality_Cheese.png",
     outputCount: 1,
     variants: [
       {
@@ -520,7 +520,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "High Quality Milk",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/ab/Inv_High_Quality_Milk.png",
+            img: "/images/resources/animalProducts/Inv_High_Quality_Milk.png",
           },
         ],
       },
@@ -538,7 +538,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "ice_cream",
     name: "Ice Cream",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/69/Inv_Ice_Cream.png",
+    img: "/images/resources/otherCraftables/Inv_Ice_Cream.png",
     outputCount: 1,
     variants: [
       {
@@ -547,7 +547,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "High Quality Milk",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/ab/Inv_High_Quality_Milk.png",
+            img: "/images/resources/animalProducts/Inv_High_Quality_Milk.png",
           },
         ],
       },
@@ -566,7 +566,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "iron_bar",
     name: "Iron Bar",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Inv_Iron_Bar.png",
+    img: "/images/resources/otherCraftables/Inv_Iron_Bar.png",
     source: ["John's Goods", "Crude Furnace", "Furnace", "Blast Furnace"],
     variants: [
       {
@@ -576,7 +576,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 5,
             name: "Iron Ore",
-            img: "https://static.wikia.nocookie.net/dinkum/images/f/fa/Inv_Iron_Ore.png",
+            img: "/images/resources/minerals/Inv_Iron_Ore.png",
           },
         ],
       },
@@ -587,7 +587,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 5,
             name: "Iron Ore",
-            img: "https://static.wikia.nocookie.net/dinkum/images/f/fa/Inv_Iron_Ore.png",
+            img: "/images/resources/minerals/Inv_Iron_Ore.png",
           },
         ],
       },
@@ -598,7 +598,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "Shiny Stone",
-            img: "https://static.wikia.nocookie.net/dinkum/images/1/16/Inv_Shiny_Stone.png",
+            img: "/images/resources/minerals/Inv_Shiny_Stone.png",
           },
         ],
       },
@@ -609,7 +609,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "meteorite_chunk",
     name: "Meteorite Chunk",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Meteorite_Chunk.png",
+    img: "/images/resources/minerals/Inv_Meteorite_Chunk.png",
     variants: [
       {
         id: "standard",
@@ -617,7 +617,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "Meteorite",
-            img: "https://static.wikia.nocookie.net/dinkum/images/9/9e/Meteorite.png",
+            img: "/images/resources/minerals/Meteorite.png",
           },
         ],
       },
@@ -627,7 +627,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "opal",
     name: "Opal",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a7/Inv_Opal.png",
+    img: "/images/resources/otherCraftables/Inv_Opal.png",
     source: [
       "Deep Mines",
       "Thunder Egg",
@@ -643,7 +643,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "Shiny Stone",
-            img: "https://static.wikia.nocookie.net/dinkum/images/1/16/Inv_Shiny_Stone.png",
+            img: "/images/resources/minerals/Inv_Shiny_Stone.png",
           },
         ],
       },
@@ -653,7 +653,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "palm_wood_plank",
     name: "Palm Wood Plank",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/39/Inv_Palm_Wood_Plank.png",
+    img: "/images/resources/otherCraftables/Inv_Palm_Wood_Plank.png",
     source: ["Table Saw", "Improved Table Saw"],
     variants: [
       {
@@ -662,7 +662,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "Palm Wood",
-            img: "https://static.wikia.nocookie.net/dinkum/images/0/02/Inv_Palm_Wood.png",
+            img: "/images/resources/foragables/Inv_Palm_Wood.png",
           },
         ],
       },
@@ -672,7 +672,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "perfect_aquamarine",
     name: "Perfect Aquamarine",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/12/Inv_Perfect_Aquamarine.png",
+    img: "/images/resources/minerals/Inv_Perfect_Aquamarine.png",
     source: ["Crusher"],
     variants: [
       {
@@ -681,7 +681,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "Aquamarine Gemstone",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/a2/Aquamarine.png",
+            img: "/images/resources/minerals/Aquamarine.png",
           },
         ],
       },
@@ -691,7 +691,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "perfect_emerald",
     name: "Perfect Emerald",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8b/Inv_Perfect_Emerald.png",
+    img: "/images/resources/minerals/Inv_Perfect_Emerald.png",
     source: ["Crusher"],
     variants: [
       {
@@ -700,7 +700,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "Emerald Gemstone",
-            img: "https://static.wikia.nocookie.net/dinkum/images/6/6a/Emerald.png",
+            img: "/images/resources/minerals/Emerald.png",
           },
         ],
       },
@@ -710,7 +710,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "perfect_ruby",
     name: "Perfect Ruby",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/14/Inv_Perfect_Ruby.png",
+    img: "/images/resources/minerals/Inv_Perfect_Ruby.png",
     source: ["Crusher"],
     variants: [
       {
@@ -719,7 +719,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "Ruby Gemstone",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/a9/Ruby.png",
+            img: "/images/resources/minerals/Ruby.png",
           },
         ],
       },
@@ -729,7 +729,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "ruby_shard",
     name: "Ruby Shard",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/50/Inv_Ruby_Shard.png",
+    img: "/images/resources/otherCraftables/Inv_Ruby_Shard.png",
     source: ["Crusher", "Jimmy's Boat"],
     variants: [
       {
@@ -738,7 +738,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "Ruby Gemstone",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/a9/Ruby.png",
+            img: "/images/resources/minerals/Ruby.png",
           },
         ],
       },
@@ -749,7 +749,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "silk",
     name: "Silk",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/51/Inv_Silk.png",
+    img: "/images/resources/otherCraftables/Inv_Silk.png",
     source: ["Spinning Wheel"],
     variants: [
       {
@@ -758,7 +758,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 10,
             name: "Cocoon",
-            img: "https://static.wikia.nocookie.net/dinkum/images/3/31/Inv_Cocoon.png",
+            img: "/images/resources/animalProducts/Inv_Cocoon.png",
           },
         ],
       },
@@ -768,7 +768,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "spinifex_resin",
     name: "Spinifex Resin",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a3/Inv_Spinifex_Resin.png",
+    img: "/images/resources/otherCraftables/Inv_Spinifex_Resin.png",
     source: ["Campfire", "BBQ"],
     variants: [
       {
@@ -777,7 +777,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "Spinifex Tuft",
-            img: "https://static.wikia.nocookie.net/dinkum/images/0/06/Inv_Spinifex_Tuft.png",
+            img: "/images/resources/foragables/Inv_Spinifex_Tuft.png",
           },
         ],
       },
@@ -787,7 +787,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "sugar",
     name: "Sugar",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1f/Inv_Sugar.png",
+    img: "/images/resources/otherCraftables/Inv_Sugar.png",
     outputCount: 1,
     variants: [
       {
@@ -796,7 +796,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "Sugar Cane",
-            img: "https://static.wikia.nocookie.net/dinkum/images/8/84/Inv_Sugar_Cane.png",
+            img: "/images/resources/crops/Inv_Sugar_Cane.png",
           },
         ],
       },
@@ -812,7 +812,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "tin_bar",
     name: "Tin Bar",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b8/Inv_Tin_Bar.png",
+    img: "/images/resources/otherCraftables/Inv_Tin_Bar.png",
     source: ["Crude Furnace", "Furnace", "Blast Furnace"],
     variants: [
       {
@@ -822,7 +822,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 5,
             name: "Tin Ore",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/a9/Inv_Tin_Ore.png",
+            img: "/images/resources/minerals/Inv_Tin_Ore.png",
           },
         ],
       },
@@ -833,7 +833,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 5,
             name: "Tin Ore",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/a9/Inv_Tin_Ore.png",
+            img: "/images/resources/minerals/Inv_Tin_Ore.png",
           },
         ],
       },
@@ -844,7 +844,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "Tin Sheet",
-            img: "https://static.wikia.nocookie.net/dinkum/images/3/3b/Inv_Tin_Sheet.png",
+            img: "/images/resources/otherCraftables/Inv_Tin_Sheet.png",
           },
         ],
       },
@@ -855,7 +855,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "Shiny Stone",
-            img: "https://static.wikia.nocookie.net/dinkum/images/1/16/Inv_Shiny_Stone.png",
+            img: "/images/resources/minerals/Inv_Shiny_Stone.png",
           },
         ],
       },
@@ -865,7 +865,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "tin_sheet",
     name: "Tin Sheet",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3b/Inv_Tin_Sheet.png",
+    img: "/images/resources/otherCraftables/Inv_Tin_Sheet.png",
     source: ["Table Saw", "Improved Table Saw", "Old Barrel"],
     variants: [
       {
@@ -874,7 +874,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "Tin Bar",
-            img: "https://static.wikia.nocookie.net/dinkum/images/b/b8/Inv_Tin_Bar.png",
+            img: "/images/resources/otherCraftables/Inv_Tin_Bar.png",
           },
         ],
       },
@@ -884,7 +884,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "watermelon_popsicle",
     name: "Watermelon Popsicle",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/67/Inv_Watermelon_Popsicle.png",
+    img: "/images/resources/otherCraftables/Inv_Watermelon_Popsicle.png",
     outputCount: 1,
     variants: [
       {
@@ -893,7 +893,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "Watermelon",
-            img: "https://static.wikia.nocookie.net/dinkum/images/d/da/Inv_Watermelon.png",
+            img: "/images/resources/crops/Inv_Watermelon.png",
           },
         ],
       },
@@ -912,7 +912,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "insta_grow",
     name: "Insta-Grow",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/41/Inv_Insta-Grow.png",
+    img: "/images/resources/otherCraftables/Inv_Insta-Grow.png",
     outputCount: "Varies",
     variants: [
       {
@@ -922,7 +922,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "Alpha Antler",
-            img: "https://static.wikia.nocookie.net/dinkum/images/9/9c/Inv_Alpha_Antler.png",
+            img: "/images/resources/animalProducts/Inv_Alpha_Antler.png",
           },
         ],
       },
@@ -933,7 +933,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "Alpha Eye",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/4c/Inv_Alpha_Eye.png",
+            img: "/images/resources/animalProducts/Inv_Alpha_Eye.png",
           },
         ],
       },
@@ -944,7 +944,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "Alpha Scale",
-            img: "https://static.wikia.nocookie.net/dinkum/images/3/31/Inv_Alpha_Scale.png",
+            img: "/images/resources/animalProducts/Inv_Alpha_Scale.png",
           },
         ],
       },
@@ -955,7 +955,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "Alpha Shark Tooth",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2b/Inv_Alpha_Shark_Tooth.png",
+            img: "/images/resources/animalProducts/Inv_Alpha_Shark_Tooth.png",
           },
         ],
       },
@@ -966,7 +966,7 @@ export const otherCraftables: Recipe[] = [
   {
     id: "season_all",
     name: "Season-All",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/11/Inv_Season-All.png",
+    img: "/images/resources/otherCraftables/Inv_Season-All.png",
     outputCount: "Varies",
     variants: [
       {
@@ -976,7 +976,7 @@ export const otherCraftables: Recipe[] = [
           {
             count: 1,
             name: "Tropical Grass Turf Roll",
-            img: "https://static.wikia.nocookie.net/dinkum/images/1/1a/Inv_Tropical_Grass_Turf_Roll.png",
+            img: "/images/resources/foragables/Inv_Tropical_Grass_Turf_Roll.png",
           },
         ],
       },

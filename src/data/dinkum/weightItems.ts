@@ -4,7 +4,7 @@ export const weightItems: WeightItem[] = [
   {
     id: "amber_chunk",
     name: "Amber Chunk",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/76/Amber_Chunk.png",
+    img: "/images/resources/minerals/Amber_Chunk.png",
     pricePerKg: 15000,
     minWeight: 2,
     maxWeight: 4,
@@ -12,7 +12,7 @@ export const weightItems: WeightItem[] = [
   {
     id: "aquamarine",
     name: "Aquamarine",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a2/Aquamarine.png",
+    img: "/images/resources/minerals/Aquamarine.png",
     pricePerKg: 15000,
     minWeight: 2,
     maxWeight: 6,
@@ -20,7 +20,7 @@ export const weightItems: WeightItem[] = [
   {
     id: "bee_hive",
     name: "Bee Hive",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/82/Bee_Hive.png/",
+    img: "/images/resources/foragables/Bee_Hive.png",
     pricePerKg: 8000,
     minWeight: 1,
     maxWeight: 1.5,
@@ -28,7 +28,7 @@ export const weightItems: WeightItem[] = [
   {
     id: "raw_berkonium",
     name: "Raw Berkonium",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/54/Raw_Berkonium.png",
+    img: "/images/weightItems/Raw_Berkonium.png",
     pricePerKg: 25000,
     minWeight: 2,
     maxWeight: 6,
@@ -36,7 +36,7 @@ export const weightItems: WeightItem[] = [
   {
     id: "emerald",
     name: "Emerald",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6a/Emerald.png",
+    img: "/images/resources/minerals/Emerald.png",
     pricePerKg: 15000,
     minWeight: 2,
     maxWeight: 6,
@@ -44,7 +44,7 @@ export const weightItems: WeightItem[] = [
   {
     id: "fossil",
     name: "Fossil",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8c/Fossil.png",
+    img: "/images/weightItems/Fossil.png",
     pricePerKg: 10000,
     minWeight: 3,
     maxWeight: 12,
@@ -52,7 +52,7 @@ export const weightItems: WeightItem[] = [
   {
     id: "meteorite",
     name: "Meteorite",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/9e/Meteorite.png",
+    img: "/images/resources/minerals/Meteorite.png",
     pricePerKg: 200000,
     minWeight: 1,
     maxWeight: 3,
@@ -60,7 +60,7 @@ export const weightItems: WeightItem[] = [
   {
     id: "ruby",
     name: "Ruby",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a9/Ruby.png",
+    img: "/images/resources/minerals/Ruby.png",
     pricePerKg: 15000,
     minWeight: 2,
     maxWeight: 6,
@@ -68,7 +68,7 @@ export const weightItems: WeightItem[] = [
   {
     id: "big_snow_ball",
     name: "Big Snow Ball",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/27/Big_Snow_Ball.png",
+    img: "/images/weightItems/Big_Snow_Ball.png",
     pricePerKg: 100,
     minWeight: 1,
     maxWeight: 5,
@@ -76,7 +76,7 @@ export const weightItems: WeightItem[] = [
   {
     id: "snow_man",
     name: "Snow Man",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/45/Snow_Man.png",
+    img: "/images/weightItems/Snow_Man.png",
     pricePerKg: 100,
     minWeight: 1,
     maxWeight: 5,
@@ -84,7 +84,7 @@ export const weightItems: WeightItem[] = [
   {
     id: "thunder_egg",
     name: "Thunder Egg",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/14/Thunder_Egg.png",
+    img: "/images/weightItems/Thunder_Egg.png",
     pricePerKg: 33000,
     minWeight: 1,
     maxWeight: 3,
@@ -92,7 +92,7 @@ export const weightItems: WeightItem[] = [
   {
     id: "wary_mu_egg",
     name: "Wary Mu Egg",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/07/Wary_Mu_Egg.png",
+    img: "/images/weightItems/Wary_Mu_Egg.png",
     pricePerKg: 8000,
     minWeight: 1,
     maxWeight: 3,

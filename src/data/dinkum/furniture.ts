@@ -4,7 +4,7 @@ export const furniture: Furniture[] = [
   {
     id: "alarm_clock",
     name: "Alarm Clock",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/9f/Inv_Alarm_Clock.png",
+    img: "/images/furniture/Inv_Alarm_Clock.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 11080,
     cataloguePrice: 13850,
@@ -14,7 +14,7 @@ export const furniture: Furniture[] = [
   {
     id: "antique_desk",
     name: "Antique Desk",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/5a/Inv_Antique_Desk.png",
+    img: "/images/furniture/Inv_Antique_Desk.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 820,
     cataloguePrice: 1025,
@@ -24,7 +24,7 @@ export const furniture: Furniture[] = [
   {
     id: "apple_box",
     name: "Apple Box",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d4/Inv_Apple_Box.png",
+    img: "/images/furniture/Inv_Apple_Box.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 440,
     melvinsCatalogue: false,
@@ -32,7 +32,7 @@ export const furniture: Furniture[] = [
   {
     id: "apple_jam_set",
     name: "Apple Jam Set",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/03/Inv_Apple_Jam_Set.png",
+    img: "/images/furniture/Inv_Apple_Jam_Set.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 1000,
     melvinsCatalogue: false,
@@ -40,7 +40,7 @@ export const furniture: Furniture[] = [
   {
     id: "banana_box",
     name: "Banana Box",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/63/Inv_Banana_Box.png",
+    img: "/images/furniture/Inv_Banana_Box.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 440,
     melvinsCatalogue: false,
@@ -48,7 +48,7 @@ export const furniture: Furniture[] = [
   {
     id: "banana_jam_set",
     name: "Banana Jam Set",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e0/Inv_Banana_Jam_Set.png",
+    img: "/images/furniture/Inv_Banana_Jam_Set.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 1000,
     melvinsCatalogue: false,
@@ -56,7 +56,7 @@ export const furniture: Furniture[] = [
   {
     id: "bank_wall",
     name: "Bank Wall",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/7b/Inv_Bank_Wall.png",
+    img: "/images/furniture/Inv_Bank_Wall.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 5000,
     cataloguePrice: 6250,
@@ -66,7 +66,7 @@ export const furniture: Furniture[] = [
   {
     id: "basic_blue_orange",
     name: "Basic Blue Orange",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/ac/Inv_Basic_Blue_Orange.png",
+    img: "/images/furniture/Inv_Basic_Blue_Orange.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 2900,
     cataloguePrice: 3625,
@@ -76,7 +76,7 @@ export const furniture: Furniture[] = [
   {
     id: "basic_blue_rug",
     name: "Basic Blue Rug",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b4/Inv_Basic_Blue_Rug.png",
+    img: "/images/furniture/Inv_Basic_Blue_Rug.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 2900,
     cataloguePrice: 3625,
@@ -86,7 +86,7 @@ export const furniture: Furniture[] = [
   {
     id: "basic_blue_wallpaper",
     name: "Basic Blue Wallpaper",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Basic_Blue_Wallpaper.png",
+    img: "/images/furniture/Inv_Basic_Blue_Wallpaper.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 500,
     cataloguePrice: 625,
@@ -96,7 +96,7 @@ export const furniture: Furniture[] = [
   {
     id: "basic_green_rug",
     name: "Basic Green Rug",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1c/Inv_Basic_Green_Rug.png",
+    img: "/images/furniture/Inv_Basic_Green_Rug.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 2900,
     cataloguePrice: 3625,
@@ -106,7 +106,7 @@ export const furniture: Furniture[] = [
   {
     id: "basic_green_wallpaper",
     name: "Basic Green Wallpaper",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/cb/Inv_Basic_Green_Wallpaper.png",
+    img: "/images/furniture/Inv_Basic_Green_Wallpaper.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 500,
     cataloguePrice: 625,
@@ -116,7 +116,7 @@ export const furniture: Furniture[] = [
   {
     id: "basic_pink_rug",
     name: "Basic Pink Rug",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/19/Inv_Basic_Pink_Rug.png",
+    img: "/images/furniture/Inv_Basic_Pink_Rug.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 2900,
     cataloguePrice: 3625,
@@ -126,7 +126,7 @@ export const furniture: Furniture[] = [
   {
     id: "basic_pink_wallpaper",
     name: "Basic Pink Wallpaper",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/22/Inv_Basic_Pink_Wallpaper.png",
+    img: "/images/furniture/Inv_Basic_Pink_Wallpaper.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 500,
     cataloguePrice: 625,
@@ -136,7 +136,7 @@ export const furniture: Furniture[] = [
   {
     id: "basic_purple_rug",
     name: "Basic Purple Rug",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/cf/Inv_Basic_Purple_Rug.png",
+    img: "/images/furniture/Inv_Basic_Purple_Rug.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 2900,
     cataloguePrice: 3625,
@@ -146,7 +146,7 @@ export const furniture: Furniture[] = [
   {
     id: "basic_red_rug",
     name: "Basic Red Rug",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/dd/Inv_Basic_Red_Rug.png",
+    img: "/images/furniture/Inv_Basic_Red_Rug.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 2900,
     cataloguePrice: 3625,
@@ -156,7 +156,7 @@ export const furniture: Furniture[] = [
   {
     id: "basic_red_wall",
     name: "Basic Red Wall",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/43/Inv_Basic_Red_Wall.png",
+    img: "/images/furniture/Inv_Basic_Red_Wall.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 500,
     cataloguePrice: 625,
@@ -166,7 +166,7 @@ export const furniture: Furniture[] = [
   {
     id: "basic_white_wall",
     name: "Basic White Wall",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/ef/Inv_Basic_White_Wall.png",
+    img: "/images/furniture/Inv_Basic_White_Wall.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 500,
     cataloguePrice: 625,
@@ -176,7 +176,7 @@ export const furniture: Furniture[] = [
   {
     id: "basic_wooden_floor",
     name: "Basic Wooden Floor",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/fe/Inv_Basic_Wooden_Floor.png",
+    img: "/images/furniture/Inv_Basic_Wooden_Floor.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 500,
     cataloguePrice: 625,
@@ -186,7 +186,7 @@ export const furniture: Furniture[] = [
   {
     id: "basic_wooden_wall",
     name: "Basic Wooden Wall",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/36/Inv_Basic_Wooden_Wall.png",
+    img: "/images/furniture/Inv_Basic_Wooden_Wall.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 500,
     cataloguePrice: 625,
@@ -196,7 +196,7 @@ export const furniture: Furniture[] = [
   {
     id: "basin",
     name: "Basin",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6f/Inv_Basin.png",
+    img: "/images/furniture/Inv_Basin.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 0,
     cataloguePrice: 0,
@@ -206,7 +206,7 @@ export const furniture: Furniture[] = [
   {
     id: "bath_tub",
     name: "Bath Tub",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/9f/Inv_Bath_Tub.png",
+    img: "/images/furniture/Inv_Bath_Tub.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 604,
     cataloguePrice: 755,
@@ -216,7 +216,7 @@ export const furniture: Furniture[] = [
   {
     id: "beetroot_box",
     name: "Beetroot Box",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a1/Inv_Beetroot_Box.png",
+    img: "/images/furniture/Inv_Beetroot_Box.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 440,
     melvinsCatalogue: false,
@@ -224,7 +224,7 @@ export const furniture: Furniture[] = [
   {
     id: "billy_button_pot",
     name: "Billy Button Pot",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2d/Inv_Billy_Button_Pot.png",
+    img: "/images/furniture/Inv_Billy_Button_Pot.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1968,
     cataloguePrice: 2460,
@@ -235,7 +235,7 @@ export const furniture: Furniture[] = [
   {
     id: "blue_beach_chair",
     name: "Blue Beach Chair",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/9c/Inv_Blue_Beach_Chair.png",
+    img: "/images/furniture/Inv_Blue_Beach_Chair.png",
     source: ["Island Reef", "Cooler"],
     baseSellPrice: 435,
     melvinsCatalogue: false,
@@ -244,7 +244,7 @@ export const furniture: Furniture[] = [
   {
     id: "blue_beach_hammock",
     name: "Blue Beach Hammock",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/85/Inv_Blue_Beach_Hammock.png",
+    img: "/images/furniture/Inv_Blue_Beach_Hammock.png",
     source: ["Island Reef", "Cooler"],
     baseSellPrice: 30,
     melvinsCatalogue: false,
@@ -253,7 +253,7 @@ export const furniture: Furniture[] = [
   {
     id: "blue_beach_umbrella",
     name: "Blue Beach Umbrella",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4a/Inv_Blue_Beach_Umbrella.png",
+    img: "/images/furniture/Inv_Blue_Beach_Umbrella.png",
     source: ["Island Reef"],
     baseSellPrice: 14881,
     melvinsCatalogue: false,
@@ -262,7 +262,7 @@ export const furniture: Furniture[] = [
   {
     id: "blue_pattern_wall",
     name: "Blue Pattern Wall",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a9/Inv_Blue_Pattern_Wall.png",
+    img: "/images/furniture/Inv_Blue_Pattern_Wall.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 500,
     cataloguePrice: 625,
@@ -272,7 +272,7 @@ export const furniture: Furniture[] = [
   {
     id: "bottle_brush_vase",
     name: "Bottle Brush Vase",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/ea/Inv_Bottle_Brush_Vase.png",
+    img: "/images/furniture/Inv_Bottle_Brush_Vase.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 3000,
     cataloguePrice: 3750,
@@ -283,7 +283,7 @@ export const furniture: Furniture[] = [
   {
     id: "bottle_tea_set",
     name: "Bottle Tea Set",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/ec/Inv_Bottle_Tea_Set.png",
+    img: "/images/furniture/Inv_Bottle_Tea_Set.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 1000,
     melvinsCatalogue: false,
@@ -291,7 +291,7 @@ export const furniture: Furniture[] = [
   {
     id: "bottled_brush_set",
     name: "Bottled Brush Set",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/36/Inv_Bottled_Brush_Set.png",
+    img: "/images/furniture/Inv_Bottled_Brush_Set.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 1000,
     melvinsCatalogue: false,
@@ -299,7 +299,7 @@ export const furniture: Furniture[] = [
   {
     id: "bouquet_pot",
     name: "Bouquet Pot",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/56/Inv_Bouquet_Pot.png",
+    img: "/images/furniture/Inv_Bouquet_Pot.png",
     source: ["Prize Box"],
     baseSellPrice: 500,
     melvinsCatalogue: false,
@@ -308,7 +308,7 @@ export const furniture: Furniture[] = [
   {
     id: "bread_board",
     name: "Bread Board",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/99/Inv_Bread_Board.png",
+    img: "/images/furniture/Inv_Bread_Board.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 1000,
     melvinsCatalogue: false,
@@ -316,7 +316,7 @@ export const furniture: Furniture[] = [
   {
     id: "bright_tiles",
     name: "Bright Tiles",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/03/Inv_Bright_Tiles.png",
+    img: "/images/furniture/Inv_Bright_Tiles.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 3000,
     cataloguePrice: 3750,
@@ -326,7 +326,7 @@ export const furniture: Furniture[] = [
   {
     id: "bronze_bug_comp_trophy",
     name: "Bronze Bug Comp Trophy",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a7/Inv_Bronze_Bug_Comp_Trophy.png",
+    img: "/images/resources/trophies/Inv_Bronze_Bug_Comp_Trophy.png",
     source: ["Bug Catching Comp"],
     baseSellPrice: 19680,
     melvinsCatalogue: false,
@@ -334,7 +334,7 @@ export const furniture: Furniture[] = [
   {
     id: "bronze_fish_trophy",
     name: "Bronze Fish Trophy",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/83/Inv_Bronze_Fish_Trophy.png",
+    img: "/images/resources/trophies/Inv_Bronze_Fish_Trophy.png",
     source: ["Fish Catching Comp"],
     baseSellPrice: 59040,
     melvinsCatalogue: false,
@@ -342,7 +342,7 @@ export const furniture: Furniture[] = [
   {
     id: "bunk_bed",
     name: "Bunk Bed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f3/Inv_Bunk_Bed.png",
+    img: "/images/furniture/Inv_Bunk_Bed.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2668,
     cataloguePrice: 3335,
@@ -352,7 +352,7 @@ export const furniture: Furniture[] = [
   {
     id: "burger_plate",
     name: "Burger Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/aa/Inv_Burger_Plate.png",
+    img: "/images/furniture/Inv_Burger_Plate.png",
     source: ["Food Modeller"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -360,7 +360,7 @@ export const furniture: Furniture[] = [
   {
     id: "bush_devil_plush",
     name: "Bush Devil Plush",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1d/Inv_Bush_Devil_Plush.png",
+    img: "/images/furniture/Inv_Bush_Devil_Plush.png",
     source: ["Prize Box"],
     baseSellPrice: 2500,
     melvinsCatalogue: false,
@@ -368,7 +368,7 @@ export const furniture: Furniture[] = [
   {
     id: "bushlime_box",
     name: "Bushlime Box",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/30/Inv_Bushlime_Box.png",
+    img: "/images/furniture/Inv_Bushlime_Box.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 440,
     melvinsCatalogue: false,
@@ -376,7 +376,7 @@ export const furniture: Furniture[] = [
   {
     id: "butterfly_orchid_pot",
     name: "Butterfly Orchid Pot",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b4/Inv_Butterfly_Orchid_Pot.png",
+    img: "/images/furniture/Inv_Butterfly_Orchid_Pot.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1968,
     cataloguePrice: 2460,
@@ -387,7 +387,7 @@ export const furniture: Furniture[] = [
   {
     id: "cabbage_box",
     name: "Cabbage Box",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/dd/Inv_Cabbage_Box.png",
+    img: "/images/furniture/Inv_Cabbage_Box.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 440,
     melvinsCatalogue: false,
@@ -395,7 +395,7 @@ export const furniture: Furniture[] = [
   {
     id: "cabin_bed",
     name: "Cabin Bed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/0b/Inv_Cabin_Bed.png",
+    img: "/images/furniture/Inv_Cabin_Bed.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 604,
     cataloguePrice: 755,
@@ -406,7 +406,7 @@ export const furniture: Furniture[] = [
   {
     id: "cabin_bedside_table",
     name: "Cabin Bedside Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/cf/Inv_Cabin_Bedside_Table.png",
+    img: "/images/furniture/Inv_Cabin_Bedside_Table.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 604,
     cataloguePrice: 755,
@@ -417,7 +417,7 @@ export const furniture: Furniture[] = [
   {
     id: "cabin_bunk_bed",
     name: "Cabin Bunk Bed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/5a/Inv_Cabin_Bunk_Bed.png",
+    img: "/images/furniture/Inv_Cabin_Bunk_Bed.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2668,
     cataloguePrice: 3335,
@@ -428,7 +428,7 @@ export const furniture: Furniture[] = [
   {
     id: "cabin_cabinet",
     name: "Cabin Cabinet",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/ca/Inv_Cabin_Cabinet.png",
+    img: "/images/furniture/Inv_Cabin_Cabinet.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 600,
     cataloguePrice: 750,
@@ -439,7 +439,7 @@ export const furniture: Furniture[] = [
   {
     id: "cabin_chair",
     name: "Cabin Chair",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/7d/Inv_Cabin_Chair.png",
+    img: "/images/furniture/Inv_Cabin_Chair.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 420,
     cataloguePrice: 525,
@@ -450,7 +450,7 @@ export const furniture: Furniture[] = [
   {
     id: "cabin_coffee_table",
     name: "Cabin Coffee Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/12/Inv_Cabin_Coffee_Table.png",
+    img: "/images/furniture/Inv_Cabin_Coffee_Table.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 820,
     cataloguePrice: 1025,
@@ -461,7 +461,7 @@ export const furniture: Furniture[] = [
   {
     id: "cabin_couch",
     name: "Cabin Couch",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4f/Inv_Cabin_Couch.png",
+    img: "/images/furniture/Inv_Cabin_Couch.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1968,
     cataloguePrice: 2460,
@@ -472,7 +472,7 @@ export const furniture: Furniture[] = [
   {
     id: "cabin_drawers",
     name: "Cabin Drawers",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/70/Inv_Cabin_Drawers.png",
+    img: "/images/furniture/Inv_Cabin_Drawers.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 778,
     cataloguePrice: 972,
@@ -483,7 +483,7 @@ export const furniture: Furniture[] = [
   {
     id: "cabin_kitchen_table",
     name: "Cabin Kitchen Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/dd/Inv_Cabin_Kitchen_Table.png",
+    img: "/images/furniture/Inv_Cabin_Kitchen_Table.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 742,
     cataloguePrice: 927,
@@ -494,7 +494,7 @@ export const furniture: Furniture[] = [
   {
     id: "cabin_seat",
     name: "Cabin Seat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/92/Inv_Cabin_Seat.png",
+    img: "/images/furniture/Inv_Cabin_Seat.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1100,
     cataloguePrice: 1375,
@@ -505,7 +505,7 @@ export const furniture: Furniture[] = [
   {
     id: "cabin_stool",
     name: "Cabin Stool",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/7e/Inv_Cabin_Stool.png",
+    img: "/images/furniture/Inv_Cabin_Stool.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 3360,
     cataloguePrice: 4200,
@@ -516,7 +516,7 @@ export const furniture: Furniture[] = [
   {
     id: "cabin_wall",
     name: "Cabin Wall",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/56/Inv_Cabin_Wall.png",
+    img: "/images/furniture/Inv_Cabin_Wall.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 500,
     cataloguePrice: 625,
@@ -527,7 +527,7 @@ export const furniture: Furniture[] = [
   {
     id: "cactus_pot",
     name: "Cactus Pot",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e4/Inv_Cactus_Pot.png",
+    img: "/images/furniture/Inv_Cactus_Pot.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 960,
     cataloguePrice: 1200,
@@ -537,7 +537,7 @@ export const furniture: Furniture[] = [
   {
     id: "camping_chair",
     name: "Camping Chair",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f6/Inv_Camping_Chair.png",
+    img: "/images/furniture/Inv_Camping_Chair.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 0,
     cataloguePrice: 0,
@@ -547,7 +547,7 @@ export const furniture: Furniture[] = [
   {
     id: "candelabra",
     name: "Candelabra",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a2/Inv_Candelabra.png",
+    img: "/images/furniture/Inv_Candelabra.png",
     source: ["Prize Box"],
     baseSellPrice: 1500,
     melvinsCatalogue: false,
@@ -555,7 +555,7 @@ export const furniture: Furniture[] = [
   {
     id: "cardboard_box",
     name: "Cardboard Box",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/74/Inv_Cardboard_Box.png",
+    img: "/images/furniture/Inv_Cardboard_Box.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1746,
     cataloguePrice: 2182,
@@ -565,7 +565,7 @@ export const furniture: Furniture[] = [
   {
     id: "carrot_box",
     name: "Carrot Box",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/fc/Inv_Carrot_Box.png",
+    img: "/images/furniture/Inv_Carrot_Box.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 440,
     melvinsCatalogue: false,
@@ -573,7 +573,7 @@ export const furniture: Furniture[] = [
   {
     id: "caviar_set",
     name: "Caviar Set",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d2/Inv_Caviar_Set.png",
+    img: "/images/furniture/Inv_Caviar_Set.png",
     source: ["Food Modeller"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -581,7 +581,7 @@ export const furniture: Furniture[] = [
   {
     id: "charcoal_wall",
     name: "Charcoal Wall",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c1/Inv_Charcoal_Wall.png",
+    img: "/images/furniture/Inv_Charcoal_Wall.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 500,
     cataloguePrice: 625,
@@ -591,7 +591,7 @@ export const furniture: Furniture[] = [
   {
     id: "checkered_floor",
     name: "Checkered Floor",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/32/Inv_Checkered_Floor.png",
+    img: "/images/furniture/Inv_Checkered_Floor.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 500,
     cataloguePrice: 625,
@@ -601,7 +601,7 @@ export const furniture: Furniture[] = [
   {
     id: "checkered_wall",
     name: "Checkered Wall",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f6/Inv_Checkered_Wall.png",
+    img: "/images/furniture/Inv_Checkered_Wall.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 500,
     cataloguePrice: 625,
@@ -611,7 +611,7 @@ export const furniture: Furniture[] = [
   {
     id: "cheese_board",
     name: "Cheese Board",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/cd/Inv_Cheese_Board.png",
+    img: "/images/furniture/Inv_Cheese_Board.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -619,7 +619,7 @@ export const furniture: Furniture[] = [
   {
     id: "cheese_spag_plate",
     name: "Cheese Spag Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/17/Inv_Cheese_Spag_Plate.png",
+    img: "/images/furniture/Inv_Cheese_Spag_Plate.png",
     source: ["Food Modeller"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -627,7 +627,7 @@ export const furniture: Furniture[] = [
   {
     id: "cherry_box",
     name: "Cherry Box",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1b/Inv_Cherry_Box.png",
+    img: "/images/furniture/Inv_Cherry_Box.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 440,
     melvinsCatalogue: false,
@@ -635,7 +635,7 @@ export const furniture: Furniture[] = [
   {
     id: "cloud_wall",
     name: "Cloud Wall",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c1/Inv_Cloud_Wall.png",
+    img: "/images/furniture/Inv_Cloud_Wall.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 1314,
     cataloguePrice: 1642,
@@ -645,7 +645,7 @@ export const furniture: Furniture[] = [
   {
     id: "cockatoo_plush",
     name: "Cockatoo Plush",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/90/Inv_Cockatoo_Plush.png",
+    img: "/images/furniture/Inv_Cockatoo_Plush.png",
     source: ["Prize Box"],
     baseSellPrice: 2500,
     melvinsCatalogue: false,
@@ -653,7 +653,7 @@ export const furniture: Furniture[] = [
   {
     id: "coconut_drink_set",
     name: "Coconut Drink Set",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f2/Inv_Coconut_Drink_Set.png",
+    img: "/images/furniture/Inv_Coconut_Drink_Set.png",
     source: [],
     baseSellPrice: 1000,
     melvinsCatalogue: false,
@@ -661,7 +661,7 @@ export const furniture: Furniture[] = [
   {
     id: "coffee_bag_stack",
     name: "Coffee Bag Stack",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b9/Inv_Coffee_Bag_Stack.png",
+    img: "/images/furniture/Inv_Coffee_Bag_Stack.png",
     source: [],
     baseSellPrice: 1000,
     melvinsCatalogue: false,
@@ -669,7 +669,7 @@ export const furniture: Furniture[] = [
   {
     id: "coffee_cup_set",
     name: "Coffee Cup Set",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f2/Inv_Coffee_Cup_Set.png",
+    img: "/images/furniture/Inv_Coffee_Cup_Set.png",
     source: [],
     baseSellPrice: 1000,
     melvinsCatalogue: false,
@@ -677,7 +677,7 @@ export const furniture: Furniture[] = [
   {
     id: "coffee_table",
     name: "Coffee Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/ff/Inv_Coffee_Table.png",
+    img: "/images/furniture/Inv_Coffee_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 516,
     cataloguePrice: 645,
@@ -687,7 +687,7 @@ export const furniture: Furniture[] = [
   {
     id: "cooked_croco_meat_plate",
     name: "Cooked Croco Meat Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/22/Inv_Cooked_Croco_Meat_Plate.png",
+    img: "/images/furniture/Inv_Cooked_Croco_Meat_Plate.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -695,7 +695,7 @@ export const furniture: Furniture[] = [
   {
     id: "cooked_drumstick_plate",
     name: "Cooked Drumstick Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/28/Inv_Cooked_Drumstick_Plate.png",
+    img: "/images/furniture/Inv_Cooked_Drumstick_Plate.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -703,7 +703,7 @@ export const furniture: Furniture[] = [
   {
     id: "cooked_meat_plate",
     name: "Cooked Meat Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/42/Inv_Cooked_Meat_Plate.png",
+    img: "/images/furniture/Inv_Cooked_Meat_Plate.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -711,7 +711,7 @@ export const furniture: Furniture[] = [
   {
     id: "cooked_prawn_plate",
     name: "Cooked Prawn Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Inv_Cooked_Prawn_Plate.png",
+    img: "/images/furniture/Inv_Cooked_Prawn_Plate.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -719,7 +719,7 @@ export const furniture: Furniture[] = [
   {
     id: "cooked_rice_set",
     name: "Cooked Rice Set",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/45/Inv_Cooked_Rice_Set.png",
+    img: "/images/furniture/Inv_Cooked_Rice_Set.png",
     source: ["Food Modeller"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -727,7 +727,7 @@ export const furniture: Furniture[] = [
   {
     id: "cooked_yabbie_plate",
     name: "Cooked Yabbie Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/61/Inv_Cooked_Yabbie_Plate.png",
+    img: "/images/furniture/Inv_Cooked_Yabbie_Plate.png",
     source: ["Food Modeller"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -735,7 +735,7 @@ export const furniture: Furniture[] = [
   {
     id: "corn_box",
     name: "Corn Box",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/87/Inv_Corn_Box.png",
+    img: "/images/furniture/Inv_Corn_Box.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 440,
     melvinsCatalogue: false,
@@ -743,7 +743,7 @@ export const furniture: Furniture[] = [
   {
     id: "crab_soup_plate",
     name: "Crab Soup Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/61/Inv_Crab_Soup_Plate.png",
+    img: "/images/furniture/Inv_Crab_Soup_Plate.png",
     source: ["Food Modeller"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -751,7 +751,7 @@ export const furniture: Furniture[] = [
   {
     id: "croco_plush",
     name: "Croco Plush",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e1/Inv_Croco_Plush.png",
+    img: "/images/furniture/Inv_Croco_Plush.png",
     source: ["Prize Box"],
     baseSellPrice: 2500,
     melvinsCatalogue: false,
@@ -759,7 +759,7 @@ export const furniture: Furniture[] = [
   {
     id: "croco_skewer_set",
     name: "Croco Skewer Set",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/19/Inv_Croco_Skewer_Set.png",
+    img: "/images/furniture/Inv_Croco_Skewer_Set.png",
     source: ["Food Modeller"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -767,7 +767,7 @@ export const furniture: Furniture[] = [
   {
     id: "cube_floor",
     name: "Cube Floor",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/5f/Inv_Cube_Floor.png",
+    img: "/images/furniture/Inv_Cube_Floor.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 1314,
     cataloguePrice: 1642,
@@ -777,7 +777,7 @@ export const furniture: Furniture[] = [
   {
     id: "cube_wall",
     name: "Cube Wall",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/76/Inv_Cube_Wall.png",
+    img: "/images/furniture/Inv_Cube_Wall.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 1314,
     cataloguePrice: 1642,
@@ -787,7 +787,7 @@ export const furniture: Furniture[] = [
   {
     id: "dagwood_dog_set",
     name: "Dagwood Dog Set",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/db/Inv_Dagwood_Dog_Set.png",
+    img: "/images/furniture/Inv_Dagwood_Dog_Set.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -795,7 +795,7 @@ export const furniture: Furniture[] = [
   {
     id: "dainty_bed",
     name: "Dainty Bed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c5/Inv_Dainty_Bed.png",
+    img: "/images/furniture/Inv_Dainty_Bed.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2176,
     cataloguePrice: 2720,
@@ -806,7 +806,7 @@ export const furniture: Furniture[] = [
   {
     id: "dainty_bedside_table",
     name: "Dainty Bedside Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/eb/Inv_Dainty_Bedside_Table.png",
+    img: "/images/furniture/Inv_Dainty_Bedside_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1200,
     cataloguePrice: 1500,
@@ -817,7 +817,7 @@ export const furniture: Furniture[] = [
   {
     id: "dainty_chair",
     name: "Dainty Chair",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/50/Inv_Dainty_Chair.png",
+    img: "/images/furniture/Inv_Dainty_Chair.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1220,
     cataloguePrice: 1525,
@@ -828,7 +828,7 @@ export const furniture: Furniture[] = [
   {
     id: "dainty_coffee_table",
     name: "Dainty Coffee Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b2/Inv_Dainty_Coffee_Table.png",
+    img: "/images/furniture/Inv_Dainty_Coffee_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1746,
     cataloguePrice: 2182,
@@ -839,7 +839,7 @@ export const furniture: Furniture[] = [
   {
     id: "dainty_drawers",
     name: "Dainty Drawers",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/31/Inv_Dainty_Drawers.png",
+    img: "/images/furniture/Inv_Dainty_Drawers.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1304,
     cataloguePrice: 1630,
@@ -850,7 +850,7 @@ export const furniture: Furniture[] = [
   {
     id: "dainty_floor",
     name: "Dainty Floor",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/be/Inv_Dainty_Floor.png",
+    img: "/images/furniture/Inv_Dainty_Floor.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 900,
     cataloguePrice: 1125,
@@ -861,7 +861,7 @@ export const furniture: Furniture[] = [
   {
     id: "dainty_kitchen_table",
     name: "Dainty Kitchen Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/54/Inv_Dainty_Kitchen_Table.png",
+    img: "/images/furniture/Inv_Dainty_Kitchen_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1138,
     cataloguePrice: 1422,
@@ -872,7 +872,7 @@ export const furniture: Furniture[] = [
   {
     id: "dainty_lamp",
     name: "Dainty Lamp",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a3/Inv_Dainty_Lamp.png",
+    img: "/images/furniture/Inv_Dainty_Lamp.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 760,
     cataloguePrice: 950,
@@ -883,7 +883,7 @@ export const furniture: Furniture[] = [
   {
     id: "dainty_ottoman",
     name: "Dainty Ottoman",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/56/Inv_Dainty_Ottoman.png",
+    img: "/images/furniture/Inv_Dainty_Ottoman.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 420,
     cataloguePrice: 525,
@@ -894,7 +894,7 @@ export const furniture: Furniture[] = [
   {
     id: "dainty_sofa",
     name: "Dainty Sofa",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d0/Inv_Dainty_Sofa.png",
+    img: "/images/furniture/Inv_Dainty_Sofa.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1906,
     cataloguePrice: 2382,
@@ -905,7 +905,7 @@ export const furniture: Furniture[] = [
   {
     id: "dainty_wall",
     name: "Dainty Wall",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c5/Inv_Dainty_Wall.png",
+    img: "/images/furniture/Inv_Dainty_Wall.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 500,
     cataloguePrice: 625,
@@ -916,7 +916,7 @@ export const furniture: Furniture[] = [
   {
     id: "damper_plate",
     name: "Damper Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/df/Inv_Damper_Plate.png",
+    img: "/images/furniture/Inv_Damper_Plate.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -924,7 +924,7 @@ export const furniture: Furniture[] = [
   {
     id: "dark_room_divider",
     name: "Dark Room Divider",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d1/Inv_Dark_Room_Divider.png",
+    img: "/images/furniture/Inv_Dark_Room_Divider.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 7008,
     cataloguePrice: 8760,
@@ -934,7 +934,7 @@ export const furniture: Furniture[] = [
   {
     id: "dark_tiles",
     name: "Dark Tiles",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/93/Inv_Dark_Tiles.png",
+    img: "/images/furniture/Inv_Dark_Tiles.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 3000,
     cataloguePrice: 3750,
@@ -944,7 +944,7 @@ export const furniture: Furniture[] = [
   {
     id: "dark_wood_kitchen_cabinet",
     name: "Dark Wood Kitchen Cabinet",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1f/Inv_Dark_Wood_Kitchen_Cabine",
+    img: "/images/furniture/Inv_Dark_Wood_Kitchen_Cabinet.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1200,
     cataloguePrice: 1500,
@@ -955,7 +955,7 @@ export const furniture: Furniture[] = [
   {
     id: "dark_wood_kitchen_island",
     name: "Dark Wood Kitchen Island",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/07/Inv_Dark_Wood_Kitchen_Island.png",
+    img: "/images/furniture/Inv_Dark_Wood_Kitchen_Island.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1200,
     cataloguePrice: 1500,
@@ -966,7 +966,7 @@ export const furniture: Furniture[] = [
   {
     id: "dark_wood_kitchen_sink",
     name: "Dark Wood Kitchen Sink",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Dark_Wood_Kitchen_Sink.png",
+    img: "/images/furniture/Inv_Dark_Wood_Kitchen_Sink.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1200,
     cataloguePrice: 1500,
@@ -977,7 +977,7 @@ export const furniture: Furniture[] = [
   {
     id: "dark_wooden_bedside_table",
     name: "Dark Wooden Bedside Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c4/Inv_Dark_Wooden_Bedside_Tabl",
+    img: "/images/furniture/Inv_Dark_Wooden_Bedside_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 604,
     cataloguePrice: 755,
@@ -988,7 +988,7 @@ export const furniture: Furniture[] = [
   {
     id: "dark_wooden_cabinet",
     name: "Dark Wooden Cabinet",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e2/Inv_Dark_Wooden_Cabinet.png",
+    img: "/images/furniture/Inv_Dark_Wooden_Cabinet.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1108,
     cataloguePrice: 1385,
@@ -999,7 +999,7 @@ export const furniture: Furniture[] = [
   {
     id: "dark_wooden_chair",
     name: "Dark Wooden Chair",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/49/Inv_Dark_Wooden_Chair.png",
+    img: "/images/furniture/Inv_Dark_Wooden_Chair.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 870,
     cataloguePrice: 1087,
@@ -1010,7 +1010,7 @@ export const furniture: Furniture[] = [
   {
     id: "dark_wooden_chest_of_drawers",
     name: "Dark Wooden Chest of Drawers",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/01/Inv_Dark_Wooden_Chest_of_Drawer",
+    img: "/images/furniture/Inv_Dark_Wooden_Chest_of_Drawers.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 0,
     cataloguePrice: 0,
@@ -1021,7 +1021,7 @@ export const furniture: Furniture[] = [
   {
     id: "dark_wooden_couch",
     name: "Dark Wooden Couch",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/26/Inv_Dark_Wooden_Couch.png",
+    img: "/images/furniture/Inv_Dark_Wooden_Couch.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1968,
     cataloguePrice: 2460,
@@ -1032,7 +1032,7 @@ export const furniture: Furniture[] = [
   {
     id: "dark_wooden_floor",
     name: "Dark Wooden Floor",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/dc/Inv_Dark_Wooden_Floor.png",
+    img: "/images/furniture/Inv_Dark_Wooden_Floor.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 1500,
     cataloguePrice: 1875,
@@ -1043,7 +1043,7 @@ export const furniture: Furniture[] = [
   {
     id: "dark_wooden_seat",
     name: "Dark Wooden Seat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f9/Inv_Dark_Wooden_Seat.png",
+    img: "/images/furniture/Inv_Dark_Wooden_Seat.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1100,
     cataloguePrice: 1375,
@@ -1054,7 +1054,7 @@ export const furniture: Furniture[] = [
   {
     id: "dark_wooden_single_bed",
     name: "Dark Wooden Single Bed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8b/Inv_Dark_Wooden_Single_Bed.png",
+    img: "/images/furniture/Inv_Dark_Wooden_Single_Bed.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1334,
     cataloguePrice: 1667,
@@ -1065,7 +1065,7 @@ export const furniture: Furniture[] = [
   {
     id: "dark_wooden_table",
     name: "Dark Wooden Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/17/Inv_Dark_Wooden_Table.png",
+    img: "/images/furniture/Inv_Dark_Wooden_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 742,
     cataloguePrice: 927,
@@ -1076,7 +1076,7 @@ export const furniture: Furniture[] = [
   {
     id: "dark_wooden_wall",
     name: "Dark Wooden Wall",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/23/Inv_Dark_Wooden_Wall.png",
+    img: "/images/furniture/Inv_Dark_Wooden_Wall.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 500,
     cataloguePrice: 625,
@@ -1087,7 +1087,7 @@ export const furniture: Furniture[] = [
   {
     id: "desert_pea_pot",
     name: "Desert Pea Pot",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/92/Inv_Desert_Pea_Pot.png",
+    img: "/images/furniture/Inv_Desert_Pea_Pot.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1968,
     cataloguePrice: 2460,
@@ -1098,7 +1098,7 @@ export const furniture: Furniture[] = [
   {
     id: "desert_rose_pot",
     name: "Desert Rose Pot",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c2/Inv_Desert_Rose_Pot.png",
+    img: "/images/furniture/Inv_Desert_Rose_Pot.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 960,
     cataloguePrice: 1200,
@@ -1109,7 +1109,7 @@ export const furniture: Furniture[] = [
   {
     id: "diggo_plush",
     name: "Diggo Plush",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/27/Inv_Diggo_Plush.png",
+    img: "/images/furniture/Inv_Diggo_Plush.png",
     source: ["Prize Box"],
     baseSellPrice: 2500,
     melvinsCatalogue: false,
@@ -1117,7 +1117,7 @@ export const furniture: Furniture[] = [
   {
     id: "dinner_set",
     name: "Dinner Set",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f7/Inv_Dinner_Set.png",
+    img: "/images/furniture/Inv_Dinner_Set.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1968,
     cataloguePrice: 2460,
@@ -1127,7 +1127,7 @@ export const furniture: Furniture[] = [
   {
     id: "director_chair",
     name: "Director Chair",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/68/Inv_Director_Chair.png",
+    img: "/images/furniture/Inv_Director_Chair.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 420,
     cataloguePrice: 525,
@@ -1137,7 +1137,7 @@ export const furniture: Furniture[] = [
   {
     id: "eastern_bed",
     name: "Eastern Bed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d6/Inv_Eastern_Bed.png",
+    img: "/images/furniture/Inv_Eastern_Bed.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 12000,
     cataloguePrice: 15000,
@@ -1148,7 +1148,7 @@ export const furniture: Furniture[] = [
   {
     id: "eastern_bedside_table",
     name: "Eastern Bedside Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c6/Inv_Eastern_Bedside_Table.png",
+    img: "/images/furniture/Inv_Eastern_Bedside_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 6040,
     cataloguePrice: 7550,
@@ -1159,7 +1159,7 @@ export const furniture: Furniture[] = [
   {
     id: "eastern_bookshelf",
     name: "Eastern Bookshelf",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/88/Inv_Eastern_Bookshelf.png",
+    img: "/images/furniture/Inv_Eastern_Bookshelf.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 7008,
     cataloguePrice: 8760,
@@ -1170,7 +1170,7 @@ export const furniture: Furniture[] = [
   {
     id: "eastern_chair",
     name: "Eastern Chair",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/79/Inv_Eastern_Chair.png",
+    img: "/images/furniture/Inv_Eastern_Chair.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 8700,
     cataloguePrice: 10875,
@@ -1181,7 +1181,7 @@ export const furniture: Furniture[] = [
   {
     id: "eastern_coffee_table",
     name: "Eastern Coffee Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d7/Inv_Eastern_Coffee_Table.png",
+    img: "/images/furniture/Inv_Eastern_Coffee_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 5936,
     cataloguePrice: 7420,
@@ -1192,7 +1192,7 @@ export const furniture: Furniture[] = [
   {
     id: "eastern_couch",
     name: "Eastern Couch",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/ef/Inv_Eastern_Couch.png",
+    img: "/images/furniture/Inv_Eastern_Couch.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 19680,
     cataloguePrice: 24600,
@@ -1203,7 +1203,7 @@ export const furniture: Furniture[] = [
   {
     id: "eastern_floor",
     name: "Eastern Floor",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6f/Inv_Eastern_Floor.png",
+    img: "/images/furniture/Inv_Eastern_Floor.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 1500,
     cataloguePrice: 1875,
@@ -1214,7 +1214,7 @@ export const furniture: Furniture[] = [
   {
     id: "eastern_lamp",
     name: "Eastern Lamp",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/09/Inv_Eastern_Lamp.png",
+    img: "/images/furniture/Inv_Eastern_Lamp.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2044,
     cataloguePrice: 2555,
@@ -1225,7 +1225,7 @@ export const furniture: Furniture[] = [
   {
     id: "eastern_room_divider",
     name: "Eastern Room Divider",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/85/Inv_Eastern_Room_Divider.png",
+    img: "/images/furniture/Inv_Eastern_Room_Divider.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 7008,
     cataloguePrice: 8760,
@@ -1236,7 +1236,7 @@ export const furniture: Furniture[] = [
   {
     id: "eastern_seat",
     name: "Eastern Seat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f0/Inv_Eastern_Seat.png",
+    img: "/images/furniture/Inv_Eastern_Seat.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 11000,
     cataloguePrice: 13750,
@@ -1247,7 +1247,7 @@ export const furniture: Furniture[] = [
   {
     id: "eastern_table",
     name: "Eastern Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f8/Inv_Eastern_Table.png",
+    img: "/images/furniture/Inv_Eastern_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 7420,
     cataloguePrice: 9275,
@@ -1258,7 +1258,7 @@ export const furniture: Furniture[] = [
   {
     id: "eastern_wall",
     name: "Eastern Wall",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/cc/Inv_Eastern_Wall.png",
+    img: "/images/furniture/Inv_Eastern_Wall.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 500,
     cataloguePrice: 625,
@@ -1269,7 +1269,7 @@ export const furniture: Furniture[] = [
   {
     id: "eastern_wardrobe",
     name: "Eastern Wardrobe",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/7d/Inv_Eastern_Wardrobe.png",
+    img: "/images/furniture/Inv_Eastern_Wardrobe.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 12400,
     cataloguePrice: 15500,
@@ -1280,7 +1280,7 @@ export const furniture: Furniture[] = [
   {
     id: "egg_fried_rice_plate",
     name: "Egg Fried Rice Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Inv_Egg_Fried_Rice_Plate.png",
+    img: "/images/furniture/Inv_Egg_Fried_Rice_Plate.png",
     source: ["Food Modeller"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -1288,7 +1288,7 @@ export const furniture: Furniture[] = [
   {
     id: "egg_plate",
     name: "Egg Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f3/Inv_Egg_Plate.png",
+    img: "/images/furniture/Inv_Egg_Plate.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -1296,7 +1296,7 @@ export const furniture: Furniture[] = [
   {
     id: "fairy_bread_plate",
     name: "Fairy Bread Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/85/Inv_Fairy_Bread_Plate.png",
+    img: "/images/furniture/Inv_Fairy_Bread_Plate.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -1304,7 +1304,7 @@ export const furniture: Furniture[] = [
   {
     id: "fern_vase",
     name: "Fern Vase",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a4/Inv_Fern_Vase.png",
+    img: "/images/furniture/Inv_Fern_Vase.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 206,
     cataloguePrice: 257,
@@ -1315,7 +1315,7 @@ export const furniture: Furniture[] = [
   {
     id: "festive_gifts",
     name: "Festive Gifts",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/fb/Inv_Festive_Gifts.png",
+    img: "/images/furniture/Inv_Festive_Gifts.png",
     source: ["Jolly Sack"],
     baseSellPrice: 8487,
     melvinsCatalogue: false,
@@ -1323,7 +1323,7 @@ export const furniture: Furniture[] = [
   {
     id: "festive_pole",
     name: "Festive Pole",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/5a/Inv_Festive_Pole.png",
+    img: "/images/furniture/Inv_Festive_Pole.png",
     source: ["Jolly Sack"],
     baseSellPrice: 8487,
     melvinsCatalogue: false,
@@ -1331,7 +1331,7 @@ export const furniture: Furniture[] = [
   {
     id: "festive_roo_plush",
     name: "Festive Roo Plush",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a2/Inv_Festive_Roo_Plush.png",
+    img: "/images/furniture/Inv_Festive_Roo_Plush.png",
     source: ["Jolly Sack"],
     baseSellPrice: 6088,
     melvinsCatalogue: false,
@@ -1339,7 +1339,7 @@ export const furniture: Furniture[] = [
   {
     id: "festive_tree",
     name: "Festive Tree",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f5/Inv_Festive_Tree.png",
+    img: "/images/furniture/Inv_Festive_Tree.png",
     source: ["Nick"],
     baseSellPrice: 2696,
     melvinsCatalogue: false,
@@ -1347,7 +1347,7 @@ export const furniture: Furniture[] = [
   {
     id: "field_mushroom_basket",
     name: "Field Mushroom Basket",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/ce/Inv_Field_Mushroom_Basket.png",
+    img: "/images/furniture/Inv_Field_Mushroom_Basket.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 440,
     melvinsCatalogue: false,
@@ -1355,7 +1355,7 @@ export const furniture: Furniture[] = [
   {
     id: "field_mushroom_stool",
     name: "Field Mushroom Stool",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f4/Inv_Field_Mushroom_Stool.png",
+    img: "/images/furniture/Inv_Field_Mushroom_Stool.png",
     source: ["Fertilizer"],
     baseSellPrice: 435,
     melvinsCatalogue: false,
@@ -1363,7 +1363,7 @@ export const furniture: Furniture[] = [
   {
     id: "fireplace",
     name: "Fireplace",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/bc/Inv_Fireplace.png",
+    img: "/images/furniture/Inv_Fireplace.png",
     source: ["Nick"],
     baseSellPrice: 2829,
     melvinsCatalogue: false,
@@ -1371,7 +1371,7 @@ export const furniture: Furniture[] = [
   {
     id: "fish_and_chips_plate",
     name: "Fish And Chips Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d0/Inv_Fish_And_Chips_Plate.png",
+    img: "/images/furniture/Inv_Fish_And_Chips_Plate.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -1379,7 +1379,7 @@ export const furniture: Furniture[] = [
   {
     id: "flannel_flower_pot",
     name: "Flannel Flower Pot",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/af/Inv_Flannel_Flower_Pot.png",
+    img: "/images/furniture/Inv_Flannel_Flower_Pot.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1968,
     cataloguePrice: 2460,
@@ -1390,7 +1390,7 @@ export const furniture: Furniture[] = [
   {
     id: "floor_drain",
     name: "Floor Drain",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/57/Inv_Floor_Drain.png",
+    img: "/images/furniture/Inv_Floor_Drain.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1200,
     cataloguePrice: 1500,
@@ -1400,7 +1400,7 @@ export const furniture: Furniture[] = [
   {
     id: "flour_bag_stack",
     name: "Flour Bag Stack",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/cc/Inv_Flour_Bag_Stack.png",
+    img: "/images/furniture/Inv_Flour_Bag_Stack.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 1000,
     melvinsCatalogue: false,
@@ -1408,7 +1408,7 @@ export const furniture: Furniture[] = [
   {
     id: "fridge",
     name: "Fridge",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/0f/Inv_Fridge.png",
+    img: "/images/furniture/Inv_Fridge.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 12400,
     cataloguePrice: 15500,
@@ -1418,7 +1418,7 @@ export const furniture: Furniture[] = [
   {
     id: "frilly_plush",
     name: "Frilly Plush",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6d/Inv_Frilly_Plush.png",
+    img: "/images/furniture/Inv_Frilly_Plush.png",
     source: ["Prize Box"],
     baseSellPrice: 2500,
     melvinsCatalogue: false,
@@ -1426,7 +1426,7 @@ export const furniture: Furniture[] = [
   {
     id: "fruit_bowl",
     name: "Fruit Bowl",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/37/Inv_Fruit_Bowl.png",
+    img: "/images/furniture/Inv_Fruit_Bowl.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 880,
     cataloguePrice: 1100,
@@ -1436,7 +1436,7 @@ export const furniture: Furniture[] = [
   {
     id: "fruit_salad_plate",
     name: "Fruit Salad Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/02/Inv_Fruit_Salad_Plate.png",
+    img: "/images/furniture/Inv_Fruit_Salad_Plate.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -1444,7 +1444,7 @@ export const furniture: Furniture[] = [
   {
     id: "garden_salad_plate",
     name: "Garden Salad Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d2/Inv_Garden_Salad_Plate.png",
+    img: "/images/furniture/Inv_Garden_Salad_Plate.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -1452,7 +1452,7 @@ export const furniture: Furniture[] = [
   {
     id: "garden_tap",
     name: "Garden Tap",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e5/Inv_Garden_Tap.png",
+    img: "/images/furniture/Inv_Garden_Tap.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1200,
     cataloguePrice: 1500,
@@ -1462,7 +1462,7 @@ export const furniture: Furniture[] = [
   {
     id: "gold_bug_comp_trophy",
     name: "Gold Bug Comp Trophy",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/57/Inv_Gold_Bug_Comp_Trophy.png",
+    img: "/images/resources/trophies/Inv_Gold_Bug_Comp_Trophy.png",
     source: ["Bug Catching Comp"],
     baseSellPrice: 59040,
     melvinsCatalogue: false,
@@ -1470,7 +1470,7 @@ export const furniture: Furniture[] = [
   {
     id: "gold_fish_trophy",
     name: "Gold Fish Trophy",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/18/Inv_Gold_Fish_Trophy.png",
+    img: "/images/resources/trophies/Inv_Gold_Fish_Trophy.png",
     source: ["Fish Catching Comp"],
     baseSellPrice: 59040,
     melvinsCatalogue: false,
@@ -1478,7 +1478,7 @@ export const furniture: Furniture[] = [
   {
     id: "grass_floor",
     name: "Grass Floor",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a7/Inv_Grass_Floor.png",
+    img: "/images/furniture/Inv_Grass_Floor.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 314,
     cataloguePrice: 392,
@@ -1488,7 +1488,7 @@ export const furniture: Furniture[] = [
   {
     id: "green_beach_chair",
     name: "Green Beach Chair",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/71/Inv_Green_Beach_Chair.png",
+    img: "/images/furniture/Inv_Green_Beach_Chair.png",
     source: ["Island Reef", "Cooler"],
     baseSellPrice: 435,
     melvinsCatalogue: false,
@@ -1497,7 +1497,7 @@ export const furniture: Furniture[] = [
   {
     id: "green_beach_hammock",
     name: "Green Beach Hammock",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/27/Inv_Green_Beach_Hammock.png",
+    img: "/images/furniture/Inv_Green_Beach_Hammock.png",
     source: ["Island Reef", "Cooler"],
     baseSellPrice: 30,
     melvinsCatalogue: false,
@@ -1506,7 +1506,7 @@ export const furniture: Furniture[] = [
   {
     id: "green_beach_umbrella",
     name: "Green Beach Umbrella",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/88/Inv_Green_Beach_Umbrella.png",
+    img: "/images/furniture/Inv_Green_Beach_Umbrella.png",
     source: ["Island Reef"],
     baseSellPrice: 14881,
     melvinsCatalogue: false,
@@ -1515,7 +1515,7 @@ export const furniture: Furniture[] = [
   {
     id: "green_bean_box",
     name: "Green Bean Box",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/51/Inv_Green_Bean_Box.png",
+    img: "/images/furniture/Inv_Green_Bean_Box.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 440,
     melvinsCatalogue: false,
@@ -1523,7 +1523,7 @@ export const furniture: Furniture[] = [
   {
     id: "green_bed",
     name: "Green Bed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/31/Inv_Green_Bed.png",
+    img: "/images/furniture/Inv_Green_Bed.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 3010,
     cataloguePrice: 3762,
@@ -1534,7 +1534,7 @@ export const furniture: Furniture[] = [
   {
     id: "green_bedside_table",
     name: "Green Bedside Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6d/Inv_Green_Bedside_Table.png",
+    img: "/images/furniture/Inv_Green_Bedside_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1604,
     cataloguePrice: 2005,
@@ -1545,7 +1545,7 @@ export const furniture: Furniture[] = [
   {
     id: "green_bookshelf",
     name: "Green Bookshelf",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/08/Inv_Green_Bookshelf.png",
+    img: "/images/furniture/Inv_Green_Bookshelf.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 3168,
     cataloguePrice: 3960,
@@ -1556,7 +1556,7 @@ export const furniture: Furniture[] = [
   {
     id: "green_brick_wallpaper",
     name: "Green Brick Wallpaper",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c0/Inv_Green_Brick_Wallpaper.png",
+    img: "/images/furniture/Inv_Green_Brick_Wallpaper.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 1500,
     cataloguePrice: 1875,
@@ -1567,7 +1567,7 @@ export const furniture: Furniture[] = [
   {
     id: "green_cabinet",
     name: "Green Cabinet",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/df/Inv_Green_Cabinet.png",
+    img: "/images/furniture/Inv_Green_Cabinet.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2740,
     cataloguePrice: 3425,
@@ -1578,7 +1578,7 @@ export const furniture: Furniture[] = [
   {
     id: "green_chair",
     name: "Green Chair",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/66/Inv_Green_Chair.png",
+    img: "/images/furniture/Inv_Green_Chair.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1870,
     cataloguePrice: 2337,
@@ -1589,7 +1589,7 @@ export const furniture: Furniture[] = [
   {
     id: "green_coffee_table",
     name: "Green Coffee Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/17/Inv_Green_Coffee_Table.png",
+    img: "/images/furniture/Inv_Green_Coffee_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2768,
     cataloguePrice: 3460,
@@ -1600,7 +1600,7 @@ export const furniture: Furniture[] = [
   {
     id: "green_couch",
     name: "Green Couch",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/86/Inv_Green_Couch.png",
+    img: "/images/furniture/Inv_Green_Couch.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2768,
     cataloguePrice: 3460,
@@ -1611,7 +1611,7 @@ export const furniture: Furniture[] = [
   {
     id: "green_lamp",
     name: "Green Lamp",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/38/Inv_Green_Lamp.png",
+    img: "/images/furniture/Inv_Green_Lamp.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2368,
     cataloguePrice: 2960,
@@ -1622,7 +1622,7 @@ export const furniture: Furniture[] = [
   {
     id: "green_pattern_wall",
     name: "Green Pattern Wall",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/aa/Inv_Green_Pattern_Wall.png",
+    img: "/images/furniture/Inv_Green_Pattern_Wall.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 500,
     cataloguePrice: 625,
@@ -1633,7 +1633,7 @@ export const furniture: Furniture[] = [
   {
     id: "green_seat",
     name: "Green Seat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/87/Inv_Green_Seat.png",
+    img: "/images/furniture/Inv_Green_Seat.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2500,
     cataloguePrice: 3125,
@@ -1644,7 +1644,7 @@ export const furniture: Furniture[] = [
   {
     id: "green_table",
     name: "Green Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/82/Inv_Green_Table.png",
+    img: "/images/furniture/Inv_Green_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 3382,
     cataloguePrice: 4227,
@@ -1655,7 +1655,7 @@ export const furniture: Furniture[] = [
   {
     id: "green_wood_floor",
     name: "Green Wood Floor",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/31/Inv_Green_Wood_Floor.png",
+    img: "/images/furniture/Inv_Green_Wood_Floor.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 1316,
     cataloguePrice: 1645,
@@ -1666,7 +1666,7 @@ export const furniture: Furniture[] = [
   {
     id: "gum_kitchen_island",
     name: "Gum Kitchen Island",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/ed/Inv_Gum_Kitchen_Island.png",
+    img: "/images/furniture/Inv_Gum_Kitchen_Island.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1200,
     cataloguePrice: 1500,
@@ -1676,7 +1676,7 @@ export const furniture: Furniture[] = [
   {
     id: "gum_log_stool",
     name: "Gum Log Stool",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f7/Inv_Gum_Log_Stool.png",
+    img: "/images/furniture/Inv_Gum_Log_Stool.png",
     source: ["Fertilizer"],
     baseSellPrice: 435,
     melvinsCatalogue: false,
@@ -1684,7 +1684,7 @@ export const furniture: Furniture[] = [
   {
     id: "gum_mirror_stand",
     name: "Gum Mirror Stand",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a9/Inv_Gum_Mirror_Stand.png",
+    img: "/images/furniture/Inv_Gum_Mirror_Stand.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 0,
     cataloguePrice: 0,
@@ -1694,7 +1694,7 @@ export const furniture: Furniture[] = [
   {
     id: "gum_wood_kitchen_cabinet",
     name: "Gum Wood Kitchen Cabinet",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/85/Inv_Gum_Wood_Kitchen_Cabinet.png",
+    img: "/images/furniture/Inv_Gum_Wood_Kitchen_Cabinet.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1200,
     cataloguePrice: 1500,
@@ -1704,7 +1704,7 @@ export const furniture: Furniture[] = [
   {
     id: "gum_wood_kitchen_sink",
     name: "Gum Wood Kitchen Sink",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/21/Inv_Gum_Wood_Kitchen_Sink.png",
+    img: "/images/furniture/Inv_Gum_Wood_Kitchen_Sink.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1200,
     cataloguePrice: 1500,
@@ -1714,7 +1714,7 @@ export const furniture: Furniture[] = [
   {
     id: "hard_wood_log_stool",
     name: "Hard Wood Log Stool",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/9c/Inv_Hard_Wood_Log_Stool.png",
+    img: "/images/furniture/Inv_Hard_Wood_Log_Stool.png",
     source: ["Fertilizer"],
     baseSellPrice: 435,
     melvinsCatalogue: false,
@@ -1722,7 +1722,7 @@ export const furniture: Furniture[] = [
   {
     id: "hearty_stew_plate",
     name: "Hearty Stew Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f0/Inv_Hearty_Stew_Plate.png",
+    img: "/images/furniture/Inv_Hearty_Stew_Plate.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -1730,7 +1730,7 @@ export const furniture: Furniture[] = [
   {
     id: "high_quality_milk_set",
     name: "High Quality Milk Set",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d6/Inv_High_Quality_Milk_Set.png",
+    img: "/images/furniture/Inv_High_Quality_Milk_Set.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 1000,
     melvinsCatalogue: false,
@@ -1738,7 +1738,7 @@ export const furniture: Furniture[] = [
   {
     id: "honey_set",
     name: "Honey Set",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/13/Inv_Honey_Set.png",
+    img: "/images/furniture/Inv_Honey_Set.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 1000,
     melvinsCatalogue: false,
@@ -1746,7 +1746,7 @@ export const furniture: Furniture[] = [
   {
     id: "ice_cream_set",
     name: "Ice Cream Set",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/81/Inv_Ice_Cream_Set.png",
+    img: "/images/furniture/Inv_Ice_Cream_Set.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -1754,7 +1754,7 @@ export const furniture: Furniture[] = [
   {
     id: "ice_chest",
     name: "Ice Chest",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f9/Inv_Ice_Chest.png",
+    img: "/images/furniture/Inv_Ice_Chest.png",
     source: ["Ice Sculpting Table"],
     baseSellPrice: 19,
     melvinsCatalogue: false,
@@ -1763,7 +1763,7 @@ export const furniture: Furniture[] = [
   {
     id: "ice_fence",
     name: "Ice Fence",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1d/Inv_Ice_Fence.png",
+    img: "/images/furniture/Inv_Ice_Fence.png",
     source: ["Ice Sculpting Table"],
     baseSellPrice: 1,
     melvinsCatalogue: false,
@@ -1772,7 +1772,7 @@ export const furniture: Furniture[] = [
   {
     id: "ice_lamp",
     name: "Ice Lamp",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/0d/Inv_Ice_Lamp.png",
+    img: "/images/furniture/Inv_Ice_Lamp.png",
     source: ["Ice Sculpting Table"],
     baseSellPrice: 1312,
     melvinsCatalogue: false,
@@ -1781,7 +1781,7 @@ export const furniture: Furniture[] = [
   {
     id: "ice_ottoman",
     name: "Ice Ottoman",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1c/Inv_Ice_Ottoman.png",
+    img: "/images/furniture/Inv_Ice_Ottoman.png",
     source: ["Ice Sculpting Table"],
     baseSellPrice: 12,
     melvinsCatalogue: false,
@@ -1790,7 +1790,7 @@ export const furniture: Furniture[] = [
   {
     id: "ice_path",
     name: "Ice Path",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/82/Inv_Ice_Path.png",
+    img: "/images/furniture/Inv_Ice_Path.png",
     source: ["Ice Sculpting Table"],
     baseSellPrice: 0,
     melvinsCatalogue: false,
@@ -1799,7 +1799,7 @@ export const furniture: Furniture[] = [
   {
     id: "ice_sculpture",
     name: "Ice Sculpture",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/32/Inv_Ice_Sculpture.png",
+    img: "/images/furniture/Inv_Ice_Sculpture.png",
     source: ["Ice Sculpting Table"],
     baseSellPrice: 25,
     melvinsCatalogue: false,
@@ -1808,7 +1808,7 @@ export const furniture: Furniture[] = [
   {
     id: "ice_seat",
     name: "Ice Seat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f0/Inv_Ice_Seat.png",
+    img: "/images/furniture/Inv_Ice_Seat.png",
     source: ["Ice Sculpting Table"],
     baseSellPrice: 19,
     melvinsCatalogue: false,
@@ -1817,7 +1817,7 @@ export const furniture: Furniture[] = [
   {
     id: "ice_table",
     name: "Ice Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/de/Inv_Ice_Table.png",
+    img: "/images/furniture/Inv_Ice_Table.png",
     source: ["Ice Sculpting Table"],
     baseSellPrice: 19,
     melvinsCatalogue: false,
@@ -1826,7 +1826,7 @@ export const furniture: Furniture[] = [
   {
     id: "inflatable_pool",
     name: "Inflatable Pool",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/87/Inv_Inflatable_Pool.png",
+    img: "/images/furniture/Inv_Inflatable_Pool.png",
     source: ["Island Reef", "Cooler"],
     baseSellPrice: 0,
     melvinsCatalogue: false,
@@ -1834,7 +1834,7 @@ export const furniture: Furniture[] = [
   {
     id: "indoor_summer_lily",
     name: "Indoor Summer Lily",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a7/Inv_Indoor_Summer_Lily.png",
+    img: "/images/furniture/Inv_Indoor_Summer_Lily.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 3000,
     cataloguePrice: 3750,
@@ -1845,7 +1845,7 @@ export const furniture: Furniture[] = [
   {
     id: "interior_doorway",
     name: "Interior Doorway",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b5/Inv_Interior_Doorway.png",
+    img: "/images/furniture/Inv_Interior_Doorway.png",
     source: ["Melvin", "Melvin Furniture"],
     baseSellPrice: 1000,
     melvinsCatalogue: false,
@@ -1853,7 +1853,7 @@ export const furniture: Furniture[] = [
   {
     id: "interior_half_wall",
     name: "Interior Half Wall",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/49/Inv_Interior_Half_Wall.png",
+    img: "/images/furniture/Inv_Interior_Half_Wall.png",
     source: ["Melvin", "Melvin Furniture"],
     baseSellPrice: 250,
     melvinsCatalogue: false,
@@ -1861,7 +1861,7 @@ export const furniture: Furniture[] = [
   {
     id: "interior_wall",
     name: "Interior Wall",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/34/Inv_Interior_Wall.png",
+    img: "/images/furniture/Inv_Interior_Wall.png",
     source: ["Melvin", "Melvin Furniture"],
     baseSellPrice: 500,
     melvinsCatalogue: false,
@@ -1869,7 +1869,7 @@ export const furniture: Furniture[] = [
   {
     id: "iron_wood_table",
     name: "Iron Wood Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/cb/Inv_Iron_Wood_Table.png",
+    img: "/images/furniture/Inv_Iron_Wood_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2768,
     cataloguePrice: 3460,
@@ -1879,7 +1879,7 @@ export const furniture: Furniture[] = [
   {
     id: "jam_toast_plate",
     name: "Jam Toast Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a0/Inv_Jam_Toast_Plate.png",
+    img: "/images/furniture/Inv_Jam_Toast_Plate.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -1887,7 +1887,7 @@ export const furniture: Furniture[] = [
   {
     id: "jelly_brew_set",
     name: "Jelly Brew Set",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b9/Inv_Jelly_Brew_Set.png",
+    img: "/images/furniture/Inv_Jelly_Brew_Set.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 1000,
     melvinsCatalogue: false,
@@ -1895,7 +1895,7 @@ export const furniture: Furniture[] = [
   {
     id: "kale_box",
     name: "Kale Box",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/9b/Inv_Kale_Box.png",
+    img: "/images/furniture/Inv_Kale_Box.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 440,
     melvinsCatalogue: false,
@@ -1903,7 +1903,7 @@ export const furniture: Furniture[] = [
   {
     id: "kitchen_cabinet",
     name: "Kitchen Cabinet",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b5/Inv_Kitchen_Cabinet.png",
+    img: "/images/furniture/Inv_Kitchen_Cabinet.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1200,
     cataloguePrice: 1500,
@@ -1913,7 +1913,7 @@ export const furniture: Furniture[] = [
   {
     id: "kitchen_island",
     name: "Kitchen Island",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/50/Inv_Kitchen_Island.png",
+    img: "/images/furniture/Inv_Kitchen_Island.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1200,
     cataloguePrice: 1500,
@@ -1923,7 +1923,7 @@ export const furniture: Furniture[] = [
   {
     id: "kitchen_oven",
     name: "Kitchen Oven",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6b/Inv_Kitchen_Oven.png",
+    img: "/images/furniture/Inv_Kitchen_Oven.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1400,
     cataloguePrice: 1750,
@@ -1933,7 +1933,7 @@ export const furniture: Furniture[] = [
   {
     id: "kitchen_sink",
     name: "Kitchen Sink",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/df/Inv_Kitchen_Sink.png",
+    img: "/images/furniture/Inv_Kitchen_Sink.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1200,
     cataloguePrice: 1500,
@@ -1943,7 +1943,7 @@ export const furniture: Furniture[] = [
   {
     id: "lamington_plate",
     name: "Lamington Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/cb/Inv_Lamington_Plate.png",
+    img: "/images/furniture/Inv_Lamington_Plate.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -1951,7 +1951,7 @@ export const furniture: Furniture[] = [
   {
     id: "leather_couch",
     name: "Leather Couch",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b4/Inv_Leather_Couch.png",
+    img: "/images/furniture/Inv_Leather_Couch.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 0,
     cataloguePrice: 0,
@@ -1961,7 +1961,7 @@ export const furniture: Furniture[] = [
   {
     id: "leather_seat",
     name: "Leather Seat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/93/Inv_Leather_Seat.png",
+    img: "/images/furniture/Inv_Leather_Seat.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 0,
     cataloguePrice: 0,
@@ -1971,7 +1971,7 @@ export const furniture: Furniture[] = [
   {
     id: "light_blue_wall",
     name: "Light Blue Wall",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/77/Inv_Light_Blue_Wall.png",
+    img: "/images/furniture/Inv_Light_Blue_Wall.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 500,
     cataloguePrice: 625,
@@ -1981,7 +1981,7 @@ export const furniture: Furniture[] = [
   {
     id: "light_room_divider",
     name: "Light Room Divider",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/ee/Inv_Light_Room_Divider.png",
+    img: "/images/furniture/Inv_Light_Room_Divider.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 7008,
     cataloguePrice: 8760,
@@ -1991,7 +1991,7 @@ export const furniture: Furniture[] = [
   {
     id: "lime_jam_set",
     name: "Lime Jam Set",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f8/Inv_Lime_Jam_Set.png",
+    img: "/images/furniture/Inv_Lime_Jam_Set.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 1000,
     melvinsCatalogue: false,
@@ -1999,7 +1999,7 @@ export const furniture: Furniture[] = [
   {
     id: "lot_burger_plate",
     name: "Lot Burger Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/93/Inv_Lot_Burger_Plate.png",
+    img: "/images/furniture/Inv_Lot_Burger_Plate.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -2007,7 +2007,7 @@ export const furniture: Furniture[] = [
   {
     id: "magpie_plush",
     name: "Magpie Plush",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/17/Inv_Magpie_Plush.png",
+    img: "/images/furniture/Inv_Magpie_Plush.png",
     source: ["Prize Box"],
     baseSellPrice: 2500,
     melvinsCatalogue: false,
@@ -2015,7 +2015,7 @@ export const furniture: Furniture[] = [
   {
     id: "map_table",
     name: "Map Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/7a/Inv_Map_Table.png",
+    img: "/images/furniture/Inv_Map_Table.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 0,
     cataloguePrice: 0,
@@ -2025,7 +2025,7 @@ export const furniture: Furniture[] = [
   {
     id: "marble_floor",
     name: "Marble Floor",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e0/Inv_Marble_Floor.png",
+    img: "/images/furniture/Inv_Marble_Floor.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 5000,
     cataloguePrice: 6250,
@@ -2035,7 +2035,7 @@ export const furniture: Furniture[] = [
   {
     id: "meat_pie_plate",
     name: "Meat Pie Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/ed/Inv_Meat_Pie_Plate.png",
+    img: "/images/furniture/Inv_Meat_Pie_Plate.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -2043,7 +2043,7 @@ export const furniture: Furniture[] = [
   {
     id: "meat_on_a_stick_set",
     name: "Meat on a Stick Set",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d5/Inv_Meat_on_a_Stick_Set.png",
+    img: "/images/furniture/Inv_Meat_on_a_Stick_Set.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -2051,7 +2051,7 @@ export const furniture: Furniture[] = [
   {
     id: "mighty_sandwich_plate",
     name: "Mighty Sandwich Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6e/Inv_Mighty_Sandwich_Plate.png",
+    img: "/images/furniture/Inv_Mighty_Sandwich_Plate.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 0,
     melvinsCatalogue: false,
@@ -2059,7 +2059,7 @@ export const furniture: Furniture[] = [
   {
     id: "mighty_spread_set",
     name: "Mighty Spread Set",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1c/Inv_Mighty_Spread_Set.png",
+    img: "/images/furniture/Inv_Mighty_Spread_Set.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 1000,
     melvinsCatalogue: false,
@@ -2067,7 +2067,7 @@ export const furniture: Furniture[] = [
   {
     id: "milk_cap_basket",
     name: "Milk Cap Basket",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1f/Inv_Milk_Cap_Basket.png",
+    img: "/images/furniture/Inv_Milk_Cap_Basket.png",
     source: ["Food Modeller"],
     baseSellPrice: 440,
     melvinsCatalogue: false,
@@ -2075,7 +2075,7 @@ export const furniture: Furniture[] = [
   {
     id: "milk_cap_stool",
     name: "Milk Cap Stool",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/ac/Inv_Milk_Cap_Stool.png",
+    img: "/images/furniture/Inv_Milk_Cap_Stool.png",
     source: ["Fertilizer"],
     baseSellPrice: 435,
     melvinsCatalogue: false,
@@ -2083,7 +2083,7 @@ export const furniture: Furniture[] = [
   {
     id: "milk_crate_bed",
     name: "Milk Crate Bed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8b/Inv_Milk_Crate_Bed.png",
+    img: "/images/furniture/Inv_Milk_Crate_Bed.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1846,
     cataloguePrice: 2307,
@@ -2093,7 +2093,7 @@ export const furniture: Furniture[] = [
   {
     id: "milk_crate_bookshelf",
     name: "Milk Crate Bookshelf",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/7c/Inv_Milk_Crate_Bookshelf.png",
+    img: "/images/furniture/Inv_Milk_Crate_Bookshelf.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2968,
     cataloguePrice: 3710,
@@ -2103,7 +2103,7 @@ export const furniture: Furniture[] = [
   {
     id: "milk_crate_chair",
     name: "Milk Crate Chair",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/df/Inv_Milk_Crate_Chair.png",
+    img: "/images/furniture/Inv_Milk_Crate_Chair.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 536,
     cataloguePrice: 670,
@@ -2113,7 +2113,7 @@ export const furniture: Furniture[] = [
   {
     id: "milk_crate_coffee_table",
     name: "Milk Crate Coffee Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/55/Inv_Milk_Crate_Coffee_Table.png",
+    img: "/images/furniture/Inv_Milk_Crate_Coffee_Table.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 820,
     cataloguePrice: 1025,
@@ -2123,7 +2123,7 @@ export const furniture: Furniture[] = [
   {
     id: "milk_set",
     name: "Milk Set",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/ca/Inv_Milk_Set.png",
+    img: "/images/furniture/Inv_Milk_Set.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 1000,
     melvinsCatalogue: false,
@@ -2131,7 +2131,7 @@ export const furniture: Furniture[] = [
   {
     id: "mini_festive_tree",
     name: "Mini Festive Tree",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/35/Inv_Mini_Festive_Tree.png",
+    img: "/images/furniture/Inv_Mini_Festive_Tree.png",
     source: ["Nick"],
     baseSellPrice: 516,
     melvinsCatalogue: false,
@@ -2139,7 +2139,7 @@ export const furniture: Furniture[] = [
   {
     id: "minimalist_bed",
     name: "Minimalist Bed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/74/Inv_Minimalist_Bed.png",
+    img: "/images/furniture/Inv_Minimalist_Bed.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 24320,
     cataloguePrice: 30400,
@@ -2150,7 +2150,7 @@ export const furniture: Furniture[] = [
   {
     id: "minimalist_bedside_table",
     name: "Minimalist Bedside Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f6/Inv_Minimalist_Bedside_Table.png",
+    img: "/images/furniture/Inv_Minimalist_Bedside_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 24320,
     cataloguePrice: 30400,
@@ -2161,7 +2161,7 @@ export const furniture: Furniture[] = [
   {
     id: "minimalist_book_shelf",
     name: "Minimalist Book Shelf",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Minimalist_Book_Shelf.png",
+    img: "/images/furniture/Inv_Minimalist_Book_Shelf.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 24320,
     cataloguePrice: 30400,
@@ -2172,7 +2172,7 @@ export const furniture: Furniture[] = [
   {
     id: "minimalist_chair",
     name: "Minimalist Chair",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/10/Inv_Minimalist_Chair.png",
+    img: "/images/furniture/Inv_Minimalist_Chair.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 26320,
     cataloguePrice: 32900,
@@ -2183,7 +2183,7 @@ export const furniture: Furniture[] = [
   {
     id: "minimalist_couch",
     name: "Minimalist Couch",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/95/Inv_Minimalist_Couch.png",
+    img: "/images/furniture/Inv_Minimalist_Couch.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 32320,
     cataloguePrice: 40400,
@@ -2194,7 +2194,7 @@ export const furniture: Furniture[] = [
   {
     id: "minimalist_dresser",
     name: "Minimalist Dresser",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/36/Inv_Minimalist_Dresser.png",
+    img: "/images/furniture/Inv_Minimalist_Dresser.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 24320,
     cataloguePrice: 30400,
@@ -2205,7 +2205,7 @@ export const furniture: Furniture[] = [
   {
     id: "minimalist_lamp",
     name: "Minimalist Lamp",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/42/Inv_Minimalist_Lamp.png",
+    img: "/images/furniture/Inv_Minimalist_Lamp.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 15160,
     cataloguePrice: 18950,
@@ -2216,7 +2216,7 @@ export const furniture: Furniture[] = [
   {
     id: "minimalist_seat",
     name: "Minimalist Seat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/af/Inv_Minimalist_Seat.png",
+    img: "/images/furniture/Inv_Minimalist_Seat.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 28320,
     cataloguePrice: 35400,
@@ -2227,7 +2227,7 @@ export const furniture: Furniture[] = [
   {
     id: "mirror_stand",
     name: "Mirror Stand",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c1/Inv_Mirror_Stand.png",
+    img: "/images/furniture/Inv_Mirror_Stand.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 0,
     cataloguePrice: 0,
@@ -2237,7 +2237,7 @@ export const furniture: Furniture[] = [
   {
     id: "mu_plush",
     name: "Mu Plush",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b7/Inv_Mu_Plush.png",
+    img: "/images/furniture/Inv_Mu_Plush.png",
     source: ["Prize Box"],
     baseSellPrice: 2500,
     melvinsCatalogue: false,
@@ -2245,7 +2245,7 @@ export const furniture: Furniture[] = [
   {
     id: "mushroom_risotto_plate",
     name: "Mushroom Risotto Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/bd/Inv_Mushroom_Risotto_Plate.png",
+    img: "/images/furniture/Inv_Mushroom_Risotto_Plate.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -2253,7 +2253,7 @@ export const furniture: Furniture[] = [
   {
     id: "mushroom_soup_plate",
     name: "Mushroom Soup Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a4/Inv_Mushroom_Soup_Plate.png",
+    img: "/images/furniture/Inv_Mushroom_Soup_Plate.png",
     source: ["Food Modeller"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -2261,7 +2261,7 @@ export const furniture: Furniture[] = [
   {
     id: "nordic_bed",
     name: "Nordic Bed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/39/Inv_Nordic_Bed.png",
+    img: "/images/furniture/Inv_Nordic_Bed.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 26100,
     cataloguePrice: 32625,
@@ -2272,7 +2272,7 @@ export const furniture: Furniture[] = [
   {
     id: "nordic_bedside_table",
     name: "Nordic Bedside Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1f/Inv_Nordic_Bedside_Table.png",
+    img: "/images/furniture/Inv_Nordic_Bedside_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 5616,
     cataloguePrice: 7020,
@@ -2283,7 +2283,7 @@ export const furniture: Furniture[] = [
   {
     id: "nordic_bookshelf",
     name: "Nordic Bookshelf",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2b/Inv_Nordic_Bookshelf.png",
+    img: "/images/furniture/Inv_Nordic_Bookshelf.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 14840,
     cataloguePrice: 18550,
@@ -2294,7 +2294,7 @@ export const furniture: Furniture[] = [
   {
     id: "nordic_cabinet",
     name: "Nordic Cabinet",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a8/Inv_Nordic_Cabinet.png",
+    img: "/images/furniture/Inv_Nordic_Cabinet.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 6600,
     cataloguePrice: 8250,
@@ -2305,7 +2305,7 @@ export const furniture: Furniture[] = [
   {
     id: "nordic_chair",
     name: "Nordic Chair",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4f/Inv_Nordic_Chair.png",
+    img: "/images/furniture/Inv_Nordic_Chair.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 6810,
     cataloguePrice: 8512,
@@ -2316,7 +2316,7 @@ export const furniture: Furniture[] = [
   {
     id: "nordic_coffee_table",
     name: "Nordic Coffee Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c1/Inv_Nordic_Coffee_Table.png",
+    img: "/images/furniture/Inv_Nordic_Coffee_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 6204,
     cataloguePrice: 7755,
@@ -2327,7 +2327,7 @@ export const furniture: Furniture[] = [
   {
     id: "nordic_couch",
     name: "Nordic Couch",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/93/Inv_Nordic_Couch.png",
+    img: "/images/furniture/Inv_Nordic_Couch.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 19680,
     cataloguePrice: 24600,
@@ -2338,7 +2338,7 @@ export const furniture: Furniture[] = [
   {
     id: "nordic_floor",
     name: "Nordic Floor",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a7/Inv_Nordic_Floor.png",
+    img: "/images/furniture/Inv_Nordic_Floor.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 500,
     cataloguePrice: 625,
@@ -2349,7 +2349,7 @@ export const furniture: Furniture[] = [
   {
     id: "nordic_lamp",
     name: "Nordic Lamp",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d6/Inv_Nordic_Lamp.png",
+    img: "/images/furniture/Inv_Nordic_Lamp.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 5536,
     cataloguePrice: 6920,
@@ -2360,7 +2360,7 @@ export const furniture: Furniture[] = [
   {
     id: "nordic_seat",
     name: "Nordic Seat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a3/Inv_Nordic_Seat.png",
+    img: "/images/furniture/Inv_Nordic_Seat.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 3100,
     cataloguePrice: 3875,
@@ -2371,7 +2371,7 @@ export const furniture: Furniture[] = [
   {
     id: "nordic_table",
     name: "Nordic Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/5f/Inv_Nordic_Table.png",
+    img: "/images/furniture/Inv_Nordic_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 10968,
     cataloguePrice: 13710,
@@ -2382,7 +2382,7 @@ export const furniture: Furniture[] = [
   {
     id: "nordic_wall",
     name: "Nordic Wall",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/52/Inv_Nordic_Wall.png",
+    img: "/images/furniture/Inv_Nordic_Wall.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 500,
     cataloguePrice: 625,
@@ -2393,7 +2393,7 @@ export const furniture: Furniture[] = [
   {
     id: "office_divider",
     name: "Office Divider",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d7/Inv_Office_Divider.png",
+    img: "/images/furniture/Inv_Office_Divider.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 7008,
     cataloguePrice: 8760,
@@ -2403,7 +2403,7 @@ export const furniture: Furniture[] = [
   {
     id: "old_table",
     name: "Old Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2e/Inv_Old_Table.png",
+    img: "/images/furniture/Inv_Old_Table.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2168,
     cataloguePrice: 2710,
@@ -2413,7 +2413,7 @@ export const furniture: Furniture[] = [
   {
     id: "onion_box",
     name: "Onion Box",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/cf/Inv_Onion_Box.png",
+    img: "/images/furniture/Inv_Onion_Box.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 440,
     melvinsCatalogue: false,
@@ -2421,7 +2421,7 @@ export const furniture: Furniture[] = [
   {
     id: "orange_paper_daisy_pot",
     name: "Orange Paper Daisy Pot",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/59/Inv_Orange_Paper_Daisy_Pot.png",
+    img: "/images/furniture/Inv_Orange_Paper_Daisy_Pot.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1968,
     cataloguePrice: 2460,
@@ -2432,7 +2432,7 @@ export const furniture: Furniture[] = [
   {
     id: "palm_kitchen_island",
     name: "Palm Kitchen Island",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/19/Inv_Palm_Kitchen_Island.png",
+    img: "/images/furniture/Inv_Palm_Kitchen_Island.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1200,
     cataloguePrice: 1500,
@@ -2442,7 +2442,7 @@ export const furniture: Furniture[] = [
   {
     id: "palm_mirror_stand",
     name: "Palm Mirror Stand",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f1/Inv_Palm_Mirror_Stand.png",
+    img: "/images/furniture/Inv_Palm_Mirror_Stand.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 0,
     cataloguePrice: 0,
@@ -2452,7 +2452,7 @@ export const furniture: Furniture[] = [
   {
     id: "palm_wood_kitchen_cabinet",
     name: "Palm Wood Kitchen Cabinet",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1e/Inv_Palm_Wood_Kitchen_Cabine",
+    img: "/images/furniture/Inv_Palm_Wood_Kitchen_Cabinet.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1200,
     cataloguePrice: 1500,
@@ -2462,7 +2462,7 @@ export const furniture: Furniture[] = [
   {
     id: "palm_wood_kitchen_sink",
     name: "Palm Wood Kitchen Sink",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c6/Inv_Palm_Wood_Kitchen_Sink.png",
+    img: "/images/furniture/Inv_Palm_Wood_Kitchen_Sink.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1200,
     cataloguePrice: 1500,
@@ -2472,7 +2472,7 @@ export const furniture: Furniture[] = [
   {
     id: "palm_wood_log_stool",
     name: "Palm Wood Log Stool",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/55/Inv_Palm_Wood_Log_Stool.png",
+    img: "/images/furniture/Inv_Palm_Wood_Log_Stool.png",
     source: ["Fertilizer"],
     baseSellPrice: 435,
     melvinsCatalogue: false,
@@ -2480,7 +2480,7 @@ export const furniture: Furniture[] = [
   {
     id: "parmi_and_chips_plate",
     name: "Parmi and Chips Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c8/Inv_Parmi_and_Chips_Plate.png",
+    img: "/images/furniture/Inv_Parmi_and_Chips_Plate.png",
     source: ["Food Modeller"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -2488,7 +2488,7 @@ export const furniture: Furniture[] = [
   {
     id: "pastel_blue_wall",
     name: "Pastel Blue Wall",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/65/Inv_Pastel_Blue_Wall.png",
+    img: "/images/furniture/Inv_Pastel_Blue_Wall.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 500,
     cataloguePrice: 625,
@@ -2498,7 +2498,7 @@ export const furniture: Furniture[] = [
   {
     id: "pastel_green_wall",
     name: "Pastel Green Wall",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a0/Inv_Pastel_Green_Wall.png",
+    img: "/images/furniture/Inv_Pastel_Green_Wall.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 500,
     cataloguePrice: 625,
@@ -2508,7 +2508,7 @@ export const furniture: Furniture[] = [
   {
     id: "pastel_grey_wall",
     name: "Pastel Grey Wall",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f6/Inv_Pastel_Grey_Wall.png",
+    img: "/images/furniture/Inv_Pastel_Grey_Wall.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 500,
     cataloguePrice: 625,
@@ -2518,7 +2518,7 @@ export const furniture: Furniture[] = [
   {
     id: "pastel_orange_wall",
     name: "Pastel Orange Wall",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/27/Inv_Pastel_Orange_Wall.png",
+    img: "/images/furniture/Inv_Pastel_Orange_Wall.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 500,
     cataloguePrice: 625,
@@ -2528,7 +2528,7 @@ export const furniture: Furniture[] = [
   {
     id: "pastel_pink_wall",
     name: "Pastel Pink Wall",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/fa/Inv_Pastel_Pink_Wall.png",
+    img: "/images/furniture/Inv_Pastel_Pink_Wall.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 500,
     cataloguePrice: 625,
@@ -2538,7 +2538,7 @@ export const furniture: Furniture[] = [
   {
     id: "pastel_purple_wall",
     name: "Pastel Purple Wall",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/72/Inv_Pastel_Purple_Wall.png",
+    img: "/images/furniture/Inv_Pastel_Purple_Wall.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 500,
     cataloguePrice: 625,
@@ -2548,7 +2548,7 @@ export const furniture: Furniture[] = [
   {
     id: "pastel_red_wall",
     name: "Pastel Red Wall",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/0f/Inv_Pastel_Red_Wall.png",
+    img: "/images/furniture/Inv_Pastel_Red_Wall.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 500,
     cataloguePrice: 625,
@@ -2558,7 +2558,7 @@ export const furniture: Furniture[] = [
   {
     id: "pastie_plate",
     name: "Pastie Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/72/Inv_Pastie_Plate.png",
+    img: "/images/furniture/Inv_Pastie_Plate.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -2566,7 +2566,7 @@ export const furniture: Furniture[] = [
   {
     id: "pavlova_plate",
     name: "Pavlova Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/ad/Inv_Pavlova_Plate.png",
+    img: "/images/furniture/Inv_Pavlova_Plate.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -2574,7 +2574,7 @@ export const furniture: Furniture[] = [
   {
     id: "picnic_basket",
     name: "Picnic Basket",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/46/Inv_Picnic_Basket.png",
+    img: "/images/furniture/Inv_Picnic_Basket.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1200,
     cataloguePrice: 1500,
@@ -2584,7 +2584,7 @@ export const furniture: Furniture[] = [
   {
     id: "pincher_plant_plush",
     name: "Pincher Plant Plush",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/84/Inv_Pincher_Plant_Plush.png",
+    img: "/images/furniture/Inv_Pincher_Plant_Plush.png",
     source: ["Prize Box"],
     baseSellPrice: 2500,
     melvinsCatalogue: false,
@@ -2593,7 +2593,7 @@ export const furniture: Furniture[] = [
   {
     id: "pineapple_box",
     name: "Pineapple Box",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3a/Inv_Pineapple_Box.png",
+    img: "/images/furniture/Inv_Pineapple_Box.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 440,
     melvinsCatalogue: false,
@@ -2601,7 +2601,7 @@ export const furniture: Furniture[] = [
   {
     id: "pink_bed",
     name: "Pink Bed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/ab/Inv_Pink_Bed.png",
+    img: "/images/furniture/Inv_Pink_Bed.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 3010,
     cataloguePrice: 3762,
@@ -2612,7 +2612,7 @@ export const furniture: Furniture[] = [
   {
     id: "pink_bedside_table",
     name: "Pink Bedside Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/93/Inv_Pink_Bedside_Table.png",
+    img: "/images/furniture/Inv_Pink_Bedside_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1604,
     cataloguePrice: 2005,
@@ -2623,7 +2623,7 @@ export const furniture: Furniture[] = [
   {
     id: "pink_bookshelf",
     name: "Pink Bookshelf",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/71/Inv_Pink_Bookshelf.png",
+    img: "/images/furniture/Inv_Pink_Bookshelf.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 3168,
     cataloguePrice: 3960,
@@ -2634,7 +2634,7 @@ export const furniture: Furniture[] = [
   {
     id: "pink_cabinet",
     name: "Pink Cabinet",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2e/Inv_Pink_Cabinet.png",
+    img: "/images/furniture/Inv_Pink_Cabinet.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2740,
     cataloguePrice: 3425,
@@ -2645,7 +2645,7 @@ export const furniture: Furniture[] = [
   {
     id: "pink_carpet",
     name: "Pink Carpet",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/7c/Inv_Pink_Carpet.png",
+    img: "/images/furniture/Inv_Pink_Carpet.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 500,
     cataloguePrice: 625,
@@ -2656,7 +2656,7 @@ export const furniture: Furniture[] = [
   {
     id: "pink_chair",
     name: "Pink Chair",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/77/Inv_Pink_Chair.png",
+    img: "/images/furniture/Inv_Pink_Chair.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1870,
     cataloguePrice: 2337,
@@ -2667,7 +2667,7 @@ export const furniture: Furniture[] = [
   {
     id: "pink_coffee_table",
     name: "Pink Coffee Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f6/Inv_Pink_Coffee_Table.png",
+    img: "/images/furniture/Inv_Pink_Coffee_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2768,
     cataloguePrice: 3460,
@@ -2678,7 +2678,7 @@ export const furniture: Furniture[] = [
   {
     id: "pink_couch",
     name: "Pink Couch",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/7e/Inv_Pink_Couch.png",
+    img: "/images/furniture/Inv_Pink_Couch.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2768,
     cataloguePrice: 3460,
@@ -2689,7 +2689,7 @@ export const furniture: Furniture[] = [
   {
     id: "pink_lamp",
     name: "Pink Lamp",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8c/Inv_Pink_Lamp.png",
+    img: "/images/furniture/Inv_Pink_Lamp.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2368,
     cataloguePrice: 2960,
@@ -2700,7 +2700,7 @@ export const furniture: Furniture[] = [
   {
     id: "pink_pattern_wall",
     name: "Pink Pattern Wall",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6d/Inv_Pink_Pattern_Wall.png",
+    img: "/images/furniture/Inv_Pink_Pattern_Wall.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 500,
     cataloguePrice: 625,
@@ -2711,7 +2711,7 @@ export const furniture: Furniture[] = [
   {
     id: "pink_seat",
     name: "Pink Seat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c2/Inv_Pink_Seat.png",
+    img: "/images/furniture/Inv_Pink_Seat.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2500,
     cataloguePrice: 3125,
@@ -2722,7 +2722,7 @@ export const furniture: Furniture[] = [
   {
     id: "pink_table",
     name: "Pink Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/51/Inv_Pink_Table.png",
+    img: "/images/furniture/Inv_Pink_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 3382,
     cataloguePrice: 4227,
@@ -2733,7 +2733,7 @@ export const furniture: Furniture[] = [
   {
     id: "plastic_chair",
     name: "Plastic Chair",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/ca/Inv_Plastic_Chair.png",
+    img: "/images/furniture/Inv_Plastic_Chair.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 870,
     cataloguePrice: 1087,
@@ -2743,7 +2743,7 @@ export const furniture: Furniture[] = [
   {
     id: "potato_box",
     name: "Potato Box",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a4/Inv_Potato_Box.png",
+    img: "/images/furniture/Inv_Potato_Box.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 440,
     melvinsCatalogue: false,
@@ -2751,7 +2751,7 @@ export const furniture: Furniture[] = [
   {
     id: "potted_lilly_pilly",
     name: "Potted Lilly Pilly",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/19/Inv_Potted_Lilly_Pilly.png",
+    img: "/images/furniture/Inv_Potted_Lilly_Pilly.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 3000,
     cataloguePrice: 3750,
@@ -2762,7 +2762,7 @@ export const furniture: Furniture[] = [
   {
     id: "prime_roast_plate",
     name: "Prime Roast Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Prime_Roast_Plate.png",
+    img: "/images/furniture/Inv_Prime_Roast_Plate.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -2770,7 +2770,7 @@ export const furniture: Furniture[] = [
   {
     id: "pumpkin_box",
     name: "Pumpkin Box",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f4/Inv_Pumpkin_Box.png",
+    img: "/images/furniture/Inv_Pumpkin_Box.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 440,
     melvinsCatalogue: false,
@@ -2778,7 +2778,7 @@ export const furniture: Furniture[] = [
   {
     id: "pumpkin_soup_plate",
     name: "Pumpkin Soup Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/7e/Inv_Pumpkin_Soup_Plate.png",
+    img: "/images/furniture/Inv_Pumpkin_Soup_Plate.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -2786,7 +2786,7 @@ export const furniture: Furniture[] = [
   {
     id: "purple_couch",
     name: "Purple Couch",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b1/Inv_Purple_Couch.png",
+    img: "/images/furniture/Inv_Purple_Couch.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1524,
     cataloguePrice: 1905,
@@ -2797,7 +2797,7 @@ export const furniture: Furniture[] = [
   {
     id: "purple_seat",
     name: "Purple Seat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/92/Inv_Purple_Seat.png",
+    img: "/images/furniture/Inv_Purple_Seat.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1300,
     cataloguePrice: 1625,
@@ -2808,7 +2808,7 @@ export const furniture: Furniture[] = [
   {
     id: "purple_vase",
     name: "Purple Vase",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/0b/Inv_Purple_Vase.png",
+    img: "/images/furniture/Inv_Purple_Vase.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 488,
     cataloguePrice: 610,
@@ -2819,7 +2819,7 @@ export const furniture: Furniture[] = [
   {
     id: "quandong_box",
     name: "Quandong Box",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/48/Inv_Quandong_Box.png",
+    img: "/images/furniture/Inv_Quandong_Box.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 440,
     melvinsCatalogue: false,
@@ -2827,7 +2827,7 @@ export const furniture: Furniture[] = [
   {
     id: "quandong_jam_set",
     name: "Quandong Jam Set",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1a/Inv_Quandong_Jam_Set.png",
+    img: "/images/furniture/Inv_Quandong_Jam_Set.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 1000,
     melvinsCatalogue: false,
@@ -2835,7 +2835,7 @@ export const furniture: Furniture[] = [
   {
     id: "quiche_plate",
     name: "Quiche Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/23/Inv_Quiche_Plate.png",
+    img: "/images/furniture/Inv_Quiche_Plate.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -2843,7 +2843,7 @@ export const furniture: Furniture[] = [
   {
     id: "rattan_basket",
     name: "Rattan Basket",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/38/Inv_Rattan_Basket.png",
+    img: "/images/furniture/Inv_Rattan_Basket.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1768,
     cataloguePrice: 2210,
@@ -2854,7 +2854,7 @@ export const furniture: Furniture[] = [
   {
     id: "rattan_bed",
     name: "Rattan Bed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d8/Inv_Rattan_Bed.png",
+    img: "/images/furniture/Inv_Rattan_Bed.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2610,
     cataloguePrice: 3262,
@@ -2865,7 +2865,7 @@ export const furniture: Furniture[] = [
   {
     id: "rattan_bedside_table",
     name: "Rattan Bedside Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/31/Inv_Rattan_Bedside_Table.png",
+    img: "/images/furniture/Inv_Rattan_Bedside_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1404,
     cataloguePrice: 1755,
@@ -2876,7 +2876,7 @@ export const furniture: Furniture[] = [
   {
     id: "rattan_bookshelf",
     name: "Rattan Bookshelf",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c1/Inv_Rattan_Bookshelf.png",
+    img: "/images/furniture/Inv_Rattan_Bookshelf.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2968,
     cataloguePrice: 3710,
@@ -2887,7 +2887,7 @@ export const furniture: Furniture[] = [
   {
     id: "rattan_cabinet",
     name: "Rattan Cabinet",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/ec/Inv_Rattan_Cabinet.png",
+    img: "/images/furniture/Inv_Rattan_Cabinet.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2600,
     cataloguePrice: 3250,
@@ -2898,7 +2898,7 @@ export const furniture: Furniture[] = [
   {
     id: "rattan_chair",
     name: "Rattan Chair",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b9/Inv_Rattan_Chair.png",
+    img: "/images/furniture/Inv_Rattan_Chair.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2270,
     cataloguePrice: 2837,
@@ -2909,7 +2909,7 @@ export const furniture: Furniture[] = [
   {
     id: "rattan_coffee_table",
     name: "Rattan Coffee Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/9e/Inv_Rattan_Coffee_Table.png",
+    img: "/images/furniture/Inv_Rattan_Coffee_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2168,
     cataloguePrice: 2710,
@@ -2920,7 +2920,7 @@ export const furniture: Furniture[] = [
   {
     id: "rattan_couch",
     name: "Rattan Couch",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f0/Inv_Rattan_Couch.png",
+    img: "/images/furniture/Inv_Rattan_Couch.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1968,
     cataloguePrice: 2460,
@@ -2931,7 +2931,7 @@ export const furniture: Furniture[] = [
   {
     id: "rattan_floor",
     name: "Rattan Floor",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f6/Inv_Rattan_Floor.png",
+    img: "/images/furniture/Inv_Rattan_Floor.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 1300,
     cataloguePrice: 1625,
@@ -2942,7 +2942,7 @@ export const furniture: Furniture[] = [
   {
     id: "rattan_lamp",
     name: "Rattan Lamp",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e1/Inv_Rattan_Lamp.png",
+    img: "/images/furniture/Inv_Rattan_Lamp.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1968,
     cataloguePrice: 2460,
@@ -2953,7 +2953,7 @@ export const furniture: Furniture[] = [
   {
     id: "rattan_room_divider",
     name: "Rattan Room Divider",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/78/Inv_Rattan_Room_Divider.png",
+    img: "/images/furniture/Inv_Rattan_Room_Divider.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 7008,
     cataloguePrice: 8760,
@@ -2964,7 +2964,7 @@ export const furniture: Furniture[] = [
   {
     id: "rattan_seat",
     name: "Rattan Seat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6d/Inv_Rattan_Seat.png",
+    img: "/images/furniture/Inv_Rattan_Seat.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1100,
     cataloguePrice: 1375,
@@ -2975,7 +2975,7 @@ export const furniture: Furniture[] = [
   {
     id: "rattan_table",
     name: "Rattan Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/9d/Inv_Rattan_Table.png",
+    img: "/images/furniture/Inv_Rattan_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2742,
     cataloguePrice: 3427,
@@ -2986,7 +2986,7 @@ export const furniture: Furniture[] = [
   {
     id: "rattan_wall",
     name: "Rattan Wall",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a7/Inv_Rattan_Wall.png",
+    img: "/images/furniture/Inv_Rattan_Wall.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 1314,
     cataloguePrice: 1642,
@@ -2997,7 +2997,7 @@ export const furniture: Furniture[] = [
   {
     id: "red_bar_stool",
     name: "Red Bar Stool",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b7/Inv_Red_Bar_Stool.png",
+    img: "/images/furniture/Inv_Red_Bar_Stool.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 3360,
     cataloguePrice: 4200,
@@ -3007,7 +3007,7 @@ export const furniture: Furniture[] = [
   {
     id: "red_beach_chair",
     name: "Red Beach Chair",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/65/Inv_Red_Beach_Chair.png",
+    img: "/images/furniture/Inv_Red_Beach_Chair.png",
     source: ["Island Reef", "Cooler"],
     baseSellPrice: 435,
     melvinsCatalogue: false,
@@ -3016,7 +3016,7 @@ export const furniture: Furniture[] = [
   {
     id: "red_beach_hammock",
     name: "Red Beach Hammock",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/df/Inv_Red_Beach_Hammock.png",
+    img: "/images/furniture/Inv_Red_Beach_Hammock.png",
     source: ["Island Reef", "Cooler"],
     baseSellPrice: 30,
     melvinsCatalogue: false,
@@ -3025,7 +3025,7 @@ export const furniture: Furniture[] = [
   {
     id: "red_beach_umbrella",
     name: "Red Beach Umbrella",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/da/Inv_Red_Beach_Umbrella.png",
+    img: "/images/furniture/Inv_Red_Beach_Umbrella.png",
     source: ["Island Reef"],
     baseSellPrice: 14881,
     melvinsCatalogue: false,
@@ -3034,7 +3034,7 @@ export const furniture: Furniture[] = [
   {
     id: "red_brick_wallpaper",
     name: "Red Brick Wallpaper",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/12/Inv_Red_Brick_Wallpaper.png",
+    img: "/images/furniture/Inv_Red_Brick_Wallpaper.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 1500,
     cataloguePrice: 1875,
@@ -3044,7 +3044,7 @@ export const furniture: Furniture[] = [
   {
     id: "red_lava_lamp",
     name: "Red Lava Lamp",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/44/Inv_Red_Lava_Lamp.png",
+    img: "/images/furniture/Inv_Red_Lava_Lamp.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2176,
     cataloguePrice: 2720,
@@ -3054,7 +3054,7 @@ export const furniture: Furniture[] = [
   {
     id: "red_pattern_wall",
     name: "Red Pattern Wall",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/cd/Inv_Red_Pattern_Wall.png",
+    img: "/images/furniture/Inv_Red_Pattern_Wall.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 500,
     cataloguePrice: 625,
@@ -3064,7 +3064,7 @@ export const furniture: Furniture[] = [
   {
     id: "red_wood_floor",
     name: "Red Wood Floor",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/37/Inv_Red_Wood_Floor.png",
+    img: "/images/furniture/Inv_Red_Wood_Floor.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 1316,
     cataloguePrice: 1645,
@@ -3074,7 +3074,7 @@ export const furniture: Furniture[] = [
   {
     id: "regal_armchair",
     name: "Regal ArmChair",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/7a/Inv_Regal_ArmChair.png",
+    img: "/images/furniture/Inv_Regal_ArmChair.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2176,
     cataloguePrice: 2720,
@@ -3085,7 +3085,7 @@ export const furniture: Furniture[] = [
   {
     id: "regal_bed",
     name: "Regal Bed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b9/Inv_Regal_Bed.png",
+    img: "/images/furniture/Inv_Regal_Bed.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2176,
     cataloguePrice: 2720,
@@ -3096,7 +3096,7 @@ export const furniture: Furniture[] = [
   {
     id: "regal_bedside_table",
     name: "Regal Bedside Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f0/Inv_Regal_Bedside_Table.png",
+    img: "/images/furniture/Inv_Regal_Bedside_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2176,
     cataloguePrice: 2720,
@@ -3107,7 +3107,7 @@ export const furniture: Furniture[] = [
   {
     id: "regal_chair",
     name: "Regal Chair",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2f/Inv_Regal_Chair.png",
+    img: "/images/furniture/Inv_Regal_Chair.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2176,
     cataloguePrice: 2720,
@@ -3118,7 +3118,7 @@ export const furniture: Furniture[] = [
   {
     id: "regal_clock",
     name: "Regal Clock",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/66/Inv_Regal_Clock.png",
+    img: "/images/furniture/Inv_Regal_Clock.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2576,
     cataloguePrice: 3220,
@@ -3129,7 +3129,7 @@ export const furniture: Furniture[] = [
   {
     id: "regal_drawers",
     name: "Regal Drawers",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/60/Inv_Regal_Drawers.png",
+    img: "/images/furniture/Inv_Regal_Drawers.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2176,
     cataloguePrice: 2720,
@@ -3140,7 +3140,7 @@ export const furniture: Furniture[] = [
   {
     id: "regal_lamp",
     name: "Regal Lamp",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c2/Inv_Regal_Lamp.png",
+    img: "/images/furniture/Inv_Regal_Lamp.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2176,
     cataloguePrice: 2720,
@@ -3151,7 +3151,7 @@ export const furniture: Furniture[] = [
   {
     id: "regal_rug",
     name: "Regal Rug",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6f/Inv_Regal_Rug.png",
+    img: "/images/furniture/Inv_Regal_Rug.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 2900,
     cataloguePrice: 3625,
@@ -3162,7 +3162,7 @@ export const furniture: Furniture[] = [
   {
     id: "regal_sofa",
     name: "Regal Sofa",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/de/Inv_Regal_Sofa.png",
+    img: "/images/furniture/Inv_Regal_Sofa.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2176,
     cataloguePrice: 2720,
@@ -3173,7 +3173,7 @@ export const furniture: Furniture[] = [
   {
     id: "regal_table",
     name: "Regal Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Regal_Table.png",
+    img: "/images/furniture/Inv_Regal_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2176,
     cataloguePrice: 2720,
@@ -3184,7 +3184,7 @@ export const furniture: Furniture[] = [
   {
     id: "register",
     name: "Register",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/bf/Inv_Register.png",
+    img: "/images/furniture/Inv_Register.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1968,
     cataloguePrice: 2460,
@@ -3194,7 +3194,7 @@ export const furniture: Furniture[] = [
   {
     id: "retro_floor",
     name: "Retro Floor",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4c/Inv_Retro_Floor.png",
+    img: "/images/furniture/Inv_Retro_Floor.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 1314,
     cataloguePrice: 1642,
@@ -3204,7 +3204,7 @@ export const furniture: Furniture[] = [
   {
     id: "retro_flower_wall",
     name: "Retro Flower Wall",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8f/Inv_Retro_Flower_Wall.png",
+    img: "/images/furniture/Inv_Retro_Flower_Wall.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 1314,
     cataloguePrice: 1642,
@@ -3214,7 +3214,7 @@ export const furniture: Furniture[] = [
   {
     id: "rice_bag_stack",
     name: "Rice Bag Stack",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/fb/Inv_Rice_Bag_Stack.png",
+    img: "/images/furniture/Inv_Rice_Bag_Stack.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 1000,
     melvinsCatalogue: false,
@@ -3222,7 +3222,7 @@ export const furniture: Furniture[] = [
   {
     id: "river_daisy_pot",
     name: "River Daisy Pot",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3f/Inv_River_Daisy_Pot.png",
+    img: "/images/furniture/Inv_River_Daisy_Pot.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1968,
     cataloguePrice: 2460,
@@ -3233,7 +3233,7 @@ export const furniture: Furniture[] = [
   {
     id: "roe_nigiri_plate",
     name: "Roe Nigiri Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/46/Inv_Roe_Nigiri_Plate.png",
+    img: "/images/furniture/Inv_Roe_Nigiri_Plate.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -3241,7 +3241,7 @@ export const furniture: Furniture[] = [
   {
     id: "roo_plush",
     name: "Roo Plush",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/03/Inv_Roo_Plush.png",
+    img: "/images/furniture/Inv_Roo_Plush.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 12176,
     cataloguePrice: 15220,
@@ -3251,7 +3251,7 @@ export const furniture: Furniture[] = [
   {
     id: "roundhead_basket",
     name: "Roundhead Basket",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f4/Inv_Roundhead_Basket.png",
+    img: "/images/furniture/Inv_Roundhead_Basket.png",
     source: ["Food Modeller"],
     baseSellPrice: 440,
     melvinsCatalogue: false,
@@ -3259,7 +3259,7 @@ export const furniture: Furniture[] = [
   {
     id: "roundhead_stool",
     name: "Roundhead Stool",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1e/Inv_Roundhead_Stool.png",
+    img: "/images/furniture/Inv_Roundhead_Stool.png",
     source: ["Fertilizer"],
     baseSellPrice: 435,
     melvinsCatalogue: false,
@@ -3267,7 +3267,7 @@ export const furniture: Furniture[] = [
   {
     id: "royal_bluebell_pot",
     name: "Royal Bluebell Pot",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/bb/Inv_Royal_Bluebell_Pot.png",
+    img: "/images/furniture/Inv_Royal_Bluebell_Pot.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1968,
     cataloguePrice: 2460,
@@ -3278,7 +3278,7 @@ export const furniture: Furniture[] = [
   {
     id: "sand_bucket",
     name: "Sand Bucket",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/42/Inv_Sand_Bucket.png",
+    img: "/images/furniture/Inv_Sand_Bucket.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1200,
     cataloguePrice: 1500,
@@ -3289,7 +3289,7 @@ export const furniture: Furniture[] = [
   {
     id: "sand_castle",
     name: "Sand Castle",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/82/Inv_Sand_Castle.png",
+    img: "/images/furniture/Inv_Sand_Castle.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1200,
     cataloguePrice: 1500,
@@ -3300,7 +3300,7 @@ export const furniture: Furniture[] = [
   {
     id: "sausage_roll_plate",
     name: "Sausage Roll Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/95/Inv_Sausage_Roll_Plate.png",
+    img: "/images/furniture/Inv_Sausage_Roll_Plate.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -3308,7 +3308,7 @@ export const furniture: Furniture[] = [
   {
     id: "scones_plate",
     name: "Scones Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/12/Inv_Scones_Plate.png",
+    img: "/images/furniture/Inv_Scones_Plate.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -3316,7 +3316,7 @@ export const furniture: Furniture[] = [
   {
     id: "seaweed_soup_plate",
     name: "Seaweed Soup Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a0/Inv_Seaweed_Soup_Plate.png",
+    img: "/images/furniture/Inv_Seaweed_Soup_Plate.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -3324,7 +3324,7 @@ export const furniture: Furniture[] = [
   {
     id: "shark_plush",
     name: "Shark Plush",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e2/Inv_Shark_Plush.png",
+    img: "/images/furniture/Inv_Shark_Plush.png",
     source: ["Prize Box"],
     baseSellPrice: 2500,
     melvinsCatalogue: false,
@@ -3332,7 +3332,7 @@ export const furniture: Furniture[] = [
   {
     id: "silver_bug_comp_trophy",
     name: "Silver Bug Comp Trophy",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b5/Inv_Silver_Bug_Comp_Trophy.png",
+    img: "/images/resources/trophies/Inv_Silver_Bug_Comp_Trophy.png",
     source: ["Bug Catching Comp"],
     baseSellPrice: 39360,
     melvinsCatalogue: false,
@@ -3340,7 +3340,7 @@ export const furniture: Furniture[] = [
   {
     id: "silver_fish_trophy",
     name: "Silver Fish Trophy",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Silver_Fish_Trophy.png",
+    img: "/images/resources/trophies/Inv_Silver_Fish_Trophy.png",
     source: ["Fish Catching Comp"],
     baseSellPrice: 59040,
     melvinsCatalogue: false,
@@ -3348,7 +3348,7 @@ export const furniture: Furniture[] = [
   {
     id: "slippery_jack_basket",
     name: "Slippery Jack Basket",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e8/Inv_Slippery_Jack_Basket.png",
+    img: "/images/furniture/Inv_Slippery_Jack_Basket.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 440,
     melvinsCatalogue: false,
@@ -3356,7 +3356,7 @@ export const furniture: Furniture[] = [
   {
     id: "slippery_jack_stool",
     name: "Slippery Jack Stool",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a5/Inv_Slippery_Jack_Stool.png",
+    img: "/images/furniture/Inv_Slippery_Jack_Stool.png",
     source: ["Fertilizer"],
     baseSellPrice: 435,
     melvinsCatalogue: false,
@@ -3364,7 +3364,7 @@ export const furniture: Furniture[] = [
   {
     id: "small_pot",
     name: "Small Pot",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d5/Inv_Small_Pot.png",
+    img: "/images/furniture/Inv_Small_Pot.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 3968,
     cataloguePrice: 4960,
@@ -3374,7 +3374,7 @@ export const furniture: Furniture[] = [
   {
     id: "small_round_table",
     name: "Small Round Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/7b/Inv_Small_Round_Table.png",
+    img: "/images/furniture/Inv_Small_Round_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 654,
     cataloguePrice: 817,
@@ -3384,7 +3384,7 @@ export const furniture: Furniture[] = [
   {
     id: "small_stack_of_books",
     name: "Small Stack of Books",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8f/Inv_Small_Stack_of_Books.png",
+    img: "/images/furniture/Inv_Small_Stack_of_Books.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1968,
     cataloguePrice: 2460,
@@ -3394,7 +3394,7 @@ export const furniture: Furniture[] = [
   {
     id: "spag_bol_plate",
     name: "Spag Bol Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/34/Inv_Spag_Bol_Plate.png",
+    img: "/images/furniture/Inv_Spag_Bol_Plate.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -3402,7 +3402,7 @@ export const furniture: Furniture[] = [
   {
     id: "sparkin_soup_plate",
     name: "Sparkin' Soup Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6a/Inv_Sparkin%27_Soup_Plate.png",
+    img: "/images/furniture/Inv_Sparkin%27_Soup_Plate.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -3410,7 +3410,7 @@ export const furniture: Furniture[] = [
   {
     id: "stack_of_papers",
     name: "Stack of Papers",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/7e/Inv_Stack_of_Papers.png",
+    img: "/images/furniture/Inv_Stack_of_Papers.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1968,
     cataloguePrice: 2460,
@@ -3420,7 +3420,7 @@ export const furniture: Furniture[] = [
   {
     id: "stack_of_plates",
     name: "Stack of Plates",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/0c/Inv_Stack_of_Plates.png",
+    img: "/images/furniture/Inv_Stack_of_Plates.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 3936,
     cataloguePrice: 4920,
@@ -3430,7 +3430,7 @@ export const furniture: Furniture[] = [
   {
     id: "star_light",
     name: "Star Light",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/15/Inv_Star_Light.png",
+    img: "/images/furniture/Inv_Star_Light.png",
     source: ["Jolly Sack"],
     baseSellPrice: 8487,
     melvinsCatalogue: false,
@@ -3438,7 +3438,7 @@ export const furniture: Furniture[] = [
   {
     id: "star_wall",
     name: "Star Wall",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e4/Inv_Star_Wall.png",
+    img: "/images/furniture/Inv_Star_Wall.png",
     source: ["Sky Fest Prize Box"],
     baseSellPrice: 2500,
     melvinsCatalogue: false,
@@ -3446,7 +3446,7 @@ export const furniture: Furniture[] = [
   {
     id: "stylish_armchair",
     name: "Stylish ArmChair",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a9/Inv_Stylish_ArmChair.png",
+    img: "/images/furniture/Inv_Stylish_ArmChair.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1798,
     cataloguePrice: 2247,
@@ -3457,7 +3457,7 @@ export const furniture: Furniture[] = [
   {
     id: "stylish_bed",
     name: "Stylish Bed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6a/Inv_Stylish_Bed.png",
+    img: "/images/furniture/Inv_Stylish_Bed.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2490,
     cataloguePrice: 3112,
@@ -3468,7 +3468,7 @@ export const furniture: Furniture[] = [
   {
     id: "stylish_bedside_table",
     name: "Stylish Bedside Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c7/Inv_Stylish_Bedside_Table.png",
+    img: "/images/furniture/Inv_Stylish_Bedside_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1712,
     cataloguePrice: 2140,
@@ -3479,7 +3479,7 @@ export const furniture: Furniture[] = [
   {
     id: "stylish_chair",
     name: "Stylish Chair",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/eb/Inv_Stylish_Chair.png",
+    img: "/images/furniture/Inv_Stylish_Chair.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1306,
     cataloguePrice: 1632,
@@ -3490,7 +3490,7 @@ export const furniture: Furniture[] = [
   {
     id: "stylish_drawers",
     name: "Stylish Drawers",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/40/Inv_Stylish_Drawers.png",
+    img: "/images/furniture/Inv_Stylish_Drawers.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2004,
     cataloguePrice: 2505,
@@ -3501,7 +3501,7 @@ export const furniture: Furniture[] = [
   {
     id: "stylish_dresser",
     name: "Stylish Dresser",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3f/Inv_Stylish_Dresser.png",
+    img: "/images/furniture/Inv_Stylish_Dresser.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1798,
     cataloguePrice: 2247,
@@ -3512,7 +3512,7 @@ export const furniture: Furniture[] = [
   {
     id: "stylish_lamp",
     name: "Stylish Lamp",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/85/Inv_Stylish_Lamp.png",
+    img: "/images/furniture/Inv_Stylish_Lamp.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1516,
     cataloguePrice: 1895,
@@ -3523,7 +3523,7 @@ export const furniture: Furniture[] = [
   {
     id: "stylish_sofa",
     name: "Stylish Sofa",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/eb/Inv_Stylish_Sofa.png",
+    img: "/images/furniture/Inv_Stylish_Sofa.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2600,
     cataloguePrice: 3250,
@@ -3534,7 +3534,7 @@ export const furniture: Furniture[] = [
   {
     id: "stylish_table",
     name: "Stylish Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/ad/Inv_Stylish_Table.png",
+    img: "/images/furniture/Inv_Stylish_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 2200,
     cataloguePrice: 2750,
@@ -3545,7 +3545,7 @@ export const furniture: Furniture[] = [
   {
     id: "sugar_bag_stack",
     name: "Sugar Bag Stack",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/0d/Inv_Sugar_Bag_Stack.png",
+    img: "/images/furniture/Inv_Sugar_Bag_Stack.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 1000,
     melvinsCatalogue: false,
@@ -3553,7 +3553,7 @@ export const furniture: Furniture[] = [
   {
     id: "sugar_cane_crate",
     name: "Sugar Cane Crate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/28/Inv_Sugar_Cane_Crate.png",
+    img: "/images/furniture/Inv_Sugar_Cane_Crate.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 440,
     melvinsCatalogue: false,
@@ -3561,7 +3561,7 @@ export const furniture: Furniture[] = [
   {
     id: "tall_bookshelf",
     name: "Tall Bookshelf",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/9d/Inv_Tall_Bookshelf.png",
+    img: "/images/furniture/Inv_Tall_Bookshelf.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 0,
     cataloguePrice: 0,
@@ -3571,7 +3571,7 @@ export const furniture: Furniture[] = [
   {
     id: "tea_pot",
     name: "Tea Pot",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/03/Inv_Tea_Pot.png",
+    img: "/images/furniture/Inv_Tea_Pot.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 3968,
     cataloguePrice: 4960,
@@ -3581,7 +3581,7 @@ export const furniture: Furniture[] = [
   {
     id: "toffee_plate",
     name: "Toffee Plate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3b/Inv_Toffee_Plate.png",
+    img: "/images/furniture/Inv_Toffee_Plate.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -3589,7 +3589,7 @@ export const furniture: Furniture[] = [
   {
     id: "toilet",
     name: "Toilet",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/56/Inv_Toilet.png",
+    img: "/images/furniture/Inv_Toilet.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 14200,
     cataloguePrice: 17750,
@@ -3599,7 +3599,7 @@ export const furniture: Furniture[] = [
   {
     id: "tomato_box",
     name: "Tomato Box",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6f/Inv_Tomato_Box.png",
+    img: "/images/furniture/Inv_Tomato_Box.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 440,
     melvinsCatalogue: false,
@@ -3607,7 +3607,7 @@ export const furniture: Furniture[] = [
   {
     id: "traffic_cone",
     name: "Traffic Cone",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/03/Inv_Traffic_Cone.png",
+    img: "/images/furniture/Inv_Traffic_Cone.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 5904,
     cataloguePrice: 7380,
@@ -3617,7 +3617,7 @@ export const furniture: Furniture[] = [
   {
     id: "vombat_plush",
     name: "Vombat Plush",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/0a/Inv_Vombat_Plush.png",
+    img: "/images/furniture/Inv_Vombat_Plush.png",
     source: ["Prize Box"],
     baseSellPrice: 2500,
     melvinsCatalogue: false,
@@ -3625,7 +3625,7 @@ export const furniture: Furniture[] = [
   {
     id: "waiting_chair",
     name: "Waiting Chair",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1c/Inv_Waiting_Chair.png",
+    img: "/images/furniture/Inv_Waiting_Chair.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 5880,
     cataloguePrice: 7350,
@@ -3635,7 +3635,7 @@ export const furniture: Furniture[] = [
   {
     id: "warm_nordic_bed",
     name: "Warm Nordic Bed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d0/Inv_Warm_Nordic_Bed.png",
+    img: "/images/furniture/Inv_Warm_Nordic_Bed.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 26100,
     cataloguePrice: 32625,
@@ -3646,7 +3646,7 @@ export const furniture: Furniture[] = [
   {
     id: "warm_nordic_bedside_table",
     name: "Warm Nordic Bedside Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/80/Inv_Warm_Nordic_Bedside_Tabl",
+    img: "/images/furniture/Inv_Warm_Nordic_Bedside_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 5616,
     cataloguePrice: 7020,
@@ -3657,7 +3657,7 @@ export const furniture: Furniture[] = [
   {
     id: "warm_nordic_bookshelf",
     name: "Warm Nordic Bookshelf",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/15/Inv_Warm_Nordic_Bookshelf.png",
+    img: "/images/furniture/Inv_Warm_Nordic_Bookshelf.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 14840,
     cataloguePrice: 18550,
@@ -3668,7 +3668,7 @@ export const furniture: Furniture[] = [
   {
     id: "warm_nordic_cabinet",
     name: "Warm Nordic Cabinet",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a5/Inv_Warm_Nordic_Cabinet.png",
+    img: "/images/furniture/Inv_Warm_Nordic_Cabinet.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 6600,
     cataloguePrice: 8250,
@@ -3679,7 +3679,7 @@ export const furniture: Furniture[] = [
   {
     id: "warm_nordic_chair",
     name: "Warm Nordic Chair",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f3/Inv_Warm_Nordic_Chair.png",
+    img: "/images/furniture/Inv_Warm_Nordic_Chair.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 6810,
     cataloguePrice: 8512,
@@ -3690,7 +3690,7 @@ export const furniture: Furniture[] = [
   {
     id: "warm_nordic_coffee_table",
     name: "Warm Nordic Coffee Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1d/Inv_Warm_Nordic_Coffee_Table.png",
+    img: "/images/furniture/Inv_Warm_Nordic_Coffee_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 6204,
     cataloguePrice: 7755,
@@ -3701,7 +3701,7 @@ export const furniture: Furniture[] = [
   {
     id: "warm_nordic_couch",
     name: "Warm Nordic Couch",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/78/Inv_Warm_Nordic_Couch.png",
+    img: "/images/furniture/Inv_Warm_Nordic_Couch.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 19680,
     cataloguePrice: 24600,
@@ -3712,7 +3712,7 @@ export const furniture: Furniture[] = [
   {
     id: "warm_nordic_floor",
     name: "Warm Nordic Floor",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/12/Inv_Warm_Nordic_Floor.png",
+    img: "/images/furniture/Inv_Warm_Nordic_Floor.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 500,
     cataloguePrice: 625,
@@ -3723,7 +3723,7 @@ export const furniture: Furniture[] = [
   {
     id: "warm_nordic_lamp",
     name: "Warm Nordic Lamp",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/62/Inv_Warm_Nordic_Lamp.png",
+    img: "/images/furniture/Inv_Warm_Nordic_Lamp.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 5536,
     cataloguePrice: 6920,
@@ -3734,7 +3734,7 @@ export const furniture: Furniture[] = [
   {
     id: "warm_nordic_seat",
     name: "Warm Nordic Seat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/84/Inv_Warm_Nordic_Seat.png",
+    img: "/images/furniture/Inv_Warm_Nordic_Seat.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 3100,
     cataloguePrice: 3875,
@@ -3745,7 +3745,7 @@ export const furniture: Furniture[] = [
   {
     id: "warm_nordic_table",
     name: "Warm Nordic Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f4/Inv_Warm_Nordic_Table.png",
+    img: "/images/furniture/Inv_Warm_Nordic_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 10968,
     cataloguePrice: 13710,
@@ -3756,7 +3756,7 @@ export const furniture: Furniture[] = [
   {
     id: "warm_nordic_wall",
     name: "Warm Nordic Wall",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/bb/Inv_Warm_Nordic_Wall.png",
+    img: "/images/furniture/Inv_Warm_Nordic_Wall.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 500,
     cataloguePrice: 625,
@@ -3767,7 +3767,7 @@ export const furniture: Furniture[] = [
   {
     id: "wary_mu_plush",
     name: "Wary Mu Plush",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/58/Inv_Wary_Mu_Plush.png",
+    img: "/images/furniture/Inv_Wary_Mu_Plush.png",
     source: ["PRize Box"],
     baseSellPrice: 2500,
     melvinsCatalogue: false,
@@ -3775,7 +3775,7 @@ export const furniture: Furniture[] = [
   {
     id: "water_melon_popsicle_set",
     name: "Water Melon Popsicle Set",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/75/Inv_Water_Melon_Popsicle_Set.png",
+    img: "/images/furniture/Inv_Water_Melon_Popsicle_Set.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 984,
     melvinsCatalogue: false,
@@ -3783,7 +3783,7 @@ export const furniture: Furniture[] = [
   {
     id: "watermelon_box",
     name: "Watermelon Box",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/93/Inv_Watermelon_Box.png",
+    img: "/images/furniture/Inv_Watermelon_Box.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 440,
     melvinsCatalogue: false,
@@ -3791,7 +3791,7 @@ export const furniture: Furniture[] = [
   {
     id: "wattle_brew_set",
     name: "Wattle Brew Set",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/01/Inv_Wattle_Brew_Set.png",
+    img: "/images/furniture/Inv_Wattle_Brew_Set.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 1000,
     melvinsCatalogue: false,
@@ -3799,7 +3799,7 @@ export const furniture: Furniture[] = [
   {
     id: "wattle_tea_set",
     name: "Wattle Tea Set",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/9f/Inv_Wattle_Tea_Set.png",
+    img: "/images/furniture/Inv_Wattle_Tea_Set.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 1000,
     melvinsCatalogue: false,
@@ -3807,7 +3807,7 @@ export const furniture: Furniture[] = [
   {
     id: "wheat_crate",
     name: "Wheat Crate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/fd/Inv_Wheat_Crate.png",
+    img: "/images/furniture/Inv_Wheat_Crate.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 440,
     melvinsCatalogue: false,
@@ -3815,7 +3815,7 @@ export const furniture: Furniture[] = [
   {
     id: "white_armchair",
     name: "White Armchair",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/de/Inv_White_Armchair.png",
+    img: "/images/furniture/Inv_White_Armchair.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1412,
     cataloguePrice: 1765,
@@ -3826,7 +3826,7 @@ export const furniture: Furniture[] = [
   {
     id: "white_bed",
     name: "White Bed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8e/Inv_White_Bed.png",
+    img: "/images/furniture/Inv_White_Bed.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1846,
     cataloguePrice: 2307,
@@ -3837,7 +3837,7 @@ export const furniture: Furniture[] = [
   {
     id: "white_bedside_table",
     name: "White Bedside Table.",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/56/Inv_White_Bedside_Table..png",
+    img: "/images/furniture/Inv_White_Bedside_Table..png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1240,
     cataloguePrice: 1550,
@@ -3848,7 +3848,7 @@ export const furniture: Furniture[] = [
   {
     id: "white_brick_wallpaper",
     name: "White Brick Wallpaper",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/9a/Inv_White_Brick_Wallpaper.png",
+    img: "/images/furniture/Inv_White_Brick_Wallpaper.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 1500,
     cataloguePrice: 1875,
@@ -3859,7 +3859,7 @@ export const furniture: Furniture[] = [
   {
     id: "white_chair",
     name: "White Chair",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/cb/Inv_White_Chair.png",
+    img: "/images/furniture/Inv_White_Chair.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 680,
     cataloguePrice: 850,
@@ -3870,7 +3870,7 @@ export const furniture: Furniture[] = [
   {
     id: "white_chest_of_drawers",
     name: "White Chest of Drawers",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/df/Inv_White_Chest_of_Drawers.png",
+    img: "/images/furniture/Inv_White_Chest_of_Drawers.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1386,
     cataloguePrice: 1732,
@@ -3881,7 +3881,7 @@ export const furniture: Furniture[] = [
   {
     id: "white_coffee_table",
     name: "White Coffee Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/59/Inv_White_Coffee_Table.png",
+    img: "/images/furniture/Inv_White_Coffee_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 864,
     cataloguePrice: 1080,
@@ -3892,7 +3892,7 @@ export const furniture: Furniture[] = [
   {
     id: "white_dinner_table",
     name: "White Dinner Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d9/Inv_White_Dinner_Table.png",
+    img: "/images/furniture/Inv_White_Dinner_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1156,
     cataloguePrice: 1445,
@@ -3903,7 +3903,7 @@ export const furniture: Furniture[] = [
   {
     id: "white_long_coffee_table",
     name: "White Long Coffee Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/60/Inv_White_Long_Coffee_Table.png",
+    img: "/images/furniture/Inv_White_Long_Coffee_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 820,
     cataloguePrice: 1025,
@@ -3914,7 +3914,7 @@ export const furniture: Furniture[] = [
   {
     id: "white_ottoman",
     name: "White Ottoman",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/0b/Inv_White_Ottoman.png",
+    img: "/images/furniture/Inv_White_Ottoman.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 536,
     cataloguePrice: 670,
@@ -3925,7 +3925,7 @@ export const furniture: Furniture[] = [
   {
     id: "white_panel_wall",
     name: "White Panel Wall",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8d/Inv_White_Panel_Wall.png",
+    img: "/images/furniture/Inv_White_Panel_Wall.png",
     source: ["Melvin Furniture", "Recycling Bin"],
     displayPrice: 1314,
     cataloguePrice: 1642,
@@ -3936,7 +3936,7 @@ export const furniture: Furniture[] = [
   {
     id: "white_sofa",
     name: "White Sofa",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/50/Inv_White_Sofa.png",
+    img: "/images/furniture/Inv_White_Sofa.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1638,
     cataloguePrice: 2047,
@@ -3947,7 +3947,7 @@ export const furniture: Furniture[] = [
   {
     id: "wide_bookshelf",
     name: "Wide Bookshelf",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/50/Inv_Wide_Bookshelf.png",
+    img: "/images/furniture/Inv_Wide_Bookshelf.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 0,
     cataloguePrice: 0,
@@ -3957,7 +3957,7 @@ export const furniture: Furniture[] = [
   {
     id: "wombie_bank",
     name: "Wombie Bank",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6b/Inv_Wombie_Bank.png",
+    img: "/images/furniture/Inv_Wombie_Bank.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 5968,
     cataloguePrice: 7460,
@@ -3967,7 +3967,7 @@ export const furniture: Furniture[] = [
   {
     id: "wooden_bedside_table",
     name: "Wooden Bedside Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/34/Inv_Wooden_Bedside_Table.png",
+    img: "/images/furniture/Inv_Wooden_Bedside_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 604,
     cataloguePrice: 755,
@@ -3978,7 +3978,7 @@ export const furniture: Furniture[] = [
   {
     id: "wooden_cabinet",
     name: "Wooden Cabinet",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/58/Inv_Wooden_Cabinet.png",
+    img: "/images/furniture/Inv_Wooden_Cabinet.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 600,
     cataloguePrice: 750,
@@ -3989,7 +3989,7 @@ export const furniture: Furniture[] = [
   {
     id: "wooden_chair",
     name: "Wooden Chair",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/01/Inv_Wooden_Chair.png",
+    img: "/images/furniture/Inv_Wooden_Chair.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 420,
     cataloguePrice: 525,
@@ -4000,7 +4000,7 @@ export const furniture: Furniture[] = [
   {
     id: "wooden_chest_of_drawers",
     name: "Wooden Chest Of Drawers",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1b/Inv_Wooden_Chest_of_Drawers.png",
+    img: "/images/furniture/Inv_Wooden_Chest_of_Drawers.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 778,
     cataloguePrice: 972,
@@ -4011,7 +4011,7 @@ export const furniture: Furniture[] = [
   {
     id: "wooden_couch",
     name: "Wooden Couch",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/dd/Inv_Wooden_Couch.png",
+    img: "/images/furniture/Inv_Wooden_Couch.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1968,
     cataloguePrice: 2460,
@@ -4022,7 +4022,7 @@ export const furniture: Furniture[] = [
   {
     id: "wooden_double_bed",
     name: "Wooden Double Bed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/84/Inv_Wooden_Double_Bed.png",
+    img: "/images/furniture/Inv_Wooden_Double_Bed.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1208,
     cataloguePrice: 1510,
@@ -4033,7 +4033,7 @@ export const furniture: Furniture[] = [
   {
     id: "wooden_seat",
     name: "Wooden Seat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Inv_Wooden_Seat.png",
+    img: "/images/furniture/Inv_Wooden_Seat.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 1100,
     cataloguePrice: 1375,
@@ -4044,7 +4044,7 @@ export const furniture: Furniture[] = [
   {
     id: "wooden_single_bed",
     name: "Wooden Single Bed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/64/Inv_Wooden_Single_Bed.png",
+    img: "/images/furniture/Inv_Wooden_Single_Bed.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 60,
     cataloguePrice: 75,
@@ -4055,7 +4055,7 @@ export const furniture: Furniture[] = [
   {
     id: "wooden_table",
     name: "Wooden Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/ba/Inv_Wooden_Table.png",
+    img: "/images/furniture/Inv_Wooden_Table.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 742,
     cataloguePrice: 927,
@@ -4066,7 +4066,7 @@ export const furniture: Furniture[] = [
   {
     id: "wrought_iron_chair",
     name: "Wrought Iron Chair",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3e/Inv_Wrought_Iron_Chair.png",
+    img: "/images/furniture/Inv_Wrought_Iron_Chair.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 0,
     cataloguePrice: 0,
@@ -4076,7 +4076,7 @@ export const furniture: Furniture[] = [
   {
     id: "wrought_iron_table",
     name: "Wrought Iron Table",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a0/Inv_Wrought_Iron_Table.png",
+    img: "/images/furniture/Inv_Wrought_Iron_Table.png",
     source: ["Melvin", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 0,
     cataloguePrice: 0,
@@ -4086,7 +4086,7 @@ export const furniture: Furniture[] = [
   {
     id: "yellow_morel_basket",
     name: "Yellow Morel Basket",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/55/Inv_Yellow_Morel_Basket.png",
+    img: "/images/furniture/Inv_Yellow_Morel_Basket.png",
     source: ["Food Modeller"],
     baseSellPrice: 440,
     melvinsCatalogue: false,
@@ -4094,7 +4094,7 @@ export const furniture: Furniture[] = [
   {
     id: "yellow_morel_stool",
     name: "Yellow Morel Stool",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/44/Inv_Yellow_Morel_Stool.png",
+    img: "/images/furniture/Inv_Yellow_Morel_Stool.png",
     source: ["Fertilizer"],
     baseSellPrice: 435,
     melvinsCatalogue: false,
@@ -4102,7 +4102,7 @@ export const furniture: Furniture[] = [
   {
     id: "yellow_wattle_vase",
     name: "Yellow Wattle Vase",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/27/Inv_Yellow_Wattle_Vase.png",
+    img: "/images/furniture/Inv_Yellow_Wattle_Vase.png",
     source: ["NPC Job", "Melvin Furniture", "Recycling Bin"],
     displayPrice: 3000,
     cataloguePrice: 3750,
@@ -4113,7 +4113,7 @@ export const furniture: Furniture[] = [
   {
     id: "pineapple_jam_set",
     name: "Pineapple Jam Set",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/9c/Inv_Pineapple_Jam_Set.png",
+    img: "/images/furniture/Inv_Pineapple_Jam_Set.png",
     source: ["Food Modeller", "Recycling Bin"],
     baseSellPrice: 100,
     melvinsCatalogue: false,

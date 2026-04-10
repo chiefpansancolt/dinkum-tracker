@@ -4,7 +4,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "apple_jam",
     name: "Apple Jam",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/ed/Inv_Apple_Jam.png",
+    img: "/images/recipes/cookingRecipes/Inv_Apple_Jam.png",
     outputCount: 1,
     variants: [
       {
@@ -13,7 +13,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 10,
             name: "Apple",
-            img: "https://static.wikia.nocookie.net/dinkum/images/9/90/Inv_Apple.png",
+            img: "/images/resources/foragables/Inv_Apple.png",
           },
         ],
       },
@@ -29,7 +29,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "banana_jam",
     name: "Banana Jam",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/49/Inv_Banana_Jam.png",
+    img: "/images/recipes/cookingRecipes/Inv_Banana_Jam.png",
     outputCount: 1,
     variants: [
       {
@@ -38,7 +38,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 10,
             name: "Apple",
-            img: "https://static.wikia.nocookie.net/dinkum/images/6/62/Inv_Bananas.png",
+            img: "/images/resources/foragables/Inv_Bananas.png",
           },
         ],
       },
@@ -54,7 +54,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "big_fried_egg",
     name: "Big Fried Egg",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3b/Inv_Big_Fried_Egg.png",
+    img: "/images/recipes/cookingRecipes/Inv_Big_Fried_Egg.png",
     outputCount: 1,
     variants: [
       {
@@ -63,7 +63,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Big Chicken Egg",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2d/Inv_Big_Chicken_Egg.png",
+            img: "/images/animals/Inv_Big_Chicken_Egg.png",
           },
         ],
       },
@@ -79,7 +79,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "bottle_brush_brew",
     name: "Bottle Brush Brew",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/0a/Inv_Bottle_Brush_Brew.png",
+    img: "/images/recipes/cookingRecipes/Inv_Bottle_Brush_Brew.png",
     outputCount: 1,
     variants: [
       {
@@ -88,7 +88,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Bottle Brush Tea",
-            img: "https://static.wikia.nocookie.net/dinkum/images/3/30/Inv_Bottle_Brush_Tea.png",
+            img: "/images/recipes/cookingRecipes/Inv_Bottle_Brush_Tea.png",
           },
         ],
       },
@@ -105,7 +105,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "bottle_brush_tea",
     name: "Bottle Brush Tea",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/30/Inv_Bottle_Brush_Tea.png",
+    img: "/images/recipes/cookingRecipes/Inv_Bottle_Brush_Tea.png",
     outputCount: 1,
     variants: [
       {
@@ -114,7 +114,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 10,
             name: "Bottle Brush",
-            img: "https://static.wikia.nocookie.net/dinkum/images/e/e3/Inv_Bottle_Brush_Flower.png",
+            img: "/images/resources/foragables/Inv_Bottle_Brush_Flower.png",
           },
         ],
       },
@@ -130,7 +130,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "bread",
     name: "Bread",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e7/Inv_Bread.png",
+    img: "/images/recipes/cookingRecipes/Inv_Bread.png",
     outputCount: 1,
     variants: [
       {
@@ -139,7 +139,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 3,
             name: "Flour",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Inv_Flour.png",
+            img: "/images/resources/otherCraftables/Inv_Flour.png",
           },
         ],
       },
@@ -158,7 +158,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "burger",
     name: "Burger",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/23/Inv_Burger.png",
+    img: "/images/recipes/cookingRecipes/Inv_Burger.png",
     outputCount: 1,
     variants: [
       {
@@ -167,17 +167,17 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Damper",
-            img: "https://static.wikia.nocookie.net/dinkum/images/f/f4/Inv_Damper.png",
+            img: "/images/recipes/cookingRecipes/Inv_Damper.png",
           },
           {
             count: 1,
             name: "Cooked Meat",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/48/Inv_Cooked_Meat.png",
+            img: "/images/recipes/cookingRecipes/Inv_Cooked_Meat.png",
           },
           {
             count: 1,
             name: "Cheese",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/a9/Inv_Cheese.png",
+            img: "/images/recipes/cookingRecipes/Inv_Cheese.png",
           },
         ],
       },
@@ -187,17 +187,17 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Damper",
-            img: "https://static.wikia.nocookie.net/dinkum/images/f/f4/Inv_Damper.png",
+            img: "/images/recipes/cookingRecipes/Inv_Damper.png",
           },
           {
             count: 1,
             name: "Cooked Meat",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/48/Inv_Cooked_Meat.png",
+            img: "/images/recipes/cookingRecipes/Inv_Cooked_Meat.png",
           },
           {
             count: 1,
             name: "High Quality Cheese",
-            img: "https://static.wikia.nocookie.net/dinkum/images/c/c1/Inv_High_Quality_Cheese.png",
+            img: "/images/recipes/cookingRecipes/Inv_High_Quality_Cheese.png",
           },
         ],
       },
@@ -218,7 +218,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "caviar",
     name: "Caviar",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3f/Inv_Caviar.png",
+    img: "/images/recipes/cookingRecipes/Inv_Caviar.png",
     outputCount: 1,
     variants: [
       {
@@ -227,7 +227,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 30,
             name: "Fish Roe",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/4a/Inv_Fish_Roe.png",
+            img: "/images/resources/foragables/Inv_Fish_Roe.png",
           },
         ],
       },
@@ -247,7 +247,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "cheesy_spag",
     name: "Cheesy Spag",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/bb/Inv_Cheesy_Spag.png",
+    img: "/images/recipes/cookingRecipes/Inv_Cheesy_Spag.png",
     outputCount: 1,
     variants: [
       {
@@ -256,17 +256,17 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Flour",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Inv_Flour.png",
+            img: "/images/resources/otherCraftables/Inv_Flour.png",
           },
           {
             count: 1,
             name: "Big Chicken Egg",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2d/Inv_Big_Chicken_Egg.png",
+            img: "/images/animals/Inv_Big_Chicken_Egg.png",
           },
           {
             count: 1,
             name: "High Quality Cheese",
-            img: "https://static.wikia.nocookie.net/dinkum/images/c/c1/Inv_High_Quality_Cheese.png",
+            img: "/images/recipes/cookingRecipes/Inv_High_Quality_Cheese.png",
           },
         ],
       },
@@ -289,7 +289,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "coconut_drink",
     name: "Coconut Drink",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/56/Inv_Coconut_Drink.png",
+    img: "/images/recipes/cookingRecipes/Inv_Coconut_Drink.png",
     outputCount: 1,
     variants: [
       {
@@ -298,7 +298,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 10,
             name: "Coconut",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/4a/Inv_Coconut.png",
+            img: "/images/resources/foragables/Inv_Coconut.png",
           },
         ],
       },
@@ -315,7 +315,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "coffee",
     name: "Coffee",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3c/Inv_Coffee.png",
+    img: "/images/recipes/cookingRecipes/Inv_Coffee.png",
     outputCount: 1,
     variants: [
       {
@@ -324,7 +324,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Roasted Coffee Beans",
-            img: "https://static.wikia.nocookie.net/dinkum/images/7/79/Inv_Roasted_Coffee_Beans.png",
+            img: "/images/recipes/cookingRecipes/Inv_Roasted_Coffee_Beans.png",
           },
         ],
       },
@@ -341,7 +341,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "cooked_apple",
     name: "Cooked Apple",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/ce/Inv_Cooked_Apple.png",
+    img: "/images/recipes/cookingRecipes/Inv_Cooked_Apple.png",
     outputCount: 1,
     variants: [
       {
@@ -350,7 +350,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Apple",
-            img: "https://static.wikia.nocookie.net/dinkum/images/9/90/Inv_Apple.png",
+            img: "/images/resources/foragables/Inv_Apple.png",
           },
         ],
       },
@@ -365,7 +365,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "cooked_banana",
     name: "Cooked Banana",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/91/Inv_Cooked_Banana.png",
+    img: "/images/recipes/cookingRecipes/Inv_Cooked_Banana.png",
     outputCount: 1,
     variants: [
       {
@@ -374,7 +374,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Banana",
-            img: "https://static.wikia.nocookie.net/dinkum/images/6/62/Inv_Bananas.png",
+            img: "/images/resources/foragables/Inv_Bananas.png",
           },
         ],
       },
@@ -389,7 +389,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "cooked_blob_fish",
     name: "Cooked Blob Fish",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/22/Inv_Cooked_Blob_Fish.png",
+    img: "/images/recipes/cookingRecipes/Inv_Cooked_Blob_Fish.png",
     outputCount: 1,
     variants: [
       {
@@ -398,7 +398,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Blob Fish",
-            img: "https://static.wikia.nocookie.net/dinkum/images/6/6d/Inv_Blob_Fish.png",
+            img: "/images/pedia/fish/Inv_Blob_Fish.png",
           },
         ],
       },
@@ -414,7 +414,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "cooked_bush_lime",
     name: "Cooked Bush Lime",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/75/Inv_Cooked_Bush_Lime.png",
+    img: "/images/recipes/cookingRecipes/Inv_Cooked_Bush_Lime.png",
     outputCount: 1,
     variants: [
       {
@@ -423,7 +423,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Bush Lime",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/af/Inv_Bush_Lime.png",
+            img: "/images/resources/foragables/Inv_Bush_Lime.png",
           },
         ],
       },
@@ -439,7 +439,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "cooked_cactus_fig",
     name: "Cooked Cactus Fig",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a7/Inv_Cooked_Cactus_Fig.png",
+    img: "/images/recipes/cookingRecipes/Inv_Cooked_Cactus_Fig.png",
     outputCount: 1,
     variants: [
       {
@@ -448,7 +448,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Cactus Fig",
-            img: "https://static.wikia.nocookie.net/dinkum/images/7/79/Inv_Cactus_Figs.png",
+            img: "/images/resources/foragables/Inv_Cactus_Figs.png",
           },
         ],
       },
@@ -463,7 +463,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "cooked_cherries",
     name: "Cooked Cherries",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/89/Inv_Cooked_Cherries.png",
+    img: "/images/recipes/cookingRecipes/Inv_Cooked_Cherries.png",
     outputCount: 1,
     variants: [
       {
@@ -472,7 +472,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Cherries",
-            img: "https://static.wikia.nocookie.net/dinkum/images/b/b5/Inv_Cherries.png",
+            img: "/images/resources/foragables/Inv_Cherries.png",
           },
         ],
       },
@@ -487,7 +487,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "cooked_croco_meat",
     name: "Cooked Croco Meat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b7/Inv_Cooked_Croco_Meat.png",
+    img: "/images/recipes/cookingRecipes/Inv_Cooked_Croco_Meat.png",
     outputCount: 1,
     variants: [
       {
@@ -496,7 +496,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Croco Meat",
-            img: "https://static.wikia.nocookie.net/dinkum/images/3/35/Inv_Croco_Meat.png",
+            img: "/images/animals/Inv_Croco_Meat.png",
           },
         ],
       },
@@ -514,7 +514,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "cooked_drumstick",
     name: "Cooked Drumstick",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/98/Inv_Cooked_Drumstick.png",
+    img: "/images/recipes/cookingRecipes/Inv_Cooked_Drumstick.png",
     outputCount: 1,
     variants: [
       {
@@ -523,7 +523,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Raw Drumstick",
-            img: "https://static.wikia.nocookie.net/dinkum/images/0/0e/Inv_Raw_Drumstick.png",
+            img: "/images/animals/Inv_Raw_Drumstick.png",
           },
         ],
       },
@@ -539,7 +539,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "cooked_flake",
     name: "Cooked Flake",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/98/Inv_Cooked_Flake.png",
+    img: "/images/recipes/cookingRecipes/Inv_Cooked_Flake.png",
     outputCount: 1,
     variants: [
       {
@@ -548,7 +548,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Flake",
-            img: "https://static.wikia.nocookie.net/dinkum/images/f/f6/Inv_Flake.png",
+            img: "/images/animals/Inv_Flake.png",
           },
         ],
       },
@@ -566,7 +566,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "cooked_freshwater_fish",
     name: "Cooked Freshwater Fish",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/34/Inv_Cooked_Freshwater_Fish.png",
+    img: "/images/recipes/cookingRecipes/Inv_Cooked_Freshwater_Fish.png",
     outputCount: "Varies",
     variants: [
       {
@@ -576,7 +576,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Barcoo Grunter",
-            img: "https://static.wikia.nocookie.net/dinkum/images/b/bd/Inv_Barcoo_Grunter.png",
+            img: "/images/pedia/fish/Inv_Barcoo_Grunter.png",
           },
         ],
       },
@@ -587,7 +587,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Barramundi",
-            img: "https://static.wikia.nocookie.net/dinkum/images/1/15/Inv_Barramundi.png",
+            img: "/images/pedia/fish/Inv_Barramundi.png",
           },
         ],
       },
@@ -598,7 +598,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Blackfish",
-            img: "https://static.wikia.nocookie.net/dinkum/images/1/15/Inv_Blackfish.png",
+            img: "/images/pedia/fish/Inv_Blackfish.png",
           },
         ],
       },
@@ -609,7 +609,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Bonytongue",
-            img: "https://static.wikia.nocookie.net/dinkum/images/e/e7/Inv_Bonytongue.png",
+            img: "/images/pedia/fish/Inv_Bonytongue.png",
           },
         ],
       },
@@ -620,7 +620,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Carp",
-            img: "https://static.wikia.nocookie.net/dinkum/images/1/15/Inv_Carp.png",
+            img: "/images/pedia/fish/Inv_Carp.png",
           },
         ],
       },
@@ -631,7 +631,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Deep Fish",
-            img: "https://static.wikia.nocookie.net/dinkum/images/b/b1/Inv_Deep_Fish.png",
+            img: "/images/pedia/fish/Inv_Deep_Fish.png",
           },
         ],
       },
@@ -642,7 +642,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Galaxias",
-            img: "https://static.wikia.nocookie.net/dinkum/images/9/91/Inv_Galaxias.png",
+            img: "/images/pedia/fish/Inv_Galaxias.png",
           },
         ],
       },
@@ -653,7 +653,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Golden Perch",
-            img: "https://static.wikia.nocookie.net/dinkum/images/1/15/Inv_Golden_Perch.png",
+            img: "/images/pedia/fish/Inv_Golden_Perch.png",
           },
         ],
       },
@@ -664,7 +664,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Grayling",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/a5/Inv_Grayling.png",
+            img: "/images/pedia/fish/Inv_Grayling.png",
           },
         ],
       },
@@ -675,7 +675,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Jungle Perch",
-            img: "https://static.wikia.nocookie.net/dinkum/images/d/dc/Inv_Jungle_Perch.png",
+            img: "/images/pedia/fish/Inv_Jungle_Perch.png",
           },
         ],
       },
@@ -686,7 +686,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Murray Cod",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/4d/Inv_Murray_Cod.png",
+            img: "/images/pedia/fish/Inv_Murray_Cod.png",
           },
         ],
       },
@@ -697,7 +697,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Rainbow Fish",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2b/Inv_Rainbow_Fish.png",
+            img: "/images/pedia/fish/Inv_Rainbow_Fish.png",
           },
         ],
       },
@@ -708,7 +708,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "River Bass",
-            img: "https://static.wikia.nocookie.net/dinkum/images/8/88/Inv_River_Bass.png",
+            img: "/images/pedia/fish/Inv_River_Bass.png",
           },
         ],
       },
@@ -719,7 +719,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Saratoga",
-            img: "https://static.wikia.nocookie.net/dinkum/images/d/dc/Inv_Saratoga.png",
+            img: "/images/pedia/fish/Inv_Saratoga.png",
           },
         ],
       },
@@ -730,7 +730,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Short Finned Eel",
-            img: "https://static.wikia.nocookie.net/dinkum/images/1/1e/Inv_Short_Finned_Eel.png",
+            img: "/images/pedia/fish/Inv_Short_Finned_Eel.png",
           },
         ],
       },
@@ -741,7 +741,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Silver Perch",
-            img: "https://static.wikia.nocookie.net/dinkum/images/9/95/Inv_Silver_Perch.png",
+            img: "/images/pedia/fish/Inv_Silver_Perch.png",
           },
         ],
       },
@@ -752,7 +752,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Tarpon",
-            img: "https://static.wikia.nocookie.net/dinkum/images/1/19/Inv_Tarpon.png",
+            img: "/images/pedia/fish/Inv_Tarpon.png",
           },
         ],
       },
@@ -769,7 +769,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "cooked_giant_drumstick",
     name: "Cooked Giant Drumstick",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/22/Inv_Cooked_Giant_Drumstick.png",
+    img: "/images/recipes/cookingRecipes/Inv_Cooked_Giant_Drumstick.png",
     outputCount: 1,
     variants: [
       {
@@ -778,7 +778,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Raw Giant Drumstick",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/a7/Inv_Raw_Giant_Drumstick.png",
+            img: "/images/animals/Inv_Raw_Giant_Drumstick.png",
           },
         ],
       },
@@ -795,7 +795,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "cooked_grub_meat",
     name: "Cooked Grub Meat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2e/Inv_Cooked_Grub_Meat.png",
+    img: "/images/recipes/cookingRecipes/Inv_Cooked_Grub_Meat.png",
     outputCount: 1,
     variants: [
       {
@@ -804,7 +804,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Raw Grub Meat",
-            img: "https://static.wikia.nocookie.net/dinkum/images/9/91/Inv_Raw_Grub_Meat.png",
+            img: "/images/animals/Inv_Raw_Grub_Meat.png",
           },
         ],
       },
@@ -821,7 +821,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "cooked_meat",
     name: "Cooked Meat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/48/Inv_Cooked_Meat.png",
+    img: "/images/recipes/cookingRecipes/Inv_Cooked_Meat.png",
     outputCount: 1,
     variants: [
       {
@@ -830,7 +830,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Raw Meat",
-            img: "https://static.wikia.nocookie.net/dinkum/images/c/cb/Inv_Raw_Meat.png",
+            img: "/images/animals/Inv_Raw_Meat.png",
           },
         ],
       },
@@ -846,7 +846,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "cooked_mushroom",
     name: "Cooked Mushroom",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c3/Inv_Cooked_Mushroom.png",
+    img: "/images/recipes/cookingRecipes/Inv_Cooked_Mushroom.png",
     outputCount: 1,
     variants: [
       {
@@ -855,7 +855,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Field Mushroom",
-            img: "https://static.wikia.nocookie.net/dinkum/images/f/fa/Inv_Field_Mushroom.png",
+            img: "/images/resources/foragables/Inv_Field_Mushroom.png",
           },
         ],
       },
@@ -865,7 +865,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Milk Cap",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Inv_Milk_Cap.png",
+            img: "/images/resources/foragables/Inv_Milk_Cap.png",
           },
         ],
       },
@@ -875,7 +875,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Red Roundhead",
-            img: "https://static.wikia.nocookie.net/dinkum/images/d/d1/Inv_Red_Roundhead.png",
+            img: "/images/resources/foragables/Inv_Red_Roundhead.png",
           },
         ],
       },
@@ -885,7 +885,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Slippery Jack",
-            img: "https://static.wikia.nocookie.net/dinkum/images/e/ed/Inv_Slippery_Jack.png",
+            img: "/images/resources/foragables/Inv_Slippery_Jack.png",
           },
         ],
       },
@@ -895,7 +895,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Yellow Morel",
-            img: "https://static.wikia.nocookie.net/dinkum/images/c/c3/Inv_Yellow_Morel.png",
+            img: "/images/resources/foragables/Inv_Yellow_Morel.png",
           },
         ],
       },
@@ -911,7 +911,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "cooked_prawn",
     name: "Cooked Prawn",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2c/Inv_Cooked_Prawn.png",
+    img: "/images/recipes/cookingRecipes/Inv_Cooked_Prawn.png",
     outputCount: 1,
     variants: [
       {
@@ -920,7 +920,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Tiger Prawn",
-            img: "https://static.wikia.nocookie.net/dinkum/images/3/32/Inv_Tiger_Prawn.png",
+            img: "/images/pedia/critters/Inv_Tiger_Prawn.png",
           },
         ],
       },
@@ -930,7 +930,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "King Prawn",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/25/Inv_King_Prawn.png",
+            img: "/images/pedia/critters/Inv_King_Prawn.png",
           },
         ],
       },
@@ -940,7 +940,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Fresh Water Prawn",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Inv_Fresh_Water_Prawn.png",
+            img: "/images/pedia/critters/Inv_Fresh_Water_Prawn.png",
           },
         ],
       },
@@ -957,7 +957,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "cooked_prime_meat",
     name: "Cooked Prime Meat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/52/Inv_Cooked_Prime_Meat.png",
+    img: "/images/recipes/cookingRecipes/Inv_Cooked_Prime_Meat.png",
     outputCount: 1,
     variants: [
       {
@@ -966,7 +966,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Raw Prime Meat",
-            img: "https://static.wikia.nocookie.net/dinkum/images/0/07/Inv_Raw_Prime_Meat.png",
+            img: "/images/animals/Inv_Raw_Prime_Meat.png",
           },
         ],
       },
@@ -984,7 +984,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "cooked_quandong",
     name: "Cooked Quandong",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/86/Inv_Cooked_Quandong.png",
+    img: "/images/recipes/cookingRecipes/Inv_Cooked_Quandong.png",
     outputCount: 1,
     variants: [
       {
@@ -993,7 +993,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Quandong",
-            img: "https://static.wikia.nocookie.net/dinkum/images/c/cf/Inv_Quandong.png",
+            img: "/images/resources/foragables/Inv_Quandong.png",
           },
         ],
       },
@@ -1009,7 +1009,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "cooked_rice",
     name: "Cooked Rice",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/20/Inv_Cooked_Rice.png",
+    img: "/images/recipes/cookingRecipes/Inv_Cooked_Rice.png",
     outputCount: 1,
     variants: [
       {
@@ -1018,7 +1018,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Cooked Rice",
-            img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Inv_Rice.png",
+            img: "/images/recipes/cookingRecipes/Inv_Rice.png",
           },
         ],
       },
@@ -1034,7 +1034,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "cooked_saltwater_fish",
     name: "Cooked Saltwater Fish",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/84/Inv_Cooked_Saltwater_Fish.png",
+    img: "/images/recipes/cookingRecipes/Inv_Cooked_Saltwater_Fish.png",
     outputCount: "Varies",
     variants: [
       {
@@ -1044,7 +1044,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Anchovy",
-            img: "https://static.wikia.nocookie.net/dinkum/images/5/56/Inv_Anchovy.png",
+            img: "/images/pedia/fish/Inv_Anchovy.png",
           },
         ],
       },
@@ -1055,7 +1055,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Banded Morwong",
-            img: "https://static.wikia.nocookie.net/dinkum/images/f/ff/Inv_Banded_Morwong.png",
+            img: "/images/pedia/fish/Inv_Banded_Morwong.png",
           },
         ],
       },
@@ -1066,7 +1066,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Barracuda",
-            img: "https://static.wikia.nocookie.net/dinkum/images/6/63/Inv_Barracuda.png",
+            img: "/images/pedia/fish/Inv_Barracuda.png",
           },
         ],
       },
@@ -1077,7 +1077,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Black & White Snapper",
-            img: "https://static.wikia.nocookie.net/dinkum/images/c/ca/Inv_Black_%26_White_Snapper.png",
+            img: "/images/pedia/fish/Inv_Black_%26_White_Snapper.png",
           },
         ],
       },
@@ -1088,7 +1088,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Blue Spot Flathead",
-            img: "https://static.wikia.nocookie.net/dinkum/images/d/db/Inv_Blue_Spot_Flathead.png",
+            img: "/images/pedia/fish/Inv_Blue_Spot_Flathead.png",
           },
         ],
       },
@@ -1099,7 +1099,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Blue Tang",
-            img: "https://static.wikia.nocookie.net/dinkum/images/c/cf/Inv_Blue_Tang.png",
+            img: "/images/pedia/fish/Inv_Blue_Tang.png",
           },
         ],
       },
@@ -1110,7 +1110,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Bluefish",
-            img: "https://static.wikia.nocookie.net/dinkum/images/e/e6/Inv_Bluefish.png",
+            img: "/images/pedia/fish/Inv_Bluefish.png",
           },
         ],
       },
@@ -1121,7 +1121,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Boofhead Catfish",
-            img: "https://static.wikia.nocookie.net/dinkum/images/3/34/Inv_Boofhead_Catfish.png",
+            img: "/images/pedia/fish/Inv_Boofhead_Catfish.png",
           },
         ],
       },
@@ -1132,7 +1132,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Clown Fish",
-            img: "https://static.wikia.nocookie.net/dinkum/images/7/7b/Inv_Clown_Fish.png",
+            img: "/images/pedia/fish/Inv_Clown_Fish.png",
           },
         ],
       },
@@ -1143,7 +1143,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Eel Tailed Catfish",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/a8/Inv_Eel_Tailed_Catfish.png",
+            img: "/images/pedia/fish/Inv_Eel_Tailed_Catfish.png",
           },
         ],
       },
@@ -1154,7 +1154,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Eyestripe Surgeonfish",
-            img: "https://static.wikia.nocookie.net/dinkum/images/0/07/Inv_Eyestripe_Surgeonfish.png",
+            img: "/images/pedia/fish/Inv_Eyestripe_Surgeonfish.png",
           },
         ],
       },
@@ -1165,7 +1165,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Garfish",
-            img: "https://static.wikia.nocookie.net/dinkum/images/7/75/Inv_Garfish.png",
+            img: "/images/pedia/fish/Inv_Garfish.png",
           },
         ],
       },
@@ -1176,7 +1176,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Goat Fish",
-            img: "https://static.wikia.nocookie.net/dinkum/images/e/ed/Inv_Goat_Fish.png",
+            img: "/images/pedia/fish/Inv_Goat_Fish.png",
           },
         ],
       },
@@ -1187,7 +1187,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Humphead Wrasse",
-            img: "https://static.wikia.nocookie.net/dinkum/images/f/f2/Inv_Humphead_Wrasse.png",
+            img: "/images/pedia/fish/Inv_Humphead_Wrasse.png",
           },
         ],
       },
@@ -1198,7 +1198,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Lionfish",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/4e/Inv_Lionfish.png",
+            img: "/images/pedia/fish/Inv_Lionfish.png",
           },
         ],
       },
@@ -1209,7 +1209,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Luderick",
-            img: "https://static.wikia.nocookie.net/dinkum/images/0/01/Inv_Luderick.png",
+            img: "/images/pedia/fish/Inv_Luderick.png",
           },
         ],
       },
@@ -1220,7 +1220,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Mangrove Jack",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/43/Inv_Mangrove_Jack.png",
+            img: "/images/pedia/fish/Inv_Mangrove_Jack.png",
           },
         ],
       },
@@ -1231,7 +1231,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Marlin",
-            img: "https://static.wikia.nocookie.net/dinkum/images/5/51/Inv_Marlin.png",
+            img: "/images/pedia/fish/Inv_Marlin.png",
           },
         ],
       },
@@ -1242,7 +1242,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Mouth Almighty",
-            img: "https://static.wikia.nocookie.net/dinkum/images/1/1b/Inv_Mouth_Almighty.png",
+            img: "/images/pedia/fish/Inv_Mouth_Almighty.png",
           },
         ],
       },
@@ -1253,7 +1253,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Stingray",
-            img: "https://static.wikia.nocookie.net/dinkum/images/9/9f/Inv_Stingray.png",
+            img: "/images/pedia/fish/Inv_Stingray.png",
           },
         ],
       },
@@ -1264,7 +1264,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Travalla",
-            img: "https://static.wikia.nocookie.net/dinkum/images/1/1e/Inv_Travalla.png",
+            img: "/images/pedia/fish/Inv_Travalla.png",
           },
         ],
       },
@@ -1275,7 +1275,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Yellow Tang",
-            img: "https://static.wikia.nocookie.net/dinkum/images/3/37/Inv_Yellow_Tang.png",
+            img: "/images/pedia/fish/Inv_Yellow_Tang.png",
           },
         ],
       },
@@ -1286,7 +1286,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Yellowfin Tuna",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Yellowfin_Tuna.png",
+            img: "/images/pedia/fish/Inv_Yellowfin_Tuna.png",
           },
         ],
       },
@@ -1303,7 +1303,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "cooked_yabbie",
     name: "Cooked Yabbie",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/fa/Inv_Cooked_Yabbie.png",
+    img: "/images/recipes/cookingRecipes/Inv_Cooked_Yabbie.png",
     outputCount: 1,
     variants: [
       {
@@ -1312,7 +1312,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Yabbie",
-            img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Yabbie.png",
+            img: "/images/pedia/critters/Inv_Yabbie.png",
           },
         ],
       },
@@ -1322,7 +1322,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "White Yabbie",
-            img: "https://static.wikia.nocookie.net/dinkum/images/f/f6/Inv_White_Yabbie.png",
+            img: "/images/pedia/critters/Inv_White_Yabbie.png",
           },
         ],
       },
@@ -1339,7 +1339,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "crab_soup",
     name: "Crab Soup",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f2/Inv_Crab_Soup.png",
+    img: "/images/recipes/cookingRecipes/Inv_Crab_Soup.png",
     outputCount: 1,
     variants: [
       {
@@ -1348,7 +1348,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Inland Crab",
-            img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Inland_Crab.png",
+            img: "/images/pedia/critters/Inv_Inland_Crab.png",
           },
         ],
       },
@@ -1358,7 +1358,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Mud Crab",
-            img: "https://static.wikia.nocookie.net/dinkum/images/b/b8/Inv_Mud_Crab.png",
+            img: "/images/pedia/critters/Inv_Mud_Crab.png",
           },
         ],
       },
@@ -1368,7 +1368,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Purple Mottled Crab",
-            img: "https://static.wikia.nocookie.net/dinkum/images/d/d9/Inv_Purple_Mottled_Crab.png",
+            img: "/images/pedia/critters/Inv_Purple_Mottled_Crab.png",
           },
         ],
       },
@@ -1383,7 +1383,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "croco_skewer",
     name: "Croco Skewer",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/82/Inv_Croco_Skewer.png",
+    img: "/images/recipes/cookingRecipes/Inv_Croco_Skewer.png",
     outputCount: 1,
     variants: [
       {
@@ -1392,17 +1392,17 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Croco Meat",
-            img: "https://static.wikia.nocookie.net/dinkum/images/3/35/Inv_Croco_Meat.png",
+            img: "/images/animals/Inv_Croco_Meat.png",
           },
           {
             count: 1,
             name: "Onion",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/ad/Inv_Onion.png",
+            img: "/images/resources/crops/Inv_Onion.png",
           },
           {
             count: 1,
             name: "Mangrove Stick",
-            img: "https://static.wikia.nocookie.net/dinkum/images/b/b7/Inv_Mangrove_Stick.png",
+            img: "/images/resources/foragables/Inv_Mangrove_Stick.png",
           },
         ],
       },
@@ -1412,17 +1412,17 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Cooked Croco Meat",
-            img: "https://static.wikia.nocookie.net/dinkum/images/b/b7/Inv_Cooked_Croco_Meat.png",
+            img: "/images/recipes/cookingRecipes/Inv_Cooked_Croco_Meat.png",
           },
           {
             count: 1,
             name: "Onion",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/ad/Inv_Onion.png",
+            img: "/images/resources/crops/Inv_Onion.png",
           },
           {
             count: 1,
             name: "Mangrove Stick",
-            img: "https://static.wikia.nocookie.net/dinkum/images/b/b7/Inv_Mangrove_Stick.png",
+            img: "/images/resources/foragables/Inv_Mangrove_Stick.png",
           },
         ],
       },
@@ -1444,7 +1444,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "dagwood_dog",
     name: "Dagwood Dog",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/59/Inv_Dagwood_Dog.png",
+    img: "/images/recipes/cookingRecipes/Inv_Dagwood_Dog.png",
     outputCount: 1,
     variants: [
       {
@@ -1453,17 +1453,17 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Corn",
-            img: "https://static.wikia.nocookie.net/dinkum/images/5/5c/Inv_Corn.png",
+            img: "/images/resources/crops/Inv_Corn.png",
           },
           {
             count: 1,
             name: "Raw Meat",
-            img: "https://static.wikia.nocookie.net/dinkum/images/c/cb/Inv_Raw_Meat.png",
+            img: "/images/animals/Inv_Raw_Meat.png",
           },
           {
             count: 1,
             name: "Mangrove Stick",
-            img: "https://static.wikia.nocookie.net/dinkum/images/b/b7/Inv_Mangrove_Stick.png",
+            img: "/images/resources/foragables/Inv_Mangrove_Stick.png",
           },
         ],
       },
@@ -1482,7 +1482,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "damper",
     name: "Damper",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f4/Inv_Damper.png",
+    img: "/images/recipes/cookingRecipes/Inv_Damper.png",
     outputCount: 1,
     variants: [
       {
@@ -1491,12 +1491,12 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Flour",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Inv_Flour.png",
+            img: "/images/resources/otherCraftables/Inv_Flour.png",
           },
           {
             count: 1,
             name: "Milk",
-            img: "https://static.wikia.nocookie.net/dinkum/images/c/c6/Inv_Milk.png",
+            img: "/images/resources/animalProducts/Inv_Milk.png",
           },
         ],
       },
@@ -1506,12 +1506,12 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Flour",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Inv_Flour.png",
+            img: "/images/resources/otherCraftables/Inv_Flour.png",
           },
           {
             count: 1,
             name: "High Quality Milk",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/ab/Inv_High_Quality_Milk.png",
+            img: "/images/resources/animalProducts/Inv_High_Quality_Milk.png",
           },
         ],
       },
@@ -1531,7 +1531,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "egg_fried_rice",
     name: "Egg Fried Rice",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1e/Inv_Egg_Fried_Rice.png",
+    img: "/images/recipes/cookingRecipes/Inv_Egg_Fried_Rice.png",
     outputCount: 1,
     variants: [
       {
@@ -1540,12 +1540,12 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Cooked Rice",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/20/Inv_Cooked_Rice.png",
+            img: "/images/recipes/cookingRecipes/Inv_Cooked_Rice.png",
           },
           {
             count: 2,
             name: "Chicken Egg",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/43/Inv_Chicken_Egg.png",
+            img: "/images/resources/animalProducts/Inv_Chicken_Egg.png",
           },
         ],
       },
@@ -1555,12 +1555,12 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Cooked Rice",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/20/Inv_Cooked_Rice.png",
+            img: "/images/recipes/cookingRecipes/Inv_Cooked_Rice.png",
           },
           {
             count: 1,
             name: "Big Chicken Egg",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2d/Inv_Big_Chicken_Egg.png",
+            img: "/images/animals/Inv_Big_Chicken_Egg.png",
           },
         ],
       },
@@ -1579,7 +1579,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "fairy_bread",
     name: "Fairy Bread",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/11/Inv_Fairy_Bread.png",
+    img: "/images/recipes/cookingRecipes/Inv_Fairy_Bread.png",
     outputCount: 1,
     variants: [
       {
@@ -1588,12 +1588,12 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Bread",
-            img: "https://static.wikia.nocookie.net/dinkum/images/e/e7/Inv_Bread.png",
+            img: "/images/recipes/cookingRecipes/Inv_Bread.png",
           },
           {
             count: 2,
             name: "Sugar",
-            img: "https://static.wikia.nocookie.net/dinkum/images/1/1f/Inv_Sugar.png",
+            img: "/images/resources/otherCraftables/Inv_Sugar.png",
           },
         ],
       },
@@ -1612,7 +1612,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "fish_and_chips",
     name: "Fish and Chips",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/30/Inv_Fish_And_Chips.png",
+    img: "/images/recipes/cookingRecipes/Inv_Fish_And_Chips.png",
     outputCount: 1,
     variants: [
       {
@@ -1621,17 +1621,17 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Flake",
-            img: "https://static.wikia.nocookie.net/dinkum/images/f/f6/Inv_Flake.png",
+            img: "/images/animals/Inv_Flake.png",
           },
           {
             count: 2,
             name: "Potato",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/41/Inv_Potato.png",
+            img: "/images/resources/crops/Inv_Potato.png",
           },
           {
             count: 1,
             name: "Bush Lime",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/af/Inv_Bush_Lime.png",
+            img: "/images/resources/foragables/Inv_Bush_Lime.png",
           },
         ],
       },
@@ -1653,7 +1653,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "fried_egg",
     name: "Fried Egg",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/45/Inv_Fried_Egg.png",
+    img: "/images/recipes/cookingRecipes/Inv_Fried_Egg.png",
     outputCount: 1,
     variants: [
       {
@@ -1662,7 +1662,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Chicken Egg",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/43/Inv_Chicken_Egg.png",
+            img: "/images/resources/animalProducts/Inv_Chicken_Egg.png",
           },
         ],
       },
@@ -1678,7 +1678,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "fried_gonut",
     name: "Fried Gonut",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/10/Inv_Fried_Gonut.png",
+    img: "/images/recipes/cookingRecipes/Inv_Fried_Gonut.png",
     outputCount: 1,
     variants: [
       {
@@ -1687,7 +1687,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Gonut",
-            img: "https://static.wikia.nocookie.net/dinkum/images/7/7f/Inv_Gonut.png",
+            img: "/images/recipes/cookingRecipes/Inv_Gonut.png",
           },
         ],
       },
@@ -1703,7 +1703,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "fruit_salad",
     name: "Fruit Salad",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/db/Inv_Fruit_Salad.png",
+    img: "/images/recipes/cookingRecipes/Inv_Fruit_Salad.png",
     outputCount: 1,
     variants: [
       {
@@ -1712,22 +1712,22 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 2,
             name: "Bush Lime",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/af/Inv_Bush_Lime.png",
+            img: "/images/resources/foragables/Inv_Bush_Lime.png",
           },
           {
             count: 2,
             name: "Apple",
-            img: "https://static.wikia.nocookie.net/dinkum/images/9/90/Inv_Apple.png",
+            img: "/images/resources/foragables/Inv_Apple.png",
           },
           {
             count: 2,
             name: "Banana",
-            img: "https://static.wikia.nocookie.net/dinkum/images/6/62/Inv_Bananas.png",
+            img: "/images/resources/foragables/Inv_Bananas.png",
           },
           {
             count: 2,
             name: "Quandong",
-            img: "https://static.wikia.nocookie.net/dinkum/images/c/cf/Inv_Quandong.png",
+            img: "/images/resources/foragables/Inv_Quandong.png",
           },
         ],
       },
@@ -1747,7 +1747,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "garden_salad",
     name: "Garden Salad",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/0e/Inv_Garden_Salad.png",
+    img: "/images/recipes/cookingRecipes/Inv_Garden_Salad.png",
     outputCount: 1,
     variants: [
       {
@@ -1756,17 +1756,17 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Cabbage",
-            img: "https://static.wikia.nocookie.net/dinkum/images/7/77/Inv_Cabbage.png",
+            img: "/images/resources/crops/Inv_Cabbage.png",
           },
           {
             count: 1,
             name: "Tomato",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/4e/Inv_Tomato.png",
+            img: "/images/resources/crops/Inv_Tomato.png",
           },
           {
             count: 1,
             name: "Onion",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/ad/Inv_Onion.png",
+            img: "/images/resources/crops/Inv_Onion.png",
           },
         ],
       },
@@ -1788,7 +1788,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "gonut",
     name: "Gonut",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/7f/Inv_Gonut.png",
+    img: "/images/recipes/cookingRecipes/Inv_Gonut.png",
     outputCount: 1,
     variants: [
       {
@@ -1797,12 +1797,12 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 5,
             name: "Flour",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Inv_Flour.png",
+            img: "/images/resources/otherCraftables/Inv_Flour.png",
           },
           {
             count: 5,
             name: "Sugar",
-            img: "https://static.wikia.nocookie.net/dinkum/images/1/1f/Inv_Sugar.png",
+            img: "/images/resources/otherCraftables/Inv_Sugar.png",
           },
         ],
       },
@@ -1818,7 +1818,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "hearty_stew",
     name: "Hearty Stew",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b7/Inv_Hearty_Stew.png",
+    img: "/images/recipes/cookingRecipes/Inv_Hearty_Stew.png",
     outputCount: 1,
     variants: [
       {
@@ -1827,22 +1827,22 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Raw Meat",
-            img: "https://static.wikia.nocookie.net/dinkum/images/c/cb/Inv_Raw_Meat.png",
+            img: "/images/animals/Inv_Raw_Meat.png",
           },
           {
             count: 1,
             name: "Potato",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/41/Inv_Potato.png",
+            img: "/images/resources/crops/Inv_Potato.png",
           },
           {
             count: 1,
             name: "Onion",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/ad/Inv_Onion.png",
+            img: "/images/resources/crops/Inv_Onion.png",
           },
           {
             count: 1,
             name: "Carrot",
-            img: "https://static.wikia.nocookie.net/dinkum/images/0/06/Inv_Carrot.png",
+            img: "/images/resources/crops/Inv_Carrot.png",
           },
         ],
       },
@@ -1865,7 +1865,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "jam_toast",
     name: "Jam Toast",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/af/Inv_Jam_Toast.png",
+    img: "/images/recipes/cookingRecipes/Inv_Jam_Toast.png",
     outputCount: 3,
     variants: [
       {
@@ -1874,12 +1874,12 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Bread",
-            img: "https://static.wikia.nocookie.net/dinkum/images/e/e7/Inv_Bread.png",
+            img: "/images/recipes/cookingRecipes/Inv_Bread.png",
           },
           {
             count: 1,
             name: "Apple Jam",
-            img: "https://static.wikia.nocookie.net/dinkum/images/e/ed/Inv_Apple_Jam.png",
+            img: "/images/recipes/cookingRecipes/Inv_Apple_Jam.png",
           },
         ],
       },
@@ -1889,12 +1889,12 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Bread",
-            img: "https://static.wikia.nocookie.net/dinkum/images/e/e7/Inv_Bread.png",
+            img: "/images/recipes/cookingRecipes/Inv_Bread.png",
           },
           {
             count: 1,
             name: "Banana Jam",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/49/Inv_Banana_Jam.png",
+            img: "/images/recipes/cookingRecipes/Inv_Banana_Jam.png",
           },
         ],
       },
@@ -1904,12 +1904,12 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Bread",
-            img: "https://static.wikia.nocookie.net/dinkum/images/e/e7/Inv_Bread.png",
+            img: "/images/recipes/cookingRecipes/Inv_Bread.png",
           },
           {
             count: 1,
             name: "Lime Jam",
-            img: "https://static.wikia.nocookie.net/dinkum/images/1/15/Inv_Lime_Jam.png",
+            img: "/images/recipes/cookingRecipes/Inv_Lime_Jam.png",
           },
         ],
       },
@@ -1919,12 +1919,12 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Bread",
-            img: "https://static.wikia.nocookie.net/dinkum/images/e/e7/Inv_Bread.png",
+            img: "/images/recipes/cookingRecipes/Inv_Bread.png",
           },
           {
             count: 1,
             name: "Quandong Jam",
-            img: "https://static.wikia.nocookie.net/dinkum/images/9/99/Inv_Quandong_Jam.png",
+            img: "/images/recipes/cookingRecipes/Inv_Quandong_Jam.png",
           },
         ],
       },
@@ -1944,7 +1944,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "jelly_brew",
     name: "Jelly Brew",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4e/Inv_Jelly_Brew.png",
+    img: "/images/recipes/cookingRecipes/Inv_Jelly_Brew.png",
     outputCount: 1,
     variants: [
       {
@@ -1953,7 +1953,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 10,
             name: "Jelly",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/a5/Inv_Jelly.png",
+            img: "/images/resources/animalProducts/Inv_Jelly.png",
           },
         ],
       },
@@ -1971,7 +1971,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "lamington",
     name: "Lamington",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/30/Inv_Lamington.png",
+    img: "/images/recipes/cookingRecipes/Inv_Lamington.png",
     outputCount: 1,
     variants: [
       {
@@ -1980,27 +1980,27 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Flour",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Inv_Flour.png",
+            img: "/images/resources/otherCraftables/Inv_Flour.png",
           },
           {
             count: 1,
             name: "Sugar",
-            img: "https://static.wikia.nocookie.net/dinkum/images/1/1f/Inv_Sugar.png",
+            img: "/images/resources/otherCraftables/Inv_Sugar.png",
           },
           {
             count: 1,
             name: "Coconut",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/4a/Inv_Coconut.png",
+            img: "/images/resources/foragables/Inv_Coconut.png",
           },
           {
             count: 1,
             name: "Chicken Egg",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/43/Inv_Chicken_Egg.png",
+            img: "/images/resources/animalProducts/Inv_Chicken_Egg.png",
           },
           {
             count: 1,
             name: "Milk",
-            img: "https://static.wikia.nocookie.net/dinkum/images/c/c6/Inv_Milk.png",
+            img: "/images/resources/animalProducts/Inv_Milk.png",
           },
         ],
       },
@@ -2010,27 +2010,27 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Flour",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Inv_Flour.png",
+            img: "/images/resources/otherCraftables/Inv_Flour.png",
           },
           {
             count: 1,
             name: "Sugar",
-            img: "https://static.wikia.nocookie.net/dinkum/images/1/1f/Inv_Sugar.png",
+            img: "/images/resources/otherCraftables/Inv_Sugar.png",
           },
           {
             count: 1,
             name: "Coconut",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/4a/Inv_Coconut.png",
+            img: "/images/resources/foragables/Inv_Coconut.png",
           },
           {
             count: 1,
             name: "Chicken Egg",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/43/Inv_Chicken_Egg.png",
+            img: "/images/resources/animalProducts/Inv_Chicken_Egg.png",
           },
           {
             count: 1,
             name: "High Quality Milk",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/ab/Inv_High_Quality_Milk.png",
+            img: "/images/resources/animalProducts/Inv_High_Quality_Milk.png",
           },
         ],
       },
@@ -2040,27 +2040,27 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Flour",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Inv_Flour.png",
+            img: "/images/resources/otherCraftables/Inv_Flour.png",
           },
           {
             count: 1,
             name: "Sugar",
-            img: "https://static.wikia.nocookie.net/dinkum/images/1/1f/Inv_Sugar.png",
+            img: "/images/resources/otherCraftables/Inv_Sugar.png",
           },
           {
             count: 1,
             name: "Coconut",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/4a/Inv_Coconut.png",
+            img: "/images/resources/foragables/Inv_Coconut.png",
           },
           {
             count: 1,
             name: "Big Chicken Egg",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2d/Inv_Big_Chicken_Egg.png",
+            img: "/images/animals/Inv_Big_Chicken_Egg.png",
           },
           {
             count: 1,
             name: "Milk",
-            img: "https://static.wikia.nocookie.net/dinkum/images/c/c6/Inv_Milk.png",
+            img: "/images/resources/animalProducts/Inv_Milk.png",
           },
         ],
       },
@@ -2070,27 +2070,27 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Flour",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Inv_Flour.png",
+            img: "/images/resources/otherCraftables/Inv_Flour.png",
           },
           {
             count: 1,
             name: "Sugar",
-            img: "https://static.wikia.nocookie.net/dinkum/images/1/1f/Inv_Sugar.png",
+            img: "/images/resources/otherCraftables/Inv_Sugar.png",
           },
           {
             count: 1,
             name: "Coconut",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/4a/Inv_Coconut.png",
+            img: "/images/resources/foragables/Inv_Coconut.png",
           },
           {
             count: 1,
             name: "Big Chicken Egg",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2d/Inv_Big_Chicken_Egg.png",
+            img: "/images/animals/Inv_Big_Chicken_Egg.png",
           },
           {
             count: 1,
             name: "High Quality Milk",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/ab/Inv_High_Quality_Milk.png",
+            img: "/images/resources/animalProducts/Inv_High_Quality_Milk.png",
           },
         ],
       },
@@ -2114,7 +2114,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "lime_jam",
     name: "Lime Jam",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/15/Inv_Lime_Jam.png",
+    img: "/images/recipes/cookingRecipes/Inv_Lime_Jam.png",
     outputCount: 1,
     variants: [
       {
@@ -2123,7 +2123,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 10,
             name: "Bush Lime",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/af/Inv_Bush_Lime.png",
+            img: "/images/resources/foragables/Inv_Bush_Lime.png",
           },
         ],
       },
@@ -2140,7 +2140,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "lot_burger",
     name: "Lot Burger",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/80/Inv_Lot_Burger.png",
+    img: "/images/recipes/cookingRecipes/Inv_Lot_Burger.png",
     outputCount: 1,
     variants: [
       {
@@ -2149,37 +2149,37 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Damper",
-            img: "https://static.wikia.nocookie.net/dinkum/images/f/f4/Inv_Damper.png",
+            img: "/images/recipes/cookingRecipes/Inv_Damper.png",
           },
           {
             count: 1,
             name: "Cooked Meat",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/48/Inv_Cooked_Meat.png",
+            img: "/images/recipes/cookingRecipes/Inv_Cooked_Meat.png",
           },
           {
             count: 1,
             name: "High Quality Cheese",
-            img: "https://static.wikia.nocookie.net/dinkum/images/c/c1/Inv_High_Quality_Cheese.png",
+            img: "/images/recipes/cookingRecipes/Inv_High_Quality_Cheese.png",
           },
           {
             count: 1,
             name: "Big Fried Egg",
-            img: "https://static.wikia.nocookie.net/dinkum/images/3/3b/Inv_Big_Fried_Egg.png",
+            img: "/images/recipes/cookingRecipes/Inv_Big_Fried_Egg.png",
           },
           {
             count: 1,
             name: "Tomato",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/4e/Inv_Tomato.png",
+            img: "/images/resources/crops/Inv_Tomato.png",
           },
           {
             count: 1,
             name: "Beetroot",
-            img: "https://static.wikia.nocookie.net/dinkum/images/9/93/Inv_Beetroot.png",
+            img: "/images/resources/crops/Inv_Beetroot.png",
           },
           {
             count: 1,
             name: "Pineapple",
-            img: "https://static.wikia.nocookie.net/dinkum/images/8/87/Inv_Pineapple.png",
+            img: "/images/resources/crops/Inv_Pineapple.png",
           },
         ],
       },
@@ -2202,7 +2202,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "meat_on_a_stick",
     name: "Meat on a stick.",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/69/Inv_Meat_on_a_Stick.png",
+    img: "/images/recipes/cookingRecipes/Inv_Meat_on_a_Stick.png",
     outputCount: 1,
     variants: [
       {
@@ -2211,12 +2211,12 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 2,
             name: "Raw Meat",
-            img: "https://static.wikia.nocookie.net/dinkum/images/c/cb/Inv_Raw_Meat.png",
+            img: "/images/animals/Inv_Raw_Meat.png",
           },
           {
             count: 1,
             name: "Mangrove Stick",
-            img: "https://static.wikia.nocookie.net/dinkum/images/b/b7/Inv_Mangrove_Stick.png",
+            img: "/images/resources/foragables/Inv_Mangrove_Stick.png",
           },
         ],
       },
@@ -2226,12 +2226,12 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 2,
             name: "Cooked Meat",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/48/Inv_Cooked_Meat.png",
+            img: "/images/recipes/cookingRecipes/Inv_Cooked_Meat.png",
           },
           {
             count: 1,
             name: "Mangrove Stick",
-            img: "https://static.wikia.nocookie.net/dinkum/images/b/b7/Inv_Mangrove_Stick.png",
+            img: "/images/resources/foragables/Inv_Mangrove_Stick.png",
           },
         ],
       },
@@ -2251,7 +2251,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "meat_pie",
     name: "Meat Pie",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/5a/Inv_Meat_Pie.png",
+    img: "/images/recipes/cookingRecipes/Inv_Meat_Pie.png",
     outputCount: 1,
     variants: [
       {
@@ -2260,17 +2260,17 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Flour",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Inv_Flour.png",
+            img: "/images/resources/otherCraftables/Inv_Flour.png",
           },
           {
             count: 1,
             name: "Raw Meat",
-            img: "https://static.wikia.nocookie.net/dinkum/images/c/cb/Inv_Raw_Meat.png",
+            img: "/images/animals/Inv_Raw_Meat.png",
           },
           {
             count: 1,
             name: "Raw Drumstick",
-            img: "https://static.wikia.nocookie.net/dinkum/images/0/0e/Inv_Raw_Drumstick.png",
+            img: "/images/animals/Inv_Raw_Drumstick.png",
           },
         ],
       },
@@ -2292,7 +2292,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "mushroom_risotto",
     name: "Mushroom Risotto",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8b/Inv_Mushroom_Risotto.png",
+    img: "/images/recipes/cookingRecipes/Inv_Mushroom_Risotto.png",
     outputCount: 1,
     variants: [
       {
@@ -2301,22 +2301,22 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Cooked Rice",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/20/Inv_Cooked_Rice.png",
+            img: "/images/recipes/cookingRecipes/Inv_Cooked_Rice.png",
           },
           {
             count: 1,
             name: "High Quality Cheese",
-            img: "https://static.wikia.nocookie.net/dinkum/images/c/c1/Inv_High_Quality_Cheese.png",
+            img: "/images/recipes/cookingRecipes/Inv_High_Quality_Cheese.png",
           },
           {
             count: 1,
             name: "Wattle Brew",
-            img: "https://static.wikia.nocookie.net/dinkum/images/5/5b/Inv_Wattle_Brew.png",
+            img: "/images/recipes/cookingRecipes/Inv_Wattle_Brew.png",
           },
           {
             count: 5,
             name: "Field Mushroom",
-            img: "https://static.wikia.nocookie.net/dinkum/images/f/fa/Inv_Field_Mushroom.png",
+            img: "/images/resources/foragables/Inv_Field_Mushroom.png",
           },
         ],
       },
@@ -2339,7 +2339,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "mushroom_soup",
     name: "Mushroom Soup",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/fa/Inv_Mushroom_Soup.png",
+    img: "/images/recipes/cookingRecipes/Inv_Mushroom_Soup.png",
     outputCount: 1,
     variants: [
       {
@@ -2348,22 +2348,22 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Field Mushroom",
-            img: "https://static.wikia.nocookie.net/dinkum/images/f/fa/Inv_Field_Mushroom.png",
+            img: "/images/resources/foragables/Inv_Field_Mushroom.png",
           },
           {
             count: 1,
             name: "Milk Cap",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Inv_Milk_Cap.png",
+            img: "/images/resources/foragables/Inv_Milk_Cap.png",
           },
           {
             count: 1,
             name: "Slippery Jack",
-            img: "https://static.wikia.nocookie.net/dinkum/images/e/ed/Inv_Slippery_Jack.png",
+            img: "/images/resources/foragables/Inv_Slippery_Jack.png",
           },
           {
             count: 1,
             name: "Yellow Morel",
-            img: "https://static.wikia.nocookie.net/dinkum/images/c/c3/Inv_Yellow_Morel.png",
+            img: "/images/resources/foragables/Inv_Yellow_Morel.png",
           },
         ],
       },
@@ -2386,7 +2386,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "parmy_and_chips",
     name: "Parmy and Chips",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/fa/Inv_Parmy_and_Chips.png",
+    img: "/images/recipes/cookingRecipes/Inv_Parmy_and_Chips.png",
     outputCount: 1,
     variants: [
       {
@@ -2395,22 +2395,22 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Raw Drumstick",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/a7/Inv_Raw_Giant_Drumstick.png",
+            img: "/images/animals/Inv_Raw_Giant_Drumstick.png",
           },
           {
             count: 2,
             name: "Tomato",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/4e/Inv_Tomato.png",
+            img: "/images/resources/crops/Inv_Tomato.png",
           },
           {
             count: 1,
             name: "Cheese",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/a9/Inv_Cheese.png",
+            img: "/images/recipes/cookingRecipes/Inv_Cheese.png",
           },
           {
             count: 1,
             name: "Potato",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/41/Inv_Potato.png",
+            img: "/images/resources/crops/Inv_Potato.png",
           },
         ],
       },
@@ -2420,22 +2420,22 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Raw Drumstick",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/a7/Inv_Raw_Giant_Drumstick.png",
+            img: "/images/animals/Inv_Raw_Giant_Drumstick.png",
           },
           {
             count: 2,
             name: "Tomato",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/4e/Inv_Tomato.png",
+            img: "/images/resources/crops/Inv_Tomato.png",
           },
           {
             count: 1,
             name: "High Quality Cheese",
-            img: "https://static.wikia.nocookie.net/dinkum/images/c/c1/Inv_High_Quality_Cheese.png",
+            img: "/images/recipes/cookingRecipes/Inv_High_Quality_Cheese.png",
           },
           {
             count: 1,
             name: "Potato",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/41/Inv_Potato.png",
+            img: "/images/resources/crops/Inv_Potato.png",
           },
         ],
       },
@@ -2457,7 +2457,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "pastie",
     name: "Pastie",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Pastie.png",
+    img: "/images/recipes/cookingRecipes/Inv_Pastie.png",
     outputCount: 1,
     variants: [
       {
@@ -2466,22 +2466,22 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Flour",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Inv_Flour.png",
+            img: "/images/resources/otherCraftables/Inv_Flour.png",
           },
           {
             count: 1,
             name: "Cabbage",
-            img: "https://static.wikia.nocookie.net/dinkum/images/7/77/Inv_Cabbage.png",
+            img: "/images/resources/crops/Inv_Cabbage.png",
           },
           {
             count: 1,
             name: "Carrot",
-            img: "https://static.wikia.nocookie.net/dinkum/images/0/06/Inv_Carrot.png",
+            img: "/images/resources/crops/Inv_Carrot.png",
           },
           {
             count: 1,
             name: "Potato",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/41/Inv_Potato.png",
+            img: "/images/resources/crops/Inv_Potato.png",
           },
         ],
       },
@@ -2503,7 +2503,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "pavlova",
     name: "Pavlova",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/44/Inv_Pavlova.png",
+    img: "/images/recipes/cookingRecipes/Inv_Pavlova.png",
     outputCount: 1,
     variants: [
       {
@@ -2512,17 +2512,17 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 4,
             name: "Big Chicken Egg",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2d/Inv_Big_Chicken_Egg.png",
+            img: "/images/animals/Inv_Big_Chicken_Egg.png",
           },
           {
             count: 2,
             name: "Sugar",
-            img: "https://static.wikia.nocookie.net/dinkum/images/1/1f/Inv_Sugar.png",
+            img: "/images/resources/otherCraftables/Inv_Sugar.png",
           },
           {
             count: 1,
             name: "Fruit Salad",
-            img: "https://static.wikia.nocookie.net/dinkum/images/d/db/Inv_Fruit_Salad.png",
+            img: "/images/recipes/cookingRecipes/Inv_Fruit_Salad.png",
           },
         ],
       },
@@ -2544,7 +2544,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "prime_roast",
     name: "Prime Roast",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/75/Inv_Prime_Roast.png",
+    img: "/images/recipes/cookingRecipes/Inv_Prime_Roast.png",
     outputCount: 1,
     variants: [
       {
@@ -2553,32 +2553,32 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Raw Prime Meat",
-            img: "https://static.wikia.nocookie.net/dinkum/images/0/07/Inv_Raw_Prime_Meat.png",
+            img: "/images/animals/Inv_Raw_Prime_Meat.png",
           },
           {
             count: 3,
             name: "Potato",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/41/Inv_Potato.png",
+            img: "/images/resources/crops/Inv_Potato.png",
           },
           {
             count: 2,
             name: "Carrot",
-            img: "https://static.wikia.nocookie.net/dinkum/images/0/06/Inv_Carrot.png",
+            img: "/images/resources/crops/Inv_Carrot.png",
           },
           {
             count: 1,
             name: "Kale",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/a0/Inv_Kale.png",
+            img: "/images/resources/crops/Inv_Kale.png",
           },
           {
             count: 3,
             name: "Green Bean",
-            img: "https://static.wikia.nocookie.net/dinkum/images/b/b2/Inv_Green_Bean.png",
+            img: "/images/resources/crops/Inv_Green_Bean.png",
           },
           {
             count: 1,
             name: "Pumpkin",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/a3/Inv_Pumpkin.png",
+            img: "/images/resources/crops/Inv_Pumpkin.png",
           },
         ],
       },
@@ -2601,7 +2601,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "pumpkin_soup",
     name: "Pumpkin Soup",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2c/Inv_Pumpkin_Soup.png",
+    img: "/images/recipes/cookingRecipes/Inv_Pumpkin_Soup.png",
     outputCount: 1,
     variants: [
       {
@@ -2610,12 +2610,12 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Milk",
-            img: "https://static.wikia.nocookie.net/dinkum/images/c/c6/Inv_Milk.png",
+            img: "/images/resources/animalProducts/Inv_Milk.png",
           },
           {
             count: 1,
             name: "Pumpkin",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/a3/Inv_Pumpkin.png",
+            img: "/images/resources/crops/Inv_Pumpkin.png",
           },
         ],
       },
@@ -2625,12 +2625,12 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "High Quality Milk",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/ab/Inv_High_Quality_Milk.png",
+            img: "/images/resources/animalProducts/Inv_High_Quality_Milk.png",
           },
           {
             count: 1,
             name: "Pumpkin",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/a3/Inv_Pumpkin.png",
+            img: "/images/resources/crops/Inv_Pumpkin.png",
           },
         ],
       },
@@ -2648,7 +2648,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "quandong_jam",
     name: "Quandong Jam",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/99/Inv_Quandong_Jam.png",
+    img: "/images/recipes/cookingRecipes/Inv_Quandong_Jam.png",
     outputCount: 1,
     variants: [
       {
@@ -2657,7 +2657,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 10,
             name: "Quandong",
-            img: "https://static.wikia.nocookie.net/dinkum/images/c/cf/Inv_Quandong.png",
+            img: "/images/resources/foragables/Inv_Quandong.png",
           },
         ],
       },
@@ -2674,7 +2674,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "roasted_coffee_beans",
     name: "Roasted Coffee Beans",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/79/Inv_Roasted_Coffee_Beans.png",
+    img: "/images/recipes/cookingRecipes/Inv_Roasted_Coffee_Beans.png",
     outputCount: 1,
     variants: [
       {
@@ -2683,7 +2683,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 3,
             name: "Coffee Bean",
-            img: "https://static.wikia.nocookie.net/dinkum/images/e/e4/Inv_Coffee_Bean.png",
+            img: "/images/resources/crops/Inv_Coffee_Bean.png",
           },
         ],
       },
@@ -2700,7 +2700,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "roe_nigiri",
     name: "Roe Nigiri",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e7/Inv_Roe_Nigiri.png",
+    img: "/images/recipes/cookingRecipes/Inv_Roe_Nigiri.png",
     outputCount: 1,
     variants: [
       {
@@ -2709,17 +2709,17 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 10,
             name: "Fish Roe",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/4a/Inv_Fish_Roe.png",
+            img: "/images/resources/foragables/Inv_Fish_Roe.png",
           },
           {
             count: 1,
             name: "Cooked Rice",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/20/Inv_Cooked_Rice.png",
+            img: "/images/recipes/cookingRecipes/Inv_Cooked_Rice.png",
           },
           {
             count: 2,
             name: "Seaweed",
-            img: "https://static.wikia.nocookie.net/dinkum/images/c/ce/Inv_Seaweed.png",
+            img: "/images/resources/foragables/Inv_Seaweed.png",
           },
         ],
       },
@@ -2739,7 +2739,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "sausage_roll",
     name: "Sausage Roll",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/74/Inv_Sausage_Roll.png",
+    img: "/images/recipes/cookingRecipes/Inv_Sausage_Roll.png",
     outputCount: 1,
     variants: [
       {
@@ -2748,22 +2748,22 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Flour",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Inv_Flour.png",
+            img: "/images/resources/otherCraftables/Inv_Flour.png",
           },
           {
             count: 1,
             name: "Big Chicken Egg",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2d/Inv_Big_Chicken_Egg.png",
+            img: "/images/animals/Inv_Big_Chicken_Egg.png",
           },
           {
             count: 1,
             name: "Raw Meat",
-            img: "https://static.wikia.nocookie.net/dinkum/images/c/cb/Inv_Raw_Meat.png",
+            img: "/images/animals/Inv_Raw_Meat.png",
           },
           {
             count: 1,
             name: "Onion",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/ad/Inv_Onion.png",
+            img: "/images/resources/crops/Inv_Onion.png",
           },
         ],
       },
@@ -2785,7 +2785,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "scone",
     name: "Scone",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/20/Inv_Scones.png",
+    img: "/images/recipes/cookingRecipes/Inv_Scones.png",
     outputCount: 1,
     variants: [
       {
@@ -2794,22 +2794,22 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Flour",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Inv_Flour.png",
+            img: "/images/resources/otherCraftables/Inv_Flour.png",
           },
           {
             count: 1,
             name: "High Quality Milk",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/ab/Inv_High_Quality_Milk.png",
+            img: "/images/resources/animalProducts/Inv_High_Quality_Milk.png",
           },
           {
             count: 1,
             name: "Big Chicken Egg",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2d/Inv_Big_Chicken_Egg.png",
+            img: "/images/animals/Inv_Big_Chicken_Egg.png",
           },
           {
             count: 1,
             name: "Apple Jam",
-            img: "https://static.wikia.nocookie.net/dinkum/images/e/ed/Inv_Apple_Jam.png",
+            img: "/images/recipes/cookingRecipes/Inv_Apple_Jam.png",
           },
         ],
       },
@@ -2819,22 +2819,22 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Flour",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Inv_Flour.png",
+            img: "/images/resources/otherCraftables/Inv_Flour.png",
           },
           {
             count: 1,
             name: "High Quality Milk",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/ab/Inv_High_Quality_Milk.png",
+            img: "/images/resources/animalProducts/Inv_High_Quality_Milk.png",
           },
           {
             count: 1,
             name: "Big Chicken Egg",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2d/Inv_Big_Chicken_Egg.png",
+            img: "/images/animals/Inv_Big_Chicken_Egg.png",
           },
           {
             count: 1,
             name: "Banana Jam",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/49/Inv_Banana_Jam.png",
+            img: "/images/recipes/cookingRecipes/Inv_Banana_Jam.png",
           },
         ],
       },
@@ -2844,22 +2844,22 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Flour",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Inv_Flour.png",
+            img: "/images/resources/otherCraftables/Inv_Flour.png",
           },
           {
             count: 1,
             name: "High Quality Milk",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/ab/Inv_High_Quality_Milk.png",
+            img: "/images/resources/animalProducts/Inv_High_Quality_Milk.png",
           },
           {
             count: 1,
             name: "Big Chicken Egg",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2d/Inv_Big_Chicken_Egg.png",
+            img: "/images/animals/Inv_Big_Chicken_Egg.png",
           },
           {
             count: 1,
             name: "Lime Jam",
-            img: "https://static.wikia.nocookie.net/dinkum/images/1/15/Inv_Lime_Jam.png",
+            img: "/images/recipes/cookingRecipes/Inv_Lime_Jam.png",
           },
         ],
       },
@@ -2869,22 +2869,22 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Flour",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Inv_Flour.png",
+            img: "/images/resources/otherCraftables/Inv_Flour.png",
           },
           {
             count: 1,
             name: "High Quality Milk",
-            img: "https://static.wikia.nocookie.net/dinkum/images/a/ab/Inv_High_Quality_Milk.png",
+            img: "/images/resources/animalProducts/Inv_High_Quality_Milk.png",
           },
           {
             count: 1,
             name: "Big Chicken Egg",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2d/Inv_Big_Chicken_Egg.png",
+            img: "/images/animals/Inv_Big_Chicken_Egg.png",
           },
           {
             count: 1,
             name: "Quandong Jam",
-            img: "https://static.wikia.nocookie.net/dinkum/images/9/99/Inv_Quandong_Jam.png",
+            img: "/images/recipes/cookingRecipes/Inv_Quandong_Jam.png",
           },
         ],
       },
@@ -2905,7 +2905,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "seaweed_soup",
     name: "Seaweed Soup",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e7/Inv_Seaweed_Soup.png",
+    img: "/images/recipes/cookingRecipes/Inv_Seaweed_Soup.png",
     outputCount: 1,
     variants: [
       {
@@ -2914,7 +2914,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 10,
             name: "Seaweed",
-            img: "https://static.wikia.nocookie.net/dinkum/images/c/ce/Inv_Seaweed.png",
+            img: "/images/resources/foragables/Inv_Seaweed.png",
           },
         ],
       },
@@ -2924,7 +2924,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 10,
             name: "Red Seaweed",
-            img: "https://static.wikia.nocookie.net/dinkum/images/d/d0/Inv_Red_Seaweed.png",
+            img: "/images/resources/foragables/Inv_Red_Seaweed.png",
           },
         ],
       },
@@ -2941,7 +2941,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "spag_bol",
     name: "Spag Bol",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/84/Inv_Spag_Bol.png",
+    img: "/images/recipes/cookingRecipes/Inv_Spag_Bol.png",
     outputCount: 1,
     variants: [
       {
@@ -2950,22 +2950,22 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Flour",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Inv_Flour.png",
+            img: "/images/resources/otherCraftables/Inv_Flour.png",
           },
           {
             count: 1,
             name: "Big Chicken Egg",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2d/Inv_Big_Chicken_Egg.png",
+            img: "/images/animals/Inv_Big_Chicken_Egg.png",
           },
           {
             count: 1,
             name: "Tomato",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/4e/Inv_Tomato.png",
+            img: "/images/resources/crops/Inv_Tomato.png",
           },
           {
             count: 1,
             name: "Cooked Meat",
-            img: "https://static.wikia.nocookie.net/dinkum/images/4/48/Inv_Cooked_Meat.png",
+            img: "/images/recipes/cookingRecipes/Inv_Cooked_Meat.png",
           },
         ],
       },
@@ -2988,7 +2988,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "sparkin_soup",
     name: "Sparkin' Soup",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/bd/Inv_Sparkin%27_Soup.png",
+    img: "/images/recipes/cookingRecipes/Inv_Sparkin%27_Soup.png",
     outputCount: 1,
     variants: [
       {
@@ -2997,7 +2997,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 2,
             name: "Thunder Sac",
-            img: "https://static.wikia.nocookie.net/dinkum/images/c/c7/Inv_Thunder_Sac.png",
+            img: "/images/resources/animalProducts/Inv_Thunder_Sac.png",
           },
         ],
       },
@@ -3012,7 +3012,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "toffee",
     name: "Toffee",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/43/Inv_Toffee.png",
+    img: "/images/recipes/cookingRecipes/Inv_Toffee.png",
     outputCount: 3,
     variants: [
       {
@@ -3021,12 +3021,12 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 2,
             name: "Honey",
-            img: "https://static.wikia.nocookie.net/dinkum/images/0/08/Inv_Honey.png",
+            img: "/images/resources/foragables/Inv_Honey.png",
           },
           {
             count: 1,
             name: "Sugar",
-            img: "https://static.wikia.nocookie.net/dinkum/images/1/1f/Inv_Sugar.png",
+            img: "/images/resources/otherCraftables/Inv_Sugar.png",
           },
         ],
       },
@@ -3043,7 +3043,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "wattle_brew",
     name: "Wattle Brew",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/5b/Inv_Wattle_Brew.png",
+    img: "/images/recipes/cookingRecipes/Inv_Wattle_Brew.png",
     outputCount: 1,
     variants: [
       {
@@ -3052,7 +3052,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Wattle Tea",
-            img: "https://static.wikia.nocookie.net/dinkum/images/2/2d/Inv_Wattle_Tea.png",
+            img: "/images/recipes/cookingRecipes/Inv_Wattle_Tea.png",
           },
         ],
       },
@@ -3070,7 +3070,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "wattle_tea",
     name: "Wattle Tea",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2d/Inv_Wattle_Tea.png",
+    img: "/images/recipes/cookingRecipes/Inv_Wattle_Tea.png",
     outputCount: 1,
     variants: [
       {
@@ -3079,7 +3079,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 10,
             name: "Yellow Wattle Flower",
-            img: "https://static.wikia.nocookie.net/dinkum/images/b/b5/Inv_Yellow_Wattle_Flower.png",
+            img: "/images/resources/foragables/Inv_Yellow_Wattle_Flower.png",
           },
         ],
       },
@@ -3096,7 +3096,7 @@ export const cookingRecipes: CookingRecipe[] = [
   {
     id: "pineapple_jam",
     name: "Pineapple Jam",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/90/Inv_Pineapple_Jam.png",
+    img: "/images/recipes/cookingRecipes/Inv_Pineapple_Jam.png",
     outputCount: 1,
     variants: [
       {
@@ -3105,7 +3105,7 @@ export const cookingRecipes: CookingRecipe[] = [
           {
             count: 1,
             name: "Pineapple",
-            img: "https://static.wikia.nocookie.net/dinkum/images/8/87/Inv_Pineapple.png",
+            img: "/images/resources/crops/Inv_Pineapple.png",
           },
         ],
       },

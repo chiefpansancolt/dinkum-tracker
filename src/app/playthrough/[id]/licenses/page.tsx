@@ -257,7 +257,7 @@ export default function LicensesPage() {
 								{getSpentPermitPoints().toLocaleString()} /{" "}
 								{getLicenseTotalPermitPoints().toLocaleString()}
 								<Image
-									src="https://static.wikia.nocookie.net/dinkum/images/9/97/Permit_Points.png"
+									src="/images/other/Permit_Points.png"
 									alt="Permit Points"
 									width={28}
 									height={28}

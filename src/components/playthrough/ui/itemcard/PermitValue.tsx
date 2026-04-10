@@ -6,7 +6,7 @@ const PermitPrice = ({ price }: DinkPriceProps) => {
 		<div className="flex items-center">
 			<span>{price.toLocaleString()}</span>
 			<Image
-				src="https://static.wikia.nocookie.net/dinkum/images/9/97/Permit_Points.png"
+				src="/images/other/Permit_Points.png"
 				alt="Permit Points"
 				width={16}
 				height={20}

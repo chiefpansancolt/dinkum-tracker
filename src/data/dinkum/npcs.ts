@@ -4,7 +4,7 @@ export const npcs: NPC[] = [
   {
     id: "fletch",
     name: "Fletch",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c4/NPC_Fletch.png",
+    img: "/images/npcs/NPC_Fletch.png",
     occupation:
       "Main quest giver\nProvider of Licences and Deeds\nBase Tent, Town Hall",
     requirements: {
@@ -14,16 +14,16 @@ export const npcs: NPC[] = [
     foodPreferences: {
       likes: "Bush Lime",
       likesImg:
-        "https://static.wikia.nocookie.net/dinkum/images/a/af/Inv_Bush_Lime.png",
+        "/images/resources/foragables/Inv_Bush_Lime.png",
       dislikes: "Croco Meat\nAny type of Meat products.",
       dislikesImg:
-        "https://static.wikia.nocookie.net/dinkum/images/3/35/Inv_Croco_Meat.png",
+        "/images/animals/Inv_Croco_Meat.png",
     },
   },
   {
     id: "john",
     name: "John",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/59/NPC_John.png",
+    img: "/images/npcs/NPC_John.png",
     occupation: "General Store\nJohn's Goods",
     requirements: {
       visit: "John will be unlocked via the introductory quests.",
@@ -32,16 +32,16 @@ export const npcs: NPC[] = [
     foodPreferences: {
       likes: "Cooked Croco Meat",
       likesImg:
-        "https://static.wikia.nocookie.net/dinkum/images/b/b7/Inv_Cooked_Croco_Meat.png",
+        "/images/recipes/cookingRecipes/Inv_Cooked_Croco_Meat.png",
       dislikes: "Potato\nAny type of Animal and Fruit products.",
       dislikesImg:
-        "https://static.wikia.nocookie.net/dinkum/images/4/41/Inv_Potato.png",
+        "/images/resources/crops/Inv_Potato.png",
     },
   },
   {
     id: "theodore",
     name: "Theodore",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/98/NPC_Theodore.png",
+    img: "/images/npcs/NPC_Theodore.png",
     occupation: "Museum Curator\nMuseum",
     requirements: {
       visit: "-",
@@ -50,16 +50,16 @@ export const npcs: NPC[] = [
     foodPreferences: {
       likes: "Cooked Cactus Fig",
       likesImg:
-        "https://static.wikia.nocookie.net/dinkum/images/a/a7/Inv_Cooked_Cactus_Fig.png",
+        "/images/recipes/cookingRecipes/Inv_Cooked_Cactus_Fig.png",
       dislikes: "Cactus Figs",
       dislikesImg:
-        "https://static.wikia.nocookie.net/dinkum/images/7/79/Inv_Cactus_Figs.png",
+        "/images/resources/foragables/Inv_Cactus_Figs.png",
     },
   },
   {
     id: "clover",
     name: "Clover",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4c/NPC_Clover.png",
+    img: "/images/npcs/NPC_Clover.png",
     occupation: "Tailor\nThreadspace",
     requirements: {
       visit: "-",
@@ -68,16 +68,16 @@ export const npcs: NPC[] = [
     foodPreferences: {
       likes: "Apple",
       likesImg:
-        "https://static.wikia.nocookie.net/dinkum/images/9/90/Inv_Apple.png",
+        "/images/resources/foragables/Inv_Apple.png",
       dislikes: "Cooked Drumstick\nAny type of Animal and Vegetables products.",
       dislikesImg:
-        "https://static.wikia.nocookie.net/dinkum/images/9/98/Inv_Cooked_Drumstick.png",
+        "/images/recipes/cookingRecipes/Inv_Cooked_Drumstick.png",
     },
   },
   {
     id: "franklyn",
     name: "Franklyn",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4b/NPC_Franklyn.png",
+    img: "/images/npcs/NPC_Franklyn.png",
     occupation:
       "Inventor\nFranklyn's Lab\nWill buy Shiny Discs for 6 times the value",
     requirements: {
@@ -88,16 +88,16 @@ export const npcs: NPC[] = [
     foodPreferences: {
       likes: "Cooked Giant Drumstick",
       likesImg:
-        "https://static.wikia.nocookie.net/dinkum/images/2/22/Inv_Cooked_Giant_Drumstick.png",
+        "/images/recipes/cookingRecipes/Inv_Cooked_Giant_Drumstick.png",
       dislikes: "Bush Lime\nAny type of Vegetable products.",
       dislikesImg:
-        "https://static.wikia.nocookie.net/dinkum/images/a/af/Inv_Bush_Lime.png",
+        "/images/resources/foragables/Inv_Bush_Lime.png",
     },
   },
   {
     id: "irwin",
     name: "Irwin",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/65/NPC_Irwin.png",
+    img: "/images/npcs/NPC_Irwin.png",
     occupation: "Animal Handler\nIrwin's Barn",
     requirements: {
       visit: "Handling Licence",
@@ -106,16 +106,16 @@ export const npcs: NPC[] = [
     foodPreferences: {
       likes: "Bananas",
       likesImg:
-        "https://static.wikia.nocookie.net/dinkum/images/6/62/Inv_Bananas.png",
+        "/images/resources/foragables/Inv_Bananas.png",
       dislikes: "Cooked Croco Meat\nAny type of Animal and Meat products.",
       dislikesImg:
-        "https://static.wikia.nocookie.net/dinkum/images/b/b7/Inv_Cooked_Croco_Meat.png",
+        "/images/recipes/cookingRecipes/Inv_Cooked_Croco_Meat.png",
     },
   },
   {
     id: "melvin",
     name: "Melvin",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/09/NPC_Melvin.png",
+    img: "/images/npcs/NPC_Melvin.png",
     occupation: "Furniture\nMelvin Furniture",
     requirements: {
       visit: "House",
@@ -124,16 +124,16 @@ export const npcs: NPC[] = [
     foodPreferences: {
       likes: "Cooked Meat",
       likesImg:
-        "https://static.wikia.nocookie.net/dinkum/images/4/48/Inv_Cooked_Meat.png",
+        "/images/recipes/cookingRecipes/Inv_Cooked_Meat.png",
       dislikes: "Chicken Egg\nAny type of Animal products.",
       dislikesImg:
-        "https://static.wikia.nocookie.net/dinkum/images/4/43/Inv_Chicken_Egg.png",
+        "/images/resources/animalProducts/Inv_Chicken_Egg.png",
     },
   },
   {
     id: "milburn",
     name: "Milburn",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/03/NPC_Milburn.png",
+    img: "/images/npcs/NPC_Milburn.png",
     occupation: "Banker\nBank",
     requirements: {
       visit: "Will never visit",
@@ -142,16 +142,16 @@ export const npcs: NPC[] = [
     foodPreferences: {
       likes: "High Quality Cheese",
       likesImg:
-        "https://static.wikia.nocookie.net/dinkum/images/c/c1/Inv_High_Quality_Cheese.png",
+        "/images/recipes/cookingRecipes/Inv_High_Quality_Cheese.png",
       dislikes: "Cheese\nAny type of Fruits products.",
       dislikesImg:
-        "https://static.wikia.nocookie.net/dinkum/images/a/a9/Inv_Cheese.png",
+        "/images/recipes/cookingRecipes/Inv_Cheese.png",
     },
   },
   {
     id: "rayne",
     name: "Rayne",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b7/NPC_Rayne.png",
+    img: "/images/npcs/NPC_Rayne.png",
     occupation: "Agriculturist (gardener and farmer)\nRayne's Greenhouse",
     requirements: {
       visit: "Farming Licence",
@@ -160,16 +160,16 @@ export const npcs: NPC[] = [
     foodPreferences: {
       likes: "Corn",
       likesImg:
-        "https://static.wikia.nocookie.net/dinkum/images/5/5c/Inv_Corn.png",
+        "/images/resources/crops/Inv_Corn.png",
       dislikes: "Pumpkin\nAny type of Animal and Meat products.",
       dislikesImg:
-        "https://static.wikia.nocookie.net/dinkum/images/a/a3/Inv_Pumpkin.png",
+        "/images/resources/crops/Inv_Pumpkin.png",
     },
   },
   {
     id: "sally",
     name: "Sally",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/09/NPC_Sally.png",
+    img: "/images/npcs/NPC_Sally.png",
     occupation: "Hairstylist\nSally's Salon",
     requirements: {
       visit: "5 permanent residents on the island",
@@ -179,16 +179,16 @@ export const npcs: NPC[] = [
     foodPreferences: {
       likes: "Glowing Mushroom",
       likesImg:
-        "https://static.wikia.nocookie.net/dinkum/images/9/91/Inv_Glowing_Mushroom.png",
+        "/images/resources/foragables/Inv_Glowing_Mushroom.png",
       dislikes: "Cabbage\nAny type of Animal products.",
       dislikesImg:
-        "https://static.wikia.nocookie.net/dinkum/images/7/77/Inv_Cabbage.png",
+        "/images/resources/crops/Inv_Cabbage.png",
     },
   },
   {
     id: "sheila",
     name: "Sheila",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/46/NPC_Sheila.png",
+    img: "/images/npcs/NPC_Sheila.png",
     occupation:
       'Tuckshop owner\nTuckerbox\nWill buy the "food of the day" for 2.5 times the value',
     requirements: {
@@ -198,16 +198,16 @@ export const npcs: NPC[] = [
     foodPreferences: {
       likes: "Prime Roast",
       likesImg:
-        "https://static.wikia.nocookie.net/dinkum/images/7/75/Inv_Prime_Roast.png",
+        "/images/recipes/cookingRecipes/Inv_Prime_Roast.png",
       dislikes: "Cooked Blob Fish",
       dislikesImg:
-        "https://static.wikia.nocookie.net/dinkum/images/2/22/Inv_Cooked_Blob_Fish.png",
+        "/images/recipes/cookingRecipes/Inv_Cooked_Blob_Fish.png",
     },
   },
   {
     id: "ted_selly",
     name: "Ted Selly",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f1/NPC_Ted_Selly.png",
+    img: "/images/npcs/NPC_Ted_Selly.png",
     occupation:
       'Wandering Hunter\nAnywhere on the map\nCan make some pretty powerful stuff\nWill buy certain "meat" for 2 times the value',
     requirements: {
@@ -217,16 +217,16 @@ export const npcs: NPC[] = [
     foodPreferences: {
       likes: "Cooked Drumstick",
       likesImg:
-        "https://static.wikia.nocookie.net/dinkum/images/9/98/Inv_Cooked_Drumstick.png",
+        "/images/recipes/cookingRecipes/Inv_Cooked_Drumstick.png",
       dislikes: "Kale\nAny type of Animal, Fruit and Vegetable products.",
       dislikesImg:
-        "https://static.wikia.nocookie.net/dinkum/images/a/a0/Inv_Kale.png",
+        "/images/resources/crops/Inv_Kale.png",
     },
   },
   {
     id: "jimmy",
     name: "Jimmy",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4e/NPC_Jimmy.png",
+    img: "/images/npcs/NPC_Jimmy.png",
     occupation:
       "Businessman\nJimmy's Boat\nWill buy stacks of 50+ for 1.5 times the value",
     requirements: {
@@ -244,7 +244,7 @@ export const npcs: NPC[] = [
   {
     id: "nick",
     name: "Nick",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2b/NPC_Nick.png",
+    img: "/images/npcs/NPC_Nick.png",
     occupation: "Being Jolly\nBeach",
     requirements: {
       visit:
@@ -261,7 +261,7 @@ export const npcs: NPC[] = [
   {
     id: "julia",
     name: "Julia",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/5c/NPC_Julia.png",
+    img: "/images/npcs/NPC_Julia.png",
     occupation:
       "Bug enthusiast, Bug Catching Comp organiser\nVisitors Site\nWill buy bugs for 2.5 times the value",
     requirements: {
@@ -278,7 +278,7 @@ export const npcs: NPC[] = [
   {
     id: "max",
     name: "Max",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b2/NPC_Max.png",
+    img: "/images/npcs/NPC_Max.png",
     occupation:
       "Fish enthusiast, Fish Catching Comp organiser\nVisitors Site\nWill buy fish for 2.5 times the value",
     requirements: {
@@ -295,7 +295,7 @@ export const npcs: NPC[] = [
   {
     id: "nancy",
     name: "Nancy",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/9f/NPC_Nancy.png",
+    img: "/images/npcs/NPC_Nancy.png",
     occupation: "Airport",
     requirements: {
       visit: "Sunday",
@@ -311,7 +311,7 @@ export const npcs: NPC[] = [
   {
     id: "townco_agent",
     name: "TownCo. Agent",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f0/NPC_TownCo._Agent.png",
+    img: "/images/npcs/NPC_TownCo._Agent.png",
     occupation: "Wanderer\nCan craft some Go-Go Town items",
     requirements: {
       visit:
@@ -328,7 +328,7 @@ export const npcs: NPC[] = [
   {
     id: "river",
     name: "River",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/27/NPC_River.png",
+    img: "/images/npcs/NPC_River.png",
     occupation: "Hobby Fishing",
     requirements: {
       visit: "",
@@ -337,16 +337,16 @@ export const npcs: NPC[] = [
     foodPreferences: {
       likes: "Cooked Saltwater Fish",
       likesImg:
-        "https://static.wikia.nocookie.net/dinkum/images/8/84/Inv_Cooked_Saltwater_Fish.png",
+        "/images/recipes/cookingRecipes/Inv_Cooked_Saltwater_Fish.png",
       dislikes: "Cooked Meat",
       dislikesImg:
-        "https://static.wikia.nocookie.net/dinkum/images/4/48/Inv_Cooked_Meat.png",
+        "/images/recipes/cookingRecipes/Inv_Cooked_Meat.png",
     },
   },
   {
     id: "forest",
     name: "Forest",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8c/NPC_Forest.png",
+    img: "/images/npcs/NPC_Forest.png",
     occupation: "Hobby Forest",
     requirements: {
       visit: "",
@@ -355,16 +355,16 @@ export const npcs: NPC[] = [
     foodPreferences: {
       likes: "Pastie",
       likesImg:
-        "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Pastie.png",
+        "/images/recipes/cookingRecipes/Inv_Pastie.png",
       dislikes: "Mushroom Soup",
       dislikesImg:
-        "https://static.wikia.nocookie.net/dinkum/images/f/fa/Inv_Mushroom_Soup.png",
+        "/images/recipes/cookingRecipes/Inv_Mushroom_Soup.png",
     },
   },
   {
     id: "doug",
     name: "Doug",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b1/NPC_Doug.png",
+    img: "/images/npcs/NPC_Doug.png",
     occupation: "Hobby Doug",
     requirements: {
       visit: "",
@@ -373,16 +373,16 @@ export const npcs: NPC[] = [
     foodPreferences: {
       likes: "Banana Jam",
       likesImg:
-        "https://static.wikia.nocookie.net/dinkum/images/4/49/Inv_Banana_Jam.png",
+        "/images/recipes/cookingRecipes/Inv_Banana_Jam.png",
       dislikes: "Apple",
       dislikesImg:
-        "https://static.wikia.nocookie.net/dinkum/images/9/90/Inv_Apple.png",
+        "/images/resources/foragables/Inv_Apple.png",
     },
   },
   {
     id: "mason",
     name: "Mason",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a4/NPC_Mason.png",
+    img: "/images/npcs/NPC_Mason.png",
     occupation: "Hobby Mason",
     requirements: {
       visit: "",
@@ -391,10 +391,10 @@ export const npcs: NPC[] = [
     foodPreferences: {
       likes: "Roe Nigiri",
       likesImg:
-        "https://static.wikia.nocookie.net/dinkum/images/e/e7/Inv_Roe_Nigiri.png",
+        "/images/recipes/cookingRecipes/Inv_Roe_Nigiri.png",
       dislikes: "Crab Soup",
       dislikesImg:
-        "https://static.wikia.nocookie.net/dinkum/images/f/f2/Inv_Crab_Soup.png",
+        "/images/recipes/cookingRecipes/Inv_Crab_Soup.png",
     },
   },
 ];

@@ -4,7 +4,7 @@ export const relics: Relic[] = [
   {
     id: "bright_wire",
     name: "Bright Wire",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8f/Inv_Bright_Wire.png",
+    img: "/images/resources/otherCraftables/Inv_Bright_Wire.png",
     locations: ["Old Barrel", "Wheelie Bin", "Crab Pot"],
     baseSellPrice: 635,
     johnsSellPrice: 158,
@@ -12,7 +12,7 @@ export const relics: Relic[] = [
   {
     id: "button_board",
     name: "Button Board",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/7c/Inv_Button_Board.png",
+    img: "/images/resources/relics/Inv_Button_Board.png",
     locations: ["Old Barrel", "Wheelie Bin", "Crab Pot"],
     baseSellPrice: 1556,
     johnsSellPrice: 388,
@@ -20,7 +20,7 @@ export const relics: Relic[] = [
   {
     id: "ear_hats",
     name: "Ear Hats",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/7e/Inv_Ear_Hats.png",
+    img: "/images/resources/relics/Inv_Ear_Hats.png",
     locations: ["Old Barrel", "Wheelie Bin", "Crab Pot"],
     baseSellPrice: 835,
     johnsSellPrice: 207,
@@ -28,7 +28,7 @@ export const relics: Relic[] = [
   {
     id: "glass_bulb",
     name: "Glass Bulb",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2f/Inv_Glass_Bulb.png",
+    img: "/images/resources/relics/Inv_Glass_Bulb.png",
     locations: ["Old Barrel", "Wheelie Bin", "Crab Pot"],
     baseSellPrice: 1035,
     johnsSellPrice: 258,
@@ -36,7 +36,7 @@ export const relics: Relic[] = [
   {
     id: "green_board",
     name: "Green Board",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1a/Inv_Green_Board.png",
+    img: "/images/resources/relics/Inv_Green_Board.png",
     locations: ["Old Barrel", "Wheelie Bin", "Satellite"],
     baseSellPrice: 6120,
     johnsSellPrice: 1530,
@@ -44,7 +44,7 @@ export const relics: Relic[] = [
   {
     id: "hot_cylinder",
     name: "Hot Cylinder",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/46/Inv_Hot_Cylinder.png",
+    img: "/images/resources/otherCraftables/Inv_Hot_Cylinder.png",
     locations: ["Old Barrel", "Wheelie Bin", "Satellite", "Crab Pot"],
     baseSellPrice: 3090,
     johnsSellPrice: 772,
@@ -52,7 +52,7 @@ export const relics: Relic[] = [
   {
     id: "old_contraption",
     name: "Old Contraption",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/7d/Inv_Old_Contraption.png",
+    img: "/images/resources/relics/Inv_Old_Contraption.png",
     locations: ["Old Barrel", "Wheelie Bin", "Car Relic", "Satellite"],
     baseSellPrice: 15090,
     johnsSellPrice: 3772,
@@ -60,7 +60,7 @@ export const relics: Relic[] = [
   {
     id: "old_gear",
     name: "Old Gear",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/90/Inv_Old_Gear.png",
+    img: "/images/resources/relics/Inv_Old_Gear.png",
     locations: ["Old Barrel", "Car Relic", "John's Goods"],
     buyPrice: 1050,
     baseSellPrice: 525,
@@ -69,7 +69,7 @@ export const relics: Relic[] = [
   {
     id: "old_key",
     name: "Old Key",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4e/Inv_Old_Key.png",
+    img: "/images/resources/relics/Inv_Old_Key.png",
     locations: ["Old Barrel", "Wheelie Bin", "Crab Pot"],
     baseSellPrice: 4080,
     johnsSellPrice: 1020,
@@ -77,7 +77,7 @@ export const relics: Relic[] = [
   {
     id: "old_spring",
     name: "Old Spring",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/11/Inv_Old_Spring.png",
+    img: "/images/resources/relics/Inv_Old_Spring.png",
     locations: ["Old Barrel", "Car Relic"],
     baseSellPrice: 485,
     johnsSellPrice: 120,
@@ -85,7 +85,7 @@ export const relics: Relic[] = [
   {
     id: "old_toy",
     name: "Old Toy",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/85/Inv_Old_Toy.png",
+    img: "/images/resources/relics/Inv_Old_Toy.png",
     locations: ["Old Barrel", "Wheelie Bin", "Car Relic", "Crab Pot"],
     baseSellPrice: 1642,
     johnsSellPrice: 410,
@@ -93,7 +93,7 @@ export const relics: Relic[] = [
   {
     id: "old_wheel",
     name: "Old Wheel",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/22/Inv_Old_Wheel.png",
+    img: "/images/resources/relics/Inv_Old_Wheel.png",
     locations: ["Old Barrel", "Wheelie Bin"],
     baseSellPrice: 1320,
     johnsSellPrice: 330,
@@ -101,7 +101,7 @@ export const relics: Relic[] = [
   {
     id: "shiny_disc",
     name: "Shiny Disc",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/83/Inv_Shiny_Disc.png",
+    img: "/images/resources/relics/Inv_Shiny_Disc.png",
     locations: ["Old Barrel", "Wheelie Bin"],
     baseSellPrice: 1480,
     johnsSellPrice: 370,
@@ -110,7 +110,7 @@ export const relics: Relic[] = [
   {
     id: "sliding_handle",
     name: "Sliding Handle",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/dc/Inv_Sliding_Handle.png",
+    img: "/images/resources/relics/Inv_Sliding_Handle.png",
     locations: ["Old Barrel", "Wheelie Bin", "Crab Pot"],
     baseSellPrice: 592,
     johnsSellPrice: 147,
@@ -118,7 +118,7 @@ export const relics: Relic[] = [
   {
     id: "smooth_slate",
     name: "Smooth Slate",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c8/Inv_Smooth_Slate.png",
+    img: "/images/resources/relics/Inv_Smooth_Slate.png",
     locations: ["Old Barrel", "Wheelie Bin", "Crab Pot"],
     baseSellPrice: 745,
     johnsSellPrice: 186,

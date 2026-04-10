@@ -5,7 +5,7 @@ export const bugs: PediaItem[] = [
   {
     id: "bee",
     name: "Bee",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8f/Inv_Bee.png",
+    img: "/images/pedia/bugs/Inv_Bee.png",
     biome: ["Pine Forests", "Plains"],
     timeFound: ["Day"],
     seasons: ["Summer", "Spring"],
@@ -15,7 +15,7 @@ export const bugs: PediaItem[] = [
   {
     id: "birdwing_butterfly",
     name: "Birdwing Butterfly",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/26/Inv_Birdwing_Butterfly.png",
+    img: "/images/pedia/bugs/Inv_Birdwing_Butterfly.png",
     biome: ["Tropics"],
     timeFound: ["Morning"],
     seasons: ["Autumn"],
@@ -25,7 +25,7 @@ export const bugs: PediaItem[] = [
   {
     id: "black_cricket",
     name: "Black Cricket",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/76/Inv_Black_Cricket.png",
+    img: "/images/pedia/bugs/Inv_Black_Cricket.png",
     biome: ["Everywhere"],
     timeFound: ["Night"],
     seasons: ["All"],
@@ -35,7 +35,7 @@ export const bugs: PediaItem[] = [
   {
     id: "blue_moon_butterfly",
     name: "Blue Moon Butterfly",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/eb/Inv_Blue_Moon_Butterfly.png",
+    img: "/images/pedia/bugs/Inv_Blue_Moon_Butterfly.png",
     biome: ["Everywhere"],
     timeFound: ["Morning", "Day"],
     seasons: ["All"],
@@ -45,7 +45,7 @@ export const bugs: PediaItem[] = [
   {
     id: "blue_tiger_butterfly",
     name: "Blue Tiger Butterfly",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/84/Inv_Blue_Tiger_Butterfly.png",
+    img: "/images/pedia/bugs/Inv_Blue_Tiger_Butterfly.png",
     biome: ["Island Reef"],
     timeFound: ["All"],
     seasons: ["All"],
@@ -55,7 +55,7 @@ export const bugs: PediaItem[] = [
   {
     id: "bogong_moth",
     name: "Bogong Moth",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/34/Inv_Bogong_Moth.png",
+    img: "/images/pedia/bugs/Inv_Bogong_Moth.png",
     biome: ["Everywhere"],
     timeFound: ["Night"],
     seasons: ["All"],
@@ -65,7 +65,7 @@ export const bugs: PediaItem[] = [
   {
     id: "centipede",
     name: "Centipede",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8e/Inv_Centipede.png",
+    img: "/images/pedia/bugs/Inv_Centipede.png",
     biome: ["Everywhere"],
     timeFound: ["Night"],
     seasons: ["All"],
@@ -75,7 +75,7 @@ export const bugs: PediaItem[] = [
   {
     id: "cicada",
     name: "Cicada",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/39/Inv_Cicada.png",
+    img: "/images/pedia/bugs/Inv_Cicada.png",
     biome: ["Bushlands", "Plains"],
     timeFound: ["Morning", "Day"],
     seasons: ["Summer", "Spring"],
@@ -85,7 +85,7 @@ export const bugs: PediaItem[] = [
   {
     id: "cockroach",
     name: "Cockroach",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b7/Inv_Cockroach.png",
+    img: "/images/pedia/bugs/Inv_Cockroach.png",
     biome: ["Everywhere"],
     timeFound: ["Night"],
     seasons: ["All"],
@@ -95,7 +95,7 @@ export const bugs: PediaItem[] = [
   {
     id: "common_blue_tail",
     name: "Common Blue Tail",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e2/Inv_Common_Blue_Tail.png",
+    img: "/images/pedia/bugs/Inv_Common_Blue_Tail.png",
     biome: ["Pine Forests", "Tropics"],
     timeFound: ["Morning", "Day"],
     seasons: ["Autumn", "Winter"],
@@ -105,7 +105,7 @@ export const bugs: PediaItem[] = [
   {
     id: "common_crow_butterfly",
     name: "Common Crow Butterfly",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/73/Inv_Common_Crow_Butterfly.png",
+    img: "/images/pedia/bugs/Inv_Common_Crow_Butterfly.png",
     biome: ["Island Reef"],
     timeFound: ["All"],
     seasons: ["All"],
@@ -115,7 +115,7 @@ export const bugs: PediaItem[] = [
   {
     id: "cricket",
     name: "Cricket",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/6f/Inv_Cricket.png",
+    img: "/images/pedia/bugs/Inv_Cricket.png",
     biome: ["Plains", "Bushlands"],
     timeFound: ["Night"],
     seasons: ["All"],
@@ -125,7 +125,7 @@ export const bugs: PediaItem[] = [
   {
     id: "desert_scorpion",
     name: "Desert Scorpion",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/4a/Inv_Desert_Scorpion.png",
+    img: "/images/pedia/bugs/Inv_Desert_Scorpion.png",
     biome: ["Desert"],
     timeFound: ["All"],
     seasons: ["Autumn", "Winter"],
@@ -135,7 +135,7 @@ export const bugs: PediaItem[] = [
   {
     id: "duskhawker_dragonfly",
     name: "Duskhawker Dragonfly",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/13/Inv_Duskhawker_Dragonfly.png",
+    img: "/images/pedia/bugs/Inv_Duskhawker_Dragonfly.png",
     biome: ["Pine Forests", "Tropics"],
     timeFound: ["Morning", "Day"],
     seasons: ["Autumn", "Spring"],
@@ -145,7 +145,7 @@ export const bugs: PediaItem[] = [
   {
     id: "emperor_dragonfly",
     name: "Emperor Dragonfly",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/68/Inv_Emperor_Dragonfly.png",
+    img: "/images/pedia/bugs/Inv_Emperor_Dragonfly.png",
     biome: ["Tropics", "Plains"],
     timeFound: ["Day"],
     seasons: ["Spring"],
@@ -155,7 +155,7 @@ export const bugs: PediaItem[] = [
   {
     id: "fiddler_beetle",
     name: "Fiddler Beetle",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e9/Inv_Fiddler_Beetle.png",
+    img: "/images/pedia/bugs/Inv_Fiddler_Beetle.png",
     biome: ["Tropics", "Bushlands"],
     timeFound: ["Morning"],
     seasons: ["Autumn", "Winter"],
@@ -165,7 +165,7 @@ export const bugs: PediaItem[] = [
   {
     id: "firefly",
     name: "Firefly",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8d/Inv_Firefly.png",
+    img: "/images/pedia/bugs/Inv_Firefly.png",
     biome: ["Everywhere"],
     timeFound: ["Night"],
     seasons: ["All"],
@@ -175,7 +175,7 @@ export const bugs: PediaItem[] = [
   {
     id: "fly",
     name: "Fly",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d3/Inv_Fly.png",
+    img: "/images/pedia/bugs/Inv_Fly.png",
     biome: ["Everywhere"],
     timeFound: ["Morning", "Day"],
     seasons: ["All"],
@@ -185,7 +185,7 @@ export const bugs: PediaItem[] = [
   {
     id: "funnel_web_spider",
     name: "Funnel Web Spider",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8c/Inv_Funnel_Web_Spider.png",
+    img: "/images/pedia/bugs/Inv_Funnel_Web_Spider.png",
     biome: ["Bushlands"],
     timeFound: ["Day", "Night"],
     seasons: ["Summer", "Spring"],
@@ -195,7 +195,7 @@ export const bugs: PediaItem[] = [
   {
     id: "glow_bug",
     name: "Glow Bug",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f0/Inv_Glow_Bug.png",
+    img: "/images/pedia/bugs/Inv_Glow_Bug.png",
     biome: ["Underground"],
     timeFound: ["All"],
     seasons: ["All"],
@@ -205,7 +205,7 @@ export const bugs: PediaItem[] = [
   {
     id: "goliath_stick",
     name: "Goliath Stick",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/74/Inv_Goliath_Stick.png",
+    img: "/images/pedia/bugs/Inv_Goliath_Stick.png",
     biome: ["Tropics", "Pine Forests"],
     timeFound: ["Morning"],
     seasons: ["Winter"],
@@ -215,7 +215,7 @@ export const bugs: PediaItem[] = [
   {
     id: "grass_yellow_butterfly",
     name: "Grass Yellow Butterfly",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b0/Inv_Grass_Yellow_Butterfly.png",
+    img: "/images/pedia/bugs/Inv_Grass_Yellow_Butterfly.png",
     biome: ["Plains", "Pine Forests", "Tropics"],
     timeFound: ["Morning", "Day"],
     seasons: ["All"],
@@ -225,7 +225,7 @@ export const bugs: PediaItem[] = [
   {
     id: "grasshopper",
     name: "Grasshopper",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/ff/Inv_Grasshopper.png",
+    img: "/images/pedia/bugs/Inv_Grasshopper.png",
     biome: ["Tropics", "Plains"],
     timeFound: ["Day"],
     seasons: ["Spring"],
@@ -235,7 +235,7 @@ export const bugs: PediaItem[] = [
   {
     id: "gumleaf_grasshopper",
     name: "Gumleaf Grasshopper",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e1/Inv_Gumleaf_Grasshopper.png",
+    img: "/images/pedia/bugs/Inv_Gumleaf_Grasshopper.png",
     biome: ["Bushlands", "Plains"],
     timeFound: ["Morning", "Day"],
     seasons: ["Summer", "Autumn", "Winter"],
@@ -245,7 +245,7 @@ export const bugs: PediaItem[] = [
   {
     id: "harlequin_butterfly",
     name: "Harlequin Butterfly",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/70/Inv_Harlequin_Butterfly.png",
+    img: "/images/pedia/bugs/Inv_Harlequin_Butterfly.png",
     biome: ["Everywhere"],
     timeFound: ["Morning", "Day"],
     seasons: ["All"],
@@ -255,7 +255,7 @@ export const bugs: PediaItem[] = [
   {
     id: "hercules_moth",
     name: "Hercules Moth",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d7/Inv_Hercules_Moth.png",
+    img: "/images/pedia/bugs/Inv_Hercules_Moth.png",
     biome: ["Everywhere"],
     timeFound: ["Night"],
     seasons: ["Winter", "Spring"],
@@ -265,7 +265,7 @@ export const bugs: PediaItem[] = [
   {
     id: "huntsman",
     name: "Huntsman",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/88/Inv_Huntsman.png",
+    img: "/images/pedia/bugs/Inv_Huntsman.png",
     biome: ["Desert", "Bushlands"],
     timeFound: ["Day", "Night"],
     seasons: ["Autumn", "Winter"],
@@ -275,7 +275,7 @@ export const bugs: PediaItem[] = [
   {
     id: "lacewing",
     name: "Lacewing",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/73/Inv_Lacewing.png",
+    img: "/images/pedia/bugs/Inv_Lacewing.png",
     biome: ["Pine Forests", "Plains"],
     timeFound: ["Day"],
     seasons: ["Summer", "Spring"],
@@ -285,7 +285,7 @@ export const bugs: PediaItem[] = [
   {
     id: "ladybird",
     name: "Ladybird",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/eb/Inv_Ladybird.png",
+    img: "/images/pedia/bugs/Inv_Ladybird.png",
     biome: ["Pine Forests", "Plains"],
     timeFound: ["Morning"],
     seasons: ["Spring"],
@@ -295,7 +295,7 @@ export const bugs: PediaItem[] = [
   {
     id: "largidae",
     name: "Largidae",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/55/Inv_Largidae.png",
+    img: "/images/pedia/bugs/Inv_Largidae.png",
     biome: ["Everywhere"],
     timeFound: ["Day"],
     seasons: ["All"],
@@ -305,7 +305,7 @@ export const bugs: PediaItem[] = [
   {
     id: "meadow_katydid",
     name: "Meadow Katydid",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/23/Inv_Meadow_Katydid.png",
+    img: "/images/pedia/bugs/Inv_Meadow_Katydid.png",
     biome: ["Plains"],
     timeFound: ["Morning", "Day"],
     seasons: ["Autumn", "Spring"],
@@ -315,7 +315,7 @@ export const bugs: PediaItem[] = [
   {
     id: "monarch_butterfly",
     name: "Monarch Butterfly",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c5/Inv_Monarch_Butterfly.png",
+    img: "/images/pedia/bugs/Inv_Monarch_Butterfly.png",
     biome: ["Bushlands", "Pine Forests"],
     timeFound: ["Morning", "Day"],
     seasons: ["Spring"],
@@ -325,7 +325,7 @@ export const bugs: PediaItem[] = [
   {
     id: "painted_lady_butterfly",
     name: "Painted Lady Butterfly",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/40/Inv_Painted_Lady_Butterfly.png",
+    img: "/images/pedia/bugs/Inv_Painted_Lady_Butterfly.png",
     biome: ["Pine Forests"],
     timeFound: ["Morning", "Day"],
     seasons: ["Summer", "Spring"],
@@ -335,7 +335,7 @@ export const bugs: PediaItem[] = [
   {
     id: "paper_wasp",
     name: "Paper Wasp",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/34/Inv_Paper_Wasp.png",
+    img: "/images/pedia/bugs/Inv_Paper_Wasp.png",
     biome: ["Plains", "Desert"],
     timeFound: ["Day"],
     seasons: ["Autumn"],
@@ -345,7 +345,7 @@ export const bugs: PediaItem[] = [
   {
     id: "peacock_spider",
     name: "Peacock Spider",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/9a/Inv_Peacock_Spider.png",
+    img: "/images/pedia/bugs/Inv_Peacock_Spider.png",
     biome: ["Bushlands", "Tropics"],
     timeFound: ["Morning"],
     seasons: ["All"],
@@ -355,7 +355,7 @@ export const bugs: PediaItem[] = [
   {
     id: "purple_azure_butterfly",
     name: "Purple Azure Butterfly",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/49/Inv_Purple_Azure_Butterfly.png",
+    img: "/images/pedia/bugs/Inv_Purple_Azure_Butterfly.png",
     biome: ["Pine Forests"],
     timeFound: ["Morning", "Day"],
     seasons: ["Summer", "Autumn", "Spring"],
@@ -365,7 +365,7 @@ export const bugs: PediaItem[] = [
   {
     id: "purple_winged_mantis",
     name: "Purple-Winged Mantis",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/ea/Inv_Purple-Winged_Mantis.png",
+    img: "/images/pedia/bugs/Inv_Purple-Winged_Mantis.png",
     biome: ["Island Reef"],
     timeFound: ["Night"],
     seasons: ["All"],
@@ -375,7 +375,7 @@ export const bugs: PediaItem[] = [
   {
     id: "pygmyfly",
     name: "Pygmyfly",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e8/Inv_Pygmyfly.png",
+    img: "/images/pedia/bugs/Inv_Pygmyfly.png",
     biome: ["Desert", "Plains"],
     timeFound: ["Day"],
     seasons: ["All"],
@@ -385,7 +385,7 @@ export const bugs: PediaItem[] = [
   {
     id: "queen_bee",
     name: "Queen Bee",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2b/Inv_Queen_Bee.png",
+    img: "/images/pedia/bugs/Inv_Queen_Bee.png",
     biome: ["Pine Forests", "Plains"],
     timeFound: ["Morning"],
     seasons: ["Summer", "Spring"],
@@ -395,7 +395,7 @@ export const bugs: PediaItem[] = [
   {
     id: "redback_spider",
     name: "Redback Spider",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/1a/Inv_Redback_Spider.png",
+    img: "/images/pedia/bugs/Inv_Redback_Spider.png",
     biome: ["Desert"],
     timeFound: ["Day", "Night"],
     seasons: ["Summer", "Autumn", "Spring"],
@@ -405,7 +405,7 @@ export const bugs: PediaItem[] = [
   {
     id: "rhinoceros_beetle",
     name: "Rhinoceros Beetle",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/94/Inv_Rhinoceros_Beetle.png",
+    img: "/images/pedia/bugs/Inv_Rhinoceros_Beetle.png",
     biome: ["Bushlands", "Pine Forests"],
     timeFound: ["Morning"],
     seasons: ["Autumn", "Winter"],
@@ -415,7 +415,7 @@ export const bugs: PediaItem[] = [
   {
     id: "scarlet_jezebel_butterfly",
     name: "Scarlet Jezebel Butterfly",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e7/Inv_Scarlet_Jezebel_Butterfly.png",
+    img: "/images/pedia/bugs/Inv_Scarlet_Jezebel_Butterfly.png",
     biome: ["Everywhere"],
     timeFound: ["Day"],
     seasons: ["All"],
@@ -425,7 +425,7 @@ export const bugs: PediaItem[] = [
   {
     id: "stag_beetle",
     name: "Stag Beetle",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/5a/Inv_Stag_Beetle.png",
+    img: "/images/pedia/bugs/Inv_Stag_Beetle.png",
     biome: ["Tropics", "Bushlands"],
     timeFound: ["Day"],
     seasons: ["Spring"],
@@ -435,7 +435,7 @@ export const bugs: PediaItem[] = [
   {
     id: "stinkbug",
     name: "Stinkbug",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/11/Inv_Stinkbug.png",
+    img: "/images/pedia/bugs/Inv_Stinkbug.png",
     biome: ["Everywhere"],
     timeFound: ["All"],
     seasons: ["Autumn"],
@@ -445,7 +445,7 @@ export const bugs: PediaItem[] = [
   {
     id: "swallow_tail_butterfly",
     name: "Swallow-Tail Butterfly",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/09/Inv_Swallow-Tail_Butterfly.png",
+    img: "/images/pedia/bugs/Inv_Swallow-Tail_Butterfly.png",
     biome: ["Tropics"],
     timeFound: ["Day"],
     seasons: ["Summer", "Autumn"],
@@ -455,7 +455,7 @@ export const bugs: PediaItem[] = [
   {
     id: "tau_emerald_dragonfly",
     name: "Tau Emerald Dragonfly",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c9/Inv_Tau_Emerald_Dragonfly.png",
+    img: "/images/pedia/bugs/Inv_Tau_Emerald_Dragonfly.png",
     biome: ["Plains", "Bushlands"],
     timeFound: ["Day"],
     seasons: ["Summer", "Autumn"],
@@ -465,7 +465,7 @@ export const bugs: PediaItem[] = [
   {
     id: "tiger_beetle",
     name: "Tiger Beetle",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c2/Inv_Tiger_Beetle.png",
+    img: "/images/pedia/bugs/Inv_Tiger_Beetle.png",
     biome: ["Desert"],
     timeFound: ["Night"],
     seasons: ["Autumn", "Spring"],
@@ -475,7 +475,7 @@ export const bugs: PediaItem[] = [
   {
     id: "tiger_moth",
     name: "Tiger Moth",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/40/Inv_Tiger_Moth.png",
+    img: "/images/pedia/bugs/Inv_Tiger_Moth.png",
     biome: ["Bushlands", "Plains"],
     timeFound: ["Night"],
     seasons: ["Autumn", "Winter"],
@@ -485,7 +485,7 @@ export const bugs: PediaItem[] = [
   {
     id: "trogid",
     name: "Trogid",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/36/Inv_Trogid.png",
+    img: "/images/pedia/bugs/Inv_Trogid.png",
     biome: ["Desert"],
     timeFound: ["Night"],
     seasons: ["Autumn", "Spring"],
@@ -495,7 +495,7 @@ export const bugs: PediaItem[] = [
   {
     id: "ulysses_butterfly",
     name: "Ulysses Butterfly",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8f/Inv_Ulysses_Butterfly.png",
+    img: "/images/pedia/bugs/Inv_Ulysses_Butterfly.png",
     biome: ["Bushlands"],
     timeFound: ["Morning", "Day"],
     seasons: ["Summer", "Spring"],

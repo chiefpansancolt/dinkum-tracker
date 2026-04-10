@@ -4,7 +4,7 @@ export const seeds: Seed[] = [
   {
     id: "beetroot_seed",
     name: "Beetroot Seed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f6/Inv_Beetroot_Seeds.png",
+    img: "/images/resources/seeds/Inv_Beetroot_Seeds.png",
     source: ["Rayne's Greenhouse"],
     buyPrice: 570,
     baseSellPrice: 285,
@@ -17,7 +17,7 @@ export const seeds: Seed[] = [
   {
     id: "blackwood_seed",
     name: "Blackwood Seed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/19/Inv_Blackwood_Seed.png",
+    img: "/images/resources/seeds/Inv_Blackwood_Seed.png",
     source: ["Blackwood Tree"],
     baseSellPrice: 4,
     category: "Tree Seed",
@@ -27,7 +27,7 @@ export const seeds: Seed[] = [
   {
     id: "bottle_brush_seed",
     name: "Bottle Brush Seed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/44/Inv_Bottle_Brush_Seed.png",
+    img: "/images/resources/seeds/Inv_Bottle_Brush_Seed.png",
     source: ["Recycling Bin", "Bottle Brush Bush"],
     baseSellPrice: 55,
     category: "Bush Seed",
@@ -38,7 +38,7 @@ export const seeds: Seed[] = [
   {
     id: "bottle_tree_seed",
     name: "Bottle Tree Seed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/bc/Inv_Bottle_Tree_Seed.png",
+    img: "/images/resources/seeds/Inv_Bottle_Tree_Seed.png",
     source: ["Recycling Bin"],
     baseSellPrice: 8000,
     category: "Tree Seed",
@@ -48,7 +48,7 @@ export const seeds: Seed[] = [
   {
     id: "bush_seed",
     name: "Bush Seed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f9/Inv_Bush_Seed.png",
+    img: "/images/resources/seeds/Inv_Bush_Seed.png",
     source: ["Bushes"],
     baseSellPrice: 24,
     category: "Bush Seed",
@@ -58,7 +58,7 @@ export const seeds: Seed[] = [
   {
     id: "cabbage_seed",
     name: "Cabbage Seed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/5a/Inv_Cabbage_Seeds.png",
+    img: "/images/resources/seeds/Inv_Cabbage_Seeds.png",
     source: ["Rayne's Greenhouse"],
     buyPrice: 700,
     baseSellPrice: 350,
@@ -71,7 +71,7 @@ export const seeds: Seed[] = [
   {
     id: "carrot_seed",
     name: "Carrot Seed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/d/d3/Inv_Carrot_Seeds.png",
+    img: "/images/resources/seeds/Inv_Carrot_Seeds.png",
     source: ["Rayne's Greenhouse"],
     buyPrice: 570,
     baseSellPrice: 285,
@@ -84,7 +84,7 @@ export const seeds: Seed[] = [
   {
     id: "coffee_seed",
     name: "Coffee Seed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/53/Inv_Coffee_Seeds.png",
+    img: "/images/resources/seeds/Inv_Coffee_Seeds.png",
     source: ["Jimmy's Boat"],
     buyPrice: 13600,
     baseSellPrice: 680,
@@ -98,7 +98,7 @@ export const seeds: Seed[] = [
   {
     id: "coral_acacia_seed",
     name: "Coral Acacia Seed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/ca/Inv_Coral_Acacia_Seed.png",
+    img: "/images/resources/seeds/Inv_Coral_Acacia_Seed.png",
     source: ["Coral Acacia Tree"],
     baseSellPrice: 4,
     category: "Tree Seed",
@@ -108,7 +108,7 @@ export const seeds: Seed[] = [
   {
     id: "corn_seed",
     name: "Corn Seed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/72/Inv_Corn_Seeds.png",
+    img: "/images/resources/seeds/Inv_Corn_Seeds.png",
     source: ["Rayne's Greenhouse"],
     buyPrice: 1100,
     baseSellPrice: 550,
@@ -122,7 +122,7 @@ export const seeds: Seed[] = [
   {
     id: "fern_seed",
     name: "Fern Seed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e8/Inv_Fern_Seed.png",
+    img: "/images/resources/seeds/Inv_Fern_Seed.png",
     source: ["Fern"],
     baseSellPrice: 22,
     category: "Grass Seed",
@@ -132,7 +132,7 @@ export const seeds: Seed[] = [
   {
     id: "fir_grass_seed",
     name: "Fir Grass Seed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Inv_Fir_Grass_Seeds.png",
+    img: "/images/resources/seeds/Inv_Fir_Grass_Seeds.png",
     source: ["Fir Grass"],
     baseSellPrice: 2,
     category: "Grass Seed",
@@ -142,7 +142,7 @@ export const seeds: Seed[] = [
   {
     id: "grass_seed",
     name: "Grass Seed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8f/Inv_Grass_Seed.png",
+    img: "/images/resources/seeds/Inv_Grass_Seed.png",
     source: ["Grass"],
     baseSellPrice: 2,
     category: "Grass Seed",
@@ -152,7 +152,7 @@ export const seeds: Seed[] = [
   {
     id: "grass_tree_seed",
     name: "Grass Tree Seed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/70/Inv_Grass_Tree_Seed.png",
+    img: "/images/resources/seeds/Inv_Grass_Tree_Seed.png",
     source: ["Grass Tree Seed Pod"],
     baseSellPrice: 100,
     category: "Tree Seed",
@@ -162,7 +162,7 @@ export const seeds: Seed[] = [
   {
     id: "green_bean_seed",
     name: "Green Bean Seed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/9b/Inv_Green_Bean_Seeds.png",
+    img: "/images/resources/seeds/Inv_Green_Bean_Seeds.png",
     source: ["Rayne's Greenhouse"],
     buyPrice: 1360,
     baseSellPrice: 680,
@@ -176,7 +176,7 @@ export const seeds: Seed[] = [
   {
     id: "gum_nut",
     name: "Gum Nut",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/64/Inv_Gum_Nut.png",
+    img: "/images/resources/seeds/Inv_Gum_Nut.png",
     source: ["Gum Tree"],
     baseSellPrice: 4,
     category: "Tree Seed",
@@ -186,7 +186,7 @@ export const seeds: Seed[] = [
   {
     id: "jacaranda_sapling",
     name: "Jacaranda Sapling",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/39/Jacaranda_Sapling.png",
+    img: "/images/resources/seeds/Jacaranda_Sapling.png",
     source: ["Rayne's Greenhouse"],
     buyPrice: 25000,
     baseSellPrice: 12500,
@@ -197,7 +197,7 @@ export const seeds: Seed[] = [
   {
     id: "kale_seed",
     name: "Kale Seed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/80/Inv_Kale_Seeds.png",
+    img: "/images/resources/seeds/Inv_Kale_Seeds.png",
     source: ["Rayne's Greenhouse"],
     buyPrice: 760,
     baseSellPrice: 380,
@@ -210,8 +210,8 @@ export const seeds: Seed[] = [
   {
     id: "lilly_pilly_seed",
     name: "Lilly Pilly Seed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/57/Inv_Lilly_Pilly_Seed.png",
-    source: ["Lilly Pilly Tree"],
+    img: "/images/resources/seeds/Inv_Lilly_Pilly_Seed.png",
+    source: ["Lilly Pilly"],
     baseSellPrice: 125,
     category: "Tree Seed",
     growthPeriod: 2,
@@ -220,7 +220,7 @@ export const seeds: Seed[] = [
   {
     id: "mighty_seed",
     name: "Mighty Seed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/ad/Inv_Mighty_Seed.png",
+    img: "/images/resources/seeds/Inv_Mighty_Seed.png",
     source: ["Deep Mine"],
     baseSellPrice: 15000,
     category: "Crop Seed",
@@ -232,7 +232,7 @@ export const seeds: Seed[] = [
   {
     id: "onion_seed",
     name: "Onion Seed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b6/Inv_Onion_Seeds.png",
+    img: "/images/resources/seeds/Inv_Onion_Seeds.png",
     source: ["Rayne's Greenhouse"],
     buyPrice: 540,
     baseSellPrice: 270,
@@ -245,7 +245,7 @@ export const seeds: Seed[] = [
   {
     id: "palm_tree_seed",
     name: "Palm Tree Seed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3d/Inv_Palm_Tree_Seed.png",
+    img: "/images/resources/seeds/Inv_Palm_Tree_Seed.png",
     source: ["Palm Wood Tree"],
     baseSellPrice: 4,
     category: "Tree Seed",
@@ -255,7 +255,7 @@ export const seeds: Seed[] = [
   {
     id: "pine_cone",
     name: "Pine Cone",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/ad/Inv_Pine_Cone.png",
+    img: "/images/resources/seeds/Inv_Pine_Cone.png",
     source: ["Pine Tree"],
     baseSellPrice: 4,
     category: "Tree Seed",
@@ -265,7 +265,7 @@ export const seeds: Seed[] = [
   {
     id: "potato_seed",
     name: "Potato Seed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8c/Inv_Potato_Seeds.png",
+    img: "/images/resources/seeds/Inv_Potato_Seeds.png",
     source: ["Rayne's Greenhouse"],
     buyPrice: 640,
     baseSellPrice: 320,
@@ -278,7 +278,7 @@ export const seeds: Seed[] = [
   {
     id: "pumpkin_seed",
     name: "Pumpkin Seed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/bb/Inv_Pumpkin_Seeds.png",
+    img: "/images/resources/seeds/Inv_Pumpkin_Seeds.png",
     source: ["Rayne's Greenhouse"],
     buyPrice: 780,
     baseSellPrice: 390,
@@ -292,7 +292,7 @@ export const seeds: Seed[] = [
   {
     id: "rice_seed",
     name: "Rice Seed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b6/Inv_Rice_Seed.png",
+    img: "/images/resources/seeds/Inv_Rice_Seed.png",
     source: ["Rayne's Greenhouse"],
     buyPrice: 120,
     baseSellPrice: 60,
@@ -305,7 +305,7 @@ export const seeds: Seed[] = [
   {
     id: "river_reed_seed",
     name: "River Reed Seed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b2/Inv_River_Reed_Seed.png",
+    img: "/images/resources/seeds/Inv_River_Reed_Seed.png",
     source: ["River Reed"],
     baseSellPrice: 2,
     category: "Grass Seed",
@@ -315,8 +315,8 @@ export const seeds: Seed[] = [
   {
     id: "small_lilly_pilly_seed",
     name: "Small Lilly Pilly Seed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/e/e6/Inv_Small_Lilly_Pilly_Seed.png",
-    source: ["Small Lilly Pilly Tree"],
+    img: "/images/resources/seeds/Inv_Small_Lilly_Pilly_Seed.png",
+    source: ["Small Lilly Pilly"],
     baseSellPrice: 100,
     category: "Tree Seed",
     growthPeriod: 2,
@@ -325,7 +325,7 @@ export const seeds: Seed[] = [
   {
     id: "sugar_cane_seed",
     name: "Sugar Cane Seed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/43/Inv_Sugar_Cane_Seeds.png",
+    img: "/images/resources/seeds/Inv_Sugar_Cane_Seeds.png",
     source: ["Rayne's Greenhouse"],
     buyPrice: 400,
     baseSellPrice: 200,
@@ -338,7 +338,7 @@ export const seeds: Seed[] = [
   {
     id: "summer_lily_seed",
     name: "Summer Lily Seed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b8/Inv_Summer_Lily_Seed.png",
+    img: "/images/resources/seeds/Inv_Summer_Lily_Seed.png",
     source: ["Summery Lily", "Island Reef", "Recycling Bin"],
     baseSellPrice: 55,
     category: "Flower Seed",
@@ -348,7 +348,7 @@ export const seeds: Seed[] = [
   {
     id: "tomato_seed",
     name: "Tomato Seed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/21/Inv_Tomato_Seeds.png",
+    img: "/images/resources/seeds/Inv_Tomato_Seeds.png",
     source: ["Rayne's Greenhouse"],
     buyPrice: 1620,
     baseSellPrice: 810,
@@ -362,7 +362,7 @@ export const seeds: Seed[] = [
   {
     id: "tropical_grass_seed",
     name: "Tropical Grass Seed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b3/Inv_Tropical_Grass_Seeds.png",
+    img: "/images/resources/seeds/Inv_Tropical_Grass_Seeds.png",
     source: ["Fern"],
     baseSellPrice: 2,
     category: "Grass Seed",
@@ -372,7 +372,7 @@ export const seeds: Seed[] = [
   {
     id: "watermelon_seed",
     name: "Watermelon Seed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/ba/Inv_Watermelon_Seeds.png",
+    img: "/images/resources/seeds/Inv_Watermelon_Seeds.png",
     source: ["Rayne's Greenhouse"],
     buyPrice: 770,
     baseSellPrice: 385,
@@ -386,7 +386,7 @@ export const seeds: Seed[] = [
   {
     id: "wattle_seed",
     name: "Wattle Seed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/74/Inv_Wattle_Seed.png",
+    img: "/images/resources/seeds/Inv_Wattle_Seed.png",
     source: ["Recycling Bin", "Yellow Wattle Bush"],
     baseSellPrice: 55,
     category: "Bush Seed",
@@ -397,7 +397,7 @@ export const seeds: Seed[] = [
   {
     id: "wheat_seed",
     name: "Wheat Seed",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3f/Inv_Wheat_Seeds.png",
+    img: "/images/resources/seeds/Inv_Wheat_Seeds.png",
     source: ["Rayne's Greenhouse"],
     buyPrice: 360,
     baseSellPrice: 180,

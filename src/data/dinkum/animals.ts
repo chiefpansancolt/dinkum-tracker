@@ -4,7 +4,7 @@ export const animals: Animal[] = [
   {
     id: "bin_chook",
     name: "Bin Chook",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/af/Bin_Chook.png",
+    img: "/images/animals/Bin_Chook.png",
     temperament: "Passive",
     habitat: ["Bushlands", "Desert", "Plains"],
     health: 5,
@@ -12,17 +12,17 @@ export const animals: Animal[] = [
       {
         name: "Feather",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/4/4a/Inv_Feather.png",
+        img: "/images/resources/animalProducts/Inv_Feather.png",
       },
       {
         name: "Bone",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Bone.png",
+        img: "/images/resources/animalProducts/Inv_Bone.png",
       },
       {
         name: "Raw Drumstick",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/0e/Inv_Raw_Drumstick.png",
+        img: "/images/animals/Inv_Raw_Drumstick.png",
       },
     ],
     researchReward: 8400,
@@ -31,7 +31,7 @@ export const animals: Animal[] = [
   {
     id: "cockatoo",
     name: "Cockatoo",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/b6/Cockatoo.png",
+    img: "/images/animals/Cockatoo.png",
     temperament: "Passive",
     habitat: ["Bushlands", "Desert", "Plains"],
     health: 5,
@@ -39,22 +39,22 @@ export const animals: Animal[] = [
       {
         name: "Feather",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/4/4a/Inv_Feather.png",
+        img: "/images/resources/animalProducts/Inv_Feather.png",
       },
       {
         name: "Bone",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Bone.png",
+        img: "/images/resources/animalProducts/Inv_Bone.png",
       },
       {
         name: "Raw Drumstick",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/0e/Inv_Raw_Drumstick.png",
+        img: "/images/animals/Inv_Raw_Drumstick.png",
       },
       {
         name: "Bottle Tree Seed",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/b/bc/Inv_Bottle_Tree_Seed.png",
+        img: "/images/resources/seeds/Inv_Bottle_Tree_Seed.png",
       },
     ],
     researchReward: 4000,
@@ -63,7 +63,7 @@ export const animals: Animal[] = [
   {
     id: "magpie",
     name: "Magpie",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/17/Magpie.png",
+    img: "/images/animals/Magpie.png",
     temperament: "Passive",
     habitat: ["Plains"],
     health: 5,
@@ -71,22 +71,22 @@ export const animals: Animal[] = [
       {
         name: "Feather",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/4/4a/Inv_Feather.png",
+        img: "/images/resources/animalProducts/Inv_Feather.png",
       },
       {
         name: "Bone",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Bone.png",
+        img: "/images/resources/animalProducts/Inv_Bone.png",
       },
       {
         name: "Raw Drumstick",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/0e/Inv_Raw_Drumstick.png",
+        img: "/images/animals/Inv_Raw_Drumstick.png",
       },
       {
         name: "Maggie Egg",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/9/9c/Inv_Maggie_Egg.png",
+        img: "/images/resources/animalProducts/Inv_Maggie_Egg.png",
       },
     ],
     researchReward: 4000,
@@ -95,7 +95,7 @@ export const animals: Animal[] = [
   {
     id: "mu",
     name: "Mu",
-    img: "https://static.wikia.nocookie.net/dinkum/images/6/62/Mu.png",
+    img: "/images/animals/Mu.png",
     temperament: "Passive",
     habitat: ["Plains"],
     health: 28,
@@ -103,12 +103,12 @@ export const animals: Animal[] = [
       {
         name: "Bone",
         count: 3,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Bone.png",
+        img: "/images/resources/animalProducts/Inv_Bone.png",
       },
       {
         name: "Raw Drumstick",
         count: 3,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/0e/Inv_Raw_Drumstick.png",
+        img: "/images/animals/Inv_Raw_Drumstick.png",
       },
     ],
     researchReward: 4000,
@@ -117,14 +117,14 @@ export const animals: Animal[] = [
   {
     id: "oyster",
     name: "Oyster",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/54/Oyster.png",
+    img: "/images/animals/Oyster.png",
     temperament: "Passive",
     habitat: ["Ocean"],
     drops: [
       {
         name: "Pearl",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/1/14/Inv_Pearl.png",
+        img: "/images/resources/animalProducts/Inv_Pearl.png",
       },
     ],
     type: "Wild Animal",
@@ -132,7 +132,7 @@ export const animals: Animal[] = [
   {
     id: "scrub_turkey",
     name: "Scrub Turkey",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/90/Scrub_Turkey.png",
+    img: "/images/animals/Scrub_Turkey.png",
     temperament: "Passive",
     habitat: ["Tropics"],
     health: 10,
@@ -140,17 +140,17 @@ export const animals: Animal[] = [
       {
         name: "Feather",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/4/4a/Inv_Feather.png",
+        img: "/images/resources/animalProducts/Inv_Feather.png",
       },
       {
         name: "Bone",
         count: 2,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Bone.png",
+        img: "/images/resources/animalProducts/Inv_Bone.png",
       },
       {
         name: "Raw Drumstick",
         count: 2,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/0e/Inv_Raw_Drumstick.png",
+        img: "/images/animals/Inv_Raw_Drumstick.png",
       },
     ],
     researchReward: 4200,
@@ -159,7 +159,7 @@ export const animals: Animal[] = [
   {
     id: "toad",
     name: "Toad",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c9/Toad.png",
+    img: "/images/animals/Toad.png",
     temperament: "Passive",
     habitat: ["Only When Raining"],
     health: 1,
@@ -167,7 +167,7 @@ export const animals: Animal[] = [
       {
         name: "Toad Skin",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/2/24/Inv_Toad_Skin.png",
+        img: "/images/resources/animalProducts/Inv_Toad_Skin.png",
       },
     ],
     type: "Wild Animal",
@@ -175,14 +175,14 @@ export const animals: Animal[] = [
   {
     id: "white_jackaroo",
     name: "White Jackaroo",
-    img: "https://static.wikia.nocookie.net/dinkum/images/f/f3/White_Jackaroo.png",
+    img: "/images/animals/White_Jackaroo.png",
     temperament: "Passive",
     habitat: ["Bushlands", "Pine Forest", "Plains"],
     drops: [
       {
         name: "Cherry",
         count: 3,
-        img: "https://static.wikia.nocookie.net/dinkum/images/b/b5/Inv_Cherries.png",
+        img: "/images/resources/foragables/Inv_Cherries.png",
       },
     ],
     type: "Wild Animal",
@@ -190,7 +190,7 @@ export const animals: Animal[] = [
   {
     id: "diggo",
     name: "Diggo",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/18/Diggo_Brown.png",
+    img: "/images/animals/Diggo_Brown.png",
     temperament: "Neutral",
     habitat: ["Bushlands", "Desert", "Plains"],
     health: 25,
@@ -198,12 +198,12 @@ export const animals: Animal[] = [
       {
         name: "Raw Meat",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/c/cb/Inv_Raw_Meat.png",
+        img: "/images/animals/Inv_Raw_Meat.png",
       },
       {
         name: "Bone",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Bone.png",
+        img: "/images/resources/animalProducts/Inv_Bone.png",
       },
     ],
     researchReward: 4400,
@@ -212,7 +212,7 @@ export const animals: Animal[] = [
   {
     id: "frilly",
     name: "Frilly",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/96/Frilly.png",
+    img: "/images/animals/Frilly.png",
     temperament: "Neutral",
     habitat: ["Desert"],
     health: 60,
@@ -220,12 +220,12 @@ export const animals: Animal[] = [
       {
         name: "Bone",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Bone.png",
+        img: "/images/resources/animalProducts/Inv_Bone.png",
       },
       {
         name: "Thunder Sac",
         count: 2,
-        img: "https://static.wikia.nocookie.net/dinkum/images/c/c7/Inv_Thunder_Sac.png",
+        img: "/images/resources/animalProducts/Inv_Thunder_Sac.png",
       },
     ],
     researchReward: 8720,
@@ -234,7 +234,7 @@ export const animals: Animal[] = [
   {
     id: "jackaroo",
     name: "Jackaroo",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/70/Jackaroo.png",
+    img: "/images/animals/Jackaroo.png",
     temperament: "Neutral",
     habitat: ["Bushlands", "Desert"],
     health: 15,
@@ -242,17 +242,17 @@ export const animals: Animal[] = [
       {
         name: "Raw Meat",
         count: 3,
-        img: "https://static.wikia.nocookie.net/dinkum/images/c/cb/Inv_Raw_Meat.png",
+        img: "/images/animals/Inv_Raw_Meat.png",
       },
       {
         name: "Bone",
         count: 3,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Bone.png",
+        img: "/images/resources/animalProducts/Inv_Bone.png",
       },
       {
         name: "Jackaroo Hood",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/a/a6/Inv_Jackaroo_Hood.png",
+        img: "/images/clothing/Inv_Jackaroo_Hood.png",
       },
     ],
     researchReward: 6400,
@@ -261,7 +261,7 @@ export const animals: Animal[] = [
   {
     id: "kinda",
     name: "Kinda",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3b/Kidna.png",
+    img: "/images/animals/Kidna.png",
     temperament: "Neutral",
     habitat: ["Desert"],
     health: 35,
@@ -269,12 +269,12 @@ export const animals: Animal[] = [
       {
         name: "Raw Meat",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/c/cb/Inv_Raw_Meat.png",
+        img: "/images/animals/Inv_Raw_Meat.png",
       },
       {
         name: "Bone",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Bone.png",
+        img: "/images/resources/animalProducts/Inv_Bone.png",
       },
     ],
     researchReward: 8400,
@@ -283,7 +283,7 @@ export const animals: Animal[] = [
   {
     id: "penguin",
     name: "Penguin",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/97/Penguin.png",
+    img: "/images/animals/Penguin.png",
     temperament: "Neutral",
     habitat: ["The south west island, only in Winter"],
     health: 35,
@@ -291,12 +291,12 @@ export const animals: Animal[] = [
       {
         name: "Raw Meat",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/c/cb/Inv_Raw_Meat.png",
+        img: "/images/animals/Inv_Raw_Meat.png",
       },
       {
         name: "Bone",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Bone.png",
+        img: "/images/resources/animalProducts/Inv_Bone.png",
       },
     ],
     researchReward: 8000,
@@ -306,7 +306,7 @@ export const animals: Animal[] = [
   {
     id: "alpha_bush_devil",
     name: "Alpha Bush Devil",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/19/Alpha_Bush_Devil.png",
+    img: "/images/animals/Alpha_Bush_Devil.png",
     temperament: "Aggressive",
     habitat: ["Pine Forest"],
     health: 350,
@@ -314,12 +314,12 @@ export const animals: Animal[] = [
       {
         name: "Raw Meat",
         count: 3,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/07/Inv_Raw_Prime_Meat.png",
+        img: "/images/animals/Inv_Raw_Prime_Meat.png",
       },
       {
         name: "Alpha Eye",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/4/4c/Inv_Alpha_Eye.png",
+        img: "/images/resources/animalProducts/Inv_Alpha_Eye.png",
       },
     ],
     type: "Wild Animal",
@@ -327,7 +327,7 @@ export const animals: Animal[] = [
   {
     id: "alpha_croco",
     name: "Alpha Croco",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Alpha_Croco.png",
+    img: "/images/animals/Alpha_Croco.png",
     temperament: "Aggressive",
     habitat: ["Billabong", "Rivers"],
     health: 200,
@@ -335,12 +335,12 @@ export const animals: Animal[] = [
       {
         name: "Raw Meat",
         count: 3,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/07/Inv_Raw_Prime_Meat.png",
+        img: "/images/animals/Inv_Raw_Prime_Meat.png",
       },
       {
         name: "Alpha Scale",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/3/31/Inv_Alpha_Scale.png",
+        img: "/images/resources/animalProducts/Inv_Alpha_Scale.png",
       },
     ],
     type: "Wild Animal",
@@ -348,7 +348,7 @@ export const animals: Animal[] = [
   {
     id: "alpha_jackaroo",
     name: "Alpha Jackaroo",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2c/Alpha_Jackaroo.png",
+    img: "/images/animals/Alpha_Jackaroo.png",
     temperament: "Aggressive",
     habitat: ["Bushlands"],
     health: 200,
@@ -356,12 +356,12 @@ export const animals: Animal[] = [
       {
         name: "Raw Meat",
         count: 3,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/07/Inv_Raw_Prime_Meat.png",
+        img: "/images/animals/Inv_Raw_Prime_Meat.png",
       },
       {
         name: "Alpha Antler",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/9/9c/Inv_Alpha_Antler.png",
+        img: "/images/resources/animalProducts/Inv_Alpha_Antler.png",
       },
     ],
     type: "Wild Animal",
@@ -369,7 +369,7 @@ export const animals: Animal[] = [
   {
     id: "alpha_shark",
     name: "Alpha Shark",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3b/Alpha_Shark.png",
+    img: "/images/animals/Alpha_Shark.png",
     temperament: "Aggressive",
     habitat: ["Island Reef"],
     health: 600,
@@ -377,17 +377,17 @@ export const animals: Animal[] = [
       {
         name: "Raw Meat",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/07/Inv_Raw_Prime_Meat.png",
+        img: "/images/animals/Inv_Raw_Prime_Meat.png",
       },
       {
         name: "Alpha Shark Tooth",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/2/2b/Inv_Alpha_Shark_Tooth.png",
+        img: "/images/resources/animalProducts/Inv_Alpha_Shark_Tooth.png",
       },
       {
         name: "Shark Egg",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/2/2b/Inv_Shark_Egg.png",
+        img: "/images/resources/animalProducts/Inv_Shark_Egg.png",
       },
     ],
     type: "Wild Animal",
@@ -395,7 +395,7 @@ export const animals: Animal[] = [
   {
     id: "blooming_frilly",
     name: "Blooming Frilly",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/83/Blooming_Frilly.png",
+    img: "/images/animals/Blooming_Frilly.png",
     temperament: "Aggressive",
     habitat: ["Undergrove"],
     health: 60,
@@ -403,17 +403,17 @@ export const animals: Animal[] = [
       {
         name: "Bone",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Bone.png",
+        img: "/images/resources/animalProducts/Inv_Bone.png",
       },
       {
         name: "Thunder Sac",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/c/c7/Inv_Thunder_Sac.png",
+        img: "/images/resources/animalProducts/Inv_Thunder_Sac.png",
       },
       {
         name: "Tongue",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/c/cf/Inv_Tongue.png",
+        img: "/images/resources/animalProducts/Inv_Tongue.png",
       },
     ],
     researchReward: 26160,
@@ -422,7 +422,7 @@ export const animals: Animal[] = [
   {
     id: "bush_devil",
     name: "Bush Devil",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2a/Bush_Devil.png",
+    img: "/images/animals/Bush_Devil.png",
     temperament: "Aggressive",
     habitat: ["Deep Mine", "Pine Forest"],
     health: 77,
@@ -430,17 +430,17 @@ export const animals: Animal[] = [
       {
         name: "Bone",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Bone.png",
+        img: "/images/resources/animalProducts/Inv_Bone.png",
       },
       {
         name: "Raw Meat",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/07/Inv_Raw_Prime_Meat.png",
+        img: "/images/animals/Inv_Raw_Prime_Meat.png",
       },
       {
         name: "Flame Sac",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/7/7c/Inv_Flame_Sac.png",
+        img: "/images/resources/animalProducts/Inv_Flame_Sac.png",
       },
     ],
     researchReward: 12000,
@@ -449,7 +449,7 @@ export const animals: Animal[] = [
   {
     id: "cave_bat",
     name: "Cave Bat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/85/Cave_Bat.png",
+    img: "/images/animals/Cave_Bat.png",
     temperament: "Aggressive",
     habitat: ["Deep Mine"],
     health: 2,
@@ -457,7 +457,7 @@ export const animals: Animal[] = [
       {
         name: "Bat Wing",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/2/2d/Inv_Bat_Wing.png",
+        img: "/images/resources/animalProducts/Inv_Bat_Wing.png",
       },
     ],
     type: "Wild Animal",
@@ -465,7 +465,7 @@ export const animals: Animal[] = [
   {
     id: "croco",
     name: "Croco",
-    img: "https://static.wikia.nocookie.net/dinkum/images/9/96/Croco.png",
+    img: "/images/animals/Croco.png",
     temperament: "Aggressive",
     habitat: ["Billabong", "Mangroves", "Rivers"],
     health: 65,
@@ -473,17 +473,17 @@ export const animals: Animal[] = [
       {
         name: "Croco Meat",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/3/35/Inv_Croco_Meat.png",
+        img: "/images/animals/Inv_Croco_Meat.png",
       },
       {
         name: "Crocobile Tooth",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/0b/Inv_Crocodile_Tooth.png",
+        img: "/images/resources/animalProducts/Inv_Crocodile_Tooth.png",
       },
       {
         name: "Bone",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Bone.png",
+        img: "/images/resources/animalProducts/Inv_Bone.png",
       },
     ],
     researchReward: 9600,
@@ -492,7 +492,7 @@ export const animals: Animal[] = [
   {
     id: "flame_slime",
     name: "Flame Slime",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/72/Flame_Slime.png",
+    img: "/images/animals/Flame_Slime.png",
     temperament: "Aggressive",
     habitat: ["Hot Hot Hot"],
     health: 12,
@@ -500,12 +500,12 @@ export const animals: Animal[] = [
       {
         name: "Flame Jelly",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/05/Inv_Flame_Jelly.png",
+        img: "/images/resources/animalProducts/Inv_Flame_Jelly.png",
       },
       {
         name: "Flame Jelly Hood",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/f/f2/Inv_Flame_Jelly_Hood.png",
+        img: "/images/clothing/Inv_Flame_Jelly_Hood.png",
       },
     ],
     researchReward: 20000,
@@ -514,7 +514,7 @@ export const animals: Animal[] = [
   {
     id: "glowing_croco",
     name: "Glowing Croco",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/0e/Glowing_Croco.png",
+    img: "/images/animals/Glowing_Croco.png",
     temperament: "Aggressive",
     habitat: ["Deep Mine"],
     health: 65,
@@ -522,17 +522,17 @@ export const animals: Animal[] = [
       {
         name: "Croco Meat",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/3/35/Inv_Croco_Meat.png",
+        img: "/images/animals/Inv_Croco_Meat.png",
       },
       {
         name: "Crocobile Tooth",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/0b/Inv_Crocodile_Tooth.png",
+        img: "/images/resources/animalProducts/Inv_Crocodile_Tooth.png",
       },
       {
         name: "Bone",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Bone.png",
+        img: "/images/resources/animalProducts/Inv_Bone.png",
       },
     ],
     researchReward: 9600,
@@ -541,7 +541,7 @@ export const animals: Animal[] = [
   {
     id: "grub",
     name: "Grub",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/0c/Grub.png",
+    img: "/images/animals/Grub.png",
     temperament: "Aggressive",
     habitat: ["Undergrove"],
     health: 12,
@@ -549,7 +549,7 @@ export const animals: Animal[] = [
       {
         name: "Raw Grub Meat",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/9/91/Inv_Raw_Grub_Meat.png",
+        img: "/images/animals/Inv_Raw_Grub_Meat.png",
       },
     ],
     type: "Wild Animal",
@@ -557,7 +557,7 @@ export const animals: Animal[] = [
   {
     id: "jelly_fish",
     name: "Jelly Fish",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8a/Jelly_Fish.png",
+    img: "/images/animals/Jelly_Fish.png",
     temperament: "Aggressive",
     habitat: ["Ocean"],
     health: 1,
@@ -565,7 +565,7 @@ export const animals: Animal[] = [
       {
         name: "Jelly",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/a/a5/Inv_Jelly.png",
+        img: "/images/resources/animalProducts/Inv_Jelly.png",
       },
     ],
     type: "Wild Animal",
@@ -573,7 +573,7 @@ export const animals: Animal[] = [
   {
     id: "pincher_plant",
     name: "Pincher Plant",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/27/Pincher_Plant.png",
+    img: "/images/animals/Pincher_Plant.png",
     temperament: "Aggressive",
     habitat: ["Undergrove"],
     health: 50,
@@ -581,7 +581,7 @@ export const animals: Animal[] = [
       {
         name: "Plant Hammer",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/8/83/Inv_Plant_Hammer.png",
+        img: "/images/gearAndEquipment/weapons/Inv_Plant_Hammer.png",
       },
     ],
     type: "Wild Animal",
@@ -589,7 +589,7 @@ export const animals: Animal[] = [
   {
     id: "shark",
     name: "Shark",
-    img: "https://static.wikia.nocookie.net/dinkum/images/1/14/Shark.png",
+    img: "/images/animals/Shark.png",
     temperament: "Aggressive",
     habitat: ["Ocean"],
     health: 50,
@@ -597,12 +597,12 @@ export const animals: Animal[] = [
       {
         name: "Flake",
         count: 3,
-        img: "https://static.wikia.nocookie.net/dinkum/images/f/f6/Inv_Flake.png",
+        img: "/images/animals/Inv_Flake.png",
       },
       {
         name: "Battle Fish",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/7/79/Inv_Battle_Fish.png",
+        img: "/images/gearAndEquipment/weapons/Inv_Battle_Fish.png",
       },
     ],
     type: "Wild Animal",
@@ -610,7 +610,7 @@ export const animals: Animal[] = [
   {
     id: "wary_wu",
     name: "Wary Wu",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/5f/Wary_Mu.png",
+    img: "/images/animals/Wary_Mu.png",
     temperament: "Aggressive",
     habitat: ["Tropics"],
     health: 45,
@@ -618,12 +618,12 @@ export const animals: Animal[] = [
       {
         name: "Raw Giant Drumstick",
         count: 2,
-        img: "https://static.wikia.nocookie.net/dinkum/images/a/a7/Inv_Raw_Giant_Drumstick.png",
+        img: "/images/animals/Inv_Raw_Giant_Drumstick.png",
       },
       {
         name: "Bone",
         count: 2,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Bone.png",
+        img: "/images/resources/animalProducts/Inv_Bone.png",
       },
     ],
     researchReward: 8400,
@@ -632,7 +632,7 @@ export const animals: Animal[] = [
   {
     id: "yobbolin",
     name: "Yobbolin",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/a2/Yobbolin.png",
+    img: "/images/animals/Yobbolin.png",
     temperament: "Aggressive",
     habitat: ["Hot Hot Hot"],
     health: 60,
@@ -640,12 +640,12 @@ export const animals: Animal[] = [
       {
         name: "Berkonium Wand",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/8/8a/Inv_Berkonium_Wand.png",
+        img: "/images/gearAndEquipment/weapons/Inv_Berkonium_Wand.png",
       },
       {
         name: "Bush Devil Hood",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/e/ec/Inv_Bush_Devil_Hood.png",
+        img: "/images/clothing/Inv_Bush_Devil_Hood.png",
       },
     ],
     type: "Wild Animal",
@@ -653,7 +653,7 @@ export const animals: Animal[] = [
   {
     id: "yobbolin_healer",
     name: "Yobbolin Healer",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/84/Yobbolin_Healer.png",
+    img: "/images/animals/Yobbolin_Healer.png",
     temperament: "Aggressive",
     habitat: ["Hot Hot Hot"],
     health: 40,
@@ -661,12 +661,12 @@ export const animals: Animal[] = [
       {
         name: "Magic Tome",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/a/ae/Inv_Magic_Tome.png",
+        img: "/images/gearAndEquipment/books/Inv_Magic_Tome.png",
       },
       {
         name: "Pincher Hood",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/6/69/Inv_Pincher_Hood.png",
+        img: "/images/clothing/Inv_Pincher_Hood.png",
       },
     ],
     type: "Wild Animal",
@@ -674,24 +674,24 @@ export const animals: Animal[] = [
   {
     id: "chook_baby",
     name: "Chook Baby",
-    img: "https://static.wikia.nocookie.net/dinkum/images/5/51/Baby_Chook.png",
+    img: "/images/animals/Baby_Chook.png",
     temperament: "Passive",
     health: 55,
     drops: [
       {
         name: "Feather",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/4/4a/Inv_Feather.png",
+        img: "/images/resources/animalProducts/Inv_Feather.png",
       },
       {
         name: "Bone",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Bone.png",
+        img: "/images/resources/animalProducts/Inv_Bone.png",
       },
       {
         name: "Raw Drumstick",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/0e/Inv_Raw_Drumstick.png",
+        img: "/images/animals/Inv_Raw_Drumstick.png",
       },
     ],
     buyPrice: 5000,
@@ -703,36 +703,36 @@ export const animals: Animal[] = [
   {
     id: "chook",
     name: "Chook",
-    img: "https://static.wikia.nocookie.net/dinkum/images/4/41/Chicken_White.png",
+    img: "/images/animals/Chicken_White.png",
     temperament: "Passive",
     health: 55,
     drops: [
       {
         name: "Feather",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/4/4a/Inv_Feather.png",
+        img: "/images/resources/animalProducts/Inv_Feather.png",
       },
       {
         name: "Bone",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Bone.png",
+        img: "/images/resources/animalProducts/Inv_Bone.png",
       },
       {
         name: "Raw Drumstick",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/0e/Inv_Raw_Drumstick.png",
+        img: "/images/animals/Inv_Raw_Drumstick.png",
       },
     ],
     produces: [
       {
         name: "Chicken Egg",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/4/43/Inv_Chicken_Egg.png",
+        img: "/images/resources/animalProducts/Inv_Chicken_Egg.png",
       },
       {
         name: "Big Chicken Egg",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/2/2d/Inv_Big_Chicken_Egg.png",
+        img: "/images/animals/Inv_Big_Chicken_Egg.png",
       },
     ],
     baseSellPrice: 2500,
@@ -743,19 +743,19 @@ export const animals: Animal[] = [
   {
     id: "pleep_puggle",
     name: "Pleep Puggle",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/af/Pleep_Puggle.png",
+    img: "/images/animals/Pleep_Puggle.png",
     temperament: "Passive",
     health: 60,
     drops: [
       {
         name: "Raw Meat",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/c/cb/Inv_Raw_Meat.png",
+        img: "/images/animals/Inv_Raw_Meat.png",
       },
       {
         name: "Bone",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Bone.png",
+        img: "/images/resources/animalProducts/Inv_Bone.png",
       },
     ],
     buyPrice: 25000,
@@ -766,26 +766,26 @@ export const animals: Animal[] = [
   {
     id: "pleep",
     name: "Pleep",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/c8/Pleep.png",
+    img: "/images/animals/Pleep.png",
     temperament: "Passive",
     health: 60,
     drops: [
       {
         name: "Raw Meat",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/c/cb/Inv_Raw_Meat.png",
+        img: "/images/animals/Inv_Raw_Meat.png",
       },
       {
         name: "Bone",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Bone.png",
+        img: "/images/resources/animalProducts/Inv_Bone.png",
       },
     ],
     produces: [
       {
         name: "Wool",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/a/a2/Inv_Wool.png",
+        img: "/images/resources/animalProducts/Inv_Wool.png",
       },
     ],
     baseSellPrice: 12500,
@@ -796,19 +796,19 @@ export const animals: Animal[] = [
   {
     id: "vombat_joey",
     name: "Vombat Joey",
-    img: "https://static.wikia.nocookie.net/dinkum/images/b/bb/Vombat_Joey.png",
+    img: "/images/animals/Vombat_Joey.png",
     temperament: "Passive",
     health: 60,
     drops: [
       {
         name: "Raw Meat",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/c/cb/Inv_Raw_Meat.png",
+        img: "/images/animals/Inv_Raw_Meat.png",
       },
       {
         name: "Bone",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Bone.png",
+        img: "/images/resources/animalProducts/Inv_Bone.png",
       },
     ],
     buyPrice: 15000,
@@ -819,36 +819,36 @@ export const animals: Animal[] = [
   {
     id: "vombat",
     name: "Vombat",
-    img: "https://static.wikia.nocookie.net/dinkum/images/7/72/Vombat.png",
+    img: "/images/animals/Vombat.png",
     temperament: "Passive",
     health: 150,
     drops: [
       {
         name: "Raw Meat",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/c/cb/Inv_Raw_Meat.png",
+        img: "/images/animals/Inv_Raw_Meat.png",
       },
       {
         name: "Bone",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Bone.png",
+        img: "/images/resources/animalProducts/Inv_Bone.png",
       },
     ],
     produces: [
       {
         name: "Vombat Poo",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/4/48/Inv_Vombat_Poo.png",
+        img: "/images/resources/animalProducts/Inv_Vombat_Poo.png",
       },
       {
         name: "Milk",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/c/c6/Inv_Milk.png",
+        img: "/images/resources/animalProducts/Inv_Milk.png",
       },
       {
         name: "High Quality Milk",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/a/ab/Inv_High_Quality_Milk.png",
+        img: "/images/resources/animalProducts/Inv_High_Quality_Milk.png",
       },
     ],
     baseSellPrice: 7500,
@@ -859,24 +859,24 @@ export const animals: Animal[] = [
   {
     id: "doggo",
     name: "Doggo",
-    img: "https://static.wikia.nocookie.net/dinkum/images/c/ca/Pet_Doggo.png",
+    img: "/images/animals/Pet_Doggo.png",
     temperament: "Neutral",
     health: 200,
     drops: [
       {
         name: "Doggo Collar",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/f/f9/Inv_Doggo_Collar.png",
+        img: "/images/gearAndEquipment/equipment/Inv_Doggo_Collar.png",
       },
       {
         name: "Raw Meat",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/c/cb/Inv_Raw_Meat.png",
+        img: "/images/animals/Inv_Raw_Meat.png",
       },
       {
         name: "Bone",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Bone.png",
+        img: "/images/resources/animalProducts/Inv_Bone.png",
       },
     ],
     source: "A Diggo tamed with a Doggo Collar",
@@ -885,24 +885,24 @@ export const animals: Animal[] = [
   {
     id: "pet_mu",
     name: "Pet Mu",
-    img: "https://static.wikia.nocookie.net/dinkum/images/3/3e/Saddled_Mu.png",
+    img: "/images/animals/Saddled_Mu.png",
     temperament: "Passive",
     health: 250,
     drops: [
       {
         name: "Mu Saddle",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/3/3a/Inv_Mu_Saddle.png",
+        img: "/images/gearAndEquipment/equipment/Inv_Mu_Saddle.png",
       },
       {
         name: "Raw Giant Drumstick",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/a/a7/Inv_Raw_Giant_Drumstick.png",
+        img: "/images/animals/Inv_Raw_Giant_Drumstick.png",
       },
       {
         name: "Bone",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Bone.png",
+        img: "/images/resources/animalProducts/Inv_Bone.png",
       },
     ],
     source: "A Mu tamed with a Mu Saddle",
@@ -911,24 +911,24 @@ export const animals: Animal[] = [
   {
     id: "pet_wary_mu",
     name: "Pet Wary Mu",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/29/Saddled_Wary_Mu.png",
+    img: "/images/animals/Saddled_Wary_Mu.png",
     temperament: "Passive",
     health: 250,
     drops: [
       {
         name: "Mu Saddle",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/3/3a/Inv_Mu_Saddle.png",
+        img: "/images/gearAndEquipment/equipment/Inv_Mu_Saddle.png",
       },
       {
         name: "Raw Giant Drumstick",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/a/a7/Inv_Raw_Giant_Drumstick.png",
+        img: "/images/animals/Inv_Raw_Giant_Drumstick.png",
       },
       {
         name: "Bone",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Bone.png",
+        img: "/images/resources/animalProducts/Inv_Bone.png",
       },
     ],
     source: "A Wary Mu tamed with a Mu Saddle",
@@ -937,7 +937,7 @@ export const animals: Animal[] = [
   {
     id: "wild_boaricoot",
     name: "Wild Boaricoot",
-    img: "https://static.wikia.nocookie.net/dinkum/images/a/ad/Boaricoot_Grey.png",
+    img: "/images/animals/Boaricoot_Grey.png",
     temperament: "Neutral",
     habitat: ["Desert"],
     health: 0,
@@ -945,12 +945,12 @@ export const animals: Animal[] = [
       {
         name: "Raw Meat",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/c/cb/Inv_Raw_Meat.png",
+        img: "/images/animals/Inv_Raw_Meat.png",
       },
       {
         name: "Bone",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Bone.png",
+        img: "/images/resources/animalProducts/Inv_Bone.png",
       },
     ],
     researchReward: 24000,
@@ -960,7 +960,7 @@ export const animals: Animal[] = [
   {
     id: "wild_plunk",
     name: "Wild Plunk",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/20/Plunk.png",
+    img: "/images/animals/Plunk.png",
     temperament: "Neutral",
     habitat: ["Southern Rivers"],
     health: 0,
@@ -968,12 +968,12 @@ export const animals: Animal[] = [
       {
         name: "Raw Meat",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/c/cb/Inv_Raw_Meat.png",
+        img: "/images/animals/Inv_Raw_Meat.png",
       },
       {
         name: "Bone",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Bone.png",
+        img: "/images/resources/animalProducts/Inv_Bone.png",
       },
     ],
     researchReward: 31200,
@@ -983,7 +983,7 @@ export const animals: Animal[] = [
   {
     id: "wild_vombull",
     name: "Wild Vombull",
-    img: "https://static.wikia.nocookie.net/dinkum/images/0/01/Vombull_Black_White.png",
+    img: "/images/animals/Vombull_Black_White.png",
     temperament: "Neutral",
     habitat: ["Plains"],
     health: 0,
@@ -991,12 +991,12 @@ export const animals: Animal[] = [
       {
         name: "Raw Meat",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/c/cb/Inv_Raw_Meat.png",
+        img: "/images/animals/Inv_Raw_Meat.png",
       },
       {
         name: "Raw Prime Meat",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/07/Inv_Raw_Prime_Meat.png",
+        img: "/images/animals/Inv_Raw_Prime_Meat.png",
       },
     ],
     type: "Wild Animal",
@@ -1005,7 +1005,7 @@ export const animals: Animal[] = [
   {
     id: "wild_rooster",
     name: "Wild Rooster",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/2c/Rooster.png",
+    img: "/images/animals/Rooster.png",
     temperament: "Passive",
     habitat: ["Tropics"],
     health: 0,
@@ -1013,17 +1013,17 @@ export const animals: Animal[] = [
       {
         name: "Raw Drumstick",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/0e/Inv_Raw_Drumstick.png",
+        img: "/images/animals/Inv_Raw_Drumstick.png",
       },
       {
         name: "Feather",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/4/4a/Inv_Feather.png",
+        img: "/images/resources/animalProducts/Inv_Feather.png",
       },
       {
         name: "Bone",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/0/00/Inv_Bone.png",
+        img: "/images/resources/animalProducts/Inv_Bone.png",
       },
     ],
     researchReward: 22400,
@@ -1033,7 +1033,7 @@ export const animals: Animal[] = [
   {
     id: "buttowcoot",
     name: "Buttowcoot",
-    img: "https://static.wikia.nocookie.net/dinkum/images/8/8b/Burrowcoot_White.png",
+    img: "/images/animals/Burrowcoot_White.png",
     temperament: "Passive",
     health: 0,
     drops: [],
@@ -1041,12 +1041,12 @@ export const animals: Animal[] = [
       {
         name: "Worms",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/5/55/Inv_Worms.png",
+        img: "/images/resources/animalProducts/Inv_Worms.png",
       },
       {
         name: "Native Bread",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/4/48/Inv_Native_Bread.png",
+        img: "/images/resources/animalProducts/Inv_Native_Bread.png",
       },
     ],
     buyPrice: 35000,
@@ -1055,7 +1055,7 @@ export const animals: Animal[] = [
   {
     id: "buttowcoot_joey",
     name: "Buttowcoot Joey",
-    img: "https://static.wikia.nocookie.net/dinkum/images/2/24/Burrowcoot_Joey.png",
+    img: "/images/animals/Burrowcoot_Joey.png",
     temperament: "Passive",
     health: 0,
     drops: [],
@@ -1063,12 +1063,12 @@ export const animals: Animal[] = [
       {
         name: "Worms",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/5/55/Inv_Worms.png",
+        img: "/images/resources/animalProducts/Inv_Worms.png",
       },
       {
         name: "Native Bread",
         count: 1,
-        img: "https://static.wikia.nocookie.net/dinkum/images/4/48/Inv_Native_Bread.png",
+        img: "/images/resources/animalProducts/Inv_Native_Bread.png",
       },
     ],
     buyPrice: 35000,

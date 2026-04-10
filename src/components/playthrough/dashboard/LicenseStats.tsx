@@ -90,7 +90,7 @@ const LicenseStats: React.FC<CollectTabProps> = ({ collected }) => {
 									{stats.spentPermitPoints.toLocaleString()} /{" "}
 									{stats.totalPermitPoints.toLocaleString()}{" "}
 									<Image
-										src="https://static.wikia.nocookie.net/dinkum/images/9/97/Permit_Points.png"
+										src="/images/other/Permit_Points.png"
 										alt="Permit Points"
 										width={28}
 										height={20}
