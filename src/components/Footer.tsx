@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaDiscord, FaGithub } from "react-icons/fa6";
+import { FaDiscord, FaGithub, FaRegCopyright } from "react-icons/fa6";
 
 export default function Footer() {
 	return (
@@ -69,6 +69,11 @@ export default function Footer() {
 									Settings
 								</a>
 							</li>
+							<li>
+								<a href="https://gamerdex.app" className="hover:text-highlight" target="_Blank">
+									GamerDex
+								</a>
+							</li>
 						</ul>
 					</div>
 
@@ -87,7 +92,7 @@ export default function Footer() {
 				</div>
 				<hr className="my-6 border-gray-200/20 lg:my-8" />
 				<div className="text-center">
-					<span className="text-sm">© 2025 Dinkum Tracker. All Rights Reserved.</span>
+					<span className="flex items-center justify-center gap-1 text-sm"><FaRegCopyright className="h-3.5 w-3.5" /> {new Date().getFullYear()} Dinkum Tracker. All Rights Reserved.</span>
 				</div>
 			</div>
 		</footer>
