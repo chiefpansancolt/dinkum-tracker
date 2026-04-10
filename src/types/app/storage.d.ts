@@ -29,7 +29,9 @@ export interface Playthrough {
 
 export interface PlaythroughCardProps {
   playthrough: Playthrough;
+  activeId: string | null;
   onDelete: () => void;
+  onSetActive: (id: string) => void;
 }
 
 export interface DashboardProps {

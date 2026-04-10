@@ -4,6 +4,7 @@ import { Button, DarkThemeToggle } from "flowbite-react";
 import Image from "next/image";
 import Link from "next/link";
 import { HiMenu, HiX } from "react-icons/hi";
+import GlobalSearch from "./GlobalSearch";
 
 export default function AppNav({
 	sidebarOpen,
@@ -14,8 +15,8 @@ export default function AppNav({
 }) {
 	return (
 		<nav className="bg-primary fixed top-0 right-0 left-0 z-50 border-b border-gray-200 px-4 py-2.5 lg:px-6 dark:border-gray-700">
-			<div className="flex flex-wrap items-center justify-between">
-				<div className="flex items-center justify-start">
+			<div className="flex items-center gap-4">
+				<div className="flex shrink-0 items-center">
 					<Button
 						data-drawer-target="drawer-navigation"
 						onClick={toggleSidebar}
@@ -41,7 +42,11 @@ export default function AppNav({
 					</Link>
 				</div>
 
-				<div className="flex items-center lg:order-2">
+				<div className="hidden flex-1 md:block">
+					<GlobalSearch />
+				</div>
+
+				<div className="flex shrink-0 items-center">
 					<DarkThemeToggle className="border-accent dark:border-accent hover:bg-accent dark:hover:bg-accent cursor-pointer text-white dark:text-white" />
 				</div>
 			</div>

@@ -11,6 +11,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { HiPlus } from "react-icons/hi";
 import { Playthrough } from "@/types/app";
 import { getDefaultSortPreference } from "@/lib/services/dataService";
+import { getActivePlaythroughId } from "@/lib/localStorage";
 import { getPlaythroughs } from "@/lib/storage";
 import PlaythroughCard from "./Card";
 
@@ -29,6 +30,7 @@ const calculateCompletion = (playthrough: Playthrough): number => {
 
 export default function PlaythroughsPage() {
 	const [playthroughs, setPlaythroughs] = useState<Playthrough[]>([]);
+	const [activeId, setActiveId] = useState<string | null>(null);
 	const [isLoading, setIsLoading] = useState(true);
 	const [searchQuery, setSearchQuery] = useState("");
 	const [sortOption, setSortOption] = useState<string>("lastUpdated");
@@ -59,6 +61,8 @@ export default function PlaythroughsPage() {
 
 	useEffect(() => {
 		if (typeof window !== "undefined") {
+			setActiveId(getActivePlaythroughId());
+
 			getDefaultSortPreference().then((defaultSort) => {
 				setSortOption(defaultSort);
 			});
@@ -84,6 +88,10 @@ export default function PlaythroughsPage() {
 		getPlaythroughs().then((data) => {
 			setPlaythroughs(data);
 		});
+	};
+
+	const handleSetActive = (id: string) => {
+		setActiveId(id);
 	};
 
 	const handleFilterChange = (name: string, value: string) => {
@@ -181,7 +189,9 @@ export default function PlaythroughsPage() {
 						<PlaythroughCard
 							key={playthrough.id}
 							playthrough={playthrough}
+							activeId={activeId}
 							onDelete={handleDelete}
+							onSetActive={handleSetActive}
 						/>
 					))}
 				</div>

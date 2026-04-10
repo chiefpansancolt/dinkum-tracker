@@ -7,11 +7,12 @@ import { FaAward, FaBug, FaBuilding, FaFish, FaIdCard } from "react-icons/fa";
 import { GiCrab } from "react-icons/gi";
 import {
 	HiOutlineCalendar,
-	HiOutlinePencil,
 	HiOutlineRefresh,
+	HiOutlineStar,
 	HiOutlineTrash,
 } from "react-icons/hi";
 import { PlaythroughCardProps } from "@/types";
+import { setActivePlaythroughId } from "@/lib/localStorage";
 import { deletePlaythrough } from "@/lib/storage";
 import { getSeasonEmoji } from "@/service/seasonalTheme";
 import {
@@ -31,10 +32,11 @@ import {
 	weapons,
 } from "@/data/dinkum";
 
-export default function PlaythroughCard({ playthrough, onDelete }: PlaythroughCardProps) {
+export default function PlaythroughCard({ playthrough, activeId, onDelete, onSetActive }: PlaythroughCardProps) {
 	const router = useRouter();
 	const [isDeleting, setIsDeleting] = useState(false);
 	const [openModal, setOpenModal] = useState(false);
+	const isActive = playthrough.id === activeId;
 
 	const formatDate = (dateString: string) => {
 		if (!dateString) return "N/A";
@@ -174,7 +176,9 @@ export default function PlaythroughCard({ playthrough, onDelete }: PlaythroughCa
 		setOpenModal(false);
 	};
 
-	const handleEdit = () => {
+	const handleSetActive = () => {
+		setActivePlaythroughId(playthrough.id);
+		onSetActive(playthrough.id);
 		router.push(`/playthrough/${playthrough.id}`);
 	};
 
@@ -335,14 +339,21 @@ export default function PlaythroughCard({ playthrough, onDelete }: PlaythroughCa
 				</div>
 
 				<div className="flex gap-2">
-					<Button
-						color="primary"
-						onClick={handleEdit}
-						className="flex-1 items-center gap-2"
-					>
-						<HiOutlinePencil className="h-4 w-4" />
-						Manage Playthrough
-					</Button>
+					{isActive ? (
+						<div className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-500 dark:bg-gray-700 dark:text-gray-400">
+							<HiOutlineStar className="h-4 w-4" />
+							Active Playthrough
+						</div>
+					) : (
+						<Button
+							color="primary"
+							onClick={handleSetActive}
+							className="flex-1 items-center gap-2"
+						>
+							<HiOutlineStar className="h-4 w-4" />
+							Set as Active
+						</Button>
+					)}
 					<Button
 						color="red"
 						onClick={() => setOpenModal(true)}
