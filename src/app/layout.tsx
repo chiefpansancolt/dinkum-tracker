@@ -17,8 +17,35 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+	metadataBase: new URL("https://dinkum.gamerdex.app"),
 	title: "Dinkum Tracker",
-	description: "Track your progress in the Dinkum game",
+	description:
+		"Track your Dinkum progress — fish, bugs, critters, milestones, licenses, NPCs, and more.",
+	applicationName: "Dinkum Tracker",
+	keywords: ["dinkum", "dinkum game", "dinkum tracker", "dinkum progress tracker"],
+	openGraph: {
+		title: "Dinkum Tracker",
+		description:
+			"Track your Dinkum progress — fish, bugs, critters, milestones, licenses, NPCs, and more.",
+		url: "https://dinkum.gamerdex.app",
+		siteName: "Dinkum Tracker",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Dinkum Tracker",
+		description:
+			"Track your Dinkum progress — fish, bugs, critters, milestones, licenses, NPCs, and more.",
+	},
+	icons: {
+		icon: [
+			{ url: "/favicon.ico", sizes: "any" },
+			{ url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+			{ url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+		],
+		apple: "/apple-touch-icon.png",
+	},
+	manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
