@@ -38,8 +38,12 @@ import { GoStarFill } from "react-icons/go";
 import { HiCog, HiHome, HiViewList } from "react-icons/hi";
 import { LuCookingPot, LuFlower2 } from "react-icons/lu";
 import { MdDashboard, MdScale } from "react-icons/md";
-import { getActivePlaythroughId, getPlaythroughs, setActivePlaythroughId } from "@/lib/localStorage";
 import { Playthrough } from "@/types/app";
+import {
+	getActivePlaythroughId,
+	getPlaythroughs,
+	setActivePlaythroughId,
+} from "@/lib/localStorage";
 import PlaythroughSwitcher from "./PlaythroughSwitcher";
 import SidebarCollapse from "./SidebarCollapse";
 
@@ -82,6 +86,7 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 	const [activeId, setActiveId] = useState<string | null>(null);
 
 	useEffect(() => {
+		// eslint-disable-next-line react-hooks/set-state-in-effect
 		setPlaythroughs(getPlaythroughs());
 		if (urlId) {
 			setActivePlaythroughId(urlId);
@@ -150,10 +155,10 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 		>
 			<div className="bg-accent h-full overflow-y-auto px-3 pb-28">
 				<PlaythroughSwitcher
-						playthroughs={playthroughs}
-						activeId={activeId}
-						onSelect={handlePlaythroughSelect}
-					/>
+					playthroughs={playthroughs}
+					activeId={activeId}
+					onSelect={handlePlaythroughSelect}
+				/>
 				<ul className="space-y-2">
 					<li>
 						<SidebarLink
@@ -316,9 +321,7 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 									onToggle={() => setPedieOpen(!pedieOpen)}
 									active={
 										pathname?.includes(`/playthrough/${activeId}/bugs`) ||
-										pathname?.includes(
-											`/playthrough/${activeId}/critters`
-										) ||
+										pathname?.includes(`/playthrough/${activeId}/critters`) ||
 										pathname?.includes(`/playthrough/${activeId}/fish`)
 									}
 								>
@@ -447,18 +450,10 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 									active={
 										pathname?.includes(`/playthrough/${activeId}/books`) ||
 										pathname?.includes(`/playthrough/${activeId}/tools`) ||
-										pathname?.includes(
-											`/playthrough/${activeId}/weapons`
-										) ||
-										pathname?.includes(
-											`/playthrough/${activeId}/equipment`
-										) ||
-										pathname?.includes(
-											`/playthrough/${activeId}/vehicles`
-										) ||
-										pathname?.includes(
-											`/playthrough/${activeId}/cassettes`
-										)
+										pathname?.includes(`/playthrough/${activeId}/weapons`) ||
+										pathname?.includes(`/playthrough/${activeId}/equipment`) ||
+										pathname?.includes(`/playthrough/${activeId}/vehicles`) ||
+										pathname?.includes(`/playthrough/${activeId}/cassettes`)
 									}
 								>
 									<SidebarLink
@@ -524,15 +519,11 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 									open={decorOpen}
 									onToggle={() => setDecorOpen(!decorOpen)}
 									active={
-										pathname?.includes(
-											`/playthrough/${activeId}/clothing`
-										) ||
+										pathname?.includes(`/playthrough/${activeId}/clothing`) ||
 										pathname?.includes(
 											`/playthrough/${activeId}/decorations`
 										) ||
-										pathname?.includes(
-											`/playthrough/${activeId}/furniture`
-										)
+										pathname?.includes(`/playthrough/${activeId}/furniture`)
 									}
 								>
 									<SidebarLink

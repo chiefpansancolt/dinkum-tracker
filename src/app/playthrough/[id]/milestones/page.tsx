@@ -311,11 +311,11 @@ export default function MilestonesPage() {
 							{sortedLetters.map((letter) => (
 								<div key={letter} className="space-y-4">
 									<div className="my-4 flex items-center">
-										<div className="flex-grow border-t border-gray-200 dark:border-gray-700"></div>
+										<div className="grow border-t border-gray-200 dark:border-gray-700"></div>
 										<h2 className="mx-4 text-xl font-semibold text-gray-700 dark:text-gray-300">
 											{letter}
 										</h2>
-										<div className="flex-grow border-t border-gray-200 dark:border-gray-700"></div>
+										<div className="grow border-t border-gray-200 dark:border-gray-700"></div>
 									</div>
 									<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
 										{groupedMilestones[letter].map((item) => (

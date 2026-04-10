@@ -1,6 +1,5 @@
 import { Button } from "flowbite-react";
 import Image from "next/image";
-import React from "react";
 import { HiMinusSm, HiPlusSm } from "react-icons/hi";
 import { SkillCardProps } from "@/types";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
@@ -27,7 +26,7 @@ const SkillCard = ({ skill, level, onLevelChange }: SkillCardProps) => {
 			)}
 			renderDetails={() => (
 				<div className="space-y-4">
-					<p className="mb-4 flex-grow text-gray-700 dark:text-gray-100">
+					<p className="mb-4 grow text-gray-700 dark:text-gray-100">
 						{skill.description}
 					</p>
 				</div>

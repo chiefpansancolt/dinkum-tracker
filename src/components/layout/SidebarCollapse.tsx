@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 import { HiOutlineMinusSm, HiOutlinePlusSm } from "react-icons/hi";
 
 interface SidebarCollapseProps {
@@ -29,9 +29,7 @@ export default function SidebarCollapse({
 				} group`}
 				onClick={onToggle}
 			>
-				<div className="h-5 w-5 flex-shrink-0 text-white transition duration-75">
-					{icon}
-				</div>
+				<div className="h-5 w-5 shrink-0 text-white transition duration-75">{icon}</div>
 				<span className="ml-3 flex-1 text-left whitespace-nowrap">{label}</span>
 				{open ? (
 					<HiOutlineMinusSm className="h-5 w-5" />

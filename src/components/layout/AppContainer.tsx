@@ -21,7 +21,7 @@ export default function AppContainer({ children }: { children: React.ReactNode }
 
 			<main className="mt-15 flex min-h-screen flex-col md:ml-64">
 				<DomainMigrationBanner />
-				<div className="flex-grow">{children}</div>
+				<div className="grow">{children}</div>
 				<Footer />
 			</main>
 		</div>

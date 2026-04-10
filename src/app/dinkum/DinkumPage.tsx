@@ -67,7 +67,7 @@ export default function DinkumPage() {
 									{resource.title}
 								</h2>
 							</div>
-							<p className="mb-6 flex-grow text-gray-700 dark:text-gray-300">
+							<p className="mb-6 grow text-gray-700 dark:text-gray-300">
 								{resource.description}
 							</p>
 							<Button

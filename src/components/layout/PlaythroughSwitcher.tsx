@@ -4,8 +4,8 @@ import { Dropdown, DropdownDivider, DropdownHeader, DropdownItem } from "flowbit
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { LuChevronsUpDown, LuPlus } from "react-icons/lu";
-import { setActivePlaythroughId } from "@/lib/localStorage";
 import { Playthrough } from "@/types/app";
+import { setActivePlaythroughId } from "@/lib/localStorage";
 
 interface Props {
 	playthroughs: Playthrough[];
@@ -16,7 +16,9 @@ interface Props {
 export default function PlaythroughSwitcher({ playthroughs, activeId, onSelect }: Props) {
 	const router = useRouter();
 
-	const activePlaythrough = activeId ? playthroughs.find((p) => p.id === activeId) ?? null : null;
+	const activePlaythrough = activeId
+		? (playthroughs.find((p) => p.id === activeId) ?? null)
+		: null;
 
 	const handleSelect = (id: string) => {
 		if (id === activeId) return;
@@ -34,8 +36,10 @@ export default function PlaythroughSwitcher({ playthroughs, activeId, onSelect }
 						type="button"
 						className="flex w-full cursor-pointer items-center gap-2 rounded-lg p-2 text-left hover:bg-white/10 focus:outline-none"
 					>
-						<div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-primary text-sm font-bold text-white">
-							{activePlaythrough ? (activePlaythrough.name[0]?.toUpperCase() ?? "?") : "?"}
+						<div className="bg-primary flex size-8 shrink-0 items-center justify-center rounded-lg text-sm font-bold text-white">
+							{activePlaythrough
+								? (activePlaythrough.name[0]?.toUpperCase() ?? "?")
+								: "?"}
 						</div>
 						<div className="min-w-0 flex-1">
 							<span className="block truncate text-sm font-medium text-white">
@@ -51,11 +55,16 @@ export default function PlaythroughSwitcher({ playthroughs, activeId, onSelect }
 					<DropdownItem disabled>No playthroughs yet</DropdownItem>
 				) : (
 					playthroughs.map((playthrough) => (
-						<DropdownItem key={playthrough.id} onClick={() => handleSelect(playthrough.id)}>
+						<DropdownItem
+							key={playthrough.id}
+							onClick={() => handleSelect(playthrough.id)}
+						>
 							<div className="flex w-full items-center gap-2">
 								<span className="truncate">{playthrough.name}</span>
 								{playthrough.id === activeId && (
-									<span className="ml-auto text-xs font-medium text-primary">Active</span>
+									<span className="text-primary ml-auto text-xs font-medium">
+										Active
+									</span>
 								)}
 							</div>
 						</DropdownItem>
@@ -67,7 +76,9 @@ export default function PlaythroughSwitcher({ playthroughs, activeId, onSelect }
 						<div className="flex size-6 items-center justify-center rounded-md border border-gray-300 bg-transparent dark:border-gray-600">
 							<LuPlus className="size-4" />
 						</div>
-						<span className="font-medium text-gray-500 dark:text-gray-400">Add Playthrough</span>
+						<span className="font-medium text-gray-500 dark:text-gray-400">
+							Add Playthrough
+						</span>
 					</div>
 				</DropdownItem>
 			</Dropdown>

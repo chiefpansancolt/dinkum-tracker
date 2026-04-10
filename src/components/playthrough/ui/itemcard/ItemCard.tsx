@@ -1,5 +1,4 @@
 import { Card } from "flowbite-react";
-import React from "react";
 import { ItemCardProps } from "@/types";
 
 const ItemCard = ({ renderHeader, renderImage, renderDetails, renderFooter }: ItemCardProps) => {
@@ -9,7 +8,7 @@ const ItemCard = ({ renderHeader, renderImage, renderDetails, renderFooter }: It
 				{renderHeader && renderHeader()}
 				{renderImage && renderImage()}
 
-				<div className="mt-2 flex-grow space-y-2 text-sm">
+				<div className="mt-2 grow space-y-2 text-sm">
 					{renderDetails && renderDetails()}
 				</div>
 

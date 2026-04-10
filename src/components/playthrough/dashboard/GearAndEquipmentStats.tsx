@@ -164,7 +164,7 @@ const GearAndEquipmentStats: React.FC<GearAndEquipmentStatsProps> = ({
 					<h2 className="text-primary mb-4 text-xl font-bold">Gear & Equipment</h2>
 				</div>
 
-				<div className="flex-grow overflow-auto">
+				<div className="grow overflow-auto">
 					<div className="space-y-5">
 						<div>
 							<div className="mb-1 flex justify-between">

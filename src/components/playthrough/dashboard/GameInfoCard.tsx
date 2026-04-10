@@ -43,7 +43,7 @@ const GameInfoCard: React.FC<GameInfoCardProps> = ({ playthrough }) => {
 					<h2 className="text-primary mb-4 text-xl font-bold">Game Info</h2>
 				</div>
 
-				<div className="flex-grow overflow-auto">
+				<div className="grow overflow-auto">
 					<div className="space-y-4">
 						<div>
 							<h3 className="font-medium">Game Calendar</h3>

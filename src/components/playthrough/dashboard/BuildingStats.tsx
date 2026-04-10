@@ -58,7 +58,7 @@ const BuildingStats: React.FC<CollectTabProps> = ({ collected }) => {
 					<h2 className="text-primary mb-4 text-xl font-bold">Buildings Progress</h2>
 				</div>
 
-				<div className="flex-grow overflow-auto">
+				<div className="grow overflow-auto">
 					<div className="mb-6">
 						<div className="mb-4 flex justify-between">
 							<span className="text-lg font-medium">Overall Progress</span>

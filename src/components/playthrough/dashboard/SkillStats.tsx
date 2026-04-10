@@ -14,7 +14,7 @@ const SkillStats: React.FC<CollectNumberTabProps> = ({ collected }) => {
 					<h2 className="text-primary mb-4 text-xl font-bold">Character Skills</h2>
 				</div>
 
-				<div className="flex-grow overflow-auto">
+				<div className="grow overflow-auto">
 					{!hasSkills ? (
 						<p className="text-gray-500 italic">No skills recorded yet.</p>
 					) : (

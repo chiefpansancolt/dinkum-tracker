@@ -16,7 +16,7 @@ export default function Home() {
 		<div className="text-gray-900 dark:text-gray-50">
 			<div className="relative isolate overflow-hidden">
 				<svg
-					className="absolute inset-0 -z-10 size-full [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)] stroke-gray-200 dark:stroke-white/10"
+					className="absolute inset-0 -z-10 size-full mask-[radial-gradient(100%_100%_at_top_right,white,transparent)] stroke-gray-200 dark:stroke-white/10"
 					aria-hidden="true"
 				>
 					<defs>
@@ -48,7 +48,7 @@ export default function Home() {
 					aria-hidden="true"
 				>
 					<div
-						className="from-primary/20 to-accent/20 aspect-[1108/632] w-[69.25rem] bg-gradient-to-r opacity-20"
+						className="from-primary/20 to-accent/20 aspect-1108/632 w-277 bg-linear-to-r opacity-20"
 						style={{
 							clipPath:
 								"polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)",
@@ -91,7 +91,7 @@ export default function Home() {
 							</Button>
 						</div>
 					</div>
-					<div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0">
+					<div className="mt-16 sm:mt-24 lg:mt-0 lg:shrink-0">
 						<div className="relative">
 							<Image
 								src="/Dinkum_Game_Image.png"
@@ -301,7 +301,7 @@ export default function Home() {
 
 			<div className="relative isolate mt-32 px-6 py-32 sm:mt-56 sm:py-40 lg:px-8">
 				<svg
-					className="absolute inset-0 -z-10 h-full w-full [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)] stroke-gray-200 dark:stroke-white/10"
+					className="absolute inset-0 -z-10 h-full w-full mask-[radial-gradient(100%_100%_at_top_right,white,transparent)] stroke-gray-200 dark:stroke-white/10"
 					aria-hidden="true"
 				>
 					<defs>
@@ -333,7 +333,7 @@ export default function Home() {
 					aria-hidden="true"
 				>
 					<div
-						className="from-accent to-primary relative left-[calc(50%-11rem)] aspect-[1108/632] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+						className="from-accent to-primary relative left-[calc(50%-11rem)] aspect-1108/632 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr opacity-20 sm:left-[calc(50%-30rem)] sm:w-288.75"
 						style={{
 							clipPath:
 								"polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",

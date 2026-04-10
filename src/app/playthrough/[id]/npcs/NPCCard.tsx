@@ -17,7 +17,7 @@ const NPCCard = ({ npc, hearts, onHeartsChange }: NPCCardProps) => {
 		return (
 			<div className="mt-4 border-t border-gray-200 pt-3 dark:border-gray-700">
 				<div className="flex items-center gap-1">
-					<div className="flex-grow">
+					<div className="grow">
 						<div className="flex items-center">
 							{Array.from({ length: maxHearts }).map((_, index) => {
 								const isFull = index < fullHearts;

@@ -5,7 +5,7 @@ import { FaDiscord, FaGithub } from "react-icons/fa6";
 export default function Footer() {
 	return (
 		<footer className="bg-primary p-6 text-white">
-			<div className="mx-auto max-w-screen-xl">
+			<div className="mx-auto max-w-7xl">
 				<div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
 					<div className="col-span-1 md:col-span-2">
 						<Link href="/" className="mb-4 flex items-center">
@@ -23,7 +23,7 @@ export default function Footer() {
 						<p className="my-4 font-light">
 							Dinkum Tracker is a comprehensive tracking application for your Dinkum
 							adventures. Manage multiple playthroughs, track collections, and monitor
-							progress all in one place - all saved locally in your browser.
+							progress all in one place, all saved locally in your browser.
 						</p>
 						<ul className="mt-5 flex space-x-6">
 							<li>

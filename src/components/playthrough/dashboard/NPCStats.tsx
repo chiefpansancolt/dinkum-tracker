@@ -48,7 +48,7 @@ const NPCStats: React.FC<CollectNumberTabProps> = ({ collected }) => {
 					<h2 className="text-primary mb-4 text-xl font-bold">NPC Relationships</h2>
 				</div>
 
-				<div className="flex-grow overflow-auto">
+				<div className="grow overflow-auto">
 					<div className="space-y-4">
 						<div className="grid grid-cols-2 gap-4">
 							<div className="rounded-lg bg-blue-50 p-3 dark:bg-blue-900/20">
