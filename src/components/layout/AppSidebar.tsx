@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BsCassette } from "react-icons/bs";
 import { FaToolbox, FaTools } from "react-icons/fa";
 import {
@@ -38,6 +38,9 @@ import { GoStarFill } from "react-icons/go";
 import { HiCog, HiHome, HiViewList } from "react-icons/hi";
 import { LuCookingPot, LuFlower2 } from "react-icons/lu";
 import { MdDashboard, MdScale } from "react-icons/md";
+import { getActivePlaythroughId, getPlaythroughs, setActivePlaythroughId } from "@/lib/localStorage";
+import { Playthrough } from "@/types/app";
+import PlaythroughSwitcher from "./PlaythroughSwitcher";
 import SidebarCollapse from "./SidebarCollapse";
 
 interface SidebarLinkProps {
@@ -73,6 +76,25 @@ const SidebarLink = ({ href, currentPath, icon, indented = false, children }: Si
 export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 	const pathname = usePathname();
 	const params = useParams();
+	const urlId = params?.id as string | undefined;
+
+	const [playthroughs, setPlaythroughs] = useState<Playthrough[]>([]);
+	const [activeId, setActiveId] = useState<string | null>(null);
+
+	useEffect(() => {
+		setPlaythroughs(getPlaythroughs());
+		if (urlId) {
+			setActivePlaythroughId(urlId);
+			setActiveId(urlId);
+		} else {
+			setActiveId(getActivePlaythroughId());
+		}
+	}, [urlId]);
+
+	const handlePlaythroughSelect = (id: string) => {
+		setActiveId(id);
+	};
+
 	const [pedieOpen, setPedieOpen] = useState(
 		() =>
 			!!(
@@ -118,9 +140,6 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 			)
 	);
 
-	const playthroughId = params?.id as string;
-	const isPlaythroughRoute = pathname?.includes("/playthrough/") && playthroughId;
-
 	return (
 		<aside
 			className={`fixed top-0 left-0 z-40 h-screen w-64 pt-20 transition-transform ${
@@ -130,6 +149,11 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 			id="drawer-navigation"
 		>
 			<div className="bg-accent h-full overflow-y-auto px-3 pb-28">
+				<PlaythroughSwitcher
+						playthroughs={playthroughs}
+						activeId={activeId}
+						onSelect={handlePlaythroughSelect}
+					/>
 				<ul className="space-y-2">
 					<li>
 						<SidebarLink
@@ -246,7 +270,7 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 						</SidebarCollapse>
 					</li>
 
-					{isPlaythroughRoute && (
+					{activeId && (
 						<>
 							<div className="mt-6 mb-2 border-t border-gray-200 pt-3 dark:border-gray-700">
 								<p className="px-2 text-sm font-semibold text-gray-200">
@@ -256,7 +280,7 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 
 							<li>
 								<SidebarLink
-									href={`/playthrough/${playthroughId}`}
+									href={`/playthrough/${activeId}`}
 									currentPath={pathname}
 									icon={<MdDashboard />}
 								>
@@ -266,7 +290,7 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 
 							<li>
 								<SidebarLink
-									href={`/playthrough/${playthroughId}/npcs`}
+									href={`/playthrough/${activeId}/npcs`}
 									currentPath={pathname}
 									icon={<FaUsers />}
 								>
@@ -276,7 +300,7 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 
 							<li>
 								<SidebarLink
-									href={`/playthrough/${playthroughId}/calendar`}
+									href={`/playthrough/${activeId}/calendar`}
 									currentPath={pathname}
 									icon={<FaCalendarDays />}
 								>
@@ -291,15 +315,15 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 									open={pedieOpen}
 									onToggle={() => setPedieOpen(!pedieOpen)}
 									active={
-										pathname?.includes(`/playthrough/${playthroughId}/bugs`) ||
+										pathname?.includes(`/playthrough/${activeId}/bugs`) ||
 										pathname?.includes(
-											`/playthrough/${playthroughId}/critters`
+											`/playthrough/${activeId}/critters`
 										) ||
-										pathname?.includes(`/playthrough/${playthroughId}/fish`)
+										pathname?.includes(`/playthrough/${activeId}/fish`)
 									}
 								>
 									<SidebarLink
-										href={`/playthrough/${playthroughId}/bugs`}
+										href={`/playthrough/${activeId}/bugs`}
 										currentPath={pathname}
 										icon={<FaBug />}
 										indented
@@ -308,7 +332,7 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 									</SidebarLink>
 
 									<SidebarLink
-										href={`/playthrough/${playthroughId}/critters`}
+										href={`/playthrough/${activeId}/critters`}
 										currentPath={pathname}
 										icon={<GoStarFill />}
 										indented
@@ -317,7 +341,7 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 									</SidebarLink>
 
 									<SidebarLink
-										href={`/playthrough/${playthroughId}/fish`}
+										href={`/playthrough/${activeId}/fish`}
 										currentPath={pathname}
 										icon={<FaFish />}
 										indented
@@ -329,7 +353,7 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 
 							<li>
 								<SidebarLink
-									href={`/playthrough/${playthroughId}/buildings`}
+									href={`/playthrough/${activeId}/buildings`}
 									currentPath={pathname}
 									icon={<FaBuilding />}
 								>
@@ -339,7 +363,7 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 
 							<li>
 								<SidebarLink
-									href={`/playthrough/${playthroughId}/licenses`}
+									href={`/playthrough/${activeId}/licenses`}
 									currentPath={pathname}
 									icon={<FaIdCard />}
 								>
@@ -349,7 +373,7 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 
 							<li>
 								<SidebarLink
-									href={`/playthrough/${playthroughId}/milestones`}
+									href={`/playthrough/${activeId}/milestones`}
 									currentPath={pathname}
 									icon={<FaAward />}
 								>
@@ -359,7 +383,7 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 
 							<li>
 								<SidebarLink
-									href={`/playthrough/${playthroughId}/skills`}
+									href={`/playthrough/${activeId}/skills`}
 									currentPath={pathname}
 									icon={<FaTools />}
 								>
@@ -375,18 +399,18 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 									onToggle={() => setRecipesOpen(!recipesOpen)}
 									active={
 										pathname?.includes(
-											`/playthrough/${playthroughId}/cookingRecipes`
+											`/playthrough/${activeId}/cookingRecipes`
 										) ||
 										pathname?.includes(
-											`/playthrough/${playthroughId}/craftingRecipes`
+											`/playthrough/${activeId}/craftingRecipes`
 										) ||
 										pathname?.includes(
-											`/playthrough/${playthroughId}/signWritingRecipes`
+											`/playthrough/${activeId}/signWritingRecipes`
 										)
 									}
 								>
 									<SidebarLink
-										href={`/playthrough/${playthroughId}/cookingRecipes`}
+										href={`/playthrough/${activeId}/cookingRecipes`}
 										currentPath={pathname}
 										icon={<LuCookingPot />}
 										indented
@@ -395,7 +419,7 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 									</SidebarLink>
 
 									<SidebarLink
-										href={`/playthrough/${playthroughId}/craftingRecipes`}
+										href={`/playthrough/${activeId}/craftingRecipes`}
 										currentPath={pathname}
 										icon={<GiStoneCrafting />}
 										indented
@@ -404,7 +428,7 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 									</SidebarLink>
 
 									<SidebarLink
-										href={`/playthrough/${playthroughId}/signWritingRecipes`}
+										href={`/playthrough/${activeId}/signWritingRecipes`}
 										currentPath={pathname}
 										icon={<FaSignsPost />}
 										indented
@@ -421,24 +445,24 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 									open={gearOpen}
 									onToggle={() => setGearOpen(!gearOpen)}
 									active={
-										pathname?.includes(`/playthrough/${playthroughId}/books`) ||
-										pathname?.includes(`/playthrough/${playthroughId}/tools`) ||
+										pathname?.includes(`/playthrough/${activeId}/books`) ||
+										pathname?.includes(`/playthrough/${activeId}/tools`) ||
 										pathname?.includes(
-											`/playthrough/${playthroughId}/weapons`
+											`/playthrough/${activeId}/weapons`
 										) ||
 										pathname?.includes(
-											`/playthrough/${playthroughId}/equipment`
+											`/playthrough/${activeId}/equipment`
 										) ||
 										pathname?.includes(
-											`/playthrough/${playthroughId}/vehicles`
+											`/playthrough/${activeId}/vehicles`
 										) ||
 										pathname?.includes(
-											`/playthrough/${playthroughId}/cassettes`
+											`/playthrough/${activeId}/cassettes`
 										)
 									}
 								>
 									<SidebarLink
-										href={`/playthrough/${playthroughId}/books`}
+										href={`/playthrough/${activeId}/books`}
 										currentPath={pathname}
 										icon={<FaBook />}
 										indented
@@ -447,7 +471,7 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 									</SidebarLink>
 
 									<SidebarLink
-										href={`/playthrough/${playthroughId}/cassettes`}
+										href={`/playthrough/${activeId}/cassettes`}
 										currentPath={pathname}
 										icon={<BsCassette />}
 										indented
@@ -456,7 +480,7 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 									</SidebarLink>
 
 									<SidebarLink
-										href={`/playthrough/${playthroughId}/tools`}
+										href={`/playthrough/${activeId}/tools`}
 										currentPath={pathname}
 										icon={<FaTools />}
 										indented
@@ -465,7 +489,7 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 									</SidebarLink>
 
 									<SidebarLink
-										href={`/playthrough/${playthroughId}/weapons`}
+										href={`/playthrough/${activeId}/weapons`}
 										currentPath={pathname}
 										icon={<GiSwordman />}
 										indented
@@ -474,7 +498,7 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 									</SidebarLink>
 
 									<SidebarLink
-										href={`/playthrough/${playthroughId}/equipment`}
+										href={`/playthrough/${activeId}/equipment`}
 										currentPath={pathname}
 										icon={<GiBackpack />}
 										indented
@@ -483,7 +507,7 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 									</SidebarLink>
 
 									<SidebarLink
-										href={`/playthrough/${playthroughId}/vehicles`}
+										href={`/playthrough/${activeId}/vehicles`}
 										currentPath={pathname}
 										icon={<FaCar />}
 										indented
@@ -501,18 +525,18 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 									onToggle={() => setDecorOpen(!decorOpen)}
 									active={
 										pathname?.includes(
-											`/playthrough/${playthroughId}/clothing`
+											`/playthrough/${activeId}/clothing`
 										) ||
 										pathname?.includes(
-											`/playthrough/${playthroughId}/decorations`
+											`/playthrough/${activeId}/decorations`
 										) ||
 										pathname?.includes(
-											`/playthrough/${playthroughId}/furniture`
+											`/playthrough/${activeId}/furniture`
 										)
 									}
 								>
 									<SidebarLink
-										href={`/playthrough/${playthroughId}/clothing`}
+										href={`/playthrough/${activeId}/clothing`}
 										currentPath={pathname}
 										icon={<GiClothes />}
 										indented
@@ -521,7 +545,7 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 									</SidebarLink>
 
 									<SidebarLink
-										href={`/playthrough/${playthroughId}/decorations`}
+										href={`/playthrough/${activeId}/decorations`}
 										currentPath={pathname}
 										icon={<GiPartyPopper />}
 										indented
@@ -530,7 +554,7 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 									</SidebarLink>
 
 									<SidebarLink
-										href={`/playthrough/${playthroughId}/furniture`}
+										href={`/playthrough/${activeId}/furniture`}
 										currentPath={pathname}
 										icon={<FaCouch />}
 										indented

@@ -2,6 +2,17 @@ import { Playthrough } from "@/types/app";
 import { CalendarData, Collection } from "@/types/dinkum";
 
 export const STORAGE_KEY = "dinkum-tracker-playthroughs";
+export const ACTIVE_PLAYTHROUGH_KEY = "dinkum-tracker-active-playthrough";
+
+export const getActivePlaythroughId = (): string | null => {
+  if (typeof window === "undefined") return null;
+  return localStorage.getItem(ACTIVE_PLAYTHROUGH_KEY);
+};
+
+export const setActivePlaythroughId = (id: string): void => {
+  if (typeof window === "undefined") return;
+  localStorage.setItem(ACTIVE_PLAYTHROUGH_KEY, id);
+};
 
 export const getPlaythroughs = (): Playthrough[] => {
   if (typeof window === "undefined") {
