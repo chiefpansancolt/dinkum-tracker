@@ -6,6 +6,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [1.3.0] - 2026-04-10
+
+### Features
+
+- Add active playthrough switcher to the sidebar — switch between playthroughs from any page without navigating to the list
+- Persist active playthrough selection in localStorage so it is remembered across page navigations
+- Always show current playthrough nav items in the sidebar whenever an active playthrough is set, not only when on a playthrough route
+- Add global search bar to the top navigation — search across all 18 tracked categories (fish, bugs, critters, NPCs, milestones, licenses, buildings, skills, recipes, gear, clothing, furniture, and more) when a playthrough is active; clicking a result navigates to that item's page with the search pre-filled
+- Add NPCs to global search results; navigates to the NPC relationships page on click
+- Update Playthroughs list — replace "Manage Playthrough" button with "Set as Active Playthrough"; the currently active playthrough shows a muted indicator instead of the button
+
+### Changed
+
+- Migrate all game images from remote Dinkum Wiki URLs to locally hosted files under `public/images/` for faster load times and offline availability
+- Update footer copyright to display the current year dynamically
+- Update footer copyright symbol to use a React icon (`FaRegCopyright`)
+
 ## [1.2.0] - 2026-03-11
 
 ### Features
