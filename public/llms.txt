@@ -1,0 +1,35 @@
+# Dinkum Tracker
+
+> A free, browser-based progress tracker for the game Dinkum.
+> All data is stored locally in your browser — no account or login required.
+
+## What it tracks
+
+- **Collections**: Fish, bugs, and critters (with donation status for the museum)
+- **Milestones**: In-game achievement milestones
+- **Licenses**: Town licenses and their unlock status
+- **Skills**: Skill levels for each profession
+- **Buildings**: Building construction progress
+- **NPCs**: Relationship levels with townsfolk
+- **Recipes**: Cooking, crafting, and sign-writing recipes
+- **Equipment & Gear**: Tools, weapons, vehicles, clothing, and furniture
+- **Calendar**: Current in-game day and season
+- **Playthroughs**: Manage multiple save files independently
+
+## Reference pages
+
+- `/dinkum` — Game reference hub
+- `/dinkum/animals` — Animal spawn locations and details
+- `/dinkum/crops` — Crop growing seasons and yields
+- `/dinkum/flowers` — Flower types and locations
+- `/dinkum/resources` — Resource nodes and gathering info
+- `/dinkum/seeds` — Seed types and planting info
+- `/dinkum/trees` — Tree types and locations
+- `/itemsBreakdown` — Cross-category item analysis
+- `/weight-calculator` — Inventory weight calculator
+
+## Technical notes
+
+- Built with Next.js, React, TypeScript, and Tailwind CSS
+- No backend — all playthrough data lives in browser localStorage
+- Open source, no ads, no tracking beyond Vercel Analytics
