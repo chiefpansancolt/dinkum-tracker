@@ -61,6 +61,7 @@ export default function PlaythroughsPage() {
 
 	useEffect(() => {
 		if (typeof window !== "undefined") {
+			// eslint-disable-next-line react-hooks/set-state-in-effect
 			setActiveId(getActivePlaythroughId());
 
 			getDefaultSortPreference().then((defaultSort) => {
