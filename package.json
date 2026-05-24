@@ -35,8 +35,8 @@
         "@vercel/speed-insights": "^2.0.0",
         "flowbite-react": "^0.12.17",
         "next": "16.2.3",
-        "react": "^19.2.5",
-        "react-dom": "^19.2.5",
+        "react": "^19.2.6",
+        "react-dom": "^19.2.6",
         "react-toastify": "^11.0.5",
         "zustand": "^5.0.12"
     },
