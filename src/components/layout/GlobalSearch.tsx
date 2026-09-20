@@ -36,7 +36,7 @@ export default function GlobalSearch() {
 		}
 		const startsWith = searchIndex.filter((e) => e.nameLower.startsWith(q));
 		const contains = searchIndex.filter(
-			(e) => !e.nameLower.startsWith(q) && e.nameLower.includes(q),
+			(e) => !e.nameLower.startsWith(q) && e.nameLower.includes(q)
 		);
 		setResults([...startsWith, ...contains].slice(0, 8));
 		setActiveIndex(-1);
@@ -88,9 +88,9 @@ export default function GlobalSearch() {
 	if (!activeId) return null;
 
 	return (
-		<div ref={containerRef} className="relative w-full max-w-lg mx-auto">
+		<div ref={containerRef} className="relative mx-auto w-full max-w-lg">
 			<div className="relative">
-				<HiSearch className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-white/70 pointer-events-none" />
+				<HiSearch className="pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-white/70" />
 				<input
 					ref={inputRef}
 					type="text"
@@ -102,12 +102,12 @@ export default function GlobalSearch() {
 					onFocus={() => setOpen(true)}
 					onKeyDown={handleKeyDown}
 					placeholder="Search items..."
-					className="w-full rounded-lg bg-black/25 border border-white/40 pl-9 pr-4 py-1.5 text-sm text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 focus:bg-black/30"
+					className="w-full rounded-lg border border-white/40 bg-black/25 py-1.5 pr-4 pl-9 text-sm text-white placeholder-white/60 focus:bg-black/30 focus:ring-2 focus:ring-white/50 focus:outline-none"
 				/>
 			</div>
 
 			{open && results.length > 0 && (
-				<div className="absolute top-full mt-1 left-0 right-0 z-50 rounded-lg border border-gray-200 bg-white shadow-lg dark:border-gray-600 dark:bg-gray-700 overflow-hidden">
+				<div className="absolute top-full right-0 left-0 z-50 mt-1 overflow-hidden rounded-lg border border-gray-200 bg-white shadow-lg dark:border-gray-600 dark:bg-gray-700">
 					{results.map((entry, i) => (
 						<button
 							key={`${entry.route}-${entry.id}`}

@@ -5,12 +5,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaAward, FaBug, FaBuilding, FaFish, FaIdCard } from "react-icons/fa";
 import { GiCrab } from "react-icons/gi";
-import {
-	HiOutlineCalendar,
-	HiOutlineRefresh,
-	HiOutlineStar,
-	HiOutlineTrash,
-} from "react-icons/hi";
+import { HiOutlineCalendar, HiOutlineRefresh, HiOutlineStar, HiOutlineTrash } from "react-icons/hi";
 import { PlaythroughCardProps } from "@/types";
 import { setActivePlaythroughId } from "@/lib/localStorage";
 import { deletePlaythrough } from "@/lib/storage";
@@ -32,7 +27,12 @@ import {
 	weapons,
 } from "@/data/dinkum";
 
-export default function PlaythroughCard({ playthrough, activeId, onDelete, onSetActive }: PlaythroughCardProps) {
+export default function PlaythroughCard({
+	playthrough,
+	activeId,
+	onDelete,
+	onSetActive,
+}: PlaythroughCardProps) {
 	const router = useRouter();
 	const [isDeleting, setIsDeleting] = useState(false);
 	const [openModal, setOpenModal] = useState(false);

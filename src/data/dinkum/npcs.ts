@@ -13,11 +13,9 @@ export const npcs: NPC[] = [
     },
     foodPreferences: {
       likes: "Bush Lime",
-      likesImg:
-        "/images/resources/foragables/Inv_Bush_Lime.png",
+      likesImg: "/images/resources/foragables/Inv_Bush_Lime.png",
       dislikes: "Croco Meat\nAny type of Meat products.",
-      dislikesImg:
-        "/images/animals/Inv_Croco_Meat.png",
+      dislikesImg: "/images/animals/Inv_Croco_Meat.png",
     },
   },
   {
@@ -31,11 +29,9 @@ export const npcs: NPC[] = [
     },
     foodPreferences: {
       likes: "Cooked Croco Meat",
-      likesImg:
-        "/images/recipes/cookingRecipes/Inv_Cooked_Croco_Meat.png",
+      likesImg: "/images/recipes/cookingRecipes/Inv_Cooked_Croco_Meat.png",
       dislikes: "Potato\nAny type of Animal and Fruit products.",
-      dislikesImg:
-        "/images/resources/crops/Inv_Potato.png",
+      dislikesImg: "/images/resources/crops/Inv_Potato.png",
     },
   },
   {
@@ -49,11 +45,9 @@ export const npcs: NPC[] = [
     },
     foodPreferences: {
       likes: "Cooked Cactus Fig",
-      likesImg:
-        "/images/recipes/cookingRecipes/Inv_Cooked_Cactus_Fig.png",
+      likesImg: "/images/recipes/cookingRecipes/Inv_Cooked_Cactus_Fig.png",
       dislikes: "Cactus Figs",
-      dislikesImg:
-        "/images/resources/foragables/Inv_Cactus_Figs.png",
+      dislikesImg: "/images/resources/foragables/Inv_Cactus_Figs.png",
     },
   },
   {
@@ -67,11 +61,9 @@ export const npcs: NPC[] = [
     },
     foodPreferences: {
       likes: "Apple",
-      likesImg:
-        "/images/resources/foragables/Inv_Apple.png",
+      likesImg: "/images/resources/foragables/Inv_Apple.png",
       dislikes: "Cooked Drumstick\nAny type of Animal and Vegetables products.",
-      dislikesImg:
-        "/images/recipes/cookingRecipes/Inv_Cooked_Drumstick.png",
+      dislikesImg: "/images/recipes/cookingRecipes/Inv_Cooked_Drumstick.png",
     },
   },
   {
@@ -87,11 +79,9 @@ export const npcs: NPC[] = [
     },
     foodPreferences: {
       likes: "Cooked Giant Drumstick",
-      likesImg:
-        "/images/recipes/cookingRecipes/Inv_Cooked_Giant_Drumstick.png",
+      likesImg: "/images/recipes/cookingRecipes/Inv_Cooked_Giant_Drumstick.png",
       dislikes: "Bush Lime\nAny type of Vegetable products.",
-      dislikesImg:
-        "/images/resources/foragables/Inv_Bush_Lime.png",
+      dislikesImg: "/images/resources/foragables/Inv_Bush_Lime.png",
     },
   },
   {
@@ -105,11 +95,9 @@ export const npcs: NPC[] = [
     },
     foodPreferences: {
       likes: "Bananas",
-      likesImg:
-        "/images/resources/foragables/Inv_Bananas.png",
+      likesImg: "/images/resources/foragables/Inv_Bananas.png",
       dislikes: "Cooked Croco Meat\nAny type of Animal and Meat products.",
-      dislikesImg:
-        "/images/recipes/cookingRecipes/Inv_Cooked_Croco_Meat.png",
+      dislikesImg: "/images/recipes/cookingRecipes/Inv_Cooked_Croco_Meat.png",
     },
   },
   {
@@ -123,11 +111,9 @@ export const npcs: NPC[] = [
     },
     foodPreferences: {
       likes: "Cooked Meat",
-      likesImg:
-        "/images/recipes/cookingRecipes/Inv_Cooked_Meat.png",
+      likesImg: "/images/recipes/cookingRecipes/Inv_Cooked_Meat.png",
       dislikes: "Chicken Egg\nAny type of Animal products.",
-      dislikesImg:
-        "/images/resources/animalProducts/Inv_Chicken_Egg.png",
+      dislikesImg: "/images/resources/animalProducts/Inv_Chicken_Egg.png",
     },
   },
   {
@@ -141,11 +127,9 @@ export const npcs: NPC[] = [
     },
     foodPreferences: {
       likes: "High Quality Cheese",
-      likesImg:
-        "/images/recipes/cookingRecipes/Inv_High_Quality_Cheese.png",
+      likesImg: "/images/recipes/cookingRecipes/Inv_High_Quality_Cheese.png",
       dislikes: "Cheese\nAny type of Fruits products.",
-      dislikesImg:
-        "/images/recipes/cookingRecipes/Inv_Cheese.png",
+      dislikesImg: "/images/recipes/cookingRecipes/Inv_Cheese.png",
     },
   },
   {
@@ -159,11 +143,9 @@ export const npcs: NPC[] = [
     },
     foodPreferences: {
       likes: "Corn",
-      likesImg:
-        "/images/resources/crops/Inv_Corn.png",
+      likesImg: "/images/resources/crops/Inv_Corn.png",
       dislikes: "Pumpkin\nAny type of Animal and Meat products.",
-      dislikesImg:
-        "/images/resources/crops/Inv_Pumpkin.png",
+      dislikesImg: "/images/resources/crops/Inv_Pumpkin.png",
     },
   },
   {
@@ -178,11 +160,9 @@ export const npcs: NPC[] = [
     },
     foodPreferences: {
       likes: "Glowing Mushroom",
-      likesImg:
-        "/images/resources/foragables/Inv_Glowing_Mushroom.png",
+      likesImg: "/images/resources/foragables/Inv_Glowing_Mushroom.png",
       dislikes: "Cabbage\nAny type of Animal products.",
-      dislikesImg:
-        "/images/resources/crops/Inv_Cabbage.png",
+      dislikesImg: "/images/resources/crops/Inv_Cabbage.png",
     },
   },
   {
@@ -197,11 +177,9 @@ export const npcs: NPC[] = [
     },
     foodPreferences: {
       likes: "Prime Roast",
-      likesImg:
-        "/images/recipes/cookingRecipes/Inv_Prime_Roast.png",
+      likesImg: "/images/recipes/cookingRecipes/Inv_Prime_Roast.png",
       dislikes: "Cooked Blob Fish",
-      dislikesImg:
-        "/images/recipes/cookingRecipes/Inv_Cooked_Blob_Fish.png",
+      dislikesImg: "/images/recipes/cookingRecipes/Inv_Cooked_Blob_Fish.png",
     },
   },
   {
@@ -216,11 +194,9 @@ export const npcs: NPC[] = [
     },
     foodPreferences: {
       likes: "Cooked Drumstick",
-      likesImg:
-        "/images/recipes/cookingRecipes/Inv_Cooked_Drumstick.png",
+      likesImg: "/images/recipes/cookingRecipes/Inv_Cooked_Drumstick.png",
       dislikes: "Kale\nAny type of Animal, Fruit and Vegetable products.",
-      dislikesImg:
-        "/images/resources/crops/Inv_Kale.png",
+      dislikesImg: "/images/resources/crops/Inv_Kale.png",
     },
   },
   {
@@ -336,11 +312,9 @@ export const npcs: NPC[] = [
     },
     foodPreferences: {
       likes: "Cooked Saltwater Fish",
-      likesImg:
-        "/images/recipes/cookingRecipes/Inv_Cooked_Saltwater_Fish.png",
+      likesImg: "/images/recipes/cookingRecipes/Inv_Cooked_Saltwater_Fish.png",
       dislikes: "Cooked Meat",
-      dislikesImg:
-        "/images/recipes/cookingRecipes/Inv_Cooked_Meat.png",
+      dislikesImg: "/images/recipes/cookingRecipes/Inv_Cooked_Meat.png",
     },
   },
   {
@@ -354,11 +328,9 @@ export const npcs: NPC[] = [
     },
     foodPreferences: {
       likes: "Pastie",
-      likesImg:
-        "/images/recipes/cookingRecipes/Inv_Pastie.png",
+      likesImg: "/images/recipes/cookingRecipes/Inv_Pastie.png",
       dislikes: "Mushroom Soup",
-      dislikesImg:
-        "/images/recipes/cookingRecipes/Inv_Mushroom_Soup.png",
+      dislikesImg: "/images/recipes/cookingRecipes/Inv_Mushroom_Soup.png",
     },
   },
   {
@@ -372,11 +344,9 @@ export const npcs: NPC[] = [
     },
     foodPreferences: {
       likes: "Banana Jam",
-      likesImg:
-        "/images/recipes/cookingRecipes/Inv_Banana_Jam.png",
+      likesImg: "/images/recipes/cookingRecipes/Inv_Banana_Jam.png",
       dislikes: "Apple",
-      dislikesImg:
-        "/images/resources/foragables/Inv_Apple.png",
+      dislikesImg: "/images/resources/foragables/Inv_Apple.png",
     },
   },
   {
@@ -390,11 +360,9 @@ export const npcs: NPC[] = [
     },
     foodPreferences: {
       likes: "Roe Nigiri",
-      likesImg:
-        "/images/recipes/cookingRecipes/Inv_Roe_Nigiri.png",
+      likesImg: "/images/recipes/cookingRecipes/Inv_Roe_Nigiri.png",
       dislikes: "Crab Soup",
-      dislikesImg:
-        "/images/recipes/cookingRecipes/Inv_Crab_Soup.png",
+      dislikesImg: "/images/recipes/cookingRecipes/Inv_Crab_Soup.png",
     },
   },
 ];

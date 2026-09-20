@@ -10,8 +10,8 @@ import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { HiPlus } from "react-icons/hi";
 import { Playthrough } from "@/types/app";
-import { getDefaultSortPreference } from "@/lib/services/dataService";
 import { getActivePlaythroughId } from "@/lib/localStorage";
+import { getDefaultSortPreference } from "@/lib/services/dataService";
 import { getPlaythroughs } from "@/lib/storage";
 import PlaythroughCard from "./Card";
 

@@ -2,9 +2,7 @@ import { DeedTypes } from "@/data/constants";
 import { Base, Resource } from "./base";
 
 export type DeedType =
-  | DeedTypes.Collectable
-  | DeedTypes.Movable
-  | DeedTypes.Reference;
+  DeedTypes.Collectable | DeedTypes.Movable | DeedTypes.Reference;
 
 export interface Building extends Base {
   deedName: string;

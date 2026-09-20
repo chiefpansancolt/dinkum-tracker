@@ -1,22 +1,22 @@
-import { npcs } from "@/data/dinkum/npcs";
-import { bugs } from "@/data/dinkum/pedia/bugs";
-import { critters } from "@/data/dinkum/pedia/critters";
-import { fish } from "@/data/dinkum/pedia/fish";
 import { buildings } from "@/data/dinkum/buildings";
 import { clothing } from "@/data/dinkum/clothing";
 import { furniture } from "@/data/dinkum/furniture";
-import { licenses } from "@/data/dinkum/licences";
-import { milestones } from "@/data/dinkum/milestones";
-import { skills } from "@/data/dinkum/skills";
 import { books } from "@/data/dinkum/gearAndEquipment/books";
 import { cassettes } from "@/data/dinkum/gearAndEquipment/cassettes";
 import { equipment } from "@/data/dinkum/gearAndEquipment/equipment";
 import { tools } from "@/data/dinkum/gearAndEquipment/tools";
 import { vehicles } from "@/data/dinkum/gearAndEquipment/vehicles";
 import { weapons } from "@/data/dinkum/gearAndEquipment/weapons";
+import { licenses } from "@/data/dinkum/licences";
+import { milestones } from "@/data/dinkum/milestones";
+import { npcs } from "@/data/dinkum/npcs";
+import { bugs } from "@/data/dinkum/pedia/bugs";
+import { critters } from "@/data/dinkum/pedia/critters";
+import { fish } from "@/data/dinkum/pedia/fish";
 import { cookingRecipes } from "@/data/dinkum/recipes/cookingRecipes";
 import { craftingRecipes } from "@/data/dinkum/recipes/craftingRecipes";
 import { signWritingRecipes } from "@/data/dinkum/recipes/signWritingRecipes";
+import { skills } from "@/data/dinkum/skills";
 
 export interface SearchEntry {
   id: string;

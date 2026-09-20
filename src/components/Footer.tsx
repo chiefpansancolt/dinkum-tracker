@@ -70,7 +70,11 @@ export default function Footer() {
 								</a>
 							</li>
 							<li>
-								<a href="https://gamerdex.app" className="hover:text-highlight" target="_Blank">
+								<a
+									href="https://gamerdex.app"
+									className="hover:text-highlight"
+									target="_Blank"
+								>
 									GamerDex
 								</a>
 							</li>
@@ -92,7 +96,10 @@ export default function Footer() {
 				</div>
 				<hr className="my-6 border-gray-200/20 lg:my-8" />
 				<div className="text-center">
-					<span className="flex items-center justify-center gap-1 text-sm"><FaRegCopyright className="h-3.5 w-3.5" /> {new Date().getFullYear()} Dinkum Tracker. All Rights Reserved.</span>
+					<span className="flex items-center justify-center gap-1 text-sm">
+						<FaRegCopyright className="h-3.5 w-3.5" /> {new Date().getFullYear()} Dinkum
+						Tracker. All Rights Reserved.
+					</span>
 				</div>
 			</div>
 		</footer>

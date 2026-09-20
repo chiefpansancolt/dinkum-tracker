@@ -9,8 +9,7 @@ export const buildings: Building[] = [
     size: "6x5",
     img: "/images/buildings/Inv_Airport_Deed.png",
     npc: "Nancy",
-    npcImg:
-      "/images/npcs/NPC_Nancy.png",
+    npcImg: "/images/npcs/NPC_Nancy.png",
     description: "From Year 2 after all NPCs have moved in",
     buildTime: "2 Nights",
     deedPrice: 2500000,
@@ -110,8 +109,7 @@ export const buildings: Building[] = [
     size: "4x4",
     img: "/images/buildings/Inv_Bank_Deed.png",
     npc: "Milburn",
-    npcImg:
-      "/images/npcs/NPC_Milburn.png",
+    npcImg: "/images/npcs/NPC_Milburn.png",
     description: "Store Dinks for interest. Economy > 35%.",
     buildTime: "2 Nights",
     deedPrice: 100000,
@@ -158,8 +156,7 @@ export const buildings: Building[] = [
     size: "5x5",
     img: "/images/buildings/Inv_Base_Tent_Roll.png",
     npc: "Fletch",
-    npcImg:
-      "/images/npcs/NPC_Fletch.png",
+    npcImg: "/images/npcs/NPC_Fletch.png",
     description:
       "Starter building. Obtain from Fletch after landing on the Island. Fletch appears at the Base Tent after it is placed/built.",
     buildTime: "Instant",
@@ -176,8 +173,7 @@ export const buildings: Building[] = [
     size: "",
     img: "/images/buildings/Inv_Move_Base_Tent.png",
     npc: "Fletch",
-    npcImg:
-      "/images/npcs/NPC_Fletch.png",
+    npcImg: "/images/npcs/NPC_Fletch.png",
     description:
       "This is used to move the Base Tent. This deed becomes available after the player has received the nails and crate recipes from Fletch.",
     buildTime: "Overnight",
@@ -222,8 +218,7 @@ export const buildings: Building[] = [
     size: "4x4",
     img: "/images/buildings/Inv_Crafting_Lab_Deed.png",
     npc: "Franklyn",
-    npcImg:
-      "/images/npcs/NPC_Franklyn.png",
+    npcImg: "/images/npcs/NPC_Franklyn.png",
     description:
       "Research Center. Spend > 190,000 Dinks (sold Shiny Discs included). Relationship > 3/4 heart with Franklyn.",
     buildTime: "2 Nights",
@@ -455,8 +450,7 @@ export const buildings: Building[] = [
     size: "5x4",
     img: "/images/buildings/Inv_Animal_Shop_Deed.png",
     npc: "Irwin",
-    npcImg:
-      "/images/npcs/NPC_Irwin.png",
+    npcImg: "/images/npcs/NPC_Irwin.png",
     description:
       "Animal Store. Spend > 25,000 Dinks with Irwin. Relationship > 1/2 heart.",
     buildTime: "2 Nights",
@@ -504,8 +498,7 @@ export const buildings: Building[] = [
     size: "",
     img: "/images/buildings/Jimmys_Boat.png",
     npc: "Jimmy",
-    npcImg:
-      "/images/npcs/NPC_Jimmy.png",
+    npcImg: "/images/npcs/NPC_Jimmy.png",
     description:
       "Must be raining in the morning. At least 1,000,000 in your Bank account. Will buy stacks of 50+ for 1.5 times the value.",
     buildTime: "",
@@ -559,8 +552,7 @@ export const buildings: Building[] = [
     size: "4x4",
     img: "/images/buildings/Inv_Furniture_Shop_Deed.png",
     npc: "Melvin",
-    npcImg:
-      "/images/npcs/NPC_Melvin.png",
+    npcImg: "/images/npcs/NPC_Melvin.png",
     description:
       "Furniture Store. Spend > 800 Dinks with Melvin. Relationship > 1 heart.",
     buildTime: "2 Nights",
@@ -646,8 +638,7 @@ export const buildings: Building[] = [
     size: "6x5",
     img: "/images/buildings/Inv_Museum_Deed.png",
     npc: "Theodore",
-    npcImg:
-      "/images/npcs/NPC_Theodore.png",
+    npcImg: "/images/npcs/NPC_Theodore.png",
     description:
       "Unlocked after John has moved in and the player talks to Theodore for the first time. Display Bugs, Critters, and Fish.",
     buildTime: "2 Nights",
@@ -685,8 +676,7 @@ export const buildings: Building[] = [
     size: "5x4",
     img: "/images/buildings/Inv_Plant_Shop_Deed.png",
     npc: "Rayne",
-    npcImg:
-      "/images/npcs/NPC_Rayne.png",
+    npcImg: "/images/npcs/NPC_Rayne.png",
     description:
       "Seeds and Gardening Tools. Spend > 18,000 Dinks with Rayne. Relationship > 1/2 heart.",
     buildTime: "2 Nights",
@@ -734,8 +724,7 @@ export const buildings: Building[] = [
     size: "5x5",
     img: "/images/buildings/Inv_Salon_Deed.png",
     npc: "Sally",
-    npcImg:
-      "/images/npcs/NPC_Sally.png",
+    npcImg: "/images/npcs/NPC_Sally.png",
     description:
       "Hairstyles and facial changes. Spend > 10,000 Dinks with Sally. Relationship > 2 1/4 hearts.",
     buildTime: "Overnight",
@@ -885,8 +874,7 @@ export const buildings: Building[] = [
     size: "4x5",
     img: "/images/buildings/Inv_Clothing_Shop_Deed.png",
     npc: "Clover",
-    npcImg:
-      "/images/npcs/NPC_Clover.png",
+    npcImg: "/images/npcs/NPC_Clover.png",
     description:
       "Clothes. Spend > 10,000 Dinks with Clover. Relationship > 1 heart.",
     buildTime: "2 Nights",
@@ -934,8 +922,7 @@ export const buildings: Building[] = [
     size: "3x3",
     img: "/images/buildings/Inv_Town_Bell_Deed.png",
     npc: "Fletch",
-    npcImg:
-      "/images/npcs/NPC_Fletch.png",
+    npcImg: "/images/npcs/NPC_Fletch.png",
     description:
       "The Town Bell Deed is unlocked after completing the Town Hall.",
     buildTime: "2 Nights",
@@ -983,8 +970,7 @@ export const buildings: Building[] = [
     size: "5x5",
     img: "/images/buildings/Inv_Move_Town_Hall.png",
     npc: "Fletch",
-    npcImg:
-      "/images/npcs/NPC_Fletch.png",
+    npcImg: "/images/npcs/NPC_Fletch.png",
     description:
       "Upgrading the Base Tent to the Town Hall requires 5 permanent residents. Talk to Fletch.",
     buildTime: "Overnight",
@@ -1032,8 +1018,7 @@ export const buildings: Building[] = [
     size: "",
     img: "/images/buildings/Inv_Move_Town_Hall.png",
     npc: "Fletch",
-    npcImg:
-      "/images/npcs/NPC_Fletch.png",
+    npcImg: "/images/npcs/NPC_Fletch.png",
     description:
       "This is used to move the Town Hall. This deed becomes available after the player has already upgraded the Base Tent to the Town Hall.",
     buildTime: "Overnight",
@@ -1050,8 +1035,7 @@ export const buildings: Building[] = [
     size: "9x6",
     img: "/images/buildings/Inv_Tuckshop_Deed.png",
     npc: "Sheila",
-    npcImg:
-      "/images/npcs/NPC_Sheila.png",
+    npcImg: "/images/npcs/NPC_Sheila.png",
     description:
       "A place to get tucker and yarns. Relationship > 1 1/4 hearts  with Sheila.",
     buildTime: "2 Nights",

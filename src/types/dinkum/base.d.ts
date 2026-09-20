@@ -15,12 +15,7 @@ export type Weekday =
   | "Saturday";
 
 export type FilterKey =
-  | "biome"
-  | "rarity"
-  | "season"
-  | "time"
-  | "collection"
-  | "donation";
+  "biome" | "rarity" | "season" | "time" | "collection" | "donation";
 
 export interface Resource {
   name: string;
