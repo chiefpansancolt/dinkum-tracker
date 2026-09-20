@@ -3,7 +3,7 @@ updates:
   - package-ecosystem: npm
     directory: /
     schedule:
-      interval: weekly
+      interval: monthly
     open-pull-requests-limit: 10
     groups:
       next:
@@ -43,12 +43,17 @@ updates:
           - prettier-plugin-tailwindcss
           - "@trivago/prettier-plugin-sort-imports"
     ignore:
+      # eslint-plugin-react (via eslint-config-next) does not support ESLint 10 yet
       - dependency-name: "eslint"
+        update-types:
+          - "version-update:semver-major"
+      # typescript-eslint does not support TypeScript 7 yet
+      - dependency-name: "typescript"
         update-types:
           - "version-update:semver-major"
 
   - package-ecosystem: github-actions
     directory: /
     schedule:
-      interval: weekly
+      interval: monthly
     open-pull-requests-limit: 5

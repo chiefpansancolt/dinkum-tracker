@@ -5,7 +5,7 @@ import DayDetails from "@/components/playthrough/DayDetails";
 import LoadingPlaythrough from "@/components/playthrough/LoadingPlaythrough";
 import { Alert } from "flowbite-react";
 import { useParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { HiInformationCircle } from "react-icons/hi";
 import { CalendarDay, Playthrough, Season } from "@/types";
 import { getPlaythroughById, updatePlaythroughData } from "@/lib/storage";
@@ -22,7 +22,7 @@ export default function CalendarPage() {
 	const [isDirty, setIsDirty] = useState(false);
 	const [initialized, setInitialized] = useState(false);
 	const { currentDay, selectedSeason, setSelectedSeason, setDate } = useCalendarStore();
-	const [seasonDays, setSeasonDays] = useState(getSeasonDays(selectedSeason));
+	const seasonDays = useMemo(() => getSeasonDays(selectedSeason), [selectedSeason]);
 	const [selectedDay, setSelectedDay] = useState<CalendarDay | null>(null);
 
 	useEffect(() => {
@@ -45,16 +45,14 @@ export default function CalendarPage() {
 	}, [playthroughId, setDate, initialized]);
 
 	useEffect(() => {
-		setSeasonDays(getSeasonDays(selectedSeason));
-	}, [selectedSeason]);
-
-	useEffect(() => {
+		/* eslint-disable react-hooks/set-state-in-effect -- one-time sync of the local selection with the store's current day */
 		if (currentDay && !initialized) {
 			setSelectedDay(currentDay);
 			setInitialized(true);
 		} else if (currentDay && selectedDay === null) {
 			setSelectedDay(currentDay);
 		}
+		/* eslint-enable react-hooks/set-state-in-effect */
 	}, [currentDay, selectedDay, initialized]);
 
 	const handleDayClick = (day: CalendarDay) => {
