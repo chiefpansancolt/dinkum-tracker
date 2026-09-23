@@ -1,9 +1,8 @@
 import "@/app/globals.css";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeModeScript } from "flowbite-react";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import LayoutWrapper from "@/comps/layout/LayoutWrapper";
 
 const geistSans = Geist({
@@ -62,8 +61,11 @@ export default function RootLayout({
 				className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-gray-50 antialiased dark:bg-gray-800`}
 			>
 				<LayoutWrapper>{children}</LayoutWrapper>
-				<SpeedInsights />
-				<Analytics />
+				<Script
+					src="https://static.cloudflareinsights.com/beacon.min.js"
+					strategy="afterInteractive"
+					data-cf-beacon='{"token": "195d9b2b11a443eca5a1fe2526c2bb35"}'
+				/>
 			</body>
 		</html>
 	);
