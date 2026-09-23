@@ -16,11 +16,17 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
 	metadataBase: new URL("https://dinkum.gamerdex.app"),
-	title: "Dinkum Tracker",
+	title: {
+		default: "Dinkum Tracker",
+		template: "%s | Dinkum Tracker",
+	},
 	description:
 		"Track your Dinkum progress — fish, bugs, critters, milestones, licenses, NPCs, and more.",
 	applicationName: "Dinkum Tracker",
 	keywords: ["dinkum", "dinkum game", "dinkum tracker", "dinkum progress tracker"],
+	alternates: {
+		canonical: "/",
+	},
 	openGraph: {
 		title: "Dinkum Tracker",
 		description:
