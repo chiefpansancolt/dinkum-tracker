@@ -1,3 +1,4 @@
+import type { Seed } from "dinkum-data";
 import { Badge } from "flowbite-react";
 import { CollectionCardProps } from "@/types";
 import DinkValue from "@/playthrough/ui/itemcard/DinkValue";
@@ -6,7 +7,9 @@ import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
 import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
 import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
 
-const SeedCard = ({ record }: CollectionCardProps) => {
+const SeedCard = ({ record: seedRecord }: CollectionCardProps) => {
+	const record = seedRecord as Seed;
+
 	return (
 		<ItemCard
 			renderHeader={() => (

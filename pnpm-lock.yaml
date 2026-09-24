@@ -11,6 +11,9 @@ importers:
 
   .:
     dependencies:
+      dinkum-data:
+        specifier: 0.2.0
+        version: 0.2.0
       flowbite-react:
         specifier: ^0.12.17
         version: 0.12.17(@emnapi/core@1.10.0)(@emnapi/runtime@1.11.3)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(tailwindcss@4.3.3)
@@ -1238,6 +1241,10 @@ packages:
   diff@4.0.4:
     resolution: {integrity: sha512-X07nttJQkwkfKfvTPG/KSnE2OMdcUCao6+eXF3wmnIQRn2aPAHH3VxDbDOdegkd6JbPsXqShpvEOHfAT+nCNwQ==}
     engines: {node: '>=0.3.1'}
+
+  dinkum-data@0.2.0:
+    resolution: {integrity: sha512-Eb8JwQed3784UV7SOm5bwhxntVT1MOKPpnwxqXOoKiA9qT7ZwuRFpxNLhU9JpLQjqef8GNAxUFdpwsla1zftIA==}
+    engines: {node: '>=24'}
 
   doctrine@2.1.0:
     resolution: {integrity: sha512-35mSku4ZXK0vfCuHEDAwt55dg2jNajHZ1odvF+8SSr82EsZY4QmXfuWso8oEd8zRhVObSN18aM0CjSdoBX7zIw==}
@@ -3554,6 +3561,8 @@ snapshots:
   detect-libc@2.1.2: {}
 
   diff@4.0.4: {}
+
+  dinkum-data@0.2.0: {}
 
   doctrine@2.1.0:
     dependencies:

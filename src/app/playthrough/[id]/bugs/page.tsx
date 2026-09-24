@@ -1,31 +1,20 @@
 "use client";
 
+import {
+	type Biome,
+	bugs,
+	type RarityLevel,
+	type Season,
+	SEASONS,
+	TIME_PERIODS,
+	type TimePeriod,
+} from "dinkum-data";
 import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
-import {
-	Biome,
-	FilterArray,
-	FilterKey,
-	FilterObject,
-	Playthrough,
-	Season,
-	TimePeriod,
-} from "@/types";
+import { FilterArray, FilterKey, FilterObject, Playthrough } from "@/types";
 import { getPlaythroughById, updatePlaythroughData } from "@/lib/storage";
 import { getQueryParams, setQueryParam } from "@/service/urlService";
 import { collectedFilter, donatedFilter } from "@/data/constants";
-import {
-	bugs,
-	getBugsByBiome,
-	getBugsByRarity,
-	getBugsBySearchValue,
-	getBugsBySeason,
-	getBugsByTime,
-	getUniqueBugBiomes,
-	getUniqueBugRarities,
-	getUniqueBugSeasons,
-	getUniqueBugTimePeriods,
-} from "@/data/dinkum";
 import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
 import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
@@ -35,6 +24,20 @@ import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
 import TabHeader from "@/playthrough/ui/TabHeader";
 import BugCard from "./BugCard";
+
+const allBugs = bugs().get();
+
+const uniqueBugBiomes: FilterArray = (() => {
+	const biomes = new Set<string>();
+	allBugs.forEach((item) => item.biome.forEach((b) => biomes.add(b)));
+	return ["All", ...Array.from(biomes)].sort();
+})();
+
+const uniqueBugRarities: FilterArray = (() => {
+	const rarities = new Set<string>();
+	allBugs.forEach((item) => rarities.add(item.rarity));
+	return ["All", ...Array.from(rarities)].sort();
+})();
 
 export default function BugsPage() {
 	const params = useParams();
@@ -56,22 +59,22 @@ export default function BugsPage() {
 	}>({
 		biome: {
 			value: "All",
-			options: getUniqueBugBiomes(),
+			options: uniqueBugBiomes,
 			label: "Biome",
 		},
 		rarity: {
 			value: "All",
-			options: getUniqueBugRarities(),
+			options: uniqueBugRarities,
 			label: "Rarity",
 		},
 		season: {
 			value: "All",
-			options: getUniqueBugSeasons(),
+			options: [...SEASONS],
 			label: "Season",
 		},
 		time: {
 			value: "All",
-			options: getUniqueBugTimePeriods(),
+			options: [...TIME_PERIODS],
 			label: "Time",
 		},
 		collection: {
@@ -120,23 +123,25 @@ export default function BugsPage() {
 	};
 
 	const filteredItems = useMemo(() => {
-		let filtered = [...bugs];
+		let query = bugs(allBugs);
 
 		if (filters.biome.value !== "All") {
-			filtered = getBugsByBiome(filtered, filters.biome.value as Biome);
+			query = query.byBiome(filters.biome.value as Biome);
 		}
 
 		if (filters.rarity.value !== "All") {
-			filtered = getBugsByRarity(filtered, filters.rarity.value);
+			query = query.byRarity(filters.rarity.value as RarityLevel);
 		}
 
 		if (filters.season.value !== "All") {
-			filtered = getBugsBySeason(filtered, filters.season.value as Season);
+			query = query.bySeason(filters.season.value as Season);
 		}
 
 		if (filters.time.value !== "All") {
-			filtered = getBugsByTime(filtered, filters.time.value as TimePeriod);
+			query = query.byTime(filters.time.value as TimePeriod);
 		}
+
+		let filtered = query.get();
 
 		if (filters.collection.value !== "All") {
 			if (filters.collection.value === "collected") {
@@ -155,7 +160,7 @@ export default function BugsPage() {
 		}
 
 		if (searchQuery) {
-			filtered = getBugsBySearchValue(filtered, searchQuery);
+			filtered = bugs(filtered).search(searchQuery);
 		}
 
 		return filtered;
@@ -240,7 +245,7 @@ export default function BugsPage() {
 					enableSaveAlert={true}
 					isDirty={isDirty}
 					collectedCount={collectedState.length}
-					collectionTotal={bugs.length}
+					collectionTotal={allBugs.length}
 					dirtyMessage="Your bugs collection progress has not been saved yet."
 				/>
 
@@ -257,7 +262,7 @@ export default function BugsPage() {
 				<FilterDetails
 					title="bugs"
 					filteredCount={filteredItems.length}
-					totalCount={bugs.length}
+					totalCount={allBugs.length}
 					collectedLabel="Captured"
 					collectedCount={collectedState.length}
 					donatedLabel="Donated"

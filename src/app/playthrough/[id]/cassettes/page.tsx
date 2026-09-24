@@ -1,17 +1,12 @@
 "use client";
 
+import { cassettes } from "dinkum-data";
 import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
-import { Playthrough } from "@/types";
+import { FilterArray, Playthrough } from "@/types";
 import { getPlaythroughById, updatePlaythroughData } from "@/lib/storage";
 import { getQueryParams, setQueryParam } from "@/service/urlService";
 import { collectedFilter } from "@/data/constants";
-import {
-	cassettes,
-	getCassettesBySearchValue,
-	getCassettesBySource,
-	getUniqueCassetteSources,
-} from "@/data/dinkum";
 import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
 import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
@@ -21,6 +16,16 @@ import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
 import TabHeader from "@/playthrough/ui/TabHeader";
 import CassetteCard from "./CassetteCard";
+
+const allCassettes = cassettes().get();
+
+const uniqueCassetteSources: FilterArray = (() => {
+	const sources = new Set<string>();
+	allCassettes.forEach((cassette) => {
+		cassette.source.forEach((source) => sources.add(source));
+	});
+	return ["All", ...Array.from(sources).sort()];
+})();
 
 export default function CassettesPage() {
 	const params = useParams();
@@ -36,7 +41,7 @@ export default function CassettesPage() {
 	const filters = {
 		source: {
 			value: sourceFilter,
-			options: getUniqueCassetteSources(),
+			options: uniqueCassetteSources,
 			label: "Source",
 		},
 		collection: {
@@ -103,11 +108,13 @@ export default function CassettesPage() {
 	};
 
 	const filteredData = useMemo(() => {
-		let filtered = [...cassettes];
+		let query = cassettes(allCassettes);
 
 		if (sourceFilter !== "All") {
-			filtered = getCassettesBySource(filtered, sourceFilter);
+			query = query.bySource(sourceFilter);
 		}
+
+		let filtered = query.get();
 
 		if (collectionFilter !== "All") {
 			if (collectionFilter === "collected") {
@@ -118,7 +125,7 @@ export default function CassettesPage() {
 		}
 
 		if (searchQuery) {
-			filtered = getCassettesBySearchValue(filtered, searchQuery);
+			filtered = cassettes(filtered).search(searchQuery);
 		}
 
 		return filtered;
@@ -147,7 +154,7 @@ export default function CassettesPage() {
 					enableSaveAlert={true}
 					isDirty={isDirty}
 					collectedCount={getCollectedCount()}
-					collectionTotal={cassettes.length}
+					collectionTotal={allCassettes.length}
 					dirtyMessage="Your cassettes collection has not been saved yet."
 				/>
 
@@ -164,7 +171,7 @@ export default function CassettesPage() {
 				<FilterDetails
 					title="cassettes"
 					filteredCount={filteredData.length}
-					totalCount={cassettes.length}
+					totalCount={allCassettes.length}
 					collectedLabel="Collected"
 					collectedCount={getCollectedCount()}
 				/>

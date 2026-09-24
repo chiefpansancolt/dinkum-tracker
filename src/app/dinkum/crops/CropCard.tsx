@@ -1,3 +1,4 @@
+import type { Crop } from "dinkum-data";
 import { Badge } from "flowbite-react";
 import Image from "next/image";
 import { CollectionCardProps } from "@/types";
@@ -8,7 +9,9 @@ import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
 import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
 import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
 
-const CropCard = ({ record }: CollectionCardProps) => {
+const CropCard = ({ record: cropRecord }: CollectionCardProps) => {
+	const record = cropRecord as Crop;
+
 	return (
 		<ItemCard
 			renderHeader={() => <ItemHeader title={record.name} />}

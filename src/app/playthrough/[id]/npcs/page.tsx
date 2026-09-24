@@ -1,16 +1,19 @@
 "use client";
 
+import { npcs } from "dinkum-data";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Playthrough } from "@/types";
 import { getPlaythroughById, updatePlaythroughData } from "@/lib/storage";
-import { getNPCMaxPossibleHearts, npcs } from "@/data/dinkum";
 import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
 import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
 import SaveFAB from "@/playthrough/SaveFAB";
 import TabHeader from "@/playthrough/ui/TabHeader";
 import NPCCard from "./NPCCard";
+
+const allNpcs = npcs().get();
+const npcMaxPossibleHearts = allNpcs.length * 5;
 
 export default function NPCsPage() {
 	const params = useParams();
@@ -83,11 +86,11 @@ export default function NPCsPage() {
 					enableSaveAlert={true}
 					isDirty={isDirty}
 					collectedCount={getTotalHearts()}
-					collectionTotal={getNPCMaxPossibleHearts()}
+					collectionTotal={npcMaxPossibleHearts}
 					dirtyMessage="Your NPC relationship changes have not been saved yet."
 				/>
 				<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-					{npcs.map((npc) => (
+					{allNpcs.map((npc) => (
 						<NPCCard
 							key={npc.id}
 							npc={npc}

@@ -1,5 +1,4 @@
-import { Playthrough } from "@/types/app";
-import { CalendarData, Collection } from "@/types/dinkum";
+import { CalendarData, Collection, Playthrough } from "@/types/app";
 
 export const STORAGE_KEY = "dinkum-tracker-playthroughs";
 export const ACTIVE_PLAYTHROUGH_KEY = "dinkum-tracker-active-playthrough";

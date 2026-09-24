@@ -1,8 +1,10 @@
+import { type Milestone, milestones } from "dinkum-data";
 import { Badge, Card, Progress } from "flowbite-react";
 import Image from "next/image";
 import React, { useMemo } from "react";
-import { CollectTabProps, Milestone } from "@/types";
-import { milestones } from "@/data/dinkum";
+import { CollectTabProps } from "@/types";
+
+const allMilestones = milestones().get();
 
 const MilestoneStats: React.FC<CollectTabProps> = ({ collected }) => {
 	const stats = useMemo(() => {
@@ -13,21 +15,21 @@ const MilestoneStats: React.FC<CollectTabProps> = ({ collected }) => {
 			});
 		};
 
-		const totalLevels = milestones.reduce(
+		const totalLevels = allMilestones.reduce(
 			(total, milestone) => total + milestone.levels.length,
 			0
 		);
 
 		const completedLevels = Object.keys(collected).filter((key) => collected[key]).length;
 
-		const completedMilestones = milestones.filter((milestone) =>
+		const completedMilestones = allMilestones.filter((milestone) =>
 			areAllLevelsComplete(milestone)
 		).length;
 
 		let totalPermitPoints = 0;
 		let earnedPermitPoints = 0;
 
-		milestones.forEach((milestone) => {
+		allMilestones.forEach((milestone) => {
 			milestone.levels.forEach((level) => {
 				totalPermitPoints += level.permitPoints;
 
@@ -41,7 +43,7 @@ const MilestoneStats: React.FC<CollectTabProps> = ({ collected }) => {
 		return {
 			totalLevels,
 			completedLevels,
-			totalMilestones: milestones.length,
+			totalMilestones: allMilestones.length,
 			completedMilestones,
 			totalPermitPoints,
 			earnedPermitPoints,

@@ -1,5 +1,5 @@
-import { CalendarData } from "../dinkum/calendar";
-import { Collection } from "../dinkum/collections";
+import { CalendarData } from "./calendar";
+import { Collection } from "./collections";
 
 export interface Playthrough {
   id: string;

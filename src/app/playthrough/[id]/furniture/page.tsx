@@ -1,19 +1,12 @@
 "use client";
 
+import { furniture } from "dinkum-data";
 import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
-import { Playthrough } from "@/types";
+import { FilterArray, Playthrough } from "@/types";
 import { getPlaythroughById, updatePlaythroughData } from "@/lib/storage";
 import { getQueryParams, setQueryParam } from "@/service/urlService";
 import { collectedFilter } from "@/data/constants";
-import {
-	furniture,
-	getFurnitureBySearchValue,
-	getFurnitureBySet,
-	getFurnitureBySource,
-	getUniqueFurnitureSets,
-	getUniqueFurnitureSources,
-} from "@/data/dinkum";
 import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
 import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
@@ -23,6 +16,22 @@ import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
 import TabHeader from "@/playthrough/ui/TabHeader";
 import FurnitureCard from "./FurnitureCard";
+
+const allFurniture = furniture().get();
+
+const uniqueFurnitureSets: FilterArray = (() => {
+	const sets = new Set<string>();
+	allFurniture.forEach((item) => {
+		if (item.furnitureSet) sets.add(item.furnitureSet);
+	});
+	return ["All", ...Array.from(sets).sort()];
+})();
+
+const uniqueFurnitureSources: FilterArray = (() => {
+	const sources = new Set<string>();
+	allFurniture.forEach((item) => item.source?.forEach((s) => sources.add(s)));
+	return ["All", ...Array.from(sources).sort()];
+})();
 
 export default function FurniturePage() {
 	const params = useParams();
@@ -40,12 +49,12 @@ export default function FurniturePage() {
 	const filters = {
 		set: {
 			value: setFilter,
-			options: getUniqueFurnitureSets(),
+			options: uniqueFurnitureSets,
 			label: "Set",
 		},
 		source: {
 			value: sourceFilter,
-			options: getUniqueFurnitureSources(),
+			options: uniqueFurnitureSources,
 			label: "Source",
 		},
 		catalogue: {
@@ -121,15 +130,17 @@ export default function FurniturePage() {
 	};
 
 	const filteredData = useMemo(() => {
-		let filtered = [...furniture];
+		let query = furniture(allFurniture);
 
 		if (setFilter !== "All") {
-			filtered = getFurnitureBySet(filtered, setFilter);
+			query = query.bySet(setFilter);
 		}
 
 		if (sourceFilter !== "All") {
-			filtered = getFurnitureBySource(filtered, sourceFilter);
+			query = query.bySource(sourceFilter);
 		}
+
+		let filtered = query.get();
 
 		if (melvinsCatalogueFilter !== "All") {
 			filtered = filtered.filter((item) => {
@@ -150,7 +161,7 @@ export default function FurniturePage() {
 		}
 
 		if (searchQuery) {
-			filtered = getFurnitureBySearchValue(filtered, searchQuery);
+			filtered = furniture(filtered).search(searchQuery);
 		}
 
 		return filtered;
@@ -186,7 +197,7 @@ export default function FurniturePage() {
 					enableSaveAlert={true}
 					isDirty={isDirty}
 					collectedCount={getCollectedCount()}
-					collectionTotal={furniture.length}
+					collectionTotal={allFurniture.length}
 					dirtyMessage="Your furniture collection has not been saved yet."
 				/>
 
@@ -203,7 +214,7 @@ export default function FurniturePage() {
 				<FilterDetails
 					title="furniture items"
 					filteredCount={filteredData.length}
-					totalCount={furniture.length}
+					totalCount={allFurniture.length}
 					collectedLabel="Collected"
 					collectedCount={getCollectedCount()}
 				/>

@@ -1,5 +1,6 @@
+import type { Furniture } from "dinkum-data";
 import { Badge } from "flowbite-react";
-import { CollectionCardProps, Furniture } from "@/types";
+import { CollectionCardProps } from "@/types";
 import DinkValue from "@/playthrough/ui/itemcard/DinkValue";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
 import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";

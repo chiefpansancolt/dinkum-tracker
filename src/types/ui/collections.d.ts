@@ -1,3 +1,5 @@
+import { Collection } from "@/types/app/collections";
+
 type BooleanCollection = Record<string, boolean>;
 type NumericCollection = Record<string, number>;
 

@@ -1,31 +1,20 @@
 "use client";
 
+import {
+	type Biome,
+	critters,
+	type RarityLevel,
+	type Season,
+	SEASONS,
+	TIME_PERIODS,
+	type TimePeriod,
+} from "dinkum-data";
 import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
-import {
-	Biome,
-	FilterArray,
-	FilterKey,
-	FilterObject,
-	Playthrough,
-	Season,
-	TimePeriod,
-} from "@/types";
+import { FilterArray, FilterKey, FilterObject, Playthrough } from "@/types";
 import { getPlaythroughById, updatePlaythroughData } from "@/lib/storage";
 import { getQueryParams, setQueryParam } from "@/service/urlService";
 import { collectedFilter, donatedFilter } from "@/data/constants";
-import {
-	critters,
-	getCrittersByBiome,
-	getCrittersByRarity,
-	getCrittersBySearchValue,
-	getCrittersBySeason,
-	getCrittersByTime,
-	getUniqueCritterBiomes,
-	getUniqueCritterRarities,
-	getUniqueCritterSeasons,
-	getUniqueCritterTimePeriods,
-} from "@/data/dinkum/pedia/critters";
 import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
 import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
@@ -35,6 +24,20 @@ import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
 import TabHeader from "@/playthrough/ui/TabHeader";
 import CritterCard from "./CritterCard";
+
+const allCritters = critters().get();
+
+const uniqueCritterBiomes: FilterArray = (() => {
+	const biomes = new Set<string>();
+	allCritters.forEach((item) => item.biome.forEach((b) => biomes.add(b)));
+	return ["All", ...Array.from(biomes)].sort();
+})();
+
+const uniqueCritterRarities: FilterArray = (() => {
+	const rarities = new Set<string>();
+	allCritters.forEach((item) => rarities.add(item.rarity));
+	return ["All", ...Array.from(rarities)].sort();
+})();
 
 export default function CrittersPage() {
 	const params = useParams();
@@ -56,22 +59,22 @@ export default function CrittersPage() {
 	}>({
 		biome: {
 			value: "All",
-			options: getUniqueCritterBiomes(),
+			options: uniqueCritterBiomes,
 			label: "Biome",
 		},
 		rarity: {
 			value: "All",
-			options: getUniqueCritterRarities(),
+			options: uniqueCritterRarities,
 			label: "Rarity",
 		},
 		season: {
 			value: "All",
-			options: getUniqueCritterSeasons(),
+			options: [...SEASONS],
 			label: "Season",
 		},
 		time: {
 			value: "All",
-			options: getUniqueCritterTimePeriods(),
+			options: [...TIME_PERIODS],
 			label: "Time",
 		},
 		collection: {
@@ -120,23 +123,25 @@ export default function CrittersPage() {
 	};
 
 	const filteredItems = useMemo(() => {
-		let filtered = [...critters];
+		let query = critters(allCritters);
 
 		if (filters.biome.value !== "All") {
-			filtered = getCrittersByBiome(filtered, filters.biome.value as Biome);
+			query = query.byBiome(filters.biome.value as Biome);
 		}
 
 		if (filters.rarity.value !== "All") {
-			filtered = getCrittersByRarity(filtered, filters.rarity.value);
+			query = query.byRarity(filters.rarity.value as RarityLevel);
 		}
 
 		if (filters.season.value !== "All") {
-			filtered = getCrittersBySeason(filtered, filters.season.value as Season);
+			query = query.bySeason(filters.season.value as Season);
 		}
 
 		if (filters.time.value !== "All") {
-			filtered = getCrittersByTime(filtered, filters.time.value as TimePeriod);
+			query = query.byTime(filters.time.value as TimePeriod);
 		}
+
+		let filtered = query.get();
 
 		if (filters.collection.value !== "All") {
 			if (filters.collection.value === "collected") {
@@ -155,7 +160,7 @@ export default function CrittersPage() {
 		}
 
 		if (searchQuery) {
-			filtered = getCrittersBySearchValue(filtered, searchQuery);
+			filtered = critters(filtered).search(searchQuery);
 		}
 
 		return filtered;
@@ -240,7 +245,7 @@ export default function CrittersPage() {
 					enableSaveAlert={true}
 					isDirty={isDirty}
 					collectedCount={collectedState.length}
-					collectionTotal={critters.length}
+					collectionTotal={allCritters.length}
 					dirtyMessage="Your critters collection progress has not been saved yet."
 				/>
 
@@ -257,16 +262,14 @@ export default function CrittersPage() {
 				<FilterDetails
 					title="critters"
 					filteredCount={filteredItems.length}
-					totalCount={critters.length}
+					totalCount={allCritters.length}
 					collectedLabel="Captured"
 					collectedCount={collectedState.length}
 					donatedLabel="Donated"
 					donatedCount={donatedState.length}
 				/>
 
-				{filteredItems.length === 0 ? (
-					<EmptyFilterCard />
-				) : (
+				{filteredItems.length > 0 ? (
 					<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 						{filteredItems.map((item) => (
 							<CritterCard
@@ -279,6 +282,8 @@ export default function CrittersPage() {
 							/>
 						))}
 					</div>
+				) : (
+					<EmptyFilterCard />
 				)}
 
 				<SaveFAB isDirty={isDirty} onSave={handleSave} />

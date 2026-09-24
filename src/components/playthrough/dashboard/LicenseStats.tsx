@@ -1,8 +1,10 @@
+import { type License, licenses } from "dinkum-data";
 import { Badge, Card, Progress } from "flowbite-react";
 import Image from "next/image";
 import React, { useMemo } from "react";
-import { CollectTabProps, License } from "@/types";
-import { licenses } from "@/data/dinkum";
+import { CollectTabProps } from "@/types";
+
+const allLicenses = licenses().get();
 
 const LicenseStats: React.FC<CollectTabProps> = ({ collected }) => {
 	const stats = useMemo(() => {
@@ -13,18 +15,21 @@ const LicenseStats: React.FC<CollectTabProps> = ({ collected }) => {
 			});
 		};
 
-		const totalLevels = licenses.reduce((total, license) => total + license.levels.length, 0);
+		const totalLevels = allLicenses.reduce(
+			(total, license) => total + license.levels.length,
+			0
+		);
 
 		const completedLevels = Object.keys(collected).filter((key) => collected[key]).length;
 
-		const completedLicenses = licenses.filter((license) =>
+		const completedLicenses = allLicenses.filter((license) =>
 			areAllLevelsComplete(license)
 		).length;
 
 		let totalPermitPoints = 0;
 		let spentPermitPoints = 0;
 
-		licenses.forEach((license) => {
+		allLicenses.forEach((license) => {
 			license.levels.forEach((level) => {
 				totalPermitPoints += level.permitPointCost;
 
@@ -38,7 +43,7 @@ const LicenseStats: React.FC<CollectTabProps> = ({ collected }) => {
 		return {
 			totalLevels,
 			completedLevels,
-			totalLicenses: licenses.length,
+			totalLicenses: allLicenses.length,
 			completedLicenses,
 			totalPermitPoints,
 			spentPermitPoints,

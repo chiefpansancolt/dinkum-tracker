@@ -1,14 +1,16 @@
+import { buildings } from "dinkum-data";
 import { Badge, Card, Progress } from "flowbite-react";
 import Image from "next/image";
 import React, { useMemo } from "react";
 import { HiOutlineHome, HiOutlineOfficeBuilding, HiOutlineShoppingBag } from "react-icons/hi";
-import { CollectTabProps } from "@/types/dinkum";
-import { getCollectableBuildings, getCollectableBuildingsCount } from "@/data/dinkum";
+import { CollectTabProps } from "@/types";
+
+const allCollectableBuildings = buildings().byDeedType("Collectable").get();
 
 const BuildingStats: React.FC<CollectTabProps> = ({ collected }) => {
 	const stats = useMemo(() => {
-		const collectableBuildings = getCollectableBuildings();
-		const totalBuildings = getCollectableBuildingsCount();
+		const collectableBuildings = allCollectableBuildings;
+		const totalBuildings = allCollectableBuildings.length;
 
 		const installedCount = Object.keys(collected).filter(
 			(buildingId) => collected[buildingId]
@@ -46,9 +48,7 @@ const BuildingStats: React.FC<CollectTabProps> = ({ collected }) => {
 	}, [collected]);
 
 	const expensiveBuildings = useMemo(() => {
-		return getCollectableBuildings()
-			.sort((a, b) => b.deedPrice - a.deedPrice)
-			.slice(0, 5);
+		return [...allCollectableBuildings].sort((a, b) => b.deedPrice - a.deedPrice).slice(0, 5);
 	}, []);
 
 	return (

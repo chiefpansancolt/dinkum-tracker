@@ -1,5 +1,6 @@
+import type { Resource } from "dinkum-data";
 import Image from "next/image";
-import { ItemFranklynProps, Resource, ResourceItemProps } from "@/types";
+import { ItemFranklynProps, ResourceItemProps } from "@/types";
 
 const Item = ({ input }: ResourceItemProps) => {
 	return (

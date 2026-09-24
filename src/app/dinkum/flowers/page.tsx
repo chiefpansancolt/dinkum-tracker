@@ -1,30 +1,32 @@
 "use client";
 
+import { type Biome, flowers } from "dinkum-data";
 import { useEffect, useMemo, useState } from "react";
-import { Biome } from "@/types";
 import { getQueryParams, setQueryParam } from "@/service/urlService";
 import { sellBySort } from "@/data/constants";
-import {
-	flowers,
-	getFlowersByLocation,
-	getFlowersBySearchValue,
-	getUniqueFlowerLocations,
-} from "@/data/dinkum";
 import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
 import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
 import TabHeader from "@/playthrough/ui/TabHeader";
 import FlowerCard from "./FlowerCard";
 
+const allFlowers = flowers().get();
+
 export default function FlowersPage() {
 	const [searchQuery, setSearchQuery] = useState<string>(() => getQueryParams().q || "");
 	const [locationFilter, setLocationFilter] = useState<string>("All");
 	const [sortBy, setSortBy] = useState<string>("name");
 
+	const uniqueLocations = useMemo(() => {
+		const locations = new Set<string>();
+		allFlowers.forEach((flower) => flower.locations.forEach((l) => locations.add(l)));
+		return ["All", ...Array.from(locations).sort()];
+	}, []);
+
 	const filters = {
 		location: {
 			value: locationFilter,
-			options: getUniqueFlowerLocations(),
+			options: uniqueLocations,
 			label: "Location",
 		},
 		sort: {
@@ -51,14 +53,16 @@ export default function FlowersPage() {
 	};
 
 	const filteredData = useMemo(() => {
-		let filtered = [...flowers];
+		let query = flowers(allFlowers);
 
 		if (locationFilter !== "All") {
-			filtered = getFlowersByLocation(filtered, locationFilter as Biome);
+			query = query.byLocation(locationFilter as Biome);
 		}
 
+		let filtered = query.get();
+
 		if (searchQuery) {
-			filtered = getFlowersBySearchValue(filtered, searchQuery);
+			filtered = flowers(filtered).search(searchQuery);
 		}
 
 		return filtered;
@@ -94,7 +98,7 @@ export default function FlowersPage() {
 			<FilterDetails
 				title="flowers"
 				filteredCount={sortedData.length}
-				totalCount={flowers.length}
+				totalCount={allFlowers.length}
 			/>
 
 			{sortedData.length === 0 ? (

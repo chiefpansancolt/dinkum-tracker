@@ -1,5 +1,6 @@
+import type { Recipe } from "dinkum-data";
 import { Badge } from "flowbite-react";
-import { CollectionCardProps, Recipe } from "@/types";
+import { CollectionCardProps } from "@/types";
 import DinkValue from "@/playthrough/ui/itemcard/DinkValue";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
 import ItemFooter from "@/playthrough/ui/itemcard/ItemFooter";

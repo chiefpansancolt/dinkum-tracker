@@ -1,20 +1,12 @@
 "use client";
 
+import { clothing, type ClothingSlot, clothingSlots } from "dinkum-data";
 import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
-import { ClothingSlot, Playthrough } from "@/types";
+import { FilterArray, Playthrough } from "@/types";
 import { getPlaythroughById, updatePlaythroughData } from "@/lib/storage";
 import { getQueryParams, setQueryParam } from "@/service/urlService";
-import { ClothingSlots, collectedFilter } from "@/data/constants";
-import {
-	clothing,
-	getClothingBySearchValue,
-	getClothingBySet,
-	getClothingBySlot,
-	getClothingByType,
-	getUniqueClothingSets,
-	getUniqueClothingSlots,
-} from "@/data/dinkum";
+import { collectedFilter } from "@/data/constants";
 import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
 import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
@@ -24,6 +16,18 @@ import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
 import TabHeader from "@/playthrough/ui/TabHeader";
 import ClothingCard from "./ClothingCard";
+
+const allClothing = clothing().get();
+
+const uniqueClothingSlots: FilterArray = ["All", ...Object.keys(clothingSlots()).sort()];
+
+const uniqueClothingSets: FilterArray = (() => {
+	const sets = new Set<string>();
+	allClothing.forEach((item) => {
+		if (item.set) sets.add(item.set);
+	});
+	return ["All", ...Array.from(sets).sort()];
+})();
 
 export default function ClothingPage() {
 	const params = useParams();
@@ -40,13 +44,13 @@ export default function ClothingPage() {
 
 	const availableTypes = useMemo(() => {
 		if (slotFilter === "All") return ["All"];
-		return ["All", ...(ClothingSlots[slotFilter as ClothingSlot] || [])];
+		return ["All", ...(clothingSlots()[slotFilter as ClothingSlot] || [])];
 	}, [slotFilter]);
 
 	const filters = {
 		slot: {
 			value: slotFilter,
-			options: getUniqueClothingSlots(),
+			options: uniqueClothingSlots,
 			label: "Slot",
 		},
 		type: {
@@ -56,7 +60,7 @@ export default function ClothingPage() {
 		},
 		set: {
 			value: setFilter,
-			options: getUniqueClothingSets(),
+			options: uniqueClothingSets,
 			label: "Set",
 		},
 		collection: {
@@ -128,19 +132,21 @@ export default function ClothingPage() {
 	};
 
 	const filteredData = useMemo(() => {
-		let filtered = [...clothing];
+		let query = clothing(allClothing);
 
 		if (slotFilter !== "All") {
-			filtered = getClothingBySlot(filtered, slotFilter as ClothingSlot);
+			query = query.bySlot(slotFilter as ClothingSlot);
 		}
 
 		if (typeFilter !== "All") {
-			filtered = getClothingByType(filtered, typeFilter);
+			query = query.byType(typeFilter);
 		}
 
 		if (setFilter !== "All") {
-			filtered = getClothingBySet(filtered, setFilter);
+			query = query.bySet(setFilter);
 		}
+
+		let filtered = query.get();
 
 		if (collectionFilter !== "All") {
 			if (collectionFilter === "collected") {
@@ -151,7 +157,7 @@ export default function ClothingPage() {
 		}
 
 		if (searchQuery) {
-			filtered = getClothingBySearchValue(filtered, searchQuery);
+			filtered = clothing(filtered).search(searchQuery);
 		}
 
 		return filtered;
@@ -180,7 +186,7 @@ export default function ClothingPage() {
 					enableSaveAlert={true}
 					isDirty={isDirty}
 					collectedCount={getCollectedCount()}
-					collectionTotal={clothing.length}
+					collectionTotal={allClothing.length}
 					dirtyMessage="Your clothing collection has not been saved yet."
 				/>
 
@@ -197,7 +203,7 @@ export default function ClothingPage() {
 				<FilterDetails
 					title="clothing items"
 					filteredCount={filteredData.length}
-					totalCount={clothing.length}
+					totalCount={allClothing.length}
 					collectedLabel="Collected"
 					collectedCount={getCollectedCount()}
 				/>

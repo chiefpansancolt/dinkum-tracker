@@ -1,20 +1,12 @@
 "use client";
 
+import { buildings, DEED_TYPES, type DeedType } from "dinkum-data";
 import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
-import { DeedType, Playthrough } from "@/types";
+import { FilterArray, Playthrough } from "@/types";
 import { getPlaythroughById, updatePlaythroughData } from "@/lib/storage";
 import { getQueryParams, setQueryParam } from "@/service/urlService";
 import { collectedFilter } from "@/data/constants";
-import {
-	buildings,
-	getBuidlingsByDeedType,
-	getBuidlingsByNPC,
-	getBuildingsBySearchValue,
-	getCollectableBuildingsCount,
-	getUniqueDeedTypes,
-	getUniqueNPCs,
-} from "@/data/dinkum";
 import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
 import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
@@ -24,6 +16,22 @@ import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
 import TabHeader from "@/playthrough/ui/TabHeader";
 import BuildingCard from "./BuildingCard";
+
+const allBuildings = buildings().get();
+
+const uniqueNPCs: FilterArray = (() => {
+	const npcs = new Set<string>();
+	allBuildings.forEach((building) => {
+		if (building.npc && building.npc.trim() !== "") {
+			npcs.add(building.npc);
+		}
+	});
+	return ["All", ...Array.from(npcs).sort()];
+})();
+
+const collectableBuildingsCount = allBuildings.filter(
+	(building) => building.deedType === "Collectable"
+).length;
 
 export default function BuildingsPage() {
 	const params = useParams();
@@ -40,12 +48,12 @@ export default function BuildingsPage() {
 	const filters = {
 		deedType: {
 			value: deedTypeFilter,
-			options: getUniqueDeedTypes(),
+			options: ["All", ...DEED_TYPES],
 			label: "Deed Type",
 		},
 		npc: {
 			value: npcFilter,
-			options: getUniqueNPCs(),
+			options: uniqueNPCs,
 			label: "NPC",
 		},
 		collection: {
@@ -114,15 +122,17 @@ export default function BuildingsPage() {
 	};
 
 	const filteredData = useMemo(() => {
-		let filtered = [...buildings];
+		let query = buildings(allBuildings);
 
 		if (deedTypeFilter !== "All") {
-			filtered = getBuidlingsByDeedType(filtered, deedTypeFilter as DeedType);
+			query = query.byDeedType(deedTypeFilter as DeedType);
 		}
 
 		if (npcFilter !== "All") {
-			filtered = getBuidlingsByNPC(filtered, npcFilter);
+			query = query.byNPC(npcFilter);
 		}
+
+		let filtered = query.get();
 
 		if (collectionFilter !== "All") {
 			if (collectionFilter === "collected") {
@@ -133,7 +143,7 @@ export default function BuildingsPage() {
 		}
 
 		if (searchQuery) {
-			filtered = getBuildingsBySearchValue(filtered, searchQuery);
+			filtered = buildings(filtered).search(searchQuery);
 		}
 
 		return filtered;
@@ -162,7 +172,7 @@ export default function BuildingsPage() {
 					enableSaveAlert={true}
 					isDirty={isDirty}
 					collectedCount={getInstalledCount()}
-					collectionTotal={getCollectableBuildingsCount()}
+					collectionTotal={collectableBuildingsCount}
 					dirtyMessage="Your buildings progress has not been saved yet."
 				/>
 
@@ -179,7 +189,7 @@ export default function BuildingsPage() {
 				<FilterDetails
 					title="buildings"
 					filteredCount={filteredData.length}
-					totalCount={buildings.length}
+					totalCount={allBuildings.length}
 					collectedLabel="Installed"
 					collectedCount={getInstalledCount()}
 				/>

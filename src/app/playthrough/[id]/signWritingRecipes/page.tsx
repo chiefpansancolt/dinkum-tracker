@@ -1,17 +1,12 @@
 "use client";
 
+import { signWritingRecipes } from "dinkum-data";
 import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
-import { Playthrough } from "@/types";
+import { FilterObject, Playthrough } from "@/types";
 import { getPlaythroughById, updatePlaythroughData } from "@/lib/storage";
 import { getQueryParams, setQueryParam } from "@/service/urlService";
 import { unlockedFilter } from "@/data/constants";
-import {
-	getSignRecipesBySearchValue,
-	getSignRecipesBySource,
-	getUniqueSignRecipeSources,
-	signWritingRecipes,
-} from "@/data/dinkum";
 import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
 import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
@@ -21,6 +16,21 @@ import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
 import TabHeader from "@/playthrough/ui/TabHeader";
 import SignWritingRecipeCard from "./SignWritingRecipeCard";
+
+const allSignWritingRecipes = signWritingRecipes().get();
+
+const uniqueSignWritingRecipeSources: FilterObject[] = (() => {
+	const sources = new Set<string>();
+	allSignWritingRecipes.forEach((recipe) => {
+		recipe.source?.forEach((src) => sources.add(src));
+	});
+	return [
+		{ id: "All", value: "All Sources" },
+		...Array.from(sources)
+			.sort()
+			.map((source) => ({ id: source, value: source })),
+	];
+})();
 
 export default function SignWritingRecipesPage() {
 	const params = useParams();
@@ -36,7 +46,7 @@ export default function SignWritingRecipesPage() {
 	const filters = {
 		source: {
 			value: sourceFilter,
-			options: getUniqueSignRecipeSources(),
+			options: uniqueSignWritingRecipeSources,
 			label: "Sources",
 		},
 		unlocked: {
@@ -103,11 +113,13 @@ export default function SignWritingRecipesPage() {
 	};
 
 	const filteredData = useMemo(() => {
-		let filtered = [...signWritingRecipes];
+		let query = signWritingRecipes(allSignWritingRecipes);
 
 		if (sourceFilter !== "All") {
-			filtered = getSignRecipesBySource(filtered, sourceFilter);
+			query = query.bySource(sourceFilter);
 		}
+
+		let filtered = query.get();
 
 		if (unlockFilter !== "All") {
 			if (unlockFilter === "unlocked") {
@@ -118,7 +130,7 @@ export default function SignWritingRecipesPage() {
 		}
 
 		if (searchQuery) {
-			filtered = getSignRecipesBySearchValue(filtered, searchQuery);
+			filtered = signWritingRecipes(filtered).search(searchQuery);
 		}
 
 		return filtered;
@@ -151,7 +163,7 @@ export default function SignWritingRecipesPage() {
 					enableSaveAlert={true}
 					isDirty={isDirty}
 					collectedCount={getUnlockedCount()}
-					collectionTotal={signWritingRecipes.length}
+					collectionTotal={allSignWritingRecipes.length}
 					dirtyMessage="Your sign writing recipes collection has not been saved yet."
 				/>
 
@@ -168,7 +180,7 @@ export default function SignWritingRecipesPage() {
 				<FilterDetails
 					title="recipes"
 					filteredCount={filteredData.length}
-					totalCount={signWritingRecipes.length}
+					totalCount={allSignWritingRecipes.length}
 					collectedLabel="Unlocked"
 					collectedCount={getUnlockedCount()}
 				/>

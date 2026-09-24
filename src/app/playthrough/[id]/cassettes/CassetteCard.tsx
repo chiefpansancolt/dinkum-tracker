@@ -1,4 +1,5 @@
-import { Cassette, CollectionCardProps } from "@/types";
+import type { Cassette } from "dinkum-data";
+import { CollectionCardProps } from "@/types";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
 import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
 import ItemFooter from "@/playthrough/ui/itemcard/ItemFooter";

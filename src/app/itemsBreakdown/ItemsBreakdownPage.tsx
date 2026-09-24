@@ -1,11 +1,6 @@
 "use client";
 
 import LoadingPlaythrough from "@/components/playthrough/LoadingPlaythrough";
-import { Badge, Button, Card, Checkbox, Label } from "flowbite-react";
-import { useMemo, useState } from "react";
-import { HiX } from "react-icons/hi";
-import { ItemBreakdownResourceCardProps, Resource, UniqueResource } from "@/types";
-import { ResourceType } from "@/data/constants";
 import {
 	animalProducts,
 	bugs,
@@ -22,13 +17,19 @@ import {
 	otherCraftables,
 	paint,
 	relics,
+	type Resource,
 	seeds,
 	signWritingRecipes,
 	tools,
 	trophies,
 	vehicles,
 	weapons,
-} from "@/data/dinkum";
+} from "dinkum-data";
+import { Badge, Button, Card, Checkbox, Label } from "flowbite-react";
+import { useMemo, useState } from "react";
+import { HiX } from "react-icons/hi";
+import { ItemBreakdownResourceCardProps, UniqueResource } from "@/types";
+import { ResourceType } from "@/data/constants";
 import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
 import FilterBar from "@/playthrough/ui/FilterBar";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
@@ -63,27 +64,67 @@ export default function ItemsBreakdownPage() {
 		const flowerNames = new Set<string>();
 
 		const collectItemNames = () => {
-			weapons.forEach((item) => craftableItemNames.add(item.name));
-			tools.forEach((item) => craftableItemNames.add(item.name));
-			vehicles.forEach((item) => craftableItemNames.add(item.name));
-			equipment.forEach((item) => craftableItemNames.add(item.name));
-			craftingRecipes.forEach((item) => craftableItemNames.add(item.name));
-			cookingRecipes.forEach((item) => craftableItemNames.add(item.name));
-			signWritingRecipes.forEach((item) => craftableItemNames.add(item.name));
-			otherCraftables.forEach((item) => craftableItemNames.add(item.name));
+			weapons()
+				.get()
+				.forEach((item) => craftableItemNames.add(item.name));
+			tools()
+				.get()
+				.forEach((item) => craftableItemNames.add(item.name));
+			vehicles()
+				.get()
+				.forEach((item) => craftableItemNames.add(item.name));
+			equipment()
+				.get()
+				.forEach((item) => craftableItemNames.add(item.name));
+			craftingRecipes()
+				.get()
+				.forEach((item) => craftableItemNames.add(item.name));
+			cookingRecipes()
+				.get()
+				.forEach((item) => craftableItemNames.add(item.name));
+			signWritingRecipes()
+				.get()
+				.forEach((item) => craftableItemNames.add(item.name));
+			otherCraftables()
+				.get()
+				.forEach((item) => craftableItemNames.add(item.name));
 
-			fish.forEach((item) => fishNames.add(item.name));
-			critters.forEach((item) => critterNames.add(item.name));
-			bugs.forEach((item) => bugNames.add(item.name));
-			relics.forEach((item) => relicNames.add(item.name));
-			crops.forEach((item) => cropNames.add(item.name));
-			animalProducts.forEach((item) => animalProductNames.add(item.name));
-			foragables.forEach((item) => forageableNames.add(item.name));
-			paint.forEach((item) => paintNames.add(item.name));
-			minerals.forEach((item) => mineralNames.add(item.name));
-			trophies.forEach((item) => trophyNames.add(item.name));
-			seeds.forEach((item) => seedNames.add(item.name));
-			flowers.forEach((item) => flowerNames.add(item.name));
+			fish()
+				.get()
+				.forEach((item) => fishNames.add(item.name));
+			critters()
+				.get()
+				.forEach((item) => critterNames.add(item.name));
+			bugs()
+				.get()
+				.forEach((item) => bugNames.add(item.name));
+			relics()
+				.get()
+				.forEach((item) => relicNames.add(item.name));
+			crops()
+				.get()
+				.forEach((item) => cropNames.add(item.name));
+			animalProducts()
+				.get()
+				.forEach((item) => animalProductNames.add(item.name));
+			foragables()
+				.get()
+				.forEach((item) => forageableNames.add(item.name));
+			paint()
+				.get()
+				.forEach((item) => paintNames.add(item.name));
+			minerals()
+				.get()
+				.forEach((item) => mineralNames.add(item.name));
+			trophies()
+				.get()
+				.forEach((item) => trophyNames.add(item.name));
+			seeds()
+				.get()
+				.forEach((item) => seedNames.add(item.name));
+			flowers()
+				.get()
+				.forEach((item) => flowerNames.add(item.name));
 		};
 
 		collectItemNames();
@@ -128,59 +169,77 @@ export default function ItemsBreakdownPage() {
 			});
 		};
 
-		buildings.forEach((building) => {
-			if (building.inputs && building.inputs.length > 0) {
-				addResources(building.inputs, building.name, "Buildings");
-			}
-		});
-
-		tools.forEach((tool) => {
-			if (tool.inputs && tool.inputs.length > 0) {
-				addResources(tool.inputs, tool.name, "Tools");
-			}
-		});
-
-		weapons.forEach((weapon) => {
-			if (weapon.inputs && weapon.inputs.length > 0) {
-				addResources(weapon.inputs, weapon.name, "Weapons");
-			}
-		});
-
-		equipment.forEach((item) => {
-			if (item.inputs && item.inputs.length > 0) {
-				addResources(item.inputs, item.name, "Equipment");
-			}
-		});
-
-		vehicles.forEach((vehicle) => {
-			if (vehicle.inputs && vehicle.inputs.length > 0) {
-				addResources(vehicle.inputs, vehicle.name, "Vehicles");
-			}
-		});
-
-		craftingRecipes.forEach((recipe) => {
-			recipe.variants.forEach((variant) => {
-				addResources(variant.inputs, recipe.name, "Crafting Recipes");
+		buildings()
+			.get()
+			.forEach((building) => {
+				if (building.inputs && building.inputs.length > 0) {
+					addResources(building.inputs, building.name, "Buildings");
+				}
 			});
-		});
 
-		cookingRecipes.forEach((recipe) => {
-			recipe.variants.forEach((variant) => {
-				addResources(variant.inputs, recipe.name, "Cooking Recipes");
+		tools()
+			.get()
+			.forEach((tool) => {
+				if (tool.inputs && tool.inputs.length > 0) {
+					addResources(tool.inputs, tool.name, "Tools");
+				}
 			});
-		});
 
-		signWritingRecipes.forEach((recipe) => {
-			recipe.variants.forEach((variant) => {
-				addResources(variant.inputs, recipe.name, "Sign Writing Recipes");
+		weapons()
+			.get()
+			.forEach((weapon) => {
+				if (weapon.inputs && weapon.inputs.length > 0) {
+					addResources(weapon.inputs, weapon.name, "Weapons");
+				}
 			});
-		});
 
-		otherCraftables.forEach((recipe) => {
-			recipe.variants.forEach((variant) => {
-				addResources(variant.inputs, recipe.name, "Other Craftables");
+		equipment()
+			.get()
+			.forEach((item) => {
+				if (item.inputs && item.inputs.length > 0) {
+					addResources(item.inputs, item.name, "Equipment");
+				}
 			});
-		});
+
+		vehicles()
+			.get()
+			.forEach((vehicle) => {
+				if (vehicle.inputs && vehicle.inputs.length > 0) {
+					addResources(vehicle.inputs, vehicle.name, "Vehicles");
+				}
+			});
+
+		craftingRecipes()
+			.get()
+			.forEach((recipe) => {
+				recipe.variants.forEach((variant) => {
+					addResources(variant.inputs, recipe.name, "Crafting Recipes");
+				});
+			});
+
+		cookingRecipes()
+			.get()
+			.forEach((recipe) => {
+				recipe.variants.forEach((variant) => {
+					addResources(variant.inputs, recipe.name, "Cooking Recipes");
+				});
+			});
+
+		signWritingRecipes()
+			.get()
+			.forEach((recipe) => {
+				recipe.variants.forEach((variant) => {
+					addResources(variant.inputs, recipe.name, "Sign Writing Recipes");
+				});
+			});
+
+		otherCraftables()
+			.get()
+			.forEach((recipe) => {
+				recipe.variants.forEach((variant) => {
+					addResources(variant.inputs, recipe.name, "Other Craftables");
+				});
+			});
 
 		return Array.from(resourceMap.values());
 	}, []);

@@ -1,3 +1,4 @@
+import { books, cassettes, equipment, tools, vehicles, weapons } from "dinkum-data";
 import { Badge, Card, Progress } from "flowbite-react";
 import React, { useMemo } from "react";
 import { BsCassette } from "react-icons/bs";
@@ -5,7 +6,13 @@ import { FaBook, FaTools } from "react-icons/fa";
 import { FaCar } from "react-icons/fa6";
 import { GiBackpack, GiSwordman } from "react-icons/gi";
 import { GearAndEquipmentStatsProps } from "@/types";
-import { books, cassettes, equipment, tools, vehicles, weapons } from "@/data/dinkum";
+
+const totalBooks = books().count();
+const totalTools = tools().count();
+const totalWeapons = weapons().count();
+const totalEquipment = equipment().count();
+const totalVehicles = vehicles().count();
+const totalCassettes = cassettes().count();
 
 const GearAndEquipmentStats: React.FC<GearAndEquipmentStatsProps> = ({
 	bookCollection,
@@ -20,24 +27,24 @@ const GearAndEquipmentStats: React.FC<GearAndEquipmentStatsProps> = ({
 			books: {
 				collected: Object.keys(bookCollection || {}).filter((key) => bookCollection[key])
 					.length,
-				total: books.length,
+				total: totalBooks,
 				percentage:
 					Math.round(
 						(Object.keys(bookCollection || {}).filter((key) => bookCollection[key])
 							.length /
-							books.length) *
+							totalBooks) *
 							100
 					) || 0,
 			},
 			tools: {
 				collected: Object.keys(toolCollection || {}).filter((key) => toolCollection[key])
 					.length,
-				total: tools.length,
+				total: totalTools,
 				percentage:
 					Math.round(
 						(Object.keys(toolCollection || {}).filter((key) => toolCollection[key])
 							.length /
-							tools.length) *
+							totalTools) *
 							100
 					) || 0,
 			},
@@ -45,12 +52,12 @@ const GearAndEquipmentStats: React.FC<GearAndEquipmentStatsProps> = ({
 				collected: Object.keys(weaponCollection || {}).filter(
 					(key) => weaponCollection[key]
 				).length,
-				total: weapons.length,
+				total: totalWeapons,
 				percentage:
 					Math.round(
 						(Object.keys(weaponCollection || {}).filter((key) => weaponCollection[key])
 							.length /
-							weapons.length) *
+							totalWeapons) *
 							100
 					) || 0,
 			},
@@ -58,13 +65,13 @@ const GearAndEquipmentStats: React.FC<GearAndEquipmentStatsProps> = ({
 				collected: Object.keys(equipmentCollection || {}).filter(
 					(key) => equipmentCollection[key]
 				).length,
-				total: equipment.length,
+				total: totalEquipment,
 				percentage:
 					Math.round(
 						(Object.keys(equipmentCollection || {}).filter(
 							(key) => equipmentCollection[key]
 						).length /
-							equipment.length) *
+							totalEquipment) *
 							100
 					) || 0,
 			},
@@ -72,13 +79,13 @@ const GearAndEquipmentStats: React.FC<GearAndEquipmentStatsProps> = ({
 				collected: Object.keys(vehicleCollection || {}).filter(
 					(key) => vehicleCollection[key]
 				).length,
-				total: vehicles.length,
+				total: totalVehicles,
 				percentage:
 					Math.round(
 						(Object.keys(vehicleCollection || {}).filter(
 							(key) => vehicleCollection[key]
 						).length /
-							vehicles.length) *
+							totalVehicles) *
 							100
 					) || 0,
 			},
@@ -86,13 +93,13 @@ const GearAndEquipmentStats: React.FC<GearAndEquipmentStatsProps> = ({
 				collected: Object.keys(cassetteCollection || {}).filter(
 					(key) => cassetteCollection[key]
 				).length,
-				total: cassettes.length,
+				total: totalCassettes,
 				percentage:
 					Math.round(
 						(Object.keys(cassetteCollection || {}).filter(
 							(key) => cassetteCollection[key]
 						).length /
-							cassettes.length) *
+							totalCassettes) *
 							100
 					) || 0,
 			},

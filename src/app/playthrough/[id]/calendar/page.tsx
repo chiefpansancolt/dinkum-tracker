@@ -3,13 +3,14 @@
 import NotFoundCard from "@/components/NotFoundCard";
 import DayDetails from "@/components/playthrough/DayDetails";
 import LoadingPlaythrough from "@/components/playthrough/LoadingPlaythrough";
+import type { CalendarDay } from "dinkum-data";
 import { Alert } from "flowbite-react";
 import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { HiInformationCircle } from "react-icons/hi";
-import { CalendarDay, Playthrough, Season } from "@/types";
+import { Playthrough } from "@/types";
 import { getPlaythroughById, updatePlaythroughData } from "@/lib/storage";
-import { getSeasonDays, useCalendarStore } from "@/service/calendar";
+import { getSeasonDays, SEASON_ORDER, useCalendarStore } from "@/service/calendar";
 import { getSeasonEmoji, getSeasonStyles } from "@/service/seasonalTheme";
 import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
 import SaveFAB from "@/playthrough/SaveFAB";
@@ -83,17 +84,15 @@ export default function CalendarPage() {
 	};
 
 	const nextSeason = () => {
-		const seasons: Season[] = ["Summer", "Autumn", "Winter", "Spring"];
-		const currentIndex = seasons.indexOf(selectedSeason);
+		const currentIndex = SEASON_ORDER.indexOf(selectedSeason);
 		const nextIndex = (currentIndex + 1) % 4;
-		setSelectedSeason(seasons[nextIndex]);
+		setSelectedSeason(SEASON_ORDER[nextIndex]);
 	};
 
 	const prevSeason = () => {
-		const seasons: Season[] = ["Summer", "Autumn", "Winter", "Spring"];
-		const currentIndex = seasons.indexOf(selectedSeason);
+		const currentIndex = SEASON_ORDER.indexOf(selectedSeason);
 		const prevIndex = (currentIndex - 1 + 4) % 4;
-		setSelectedSeason(seasons[prevIndex]);
+		setSelectedSeason(SEASON_ORDER[prevIndex]);
 	};
 
 	const getDayEvents = (day: CalendarDay) => {

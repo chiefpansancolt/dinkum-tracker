@@ -1,27 +1,26 @@
 "use client";
 
+import { type Season, SEASONS, seeds } from "dinkum-data";
 import { useEffect, useMemo, useState } from "react";
-import { Season } from "@/types";
 import { getQueryParams, setQueryParam } from "@/service/urlService";
-import { SEASONS } from "@/data/constants";
-import {
-	getSeedsByCategory,
-	getSeedsBySearchValue,
-	getSeedsBySeason,
-	getUniqueSeedCategories,
-	seeds,
-} from "@/data/dinkum";
 import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
 import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
 import TabHeader from "@/playthrough/ui/TabHeader";
 import SeedCard from "./SeedCard";
 
+const allSeeds = seeds().get();
+
 export default function SeedsPage() {
 	const [searchQuery, setSearchQuery] = useState<string>(() => getQueryParams().q || "");
 	const [seasonFilter, setSeasonFilter] = useState<string>("All");
 	const [categoryFilter, setCategoryFilter] = useState<string>("All");
 	const [sortBy, setSortBy] = useState<string>("name");
+
+	const uniqueCategories = useMemo(() => {
+		const categories = new Set(allSeeds.map((seed) => seed.category));
+		return ["All", ...Array.from(categories).sort()];
+	}, []);
 
 	const filters = {
 		season: {
@@ -31,7 +30,7 @@ export default function SeedsPage() {
 		},
 		category: {
 			value: categoryFilter,
-			options: getUniqueSeedCategories(),
+			options: uniqueCategories,
 			label: "Category",
 		},
 		sort: {
@@ -66,18 +65,20 @@ export default function SeedsPage() {
 	};
 
 	const filteredData = useMemo(() => {
-		let filtered = [...seeds];
+		let query = seeds(allSeeds);
 
 		if (seasonFilter !== "All") {
-			filtered = getSeedsBySeason(filtered, seasonFilter as Season);
+			query = query.bySeason(seasonFilter as Season);
 		}
 
 		if (categoryFilter !== "All") {
-			filtered = getSeedsByCategory(filtered, categoryFilter);
+			query = query.byCategory(categoryFilter);
 		}
 
+		let filtered = query.get();
+
 		if (searchQuery) {
-			filtered = getSeedsBySearchValue(filtered, searchQuery);
+			filtered = seeds(filtered).search(searchQuery);
 		}
 
 		return filtered;
@@ -125,7 +126,7 @@ export default function SeedsPage() {
 			<FilterDetails
 				title="seeds"
 				filteredCount={sortedData.length}
-				totalCount={seeds.length}
+				totalCount={allSeeds.length}
 			/>
 
 			{sortedData.length === 0 ? (

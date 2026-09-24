@@ -1,30 +1,32 @@
 "use client";
 
+import { type Biome, trees } from "dinkum-data";
 import { useEffect, useMemo, useState } from "react";
-import { Biome } from "@/types";
 import { getQueryParams, setQueryParam } from "@/service/urlService";
 import { sortByGrowth } from "@/data/constants";
-import {
-	getTreesByLocation,
-	getTreesBySearchValue,
-	getUniqueTreeLocations,
-	trees,
-} from "@/data/dinkum";
 import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
 import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
 import TabHeader from "@/playthrough/ui/TabHeader";
 import TreeCard from "./TreeCard";
 
+const allTrees = trees().get();
+
 export default function TreesPage() {
 	const [searchQuery, setSearchQuery] = useState<string>(() => getQueryParams().q || "");
 	const [locationFilter, setLocationFilter] = useState<string>("All");
 	const [sortBy, setSortBy] = useState<string>("name");
 
+	const uniqueLocations = useMemo(() => {
+		const locations = new Set<string>();
+		allTrees.forEach((tree) => tree.locations?.forEach((l) => locations.add(l)));
+		return ["All", ...Array.from(locations).sort()];
+	}, []);
+
 	const filters = {
 		location: {
 			value: locationFilter,
-			options: getUniqueTreeLocations(),
+			options: uniqueLocations,
 			label: "Location",
 		},
 		sort: {
@@ -51,14 +53,16 @@ export default function TreesPage() {
 	};
 
 	const filteredData = useMemo(() => {
-		let filtered = [...trees];
+		let query = trees(allTrees);
 
 		if (locationFilter !== "All") {
-			filtered = getTreesByLocation(filtered, locationFilter as Biome);
+			query = query.byLocation(locationFilter as Biome);
 		}
 
+		let filtered = query.get();
+
 		if (searchQuery) {
-			filtered = getTreesBySearchValue(filtered, searchQuery);
+			filtered = trees(filtered).search(searchQuery);
 		}
 
 		return filtered;
@@ -98,7 +102,7 @@ export default function TreesPage() {
 			<FilterDetails
 				title="trees"
 				filteredCount={sortedData.length}
-				totalCount={trees.length}
+				totalCount={allTrees.length}
 			/>
 
 			{sortedData.length === 0 ? (

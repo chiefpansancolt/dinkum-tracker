@@ -1,5 +1,6 @@
+import type { Fish } from "dinkum-data";
 import { Badge } from "flowbite-react";
-import { CollectionCardProps, Fish } from "@/types";
+import { CollectionCardProps } from "@/types";
 import { getRarityColor } from "@/lib/services/rarityColor";
 import DinkValue from "@/playthrough/ui/itemcard/DinkValue";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";

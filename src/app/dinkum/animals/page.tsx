@@ -1,21 +1,16 @@
 "use client";
 
+import { ANIMAL_TYPES, animals, TEMPERAMENTS } from "dinkum-data";
 import { useEffect, useMemo, useState } from "react";
 import { getQueryParams, setQueryParam } from "@/service/urlService";
-import { ANIMAL_TYPES, sortBySellHealth, TEMPERAMENTS } from "@/data/constants";
-import {
-	animals,
-	getAnimalByHabitat,
-	getAnimalBySearchValue,
-	getAnimalByTemperament,
-	getAnimalByType,
-	getUniqueAnimalHabitat,
-} from "@/data/dinkum";
+import { sortBySellHealth } from "@/data/constants";
 import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
 import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
 import TabHeader from "@/playthrough/ui/TabHeader";
 import AnimalCard from "./AnimalCard";
+
+const allAnimals = animals().get();
 
 export default function AnimalsPage() {
 	const [searchQuery, setSearchQuery] = useState<string>(() => getQueryParams().q || "");
@@ -23,6 +18,14 @@ export default function AnimalsPage() {
 	const [typeFilter, setTypeFilter] = useState<string>("All");
 	const [habitatFilter, setHabitatFilter] = useState<string>("All");
 	const [sortBy, setSortBy] = useState<string>("name");
+
+	const uniqueHabitats = useMemo(() => {
+		const habitats = new Set<string>();
+		allAnimals.forEach((animal) => {
+			animal.habitat?.forEach((habitat) => habitats.add(habitat));
+		});
+		return ["All", ...Array.from(habitats).sort()];
+	}, []);
 
 	const filters = {
 		temperament: {
@@ -37,7 +40,7 @@ export default function AnimalsPage() {
 		},
 		habitat: {
 			value: habitatFilter,
-			options: getUniqueAnimalHabitat(),
+			options: uniqueHabitats,
 			label: "Habitat",
 		},
 		sort: {
@@ -68,22 +71,26 @@ export default function AnimalsPage() {
 	};
 
 	const filteredData = useMemo(() => {
-		let filtered = [...animals];
+		let query = animals(allAnimals);
 
 		if (temperamentFilter !== "All") {
-			filtered = getAnimalByTemperament(filtered, temperamentFilter);
+			query = query.byTemperament(temperamentFilter as (typeof TEMPERAMENTS)[number]);
 		}
 
 		if (typeFilter !== "All") {
-			filtered = getAnimalByType(filtered, typeFilter);
+			query = query.byType(typeFilter as (typeof ANIMAL_TYPES)[number]);
 		}
 
+		let filtered = query.get();
+
 		if (habitatFilter !== "All") {
-			filtered = getAnimalByHabitat(filtered, habitatFilter);
+			// Preserves the pre-migration habitat filter, which matched against
+			// `source` rather than `habitat`.
+			filtered = filtered.filter((item) => item.source?.includes(habitatFilter));
 		}
 
 		if (searchQuery) {
-			filtered = getAnimalBySearchValue(filtered, searchQuery);
+			filtered = animals(filtered).search(searchQuery);
 		}
 
 		return filtered;
@@ -131,7 +138,7 @@ export default function AnimalsPage() {
 			<FilterDetails
 				title="animals"
 				filteredCount={sortedData.length}
-				totalCount={animals.length}
+				totalCount={allAnimals.length}
 			/>
 
 			{sortedData.length === 0 ? (

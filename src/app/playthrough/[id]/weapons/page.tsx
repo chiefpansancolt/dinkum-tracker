@@ -1,17 +1,12 @@
 "use client";
 
+import { weapons } from "dinkum-data";
 import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
-import { Playthrough } from "@/types";
+import { FilterArray, Playthrough } from "@/types";
 import { getPlaythroughById, updatePlaythroughData } from "@/lib/storage";
 import { getQueryParams, setQueryParam } from "@/service/urlService";
 import { collectedFilter } from "@/data/constants";
-import {
-	getUniqueWeaponSources,
-	getWeaponBySearchValue,
-	getWeaponBySource,
-	weapons,
-} from "@/data/dinkum";
 import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
 import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
@@ -21,6 +16,14 @@ import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
 import TabHeader from "@/playthrough/ui/TabHeader";
 import WeaponCard from "./WeaponCard";
+
+const allWeapons = weapons().get();
+
+const uniqueWeaponSources: FilterArray = (() => {
+	const sources = new Set<string>();
+	allWeapons.forEach((item) => item.source.forEach((src) => sources.add(src)));
+	return ["All", ...Array.from(sources).sort()];
+})();
 
 export default function WeaponsPage() {
 	const params = useParams();
@@ -37,7 +40,7 @@ export default function WeaponsPage() {
 	const filters = {
 		source: {
 			value: sourceFilter,
-			options: getUniqueWeaponSources(),
+			options: uniqueWeaponSources,
 			label: "Source",
 		},
 		damage: {
@@ -111,11 +114,13 @@ export default function WeaponsPage() {
 	};
 
 	const filteredData = useMemo(() => {
-		let filtered = [...weapons];
+		let query = weapons(allWeapons);
 
 		if (sourceFilter !== "All") {
-			filtered = getWeaponBySource(filtered, sourceFilter);
+			query = query.bySource(sourceFilter);
 		}
+
+		let filtered = query.get();
 
 		if (damageFilter !== "All") {
 			filtered = filtered.filter((weapon) => {
@@ -144,7 +149,7 @@ export default function WeaponsPage() {
 		}
 
 		if (searchQuery) {
-			filtered = getWeaponBySearchValue(filtered, searchQuery);
+			filtered = weapons(filtered).search(searchQuery);
 		}
 
 		return filtered;
@@ -173,7 +178,7 @@ export default function WeaponsPage() {
 					enableSaveAlert={true}
 					isDirty={isDirty}
 					collectedCount={getCollectedCount()}
-					collectionTotal={weapons.length}
+					collectionTotal={allWeapons.length}
 					dirtyMessage="Your weapons collection has not been saved yet."
 				/>
 
@@ -190,7 +195,7 @@ export default function WeaponsPage() {
 				<FilterDetails
 					title="weapons"
 					filteredCount={filteredData.length}
-					totalCount={weapons.length}
+					totalCount={allWeapons.length}
 					collectedLabel="Collected"
 					collectedCount={getCollectedCount()}
 				/>

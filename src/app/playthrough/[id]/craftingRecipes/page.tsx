@@ -1,17 +1,12 @@
 "use client";
 
+import { craftingRecipes } from "dinkum-data";
 import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
-import { Playthrough } from "@/types";
+import { FilterObject, Playthrough } from "@/types";
 import { getPlaythroughById, updatePlaythroughData } from "@/lib/storage";
 import { getQueryParams, setQueryParam } from "@/service/urlService";
 import { unlockedFilter } from "@/data/constants";
-import {
-	craftingRecipes,
-	getCraftingRecipesBySearchValue,
-	getCraftingRecipesBySource,
-	getUniqueCraftingRecipeSources,
-} from "@/data/dinkum";
 import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
 import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
@@ -21,6 +16,21 @@ import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
 import TabHeader from "@/playthrough/ui/TabHeader";
 import CraftingRecipeCard from "./CraftingRecipeCard";
+
+const allCraftingRecipes = craftingRecipes().get();
+
+const uniqueCraftingRecipeSources: FilterObject[] = (() => {
+	const sources = new Set<string>();
+	allCraftingRecipes.forEach((recipe) => {
+		recipe.source?.forEach((src) => sources.add(src));
+	});
+	return [
+		{ id: "All", value: "All Sources" },
+		...Array.from(sources)
+			.sort()
+			.map((source) => ({ id: source, value: source })),
+	];
+})();
 
 export default function CraftingRecipesPage() {
 	const params = useParams();
@@ -36,7 +46,7 @@ export default function CraftingRecipesPage() {
 	const filters = {
 		source: {
 			value: sourceFilter,
-			options: getUniqueCraftingRecipeSources(),
+			options: uniqueCraftingRecipeSources,
 			label: "Sources",
 		},
 		unlocked: {
@@ -103,11 +113,13 @@ export default function CraftingRecipesPage() {
 	};
 
 	const filteredData = useMemo(() => {
-		let filtered = [...craftingRecipes];
+		let query = craftingRecipes(allCraftingRecipes);
 
 		if (sourceFilter !== "All") {
-			filtered = getCraftingRecipesBySource(filtered, sourceFilter);
+			query = query.bySource(sourceFilter);
 		}
+
+		let filtered = query.get();
 
 		if (unlockFilter !== "All") {
 			if (unlockFilter === "unlocked") {
@@ -118,7 +130,7 @@ export default function CraftingRecipesPage() {
 		}
 
 		if (searchQuery) {
-			filtered = getCraftingRecipesBySearchValue(filtered, searchQuery);
+			filtered = craftingRecipes(filtered).search(searchQuery);
 		}
 
 		return filtered;
@@ -151,7 +163,7 @@ export default function CraftingRecipesPage() {
 					enableSaveAlert={true}
 					isDirty={isDirty}
 					collectedCount={getUnlockedCount()}
-					collectionTotal={craftingRecipes.length}
+					collectionTotal={allCraftingRecipes.length}
 					dirtyMessage="Your crafting recipes collection has not been saved yet."
 				/>
 
@@ -168,7 +180,7 @@ export default function CraftingRecipesPage() {
 				<FilterDetails
 					title="recipes"
 					filteredCount={filteredData.length}
-					totalCount={craftingRecipes.length}
+					totalCount={allCraftingRecipes.length}
 					collectedLabel="Unlocked"
 					collectedCount={getUnlockedCount()}
 				/>

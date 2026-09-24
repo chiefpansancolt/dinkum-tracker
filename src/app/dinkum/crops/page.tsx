@@ -1,15 +1,16 @@
 "use client";
 
+import { crops, type Season, SEASONS } from "dinkum-data";
 import { useEffect, useMemo, useState } from "react";
-import { Season } from "@/types";
 import { getQueryParams, setQueryParam } from "@/service/urlService";
-import { SEASONS, sellBySort } from "@/data/constants";
-import { crops, getCropsBySearchValue, getCropsBySeason } from "@/data/dinkum";
+import { sellBySort } from "@/data/constants";
 import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
 import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
 import TabHeader from "@/playthrough/ui/TabHeader";
 import CropCard from "./CropCard";
+
+const allCrops = crops().get();
 
 export default function CropsPage() {
 	const [searchQuery, setSearchQuery] = useState<string>(() => getQueryParams().q || "");
@@ -46,14 +47,16 @@ export default function CropsPage() {
 	};
 
 	const filteredData = useMemo(() => {
-		let filtered = [...crops];
+		let query = crops(allCrops);
 
 		if (seasonFilter !== "All") {
-			filtered = getCropsBySeason(filtered, seasonFilter as Season);
+			query = query.bySeason(seasonFilter as Season);
 		}
 
+		let filtered = query.get();
+
 		if (searchQuery) {
-			filtered = getCropsBySearchValue(filtered, searchQuery);
+			filtered = crops(filtered).search(searchQuery);
 		}
 
 		return filtered;
@@ -89,7 +92,7 @@ export default function CropsPage() {
 			<FilterDetails
 				title="crops"
 				filteredCount={sortedData.length}
-				totalCount={crops.length}
+				totalCount={allCrops.length}
 			/>
 
 			{sortedData.length === 0 ? (

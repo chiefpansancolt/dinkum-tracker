@@ -1,9 +1,13 @@
+import { cookingRecipes, craftingRecipes, signWritingRecipes } from "dinkum-data";
 import { Badge, Card, Progress } from "flowbite-react";
 import React, { useMemo } from "react";
 import { GiPaintBrush, GiStoneCrafting } from "react-icons/gi";
 import { LuCookingPot } from "react-icons/lu";
 import { RecipeStatsProps } from "@/types";
-import { cookingRecipes, craftingRecipes, signWritingRecipes } from "@/data/dinkum";
+
+const totalCookingRecipes = cookingRecipes().count();
+const totalCraftingRecipes = craftingRecipes().count();
+const totalSignWritingRecipes = signWritingRecipes().count();
 
 const RecipeStats: React.FC<RecipeStatsProps> = ({
 	unlockedCookingRecipes,
@@ -16,13 +20,13 @@ const RecipeStats: React.FC<RecipeStatsProps> = ({
 				unlocked: Object.keys(unlockedCookingRecipes).filter(
 					(key) => unlockedCookingRecipes[key]
 				).length,
-				total: cookingRecipes.length,
+				total: totalCookingRecipes,
 				percentage:
 					Math.round(
 						(Object.keys(unlockedCookingRecipes).filter(
 							(key) => unlockedCookingRecipes[key]
 						).length /
-							cookingRecipes.length) *
+							totalCookingRecipes) *
 							100
 					) || 0,
 			},
@@ -30,13 +34,13 @@ const RecipeStats: React.FC<RecipeStatsProps> = ({
 				unlocked: Object.keys(unlockedCraftingRecipes).filter(
 					(key) => unlockedCraftingRecipes[key]
 				).length,
-				total: craftingRecipes.length,
+				total: totalCraftingRecipes,
 				percentage:
 					Math.round(
 						(Object.keys(unlockedCraftingRecipes).filter(
 							(key) => unlockedCraftingRecipes[key]
 						).length /
-							craftingRecipes.length) *
+							totalCraftingRecipes) *
 							100
 					) || 0,
 			},
@@ -44,13 +48,13 @@ const RecipeStats: React.FC<RecipeStatsProps> = ({
 				unlocked: Object.keys(unlockedSignwritingRecipes).filter(
 					(key) => unlockedSignwritingRecipes[key]
 				).length,
-				total: signWritingRecipes.length,
+				total: totalSignWritingRecipes,
 				percentage:
 					Math.round(
 						(Object.keys(unlockedSignwritingRecipes).filter(
 							(key) => unlockedSignwritingRecipes[key]
 						).length /
-							signWritingRecipes.length) *
+							totalSignWritingRecipes) *
 							100
 					) || 0,
 			},

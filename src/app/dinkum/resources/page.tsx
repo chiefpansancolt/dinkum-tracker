@@ -1,11 +1,5 @@
 "use client";
 
-import { Button, Card, Checkbox } from "flowbite-react";
-import { useEffect, useMemo, useState } from "react";
-import { HiX } from "react-icons/hi";
-import { ResourceItem } from "@/types";
-import { getQueryParams, setQueryParam } from "@/service/urlService";
-import { ResourceType } from "@/data/constants";
 import {
 	animalProducts,
 	foragables,
@@ -13,7 +7,13 @@ import {
 	otherCraftables,
 	relics,
 	trophies,
-} from "@/data/dinkum";
+} from "dinkum-data";
+import { Button, Card, Checkbox } from "flowbite-react";
+import { useEffect, useMemo, useState } from "react";
+import { HiX } from "react-icons/hi";
+import { ResourceItem } from "@/types";
+import { getQueryParams, setQueryParam } from "@/service/urlService";
+import { ResourceType } from "@/data/constants";
 import EmptyFilterCard from "@/playthrough/ui/EmptyFilterCard";
 import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
@@ -39,47 +39,59 @@ export default function ResourcesPage() {
 	const allResources = useMemo(() => {
 		const resources: ResourceItem[] = [];
 
-		animalProducts.forEach((item) => {
-			resources.push({
-				...item,
-				resourceType: ResourceType.ANIMALPRODUCT,
+		animalProducts()
+			.get()
+			.forEach((item) => {
+				resources.push({
+					...item,
+					resourceType: ResourceType.ANIMALPRODUCT,
+				});
 			});
-		});
 
-		foragables.forEach((item) => {
-			resources.push({
-				...item,
-				resourceType: ResourceType.FORAGABLE,
+		foragables()
+			.get()
+			.forEach((item) => {
+				resources.push({
+					...item,
+					resourceType: ResourceType.FORAGABLE,
+				});
 			});
-		});
 
-		minerals.forEach((item) => {
-			resources.push({
-				...item,
-				resourceType: ResourceType.MINERAL,
+		minerals()
+			.get()
+			.forEach((item) => {
+				resources.push({
+					...item,
+					resourceType: ResourceType.MINERAL,
+				});
 			});
-		});
 
-		relics.forEach((item) => {
-			resources.push({
-				...item,
-				resourceType: ResourceType.RELIC,
+		relics()
+			.get()
+			.forEach((item) => {
+				resources.push({
+					...item,
+					resourceType: ResourceType.RELIC,
+				});
 			});
-		});
 
-		trophies.forEach((item) => {
-			resources.push({
-				...item,
-				resourceType: ResourceType.TROPHY,
+		trophies()
+			.get()
+			.forEach((item) => {
+				resources.push({
+					...item,
+					resourceType: ResourceType.TROPHY,
+				});
 			});
-		});
 
-		otherCraftables.forEach((item) => {
-			resources.push({
-				...item,
-				resourceType: ResourceType.CRAFTABLE,
+		otherCraftables()
+			.get()
+			.forEach((item) => {
+				resources.push({
+					...item,
+					resourceType: ResourceType.CRAFTABLE,
+				});
 			});
-		});
 
 		return resources;
 	}, []);

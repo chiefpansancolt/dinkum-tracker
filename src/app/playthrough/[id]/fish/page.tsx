@@ -1,31 +1,20 @@
 "use client";
 
+import {
+	type Biome,
+	fish,
+	type RarityLevel,
+	type Season,
+	SEASONS,
+	TIME_PERIODS,
+	type TimePeriod,
+} from "dinkum-data";
 import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
-import {
-	Biome,
-	FilterArray,
-	FilterKey,
-	FilterObject,
-	Playthrough,
-	Season,
-	TimePeriod,
-} from "@/types";
+import { FilterArray, FilterKey, FilterObject, Playthrough } from "@/types";
 import { getPlaythroughById, updatePlaythroughData } from "@/lib/storage";
 import { getQueryParams, setQueryParam } from "@/service/urlService";
 import { collectedFilter, donatedFilter } from "@/data/constants";
-import {
-	fish,
-	getFishByBiome,
-	getFishByRarity,
-	getFishBySearchValue,
-	getFishBySeason,
-	getFishByTime,
-	getUniqueFishBiomes,
-	getUniqueFishRarities,
-	getUniqueFishSeasons,
-	getUniqueFishTimePeriods,
-} from "@/data/dinkum/pedia/fish";
 import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
 import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
@@ -35,6 +24,20 @@ import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
 import TabHeader from "@/playthrough/ui/TabHeader";
 import FishCard from "./FishCard";
+
+const allFishs = fish().get();
+
+const uniqueFishBiomes: FilterArray = (() => {
+	const biomes = new Set<string>();
+	allFishs.forEach((item) => item.biome.forEach((b) => biomes.add(b)));
+	return ["All", ...Array.from(biomes)].sort();
+})();
+
+const uniqueFishRarities: FilterArray = (() => {
+	const rarities = new Set<string>();
+	allFishs.forEach((item) => rarities.add(item.rarity));
+	return ["All", ...Array.from(rarities)].sort();
+})();
 
 export default function FishPage() {
 	const params = useParams();
@@ -56,22 +59,22 @@ export default function FishPage() {
 	}>({
 		biome: {
 			value: "All",
-			options: getUniqueFishBiomes(),
+			options: uniqueFishBiomes,
 			label: "Biome",
 		},
 		rarity: {
 			value: "All",
-			options: getUniqueFishRarities(),
+			options: uniqueFishRarities,
 			label: "Rarity",
 		},
 		season: {
 			value: "All",
-			options: getUniqueFishSeasons(),
+			options: [...SEASONS],
 			label: "Season",
 		},
 		time: {
 			value: "All",
-			options: getUniqueFishTimePeriods(),
+			options: [...TIME_PERIODS],
 			label: "Time",
 		},
 		collection: {
@@ -119,24 +122,26 @@ export default function FishPage() {
 		}));
 	};
 
-	const filteredData = useMemo(() => {
-		let filtered = [...fish];
+	const filteredItems = useMemo(() => {
+		let query = fish(allFishs);
 
 		if (filters.biome.value !== "All") {
-			filtered = getFishByBiome(filtered, filters.biome.value as Biome);
+			query = query.byBiome(filters.biome.value as Biome);
 		}
 
 		if (filters.rarity.value !== "All") {
-			filtered = getFishByRarity(filtered, filters.rarity.value);
+			query = query.byRarity(filters.rarity.value as RarityLevel);
 		}
 
 		if (filters.season.value !== "All") {
-			filtered = getFishBySeason(filtered, filters.season.value as Season);
+			query = query.bySeason(filters.season.value as Season);
 		}
 
 		if (filters.time.value !== "All") {
-			filtered = getFishByTime(filtered, filters.time.value as TimePeriod);
+			query = query.byTime(filters.time.value as TimePeriod);
 		}
+
+		let filtered = query.get();
 
 		if (filters.collection.value !== "All") {
 			if (filters.collection.value === "collected") {
@@ -155,7 +160,7 @@ export default function FishPage() {
 		}
 
 		if (searchQuery) {
-			filtered = getFishBySearchValue(filtered, searchQuery);
+			filtered = fish(filtered).search(searchQuery);
 		}
 
 		return filtered;
@@ -240,7 +245,7 @@ export default function FishPage() {
 					enableSaveAlert={true}
 					isDirty={isDirty}
 					collectedCount={collectedState.length}
-					collectionTotal={fish.length}
+					collectionTotal={allFishs.length}
 					dirtyMessage="Your fish collection progress has not been saved yet."
 				/>
 
@@ -256,19 +261,17 @@ export default function FishPage() {
 
 				<FilterDetails
 					title="fish"
-					filteredCount={filteredData.length}
-					totalCount={fish.length}
+					filteredCount={filteredItems.length}
+					totalCount={allFishs.length}
 					collectedLabel="Captured"
 					collectedCount={collectedState.length}
 					donatedLabel="Donated"
 					donatedCount={donatedState.length}
 				/>
 
-				{filteredData.length === 0 ? (
-					<EmptyFilterCard />
-				) : (
-					<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-						{filteredData.map((item) => (
+				{filteredItems.length > 0 ? (
+					<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+						{filteredItems.map((item) => (
 							<FishCard
 								key={item.id}
 								record={item}
@@ -279,6 +282,8 @@ export default function FishPage() {
 							/>
 						))}
 					</div>
+				) : (
+					<EmptyFilterCard />
 				)}
 
 				<SaveFAB isDirty={isDirty} onSave={handleSave} />

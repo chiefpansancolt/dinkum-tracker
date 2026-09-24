@@ -1,13 +1,16 @@
+import type { Seed, Tree } from "dinkum-data";
 import { Badge } from "flowbite-react";
 import Image from "next/image";
-import { CollectionCardProps, Seed } from "@/types";
+import { CollectionCardProps } from "@/types";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
 import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
 import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
 import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
 import ItemResources from "@/playthrough/ui/itemcard/ItemResources";
 
-const TreeCard = ({ record }: CollectionCardProps) => {
+const TreeCard = ({ record: treeRecord }: CollectionCardProps) => {
+	const record = treeRecord as Tree;
+
 	const seedType = record.seed && "growthPeriod" in record.seed ? (record.seed as Seed) : null;
 
 	return (

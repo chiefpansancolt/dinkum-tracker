@@ -1,3 +1,4 @@
+import type { Flower } from "dinkum-data";
 import { Badge } from "flowbite-react";
 import Image from "next/image";
 import { CollectionCardProps } from "@/types";
@@ -8,7 +9,9 @@ import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
 import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
 import ItemResources from "@/playthrough/ui/itemcard/ItemResources";
 
-const FlowerCard = ({ record }: CollectionCardProps) => {
+const FlowerCard = ({ record: flowerRecord }: CollectionCardProps) => {
+	const record = flowerRecord as Flower;
+
 	return (
 		<ItemCard
 			renderHeader={() => <ItemHeader title={record.name} />}

@@ -1,4 +1,5 @@
-import { Season, SeasonStyle } from "@/types/dinkum";
+import type { Season } from "dinkum-data";
+import { SeasonStyle } from "@/types";
 
 export const getSeasonStyles = (season: Season): SeasonStyle => {
   switch (season) {

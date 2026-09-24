@@ -1,22 +1,16 @@
 "use client";
 
+import { cookingRecipes } from "dinkum-data";
 import { Button, Card, Checkbox, ToggleSwitch } from "flowbite-react";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { HiX } from "react-icons/hi";
-import { Playthrough } from "@/types";
+import { FilterObject, Playthrough } from "@/types";
 import { getBuffIcon } from "@/lib/services/buffIconService";
 import { getPlaythroughById, updatePlaythroughData } from "@/lib/storage";
 import { getQueryParams, setQueryParam } from "@/service/urlService";
 import { unlockedFilter } from "@/data/constants";
-import {
-	cookingRecipes,
-	getCookingRecipesByLocation,
-	getCookingRecipesBySearchValue,
-	getUniqueCookingBuffs,
-	getUniqueCookingLocations,
-} from "@/data/dinkum";
 import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
 import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
@@ -26,6 +20,33 @@ import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
 import TabHeader from "@/playthrough/ui/TabHeader";
 import CookingRecipeCard from "./CookingRecipeCard";
+
+const allCookingRecipes = cookingRecipes().get();
+
+const uniqueCookingLocations: FilterObject[] = (() => {
+	const locations = new Set<string>();
+	allCookingRecipes.forEach((recipe) => {
+		recipe.cookingLocation.forEach((loc) => locations.add(loc));
+	});
+	return [
+		{ id: "All", value: "All Locations" },
+		...Array.from(locations)
+			.sort()
+			.map((location) => ({ id: location, value: location })),
+	];
+})();
+
+const uniqueCookingBuffs: string[] = (() => {
+	const buffs = new Set<string>();
+	allCookingRecipes.forEach((recipe) => {
+		if (recipe.buffs) {
+			Object.keys(recipe.buffs).forEach((buff) => {
+				if (buff !== "length") buffs.add(buff);
+			});
+		}
+	});
+	return Array.from(buffs).sort();
+})();
 
 export default function CookingRecipesPage() {
 	const params = useParams();
@@ -44,7 +65,7 @@ export default function CookingRecipesPage() {
 	const filters = {
 		location: {
 			value: locationFilter,
-			options: getUniqueCookingLocations(),
+			options: uniqueCookingLocations,
 			label: "Cooking Locations",
 		},
 		unlocked: {
@@ -125,11 +146,13 @@ export default function CookingRecipesPage() {
 	};
 
 	const filteredData = useMemo(() => {
-		let filtered = [...cookingRecipes];
+		let query = cookingRecipes(allCookingRecipes);
 
 		if (locationFilter !== "All") {
-			filtered = getCookingRecipesByLocation(filtered, locationFilter);
+			query = query.byLocation(locationFilter);
 		}
+
+		let filtered = query.get();
 
 		if (selectedBuffs.length > 0) {
 			filtered = filtered.filter((recipe) => {
@@ -158,7 +181,7 @@ export default function CookingRecipesPage() {
 		}
 
 		if (searchQuery) {
-			filtered = getCookingRecipesBySearchValue(filtered, searchQuery);
+			filtered = cookingRecipes(filtered).search(searchQuery);
 		}
 
 		return filtered;
@@ -195,7 +218,7 @@ export default function CookingRecipesPage() {
 					enableSaveAlert={true}
 					isDirty={isDirty}
 					collectedCount={getUnlockedCount()}
-					collectionTotal={cookingRecipes.length}
+					collectionTotal={allCookingRecipes.length}
 					dirtyMessage="Your cooking recipes collection has not been saved yet."
 				/>
 
@@ -246,7 +269,7 @@ export default function CookingRecipesPage() {
 							</div>
 						</div>
 						<div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-							{getUniqueCookingBuffs().map((buff) => {
+							{uniqueCookingBuffs.map((buff) => {
 								const isSelected = selectedBuffs.includes(buff);
 								const { icon } = getBuffIcon(buff, 1);
 
@@ -291,7 +314,7 @@ export default function CookingRecipesPage() {
 				<FilterDetails
 					title="recipes"
 					filteredCount={filteredData.length}
-					totalCount={cookingRecipes.length}
+					totalCount={allCookingRecipes.length}
 					collectedLabel="Unlocked"
 					collectedCount={getUnlockedCount()}
 				/>

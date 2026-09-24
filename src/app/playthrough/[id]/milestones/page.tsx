@@ -1,20 +1,14 @@
 "use client";
 
+import { type Milestone, milestoneCategories, milestones } from "dinkum-data";
 import { Badge } from "flowbite-react";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
-import { Milestone, Playthrough } from "@/types";
+import { FilterObject, Playthrough } from "@/types";
 import { getPlaythroughById, updatePlaythroughData } from "@/lib/storage";
 import { getQueryParams, setQueryParam } from "@/service/urlService";
-import { collectedFilter, MILESTONE_CATEGORIES } from "@/data/constants";
-import {
-	getMilestoneByCategory,
-	getMilestoneBySearchValue,
-	getMilestoneTotalLevels,
-	getMilestoneTotalPermitPoints,
-	milestones,
-} from "@/data/dinkum";
+import { collectedFilter } from "@/data/constants";
 import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
 import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
@@ -24,6 +18,20 @@ import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
 import TabHeader from "@/playthrough/ui/TabHeader";
 import MilestoneCard from "./MilestoneCard";
+
+const allMilestones = milestones().get();
+const milestoneTotalLevels = allMilestones.reduce(
+	(total, milestone) => total + milestone.levels.length,
+	0
+);
+const milestoneTotalPermitPoints = milestones().totalPermitPoints();
+
+const milestoneCategoryOptions: FilterObject[] = [
+	{ id: "all", value: "All Milestones" },
+	...milestoneCategories()
+		.get()
+		.map((category) => ({ id: category.id, value: category.name })),
+];
 
 export default function MilestonesPage() {
 	const params = useParams();
@@ -40,7 +48,7 @@ export default function MilestonesPage() {
 	const filters = {
 		category: {
 			value: categoryFilter,
-			options: MILESTONE_CATEGORIES,
+			options: milestoneCategoryOptions,
 			label: "Category",
 		},
 		view: {
@@ -103,7 +111,7 @@ export default function MilestonesPage() {
 			};
 
 			if (currentValue) {
-				const milestone = milestones.find((m) => m.id === milestoneId);
+				const milestone = allMilestones.find((m) => m.id === milestoneId);
 				if (milestone) {
 					milestone.levels.forEach((l) => {
 						if (l.level > level) {
@@ -175,10 +183,11 @@ export default function MilestonesPage() {
 	};
 
 	const filteredData = useMemo(() => {
-		let filtered = [...milestones];
+		let filtered = [...allMilestones];
 
 		if (categoryFilter !== "all") {
-			filtered = getMilestoneByCategory(filtered, categoryFilter);
+			const category = categoryFilter.toLowerCase();
+			filtered = filtered.filter((item) => item.id.includes(category));
 		}
 
 		if (collectionFilter !== "All") {
@@ -200,7 +209,7 @@ export default function MilestonesPage() {
 		}
 
 		if (searchQuery) {
-			filtered = getMilestoneBySearchValue(filtered, searchQuery);
+			filtered = milestones(filtered).search(searchQuery);
 		}
 
 		return filtered;
@@ -227,7 +236,7 @@ export default function MilestonesPage() {
 
 	const getEarnedPermitPoints = () => {
 		let earned = 0;
-		milestones.forEach((milestone) => {
+		allMilestones.forEach((milestone) => {
 			milestone.levels.forEach((level) => {
 				const milestoneKey = `${milestone.id}_level_${level.level}`;
 				if (localState[milestoneKey]) {
@@ -257,7 +266,7 @@ export default function MilestonesPage() {
 					enableSaveAlert={true}
 					isDirty={isDirty}
 					collectedCount={getCompletedLevels()}
-					collectionTotal={getMilestoneTotalLevels()}
+					collectionTotal={milestoneTotalLevels}
 					dirtyMessage="Your milestones progress has not been saved yet."
 				/>
 
@@ -267,14 +276,14 @@ export default function MilestonesPage() {
 							<h3 className="font-medium">Permit Points Earned</h3>
 							<p className="text-sm">
 								You&apos;ve earned {getEarnedPermitPoints().toLocaleString()} of{" "}
-								{getMilestoneTotalPermitPoints().toLocaleString()} available permit
+								{milestoneTotalPermitPoints.toLocaleString()} available permit
 								points.
 							</p>
 						</div>
 						<Badge color="indigo" size="xl">
 							<span className="flex items-center">
 								{getEarnedPermitPoints().toLocaleString()} /{" "}
-								{getMilestoneTotalPermitPoints().toLocaleString()}
+								{milestoneTotalPermitPoints.toLocaleString()}
 								<Image
 									src="/images/other/Permit_Points.png"
 									alt="Permit Points"
@@ -300,7 +309,7 @@ export default function MilestonesPage() {
 				<FilterDetails
 					title="milestones"
 					filteredCount={filteredData.length}
-					totalCount={milestones.length}
+					totalCount={allMilestones.length}
 					collectedLabel="Completed Levels"
 					collectedCount={getCompletedLevels()}
 				/>

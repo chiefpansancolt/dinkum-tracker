@@ -1,10 +1,10 @@
 "use client";
 
+import { skills } from "dinkum-data";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Playthrough } from "@/types";
 import { getPlaythroughById, updatePlaythroughData } from "@/lib/storage";
-import { skills } from "@/data/dinkum";
 import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
 import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
@@ -87,14 +87,16 @@ export default function SkillsPage() {
 				/>
 
 				<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-					{skills.map((item) => (
-						<SkillCard
-							key={item.id}
-							skill={item}
-							level={skillLevels[item.id] || 0}
-							onLevelChange={(delta) => handleSkillLevelChange(item.id, delta)}
-						/>
-					))}
+					{skills()
+						.get()
+						.map((item) => (
+							<SkillCard
+								key={item.id}
+								skill={item}
+								level={skillLevels[item.id] || 0}
+								onLevelChange={(delta) => handleSkillLevelChange(item.id, delta)}
+							/>
+						))}
 				</div>
 
 				<SaveFAB isDirty={isDirty} onSave={handleSave} />

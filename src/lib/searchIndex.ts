@@ -1,22 +1,24 @@
-import { buildings } from "@/data/dinkum/buildings";
-import { clothing } from "@/data/dinkum/clothing";
-import { furniture } from "@/data/dinkum/furniture";
-import { books } from "@/data/dinkum/gearAndEquipment/books";
-import { cassettes } from "@/data/dinkum/gearAndEquipment/cassettes";
-import { equipment } from "@/data/dinkum/gearAndEquipment/equipment";
-import { tools } from "@/data/dinkum/gearAndEquipment/tools";
-import { vehicles } from "@/data/dinkum/gearAndEquipment/vehicles";
-import { weapons } from "@/data/dinkum/gearAndEquipment/weapons";
-import { licenses } from "@/data/dinkum/licences";
-import { milestones } from "@/data/dinkum/milestones";
-import { npcs } from "@/data/dinkum/npcs";
-import { bugs } from "@/data/dinkum/pedia/bugs";
-import { critters } from "@/data/dinkum/pedia/critters";
-import { fish } from "@/data/dinkum/pedia/fish";
-import { cookingRecipes } from "@/data/dinkum/recipes/cookingRecipes";
-import { craftingRecipes } from "@/data/dinkum/recipes/craftingRecipes";
-import { signWritingRecipes } from "@/data/dinkum/recipes/signWritingRecipes";
-import { skills } from "@/data/dinkum/skills";
+import {
+  books,
+  bugs,
+  buildings,
+  cassettes,
+  clothing,
+  cookingRecipes,
+  craftingRecipes,
+  critters,
+  equipment,
+  fish,
+  furniture,
+  licenses,
+  milestones,
+  npcs,
+  signWritingRecipes,
+  skills,
+  tools,
+  vehicles,
+  weapons,
+} from "dinkum-data";
 
 export interface SearchEntry {
   id: string;
@@ -46,23 +48,27 @@ function toEntries(
 }
 
 export const searchIndex: SearchEntry[] = [
-  ...toEntries(npcs, "NPCs", "npcs", true),
-  ...toEntries(fish, "Fish", "fish"),
-  ...toEntries(bugs, "Bugs", "bugs"),
-  ...toEntries(critters, "Critters", "critters"),
-  ...toEntries(milestones, "Milestones", "milestones"),
-  ...toEntries(licenses, "Licenses", "licenses"),
-  ...toEntries(buildings, "Buildings", "buildings"),
-  ...toEntries(skills, "Skills", "skills"),
-  ...toEntries(cookingRecipes, "Cooking Recipes", "cookingRecipes"),
-  ...toEntries(craftingRecipes, "Crafting Recipes", "craftingRecipes"),
-  ...toEntries(signWritingRecipes, "Sign Writing", "signWritingRecipes"),
-  ...toEntries(books, "Books", "books"),
-  ...toEntries(cassettes, "Cassettes", "cassettes"),
-  ...toEntries(tools, "Tools", "tools"),
-  ...toEntries(weapons, "Weapons", "weapons"),
-  ...toEntries(equipment, "Equipment", "equipment"),
-  ...toEntries(vehicles, "Vehicles", "vehicles"),
-  ...toEntries(clothing, "Clothing", "clothing"),
-  ...toEntries(furniture, "Furniture", "furniture"),
+  ...toEntries(npcs().get(), "NPCs", "npcs", true),
+  ...toEntries(fish().get(), "Fish", "fish"),
+  ...toEntries(bugs().get(), "Bugs", "bugs"),
+  ...toEntries(critters().get(), "Critters", "critters"),
+  ...toEntries(milestones().get(), "Milestones", "milestones"),
+  ...toEntries(licenses().get(), "Licenses", "licenses"),
+  ...toEntries(buildings().get(), "Buildings", "buildings"),
+  ...toEntries(skills().get(), "Skills", "skills"),
+  ...toEntries(cookingRecipes().get(), "Cooking Recipes", "cookingRecipes"),
+  ...toEntries(craftingRecipes().get(), "Crafting Recipes", "craftingRecipes"),
+  ...toEntries(
+    signWritingRecipes().get(),
+    "Sign Writing",
+    "signWritingRecipes",
+  ),
+  ...toEntries(books().get(), "Books", "books"),
+  ...toEntries(cassettes().get(), "Cassettes", "cassettes"),
+  ...toEntries(tools().get(), "Tools", "tools"),
+  ...toEntries(weapons().get(), "Weapons", "weapons"),
+  ...toEntries(equipment().get(), "Equipment", "equipment"),
+  ...toEntries(vehicles().get(), "Vehicles", "vehicles"),
+  ...toEntries(clothing().get(), "Clothing", "clothing"),
+  ...toEntries(furniture().get(), "Furniture", "furniture"),
 ];

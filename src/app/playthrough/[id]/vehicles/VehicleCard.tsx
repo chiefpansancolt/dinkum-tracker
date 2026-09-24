@@ -1,7 +1,8 @@
+import type { Vehicle } from "dinkum-data";
 import { Button } from "flowbite-react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { CollectionCardProps, Vehicle } from "@/types";
+import { CollectionCardProps } from "@/types";
 import DinkValue from "@/playthrough/ui/itemcard/DinkValue";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
 import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";

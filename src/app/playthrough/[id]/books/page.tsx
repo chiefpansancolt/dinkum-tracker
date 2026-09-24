@@ -1,12 +1,12 @@
 "use client";
 
+import { books } from "dinkum-data";
 import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { Playthrough } from "@/types";
 import { getPlaythroughById, updatePlaythroughData } from "@/lib/storage";
 import { getQueryParams, setQueryParam } from "@/service/urlService";
 import { collectedFilter } from "@/data/constants";
-import { books, getBooksBySearchValue } from "@/data/dinkum";
 import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
 import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
@@ -16,6 +16,8 @@ import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
 import TabHeader from "@/playthrough/ui/TabHeader";
 import BookCard from "./BookCard";
+
+const allBooks = books().get();
 
 export default function BooksPage() {
 	const params = useParams();
@@ -90,7 +92,7 @@ export default function BooksPage() {
 	};
 
 	const filteredData = useMemo(() => {
-		let filtered = [...books];
+		let filtered = [...allBooks];
 
 		if (collectionFilter !== "All") {
 			if (collectionFilter === "collected") {
@@ -101,7 +103,7 @@ export default function BooksPage() {
 		}
 
 		if (searchQuery) {
-			filtered = getBooksBySearchValue(filtered, searchQuery);
+			filtered = books(filtered).search(searchQuery);
 		}
 
 		return filtered;
@@ -130,7 +132,7 @@ export default function BooksPage() {
 					enableSaveAlert={true}
 					isDirty={isDirty}
 					collectedCount={getCollectedCount()}
-					collectionTotal={books.length}
+					collectionTotal={allBooks.length}
 					dirtyMessage="Your book collection has not been saved yet."
 				/>
 
@@ -147,7 +149,7 @@ export default function BooksPage() {
 				<FilterDetails
 					title="books"
 					filteredCount={filteredData.length}
-					totalCount={books.length}
+					totalCount={allBooks.length}
 					collectedLabel="Collected"
 					collectedCount={getCollectedCount()}
 				/>

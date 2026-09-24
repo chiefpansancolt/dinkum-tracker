@@ -1,19 +1,12 @@
 "use client";
 
+import { tools } from "dinkum-data";
 import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
-import { Playthrough } from "@/types";
+import { FilterArray, Playthrough } from "@/types";
 import { getPlaythroughById, updatePlaythroughData } from "@/lib/storage";
 import { getQueryParams, setQueryParam } from "@/service/urlService";
 import { collectedFilter } from "@/data/constants";
-import {
-	getToolByLicense,
-	getToolBySearchValue,
-	getToolBySource,
-	getUniqueToolsLicenses,
-	getUniqueToolsSources,
-	tools,
-} from "@/data/dinkum";
 import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
 import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
@@ -23,6 +16,22 @@ import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
 import TabHeader from "@/playthrough/ui/TabHeader";
 import ToolCard from "./ToolCard";
+
+const allTools = tools().get();
+
+const uniqueToolsLicenses: FilterArray = (() => {
+	const licenses = new Set<string>();
+	allTools.forEach((tool) => {
+		if (tool.licence) licenses.add(tool.licence);
+	});
+	return ["All", ...Array.from(licenses).sort()];
+})();
+
+const uniqueToolsSources: FilterArray = (() => {
+	const sources = new Set<string>();
+	allTools.forEach((item) => item.source.forEach((src) => sources.add(src)));
+	return ["All", ...Array.from(sources).sort()];
+})();
 
 export default function ToolsPage() {
 	const params = useParams();
@@ -40,12 +49,12 @@ export default function ToolsPage() {
 	const filters = {
 		license: {
 			value: licenseFilter,
-			options: getUniqueToolsLicenses(),
+			options: uniqueToolsLicenses,
 			label: "License",
 		},
 		source: {
 			value: sourceFilter,
-			options: getUniqueToolsSources(),
+			options: uniqueToolsSources,
 			label: "Source",
 		},
 		buyUnit: {
@@ -121,15 +130,17 @@ export default function ToolsPage() {
 	};
 
 	const filteredData = useMemo(() => {
-		let filtered = [...tools];
+		let query = tools(allTools);
 
 		if (sourceFilter !== "All") {
-			filtered = getToolBySource(filtered, sourceFilter);
+			query = query.bySource(sourceFilter);
 		}
 
 		if (licenseFilter !== "All") {
-			filtered = getToolByLicense(filtered, licenseFilter);
+			query = query.byLicence(licenseFilter);
 		}
+
+		let filtered = query.get();
 
 		if (buyUnitFilter !== "All") {
 			filtered = filtered.filter((tool) => {
@@ -155,7 +166,7 @@ export default function ToolsPage() {
 		}
 
 		if (searchQuery) {
-			filtered = getToolBySearchValue(filtered, searchQuery);
+			filtered = tools(filtered).search(searchQuery);
 		}
 
 		return filtered;
@@ -184,7 +195,7 @@ export default function ToolsPage() {
 					enableSaveAlert={true}
 					isDirty={isDirty}
 					collectedCount={getCollectedCount()}
-					collectionTotal={tools.length}
+					collectionTotal={allTools.length}
 					dirtyMessage="Your tools collection has not been saved yet."
 				/>
 
@@ -201,7 +212,7 @@ export default function ToolsPage() {
 				<FilterDetails
 					title="tools"
 					filteredCount={filteredData.length}
-					totalCount={tools.length}
+					totalCount={allTools.length}
 					collectedLabel="Collected"
 					collectedCount={getCollectedCount()}
 				/>

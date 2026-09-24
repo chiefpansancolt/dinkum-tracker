@@ -1,36 +1,40 @@
+import { bugs, critters, fish } from "dinkum-data";
 import { Badge, Card, Progress } from "flowbite-react";
 import Image from "next/image";
 import React, { useMemo } from "react";
 import { CollectionStatsProps } from "@/types";
-import { bugs, critters, fish } from "@/data/dinkum";
+
+const totalFish = fish().count();
+const totalBugs = bugs().count();
+const totalCritters = critters().count();
 
 const CollectionStats: React.FC<CollectionStatsProps> = ({ collections, donations }) => {
 	const stats = useMemo(() => {
 		return {
 			fish: {
 				collected: collections.fish.length,
-				total: fish.length,
-				percentage: Math.round((collections.fish.length / fish.length) * 100) || 0,
+				total: totalFish,
+				percentage: Math.round((collections.fish.length / totalFish) * 100) || 0,
 				donated: donations?.fish.length || 0,
 				donationPercentage:
-					Math.round(((donations?.fish.length || 0) / fish.length) * 100) || 0,
+					Math.round(((donations?.fish.length || 0) / totalFish) * 100) || 0,
 			},
 			bugs: {
 				collected: collections.bugs.length,
-				total: bugs.length,
-				percentage: Math.round((collections.bugs.length / bugs.length) * 100) || 0,
+				total: totalBugs,
+				percentage: Math.round((collections.bugs.length / totalBugs) * 100) || 0,
 				donated: donations?.bugs.length || 0,
 				donationPercentage:
-					Math.round(((donations?.bugs.length || 0) / bugs.length) * 100) || 0,
+					Math.round(((donations?.bugs.length || 0) / totalBugs) * 100) || 0,
 			},
 			critters: {
 				collected: collections.critters?.length || 0,
-				total: critters.length,
+				total: totalCritters,
 				percentage:
-					Math.round(((collections.critters?.length || 0) / critters.length) * 100) || 0,
+					Math.round(((collections.critters?.length || 0) / totalCritters) * 100) || 0,
 				donated: donations?.critters.length || 0,
 				donationPercentage:
-					Math.round(((donations?.critters.length || 0) / critters.length) * 100) || 0,
+					Math.round(((donations?.critters.length || 0) / totalCritters) * 100) || 0,
 			},
 		};
 	}, [collections, donations]);

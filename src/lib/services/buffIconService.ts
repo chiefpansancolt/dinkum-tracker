@@ -1,64 +1,64 @@
-import { BuffIcons } from "@/data/constants";
+import { buffIcons, type BuffIcons } from "dinkum-data";
 
 export const getBuffIcon = (
   buffName: string,
   value?: number,
 ): { icon: string; level?: number } => {
+  const icons = buffIcons();
+
   if (value) {
     if (buffName === "attackLevel" && value <= 3) {
       return {
-        icon: BuffIcons[`attackLevel${value}` as keyof typeof BuffIcons],
+        icon: icons[`attackLevel${value}` as keyof BuffIcons],
         level: value,
       };
     } else if (buffName === "defenseLevel" && value <= 3) {
       return {
-        icon: BuffIcons[`defenseLevel${value}` as keyof typeof BuffIcons],
+        icon: icons[`defenseLevel${value}` as keyof BuffIcons],
         level: value,
       };
     } else if (buffName === "experienceLevel" && value <= 3) {
       return {
-        icon: BuffIcons[`experienceLevel${value}` as keyof typeof BuffIcons],
+        icon: icons[`experienceLevel${value}` as keyof BuffIcons],
         level: value,
       };
     } else if (buffName === "fishLevel" && value <= 3) {
       return {
-        icon: BuffIcons[`fishLevel${value}` as keyof typeof BuffIcons],
+        icon: icons[`fishLevel${value}` as keyof BuffIcons],
         level: value,
       };
     } else if (buffName === "foragingLevel" && value <= 3) {
       return {
-        icon: BuffIcons[`foragingLevel${value}` as keyof typeof BuffIcons],
+        icon: icons[`foragingLevel${value}` as keyof BuffIcons],
         level: value,
       };
     } else if (buffName === "miningLevel" && value <= 3) {
       return {
-        icon: BuffIcons[`miningLevel${value}` as keyof typeof BuffIcons],
+        icon: icons[`miningLevel${value}` as keyof BuffIcons],
         level: value,
       };
     } else if (buffName === "speedLevel" && value <= 3) {
       return {
-        icon: BuffIcons[`speedLevel${value}` as keyof typeof BuffIcons],
+        icon: icons[`speedLevel${value}` as keyof BuffIcons],
         level: value,
       };
     } else if (buffName === "swimmingLevel" && value <= 3) {
       return {
-        icon: BuffIcons[`swimmingLevel${value}` as keyof typeof BuffIcons],
+        icon: icons[`swimmingLevel${value}` as keyof BuffIcons],
         level: value,
       };
     } else if (buffName === "fastHealthTickSpeedLevel" && value <= 2) {
       return {
-        icon: BuffIcons[
-          `fastHealthTickSpeedLevel${value}` as keyof typeof BuffIcons
-        ],
+        icon: icons[`fastHealthTickSpeedLevel${value}` as keyof BuffIcons],
         level: value,
       };
     } else if (buffName === "coolLevel" && value <= 2) {
       return {
-        icon: BuffIcons[`coolLevel${value}` as keyof typeof BuffIcons],
+        icon: icons[`coolLevel${value}` as keyof BuffIcons],
         level: value,
       };
     }
   }
 
-  return { icon: BuffIcons[buffName as keyof typeof BuffIcons] };
+  return { icon: icons[buffName as keyof BuffIcons] };
 };

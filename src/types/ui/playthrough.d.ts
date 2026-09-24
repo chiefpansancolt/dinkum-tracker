@@ -1,17 +1,32 @@
-import React from "react";
-import {
+import type {
+  Animal,
+  Book,
   Buffs,
+  Building,
+  Cassette,
+  Clothing,
+  CookingRecipe,
   Crop,
+  Equipment,
   Flower,
+  Furniture,
   License,
   Milestone,
   NPC,
+  PediaItem,
+  Recipe,
   Resource,
-  ResourceItem,
   ResourceVariant,
   Seed,
   Skill,
-} from "../dinkum";
+  Tool,
+  Tree,
+  Vehicle,
+  Weapon,
+} from "dinkum-data";
+import React from "react";
+import { ResourceType } from "@/data/constants";
+import { ResourceItem, UniqueResource } from "../app/resourceItem";
 
 export type FilterArray = string[];
 export interface FilterObject {
@@ -166,10 +181,12 @@ export interface CollectionCardProps {
     | Book
     | PediaItem
     | Building
+    | Cassette
     | Clothing
     | CookingRecipe
     | Recipe
     | Equipment
+    | Furniture
     | ResourceItem
     | Tool
     | Vehicle

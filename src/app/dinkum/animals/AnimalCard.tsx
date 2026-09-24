@@ -1,3 +1,4 @@
+import type { Animal } from "dinkum-data";
 import { Badge } from "flowbite-react";
 import { CollectionCardProps } from "@/types";
 import DinkValue from "@/playthrough/ui/itemcard/DinkValue";
@@ -7,7 +8,9 @@ import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
 import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
 import ItemResources from "@/playthrough/ui/itemcard/ItemResources";
 
-const AnimalCard = ({ record }: CollectionCardProps) => {
+const AnimalCard = ({ record: animalRecord }: CollectionCardProps) => {
+	const record = animalRecord as Animal;
+
 	const getTemperamentColor = (temperament: string) => {
 		switch (temperament) {
 			case "Passive":

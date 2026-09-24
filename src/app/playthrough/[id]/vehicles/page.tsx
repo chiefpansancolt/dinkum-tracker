@@ -1,18 +1,11 @@
 "use client";
 
+import { vehicles } from "dinkum-data";
 import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
-import { Playthrough } from "@/types";
+import { FilterArray, Playthrough } from "@/types";
 import { getPlaythroughById, updatePlaythroughData } from "@/lib/storage";
 import { getQueryParams, setQueryParam } from "@/service/urlService";
-import {
-	getUniqueVehicleReqType,
-	getUniqueVehicleSources,
-	getVehicleByRequirmentType,
-	getVehicleBySearchValue,
-	getVehicleBySource,
-	vehicles,
-} from "@/data/dinkum";
 import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
 import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
@@ -22,6 +15,22 @@ import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
 import TabHeader from "@/playthrough/ui/TabHeader";
 import VehicleCard from "./VehicleCard";
+
+const allVehicles = vehicles().get();
+
+const uniqueVehicleSources: FilterArray = (() => {
+	const sources = new Set<string>();
+	allVehicles.forEach((item) => item.source.forEach((src) => sources.add(src)));
+	return ["All", ...Array.from(sources).sort()];
+})();
+
+const uniqueVehicleReqTypes: FilterArray = (() => {
+	const types = new Set<string>();
+	allVehicles.forEach((item) => {
+		if (item.requirementType) types.add(item.requirementType);
+	});
+	return ["All", ...Array.from(types).sort()];
+})();
 
 export default function VehiclesPage() {
 	const params = useParams();
@@ -38,12 +47,12 @@ export default function VehiclesPage() {
 	const filters = {
 		source: {
 			value: sourceFilter,
-			options: getUniqueVehicleSources(),
+			options: uniqueVehicleSources,
 			label: "Source",
 		},
 		requirement: {
 			value: requirementFilter,
-			options: getUniqueVehicleReqType(),
+			options: uniqueVehicleReqTypes,
 			label: "Requirement Type",
 		},
 	};
@@ -107,15 +116,17 @@ export default function VehiclesPage() {
 	};
 
 	const filteredData = useMemo(() => {
-		let filtered = [...vehicles];
+		let query = vehicles(allVehicles);
 
 		if (sourceFilter !== "All") {
-			filtered = getVehicleBySource(filtered, sourceFilter);
+			query = query.bySource(sourceFilter);
 		}
 
 		if (requirementFilter !== "All") {
-			filtered = getVehicleByRequirmentType(filtered, requirementFilter);
+			query = query.byRequirementType(requirementFilter);
 		}
+
+		let filtered = query.get();
 
 		if (collectionFilter !== "All") {
 			if (collectionFilter === "collected") {
@@ -126,7 +137,7 @@ export default function VehiclesPage() {
 		}
 
 		if (searchQuery) {
-			filtered = getVehicleBySearchValue(filtered, searchQuery);
+			filtered = vehicles(filtered).search(searchQuery);
 		}
 
 		return filtered;
@@ -155,7 +166,7 @@ export default function VehiclesPage() {
 					enableSaveAlert={true}
 					isDirty={isDirty}
 					collectedCount={getCollectedCount()}
-					collectionTotal={vehicles.length}
+					collectionTotal={allVehicles.length}
 					dirtyMessage="Your vehicles collection has not been saved yet."
 				/>
 
@@ -172,7 +183,7 @@ export default function VehiclesPage() {
 				<FilterDetails
 					title="vehicles"
 					filteredCount={filteredData.length}
-					totalCount={vehicles.length}
+					totalCount={allVehicles.length}
 					collectedLabel="Collected"
 					collectedCount={getCollectedCount()}
 				/>

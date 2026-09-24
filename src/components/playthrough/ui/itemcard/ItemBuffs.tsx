@@ -1,9 +1,10 @@
+import { buffIcons } from "dinkum-data";
 import Image from "next/image";
 import { ItemBuffsProps } from "@/types";
 import { getBuffIcon } from "@/lib/services/buffIconService";
-import { BuffIcons } from "@/data/constants";
 
 const ItemBuffs = ({ id, buffs }: ItemBuffsProps) => {
+	const icons = buffIcons();
 	return (
 		<>
 			{buffs && Object.keys(buffs).length > 1 && (
@@ -18,7 +19,7 @@ const ItemBuffs = ({ id, buffs }: ItemBuffsProps) => {
 									title="Buff Duration"
 								>
 									<Image
-										src={BuffIcons.length}
+										src={icons.length}
 										alt="Buff Duration"
 										width={28}
 										height={28}

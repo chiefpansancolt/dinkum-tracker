@@ -1,21 +1,14 @@
 "use client";
 
+import { type License, LICENSE_TYPES, licenses } from "dinkum-data";
 import { Badge } from "flowbite-react";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
-import { License, Playthrough } from "@/types";
+import { FilterArray, Playthrough } from "@/types";
 import { getPlaythroughById, updatePlaythroughData } from "@/lib/storage";
 import { getQueryParams, setQueryParam } from "@/service/urlService";
 import { collectedFilter } from "@/data/constants";
-import {
-	getLicenseByCategory,
-	getLicenseBySearchValue,
-	getLicenseCategories,
-	getLicenseTotalLevels,
-	getLicenseTotalPermitPoints,
-	licenses,
-} from "@/data/dinkum";
 import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
 import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
@@ -25,6 +18,11 @@ import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
 import TabHeader from "@/playthrough/ui/TabHeader";
 import LicenseCard from "./LicenseCard";
+
+const allLicenses = licenses().get();
+const licenseCategories: FilterArray = ["All", ...LICENSE_TYPES];
+const licenseTotalLevels = allLicenses.reduce((total, license) => total + license.levels.length, 0);
+const licenseTotalPermitPoints = licenses().totalPermitPoints();
 
 export default function LicensesPage() {
 	const params = useParams();
@@ -40,7 +38,7 @@ export default function LicensesPage() {
 	const filters = {
 		category: {
 			value: categoryFilter,
-			options: getLicenseCategories(),
+			options: licenseCategories,
 			label: "Category",
 		},
 		collection: {
@@ -94,7 +92,7 @@ export default function LicensesPage() {
 			};
 
 			if (!isObtained) {
-				const license = licenses.find((l) => l.id === licenseId);
+				const license = allLicenses.find((l) => l.id === licenseId);
 				if (license) {
 					license.levels.forEach((l) => {
 						if (l.level > level) {
@@ -171,10 +169,11 @@ export default function LicensesPage() {
 	};
 
 	const filteredLicenses = useMemo(() => {
-		let filtered = [...licenses];
+		let filtered = [...allLicenses];
 
 		if (categoryFilter !== "All") {
-			filtered = getLicenseByCategory(filtered, categoryFilter);
+			const category = categoryFilter.toLowerCase();
+			filtered = filtered.filter((item) => item.id.includes(category));
 		}
 
 		if (collectionFilter !== "All") {
@@ -196,7 +195,7 @@ export default function LicensesPage() {
 		}
 
 		if (searchQuery) {
-			filtered = getLicenseBySearchValue(filtered, searchQuery);
+			filtered = licenses(filtered).search(searchQuery);
 		}
 
 		return filtered;
@@ -208,7 +207,7 @@ export default function LicensesPage() {
 
 	const getSpentPermitPoints = () => {
 		let spent = 0;
-		licenses.forEach((license) => {
+		allLicenses.forEach((license) => {
 			license.levels.forEach((level) => {
 				const licenseKey = `${license.id}_level_${level.level}`;
 				if (localState[licenseKey]) {
@@ -238,7 +237,7 @@ export default function LicensesPage() {
 					enableSaveAlert={true}
 					isDirty={isDirty}
 					collectedCount={getCompletedLevels()}
-					collectionTotal={getLicenseTotalLevels()}
+					collectionTotal={licenseTotalLevels}
 					dirtyMessage="Your license progress has not been saved yet."
 				/>
 
@@ -248,14 +247,13 @@ export default function LicensesPage() {
 							<h3 className="font-medium">Permit Points Spent</h3>
 							<p className="text-sm">
 								You&apos;ve spent {getSpentPermitPoints().toLocaleString()} of{" "}
-								{getLicenseTotalPermitPoints().toLocaleString()} needed permit
-								points.
+								{licenseTotalPermitPoints.toLocaleString()} needed permit points.
 							</p>
 						</div>
 						<Badge color="indigo" size="xl">
 							<span className="flex items-center">
 								{getSpentPermitPoints().toLocaleString()} /{" "}
-								{getLicenseTotalPermitPoints().toLocaleString()}
+								{licenseTotalPermitPoints.toLocaleString()}
 								<Image
 									src="/images/other/Permit_Points.png"
 									alt="Permit Points"
@@ -281,7 +279,7 @@ export default function LicensesPage() {
 				<FilterDetails
 					title="licenses"
 					filteredCount={filteredLicenses.length}
-					totalCount={licenses.length}
+					totalCount={allLicenses.length}
 					collectedLabel="Unlocked Levels"
 					collectedCount={getCompletedLevels()}
 				/>

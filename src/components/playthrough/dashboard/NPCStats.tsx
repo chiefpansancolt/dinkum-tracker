@@ -1,12 +1,14 @@
+import { npcs } from "dinkum-data";
 import { Card } from "flowbite-react";
 import Image from "next/image";
 import React, { useMemo } from "react";
 import { HiHeart } from "react-icons/hi";
 import { CollectNumberTabProps } from "@/types";
-import { npcs } from "@/data/dinkum";
+
+const allNpcs = npcs().get();
 
 const NPCStats: React.FC<CollectNumberTabProps> = ({ collected }) => {
-	const residents = useMemo(() => npcs, []);
+	const residents = useMemo(() => allNpcs, []);
 
 	const stats = useMemo(() => {
 		const totalNPCs = residents.length;
@@ -94,7 +96,7 @@ const NPCStats: React.FC<CollectNumberTabProps> = ({ collected }) => {
 								<h3 className="mb-2 text-base font-medium">Top Relationships</h3>
 								<div className="space-y-2">
 									{sortedNPCIds.map((npcId) => {
-										const npc = npcs.find((n) => n.id === npcId);
+										const npc = allNpcs.find((n) => n.id === npcId);
 										const hearts = collected[npcId] || 0;
 
 										if (!npc) return null;

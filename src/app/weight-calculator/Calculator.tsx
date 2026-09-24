@@ -1,17 +1,19 @@
 "use client";
 
+import { weightItems } from "dinkum-data";
 import { Card, Label } from "flowbite-react";
 import Image from "next/image";
 import { useMemo, useState } from "react";
-import { weightItems } from "@/data/dinkum/weightItems";
 import TabHeader from "@/playthrough/ui/TabHeader";
 
+const allWeightItems = weightItems().get();
+
 export default function CalculatorPage() {
-	const [selectedItemId, setSelectedItemId] = useState<string>(weightItems[0]?.id || "");
-	const [weight, setWeight] = useState<number>(weightItems[0]?.minWeight || 0);
+	const [selectedItemId, setSelectedItemId] = useState<string>(allWeightItems[0]?.id || "");
+	const [weight, setWeight] = useState<number>(allWeightItems[0]?.minWeight || 0);
 
 	const selectedItem = useMemo(() => {
-		return weightItems.find((item) => item.id === selectedItemId);
+		return allWeightItems.find((item) => item.id === selectedItemId);
 	}, [selectedItemId]);
 
 	const calculatedPrice = useMemo(() => {
@@ -21,7 +23,7 @@ export default function CalculatorPage() {
 
 	const handleItemChange = (itemId: string) => {
 		setSelectedItemId(itemId);
-		const item = weightItems.find((i) => i.id === itemId);
+		const item = allWeightItems.find((i) => i.id === itemId);
 		if (item) {
 			setWeight(item.minWeight);
 		}
@@ -64,7 +66,7 @@ export default function CalculatorPage() {
 					<Card>
 						<h3 className="mb-4 text-lg font-semibold dark:text-white">Select Item</h3>
 						<div className="grid grid-cols-3 gap-3">
-							{weightItems.map((item) => (
+							{allWeightItems.map((item) => (
 								<button
 									key={item.id}
 									onClick={() => handleItemChange(item.id)}

@@ -1,19 +1,12 @@
 "use client";
 
+import { equipment } from "dinkum-data";
 import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
-import { Playthrough } from "@/types";
+import { FilterArray, Playthrough } from "@/types";
 import { getPlaythroughById, updatePlaythroughData } from "@/lib/storage";
 import { getQueryParams, setQueryParam } from "@/service/urlService";
 import { collectedFilter } from "@/data/constants";
-import {
-	equipment,
-	getEquipmentByRequirmentType,
-	getEquipmentBySearchValue,
-	getEquipmentBySource,
-	getUniqueEquipmentReqType,
-	getUniqueEquipmentSources,
-} from "@/data/dinkum";
 import BreadcrumbsComp from "@/comps/layout/Breadcrumbs";
 import NotFoundCard from "@/comps/NotFoundCard";
 import LoadingPlaythrough from "@/playthrough/LoadingPlaythrough";
@@ -23,6 +16,22 @@ import FilterBar from "@/playthrough/ui/FilterBar";
 import FilterDetails from "@/playthrough/ui/FilterDetails";
 import TabHeader from "@/playthrough/ui/TabHeader";
 import EquipmentCard from "./EquipmentCard";
+
+const allEquipment = equipment().get();
+
+const uniqueEquipmentSources: FilterArray = (() => {
+	const sources = new Set<string>();
+	allEquipment.forEach((item) => item.source.forEach((src) => sources.add(src)));
+	return ["All", ...Array.from(sources).sort()];
+})();
+
+const uniqueEquipmentReqTypes: FilterArray = (() => {
+	const types = new Set<string>();
+	allEquipment.forEach((item) => {
+		if (item.requirementType) types.add(item.requirementType);
+	});
+	return ["All", ...Array.from(types).sort()];
+})();
 
 export default function EquipmentPage() {
 	const params = useParams();
@@ -39,12 +48,12 @@ export default function EquipmentPage() {
 	const filters = {
 		source: {
 			value: sourceFilter,
-			options: getUniqueEquipmentSources(),
+			options: uniqueEquipmentSources,
 			label: "Source",
 		},
 		requirement: {
 			value: requirementFilter,
-			options: getUniqueEquipmentReqType(),
+			options: uniqueEquipmentReqTypes,
 			label: "Requirement Type",
 		},
 		collection: {
@@ -113,15 +122,17 @@ export default function EquipmentPage() {
 	};
 
 	const filteredData = useMemo(() => {
-		let filtered = [...equipment];
+		let query = equipment(allEquipment);
 
 		if (sourceFilter !== "All") {
-			filtered = getEquipmentBySource(filtered, sourceFilter);
+			query = query.bySource(sourceFilter);
 		}
 
 		if (requirementFilter !== "All") {
-			filtered = getEquipmentByRequirmentType(filtered, requirementFilter);
+			query = query.byRequirementType(requirementFilter);
 		}
+
+		let filtered = query.get();
 
 		if (collectionFilter !== "All") {
 			if (collectionFilter === "collected") {
@@ -132,7 +143,7 @@ export default function EquipmentPage() {
 		}
 
 		if (searchQuery) {
-			filtered = getEquipmentBySearchValue(filtered, searchQuery);
+			filtered = equipment(filtered).search(searchQuery);
 		}
 
 		return filtered;
@@ -161,7 +172,7 @@ export default function EquipmentPage() {
 					enableSaveAlert={true}
 					isDirty={isDirty}
 					collectedCount={getCollectedCount()}
-					collectionTotal={equipment.length}
+					collectionTotal={allEquipment.length}
 					dirtyMessage="Your equipment collection has not been saved yet."
 				/>
 
@@ -178,7 +189,7 @@ export default function EquipmentPage() {
 				<FilterDetails
 					title="equipment items"
 					filteredCount={filteredData.length}
-					totalCount={equipment.length}
+					totalCount={allEquipment.length}
 					collectedLabel="Collected"
 					collectedCount={getCollectedCount()}
 				/>

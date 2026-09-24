@@ -1,15 +1,5 @@
 "use client";
 
-import { Badge, Button, Card, Modal, ModalBody, ModalHeader, Progress } from "flowbite-react";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
-import { FaAward, FaBug, FaBuilding, FaFish, FaIdCard } from "react-icons/fa";
-import { GiCrab } from "react-icons/gi";
-import { HiOutlineCalendar, HiOutlineRefresh, HiOutlineStar, HiOutlineTrash } from "react-icons/hi";
-import { PlaythroughCardProps } from "@/types";
-import { setActivePlaythroughId } from "@/lib/localStorage";
-import { deletePlaythrough } from "@/lib/storage";
-import { getSeasonEmoji } from "@/service/seasonalTheme";
 import {
 	books,
 	bugs,
@@ -25,7 +15,17 @@ import {
 	tools,
 	vehicles,
 	weapons,
-} from "@/data/dinkum";
+} from "dinkum-data";
+import { Badge, Button, Card, Modal, ModalBody, ModalHeader, Progress } from "flowbite-react";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { FaAward, FaBug, FaBuilding, FaFish, FaIdCard } from "react-icons/fa";
+import { GiCrab } from "react-icons/gi";
+import { HiOutlineCalendar, HiOutlineRefresh, HiOutlineStar, HiOutlineTrash } from "react-icons/hi";
+import { PlaythroughCardProps } from "@/types";
+import { setActivePlaythroughId } from "@/lib/localStorage";
+import { deletePlaythrough } from "@/lib/storage";
+import { getSeasonEmoji } from "@/service/seasonalTheme";
 
 export default function PlaythroughCard({
 	playthrough,
@@ -90,29 +90,33 @@ export default function PlaythroughCard({
 		const vehiclesCount = Object.values(playthrough.vehicles || {}).filter((v) => v).length;
 		const clothingCount = Object.values(playthrough.clothing || {}).filter((v) => v).length;
 		const furnitureCount = Object.values(playthrough.furniture || {}).filter((v) => v).length;
-		const totalFish = fish.length;
-		const totalBugs = bugs.length;
-		const totalCritters = critters.length;
+		const totalFish = fish().get().length;
+		const totalBugs = bugs().get().length;
+		const totalCritters = critters().get().length;
 		const totalPossiblePediaItems = totalFish + totalBugs + totalCritters;
-		const totalLicenseLevels = licenses.reduce((total, license) => {
-			return total + license.levels.length;
-		}, 0);
-		const totalMilestoneLevels = milestones.reduce((total, milestone) => {
-			return total + milestone.levels.length;
-		}, 0);
-		const totalCollectableBuildings = buildings.filter(
-			(building) => building.deedType === "Collectable"
-		).length;
-		const totalCookingRecipes = cookingRecipes.length;
-		const totalCraftingRecipes = craftingRecipes.length;
-		const totalSignWritingRecipes = signWritingRecipes.length;
+		const totalLicenseLevels = licenses()
+			.get()
+			.reduce((total, license) => {
+				return total + license.levels.length;
+			}, 0);
+		const totalMilestoneLevels = milestones()
+			.get()
+			.reduce((total, milestone) => {
+				return total + milestone.levels.length;
+			}, 0);
+		const totalCollectableBuildings = buildings()
+			.get()
+			.filter((building) => building.deedType === "Collectable").length;
+		const totalCookingRecipes = cookingRecipes().get().length;
+		const totalCraftingRecipes = craftingRecipes().get().length;
+		const totalSignWritingRecipes = signWritingRecipes().get().length;
 		const totalPossibleRecipes =
 			totalCookingRecipes + totalCraftingRecipes + totalSignWritingRecipes;
-		const totalBooks = books.length;
-		const totalTools = tools.length;
-		const totalWeapons = weapons.length;
-		const totalEquipment = equipment.length;
-		const totalVehicles = vehicles.length;
+		const totalBooks = books().get().length;
+		const totalTools = tools().get().length;
+		const totalWeapons = weapons().get().length;
+		const totalEquipment = equipment().get().length;
+		const totalVehicles = vehicles().get().length;
 		const totalPossibleCollectables =
 			totalBooks + totalTools + totalWeapons + totalEquipment + totalVehicles;
 		const pediaPercentage = Math.round((totalPediaItems / totalPossiblePediaItems) * 100) || 0;

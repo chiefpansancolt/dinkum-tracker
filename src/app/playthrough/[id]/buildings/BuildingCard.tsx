@@ -1,9 +1,8 @@
+import type { Building, DeedType } from "dinkum-data";
 import { Badge } from "flowbite-react";
 import Image from "next/image";
 import { HiCalendarDays, HiClock } from "react-icons/hi2";
-import { Building, CollectionCardProps } from "@/types";
-import { DeedTypes } from "@/data/constants";
-import { getDeedBadgeColor } from "@/data/dinkum";
+import { CollectionCardProps } from "@/types";
 import DinkValue from "@/playthrough/ui/itemcard/DinkValue";
 import ItemCard from "@/playthrough/ui/itemcard/ItemCard";
 import ItemDetail from "@/playthrough/ui/itemcard/ItemDetail";
@@ -12,9 +11,15 @@ import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
 import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
 import ItemResources from "@/playthrough/ui/itemcard/ItemResources";
 
+const deedBadgeColors: Record<DeedType, string> = {
+	Collectable: "green",
+	Movable: "purple",
+	Reference: "gray",
+};
+
 const BuildingCard = ({ record, isCollected = false, onToggleCollected }: CollectionCardProps) => {
 	const building = record as Building;
-	const isCollectable = building.deedType === DeedTypes.Collectable;
+	const isCollectable = building.deedType === "Collectable";
 	const hasOperatingHours = building.operatingHours && building.operatingHours.length > 0;
 
 	return (
@@ -23,7 +28,7 @@ const BuildingCard = ({ record, isCollected = false, onToggleCollected }: Collec
 				<ItemHeader
 					title={building.name}
 					renderRightComp={() => (
-						<Badge color={getDeedBadgeColor(building.deedType)}>
+						<Badge color={deedBadgeColors[building.deedType]}>
 							{building.deedType}
 						</Badge>
 					)}
