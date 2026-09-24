@@ -6,6 +6,30 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [1.4.0] - 2026-09-24
+
+### Changed
+
+- Replace the local hardcoded game-data layer (`src/data/dinkum/`, `src/types/dinkum/`) with the
+  [dinkum-data](https://www.npmjs.com/package/dinkum-data) npm package as the single source of
+  truth for all Dinkum game data. Every page and component now queries the package's chainable
+  query builder API directly instead of local helper functions.
+- Add a `postinstall` script (`scripts/copy-game-assets.sh`) that syncs `public/images/` from the
+  installed `dinkum-data` package on every install, replacing the previous locally committed
+  image set.
+- Use the `dinkum-data` package's `clothingSlots()`, `buffIcons()`, `milestoneCategories()`, and
+  `relics().uniqueLocations()` in place of the equivalent hardcoded local constants.
+- Merge the stateful playthrough calendar (`GameCalendar`) directly into
+  `src/lib/services/calendar.ts`, now seeded from the package's static calendar data instead of
+  regenerating birthdays and events locally.
+- Consolidate three separate hardcoded copies of the season-cycle order into a single
+  `SEASON_ORDER` export, derived from the package's calendar data instead of hand-typed.
+
+### Fixed
+
+- Fix `CollectionCardProps.record`'s union type, which was missing `Cassette` and `Furniture`
+  even though both were consumed; previously masked by `skipLibCheck`.
+
 ## [1.3.0] - 2026-04-10
 
 ### Features
