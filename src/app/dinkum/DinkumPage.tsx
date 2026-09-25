@@ -2,8 +2,8 @@
 
 import { Button, Card } from "flowbite-react";
 import Link from "next/link";
-import { FaOtter, FaSeedling, FaTree } from "react-icons/fa6";
-import { GiMineralPearls, GiWheat } from "react-icons/gi";
+import { FaCalendarCheck, FaOtter, FaSeedling, FaTree } from "react-icons/fa6";
+import { GiFruitBowl, GiMineralPearls, GiWheat } from "react-icons/gi";
 import { LuFlower2 } from "react-icons/lu";
 
 export default function DinkumPage() {
@@ -43,6 +43,18 @@ export default function DinkumPage() {
 			description: "View all trees and their harvestable resources",
 			icon: <FaTree className="text-primary h-10 w-10" />,
 			href: "/dinkum/trees",
+		},
+		{
+			title: "Food Modeller",
+			description: "Browse every Food Modeller conversion from food and crops to furniture",
+			icon: <GiFruitBowl className="text-primary h-10 w-10" />,
+			href: "/dinkum/food-modeller",
+		},
+		{
+			title: "Daily Milestones",
+			description: "View the full pool of repeatable daily tasks and their permit rewards",
+			icon: <FaCalendarCheck className="text-primary h-10 w-10" />,
+			href: "/dinkum/daily-milestones",
 		},
 	];
 

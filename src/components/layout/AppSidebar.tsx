@@ -12,6 +12,7 @@ import {
 	FaBug,
 	FaBuilding,
 	FaBuildingColumns,
+	FaCalendarCheck,
 	FaCalendarDays,
 	FaCar,
 	FaCouch,
@@ -27,6 +28,7 @@ import {
 import {
 	GiBackpack,
 	GiClothes,
+	GiFruitBowl,
 	GiMineralPearls,
 	GiPartyPopper,
 	GiSofa,
@@ -223,6 +225,26 @@ export default function AppSidebar({ sidebarOpen }: { sidebarOpen: boolean }) {
 							icon={<GiMineralPearls />}
 						>
 							Resources
+						</SidebarLink>
+					</li>
+
+					<li>
+						<SidebarLink
+							href="/dinkum/food-modeller"
+							currentPath={pathname}
+							icon={<GiFruitBowl />}
+						>
+							Food Modeller
+						</SidebarLink>
+					</li>
+
+					<li>
+						<SidebarLink
+							href="/dinkum/daily-milestones"
+							currentPath={pathname}
+							icon={<FaCalendarCheck />}
+						>
+							Daily Milestones
 						</SidebarLink>
 					</li>
 

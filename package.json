@@ -32,7 +32,7 @@
         "postinstall": "bash scripts/copy-game-assets.sh"
     },
     "dependencies": {
-        "dinkum-data": "1.0.0",
+        "dinkum-data": "1.0.1",
         "flowbite-react": "^0.12.17",
         "next": "16.3.5",
         "react": "^19.3.0",
