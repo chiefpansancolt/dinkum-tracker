@@ -138,7 +138,9 @@ export default function DailyMilestonesPage() {
 										<span className="text-gray-900 dark:text-gray-50">
 											{milestone.name}
 										</span>
-										<PermitValue price={milestone.permitPoints} />
+										<div className="text-gray-900 dark:text-gray-50">
+											<PermitValue price={milestone.permitPoints} />
+										</div>
 									</div>
 								))}
 							</div>
