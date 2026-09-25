@@ -11,6 +11,7 @@ import ItemFooter from "@/playthrough/ui/itemcard/ItemFooter";
 import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
 import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
 import ItemResources from "@/playthrough/ui/itemcard/ItemResources";
+import PermitValue from "@/playthrough/ui/itemcard/PermitValue";
 
 const WeaponCard = ({ record, isCollected = false, onToggleCollected }: CollectionCardProps) => {
 	const weapon = record as Weapon;
@@ -59,9 +60,12 @@ const WeaponCard = ({ record, isCollected = false, onToggleCollected }: Collecti
 						<ItemResources id={weapon.id} label="Resources" items={weapon.inputs} />
 					)}
 
-					{weapon.buyPrice !== undefined && (
-						<DinkValue label="Buy Price" price={weapon.buyPrice} />
-					)}
+					{weapon.buyPrice !== undefined &&
+						(weapon.buyUnits === "Permit Points" ? (
+							<PermitValue label="Buy Price" price={weapon.buyPrice} />
+						) : (
+							<DinkValue label="Buy Price" price={weapon.buyPrice} />
+						))}
 
 					{weapon.baseSellPrice !== null && (
 						<DinkValue

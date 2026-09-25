@@ -11,6 +11,7 @@ import ItemFranklyn from "@/playthrough/ui/itemcard/ItemFranklyn";
 import ItemHeader from "@/playthrough/ui/itemcard/ItemHeader";
 import ItemImage from "@/playthrough/ui/itemcard/ItemImage";
 import ItemResources from "@/playthrough/ui/itemcard/ItemResources";
+import PermitValue from "@/playthrough/ui/itemcard/PermitValue";
 
 const EquipmentCard = ({ record, isCollected = false, onToggleCollected }: CollectionCardProps) => {
 	const equipment = record as Equipment;
@@ -84,9 +85,12 @@ const EquipmentCard = ({ record, isCollected = false, onToggleCollected }: Colle
 						/>
 					)}
 
-					{equipment.buyPrice !== undefined && (
-						<DinkValue label="Buy Price" price={equipment.buyPrice} />
-					)}
+					{equipment.buyPrice !== undefined &&
+						(equipment.buyUnits === "Permit Points" ? (
+							<PermitValue label="Buy Price" price={equipment.buyPrice} />
+						) : (
+							<DinkValue label="Buy Price" price={equipment.buyPrice} />
+						))}
 
 					{equipment.baseSellPrice !== null && (
 						<DinkValue
