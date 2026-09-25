@@ -7,6 +7,7 @@ import type {
   Clothing,
   CookingRecipe,
   Crop,
+  Decoration,
   Equipment,
   Flower,
   Furniture,
@@ -185,6 +186,7 @@ export interface CollectionCardProps {
     | Clothing
     | CookingRecipe
     | Recipe
+    | Decoration
     | Equipment
     | Furniture
     | ResourceItem

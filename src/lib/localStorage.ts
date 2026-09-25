@@ -115,6 +115,7 @@ export const createEmptyPlaythrough = (name: string): Playthrough => {
     vehicles: {},
     clothing: {},
     furniture: {},
+    decorations: {},
     cassettes: {},
   };
 };
@@ -140,6 +141,7 @@ export const updatePlaythroughData = (
     vehicles?: Record<string, boolean>;
     clothing?: Record<string, boolean>;
     furniture?: Record<string, boolean>;
+    decorations?: Record<string, boolean>;
     cassettes?: Record<string, boolean>;
   },
 ): boolean => {
@@ -286,6 +288,13 @@ export const updatePlaythroughData = (
     updatedPlaythrough.furniture = {
       ...(updatedPlaythrough.furniture || {}),
       ...updates.furniture,
+    };
+  }
+
+  if (updates.decorations) {
+    updatedPlaythrough.decorations = {
+      ...(updatedPlaythrough.decorations || {}),
+      ...updates.decorations,
     };
   }
 

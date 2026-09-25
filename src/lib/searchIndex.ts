@@ -7,6 +7,7 @@ import {
   cookingRecipes,
   craftingRecipes,
   critters,
+  decorations,
   equipment,
   fish,
   furniture,
@@ -71,4 +72,5 @@ export const searchIndex: SearchEntry[] = [
   ...toEntries(vehicles().get(), "Vehicles", "vehicles"),
   ...toEntries(clothing().get(), "Clothing", "clothing"),
   ...toEntries(furniture().get(), "Furniture", "furniture"),
+  ...toEntries(decorations().get(), "Decorations", "decorations"),
 ];
