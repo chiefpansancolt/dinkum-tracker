@@ -1,6 +1,6 @@
 {
     "name": "dinkum-tracker",
-    "version": "1.4.0",
+    "version": "1.5.0",
     "description": "A progress tracker for the game Dinkum — manage playthroughs, track collections, milestones, licenses, and more.",
     "private": true,
     "author": "chiefpansancolt",

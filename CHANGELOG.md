@@ -6,6 +6,39 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [1.5.0] - 2026-09-25
+
+### Added
+
+- Decorations collection page (`/playthrough/[id]/decorations`), replacing the "Coming Soon"
+  placeholder. Filters by category, source, and collection status, following the same pattern as
+  the Furniture page.
+- Food Modeller reference page (`/dinkum/food-modeller`) — every Food Modeller conversion from food
+  and crops into display furniture. Reference only, not trackable for collection.
+- Daily Milestones reference page (`/dinkum/daily-milestones`) — the full 120-task daily milestone
+  pool grouped by category, with search and a category filter. Reference only, not trackable for
+  collection.
+- Both new reference pages are linked from the sidebar's "Resource References" section and the
+  `/dinkum` hub page.
+
+### Changed
+
+- Bump `dinkum-data` to `1.0.2`, pulling in the new `decorations()` and `foodModellerRecipes()`
+  modules, the full 1st Anniversary Update ("The Great Bite") content, and a complete wiki
+  reconciliation pass across every existing module.
+
+### Fixed
+
+- `WeaponCard` and `EquipmentCard` always rendered buy price with the Dinks icon regardless of the
+  item's `buyUnits` field, unlike `ToolCard` which already branched correctly; this mis-displayed
+  Boom Box (priced in Permit Points).
+- Permit point values on the Daily Milestones page rendered with default black text regardless of
+  theme, since the shared `PermitValue` component relies on its parent for text color and this page
+  didn't use the usual `ItemCard` wrapper.
+- Several images (including "Sparkin' Soup Plate") were broken due to an upstream `dinkum-data` bug
+  where asset filenames were literally named with `%27` instead of a real apostrophe; resolved by
+  the `dinkum-data` version bump.
+
 ## [1.4.0] - 2026-09-24
 
 ### Changed
