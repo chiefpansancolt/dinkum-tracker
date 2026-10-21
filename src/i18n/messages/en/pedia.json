@@ -1,0 +1,85 @@
+{
+    "title": "Pedia",
+    "subline": "{done} of {total} collected · {percent}% · {name}",
+    "tabsLabel": "Pedia sections",
+    "tabs": {
+        "fish": "Fish",
+        "bugs": "Bugs",
+        "critters": "Critters"
+    },
+    "nouns": {
+        "fish": "fish",
+        "bugs": "bugs",
+        "critters": "critters"
+    },
+    "summary": {
+        "captured": "Captured",
+        "donated": "Donated to museum",
+        "permit": "Permit points earned",
+        "of": "of {total}"
+    },
+    "filters": {
+        "sheetTitle": "Filter {tab}",
+        "biome": "Biome",
+        "rarity": "Rarity",
+        "season": "Season",
+        "time": "Time",
+        "collected": "Collected",
+        "donated": "Donated",
+        "allBiomes": "All biomes",
+        "allRarities": "All rarities",
+        "allSeasons": "All seasons",
+        "anyTime": "Any time",
+        "all": "All",
+        "onlyCollected": "Collected",
+        "notCollected": "To be collected",
+        "onlyDonated": "Donated",
+        "notDonated": "To be donated",
+        "search": "Search {tab} by name",
+        "showing": "Showing {shown} of {total} {tab}",
+        "capturedCount": "Captured {count}",
+        "donatedCount": "Donated {count}",
+        "apply": "Show {count} {tab}"
+    },
+    "view": {
+        "label": "View",
+        "grid": "Grid",
+        "list": "List"
+    },
+    "card": {
+        "biome": "Biome",
+        "seasons": "Seasons",
+        "time": "Time",
+        "sell": "Sell price",
+        "cooked": "Cooked",
+        "cookedValue": "{price} · x{pieces}",
+        "status": "Status",
+        "missing": "Missing",
+        "caught": "Caught",
+        "donated": "Donated"
+    },
+    "table": {
+        "name": "Name",
+        "rarity": "Rarity",
+        "biome": "Biome",
+        "seasons": "Seasons",
+        "time": "Time",
+        "sell": "Sell",
+        "cooked": "Cooked",
+        "status": "Status",
+        "caption": "{shown} of {total} rows shown. The same filters, status control and commerce level apply in both views."
+    },
+    "empty": {
+        "title": "No {tab} match these filters",
+        "description": "Try a different name or clear the filters.",
+        "clear": "Clear filters"
+    },
+    "toast": {
+        "marked": "{name} marked as {status}",
+        "statuses": {
+            "missing": "missing",
+            "caught": "caught",
+            "donated": "donated"
+        }
+    }
+}

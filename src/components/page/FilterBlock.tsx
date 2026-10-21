@@ -138,7 +138,7 @@ export function FilterBlock({
 				))}
 			</div>
 			<div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-				<div className="min-w-0 flex-1 lg:max-w-sm lg:flex-none">
+				<div className="min-w-0 flex-1 lg:min-w-60">
 					<Input
 						type="search"
 						value={search.value}
@@ -167,11 +167,15 @@ export function FilterBlock({
 				</Dialog>
 				<span className="text-muted max-lg:order-last max-lg:basis-full">{summary}</span>
 				{hasFilters && (
-					<Button variant="link" onClick={onClear} className="max-lg:order-last lg:-mx-2">
+					<Button variant="link" onClick={onClear} className="px-1! max-lg:order-last">
 						{t("clearFilters")}
 					</Button>
 				)}
-				{trailing && <div className="ms-auto">{trailing}</div>}
+				{trailing && (
+					<div className="ms-auto max-lg:order-last max-lg:flex max-lg:basis-full max-lg:justify-end">
+						{trailing}
+					</div>
+				)}
 			</div>
 		</section>
 	);

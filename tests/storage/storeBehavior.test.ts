@@ -199,7 +199,7 @@ describe("store behavior", () => {
     it("reads defaults when the new preference key does not exist", () => {
       const data = storageService.load();
 
-      expect(data.prefs).toEqual({ commerceLevel: 0 });
+      expect(data.prefs).toEqual({ commerceLevel: 0, viewMode: "grid" });
       expect(data.defaultSort).toBe("lastUpdated");
     });
   });
@@ -217,6 +217,18 @@ describe("store behavior", () => {
         commerceLevel: 10,
         futurePref: "x",
       });
+    });
+
+    it("reads an unknown view mode as the default", () => {
+      localStorage.setItem(PREFS_KEY, JSON.stringify({ viewMode: "cards" }));
+
+      expect(storageService.load().prefs.viewMode).toBe("grid");
+    });
+
+    it("keeps a saved view mode", () => {
+      localStorage.setItem(PREFS_KEY, JSON.stringify({ viewMode: "list" }));
+
+      expect(storageService.load().prefs.viewMode).toBe("list");
     });
 
     it("reads an invalid commerce level as the default", () => {

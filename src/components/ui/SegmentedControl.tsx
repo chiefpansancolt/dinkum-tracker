@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 
 interface SegmentedControlProps<Value extends string> {
 	label: string;
-	options: { id: Value; label: string; icon?: ReactNode }[];
+	options: { id: Value; label: string; icon?: ReactNode; tintWhenSelected?: boolean }[];
 	value: Value;
 	onChange: (value: Value) => void;
 	/** Stretches the options to share the width of the container, for example inside a card. */
@@ -23,18 +23,20 @@ export function SegmentedControl<Value extends string>({
 
 	return (
 		<fieldset
-			className={`border-line overflow-hidden rounded-md border-[1.5px] ${fullWidth ? "flex w-full" : "inline-flex w-fit"}`}
+			className={`border-line min-w-0 overflow-hidden rounded-md border-[1.5px] ${fullWidth ? "flex w-full" : "inline-flex w-fit"}`}
 		>
 			<legend className="sr-only">{label}</legend>
 			{options.map((option, index) => (
 				<label
 					key={option.id}
 					className={`flex min-h-11 min-w-11 cursor-pointer items-center justify-center gap-1.5 px-3 has-[:focus-visible]:outline-2 has-[:focus-visible]:-outline-offset-2 has-[:focus-visible]:outline-(--ring) lg:min-h-9 ${
-						fullWidth ? "flex-1" : ""
+						fullWidth ? "min-w-0 flex-1 px-1 text-[13px]" : ""
 					} ${index > 0 ? "border-line border-s-[1.5px]" : ""} ${
-						option.id === value
-							? "bg-primary text-on-primary font-semibold"
-							: "bg-surface text-ink"
+						option.id !== value
+							? "bg-surface text-ink"
+							: option.tintWhenSelected
+								? "bg-tint text-primary font-semibold"
+								: "bg-primary text-on-primary font-semibold"
 					}`}
 				>
 					<input

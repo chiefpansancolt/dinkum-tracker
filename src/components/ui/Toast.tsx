@@ -20,6 +20,8 @@ interface ToastOptions {
 	title: string;
 	message?: string;
 	action?: ToastAction;
+	/** A new toast with the same key replaces the earlier one, so repeated changes show one toast. */
+	key?: string;
 }
 
 interface ToastItem extends ToastOptions {
@@ -60,7 +62,14 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
 
 	const show = (options: ToastOptions) => {
 		const id = nextIdRef.current++;
-		setToasts((current) => [{ ...options, id }, ...current]);
+		setToasts((current) => {
+			const replaced = current.filter((toast) => options.key && toast.key === options.key);
+			replaced.forEach((toast) => {
+				clearTimeout(timersRef.current.get(toast.id));
+				timersRef.current.delete(toast.id);
+			});
+			return [{ ...options, id }, ...current.filter((toast) => !replaced.includes(toast))];
+		});
 
 		const delay = closeAfterMs(options);
 		if (delay !== null) {

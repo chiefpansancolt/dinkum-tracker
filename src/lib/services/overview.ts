@@ -42,7 +42,7 @@ export const meter = (count: number, total: number): Meter => ({
 const countTrue = (flags: Record<string, boolean> | undefined) =>
   Object.values(flags ?? {}).filter(Boolean).length;
 
-const PERMIT_POINTS_PER_DONATION = 100;
+export const PERMIT_POINTS_PER_DONATION = 100;
 
 const allLicenses = licenses().get();
 const allMilestones = milestones().get();

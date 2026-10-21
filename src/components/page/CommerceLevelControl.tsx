@@ -23,6 +23,7 @@ export function CommerceLevelControl() {
 		<div className="flex flex-col gap-1.5">
 			<span className="text-muted">{t("label")}</span>
 			<SegmentedControl
+				fullWidth
 				label={t("label")}
 				options={LEVELS.map((level) => ({
 					id: String(level),

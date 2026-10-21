@@ -4,6 +4,7 @@ import type {
   Playthrough,
   PlaythroughSort,
   Prefs,
+  ViewMode,
 } from "@/types/app";
 import { withDefaults } from "./playthrough";
 import {
@@ -27,7 +28,9 @@ const SORT_KEYS: readonly PlaythroughSort[] = [
 ];
 const COMMERCE_LEVELS: readonly CommerceLevel[] = [0, 5, 10, 15];
 
-const DEFAULT_PREFS: Prefs = { commerceLevel: 0 };
+const VIEW_MODES: readonly ViewMode[] = ["grid", "list"];
+
+const DEFAULT_PREFS: Prefs = { commerceLevel: 0, viewMode: "grid" };
 
 const emptyData: AppData = {
   playthroughs: [],
@@ -110,7 +113,11 @@ const parsePrefs = (raw: string | null): Prefs => {
   const commerceLevel = COMMERCE_LEVELS.find(
     (level) => level === parsed.commerceLevel,
   );
-  return { commerceLevel: commerceLevel ?? DEFAULT_PREFS.commerceLevel };
+  const viewMode = VIEW_MODES.find((mode) => mode === parsed.viewMode);
+  return {
+    commerceLevel: commerceLevel ?? DEFAULT_PREFS.commerceLevel,
+    viewMode: viewMode ?? DEFAULT_PREFS.viewMode,
+  };
 };
 
 const parseSort = (raw: string | null): PlaythroughSort =>

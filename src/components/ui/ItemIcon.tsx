@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 
 interface ItemIconProps {
 	src?: string;
@@ -7,12 +10,21 @@ interface ItemIconProps {
 }
 
 /**
- * Some items have no image in the package. They get a plain tinted square, so a row never asks
- * the browser for an empty address. The images are small files that ship with the app, so they
- * skip the image optimizer.
+ * Some file names in the data package contain a literal percent sign, such as `%26`, which a
+ * server reads as an escape. Escaping the percent sign requests the file by its real name.
+ */
+const escapePercent = (src: string) => src.replace(/%/g, "%25");
+
+/**
+ * Some items have no image in the package, or the file cannot be loaded. They get a plain tinted
+ * square, so a row never shows a broken image. The images are small files that ship with the app,
+ * so they skip the image optimizer.
  */
 export function ItemIcon({ src, size = 32, className = "" }: ItemIconProps) {
-	if (!src) {
+	const [failures, setFailures] = useState(0);
+	const current = failures === 0 ? src : failures === 1 && src ? escapePercent(src) : undefined;
+
+	if (!current) {
 		return (
 			<span
 				aria-hidden="true"
@@ -24,11 +36,13 @@ export function ItemIcon({ src, size = 32, className = "" }: ItemIconProps) {
 
 	return (
 		<Image
-			src={src}
+			key={current}
+			src={current}
 			alt=""
 			width={size}
 			height={size}
 			unoptimized
+			onError={() => setFailures((count) => count + 1)}
 			style={{ width: size, height: size }}
 			className={`shrink-0 rounded-md object-contain ${className}`}
 		/>
