@@ -1,5 +1,6 @@
 import collect from "./en/collect.json";
 import common from "./en/common.json";
+import landing from "./en/landing.json";
 import overview from "./en/overview.json";
 import pedia from "./en/pedia.json";
 import people from "./en/people.json";
@@ -28,6 +29,7 @@ const en = {
   people,
   tools,
   reference,
+  landing,
 };
 
 export default en;

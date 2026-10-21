@@ -117,3 +117,20 @@ describe("calendar helpers", () => {
     expect(seasonCounts("Summer")).toEqual({ events: 3, birthdays: 4 });
   });
 });
+
+describe("landing counts", () => {
+  it("shows the real item counts of the board", async () => {
+    const { collectionCounts } = await import("@/lib/services/landing");
+
+    expect(collectionCounts).toEqual({
+      pedia: 120,
+      npcs: 23,
+      licenses: 25,
+      milestones: 99,
+      buildings: 32,
+      gear: 234,
+      recipes: 324,
+      clothing: 532,
+    });
+  });
+});

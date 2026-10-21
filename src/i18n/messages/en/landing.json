@@ -1,0 +1,79 @@
+{
+    "header": {
+        "brand": "Dinkum Tracker",
+        "features": "Features",
+        "track": "What you can track",
+        "view": "View my playthroughs",
+        "new": "New playthrough",
+        "menu": "Menu",
+        "menuOpen": "Open menu",
+        "menuClose": "Close menu",
+        "nav": "Main"
+    },
+    "hero": {
+        "eyebrow": "Track your progress",
+        "title": "Dinkum Tracker",
+        "intro": "A comprehensive tracking application for your Dinkum adventures. Manage multiple playthroughs, track collections, and monitor progress all in one place. Everything is saved locally in your browser.",
+        "view": "View My Playthroughs",
+        "new": "New Adventure",
+        "imageAlt": "The Dinkum game"
+    },
+    "counts": {
+        "title": "Track Your Complete Collection",
+        "intro": "Manage every aspect of your Dinkum journey with a tracker built around the real item counts.",
+        "pedia": "Pedia",
+        "npcs": "NPCs",
+        "licenses": "Licenses",
+        "milestones": "Milestones",
+        "buildings": "Buildings",
+        "gear": "Gear and equipment",
+        "recipes": "Recipes",
+        "clothing": "Clothing"
+    },
+    "everything": {
+        "title": "Track Everything",
+        "intro": "All the tools you need for Dinkum success",
+        "imageAlt": "The Dinkum Tracker app",
+        "closing": "From collecting bugs to managing relationships with NPCs, Dinkum Tracker helps you keep track of everything in your game.",
+        "pedia": {
+            "title": "Pedia Collections",
+            "text": "Track all fish, bugs, and critters across seasons, locations, and times of day. Monitor your museum donations and collection progress."
+        },
+        "npcs": {
+            "title": "NPC Relationships",
+            "text": "Keep track of your friendships with town residents, gift preferences, and heart levels with all {count} NPCs."
+        },
+        "calendar": {
+            "title": "Calendar Events",
+            "text": "Keep track of important dates, birthdays, and seasonal events. Never miss another festival or special occasion in your Dinkum town."
+        }
+    },
+    "needs": {
+        "title": "Everything you need",
+        "intro": "Keep track of all the details that matter in your Dinkum adventure.",
+        "milestones": {
+            "title": "Milestones and Licenses",
+            "one": "Track completion of {count} game milestones",
+            "two": "Manage all licenses and their upgrade levels",
+            "three": "View permit point progress and requirements"
+        },
+        "recipes": {
+            "title": "Recipes and Crafting",
+            "one": "Track all cooking recipes and their ingredients",
+            "two": "Keep track of crafting recipes and resources",
+            "three": "Manage tools, weapons and equipment"
+        },
+        "collections": {
+            "title": "Collections and Resources",
+            "one": "Catalog all clothing and furniture items",
+            "two": "Track all resources and their uses",
+            "three": "Manage building projects and deeds"
+        }
+    },
+    "cta": {
+        "title": "Ready to start tracking?",
+        "text": "Begin organizing your Dinkum adventure today and never lose track of your progress again.",
+        "create": "Create New Playthrough",
+        "existing": "View Existing Playthroughs"
+    }
+}
