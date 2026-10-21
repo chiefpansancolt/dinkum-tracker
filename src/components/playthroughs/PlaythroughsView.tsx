@@ -257,15 +257,17 @@ export function PlaythroughsView() {
 				</div>
 			)}
 
-			<Button
-				variant="primary"
-				onClick={openCreate}
-				className="fixed inset-e-4 bottom-4 z-30 rounded-full px-5 shadow-lg"
-			>
-				<LuPlus size={18} aria-hidden="true" />
-				<span className="max-sm:hidden">{t("new.action")}</span>
-				<span className="sm:hidden">{t("new.actionShort")}</span>
-			</Button>
+			<div className="pointer-events-none sticky bottom-4 z-30 mt-auto flex justify-end">
+				<Button
+					variant="primary"
+					onClick={openCreate}
+					className="pointer-events-auto rounded-full px-5 shadow-lg"
+				>
+					<LuPlus size={18} aria-hidden="true" />
+					<span className="max-sm:hidden">{t("new.action")}</span>
+					<span className="sm:hidden">{t("new.actionShort")}</span>
+				</Button>
+			</div>
 
 			<NewPlaythroughDialog open={creating} onClose={closeCreate} />
 			<EditPlaythroughDialog playthrough={editing} onClose={() => setEditing(null)} />
