@@ -27,6 +27,7 @@
         "build": "next build",
         "start": "next start",
         "lint": "eslint .",
+        "test": "vitest run",
         "format": "prettier . --write",
         "format:check": "prettier . --check",
         "postinstall": "bash scripts/copy-game-assets.sh"
@@ -50,11 +51,14 @@
         "concurrently": "^10.0.5",
         "eslint": "^9.39.5",
         "eslint-config-next": "16.3.6",
+        "happy-dom": "^21.0.3",
         "prettier": "^3.9.9",
         "prettier-plugin-tailwindcss": "^0.8.1",
         "react-icons": "^5.7.0",
         "tailwindcss": "^4.3.3",
         "ts-node": "^10.9.2",
-        "typescript": "^6.0.3"
+        "typescript": "^6.0.3",
+        "vite": "^8.3.4",
+        "vitest": "^5.0.5"
     }
 }
