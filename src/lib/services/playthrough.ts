@@ -56,7 +56,7 @@ export const withDefaults = (stored: Playthrough): Playthrough => {
   };
 };
 
-export const GAME_SEASONS = ["Spring", "Summer", "Autumn", "Winter"] as const;
+const GAME_SEASONS = ["Spring", "Summer", "Autumn", "Winter"] as const;
 export type GameSeason = (typeof GAME_SEASONS)[number];
 
 /** The season of the game date. A save with an unknown season reads as Summer, as the old card did. */

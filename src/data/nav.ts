@@ -39,7 +39,7 @@ export type NavItemId =
 /** Pages that are not in the sidebar list but still have a title. */
 export type RouteId = NavItemId | "playthroughs";
 
-export type NavGroupId = "track" | "progress" | "collect" | "tools";
+type NavGroupId = "track" | "progress" | "collect" | "tools";
 
 export interface NavItem {
   id: NavItemId;

@@ -54,7 +54,7 @@ const percentOf = (
 };
 
 /** The share of recipes unlocked, gear collected and wardrobe items collected. */
-export const collectCounts = (playthrough: Playthrough) => ({
+const collectCounts = (playthrough: Playthrough) => ({
   recipes: percentOf(
     RECIPE_TABS.map((tab) => ({
       items: recipeItems[tab],

@@ -54,7 +54,7 @@ const collectableBuildings = allBuildings.filter(
 const allNpcs = npcs().get();
 const allSkills = skills().get();
 
-export interface PermitPoints {
+interface PermitPoints {
   amount: number;
   total: number;
   percent: number;

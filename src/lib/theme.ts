@@ -1,7 +1,7 @@
 import { useSyncExternalStore } from "react";
 import { DARK_QUERY, THEME_STORAGE_KEY } from "./themeScript";
 
-export const THEME_MODES = ["light", "dark", "auto"] as const;
+const THEME_MODES = ["light", "dark", "auto"] as const;
 export type ThemeMode = (typeof THEME_MODES)[number];
 
 const DEFAULT_THEME_MODE: ThemeMode = "auto";
@@ -10,7 +10,7 @@ const THEME_CHANGED_EVENT = "dinkum-theme-changed";
 const isThemeMode = (value: unknown): value is ThemeMode =>
   THEME_MODES.some((mode) => mode === value);
 
-export const readThemeMode = (): ThemeMode => {
+const readThemeMode = (): ThemeMode => {
   try {
     const stored = localStorage.getItem(THEME_STORAGE_KEY);
     return isThemeMode(stored) ? stored : DEFAULT_THEME_MODE;

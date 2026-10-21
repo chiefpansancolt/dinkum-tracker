@@ -19,8 +19,8 @@ export const recipeItems = {
   signWriting: signWritingRecipes().get(),
 } satisfies Record<RecipeTab, unknown[]>;
 
-export type CraftingRecipe = (typeof recipeItems.crafting)[number];
-export type SignWritingRecipe = (typeof recipeItems.signWriting)[number];
+type CraftingRecipe = (typeof recipeItems.crafting)[number];
+type SignWritingRecipe = (typeof recipeItems.signWriting)[number];
 export type { CookingRecipe };
 
 export const ALL = "All";

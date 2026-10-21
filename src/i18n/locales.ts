@@ -6,7 +6,7 @@ export type Messages = typeof en;
  * The languages of the app. Another language adds its code here, a region tag below and a catalog
  * folder `messages/<code>/` that follows the shape of the English catalog.
  */
-export const SUPPORTED_LOCALES = ["en"] as const;
+const SUPPORTED_LOCALES = ["en"] as const;
 export type Locale = (typeof SUPPORTED_LOCALES)[number];
 
 export const DEFAULT_LOCALE: Locale = "en";

@@ -34,7 +34,7 @@ export const gearItems = {
   vehicles: vehicles().get(),
 } satisfies Record<GearTab, unknown[]>;
 
-export type { Book, Cassette, Equipment, Tool, Vehicle, Weapon };
+export type { Book, Cassette };
 
 export const ALL = "All";
 
@@ -50,8 +50,8 @@ export const needsFranklyn = (item: {
 
 export type DamageBand = "high" | "medium" | "low";
 
-export const HIGH_DAMAGE = 20;
-export const MEDIUM_DAMAGE = 10;
+const HIGH_DAMAGE = 20;
+const MEDIUM_DAMAGE = 10;
 
 /** High is 20 and up, Medium is 10 to 19 and Low is under 10. No damage fits no band. */
 export const damageBand = (
@@ -100,12 +100,6 @@ export const matchesRequirement = (
 ) =>
   item.requirementType !== undefined &&
   normalizeSpelling(item.requirementType) === normalizeSpelling(wanted);
-
-export const sourcesLabel = (item: { source: string[] }) =>
-  item.source.join(", ");
-
-export const ingredientsLabel = (inputs: { count: number; name: string }[]) =>
-  inputs.map((input) => `${input.count}x ${input.name}`).join(", ");
 
 /** The fields that the cards of tools, weapons, equipment and vehicles show. Each type has some of them. */
 export interface GearCardItem {

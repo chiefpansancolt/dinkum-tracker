@@ -2,7 +2,7 @@ import { useSyncExternalStore } from "react";
 
 export const DESKTOP_QUERY = "(min-width: 1024px)";
 
-export const useMediaQuery = (query: string) =>
+const useMediaQuery = (query: string) =>
   useSyncExternalStore(
     (onChange) => {
       const list = window.matchMedia(query);

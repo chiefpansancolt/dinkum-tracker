@@ -2,10 +2,9 @@
 
 import React, { createContext, useContext, useEffect, useState } from "react";
 import type { UIContextType } from "@/types/app";
+import { DESKTOP_QUERY } from "@/lib/hooks/useMediaQuery";
 
 const UIContext = createContext<UIContextType | undefined>(undefined);
-
-const DESKTOP_QUERY = "(min-width: 1024px)";
 
 export function UIProvider({ children }: { children: React.ReactNode }) {
 	const [drawerOpen, setDrawerOpen] = useState(false);

@@ -1,10 +1,10 @@
+import { exportData, importData } from "../reference/dataService";
 import {
   deletePlaythrough,
   getPlaythroughs,
   savePlaythrough,
   updatePlaythroughData,
-} from "@/lib/localStorage";
-import { exportData, importData } from "@/lib/services/dataService";
+} from "../reference/localStorage";
 import { asFile, describeStorageContract } from "./contract";
 
 describeStorageContract("old localStorage code", () => ({

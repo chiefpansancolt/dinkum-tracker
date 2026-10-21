@@ -25,8 +25,7 @@ import {
 import type { UniqueResource } from "@/types/app";
 import { ResourceType } from "@/data/constants/components";
 
-export const RESOURCE_TYPES: readonly ResourceType[] =
-  Object.values(ResourceType);
+const RESOURCE_TYPES: readonly ResourceType[] = Object.values(ResourceType);
 
 export const CATEGORIES = [
   "Buildings",
@@ -40,10 +39,10 @@ export const CATEGORIES = [
   "Other Craftables",
 ] as const;
 
-export type Category = (typeof CATEGORIES)[number];
+type Category = (typeof CATEGORIES)[number];
 
 /** A resource used in this many items or more counts as common. */
-export const COMMON_MIN_USES = 3;
+const COMMON_MIN_USES = 3;
 
 export type SortBy = "name" | "usageCount";
 

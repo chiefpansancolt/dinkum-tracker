@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import { Field } from "@/comps/ui/Field";
 import { Input } from "@/comps/ui/Input";
 
-export const PLAYTHROUGH_NAME_MAX = 40;
+const PLAYTHROUGH_NAME_MAX = 40;
 
 interface PlaythroughNameFieldProps {
 	label?: string;

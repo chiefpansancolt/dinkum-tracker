@@ -76,7 +76,7 @@ export const filterClothing = (items: Clothing[], filters: ClothingFilters) =>
       (filters.set === ALL || item.set === filters.set),
   );
 
-export type CatalogueFilter = "all" | "melvins" | "not_melvins";
+type CatalogueFilter = "all" | "melvins" | "not_melvins";
 
 export interface FurnitureFilters {
   set: string;

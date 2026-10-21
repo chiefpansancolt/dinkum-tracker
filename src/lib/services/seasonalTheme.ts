@@ -1,5 +1,13 @@
 import type { Season } from "dinkum-data";
-import { SeasonStyle } from "@/types";
+
+interface SeasonStyle {
+  bg: string;
+  border: string;
+  text: string;
+  accent: string;
+  hover: string;
+  cardBg: string;
+}
 
 export const getSeasonStyles = (season: Season): SeasonStyle => {
   switch (season) {
@@ -48,20 +56,5 @@ export const getSeasonStyles = (season: Season): SeasonStyle => {
         hover: "hover:bg-gray-200 dark:hover:bg-gray-700",
         cardBg: "bg-gray-50 dark:bg-gray-800/50",
       };
-  }
-};
-
-export const getSeasonEmoji = (season: Season): string => {
-  switch (season) {
-    case "Summer":
-      return "☀️";
-    case "Autumn":
-      return "🍂";
-    case "Winter":
-      return "❄️";
-    case "Spring":
-      return "🌱";
-    default:
-      return "📅";
   }
 };

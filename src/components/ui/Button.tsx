@@ -19,7 +19,7 @@ const variantClasses: Record<ButtonVariant, string> = {
 	link: "border-transparent text-link hover:bg-tint",
 };
 
-export const buttonClasses = (variant: ButtonVariant = "secondary", className = "") =>
+const buttonClasses = (variant: ButtonVariant = "secondary", className = "") =>
 	`${baseClasses} ${variantClasses[variant]} ${className}`.trim();
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {

@@ -14,7 +14,7 @@ import {
 import type { Playthrough } from "@/types/app";
 import { anyObtained, type LevelFlags, noneObtained } from "./levels";
 
-export type CollectedFilter = "all" | "collected" | "not_collected";
+type CollectedFilter = "all" | "collected" | "not_collected";
 
 export const ALL = "All";
 

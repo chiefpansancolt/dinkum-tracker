@@ -6,13 +6,14 @@ import { useState } from "react";
 import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
 import type { Playthrough } from "@/types/app";
 import { usePlaythrough } from "@/lib/contexts/PlaythroughContext";
+import { DESKTOP_QUERY } from "@/lib/hooks/useMediaQuery";
 import type { DayEntry, DayRef } from "@/service/calendar";
 import {
 	dayEntries,
 	dayOf,
-	getSeasonDays,
 	sameDay,
 	seasonCounts,
+	seasonDays,
 	shiftSeason,
 } from "@/service/calendar";
 import { getSeasonStyles } from "@/service/seasonalTheme";
@@ -35,7 +36,6 @@ const WEEKDAY_ORDER = [
 ] as const;
 const DESKTOP_ENTRIES = 2;
 const MOBILE_DOTS = 3;
-const DESKTOP_QUERY = "(min-width: 1024px)";
 
 function Marker({ kind }: { kind: DayEntry["kind"] }) {
 	return (
@@ -171,7 +171,7 @@ function CalendarContent({ playthrough }: { playthrough: Playthrough }) {
 
 	const styles = getSeasonStyles(viewSeason);
 	const counts = seasonCounts(viewSeason);
-	const days = getSeasonDays(viewSeason);
+	const days = seasonDays(viewSeason);
 
 	const setCurrentDay = (next: DayRef) => {
 		setSelected(next);

@@ -3,7 +3,7 @@ import { type NPC, npcs } from "dinkum-data";
 export const allNpcs: NPC[] = npcs().get();
 
 export const MAX_HEARTS = 5;
-export const HEART_STEP = 0.25;
+const HEART_STEP = 0.25;
 export const MAX_TOTAL_HEARTS = allNpcs.length * MAX_HEARTS;
 
 export type RelationshipFilter = "all" | "none" | "progress" | "full";
@@ -42,24 +42,21 @@ export const heartsAfterClick = (hearts: number, index: number) =>
 export const heartFill = (hearts: number, index: number) =>
   Math.min(1, Math.max(0, hearts - index));
 
-export const isVisitor = (npc: NPC) =>
+const isVisitor = (npc: NPC) =>
   /doesn't move in/i.test(npc.requirements.moveIn);
 
 /** Fletch and the Night Merchant have no move in rule. */
-export const canMoveIn = (npc: NPC) =>
+const canMoveIn = (npc: NPC) =>
   !isVisitor(npc) && npc.requirements.moveIn !== "N/A";
 
-export const matchesRelationship = (
-  hearts: number,
-  filter: RelationshipFilter,
-) => {
+const matchesRelationship = (hearts: number, filter: RelationshipFilter) => {
   if (filter === "none") return hearts === 0;
   if (filter === "progress") return hearts > 0 && hearts < MAX_HEARTS;
   if (filter === "full") return hearts === MAX_HEARTS;
   return true;
 };
 
-export const matchesResidence = (npc: NPC, filter: ResidenceFilter) => {
+const matchesResidence = (npc: NPC, filter: ResidenceFilter) => {
   if (filter === "visitors") return isVisitor(npc);
   if (filter === "can_move_in") return canMoveIn(npc);
   return true;

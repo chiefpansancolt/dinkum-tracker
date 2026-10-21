@@ -7,7 +7,7 @@ import { GotCheckbox } from "@/comps/collect/GotCheckbox";
 import { RowsOnScroll } from "@/comps/collect/RowsOnScroll";
 import { ItemIcon } from "@/comps/ui/ItemIcon";
 
-export interface Column<Item> {
+interface Column<Item> {
 	id: string;
 	label: string;
 	align?: "end";

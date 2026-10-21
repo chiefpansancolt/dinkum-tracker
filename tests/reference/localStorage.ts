@@ -1,3 +1,4 @@
+// Frozen copy of the storage code of version 1.5.0. The storage tests run the same contract against it.
 import { CalendarData, Collection, Playthrough } from "@/types/app";
 
 export const STORAGE_KEY = "dinkum-tracker-playthroughs";

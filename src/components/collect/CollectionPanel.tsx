@@ -7,7 +7,7 @@ import type { ReactNode } from "react";
 import { usePlaythrough } from "@/lib/contexts/PlaythroughContext";
 import { useSearchInAddress } from "@/lib/hooks/useSearchInAddress";
 import type { CollectSection, Flags } from "@/service/collect";
-import { collectedCount, isCollected, nameSearch } from "@/service/collect";
+import { isCollected, nameSearch } from "@/service/collect";
 import { FilterBlock } from "@/comps/page/FilterBlock";
 import { ViewToggle } from "@/comps/page/ViewToggle";
 import { Button } from "@/comps/ui/Button";
@@ -22,7 +22,7 @@ export interface Toggle {
 	onChange: (checked: boolean) => void;
 }
 
-export interface FilterControls {
+interface FilterControls {
 	values: Record<string, string>;
 	setValue: (id: string, value: string) => void;
 }
@@ -172,5 +172,3 @@ export function CollectionPanel<Item extends { id: string; name: string }>({
 		</>
 	);
 }
-
-export { collectedCount };

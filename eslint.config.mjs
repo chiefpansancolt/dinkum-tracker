@@ -10,7 +10,6 @@ const config = [
       "public/",
       "*.config.js",
       "*.config.mjs",
-      ".flowbite-react/",
       "dist/",
     ],
   },

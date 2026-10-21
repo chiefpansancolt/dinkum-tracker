@@ -2,9 +2,9 @@ import type { ImportData, Playthrough } from "@/types/app";
 import { readStoredPlaythroughs } from "./store";
 
 /** The backup file format is shared with the old app and must not change. */
-export const BACKUP_VERSION = "1.0.0";
+const BACKUP_VERSION = "1.0.0";
 
-export const backupFileName = (date = new Date()) =>
+const backupFileName = (date = new Date()) =>
   `dinkum-tracker-backup-${date.toISOString().slice(0, 10)}.json`;
 
 export const exportBackupJson = (): string =>
@@ -49,8 +49,7 @@ export const downloadBackup = () => {
 
 export type ImportMode = "merge" | "replace";
 
-export type ImportResult =
-  "added" | "updated" | "kept" | "replaced" | "removed";
+type ImportResult = "added" | "updated" | "kept" | "replaced" | "removed";
 
 export interface ImportRow {
   id: string;

@@ -1,5 +1,6 @@
+// Frozen copy of the data code of version 1.5.0. The storage tests run the same contract against it.
 import { ImportData } from "@/types";
-import { getPlaythroughs, STORAGE_KEY } from "@/lib/storage";
+import { getPlaythroughs, STORAGE_KEY } from "./localStorage";
 
 export const exportData = async (): Promise<string> => {
   if (typeof window === "undefined") {

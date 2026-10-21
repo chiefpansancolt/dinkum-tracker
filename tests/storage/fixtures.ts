@@ -1,5 +1,5 @@
 import type { Playthrough } from "@/types/app";
-import { createEmptyPlaythrough } from "@/lib/localStorage";
+import { createEmptyPlaythrough } from "../reference/localStorage";
 
 const CREATED_AT = "2025-01-10T09:00:00.000Z";
 const UPDATED_AT = "2025-06-01T18:30:00.000Z";
