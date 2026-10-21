@@ -22,6 +22,51 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/dinkum",
+        destination: "/reference",
+        permanent: true,
+      },
+      {
+        source: "/dinkum/animals",
+        destination: "/reference?tab=animals",
+        permanent: true,
+      },
+      {
+        source: "/dinkum/resources",
+        destination: "/reference?tab=resources",
+        permanent: true,
+      },
+      {
+        source: "/dinkum/seeds",
+        destination: "/reference?tab=plants&sub=seeds",
+        permanent: true,
+      },
+      {
+        source: "/dinkum/crops",
+        destination: "/reference?tab=plants&sub=crops",
+        permanent: true,
+      },
+      {
+        source: "/dinkum/flowers",
+        destination: "/reference?tab=plants&sub=flowers",
+        permanent: true,
+      },
+      {
+        source: "/dinkum/trees",
+        destination: "/reference?tab=plants&sub=trees",
+        permanent: true,
+      },
+      {
+        source: "/dinkum/food-modeller",
+        destination: "/reference?tab=food",
+        permanent: true,
+      },
+      {
+        source: "/dinkum/daily-milestones",
+        destination: "/reference?tab=daily",
+        permanent: true,
+      },
+      {
         source: "/itemsBreakdown",
         destination: "/items-breakdown",
         permanent: true,
