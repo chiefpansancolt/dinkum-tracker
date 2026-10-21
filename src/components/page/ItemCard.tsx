@@ -26,6 +26,8 @@ interface ItemCardProps {
 	mobileValue?: ReactNode;
 	/** A control at the top right, such as Complete All. */
 	headerAction?: ReactNode;
+	/** A line of text under the name, such as what a machine does. */
+	description?: string;
 	fields?: ItemCardField[];
 	/** Content between the fields and the footer, such as the levels of a license. */
 	children?: ReactNode;
@@ -43,6 +45,7 @@ export function ItemCard({
 	badge,
 	mobileValue,
 	headerAction,
+	description,
 	fields = [],
 	children,
 	footer,
@@ -77,6 +80,7 @@ export function ItemCard({
 				{mobileValue && <span className="font-mono sm:hidden">{mobileValue}</span>}
 				{headerAction}
 			</div>
+			{description && <p className="text-muted whitespace-pre-line">{description}</p>}
 			{fields.length > 0 && (
 				<dl className="flex flex-col gap-1.5">
 					{fields.map((field) => (
@@ -100,7 +104,7 @@ export function ItemCard({
 				</dl>
 			)}
 			{children}
-			{footer}
+			{footer && <div className="mt-auto">{footer}</div>}
 		</Card>
 	);
 }

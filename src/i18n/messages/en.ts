@@ -1,3 +1,4 @@
+import collect from "./en/collect.json";
 import common from "./en/common.json";
 import overview from "./en/overview.json";
 import pedia from "./en/pedia.json";
@@ -20,6 +21,7 @@ const en = {
   overview,
   pedia,
   progress,
+  collect,
 };
 
 export default en;

@@ -209,4 +209,13 @@ describe("navCounts", () => {
     expect(counts.milestones).toBe("1/394");
     expect(counts.skills).toBeUndefined();
   });
+
+  it("shows the share of recipes, gear and wardrobe items that are done", () => {
+    const counts = navCounts(progressedPlaythrough());
+
+    expect(counts.recipes).toBe("1%");
+    expect(counts.gear).toBe("2%");
+    expect(counts.wardrobe).toBe("0%");
+    expect(navCounts(emptyPlaythrough("1", "Blank")).gear).toBe("0%");
+  });
 });

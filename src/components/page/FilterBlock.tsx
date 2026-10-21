@@ -28,6 +28,10 @@ interface FilterBlockProps {
 	search: { label: string; value: string; onChange: (value: string) => void };
 	/** The results line, for example Showing 8 of 45 fish. */
 	summary: ReactNode;
+	/** A button right after the search box, such as Buffs. */
+	searchAction?: ReactNode;
+	/** True when a control outside the fields, such as Buffs, is filtering the list. */
+	extraFiltering?: boolean;
 	/** Controls that sit beside the results line, such as the view mode. */
 	trailing?: ReactNode;
 	sheetTitle: string;
@@ -127,6 +131,8 @@ export function FilterBlock({
 	onClear,
 	search,
 	summary,
+	searchAction,
+	extraFiltering = false,
 	trailing,
 	sheetTitle,
 	applyLabel,
@@ -134,7 +140,7 @@ export function FilterBlock({
 	const t = useTranslations("ui.filters");
 	const [sheetOpen, setSheetOpen] = useState(false);
 	const activeCount = fields.filter((field) => isFiltering(field, values)).length;
-	const hasFilters = activeCount > 0 || search.value !== "";
+	const hasFilters = activeCount > 0 || search.value !== "" || extraFiltering;
 
 	const applyDraft = (draft: Record<string, string>) => {
 		fields.forEach((field) => {
@@ -174,6 +180,7 @@ export function FilterBlock({
 						onChange={(event) => search.onChange(event.target.value)}
 					/>
 				</div>
+				{searchAction}
 				<Button
 					className="lg:hidden"
 					onClick={() => setSheetOpen(true)}
