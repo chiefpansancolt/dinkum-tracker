@@ -15,6 +15,7 @@ import {
 	resourceIndex,
 } from "@/service/breakdown";
 import { PageHeader } from "@/comps/layout/PageHeader";
+import { MasonryGrid, MasonryTile } from "@/comps/page/Masonry";
 import { Button } from "@/comps/ui/Button";
 import { Card } from "@/comps/ui/Card";
 import { Checkbox } from "@/comps/ui/Checkbox";
@@ -166,13 +167,13 @@ export function ItemsBreakdownView() {
 					actions={<Button onClick={clearSelections}>{t("empty.clear")}</Button>}
 				/>
 			) : (
-				<div className="columns-[19rem] gap-3">
+				<MasonryGrid>
 					{shown.map((resource) => (
-						<div key={resource.name} className="mb-3 break-inside-avoid">
+						<MasonryTile key={resource.name}>
 							<ResourceCard resource={resource} />
-						</div>
+						</MasonryTile>
 					))}
-				</div>
+				</MasonryGrid>
 			)}
 		</>
 	);

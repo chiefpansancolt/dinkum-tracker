@@ -20,6 +20,7 @@ import { PageHeader } from "@/comps/layout/PageHeader";
 import { PlaythroughGate } from "@/comps/layout/PlaythroughGate";
 import type { FilterFieldConfig } from "@/comps/page/FilterBlock";
 import { FilterBlock } from "@/comps/page/FilterBlock";
+import { MasonryGrid, MasonryTile } from "@/comps/page/Masonry";
 import { Button } from "@/comps/ui/Button";
 import { Card } from "@/comps/ui/Card";
 import { EmptyState } from "@/comps/ui/EmptyState";
@@ -139,44 +140,49 @@ function LicensesContent({ playthrough }: { playthrough: Playthrough }) {
 					actions={<Button onClick={clearFilters}>{common("clearFilters")}</Button>}
 				/>
 			) : (
-				<div className="grid grid-cols-[repeat(auto-fill,minmax(19rem,1fr))] items-start gap-3">
+				<MasonryGrid>
 					{shown.map((license) => (
-						<LevelCard
-							key={license.id}
-							name={license.name}
-							img={license.img}
-							complete={allObtained(flags, license)}
-							onToggleAll={() => toggleAll(flags, license)}
-							intro={
-								license.requirements && (
-									<div className="flex flex-col gap-0.5">
-										<span className="text-muted">{common("requirement")}</span>
-										<span>{license.requirements}</span>
-									</div>
-								)
-							}
-						>
-							{license.levels.map((entry) => (
-								<LevelRow
-									key={entry.level}
-									title={common("level", { level: entry.level })}
-									points={formatNumber(entry.permitPointCost)}
-									checked={isObtained(flags, license.id, entry.level)}
-									locked={!isUnlocked(flags, license.id, entry.level)}
-									onToggle={() => toggleLevel(flags, license, entry.level)}
-								>
-									{entry.skillLevel > 0 && (
-										<span>
-											{common("requiredSkill")}{" "}
-											<span className="font-mono">{entry.skillLevel}</span>
-										</span>
-									)}
-									<span>{entry.description}</span>
-								</LevelRow>
-							))}
-						</LevelCard>
+						<MasonryTile key={license.id}>
+							<LevelCard
+								name={license.name}
+								img={license.img}
+								complete={allObtained(flags, license)}
+								onToggleAll={() => toggleAll(flags, license)}
+								intro={
+									license.requirements && (
+										<div className="flex flex-col gap-0.5">
+											<span className="text-muted">
+												{common("requirement")}
+											</span>
+											<span>{license.requirements}</span>
+										</div>
+									)
+								}
+							>
+								{license.levels.map((entry) => (
+									<LevelRow
+										key={entry.level}
+										title={common("level", { level: entry.level })}
+										points={formatNumber(entry.permitPointCost)}
+										checked={isObtained(flags, license.id, entry.level)}
+										locked={!isUnlocked(flags, license.id, entry.level)}
+										onToggle={() => toggleLevel(flags, license, entry.level)}
+									>
+										{entry.skillLevel > 0 && (
+											<span>
+												{common("requiredSkill")}{" "}
+												<span className="font-mono">
+													{entry.skillLevel}
+												</span>
+											</span>
+										)}
+										<span>{entry.description}</span>
+									</LevelRow>
+								))}
+							</LevelCard>
+						</MasonryTile>
 					))}
-				</div>
+				</MasonryGrid>
 			)}
 		</>
 	);

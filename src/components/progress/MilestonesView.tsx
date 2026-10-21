@@ -21,6 +21,7 @@ import { PageHeader } from "@/comps/layout/PageHeader";
 import { PlaythroughGate } from "@/comps/layout/PlaythroughGate";
 import type { FilterFieldConfig } from "@/comps/page/FilterBlock";
 import { FilterBlock } from "@/comps/page/FilterBlock";
+import { MasonryGrid, MasonryTile } from "@/comps/page/Masonry";
 import { Button } from "@/comps/ui/Button";
 import { Card } from "@/comps/ui/Card";
 import { EmptyState } from "@/comps/ui/EmptyState";
@@ -86,36 +87,35 @@ function MilestonesContent({ playthrough }: { playthrough: Playthrough }) {
 
 	const cards = (items: typeof shown) =>
 		items.map((milestone) => (
-			<LevelCard
-				key={milestone.id}
-				name={milestone.name}
-				img={milestone.img}
-				complete={allObtained(flags, milestone)}
-				onToggleAll={() => toggleAll(flags, milestone)}
-				intro={<p>{milestone.description}</p>}
-			>
-				{milestone.levels.map((entry) => (
-					<LevelRow
-						key={entry.level}
-						title={
-							<>
-								{common("levelCount", { level: entry.level })}{" "}
-								<span className="font-mono font-normal">
-									{formatNumber(entry.count)}
-									{entry.unit ? ` ${entry.unit}` : ""}
-								</span>
-							</>
-						}
-						points={formatNumber(entry.permitPoints)}
-						checked={isObtained(flags, milestone.id, entry.level)}
-						locked={!isUnlocked(flags, milestone.id, entry.level)}
-						onToggle={() => toggleLevel(flags, milestone, entry.level)}
-					/>
-				))}
-			</LevelCard>
+			<MasonryTile key={milestone.id}>
+				<LevelCard
+					name={milestone.name}
+					img={milestone.img}
+					complete={allObtained(flags, milestone)}
+					onToggleAll={() => toggleAll(flags, milestone)}
+					intro={<p>{milestone.description}</p>}
+				>
+					{milestone.levels.map((entry) => (
+						<LevelRow
+							key={entry.level}
+							title={
+								<>
+									{common("levelCount", { level: entry.level })}{" "}
+									<span className="font-mono font-normal">
+										{formatNumber(entry.count)}
+										{entry.unit ? ` ${entry.unit}` : ""}
+									</span>
+								</>
+							}
+							points={formatNumber(entry.permitPoints)}
+							checked={isObtained(flags, milestone.id, entry.level)}
+							locked={!isUnlocked(flags, milestone.id, entry.level)}
+							onToggle={() => toggleLevel(flags, milestone, entry.level)}
+						/>
+					))}
+				</LevelCard>
+			</MasonryTile>
 		));
-
-	const GRID = "grid grid-cols-[repeat(auto-fill,minmax(19rem,1fr))] items-start gap-3";
 
 	return (
 		<>
@@ -198,11 +198,11 @@ function MilestonesContent({ playthrough }: { playthrough: Playthrough }) {
 							<h2 className="text-xl font-bold">{group.letter}</h2>
 							<span aria-hidden="true" className="bg-line h-px flex-1" />
 						</div>
-						<div className={GRID}>{cards(group.milestones)}</div>
+						<MasonryGrid>{cards(group.milestones)}</MasonryGrid>
 					</section>
 				))
 			) : (
-				<div className={GRID}>{cards(shown)}</div>
+				<MasonryGrid>{cards(shown)}</MasonryGrid>
 			)}
 		</>
 	);
