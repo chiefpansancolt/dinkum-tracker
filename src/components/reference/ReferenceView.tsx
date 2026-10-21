@@ -4,6 +4,8 @@ import { formatNumber } from "@/i18n/formatter";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useId } from "react";
+import { useArrowTabs } from "@/lib/hooks/useArrowTabs";
 import type { PlantTab, ReferenceTab } from "@/service/reference";
 import { PLANT_TABS, plantCounts, REFERENCE_TABS, tabCounts } from "@/service/reference";
 import { PageHeader } from "@/comps/layout/PageHeader";
@@ -85,8 +87,10 @@ export function ReferenceView() {
 			})
 		: t("landing.subline", { entries: formatNumber(totalEntries), lists: HUB_TILES.length });
 
+	const baseId = useId();
 	// A search belongs to one list, so a new tab starts with a clean address.
 	const open = (id: ReferenceTab) => router.replace(`${pathname}?tab=${id}`, { scroll: false });
+	const onTabKeys = useArrowTabs(REFERENCE_TABS, tab, open);
 
 	return (
 		<>
@@ -94,14 +98,18 @@ export function ReferenceView() {
 			<div
 				role="tablist"
 				aria-label={t("tabsLabel")}
+				onKeyDown={onTabKeys}
 				className="grid grid-cols-2 gap-2 sm:grid-cols-5 sm:gap-3"
 			>
 				{REFERENCE_TABS.map((id) => (
 					<button
 						key={id}
+						id={`${baseId}-tab-${id}`}
 						type="button"
 						role="tab"
 						aria-selected={id === tab}
+						aria-controls={`${baseId}-panel`}
+						tabIndex={id === (tab ?? REFERENCE_TABS[0]) ? 0 : -1}
 						onClick={() => open(id)}
 						className={`flex min-h-11 flex-col rounded-md border-[1.5px] px-3 py-2.5 text-start ${
 							id === tab
@@ -116,7 +124,15 @@ export function ReferenceView() {
 					</button>
 				))}
 			</div>
-			{Panel ? <Panel key={tab} /> : <Landing />}
+			<div
+				id={`${baseId}-panel`}
+				role="tabpanel"
+				aria-labelledby={tab ? `${baseId}-tab-${tab}` : undefined}
+				aria-label={tab ? undefined : t("title")}
+				className="flex flex-col gap-4"
+			>
+				{Panel ? <Panel key={tab} /> : <Landing />}
+			</div>
 		</>
 	);
 }

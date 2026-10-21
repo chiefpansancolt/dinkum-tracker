@@ -32,7 +32,7 @@ export function LandingPage() {
 	return (
 		<div className="bg-bg text-ink flex min-h-dvh flex-col">
 			<LandingHeader />
-			<main id="main" className="flex flex-col">
+			<main id="main" tabIndex={-1} className="flex flex-col outline-none">
 				<section
 					id="features"
 					className="mx-auto grid w-full max-w-7xl items-center gap-10 px-4 py-12 lg:grid-cols-2 lg:px-8 lg:py-20"

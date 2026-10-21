@@ -136,7 +136,7 @@ export function GearCard({ item, toggle, commerceLevel, inputsLabel }: GearCardP
 				craftable ? (
 					<Link
 						href={craftingRecipeAddress(item.name)}
-						className="border-line text-link hover:bg-tint inline-flex min-h-9 shrink-0 items-center rounded-md border-[1.5px] px-2.5 text-sm font-medium"
+						className="border-line text-link hover:bg-tint inline-flex min-h-11 shrink-0 items-center rounded-md border-[1.5px] px-2.5 text-sm font-medium lg:min-h-9"
 					>
 						{t("craftingRecipe")}
 					</Link>

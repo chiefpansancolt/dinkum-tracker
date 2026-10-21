@@ -45,7 +45,11 @@ export function AppShell({ children }: { children: ReactNode }) {
 			<div className="flex min-w-0 flex-1 flex-col">
 				<AppBar />
 				<DomainNotice />
-				<main id="main" className="flex flex-1 flex-col gap-4 px-4 py-4 lg:px-8 lg:py-6">
+				<main
+					id="main"
+					tabIndex={-1}
+					className="flex flex-1 flex-col gap-4 px-4 py-4 outline-none lg:px-8 lg:py-6"
+				>
 					{children}
 				</main>
 				<Footer />

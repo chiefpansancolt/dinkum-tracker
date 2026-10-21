@@ -26,7 +26,7 @@
   --sb-active-bg: #f9d794;
   --sb-active-text: #35230f;
   --success: #2e6a3a;
-  --info: #2f6f9f;
+  --info: #2b6a98;
   --locked: #6a573f;
   --rarity-common: #6a573f;
   --rarity-uncommon: #2f6f9f;
@@ -169,4 +169,15 @@
 
 .Toastify__toast {
   padding: 0 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

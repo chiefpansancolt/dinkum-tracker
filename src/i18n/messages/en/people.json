@@ -77,7 +77,6 @@
         },
         "more": "+ {count} more",
         "dayLabel": "{weekday}, {day} {season}",
-        "cellLabel": "{day} {season}, {count, plural, =0 {nothing planned} one {# entry} other {# entries}}",
         "details": {
             "title": "{weekday}, {day} {season}",
             "events": "Events",
@@ -89,6 +88,7 @@
         },
         "toast": {
             "set": "Current day set to {day} {season}"
-        }
+        },
+        "cellEntries": "{count, plural, one {# entry} other {# entries}}"
     }
 }

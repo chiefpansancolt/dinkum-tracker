@@ -3,6 +3,8 @@
 import type { Crop, Flower, Seed, Tree } from "dinkum-data";
 import { useTranslations } from "next-intl";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useId } from "react";
+import { useArrowTabs } from "@/lib/hooks/useArrowTabs";
 import {
 	ALL,
 	allCrops,
@@ -410,19 +412,29 @@ export function PlantsPanel() {
 	const requested = searchParams.get(SUB_PARAM);
 	const sub: PlantTab = PLANT_TABS.find((id) => id === requested) ?? "seeds";
 
+	const baseId = useId();
 	// A search belongs to one list, so a new sub tab keeps only the tab in the address.
 	const change = (next: PlantTab) =>
 		router.replace(`${pathname}?tab=plants&${SUB_PARAM}=${next}`, { scroll: false });
+	const onTabKeys = useArrowTabs(PLANT_TABS, sub, change);
 
 	return (
 		<div className="flex flex-col gap-4">
-			<div role="tablist" aria-label={t("plantsLabel")} className="flex flex-wrap gap-2">
+			<div
+				role="tablist"
+				aria-label={t("plantsLabel")}
+				onKeyDown={onTabKeys}
+				className="flex flex-wrap gap-2"
+			>
 				{PLANT_TABS.map((id) => (
 					<button
 						key={id}
+						id={`${baseId}-tab-${id}`}
 						type="button"
 						role="tab"
 						aria-selected={id === sub}
+						aria-controls={`${baseId}-panel`}
+						tabIndex={id === sub ? 0 : -1}
 						onClick={() => change(id)}
 						className={`flex min-h-11 items-center gap-2 rounded-md border-[1.5px] px-3 ${
 							id === sub
@@ -435,10 +447,17 @@ export function PlantsPanel() {
 					</button>
 				))}
 			</div>
-			{sub === "seeds" && <SeedsList key={sub} />}
-			{sub === "crops" && <CropsList key={sub} />}
-			{sub === "flowers" && <FlowersList key={sub} />}
-			{sub === "trees" && <TreesList key={sub} />}
+			<div
+				id={`${baseId}-panel`}
+				role="tabpanel"
+				aria-labelledby={`${baseId}-tab-${sub}`}
+				className="flex flex-col gap-4"
+			>
+				{sub === "seeds" && <SeedsList key={sub} />}
+				{sub === "crops" && <CropsList key={sub} />}
+				{sub === "flowers" && <FlowersList key={sub} />}
+				{sub === "trees" && <TreesList key={sub} />}
+			</div>
 		</div>
 	);
 }

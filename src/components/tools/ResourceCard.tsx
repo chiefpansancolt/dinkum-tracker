@@ -27,7 +27,7 @@ export function ResourceCard({ resource }: { resource: UniqueResource }) {
 			}
 		>
 			<section className="flex flex-col gap-2">
-				<h4 className="font-medium">{t("categories")}</h4>
+				<h3 className="font-medium">{t("categories")}</h3>
 				<ul className="flex flex-wrap gap-1">
 					{resource.categories.map((category) => (
 						<li key={category}>
@@ -37,7 +37,7 @@ export function ResourceCard({ resource }: { resource: UniqueResource }) {
 				</ul>
 			</section>
 			<section className="flex flex-col gap-2">
-				<h4 className="font-medium">{t("usedInList")}</h4>
+				<h3 className="font-medium">{t("usedInList")}</h3>
 				<ul className="grid grid-cols-2 gap-2">
 					{uses.map((name) => (
 						<li key={name} className="bg-track rounded-md px-2.5 py-2 text-sm">

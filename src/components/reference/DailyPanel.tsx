@@ -55,7 +55,9 @@ export function DailyPanel() {
 			}`}
 		>
 			{label}
-			<span className="font-mono text-xs opacity-80">{count}</span>
+			<span className={`font-mono text-xs ${category === id ? "" : "text-muted"}`}>
+				{count}
+			</span>
 		</button>
 	);
 
@@ -130,7 +132,7 @@ export function DailyPanel() {
 							<Card className="p-0">
 								<section aria-label={group.label}>
 									<header className="flex items-center justify-between gap-3 px-4 pt-4 pb-3">
-										<h3 className="text-lg font-semibold">{group.label}</h3>
+										<h2 className="text-lg font-semibold">{group.label}</h2>
 										<span className="border-line text-muted rounded-full border-[1.5px] px-2 font-mono text-xs">
 											{group.items.length}
 										</span>

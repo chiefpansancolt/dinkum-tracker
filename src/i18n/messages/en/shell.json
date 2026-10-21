@@ -23,7 +23,8 @@
             "weightCalculator": "Weight calculator",
             "reference": "Reference",
             "settings": "Settings",
-            "playthroughs": "Playthroughs"
+            "playthroughs": "Playthroughs",
+            "newPlaythrough": "New playthrough"
         }
     },
     "appShell": {

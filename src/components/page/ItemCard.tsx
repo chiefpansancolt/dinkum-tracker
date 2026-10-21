@@ -72,9 +72,9 @@ export function ItemCard({
 					)}
 				</span>
 				<div className="flex min-w-0 flex-1 flex-col items-start gap-1">
-					<h3 id={titleId} className="font-semibold">
+					<h2 id={titleId} className="font-semibold">
 						{name}
-					</h3>
+					</h2>
 					{badge}
 				</div>
 				{mobileValue && <span className="font-mono sm:hidden">{mobileValue}</span>}

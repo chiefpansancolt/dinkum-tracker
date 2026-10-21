@@ -123,7 +123,6 @@ function DayCell({ day, isCurrent, isSelected, tint, onPick }: DayCellProps) {
 			type="button"
 			onClick={onPick}
 			aria-pressed={isSelected}
-			aria-label={t("cellLabel", { day: day.day, season: day.season, count: entries.length })}
 			className={`border-line flex min-h-14 flex-col items-start gap-1 overflow-hidden border-s border-b p-1.5 text-start lg:min-h-24 lg:p-2 ${
 				isSelected ? tint : "bg-surface hover:bg-tint/60"
 			}`}
@@ -134,6 +133,7 @@ function DayCell({ day, isCurrent, isSelected, tint, onPick }: DayCellProps) {
 				}`}
 			>
 				{day.day}
+				<span className="sr-only"> {day.season}</span>
 			</span>
 			<span className="hidden w-full flex-col gap-0.5 lg:flex">
 				{entries.slice(0, DESKTOP_ENTRIES).map((entry) => (
@@ -151,6 +151,11 @@ function DayCell({ day, isCurrent, isSelected, tint, onPick }: DayCellProps) {
 					<Marker key={entry.name} kind={entry.kind} />
 				))}
 			</span>
+			{entries.length > 0 && (
+				<span className="sr-only lg:hidden">
+					{t("cellEntries", { count: entries.length })}
+				</span>
+			)}
 		</button>
 	);
 }
@@ -228,7 +233,7 @@ function CalendarContent({ playthrough }: { playthrough: Playthrough }) {
 					</IconButton>
 					<span
 						aria-live="polite"
-						className={`flex min-h-11 min-w-32 items-center justify-center rounded-md px-4 font-semibold max-lg:flex-1 ${styles.bg} ${styles.text}`}
+						className={`flex min-h-11 min-w-0 items-center justify-center rounded-md px-4 font-semibold max-lg:flex-1 lg:min-w-32 ${styles.bg} ${styles.text}`}
 					>
 						{viewSeason}
 					</span>
@@ -263,14 +268,14 @@ function CalendarContent({ playthrough }: { playthrough: Playthrough }) {
 				{t("alert", { day: current.day, season: current.season })}
 			</p>
 			<div className="border-line bg-surface overflow-hidden rounded-md border-[1.5px]">
-				<div className="border-line grid grid-cols-7 border-b text-center font-semibold">
+				<div className="border-line grid grid-cols-[repeat(7,minmax(0,1fr))] border-b text-center font-semibold">
 					{WEEKDAY_ORDER.map((weekday) => (
 						<span key={weekday} className="py-2">
 							{t(`weekdays.${weekday}`)}
 						</span>
 					))}
 				</div>
-				<div className="grid grid-cols-7 [&>button:nth-child(7n+1)]:border-s-0">
+				<div className="grid grid-cols-[repeat(7,minmax(0,1fr))] [&>button:nth-child(7n+1)]:border-s-0">
 					{days.map((day) => (
 						<DayCell
 							key={day.day}
