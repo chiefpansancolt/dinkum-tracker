@@ -1,0 +1,70 @@
+{
+    "breakdown": {
+        "title": "Items breakdown",
+        "subline": "Which resources go into which items · {count} resources",
+        "tiles": {
+            "resources": "Resources",
+            "resourcesCaption": "used in recipes and builds",
+            "common": "Common, used in 3+ items",
+            "of": "of {total}",
+            "mostUsed": "Most used",
+            "items": "{count} items"
+        },
+        "search": "Search",
+        "searchPlaceholder": "Search resources by name",
+        "sortBy": "Sort By",
+        "sortName": "Name (A-Z)",
+        "sortUsage": "Usage Count",
+        "filter": "Filter",
+        "filterWithCount": "Filter ({count})",
+        "commonOnly": "Common Resources Only (Used in 3+ Items)",
+        "showing": "Showing {shown} of {total} resources",
+        "notes": {
+            "categories": " (filtered by {count, plural, one {# category} other {# categories}})",
+            "types": " (filtered by {count, plural, one {# type} other {# types}})",
+            "common": " (common resources only)"
+        },
+        "panel": {
+            "title": "Filter resources",
+            "byCategory": "Filter by Category",
+            "byType": "Filter by Resource Type",
+            "clear": "Clear Selections",
+            "itemCount": "{count} items",
+            "done": "Show {count} resources"
+        },
+        "card": {
+            "usedIn": "Used in {count} items",
+            "categories": "Categories",
+            "usedInList": "Used in",
+            "showMore": "Show {count} more...",
+            "showLess": "Show less"
+        },
+        "empty": {
+            "title": "No resources match these filters",
+            "description": "Try a different name or clear the selections.",
+            "clear": "Clear Selections"
+        }
+    },
+    "weight": {
+        "title": "Weight calculator",
+        "subline": "Price a heavy find from its weight · {count} items",
+        "picker": "Select Item",
+        "perKg": "{price} per kg",
+        "range": "{min} - {max} kg",
+        "rangeLine": "Weight Range: {min}kg - {max}kg",
+        "weight": "Weight: {weight} kg",
+        "slider": "Weight in kg",
+        "minus": "Decrease weight by 0.01 kg",
+        "plus": "Increase weight by 0.01 kg",
+        "min": "{min}kg",
+        "max": "{max}kg",
+        "stepNote": "Step 0.01 kg. Choosing another item resets the weight to its minimum.",
+        "total": "Total price",
+        "dinks": "dinks",
+        "formula": "{weight} kg × {price} per kg = {total}",
+        "rounded": "Rounded to the nearest dink.",
+        "atMin": "Price at minimum weight",
+        "atMax": "Price at maximum weight",
+        "stickyTotal": "Total {total} dinks"
+    }
+}

@@ -1,5 +1,6 @@
 import type { Playthrough } from "@/types/app";
 import type { NavItemId } from "@/data/nav";
+import { resourceIndex } from "./breakdown";
 import { isCollected } from "./collect";
 import { GEAR_TABS, gearItems } from "./gear";
 import { obtainedCount } from "./levels";
@@ -28,6 +29,7 @@ export const navCounts = (
   licenses: `${obtainedCount(playthrough.licenses)}/${LICENSE_LEVELS}`,
   milestones: `${obtainedCount(playthrough.milestones)}/${MILESTONE_LEVELS}`,
   ...collectCounts(playthrough),
+  itemsBreakdown: String(resourceIndex.length),
 });
 
 const SECTION_OF_RECIPE_TAB = {

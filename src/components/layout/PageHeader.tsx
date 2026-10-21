@@ -5,9 +5,11 @@ interface PageHeaderProps {
 	title: string;
 	subline?: string;
 	actions?: ReactNode;
+	/** False for a page that saves nothing, such as a calculator. */
+	showSaved?: boolean;
 }
 
-export function PageHeader({ title, subline, actions }: PageHeaderProps) {
+export function PageHeader({ title, subline, actions, showSaved = true }: PageHeaderProps) {
 	return (
 		<header className="flex flex-wrap items-center justify-between gap-4">
 			<div className="flex flex-col">
@@ -16,9 +18,11 @@ export function PageHeader({ title, subline, actions }: PageHeaderProps) {
 			</div>
 			<div className="flex flex-wrap items-center gap-3">
 				{actions}
-				<span className="max-lg:hidden">
-					<SavedChip />
-				</span>
+				{showSaved && (
+					<span className="max-lg:hidden">
+						<SavedChip />
+					</span>
+				)}
 			</div>
 		</header>
 	);

@@ -7,6 +7,7 @@ import playthroughs from "./en/playthroughs.json";
 import progress from "./en/progress.json";
 import settings from "./en/settings.json";
 import shell from "./en/shell.json";
+import tools from "./en/tools.json";
 import ui from "./en/ui.json";
 
 /**
@@ -24,6 +25,7 @@ const en = {
   progress,
   collect,
   people,
+  tools,
 };
 
 export default en;

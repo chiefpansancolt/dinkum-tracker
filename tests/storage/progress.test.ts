@@ -207,6 +207,7 @@ describe("navCounts", () => {
     expect(counts.buildings).toBe("1/27");
     expect(counts.licenses).toBe("1/57");
     expect(counts.milestones).toBe("1/394");
+    expect(counts.itemsBreakdown).toBe("296");
     expect(counts.skills).toBeUndefined();
   });
 

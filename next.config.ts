@@ -21,6 +21,11 @@ const nextConfig: NextConfig = {
         destination: "/playthroughs/new",
         permanent: true,
       },
+      {
+        source: "/itemsBreakdown",
+        destination: "/items-breakdown",
+        permanent: true,
+      },
     ];
   },
   images: {
