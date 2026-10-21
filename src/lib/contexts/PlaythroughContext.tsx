@@ -7,6 +7,7 @@ import { useIsHydrated } from "@/lib/hooks/useIsHydrated";
 import { downloadBackup } from "@/service/backup";
 import {
 	restorePlaythrough,
+	setDefaultSort as saveDefaultSort,
 	updatePrefs as savePrefs,
 	setActivePlaythroughId,
 	storageService,
@@ -48,17 +49,25 @@ export function PlaythroughProvider({ children }: { children: React.ReactNode })
 		});
 	};
 
-	const update: PlaythroughContextType["update"] = (recipe) => {
-		if (!activePlaythrough) return null;
-
-		const result = updatePlaythrough(activePlaythrough.id, recipe);
+	const updateById: PlaythroughContextType["updateById"] = (id, recipe) => {
+		const result = updatePlaythrough(id, recipe);
 		if (result.status === "unchanged" || result.status === "missing") return null;
 
 		reportSave(result.status === "saved");
 		return result.status === "saved" ? result.previous : null;
 	};
 
-	const restore = (playthrough: Playthrough) => reportSave(restorePlaythrough(playthrough));
+	const update: PlaythroughContextType["update"] = (recipe) =>
+		activePlaythrough ? updateById(activePlaythrough.id, recipe) : null;
+
+	const commit: PlaythroughContextType["commit"] = (write) => {
+		const saved = write();
+		reportSave(saved);
+		return saved;
+	};
+
+	const restore: PlaythroughContextType["restore"] = (playthrough, index) =>
+		reportSave(restorePlaythrough(playthrough, index));
 
 	return (
 		<PlaythroughContext.Provider
@@ -66,13 +75,17 @@ export function PlaythroughProvider({ children }: { children: React.ReactNode })
 				appData,
 				playthroughs: appData.playthroughs,
 				activePlaythrough,
+				defaultSort: appData.defaultSort,
 				prefs: appData.prefs,
 				isLoaded,
 				lastSavedAt,
 				saveFailed,
 				update,
+				updateById,
+				commit,
 				restore,
 				setActivePlaythrough: setActivePlaythroughId,
+				setDefaultSort: (sort) => reportSave(saveDefaultSort(sort)),
 				updatePrefs: (updates) => reportSave(savePrefs(updates)),
 			}}
 		>

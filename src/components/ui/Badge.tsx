@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 
 type BadgeTone =
 	| "success"
+	| "danger"
 	| "info"
 	| "warn"
 	| "locked"
@@ -13,6 +14,7 @@ type BadgeTone =
 
 const toneClasses: Record<BadgeTone, string> = {
 	success: "text-success",
+	danger: "text-danger",
 	info: "text-info",
 	warn: "text-warn",
 	locked: "text-locked",

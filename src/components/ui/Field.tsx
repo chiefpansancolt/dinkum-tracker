@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { createContext, useContext, useId } from "react";
 import type { ReactNode } from "react";
+import { LuCircleAlert } from "react-icons/lu";
 
 interface FieldControl {
 	id: string;
@@ -17,7 +18,7 @@ export const useFieldControl = () => useContext(FieldContext);
 interface FieldProps {
 	label: string;
 	optional?: boolean;
-	hint?: string;
+	hint?: ReactNode;
 	error?: string;
 	labelAction?: ReactNode;
 	children: ReactNode;
@@ -42,14 +43,15 @@ export function Field({ label, optional, hint, error, labelAction, children }: F
 					{labelAction}
 				</div>
 				{children}
+				{error && (
+					<p id={errorId} className="text-danger flex items-center gap-2 font-medium">
+						<LuCircleAlert size={18} aria-hidden="true" className="shrink-0" />
+						{error}
+					</p>
+				)}
 				{hint && (
 					<p id={hintId} className="text-muted text-xs">
 						{hint}
-					</p>
-				)}
-				{error && (
-					<p id={errorId} className="text-danger text-xs font-medium">
-						{error}
 					</p>
 				)}
 			</div>

@@ -1,8 +1,9 @@
-import type { InputHTMLAttributes, ReactNode } from "react";
+import type { InputHTMLAttributes, ReactNode, Ref } from "react";
 import { controlBorder, controlClasses, controlHeightClasses, useFieldControl } from "./Field";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 	leadingIcon?: ReactNode;
+	ref?: Ref<HTMLInputElement>;
 }
 
 export function Input({ leadingIcon, className = "", ...props }: InputProps) {

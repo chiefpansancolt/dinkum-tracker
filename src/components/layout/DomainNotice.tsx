@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useSyncExternalStore } from "react";
-import { LuArrowRight, LuX } from "react-icons/lu";
+import { LuX } from "react-icons/lu";
 import { DOMAIN_NOTICE_DISMISSED_KEY } from "@/service/storageKeys";
 import { IconButton } from "@/comps/ui/IconButton";
 
@@ -39,26 +39,26 @@ export function DomainNotice() {
 
 	if (!visible) return null;
 
-	const strong = (chunks: React.ReactNode) => <strong className="font-mono">{chunks}</strong>;
+	const domain = (chunks: React.ReactNode) => (
+		<span className="font-mono font-medium">{chunks}</span>
+	);
+	const date = (chunks: React.ReactNode) => <span className="font-semibold">{chunks}</span>;
 
 	return (
 		<div
 			role="region"
 			aria-label={t("label")}
-			className="border-line bg-tint flex items-start gap-3 border-b-[1.5px] px-4 py-3 lg:px-8"
+			className="bg-surface border-warn flex items-start gap-3 border-b-2 px-4 py-2.5 lg:px-8"
 		>
-			<p className="flex-1">
-				<strong>{t("label")}</strong> {t.rich("movedTo", { domain: NEW_DOMAIN, strong })}{" "}
+			<p className="flex-1 py-1.5">
+				<span className="text-warn font-semibold">{t("label")}</span>{" "}
+				{t.rich("movedTo", { domain: NEW_DOMAIN, strong: domain })}{" "}
 				<Link href="/settings" className="text-link font-semibold underline">
 					{t("exportLink")}
 				</Link>{" "}
-				{t.rich("retired", { date: RETIREMENT_MONTH, strong })}{" "}
-				<a
-					href={`https://${NEW_DOMAIN}`}
-					className="text-link inline-flex items-center gap-1 font-semibold underline"
-				>
+				{t.rich("retired", { date: RETIREMENT_MONTH, strong: date })}{" "}
+				<a href={`https://${NEW_DOMAIN}`} className="text-link font-semibold underline">
 					{t("goToNewSite")}
-					<LuArrowRight size={14} aria-hidden="true" className="rtl:-scale-x-100" />
 				</a>
 			</p>
 			<IconButton

@@ -1,8 +1,10 @@
 interface ProgressBarProps {
 	value: number;
 	label: string;
-	tone?: "primary" | "success" | "warn";
+	tone?: "primary" | "success" | "caution" | "danger";
 	className?: string;
+	/** A thicker bar for the main figure of a card. */
+	thick?: boolean;
 }
 
 /**
@@ -11,10 +13,17 @@ interface ProgressBarProps {
 const toneClasses = {
 	primary: "bg-primary",
 	success: "bg-success",
-	warn: "bg-warn",
+	caution: "bg-amber",
+	danger: "bg-danger",
 };
 
-export function ProgressBar({ value, label, tone = "primary", className = "" }: ProgressBarProps) {
+export function ProgressBar({
+	value,
+	label,
+	tone = "primary",
+	className = "",
+	thick = false,
+}: ProgressBarProps) {
 	const percent = Math.round(Math.min(1, Math.max(0, value)) * 100);
 
 	return (
@@ -24,7 +33,7 @@ export function ProgressBar({ value, label, tone = "primary", className = "" }: 
 			aria-valuemin={0}
 			aria-valuemax={100}
 			aria-valuenow={percent}
-			className={`bg-track h-2 overflow-hidden rounded-full ${className}`}
+			className={`bg-track overflow-hidden rounded-full ${thick ? "h-3" : "h-2"} ${className}`}
 		>
 			<div
 				className={`${toneClasses[tone]} h-full rounded-full`}

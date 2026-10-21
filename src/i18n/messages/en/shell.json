@@ -47,7 +47,7 @@
         "active": "Active",
         "allPlaythroughs": "All playthroughs",
         "newPlaythrough": "New playthrough",
-        "detail": "{season} {day}"
+        "detail": "Day {day} · {percent}%"
     },
     "theme": {
         "label": "Theme",
@@ -78,5 +78,13 @@
         "retired": "from this site and import it on the new domain. This domain will be retired in <strong>{date}</strong>.",
         "goToNewSite": "Go to new site",
         "dismiss": "Dismiss notice"
+    },
+    "notFound": {
+        "code": "404",
+        "title": "Page not found",
+        "description": "That page doesn't exist or may have moved.",
+        "toOverview": "Go to Overview",
+        "toHome": "Go to the home page",
+        "hint": "A 404 means the address is mistyped or the page was removed. The sidebar stays available."
     }
 }

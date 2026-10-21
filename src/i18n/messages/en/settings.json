@@ -1,0 +1,106 @@
+{
+    "title": "Settings",
+    "subline": "{count, plural, one {# playthrough} other {# playthroughs}} stored in this browser · Preferences save automatically",
+    "storage": {
+        "title": "Data Storage!",
+        "body": "Your data is stored locally in the browser. Data is lost when the browser cache is cleared.",
+        "action": "Please use the functions below to export and backup your data."
+    },
+    "manage": {
+        "title": "Playthroughs",
+        "description": "Rename, delete or create playthroughs on the Playthroughs page.",
+        "link": "Manage playthroughs"
+    },
+    "data": {
+        "title": "Data management",
+        "count": "{count, plural, one {# Playthrough} other {# Playthroughs}}",
+        "exportLabel": "Export Data",
+        "exportButton": "Export All Playthroughs",
+        "exportHint": "Download a backup file of all your saved playthroughs.",
+        "exportDone": "Export successful!",
+        "importLabel": "Import Data",
+        "importButton": "Import Data",
+        "importHint": "Upload a previously exported file (.json). A confirm step asks whether to merge or replace.",
+        "importDone": "Import successful!",
+        "importFailed": "Invalid file format",
+        "resetLabel": "Reset All Data",
+        "resetWarning": "Warning: This will delete all playthroughs and cannot be undone.",
+        "resetStepOne": "Step 1 · First tap",
+        "resetStepTwo": "Step 2 · Confirm",
+        "resetButton": "Reset All Data",
+        "resetConfirm": "Confirm Reset",
+        "resetCancel": "Cancel",
+        "resetDone": "Data reset successful",
+        "importFile": "Backup file",
+        "description": "One backup file holds every playthrough.",
+        "exportTitle": "Export data",
+        "importTitle": "Import data",
+        "resetTitle": "Reset all data"
+    },
+    "import": {
+        "title": "Import backup",
+        "description": "Choose what happens to the playthroughs already on this device.",
+        "fileSummary": "{inFile, plural, one {# playthrough} other {# playthroughs}} in file · {onDevice} on this device",
+        "mode": "Import mode",
+        "merge": "Merge (recommended)",
+        "mergeDescription": "Adds playthroughs that are new. When a playthrough is in both places, the copy updated most recently wins. Playthroughs only on this device stay.",
+        "replace": "Replace all",
+        "replaceDescription": "Deletes the {onDevice, plural, one {# playthrough} other {# playthroughs}} on this device and loads the {inFile} from the file. This cannot be undone.",
+        "table": {
+            "playthrough": "Playthrough",
+            "inFile": "In file",
+            "onDevice": "On this device",
+            "result": "Result"
+        },
+        "updatedOn": "Updated {date}",
+        "notOnDevice": "Not on device",
+        "notInFile": "Not in file",
+        "results": {
+            "added": "Added",
+            "updated": "File copy wins",
+            "kept": "Device copy stays",
+            "replaced": "Replaced",
+            "removed": "Removed"
+        },
+        "exportFirst": "Export current data first",
+        "cancel": "Cancel",
+        "confirmMerge": "Merge {count, plural, one {# playthrough} other {# playthroughs}}",
+        "confirmReplace": "Replace all data"
+    },
+    "appearance": {
+        "title": "Appearance and preferences",
+        "theme": "Theme",
+        "themeHint": "System follows your device.",
+        "defaultSort": "Default playthrough sort",
+        "defaultSortHint": "Choose how playthroughs are sorted by default. Saves as soon as you change it.",
+        "resources": "Additional resources",
+        "opensInNewTab": "Opens in a new tab",
+        "wiki": "Dinkum Wiki",
+        "repository": "Project Repository"
+    },
+    "page": {
+        "title": "Settings",
+        "tabsLabel": "Settings",
+        "tabs": {
+            "preferences": "Preferences",
+            "data": "Backup and data",
+            "about": "About"
+        }
+    },
+    "preferences": {
+        "appearance": {
+            "title": "Appearance",
+            "description": "Saved at once on this device."
+        },
+        "playthroughList": {
+            "title": "Playthrough list",
+            "description": "How the Playthroughs page starts."
+        }
+    },
+    "about": {
+        "version": "Version {version}",
+        "summary": "Track your Dinkum progress: fish, bugs, critters, milestones, licenses, NPCs and more. Everything is stored in this browser.",
+        "resources": "Additional resources",
+        "disclaimer": "Not affiliated with or endorsed by the creators of Dinkum."
+    }
+}

@@ -7,6 +7,7 @@ import { LuChevronDown, LuPlus } from "react-icons/lu";
 import type { Playthrough } from "@/types/app";
 import { usePlaythrough } from "@/lib/contexts/PlaythroughContext";
 import { useIsDesktop } from "@/lib/hooks/useMediaQuery";
+import { playthroughProgress } from "@/service/completion";
 import { Dialog } from "@/comps/ui/Dialog";
 import { Menu, MenuItem, MenuLabel, MenuSeparator } from "@/comps/ui/Menu";
 import { SectionLabel } from "@/comps/ui/SectionLabel";
@@ -16,8 +17,8 @@ const usePlaythroughDetail = () => {
 
 	return (playthrough: Playthrough) =>
 		t("detail", {
-			season: playthrough.calendar.currentSeason,
 			day: playthrough.calendar.currentDay,
+			percent: playthroughProgress(playthrough).overallPercent,
 		});
 };
 

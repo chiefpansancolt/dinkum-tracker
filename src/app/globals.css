@@ -16,8 +16,10 @@
   --tint: #e4ede2;
   --link: #2f6f9f;
   --danger: #7f2f21;
+  --on-danger: #ffffff;
   --warn: #9a4208;
   --gold: #b88f3a;
+  --amber: #c98a1b;
   --scrim: rgba(26, 21, 14, 0.55);
   --sb-bg: #35230f;
   --sb-text: #f9d794;
@@ -48,8 +50,10 @@
   --tint: #2a3a2c;
   --link: #7db6e3;
   --danger: #e58b78;
+  --on-danger: #1a150e;
   --warn: #f29a55;
   --gold: #d3ab55;
+  --amber: #e0b04a;
   --scrim: rgba(0, 0, 0, 0.62);
   --sb-bg: #120e09;
   --sb-text: #f9d794;
@@ -85,8 +89,10 @@
   --color-tint: var(--tint);
   --color-link: var(--link);
   --color-danger: var(--danger);
+  --color-on-danger: var(--on-danger);
   --color-warn: var(--warn);
   --color-gold: var(--gold);
+  --color-amber: var(--amber);
   --color-scrim: var(--scrim);
   --color-sb-bg: var(--sb-bg);
   --color-sb-text: var(--sb-text);

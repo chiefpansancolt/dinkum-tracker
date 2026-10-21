@@ -1,0 +1,125 @@
+{
+    "title": "Playthroughs",
+    "subline": "Manage your Dinkum adventures. {count, plural, one {# playthrough} other {# playthroughs}}, {name} is active.",
+    "sublineNoneActive": "Manage your Dinkum adventures. {count, plural, one {# playthrough} other {# playthroughs}}.",
+    "sublineEmpty": "No playthroughs yet.",
+    "loading": "Loading playthroughs...",
+    "stats": {
+        "playthroughs": "Playthroughs",
+        "playthroughsCaption": "in this browser",
+        "active": "Active",
+        "activeCaption": "{name}",
+        "noneActive": "None",
+        "furthest": "Furthest along",
+        "average": "Average completion",
+        "averageCaption": "across all"
+    },
+    "filters": {
+        "sortBy": "Sort by",
+        "sort": {
+            "lastUpdated": "Last updated",
+            "name": "Name",
+            "createdAt": "Date created",
+            "completion": "Completion percentage"
+        },
+        "search": "Search playthroughs by name",
+        "showing": "Showing {shown} of {total} {total, plural, one {playthrough} other {playthroughs}}",
+        "defaultSortFrom": "Default sort comes from <link>Settings</link>"
+    },
+    "noMatch": {
+        "title": "No playthroughs match \"{query}\"",
+        "description": "Try a different name.",
+        "clear": "Clear search"
+    },
+    "empty": {
+        "title": "No Playthroughs Found",
+        "description": "You have not created any playthroughs yet. Start tracking your Dinkum adventure by creating your first playthrough. Each one saves in this browser.",
+        "create": "Create Your First Playthrough",
+        "importBackup": "Import a backup instead"
+    },
+    "card": {
+        "created": "Created: {date}",
+        "updated": "Updated: {when}",
+        "complete": "{percent}% Complete",
+        "overall": "Overall progress",
+        "pedia": "Pedia",
+        "licenses": "Licenses",
+        "milestones": "Milestones",
+        "buildings": "Buildings",
+        "pediaDetail": "Fish {fish} · Bugs {bugs} · Critters {critters}",
+        "count": "{count}/{total}",
+        "gameDate": "Day {day}, {season}",
+        "currentGameDate": "Current game date",
+        "setActive": "Set as Active",
+        "active": "Active",
+        "openOverview": "Open overview",
+        "edit": "Edit",
+        "delete": "Delete",
+        "activePlaythrough": "Active playthrough"
+    },
+    "seasons": {
+        "Spring": "Spring",
+        "Summer": "Summer",
+        "Autumn": "Autumn",
+        "Winter": "Winter"
+    },
+    "relative": {
+        "today": "Today",
+        "yesterday": "Yesterday",
+        "daysAgo": "{count} days ago",
+        "weeksAgo": "{count, plural, one {# week ago} other {# weeks ago}}",
+        "monthsAgo": "{count, plural, one {# month ago} other {# months ago}}",
+        "unknown": "N/A"
+    },
+    "new": {
+        "action": "New playthrough",
+        "actionShort": "New",
+        "pageTitle": "New playthrough",
+        "pageSubline": "Name it and start tracking. Everything saves in this browser.",
+        "back": "Back to all playthroughs",
+        "next": {
+            "title": "What happens next",
+            "one": "An empty playthrough is saved in this browser at once.",
+            "two": "It becomes the active playthrough if the box is ticked. The sidebar switcher shows it.",
+            "three": "You land on the Playthroughs list with the new card on top and an Undo toast."
+        },
+        "createdToast": "{name} created"
+    },
+    "form": {
+        "title": "Create New Playthrough",
+        "nameLabel": "Playthrough Name",
+        "required": "Required",
+        "placeholder": "My Dinkum Adventure",
+        "help": "Give your playthrough a memorable name to help you identify it later.",
+        "counter": "{count} / {max}",
+        "errorEmpty": "Please enter a name for your playthrough",
+        "makeActive": "Make this the active playthrough",
+        "create": "Create playthrough",
+        "creating": "Creating...",
+        "cancel": "Cancel",
+        "failed": "Failed to create playthrough. Please try again.",
+        "tryAgain": "Try again"
+    },
+    "edit": {
+        "title": "Edit playthrough",
+        "save": "Save",
+        "saving": "Saving...",
+        "savedToast": "Saved",
+        "renamed": "Renamed to {name}",
+        "description": "{name} · created {date}",
+        "nameLabel": "Playthrough name",
+        "help": "Press Enter to save. Save stays off while the name is blank."
+    },
+    "delete": {
+        "title": "Delete {name}?",
+        "description": "This removes all of its saved progress on this device.",
+        "activeNext": "This is your active playthrough. {next} is the most recently updated, so it becomes active after the delete.",
+        "activeLast": "This is your active playthrough and your only one. No playthrough is active after the delete.",
+        "exportFirst": "Export a backup first",
+        "confirm": "Delete",
+        "cancel": "Cancel",
+        "toast": "{name} deleted",
+        "toastMessage": "Undo stays for 10 seconds",
+        "updated": "Updated {when} · {date}"
+    }
+}

@@ -102,12 +102,11 @@ const routes: { id: RouteId; href: string }[] = [
   ...navGroups.flatMap((group) => group.items),
   settingsNavItem,
   { id: "playthroughs", href: "/playthroughs" },
+  { id: "playthroughs", href: "/playthroughs/new" },
 ];
 
 export const isNavItemActive = (item: NavItem, pathname: string) =>
-  pathname === item.href || pathname.startsWith(`${item.href}/`);
+  pathname === item.href;
 
 export const getPageRouteId = (pathname: string): RouteId | null =>
-  routes.find(
-    (route) => pathname === route.href || pathname.startsWith(`${route.href}/`),
-  )?.id ?? null;
+  routes.find((route) => pathname === route.href)?.id ?? null;

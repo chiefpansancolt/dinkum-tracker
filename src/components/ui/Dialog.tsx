@@ -9,7 +9,7 @@ import { IconButton } from "./IconButton";
 type DialogVariant = "modal" | "wide" | "flyout";
 
 const panelClasses: Record<DialogVariant, string> = {
-	modal: "fixed m-0 mt-auto max-h-[90dvh] w-full max-w-none flex-col rounded-t-lg border-[1.5px] p-0 open:flex lg:m-auto lg:w-[calc(100%-2rem)] lg:max-w-xl lg:rounded-md",
+	modal: "fixed m-0 mt-auto max-h-[90dvh] w-full max-w-none flex-col rounded-t-lg border-[1.5px] p-0 open:flex lg:m-auto lg:w-[calc(100%-2rem)] lg:max-w-120 lg:rounded-md",
 	wide: "fixed m-0 mt-auto max-h-[90dvh] w-full max-w-none flex-col rounded-t-lg border-[1.5px] p-0 open:flex lg:m-auto lg:w-[calc(100%-2rem)] lg:max-w-3xl lg:rounded-md",
 	flyout: "fixed inset-x-0 top-auto bottom-0 m-0 max-h-[90dvh] w-full max-w-none flex-col rounded-t-lg border-[1.5px] p-0 open:flex lg:top-0 lg:inset-e-0 lg:inset-s-auto lg:h-dvh lg:max-h-none lg:w-160 lg:rounded-none lg:border-y-0 lg:border-e-0",
 };
@@ -19,6 +19,10 @@ interface DialogProps {
 	onClose: () => void;
 	title: string;
 	description?: string;
+	/** A mark beside the title, such as the warning box of a delete confirm. */
+	icon?: ReactNode;
+	/** Leaves out the close button, for a confirm that has its own Cancel. */
+	hideClose?: boolean;
 	footer?: ReactNode;
 	variant?: DialogVariant;
 	children: ReactNode;
@@ -34,6 +38,8 @@ export function Dialog({
 	onClose,
 	title,
 	description,
+	icon,
+	hideClose = false,
 	footer,
 	variant = "modal",
 	children,
@@ -70,19 +76,22 @@ export function Dialog({
 						className="bg-line mx-auto mt-2 h-1 w-10 rounded-full lg:hidden"
 					/>
 					<header className="flex items-start justify-between gap-3 px-4 pt-3 pb-2 lg:pt-4">
-						<div className="flex min-w-0 flex-col gap-0.5">
+						{icon}
+						<div className="flex min-w-0 flex-1 flex-col gap-0.5">
 							<h2 id={titleId} className="text-lg font-semibold">
 								{title}
 							</h2>
 							{description && <p className="text-muted">{description}</p>}
 						</div>
-						<IconButton
-							label={t("close")}
-							onClick={onClose}
-							className="text-muted hover:bg-tint -me-2 -mt-1"
-						>
-							<LuX size={20} aria-hidden="true" />
-						</IconButton>
+						{!hideClose && (
+							<IconButton
+								label={t("close")}
+								onClick={onClose}
+								className="text-muted hover:bg-tint -me-2 -mt-1"
+							>
+								<LuX size={20} aria-hidden="true" />
+							</IconButton>
+						)}
 					</header>
 					<div
 						className={`flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto px-4 py-3 ${variant === "flyout" ? "bg-bg" : ""}`}

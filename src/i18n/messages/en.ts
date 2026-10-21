@@ -1,4 +1,6 @@
 import common from "./en/common.json";
+import playthroughs from "./en/playthroughs.json";
+import settings from "./en/settings.json";
 import shell from "./en/shell.json";
 import ui from "./en/ui.json";
 
@@ -10,6 +12,8 @@ const en = {
   common,
   ui,
   shell,
+  playthroughs,
+  settings,
 };
 
 export default en;
