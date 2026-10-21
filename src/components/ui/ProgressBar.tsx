@@ -1,7 +1,7 @@
 interface ProgressBarProps {
 	value: number;
 	label: string;
-	tone?: "primary" | "success" | "caution" | "danger";
+	tone?: "primary" | "info" | "success" | "caution" | "danger";
 	className?: string;
 	/** A thicker bar for the main figure of a card. */
 	thick?: boolean;
@@ -12,6 +12,7 @@ interface ProgressBarProps {
  */
 const toneClasses = {
 	primary: "bg-primary",
+	info: "bg-info",
 	success: "bg-success",
 	caution: "bg-amber",
 	danger: "bg-danger",
