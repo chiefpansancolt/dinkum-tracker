@@ -8,9 +8,13 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      "@/comps": path.resolve(__dirname, "src/components"),
-      "@/playthrough": path.resolve(__dirname, "src/components/playthrough"),
-      "@": path.resolve(__dirname, "src"),
+      "@/service": path.resolve(import.meta.dirname, "src/lib/services"),
+      "@/comps": path.resolve(import.meta.dirname, "src/components"),
+      "@/playthrough": path.resolve(
+        import.meta.dirname,
+        "src/components/playthrough",
+      ),
+      "@": path.resolve(import.meta.dirname, "src"),
     },
   },
 });

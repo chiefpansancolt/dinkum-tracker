@@ -1,0 +1,8 @@
+{
+    "saveFailed": {
+        "title": "Not saved",
+        "message": "The browser could not store your data. Export a backup so you do not lose your changes.",
+        "exportBackup": "Export backup"
+    },
+    "undo": "Undo"
+}

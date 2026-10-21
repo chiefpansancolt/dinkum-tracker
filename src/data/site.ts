@@ -1,0 +1,7 @@
+export const SITE_URL = "https://dinkum.gamerdex.app";
+export const GAMERDEX_URL = "https://gamerdex.app";
+export const DISCORD_URL = "https://discord.gg/wdjRtSJmTJ";
+export const GITHUB_URL = "https://github.com/chiefpansancolt/dinkum-tracker";
+export const WIKI_URL = "https://dinkum.fandom.com/wiki/Dinkum_Wiki";
+export const SITE_DESCRIPTION =
+  "Track your Dinkum progress: fish, bugs, critters, milestones, licenses, NPCs, and more.";
