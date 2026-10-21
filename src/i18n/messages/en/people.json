@@ -1,0 +1,94 @@
+{
+    "npcs": {
+        "title": "NPCs",
+        "subline": "{hearts} of {total} hearts · {count} NPCs · {name}",
+        "tiles": {
+            "total": "Total hearts",
+            "full": "Full hearts",
+            "met": "Met so far",
+            "of": "of {total}",
+            "ofNpcs": "of {total} NPCs"
+        },
+        "filters": {
+            "search": "Search NPCs by name",
+            "sheetTitle": "Filter NPCs",
+            "relationship": "Relationship",
+            "residence": "Lives on island",
+            "all": "All",
+            "none": "No hearts yet",
+            "progress": "In progress",
+            "full": "Full hearts",
+            "canMoveIn": "Can move in",
+            "visitors": "Visitors only",
+            "showing": "Showing {shown} of {total} NPCs · Full hearts {full} · Met {met}",
+            "apply": "Show {count} NPCs"
+        },
+        "hint": "Click a heart to set it. Click the last full heart to take it back. Use -0.25 and +0.25 for quarter steps.",
+        "things": "NPCs",
+        "card": {
+            "full": "Full",
+            "requirements": "Requirements",
+            "visit": "Visit",
+            "moveIn": "Move in",
+            "food": "Food preferences",
+            "likes": "Likes",
+            "dislikes": "Dislikes",
+            "none": "None"
+        },
+        "hearts": {
+            "label": "Hearts for {name}",
+            "setTo": "Set {name} to {count} hearts",
+            "less": "- 0.25",
+            "more": "+ 0.25",
+            "lessLabel": "Decrease hearts by 0.25",
+            "moreLabel": "Increase hearts by 0.25",
+            "readout": "{hearts} / {max}"
+        },
+        "toast": {
+            "set": "{name}: {hearts} of 5 hearts"
+        },
+        "empty": {
+            "title": "No NPCs match these filters",
+            "description": "Try a different name or clear the filters.",
+            "clear": "Clear filters"
+        }
+    },
+    "calendar": {
+        "title": "Calendar",
+        "subline": "{season} · {events} events · {birthdays} birthdays · {name}",
+        "previous": "Previous season",
+        "next": "Next season",
+        "today": "Today",
+        "seasonLabel": "Season",
+        "legend": {
+            "event": "Event",
+            "birthday": "Birthday",
+            "current": "Current day"
+        },
+        "alert": "Current day: {day} {season}. Click any day to set it as the current day. Changes save at once.",
+        "weekdays": {
+            "Sunday": "Sun",
+            "Monday": "Mon",
+            "Tuesday": "Tue",
+            "Wednesday": "Wed",
+            "Thursday": "Thu",
+            "Friday": "Fri",
+            "Saturday": "Sat"
+        },
+        "more": "+ {count} more",
+        "dayLabel": "{weekday}, {day} {season}",
+        "cellLabel": "{day} {season}, {count, plural, =0 {nothing planned} one {# entry} other {# entries}}",
+        "details": {
+            "title": "{weekday}, {day} {season}",
+            "events": "Events",
+            "birthdays": "Birthdays",
+            "noEvents": "No events today.",
+            "noBirthdays": "No birthdays today.",
+            "current": "Current day",
+            "close": "Close"
+        },
+        "toast": {
+            "set": "Current day set to {day} {season}"
+        }
+    }
+}

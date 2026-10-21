@@ -2,6 +2,7 @@ import collect from "./en/collect.json";
 import common from "./en/common.json";
 import overview from "./en/overview.json";
 import pedia from "./en/pedia.json";
+import people from "./en/people.json";
 import playthroughs from "./en/playthroughs.json";
 import progress from "./en/progress.json";
 import settings from "./en/settings.json";
@@ -22,6 +23,7 @@ const en = {
   pedia,
   progress,
   collect,
+  people,
 };
 
 export default en;
