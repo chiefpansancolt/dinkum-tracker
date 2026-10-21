@@ -21,6 +21,7 @@ import {
   weapons,
 } from "dinkum-data";
 import type { Playthrough } from "@/types/app";
+import { levelKey } from "./levels";
 
 /**
  * The figures of the Overview cards. Each card keeps the arithmetic of the old dashboard widget it
@@ -52,8 +53,6 @@ const collectableBuildings = allBuildings.filter(
 );
 const allNpcs = npcs().get();
 const allSkills = skills().get();
-
-const levelKey = (id: string, level: number) => `${id}_level_${level}`;
 
 export interface PermitPoints {
   amount: number;

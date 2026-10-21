@@ -2,17 +2,20 @@
 
 import { useTranslations } from "next-intl";
 import { useState } from "react";
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import { LuListFilter, LuSearch } from "react-icons/lu";
 import { Button } from "@/comps/ui/Button";
 import { Dialog } from "@/comps/ui/Dialog";
 import { Field } from "@/comps/ui/Field";
 import { Input } from "@/comps/ui/Input";
+import { SegmentedControl } from "@/comps/ui/SegmentedControl";
 import { Select } from "@/comps/ui/Select";
 
 export interface FilterFieldConfig {
 	id: string;
 	label: string;
+	/** A short list of choices drawn as one control, such as a view mode, instead of a select. */
+	kind?: "select" | "segmented";
 	/** The first option is the "all" choice. A field on it counts as not filtering. */
 	options: { id: string; label: string }[];
 }
@@ -44,6 +47,21 @@ function FieldSelect({
 	value: string;
 	onChange: (value: string) => void;
 }) {
+	if (field.kind === "segmented") {
+		return (
+			<div className="flex flex-col gap-1.5">
+				<span className="font-medium">{field.label}</span>
+				<SegmentedControl
+					fullWidth
+					label={field.label}
+					value={value}
+					onChange={onChange}
+					options={field.options}
+				/>
+			</div>
+		);
+	}
+
 	return (
 		<Field label={field.label}>
 			<Select value={value} onChange={(event) => onChange(event.target.value)}>
@@ -127,7 +145,15 @@ export function FilterBlock({
 
 	return (
 		<section aria-label={t("filters")} className="flex flex-col gap-3">
-			<div className="hidden gap-3 lg:grid lg:grid-cols-3 xl:grid-cols-6">
+			<div
+				style={
+					{
+						"--lg-cols": Math.min(fields.length, 3),
+						"--xl-cols": fields.length,
+					} as CSSProperties
+				}
+				className="hidden gap-3 lg:grid lg:grid-cols-[repeat(var(--lg-cols),minmax(0,1fr))] xl:grid-cols-[repeat(var(--xl-cols),minmax(0,1fr))]"
+			>
 				{fields.map((field) => (
 					<FieldSelect
 						key={field.id}

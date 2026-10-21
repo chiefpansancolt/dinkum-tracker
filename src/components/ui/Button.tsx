@@ -3,7 +3,7 @@ import type { ButtonHTMLAttributes, ComponentProps } from "react";
 import { LuLoaderCircle } from "react-icons/lu";
 
 type ButtonVariant =
-	"primary" | "secondary" | "ghost" | "outline" | "danger" | "destructive" | "link";
+	"primary" | "secondary" | "ghost" | "outline" | "soft" | "danger" | "destructive" | "link";
 
 const baseClasses =
 	"inline-flex min-h-11 items-center justify-center gap-2 rounded-md border-[1.5px] px-4 font-medium whitespace-nowrap transition-colors disabled:cursor-not-allowed disabled:opacity-50 lg:min-h-9";
@@ -12,6 +12,7 @@ const variantClasses: Record<ButtonVariant, string> = {
 	primary: "border-primary bg-primary text-on-primary hover:opacity-90",
 	secondary: "border-line bg-surface text-ink hover:bg-tint",
 	outline: "border-primary bg-surface text-primary hover:bg-tint",
+	soft: "border-primary bg-tint text-primary hover:opacity-90",
 	ghost: "border-transparent text-ink hover:bg-tint",
 	danger: "border-danger bg-surface text-danger hover:bg-tint",
 	destructive: "border-danger bg-danger text-on-danger hover:opacity-90",

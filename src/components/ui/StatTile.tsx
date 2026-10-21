@@ -23,7 +23,7 @@ export function StatTile({ value, label, caption, emphasis = false, progress }: 
 				>
 					{value}
 				</span>
-				{caption && <span className="text-muted truncate">{caption}</span>}
+				{caption && <span className="text-muted min-w-0">{caption}</span>}
 			</span>
 			{progress !== undefined && <ProgressBar value={progress} label={label} />}
 		</Card>

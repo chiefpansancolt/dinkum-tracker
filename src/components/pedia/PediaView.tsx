@@ -3,9 +3,10 @@
 import { formatNumber } from "@/i18n/formatter";
 import { useTranslations } from "next-intl";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import type { Playthrough } from "@/types/app";
 import { usePlaythrough } from "@/lib/contexts/PlaythroughContext";
+import { useSearchInAddress } from "@/lib/hooks/useSearchInAddress";
 import { useUrlTab } from "@/lib/hooks/useUrlTab";
 import { pediaStats, PERMIT_POINTS_PER_DONATION } from "@/service/overview";
 import type { PediaEntry, PediaFilters, PediaStatus, PediaTab } from "@/service/pedia";
@@ -36,22 +37,6 @@ import { TileTabs } from "@/comps/ui/TileTabs";
 import { useToast } from "@/comps/ui/Toast";
 import { PediaCard } from "./PediaCard";
 import { PediaList } from "./PediaList";
-
-/** Keeps `?q=` in the address as the player types, so a link to a search can be shared. */
-function useSearchInAddress(query: string) {
-	useEffect(() => {
-		const params = new URLSearchParams(window.location.search);
-		if (query) params.set("q", query);
-		else params.delete("q");
-
-		const search = params.toString();
-		window.history.replaceState(
-			null,
-			"",
-			`${window.location.pathname}${search ? `?${search}` : ""}`
-		);
-	}, [query]);
-}
 
 function PediaTabPanel({ tab, playthrough }: { tab: PediaTab; playthrough: Playthrough }) {
 	const t = useTranslations("pedia");

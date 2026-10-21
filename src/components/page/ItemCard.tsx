@@ -12,6 +12,10 @@ export interface ItemCardField {
 	mono?: boolean;
 	/** Left out on a phone, where the same value sits at the top right of the card. */
 	desktopOnly?: boolean;
+	/** The value sits under its label and may use the full width, for long text. */
+	stacked?: boolean;
+	/** A small picture before the value, such as the portrait of an NPC. */
+	icon?: string;
 }
 
 interface ItemCardProps {
@@ -20,8 +24,12 @@ interface ItemCardProps {
 	badge?: ReactNode;
 	/** Shown at the top right on a phone only. */
 	mobileValue?: ReactNode;
-	fields: ItemCardField[];
-	footer: ReactNode;
+	/** A control at the top right, such as Complete All. */
+	headerAction?: ReactNode;
+	fields?: ItemCardField[];
+	/** Content between the fields and the footer, such as the levels of a license. */
+	children?: ReactNode;
+	footer?: ReactNode;
 	/** A green border, for an item that is fully done. */
 	highlighted?: boolean;
 	/** A check on the picture, for an item the player has. */
@@ -34,7 +42,9 @@ export function ItemCard({
 	name,
 	badge,
 	mobileValue,
-	fields,
+	headerAction,
+	fields = [],
+	children,
 	footer,
 	highlighted = false,
 	checked = false,
@@ -65,20 +75,31 @@ export function ItemCard({
 					{badge}
 				</div>
 				{mobileValue && <span className="font-mono sm:hidden">{mobileValue}</span>}
+				{headerAction}
 			</div>
-			<dl className="flex flex-col gap-1.5">
-				{fields.map((field) => (
-					<div
-						key={field.label}
-						className={`flex justify-between gap-3 ${field.desktopOnly ? "max-sm:hidden" : ""}`}
-					>
-						<dt className="text-muted">{field.label}</dt>
-						<dd className={`text-end ${field.mono ? "font-mono" : ""}`}>
-							{field.value}
-						</dd>
-					</div>
-				))}
-			</dl>
+			{fields.length > 0 && (
+				<dl className="flex flex-col gap-1.5">
+					{fields.map((field) => (
+						<div
+							key={field.label}
+							className={`flex ${field.stacked ? "flex-col gap-0.5" : "justify-between gap-3"} ${
+								field.desktopOnly ? "max-sm:hidden" : ""
+							}`}
+						>
+							<dt className="text-muted">{field.label}</dt>
+							<dd
+								className={`flex items-center gap-1.5 ${field.stacked ? "" : "justify-end text-end"} ${
+									field.mono ? "font-mono" : ""
+								}`}
+							>
+								{field.icon && <ItemIcon src={field.icon} size={20} />}
+								{field.value}
+							</dd>
+						</div>
+					))}
+				</dl>
+			)}
+			{children}
 			{footer}
 		</Card>
 	);

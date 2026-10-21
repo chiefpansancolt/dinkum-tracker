@@ -2,6 +2,7 @@ import common from "./en/common.json";
 import overview from "./en/overview.json";
 import pedia from "./en/pedia.json";
 import playthroughs from "./en/playthroughs.json";
+import progress from "./en/progress.json";
 import settings from "./en/settings.json";
 import shell from "./en/shell.json";
 import ui from "./en/ui.json";
@@ -18,6 +19,7 @@ const en = {
   settings,
   overview,
   pedia,
+  progress,
 };
 
 export default en;
