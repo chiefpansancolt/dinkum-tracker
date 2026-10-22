@@ -6,6 +6,37 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [2.0.0] - 2026-10-22
+
+### Added
+
+- A new interface built with a sidebar, a playthrough switcher and one
+  page per game area: Overview, Pedia, NPCs, Calendar, Buildings, Licenses, Milestones, Skills,
+  Recipes, Gear, Wardrobe and home, Items breakdown, Weight calculator, Reference and Settings.
+- Every change saves at once, and a toast offers Undo. The Save button is gone.
+- Optional cloud sync through Google Drive, Dropbox, OneDrive or a GitHub repository, with a merge
+  that keeps the higher progress when two devices change the same playthrough. The synced file has
+  the same format as the export file.
+- 19 languages: English, Arabic, German, Spanish (Spain and Latin America), French, Indonesian,
+  Italian, Japanese, Korean, Malay, Portuguese (Brazil and Portugal), Russian, Thai, Turkish,
+  Vietnamese and Chinese (Simplified and Traditional). Arabic reads right to left.
+- Settings for language, number format and date format, kept on the device.
+- Grid and list views for Pedia and the Collect pages, a Buffs filter for recipes, slot, set and
+  category tiles in Wardrobe, and hints under the Wardrobe filters.
+- Search on Milestones now reads the description as well as the name.
+
+### Changed
+
+- Saved data keeps its shape. The four localStorage keys, the playthrough fields and the export
+  file are unchanged, so existing playthroughs and old backups work as before.
+- Old `/playthrough/{id}/...` addresses redirect to the matching new page.
+- Long card lists load as you scroll.
+- The interface no longer uses Flowbite. It uses Tailwind CSS with the app's own components.
+
+### Removed
+
+- The Electron desktop import dialog, which the old code could not reach.
+
 ## [1.5.0] - 2026-09-25
 
 ### Added

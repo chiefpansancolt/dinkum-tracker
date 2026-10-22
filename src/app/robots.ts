@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/playthrough/", "/settings/"],
+      disallow: ["/playthrough/", "/playthroughs", "/settings"],
     },
     sitemap: "https://dinkum.gamerdex.app/sitemap.xml",
   };
