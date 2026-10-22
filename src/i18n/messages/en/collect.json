@@ -221,6 +221,14 @@
             "buyPrice": "Buy price",
             "category": "Category"
         },
-        "shop": "Clover's Shop"
+        "shop": "Clover's Shop",
+        "hints": {
+            "slots": "{count, plural, one {All plus {amount} slot} other {All plus {amount} slots}}",
+            "typesForSlot": "{count, plural, one {{amount} type for {slot}. Resets when Slot changes.} other {{amount} types for {slot}. Resets when Slot changes.}}",
+            "typeNeedsSlot": "With Slot set to All, Type offers only All. Pick a slot first to see its types.",
+            "sets": "{count, plural, one {All plus {amount} set} other {All plus {amount} sets}}",
+            "sources": "All plus every source",
+            "categories": "{count, plural, one {{amount} category. The tiles above set this.} other {{amount} categories. The tiles above set this.}}"
+        }
     }
 }

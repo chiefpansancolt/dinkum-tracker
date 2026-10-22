@@ -221,6 +221,14 @@
             "buyPrice": "買値",
             "category": "カテゴリー"
         },
-        "shop": "Cloverの店"
+        "shop": "Cloverの店",
+        "hints": {
+            "slots": "{count, plural, other {すべてに加えて{amount}部位}}",
+            "typesForSlot": "{count, plural, other {{slot}の種類は{amount}件。部位を変えると「すべて」に戻ります。}}",
+            "typeNeedsSlot": "部位がすべての場合、種類にはすべてだけが表示されます。先に部位を選ぶと、その種類が表示されます。",
+            "sets": "{count, plural, other {すべてに加えて{amount}セット}}",
+            "sources": "すべてに加えて全入手元",
+            "categories": "{count, plural, other {カテゴリーは{amount}件。上のタイルで設定します。}}"
+        }
     }
 }

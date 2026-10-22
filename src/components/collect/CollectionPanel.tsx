@@ -13,6 +13,7 @@ import { ViewToggle } from "@/comps/page/ViewToggle";
 import { Button } from "@/comps/ui/Button";
 import { Card } from "@/comps/ui/Card";
 import { EmptyState } from "@/comps/ui/EmptyState";
+import { RowsOnScroll } from "./RowsOnScroll";
 import { useCollectedToggle } from "./useCollectedToggle";
 import type { FilterSpec } from "./useCollection";
 import { collectedSpec, useCollection } from "./useCollection";
@@ -156,18 +157,22 @@ export function CollectionPanel<Item extends { id: string; name: string }>({
 			) : listMode ? (
 				renderList(shown, toggleOf, items.length)
 			) : (
-				<div
-					style={{
-						gridTemplateColumns: `repeat(auto-fill, minmax(min(${cardMinWidth}, 100%), 1fr))`,
-					}}
-					className="grid gap-3"
-				>
-					{shown.map((item) => (
-						<div key={item.id} className="contents">
-							{renderCard(item, toggleOf(item))}
+				<RowsOnScroll items={shown}>
+					{(visible) => (
+						<div
+							style={{
+								gridTemplateColumns: `repeat(auto-fill, minmax(min(${cardMinWidth}, 100%), 1fr))`,
+							}}
+							className="grid gap-3"
+						>
+							{visible.map((item) => (
+								<div key={item.id} className="contents">
+									{renderCard(item, toggleOf(item))}
+								</div>
+							))}
 						</div>
-					))}
-				</div>
+					)}
+				</RowsOnScroll>
 			)}
 		</>
 	);

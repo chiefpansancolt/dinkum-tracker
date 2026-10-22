@@ -221,6 +221,14 @@
             "buyPrice": "Giá mua",
             "category": "Danh mục"
         },
-        "shop": "Cửa hàng của Clover"
+        "shop": "Cửa hàng của Clover",
+        "hints": {
+            "slots": "{count, plural, other {Tất cả và {amount} vị trí}}",
+            "typesForSlot": "{count, plural, other {{amount} loại cho {slot}. Đặt lại về Tất cả khi đổi Vị trí.}}",
+            "typeNeedsSlot": "Khi Vị trí là Tất cả, Loại chỉ có Tất cả. Hãy chọn vị trí trước để xem các loại của nó.",
+            "sets": "{count, plural, other {Tất cả và {amount} bộ}}",
+            "sources": "Tất cả và mọi nguồn",
+            "categories": "{count, plural, other {{amount} danh mục. Các ô phía trên quyết định mục này.}}"
+        }
     }
 }

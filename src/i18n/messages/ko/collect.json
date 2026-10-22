@@ -221,6 +221,14 @@
             "buyPrice": "구매가",
             "category": "분류"
         },
-        "shop": "Clover 상점"
+        "shop": "Clover 상점",
+        "hints": {
+            "slots": "{count, plural, other {전체 외 {amount}개 부위}}",
+            "typesForSlot": "{count, plural, other {{slot}의 종류 {amount}개. 부위를 바꾸면 전체로 돌아가요.}}",
+            "typeNeedsSlot": "부위가 전체이면 종류에는 전체만 나와요. 먼저 부위를 고르면 해당 종류가 보여요.",
+            "sets": "{count, plural, other {전체 외 {amount}개 세트}}",
+            "sources": "전체 외 모든 출처",
+            "categories": "{count, plural, other {분류 {amount}개. 위쪽 타일에서 정해져요.}}"
+        }
     }
 }

@@ -221,6 +221,14 @@
             "buyPrice": "Alış fiyatı",
             "category": "Kategori"
         },
-        "shop": "Clover's Shop"
+        "shop": "Clover's Shop",
+        "hints": {
+            "slots": "{count, plural, one {Tümü ve {amount} yuva} other {Tümü ve {amount} yuva}}",
+            "typesForSlot": "{count, plural, one {{slot} için {amount} tür. Yuva değişince Tümü olarak sıfırlanır.} other {{slot} için {amount} tür. Yuva değişince Tümü olarak sıfırlanır.}}",
+            "typeNeedsSlot": "Yuva Tümü iken Tür yalnızca Tümü sunar. Türleri görmek için önce bir yuva seç.",
+            "sets": "{count, plural, one {Tümü ve {amount} set} other {Tümü ve {amount} set}}",
+            "sources": "Tümü ve her kaynak",
+            "categories": "{count, plural, one {{amount} kategori. Yukarıdaki kutucuklar bunu belirler.} other {{amount} kategori. Yukarıdaki kutucuklar bunu belirler.}}"
+        }
     }
 }

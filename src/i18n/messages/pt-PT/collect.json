@@ -221,6 +221,14 @@
             "buyPrice": "Preço de compra",
             "category": "Categoria"
         },
-        "shop": "Loja do Clover"
+        "shop": "Loja do Clover",
+        "hints": {
+            "slots": "{count, plural, one {Todos mais {amount} ranhura} other {Todos mais {amount} ranhuras}}",
+            "typesForSlot": "{count, plural, one {{amount} tipo para {slot}. Volta a Todos quando a Ranhura muda.} other {{amount} tipos para {slot}. Volta a Todos quando a Ranhura muda.}}",
+            "typeNeedsSlot": "Com a Ranhura em Todos, o Tipo mostra só Todos. Escolher primeiro uma ranhura para ver os tipos.",
+            "sets": "{count, plural, one {Todos mais {amount} conjunto} other {Todos mais {amount} conjuntos}}",
+            "sources": "Todos mais todas as origens",
+            "categories": "{count, plural, one {{amount} categoria. Os cartões acima definem isto.} other {{amount} categorias. Os cartões acima definem isto.}}"
+        }
     }
 }

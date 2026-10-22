@@ -377,7 +377,7 @@ function SummaryTiles({ tab, playthrough }: { tab: GearTab; playthrough: Playthr
 	].filter((entry) => entry.group.length > 0);
 
 	return (
-		<div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+		<div className="grid grid-cols-2 gap-3 lg:grid-cols-4 max-lg:[&>:nth-last-child(2):nth-child(odd)]:col-span-2">
 			<StatTile
 				label={t("collected")}
 				value={formatNumber(all.count)}

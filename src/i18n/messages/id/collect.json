@@ -221,6 +221,14 @@
             "buyPrice": "Harga beli",
             "category": "Kategori"
         },
-        "shop": "Toko Clover"
+        "shop": "Toko Clover",
+        "hints": {
+            "slots": "{count, plural, other {Semua plus {amount} slot}}",
+            "typesForSlot": "{count, plural, other {{amount} jenis untuk {slot}. Kembali ke Semua saat Slot berubah.}}",
+            "typeNeedsSlot": "Saat Slot diatur ke Semua, Jenis hanya menampilkan Semua. Pilih slot dulu untuk melihat jenisnya.",
+            "sets": "{count, plural, other {Semua plus {amount} set}}",
+            "sources": "Semua plus semua sumber",
+            "categories": "{count, plural, other {{amount} kategori. Ditentukan oleh kartu di atas.}}"
+        }
     }
 }

@@ -221,6 +221,14 @@
             "buyPrice": "ราคาซื้อ",
             "category": "หมวด"
         },
-        "shop": "ร้านของ Clover"
+        "shop": "ร้านของ Clover",
+        "hints": {
+            "slots": "{count, plural, other {ทั้งหมดและอีก {amount} ช่อง}}",
+            "typesForSlot": "{count, plural, other {{amount} ประเภทสำหรับ {slot} รีเซ็ตเป็นทั้งหมดเมื่อเปลี่ยนช่อง}}",
+            "typeNeedsSlot": "เมื่อช่องเป็นทั้งหมด ประเภทจะมีให้เลือกแค่ทั้งหมด เลือกช่องก่อนเพื่อดูประเภทของช่องนั้น",
+            "sets": "{count, plural, other {ทั้งหมดและอีก {amount} ชุด}}",
+            "sources": "ทั้งหมดและทุกแหล่งที่มา",
+            "categories": "{count, plural, other {{amount} หมวด กำหนดจากไทล์ด้านบน}}"
+        }
     }
 }

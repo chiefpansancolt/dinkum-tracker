@@ -221,6 +221,14 @@
             "buyPrice": "Prezzo di acquisto",
             "category": "Categoria"
         },
-        "shop": "Negozio di Clover"
+        "shop": "Negozio di Clover",
+        "hints": {
+            "slots": "{count, plural, one {Tutti più {amount} slot} other {Tutti più {amount} slot}}",
+            "typesForSlot": "{count, plural, one {{amount} tipo per {slot}. Torna a Tutti quando cambi Slot.} other {{amount} tipi per {slot}. Torna a Tutti quando cambi Slot.}}",
+            "typeNeedsSlot": "Con Slot su Tutti, Tipo offre solo Tutti. Scegli prima uno slot per vedere i suoi tipi.",
+            "sets": "{count, plural, one {Tutti più {amount} set} other {Tutti più {amount} set}}",
+            "sources": "Tutti più ogni fonte",
+            "categories": "{count, plural, one {{amount} categoria. Le tessere qui sopra la impostano.} other {{amount} categorie. Le tessere qui sopra le impostano.}}"
+        }
     }
 }

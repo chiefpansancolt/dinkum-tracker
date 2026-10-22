@@ -221,6 +221,14 @@
             "buyPrice": "買價",
             "category": "類別"
         },
-        "shop": "Clover 的商店"
+        "shop": "Clover 的商店",
+        "hints": {
+            "slots": "{count, plural, other {全部，另加 {amount} 個部位}}",
+            "typesForSlot": "{count, plural, other {{slot} 有 {amount} 種類型。變更部位時會重設為全部。}}",
+            "typeNeedsSlot": "部位為全部時，類型只有全部。請先選擇部位，再查看其類型。",
+            "sets": "{count, plural, other {全部，另加 {amount} 個套組}}",
+            "sources": "全部加上所有來源",
+            "categories": "{count, plural, other {共 {amount} 個類別。由上方的卡片設定。}}"
+        }
     }
 }

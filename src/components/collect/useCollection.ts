@@ -10,6 +10,8 @@ export interface FilterSpec<Item> {
   label: string;
   /** The first option is the all choice. A filter on it does not narrow the list. */
   options: { id: string; label: string }[];
+  /** A short line under the select that says what the choices are or how they behave. */
+  hint?: string;
   apply: (items: Item[], value: string) => Item[];
 }
 
@@ -55,11 +57,14 @@ export function useCollection<Item extends { id: string }>({
   const values = Object.fromEntries(
     specs.map((spec) => [spec.id, chosen[spec.id] ?? firstOption(spec)]),
   );
-  const fields: FilterFieldConfig[] = specs.map(({ id, label, options }) => ({
-    id,
-    label,
-    options,
-  }));
+  const fields: FilterFieldConfig[] = specs.map(
+    ({ id, label, options, hint }) => ({
+      id,
+      label,
+      options,
+      hint,
+    }),
+  );
 
   return {
     fields,

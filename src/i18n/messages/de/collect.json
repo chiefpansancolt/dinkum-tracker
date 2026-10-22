@@ -221,6 +221,14 @@
             "buyPrice": "Kaufpreis",
             "category": "Kategorie"
         },
-        "shop": "Clovers Laden"
+        "shop": "Clovers Laden",
+        "hints": {
+            "slots": "{count, plural, one {Alle plus {amount} Slot} other {Alle plus {amount} Slots}}",
+            "typesForSlot": "{count, plural, one {{amount} Typ für {slot}. Wird beim Wechsel des Slots auf Alle zurückgesetzt.} other {{amount} Typen für {slot}. Wird beim Wechsel des Slots auf Alle zurückgesetzt.}}",
+            "typeNeedsSlot": "Ist Slot auf Alle gesetzt, bietet Typ nur Alle an. Wähle zuerst einen Slot, um seine Typen zu sehen.",
+            "sets": "{count, plural, one {Alle plus {amount} Set} other {Alle plus {amount} Sets}}",
+            "sources": "Alle plus jede Quelle",
+            "categories": "{count, plural, one {{amount} Kategorie. Die Kacheln oben legen sie fest.} other {{amount} Kategorien. Die Kacheln oben legen sie fest.}}"
+        }
     }
 }

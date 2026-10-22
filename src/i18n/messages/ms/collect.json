@@ -221,6 +221,14 @@
             "buyPrice": "Harga beli",
             "category": "Kategori"
         },
-        "shop": "Kedai Clover"
+        "shop": "Kedai Clover",
+        "hints": {
+            "slots": "{count, plural, other {Semua tambah {amount} slot}}",
+            "typesForSlot": "{count, plural, other {{amount} jenis untuk {slot}. Ditetapkan semula kepada Semua apabila Slot bertukar.}}",
+            "typeNeedsSlot": "Apabila Slot ditetapkan kepada Semua, Jenis hanya menawarkan Semua. Pilih slot dahulu untuk melihat jenisnya.",
+            "sets": "{count, plural, other {Semua tambah {amount} set}}",
+            "sources": "Semua tambah setiap sumber",
+            "categories": "{count, plural, other {{amount} kategori. Ditetapkan oleh jubin di atas.}}"
+        }
     }
 }

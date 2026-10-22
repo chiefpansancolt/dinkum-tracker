@@ -74,23 +74,36 @@ function ClothingPanel({ playthrough }: { playthrough: Playthrough }) {
 	const flags = playthrough.clothing;
 	const sell = (item: Clothing) => money(commercePrice(item.baseSellPrice, prefs.commerceLevel));
 
+	const setsHint = (count: number) => t("hints.sets", { count, amount: formatNumber(count) });
+	const typeHint = (slot: string) => {
+		if (slot === ALL) return t("hints.typeNeedsSlot");
+		const count = typesForSlot(slot).length;
+		return t("hints.typesForSlot", { count, amount: formatNumber(count), slot });
+	};
+
 	const buildSpecs = (values: Record<string, string>): FilterSpec<Clothing>[] => [
 		{
 			id: "slot",
 			label: t("filters.slot"),
 			options: options(t("filters.all"), slotList),
+			hint: t("hints.slots", {
+				count: slotList.length,
+				amount: formatNumber(slotList.length),
+			}),
 			apply: (rest, value) => filterClothing(rest, { slot: value, type: ALL, set: ALL }),
 		},
 		{
 			id: "type",
 			label: t("filters.type"),
 			options: options(t("filters.all"), typesForSlot(values.slot ?? ALL)),
+			hint: typeHint(values.slot ?? ALL),
 			apply: (rest, value) => filterClothing(rest, { slot: ALL, type: value, set: ALL }),
 		},
 		{
 			id: "set",
 			label: t("filters.set"),
 			options: options(t("filters.allSets"), clothingSetOptions),
+			hint: setsHint(clothingSetOptions.length),
 			apply: (rest, value) => filterClothing(rest, { slot: ALL, type: ALL, set: value }),
 		},
 	];
@@ -196,6 +209,10 @@ function FurniturePanel({ playthrough }: { playthrough: Playthrough }) {
 			id: "set",
 			label: t("filters.set"),
 			options: options(t("filters.allSets"), furnitureSetOptions),
+			hint: t("hints.sets", {
+				count: furnitureSetOptions.length,
+				amount: formatNumber(furnitureSetOptions.length),
+			}),
 			apply: (rest, value) =>
 				filterFurniture(rest, { set: value, source: ALL, catalogue: "all" }),
 		},
@@ -203,6 +220,7 @@ function FurniturePanel({ playthrough }: { playthrough: Playthrough }) {
 			id: "source",
 			label: t("filters.source"),
 			options: options(t("filters.allSources"), furnitureSourceOptions),
+			hint: t("hints.sources"),
 			apply: (rest, value) =>
 				filterFurniture(rest, { set: ALL, source: value, catalogue: "all" }),
 		},
@@ -315,12 +333,17 @@ function DecorationsPanel({ playthrough }: { playthrough: Playthrough }) {
 			id: "category",
 			label: t("filters.category"),
 			options: options(t("filters.allCategories"), decorationCategories),
+			hint: t("hints.categories", {
+				count: decorationCategories.length,
+				amount: formatNumber(decorationCategories.length),
+			}),
 			apply: (rest, value) => filterDecorations(rest, { category: value, source: ALL }),
 		},
 		{
 			id: "source",
 			label: t("filters.source"),
 			options: options(t("filters.allSources"), decorationSourceOptions),
+			hint: t("hints.sources"),
 			apply: (rest, value) => filterDecorations(rest, { category: ALL, source: value }),
 		},
 	];

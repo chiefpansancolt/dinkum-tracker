@@ -221,6 +221,14 @@
             "buyPrice": "买价",
             "category": "类别"
         },
-        "shop": "Clover 的商店"
+        "shop": "Clover 的商店",
+        "hints": {
+            "slots": "{count, plural, other {全部，另加 {amount} 个部位}}",
+            "typesForSlot": "{count, plural, other {{slot} 有 {amount} 个类型。更改部位时重置为全部。}}",
+            "typeNeedsSlot": "部位为全部时，类型只有全部。请先选择部位，再查看其类型。",
+            "sets": "{count, plural, other {全部，另加 {amount} 个套装}}",
+            "sources": "全部加上所有来源",
+            "categories": "{count, plural, other {共 {amount} 个类别。由上方的卡片设置。}}"
+        }
     }
 }

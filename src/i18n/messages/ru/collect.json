@@ -221,6 +221,14 @@
             "buyPrice": "Цена покупки",
             "category": "Категория"
         },
-        "shop": "Магазин Clover"
+        "shop": "Магазин Clover",
+        "hints": {
+            "slots": "{count, plural, one {Все плюс {amount} слот} few {Все плюс {amount} слота} many {Все плюс {amount} слотов} other {Все плюс {amount} слота}}",
+            "typesForSlot": "{count, plural, one {{amount} тип для {slot}. Сбрасывается на Все при смене слота.} few {{amount} типа для {slot}. Сбрасывается на Все при смене слота.} many {{amount} типов для {slot}. Сбрасывается на Все при смене слота.} other {{amount} типа для {slot}. Сбрасывается на Все при смене слота.}}",
+            "typeNeedsSlot": "Когда для слота выбрано Все, в списке Тип есть только Все. Сначала выберите слот, чтобы увидеть его типы.",
+            "sets": "{count, plural, one {Все плюс {amount} набор} few {Все плюс {amount} набора} many {Все плюс {amount} наборов} other {Все плюс {amount} набора}}",
+            "sources": "Все плюс все источники",
+            "categories": "{count, plural, one {{amount} категория. Задаётся плитками выше.} few {{amount} категории. Задаются плитками выше.} many {{amount} категорий. Задаются плитками выше.} other {{amount} категории. Задаются плитками выше.}}"
+        }
     }
 }

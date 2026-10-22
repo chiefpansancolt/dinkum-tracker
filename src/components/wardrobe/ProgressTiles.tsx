@@ -37,7 +37,7 @@ export function ProgressTiles({
 			</div>
 			<ul
 				style={{ "--tile-cols": columns } as React.CSSProperties}
-				className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-[repeat(var(--tile-cols),minmax(0,1fr))]"
+				className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-[repeat(var(--tile-cols),minmax(0,1fr))] max-sm:[&>li:last-child:nth-child(odd)>button]:col-span-2"
 			>
 				{progress.map(({ label, count, total }) => {
 					const active = label === selected;

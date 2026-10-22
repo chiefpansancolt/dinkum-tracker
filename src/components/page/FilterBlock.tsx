@@ -18,6 +18,8 @@ export interface FilterFieldConfig {
 	kind?: "select" | "segmented";
 	/** The first option is the "all" choice. A field on it counts as not filtering. */
 	options: { id: string; label: string }[];
+	/** A short line under a select. A segmented control does not show it. */
+	hint?: string;
 }
 
 interface FilterBlockProps {
@@ -67,7 +69,7 @@ function FieldSelect({
 	}
 
 	return (
-		<Field label={field.label}>
+		<Field label={field.label} hint={field.hint}>
 			<Select value={value} onChange={(event) => onChange(event.target.value)}>
 				{field.options.map((option) => (
 					<option key={option.id} value={option.id}>

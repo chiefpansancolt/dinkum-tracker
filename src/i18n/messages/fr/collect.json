@@ -221,6 +221,14 @@
             "buyPrice": "Prix d’achat",
             "category": "Catégorie"
         },
-        "shop": "Boutique de Clover"
+        "shop": "Boutique de Clover",
+        "hints": {
+            "slots": "{count, plural, one {Tous plus {amount} emplacement} other {Tous plus {amount} emplacements}}",
+            "typesForSlot": "{count, plural, one {{amount} type pour {slot}. Revient à Tous quand l’Emplacement change.} other {{amount} types pour {slot}. Revient à Tous quand l’Emplacement change.}}",
+            "typeNeedsSlot": "Avec l’Emplacement sur Tous, Type propose seulement Tous. Choisissez d’abord un emplacement pour voir ses types.",
+            "sets": "{count, plural, one {Tous plus {amount} ensemble} other {Tous plus {amount} ensembles}}",
+            "sources": "Tous plus toutes les sources",
+            "categories": "{count, plural, one {{amount} catégorie. Les tuiles ci-dessus la définissent.} other {{amount} catégories. Les tuiles ci-dessus les définissent.}}"
+        }
     }
 }

@@ -60,7 +60,7 @@ export function Field({ label, optional, hint, error, labelAction, children }: F
 }
 
 export const controlClasses =
-	"w-full rounded-md border-[1.5px] bg-surface text-ink placeholder:text-muted disabled:opacity-50";
+	"w-full rounded-md border-[1.5px] bg-surface text-ink text-ellipsis placeholder:text-muted disabled:opacity-50";
 
 export const controlHeightClasses = "min-h-11 lg:min-h-9";
 
