@@ -63,5 +63,7 @@ logs
 /release
 
 CLAUDE.md
+AGENTS.md
 .claude/
 memory/
+docs/

@@ -7,10 +7,10 @@
     "homepage": "https://dinkum.gamerdex.app",
     "repository": {
         "type": "git",
-        "url": "https://github.com/chiefpansancolt/dinkum-tracker.git"
+        "url": "https://github.com/GamerdexApp/dinkum-tracker.git"
     },
     "bugs": {
-        "url": "https://github.com/chiefpansancolt/dinkum-tracker/issues"
+        "url": "https://github.com/GamerdexApp/dinkum-tracker/issues"
     },
     "keywords": [
         "dinkum",

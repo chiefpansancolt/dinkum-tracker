@@ -38,13 +38,13 @@ Thanks for your interest in contributing! This guide will help you get started.
 ## Reporting Bugs
 
 Use the
-[Bug Report](https://github.com/chiefpansancolt/dinkum-tracker/issues/new?template=bug_report.yml)
+[Bug Report](https://github.com/GamerdexApp/dinkum-tracker/issues/new?template=bug_report.yml)
 issue template.
 
 ## Requesting Features
 
 Use the
-[Feature Request](https://github.com/chiefpansancolt/dinkum-tracker/issues/new?template=feature_request.yml)
+[Feature Request](https://github.com/GamerdexApp/dinkum-tracker/issues/new?template=feature_request.yml)
 issue template.
 
 ## Pull Requests
