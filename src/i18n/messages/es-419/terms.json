@@ -1,0 +1,91 @@
+{
+    "buffs": {
+        "attackLevel": "Ataque",
+        "charged": "Cargado",
+        "coolLevel": "Frescura",
+        "defenseLevel": "Defensa",
+        "diligent": "Diligente",
+        "experienceLevel": "Experiencia",
+        "fastHealthTickSpeedLevel": "Pulso de salud rápido",
+        "fishLevel": "Pesca",
+        "foragingLevel": "Recolección",
+        "healthMax": "Salud máxima",
+        "healthRegenRate": "Regeneración de salud",
+        "length": "Duración",
+        "miningLevel": "Minería",
+        "sleepless": "Insomne",
+        "speedLevel": "Velocidad",
+        "staminaMax": "Resistencia máxima",
+        "staminaRegenRate": "Regeneración de resistencia",
+        "swimmingLevel": "Natación"
+    },
+    "categories": {
+        "buildings": "Edificios",
+        "tools": "Herramientas",
+        "weapons": "Armas",
+        "equipment": "Equipamiento",
+        "vehicles": "Vehículos",
+        "craftingRecipes": "Recetas de fabricación",
+        "cookingRecipes": "Recetas de cocina",
+        "signWritingRecipes": "Recetas de rotulación",
+        "otherCraftables": "Otros fabricables"
+    },
+    "resourceTypes": {
+        "fish": "Pez",
+        "critter": "Bicho",
+        "bug": "Insecto",
+        "relic": "Reliquia",
+        "crop": "Cultivo",
+        "foragable": "Recolectable",
+        "animalProduct": "Producto animal",
+        "paint": "Pintura",
+        "mineral": "Mineral",
+        "craftable": "Fabricable",
+        "trophy": "Trofeo",
+        "seed": "Semilla",
+        "flower": "Flor",
+        "resource": "Recurso"
+    },
+    "daily": {
+        "dayOneMilestones": "Primer día",
+        "travelMilestones": "Viajes",
+        "npcMilestones": "NPCs",
+        "fishingMilestones": "Pesca",
+        "farmingMilestones": "Agricultura",
+        "foragingMilestones": "Recolección",
+        "loggingMilestones": "Tala",
+        "miningMilestones": "Minería",
+        "excavationMilestones": "Excavación",
+        "bugCatchingMilestones": "Caza de insectos",
+        "craftingMilestones": "Fabricación",
+        "huntingMilestones": "Caza",
+        "trappingMilestones": "Trampas",
+        "dinksMilestones": "Dinks"
+    },
+    "animalTypes": {
+        "Wild Animal": "Animal salvaje",
+        "Farm Animal": "Animal de granja",
+        "Tammed Animal": "Animal domesticado"
+    },
+    "temperaments": {
+        "Passive": "Pasivo",
+        "Neutral": "Neutral",
+        "Aggressive": "Agresivo"
+    },
+    "seasons": {
+        "Spring": "Primavera",
+        "Summer": "Verano",
+        "Autumn": "Otoño",
+        "Winter": "Invierno",
+        "All": "Todas"
+    },
+    "weekdays": {
+        "Sunday": "Domingo",
+        "Monday": "Lunes",
+        "Tuesday": "Martes",
+        "Wednesday": "Miércoles",
+        "Thursday": "Jueves",
+        "Friday": "Viernes",
+        "Saturday": "Sábado"
+    }
+}

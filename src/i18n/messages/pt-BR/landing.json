@@ -1,0 +1,78 @@
+{
+    "header": {
+        "features": "Recursos",
+        "track": "O que você pode acompanhar",
+        "view": "Ver minhas partidas",
+        "new": "Nova partida",
+        "menu": "Menu",
+        "menuOpen": "Abrir menu",
+        "menuClose": "Fechar menu",
+        "nav": "Principal"
+    },
+    "hero": {
+        "eyebrow": "Acompanhe seu progresso",
+        "title": "Dinkum Tracker",
+        "intro": "Um aplicativo completo para acompanhar suas aventuras no Dinkum. Gerencie várias partidas, acompanhe coleções e veja seu progresso em um só lugar. Tudo fica salvo no seu navegador, e você pode sincronizar com o seu próprio armazenamento na nuvem.",
+        "view": "Ver minhas partidas",
+        "new": "Nova aventura",
+        "imageAlt": "O jogo Dinkum"
+    },
+    "counts": {
+        "title": "Acompanhe sua coleção completa",
+        "intro": "Gerencie cada parte da sua jornada no Dinkum com um rastreador feito sobre as contagens reais de itens.",
+        "pedia": "Pedia",
+        "npcs": "NPCs",
+        "licenses": "Licenças",
+        "milestones": "Marcos",
+        "buildings": "Construções",
+        "gear": "Apetrechos e equipamentos",
+        "recipes": "Receitas",
+        "clothing": "Roupas"
+    },
+    "everything": {
+        "title": "Acompanhe tudo",
+        "intro": "Todas as ferramentas para ter sucesso no Dinkum",
+        "imageAlt": "O aplicativo Dinkum Tracker",
+        "closing": "De coletar insetos a cuidar da relação com os NPCs, o Dinkum Tracker ajuda você a acompanhar tudo no seu jogo.",
+        "pedia": {
+            "title": "Coleções da Pedia",
+            "text": "Acompanhe todos os peixes, insetos e criaturas por estação, local e hora do dia. Veja suas doações ao museu e o progresso da coleção."
+        },
+        "npcs": {
+            "title": "Relações com NPCs",
+            "text": "Acompanhe suas amizades com os moradores da cidade, os presentes preferidos e os níveis de coração de todos os {count} NPCs."
+        },
+        "calendar": {
+            "title": "Eventos do calendário",
+            "text": "Acompanhe datas importantes, aniversários e eventos de estação. Nunca mais perca um festival ou uma ocasião especial na sua cidade do Dinkum."
+        }
+    },
+    "needs": {
+        "title": "Tudo o que você precisa",
+        "intro": "Acompanhe todos os detalhes que importam na sua aventura no Dinkum.",
+        "milestones": {
+            "title": "Marcos e licenças",
+            "one": "Acompanhe a conclusão de {count} marcos do jogo",
+            "two": "Gerencie todas as licenças e seus níveis de melhoria",
+            "three": "Veja o progresso e os requisitos dos pontos de permissão"
+        },
+        "recipes": {
+            "title": "Receitas e fabricação",
+            "one": "Acompanhe todas as receitas de culinária e seus ingredientes",
+            "two": "Acompanhe as receitas de fabricação e os recursos",
+            "three": "Gerencie ferramentas, armas e equipamentos"
+        },
+        "collections": {
+            "title": "Coleções e recursos",
+            "one": "Cataloge todas as roupas e móveis",
+            "two": "Acompanhe todos os recursos e seus usos",
+            "three": "Gerencie projetos de construção e escrituras"
+        }
+    },
+    "cta": {
+        "title": "Pronto para começar?",
+        "text": "Comece hoje a organizar sua aventura no Dinkum e nunca mais perca o controle do seu progresso.",
+        "create": "Criar nova partida",
+        "existing": "Ver partidas existentes"
+    }
+}

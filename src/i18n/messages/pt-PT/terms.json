@@ -1,0 +1,91 @@
+{
+    "buffs": {
+        "attackLevel": "Ataque",
+        "charged": "Carregado",
+        "coolLevel": "Estilo",
+        "defenseLevel": "Defesa",
+        "diligent": "Diligente",
+        "experienceLevel": "Experiência",
+        "fastHealthTickSpeedLevel": "Ritmo de vida rápido",
+        "fishLevel": "Pesca",
+        "foragingLevel": "Recoleção",
+        "healthMax": "Vida máxima",
+        "healthRegenRate": "Regeneração de vida",
+        "length": "Duração",
+        "miningLevel": "Mineração",
+        "sleepless": "Sem sono",
+        "speedLevel": "Velocidade",
+        "staminaMax": "Resistência máxima",
+        "staminaRegenRate": "Regeneração de resistência",
+        "swimmingLevel": "Natação"
+    },
+    "categories": {
+        "buildings": "Edifícios",
+        "tools": "Ferramentas",
+        "weapons": "Armas",
+        "equipment": "Equipamento",
+        "vehicles": "Veículos",
+        "craftingRecipes": "Receitas de criação",
+        "cookingRecipes": "Receitas de culinária",
+        "signWritingRecipes": "Receitas de letreiros",
+        "otherCraftables": "Outros criáveis"
+    },
+    "resourceTypes": {
+        "fish": "Peixe",
+        "critter": "Bicho",
+        "bug": "Inseto",
+        "relic": "Relíquia",
+        "crop": "Cultura",
+        "foragable": "Recolhível",
+        "animalProduct": "Produto animal",
+        "paint": "Tinta",
+        "mineral": "Mineral",
+        "craftable": "Criável",
+        "trophy": "Troféu",
+        "seed": "Semente",
+        "flower": "Flor",
+        "resource": "Recurso"
+    },
+    "daily": {
+        "dayOneMilestones": "Primeiro dia",
+        "travelMilestones": "Viagens",
+        "npcMilestones": "NPCs",
+        "fishingMilestones": "Pesca",
+        "farmingMilestones": "Agricultura",
+        "foragingMilestones": "Recoleção",
+        "loggingMilestones": "Abate de árvores",
+        "miningMilestones": "Mineração",
+        "excavationMilestones": "Escavação",
+        "bugCatchingMilestones": "Captura de insetos",
+        "craftingMilestones": "Criação",
+        "huntingMilestones": "Caça",
+        "trappingMilestones": "Armadilhas",
+        "dinksMilestones": "Dinks"
+    },
+    "animalTypes": {
+        "Wild Animal": "Animal selvagem",
+        "Farm Animal": "Animal de quinta",
+        "Tammed Animal": "Animal domesticado"
+    },
+    "temperaments": {
+        "Passive": "Passivo",
+        "Neutral": "Neutro",
+        "Aggressive": "Agressivo"
+    },
+    "seasons": {
+        "Spring": "Primavera",
+        "Summer": "Verão",
+        "Autumn": "Outono",
+        "Winter": "Inverno",
+        "All": "Todas"
+    },
+    "weekdays": {
+        "Sunday": "Domingo",
+        "Monday": "Segunda-feira",
+        "Tuesday": "Terça-feira",
+        "Wednesday": "Quarta-feira",
+        "Thursday": "Quinta-feira",
+        "Friday": "Sexta-feira",
+        "Saturday": "Sábado"
+    }
+}

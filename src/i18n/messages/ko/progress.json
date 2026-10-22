@@ -1,0 +1,123 @@
+{
+    "common": {
+        "level": "레벨 {level}",
+        "levelCount": "레벨 {level}:",
+        "locked": "이전 레벨을 먼저 완료하세요.",
+        "completeAll": "모두 완료",
+        "clearAll": "모두 해제",
+        "requirement": "요구 조건",
+        "requiredSkill": "필요한 스킬 레벨",
+        "all": "전체",
+        "collected": "수집 완료",
+        "notCollected": "수집 전",
+        "clearFilters": "필터 지우기",
+        "toast": {
+            "obtained": "{item}: 레벨 {level} 획득",
+            "cleared": "{item}: {count, plural, other {레벨 {amount}개}} 해제",
+            "allObtained": "{item}: 모든 레벨 획득",
+            "allCleared": "{item}: 모든 레벨 해제"
+        },
+        "empty": {
+            "title": "필터에 맞는 {things} 없음",
+            "description": "다른 이름을 입력하거나 필터를 지워 보세요."
+        },
+        "permitPoints": "허가 포인트"
+    },
+    "buildings": {
+        "title": "건물",
+        "subline": "{total}개 중 {count}개 설치 · {percent}% · {name}",
+        "tiles": {
+            "installed": "설치됨",
+            "stillToInstall": "설치 전",
+            "listed": "등록된 건물",
+            "of": "전체 {total}개",
+            "breakdown": "수집 가능 {collectable} · 이동 가능 {movable} · 참고용 {reference}"
+        },
+        "filters": {
+            "deedType": "증서 종류",
+            "npc": "NPC",
+            "collected": "수집 상태",
+            "search": "이름으로 건물 검색...",
+            "sheetTitle": "건물 필터",
+            "showing": "건물 {total}개 중 {shown}개 표시 · 설치 {count}",
+            "apply": "건물 {count}개 보기"
+        },
+        "card": {
+            "deed": "증서",
+            "npc": "NPC",
+            "size": "크기",
+            "buildTime": "건설 시간",
+            "deedPrice": "증서 가격",
+            "hours": "영업 시간",
+            "closed": "휴무",
+            "description": "설명",
+            "resources": "자원",
+            "resource": "{name} {count}개"
+        },
+        "installed": "설치됨",
+        "nothingToInstall": "이 증서 종류에는 설치할 건물이 없어요.",
+        "things": "건물",
+        "toast": {
+            "installed": "{name}: 설치됨으로 표시했어요",
+            "notInstalled": "{name}: 설치 전으로 표시했어요"
+        }
+    },
+    "licenses": {
+        "title": "면허",
+        "subline": "레벨 {total}개 중 {count}개 획득 · {percent}% · {name}",
+        "tiles": {
+            "levels": "획득한 레벨",
+            "complete": "완료한 면허",
+            "permit": "사용한 허가 포인트",
+            "of": "전체 {total}개",
+            "sentence": "필요한 허가 포인트 {total}점 중 {amount}점을 사용했어요."
+        },
+        "filters": {
+            "category": "분류",
+            "collected": "수집 상태",
+            "search": "이름으로 면허 검색...",
+            "sheetTitle": "면허 필터",
+            "showing": "면허 {total}개 중 {shown}개 표시 · 해금한 레벨 {count}",
+            "apply": "면허 {count}개 보기"
+        },
+        "things": "면허"
+    },
+    "milestones": {
+        "title": "마일스톤",
+        "subline": "레벨 {total}개 중 {count}개 완료 · {percent}% · {name}",
+        "tiles": {
+            "levels": "완료한 레벨",
+            "complete": "완료한 마일스톤",
+            "permit": "얻은 허가 포인트",
+            "of": "전체 {total}개",
+            "sentence": "받을 수 있는 허가 포인트 {total}점 중 {amount}점을 얻었어요."
+        },
+        "filters": {
+            "category": "분류",
+            "allCategories": "모든 분류",
+            "collected": "수집 상태",
+            "viewMode": "보기 방식",
+            "grouped": "글자별 묶음",
+            "all": "모든 마일스톤",
+            "search": "이름이나 설명으로 마일스톤 검색...",
+            "sheetTitle": "마일스톤 필터",
+            "showing": "마일스톤 {total}개 중 {shown}개 표시 · 완료한 레벨 {count}",
+            "apply": "마일스톤 {count}개 보기"
+        },
+        "things": "마일스톤"
+    },
+    "skills": {
+        "title": "스킬",
+        "subline": "스킬 {skills}개 · 총 레벨 {levels} · 최대 레벨 제한 없음 · {name}",
+        "tiles": {
+            "total": "스킬 레벨 합계",
+            "across": "스킬 {count}개 기준",
+            "highest": "가장 높은 스킬",
+            "atZero": "레벨 0인 스킬",
+            "atZeroOf": "전체 {total}개"
+        },
+        "level": "스킬 레벨",
+        "note": "면허는 단계마다 스킬 레벨을 요구해요. 아직 필요한 레벨은 <link>면허</link>에서 확인하세요.",
+        "toast": "{name}이(가) 이제 레벨 {level}이에요"
+    }
+}

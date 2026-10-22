@@ -1,0 +1,226 @@
+{
+    "toast": {
+        "marked": "{name}: {state}",
+        "collected": "Toplandı",
+        "notCollected": "Toplanmadı",
+        "unlocked": "Açıldı",
+        "locked": "Kilitli"
+    },
+    "filters": {
+        "search": "{things} içinde ada göre ara...",
+        "sheetTitle": "{things} filtrele",
+        "showingCollected": "{total} {things} içinden {shown} gösteriliyor · Toplanan {count}",
+        "showingUnlocked": "{total} {things} içinden {shown} gösteriliyor · Açılan {count}",
+        "apply": "{count} {things} göster",
+        "all": "Tümü",
+        "collected": "Toplandı",
+        "notCollected": "Toplanacak",
+        "unlocked": "Açıldı",
+        "notUnlocked": "Açılacak",
+        "source": "Kaynak",
+        "allSources": "Tüm kaynaklar"
+    },
+    "empty": {
+        "title": "Bu filtrelere uyan {things} yok",
+        "description": "Başka bir ad dene ya da filtreleri temizle.",
+        "clear": "Filtreleri temizle"
+    },
+    "list": {
+        "got": "Var",
+        "name": "Ad",
+        "caption": "{total} satırdan {shown} tanesi yüklendi. Kaydırdıkça daha fazla satır yüklenir.",
+        "prices": "Fiyatlar dinks cinsinden"
+    },
+    "card": {
+        "collected": "Toplandı",
+        "markCollected": "Toplandı olarak işaretle",
+        "unlocked": "Açıldı",
+        "sellPrice": "Satış fiyatı",
+        "buyPrice": "Alış fiyatı",
+        "source": "Kaynak",
+        "none": "–"
+    },
+    "gear": {
+        "title": "Teçhizat",
+        "subline": "{total} içinden {count} toplandı · %{percent} · {name}",
+        "tabsLabel": "Teçhizat bölümleri",
+        "tabs": {
+            "books": "Kitaplar",
+            "cassettes": "Kasetler",
+            "tools": "Aletler",
+            "weapons": "Silahlar",
+            "equipment": "Ekipman",
+            "vehicles": "Araçlar"
+        },
+        "things": {
+            "books": "kitap",
+            "cassettes": "kaset",
+            "tools": "alet",
+            "weapons": "silah",
+            "equipment": "ekipman",
+            "vehicles": "araç"
+        },
+        "tiles": {
+            "collected": "Toplandı",
+            "of": "/ {total}",
+            "franklyn": "Franklyn ile açılanlar",
+            "craftable": "Üretilebilir",
+            "highDamage": "Yüksek hasar (20+)"
+        },
+        "filters": {
+            "license": "Lisans",
+            "allLicenses": "Tüm lisanslar",
+            "purchaseType": "Satın alma türü",
+            "purchasable": "Satın alınabilir",
+            "dinks": "Dinks",
+            "permitPoints": "İzin puanları",
+            "damage": "Hasar",
+            "high": "Yüksek (20+)",
+            "medium": "Orta (10 ile 19)",
+            "low": "Düşük (10 altı)",
+            "allDamage": "Tüm hasarlar",
+            "requirement": "Gereksinim türü",
+            "allRequirements": "Tüm gereksinim türleri",
+            "allPurchaseTypes": "Tümü"
+        },
+        "card": {
+            "craftingRecipe": "Üretim tarifi",
+            "license": "Lisans",
+            "licenseLevel": "Avcılık lisansı seviyesi",
+            "source": "Kaynak",
+            "damage": "Hasar",
+            "unlocksAfter": "Şundan sonra açılır",
+            "shinyDiscs": "{count} Shiny Discs",
+            "berkonium": "{count} Berkonium Ore",
+            "ingredients": "Malzemeler",
+            "resources": "Kaynaklar",
+            "requirement": "Gereksinim seviyesi",
+            "compatibleWith": "Uyumlu olduğu yapı",
+            "windmill": "Rüzgar değirmeni",
+            "solarPanel": "Güneş paneli",
+            "acquiredFrom": "Edinildiği yer",
+            "requirements": "Gereksinimler",
+            "buyPrice": "Alış fiyatı",
+            "sellPrice": "Satış fiyatı",
+            "dinks": "{amount} Dinks",
+            "permitPoints": "{count, plural, one {{amount} izin puanı} other {{amount} izin puanı}}",
+            "ingredient": "{count}x {name}",
+            "none": "Yok",
+            "requirementLevel": "{type} seviyesi"
+        }
+    },
+    "recipes": {
+        "title": "Tarifler",
+        "subline": "{total} içinden {count} açıldı · %{percent} · {name}",
+        "tabsLabel": "Tarif bölümleri",
+        "tabs": {
+            "cooking": "Yemek",
+            "crafting": "Üretim",
+            "signWriting": "Tabela yazımı"
+        },
+        "things": {
+            "cooking": "yemek tarifi",
+            "crafting": "üretim tarifi",
+            "signWriting": "tabela yazım tarifi"
+        },
+        "tiles": {
+            "unlocked": "Açıldı",
+            "of": "/ {total}",
+            "withBuffs": "Güçlendirmeli",
+            "vendors": "Sheila, Ted veya Jimmy satar",
+            "recipes": "Tarifler"
+        },
+        "filters": {
+            "location": "Yemek pişirme yerleri",
+            "allLocations": "Tüm yerler",
+            "unlocked": "Açıldı",
+            "sources": "Kaynaklar",
+            "allSources": "Tüm kaynaklar",
+            "buffs": "Güçlendirmeler",
+            "buffsWithCount": "Güçlendirmeler ({count})"
+        },
+        "buffs": {
+            "title": "Güçlendirmeye göre filtrele",
+            "match": "Eşleşme",
+            "any": "HERHANGİ",
+            "all": "HEPSİ",
+            "clear": "Seçimleri temizle",
+            "selected": "{count} seçili",
+            "done": "Bitti"
+        },
+        "card": {
+            "cookingLocation": "Yemek pişirme yeri",
+            "buffs": "Güçlendirmeler",
+            "duration": "{minutes, plural, one {{amount} dk} other {{amount} dk}}",
+            "sellPrice": "Satış fiyatı",
+            "sheilas": "Sheila'nın",
+            "teds": "Ted'in",
+            "jimmys": "Jimmy'nin",
+            "resources": "Kaynaklar",
+            "option": "Seçenek {n}",
+            "ingredient": "{count}x {name}",
+            "source": "Kaynak",
+            "unlocked": "Açıldı",
+            "varies": "Değişir",
+            "output": "x{count}"
+        }
+    },
+    "wardrobe": {
+        "title": "Gardırop ve ev",
+        "subline": "{total} içinden {count} toplandı · %{percent} · {name}",
+        "tabsLabel": "Gardırop bölümleri",
+        "tabs": {
+            "clothing": "Kıyafetler",
+            "furniture": "Mobilyalar",
+            "decorations": "Dekorasyonlar"
+        },
+        "things": {
+            "clothing": "kıyafet",
+            "furniture": "mobilya",
+            "decorations": "dekorasyon"
+        },
+        "progress": {
+            "clothing": "Yuvaya göre ilerleme · filtrelemek için bir kutu seç",
+            "furniture": "Sete göre ilerleme · filtrelemek için bir kutu seç",
+            "decorations": "Kategoriye göre ilerleme · filtrelemek için bir kutu seç"
+        },
+        "filters": {
+            "slot": "Yuva",
+            "type": "Tür",
+            "set": "Set",
+            "allSets": "Tüm setler",
+            "catalogue": "Katalog",
+            "melvins": "Melvin's Catalogue",
+            "notMelvins": "Katalogda yok",
+            "category": "Kategori",
+            "allCategories": "Tüm kategoriler",
+            "source": "Kaynak",
+            "allSources": "Tüm kaynaklar",
+            "all": "Tümü"
+        },
+        "list": {
+            "type": "Tür",
+            "slot": "Yuva",
+            "set": "Set",
+            "price": "Fiyat",
+            "sell": "Satış",
+            "availableAt": "Satıldığı yer",
+            "catalogue": "Katalog",
+            "category": "Kategori",
+            "source": "Kaynak",
+            "buy": "Alış"
+        },
+        "card": {
+            "slot": "Yuva",
+            "set": "Set",
+            "price": "Fiyat",
+            "sellPrice": "Satış fiyatı",
+            "availableAt": "Satıldığı yer",
+            "cataloguePrice": "Katalog fiyatı",
+            "source": "Kaynak",
+            "buyPrice": "Alış fiyatı",
+            "category": "Kategori"
+        },
+        "shop": "Clover's Shop"
+    }
+}

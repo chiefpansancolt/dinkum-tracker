@@ -1,0 +1,123 @@
+{
+    "common": {
+        "level": "{level} 级",
+        "levelCount": "{level} 级：",
+        "locked": "请先完成上一级。",
+        "completeAll": "全部完成",
+        "clearAll": "全部清除",
+        "requirement": "要求",
+        "requiredSkill": "所需技能等级",
+        "all": "全部",
+        "collected": "已收集",
+        "notCollected": "未收集",
+        "clearFilters": "清除筛选",
+        "toast": {
+            "obtained": "{item}：已获得 {level} 级",
+            "cleared": "{item}：已清除 {count, plural, other {{amount} 个等级}}",
+            "allObtained": "{item}：已获得全部等级",
+            "allCleared": "{item}：已清除全部等级"
+        },
+        "empty": {
+            "title": "没有符合筛选条件的{things}",
+            "description": "换个名称试试，或清除筛选。"
+        },
+        "permitPoints": "许可点数"
+    },
+    "buildings": {
+        "title": "建筑",
+        "subline": "已建成 {count} / {total} · {percent}% · {name}",
+        "tiles": {
+            "installed": "已建成",
+            "stillToInstall": "待建成",
+            "listed": "建筑总数",
+            "of": "共 {total}",
+            "breakdown": "可收集 {collectable} · 可移动 {movable} · 参考 {reference}"
+        },
+        "filters": {
+            "deedType": "地契类型",
+            "npc": "NPC",
+            "collected": "已收集",
+            "search": "按名称搜索建筑...",
+            "sheetTitle": "筛选建筑",
+            "showing": "显示 {shown} / {total} 个建筑 · 已建成 {count}",
+            "apply": "显示 {count} 个建筑"
+        },
+        "card": {
+            "deed": "地契",
+            "npc": "NPC",
+            "size": "尺寸",
+            "buildTime": "建造时间",
+            "deedPrice": "地契价格",
+            "hours": "营业时间",
+            "closed": "休息",
+            "description": "描述",
+            "resources": "资源",
+            "resource": "{count} 个{name}"
+        },
+        "installed": "已建成",
+        "nothingToInstall": "该地契类型没有可建的建筑。",
+        "things": "建筑",
+        "toast": {
+            "installed": "{name} 已标记为已建成",
+            "notInstalled": "{name} 已标记为未建成"
+        }
+    },
+    "licenses": {
+        "title": "执照",
+        "subline": "已获得 {count} / {total} 个等级 · {percent}% · {name}",
+        "tiles": {
+            "levels": "已获得等级",
+            "complete": "已完成执照",
+            "permit": "已花费许可点数",
+            "of": "共 {total}",
+            "sentence": "你已花费 {amount} 点许可点数，共需 {total} 点。"
+        },
+        "filters": {
+            "category": "类别",
+            "collected": "已收集",
+            "search": "按名称搜索执照...",
+            "sheetTitle": "筛选执照",
+            "showing": "显示 {shown} / {total} 个执照 · 已解锁等级 {count}",
+            "apply": "显示 {count} 个执照"
+        },
+        "things": "执照"
+    },
+    "milestones": {
+        "title": "里程碑",
+        "subline": "已完成 {count} / {total} 个等级 · {percent}% · {name}",
+        "tiles": {
+            "levels": "已完成等级",
+            "complete": "已完成里程碑",
+            "permit": "已获得许可点数",
+            "of": "共 {total}",
+            "sentence": "你已获得 {amount} 点许可点数，共可获得 {total} 点。"
+        },
+        "filters": {
+            "category": "类别",
+            "allCategories": "全部类别",
+            "collected": "已收集",
+            "viewMode": "查看方式",
+            "grouped": "按字母分组",
+            "all": "全部里程碑",
+            "search": "按名称或描述搜索里程碑...",
+            "sheetTitle": "筛选里程碑",
+            "showing": "显示 {shown} / {total} 个里程碑 · 已完成等级 {count}",
+            "apply": "显示 {count} 个里程碑"
+        },
+        "things": "里程碑"
+    },
+    "skills": {
+        "title": "技能",
+        "subline": "{skills} 项技能 · 共 {levels} 级 · 没有等级上限 · {name}",
+        "tiles": {
+            "total": "技能等级总和",
+            "across": "来自 {count} 项技能",
+            "highest": "最高技能",
+            "atZero": "0 级技能",
+            "atZeroOf": "共 {total}"
+        },
+        "level": "技能等级",
+        "note": "执照在每个阶段都要求一定的技能等级。查看<link>执照</link>，了解你还需要哪些等级。",
+        "toast": "{name} 现在是 {level} 级"
+    }
+}

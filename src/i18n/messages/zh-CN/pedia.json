@@ -1,0 +1,85 @@
+{
+    "title": "图鉴",
+    "subline": "已收集 {done} / {total} · {percent}% · {name}",
+    "tabsLabel": "图鉴分区",
+    "tabs": {
+        "fish": "鱼类",
+        "bugs": "昆虫",
+        "critters": "小动物"
+    },
+    "nouns": {
+        "fish": "鱼类",
+        "bugs": "昆虫",
+        "critters": "小动物"
+    },
+    "summary": {
+        "captured": "已捕获",
+        "donated": "已捐赠给博物馆",
+        "permit": "已获得许可点数",
+        "of": "共 {total}"
+    },
+    "filters": {
+        "sheetTitle": "筛选{tab}",
+        "biome": "生物群系",
+        "rarity": "稀有度",
+        "season": "季节",
+        "time": "时间",
+        "collected": "已收集",
+        "donated": "已捐赠",
+        "allBiomes": "全部生物群系",
+        "allRarities": "全部稀有度",
+        "allSeasons": "全部季节",
+        "anyTime": "任意时间",
+        "all": "全部",
+        "onlyCollected": "已收集",
+        "notCollected": "未收集",
+        "onlyDonated": "已捐赠",
+        "notDonated": "未捐赠",
+        "search": "按名称搜索{tab}",
+        "showing": "显示 {shown} / {total} 项{tab}",
+        "capturedCount": "已捕获 {count}",
+        "donatedCount": "已捐赠 {count}",
+        "apply": "显示 {count} 项{tab}"
+    },
+    "view": {
+        "label": "视图",
+        "grid": "网格",
+        "list": "列表"
+    },
+    "card": {
+        "biome": "生物群系",
+        "seasons": "季节",
+        "time": "时间",
+        "sell": "售价",
+        "cooked": "烹饪后",
+        "cookedValue": "{price} · x{pieces}",
+        "status": "状态",
+        "missing": "缺少",
+        "caught": "已捕获",
+        "donated": "已捐赠"
+    },
+    "table": {
+        "name": "名称",
+        "rarity": "稀有度",
+        "biome": "生物群系",
+        "seasons": "季节",
+        "time": "时间",
+        "sell": "售价",
+        "cooked": "烹饪后",
+        "status": "状态",
+        "caption": "显示 {shown} / {total} 行。两种视图使用相同的筛选、状态控制和贸易等级。"
+    },
+    "empty": {
+        "title": "没有符合筛选条件的{tab}",
+        "description": "换个名称试试，或清除筛选。",
+        "clear": "清除筛选"
+    },
+    "toast": {
+        "marked": "{name} 已标记为{status}",
+        "statuses": {
+            "missing": "缺少",
+            "caught": "已捕获",
+            "donated": "已捐赠"
+        }
+    }
+}

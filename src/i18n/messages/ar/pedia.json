@@ -1,0 +1,85 @@
+{
+    "title": "Pedia",
+    "subline": "تم جمع {done} من {total} · {percent}% · {name}",
+    "tabsLabel": "أقسام Pedia",
+    "tabs": {
+        "fish": "الأسماك",
+        "bugs": "الحشرات",
+        "critters": "المخلوقات الصغيرة"
+    },
+    "nouns": {
+        "fish": "الأسماك",
+        "bugs": "الحشرات",
+        "critters": "المخلوقات الصغيرة"
+    },
+    "summary": {
+        "captured": "تم الصيد",
+        "donated": "تم التبرع به للمتحف",
+        "permit": "نقاط التصريح المكتسبة",
+        "of": "من {total}"
+    },
+    "filters": {
+        "sheetTitle": "تصفية {tab}",
+        "biome": "البيئة",
+        "rarity": "الندرة",
+        "season": "الموسم",
+        "time": "الوقت",
+        "collected": "تم الجمع",
+        "donated": "تم التبرع",
+        "allBiomes": "كل البيئات",
+        "allRarities": "كل درجات الندرة",
+        "allSeasons": "كل المواسم",
+        "anyTime": "أي وقت",
+        "all": "الكل",
+        "onlyCollected": "تم الجمع",
+        "notCollected": "لم يُجمع بعد",
+        "onlyDonated": "تم التبرع",
+        "notDonated": "لم يُتبرع به بعد",
+        "search": "البحث في {tab} بالاسم",
+        "showing": "عرض {shown} من {total} في {tab}",
+        "capturedCount": "تم صيد {count}",
+        "donatedCount": "تم التبرع بـ {count}",
+        "apply": "عرض {count} في {tab}"
+    },
+    "view": {
+        "label": "العرض",
+        "grid": "شبكة",
+        "list": "قائمة"
+    },
+    "card": {
+        "biome": "البيئة",
+        "seasons": "المواسم",
+        "time": "الوقت",
+        "sell": "سعر البيع",
+        "cooked": "مطبوخ",
+        "cookedValue": "{price} · x{pieces}",
+        "status": "الحالة",
+        "missing": "ناقص",
+        "caught": "تم الصيد",
+        "donated": "تم التبرع"
+    },
+    "table": {
+        "name": "الاسم",
+        "rarity": "الندرة",
+        "biome": "البيئة",
+        "seasons": "المواسم",
+        "time": "الوقت",
+        "sell": "البيع",
+        "cooked": "مطبوخ",
+        "status": "الحالة",
+        "caption": "عرض {shown} من {total} صفًا. تنطبق عوامل التصفية نفسها وعنصر الحالة ومستوى التجارة في العرضين."
+    },
+    "empty": {
+        "title": "لا توجد نتائج في {tab} تطابق عوامل التصفية هذه",
+        "description": "يمكن تجربة اسم آخر أو مسح عوامل التصفية.",
+        "clear": "مسح عوامل التصفية"
+    },
+    "toast": {
+        "marked": "{name}: {status}",
+        "statuses": {
+            "missing": "ناقص",
+            "caught": "تم الصيد",
+            "donated": "تم التبرع"
+        }
+    }
+}

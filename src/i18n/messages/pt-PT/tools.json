@@ -1,0 +1,70 @@
+{
+    "breakdown": {
+        "title": "Detalhe de itens",
+        "subline": "Que recursos entram em que itens · {count} recursos",
+        "tiles": {
+            "resources": "Recursos",
+            "resourcesCaption": "usados em receitas e construções",
+            "common": "Comuns, usados em 3+ itens",
+            "of": "de {total}",
+            "mostUsed": "Mais usado",
+            "items": "{count, plural, one {{amount} item} other {{amount} itens}}"
+        },
+        "search": "Pesquisar",
+        "searchPlaceholder": "Pesquisar recursos por nome",
+        "sortBy": "Ordenar por",
+        "sortName": "Nome (A-Z)",
+        "sortUsage": "Número de usos",
+        "filter": "Filtrar",
+        "filterWithCount": "Filtrar ({count})",
+        "commonOnly": "Só recursos comuns (usados em 3+ itens)",
+        "showing": "A mostrar {shown} de {total} recursos",
+        "notes": {
+            "categories": " (filtrado por {count, plural, one {{amount} categoria} other {{amount} categorias}})",
+            "types": " (filtrado por {count, plural, one {{amount} tipo} other {{amount} tipos}})",
+            "common": " (só recursos comuns)"
+        },
+        "panel": {
+            "title": "Filtrar recursos",
+            "byCategory": "Filtrar por categoria",
+            "byType": "Filtrar por tipo de recurso",
+            "clear": "Limpar seleção",
+            "itemCount": "{count, plural, one {{amount} item} other {{amount} itens}}",
+            "done": "Mostrar {count} recursos",
+            "option": "{name}, {items}"
+        },
+        "card": {
+            "usedIn": "{count, plural, one {Usado em {amount} item} other {Usado em {amount} itens}}",
+            "categories": "Categorias",
+            "usedInList": "Usado em",
+            "showMore": "Mostrar mais {count}...",
+            "showLess": "Mostrar menos"
+        },
+        "empty": {
+            "title": "Nenhum recurso corresponde a estes filtros",
+            "description": "Experimentar outro nome ou limpar a seleção.",
+            "clear": "Limpar seleção"
+        }
+    },
+    "weight": {
+        "title": "Calculadora de peso",
+        "subline": "Calcular o preço de um achado pesado a partir do peso · {count} itens",
+        "picker": "Selecionar item",
+        "perKg": "{price} por kg",
+        "range": "{min} - {max} kg",
+        "rangeLine": "Intervalo de peso: {min} kg - {max} kg",
+        "weight": "Peso: {weight} kg",
+        "slider": "Peso em kg",
+        "minus": "Diminuir peso em {step} kg",
+        "plus": "Aumentar peso em {step} kg",
+        "min": "{min} kg",
+        "max": "{max} kg",
+        "stepNote": "Passo de {step} kg. Escolher outro item repõe o peso no mínimo.",
+        "total": "Preço total",
+        "dinks": "dinks",
+        "formula": "{weight} kg × {price} por kg = {total}",
+        "rounded": "Arredondado ao dink mais próximo.",
+        "atMin": "Preço com o peso mínimo",
+        "atMax": "Preço com o peso máximo"
+    }
+}

@@ -1,0 +1,70 @@
+{
+    "breakdown": {
+        "title": "แยกส่วนประกอบไอเทม",
+        "subline": "ทรัพยากรไหนใช้ทำไอเทมไหน · {count} ทรัพยากร",
+        "tiles": {
+            "resources": "ทรัพยากร",
+            "resourcesCaption": "ใช้ในสูตรและการก่อสร้าง",
+            "common": "ทั่วไป ใช้ใน 3 ไอเทมขึ้นไป",
+            "of": "จาก {total}",
+            "mostUsed": "ใช้มากที่สุด",
+            "items": "{count, plural, other {{amount} ไอเทม}}"
+        },
+        "search": "ค้นหา",
+        "searchPlaceholder": "ค้นหาทรัพยากรตามชื่อ",
+        "sortBy": "เรียงตาม",
+        "sortName": "ชื่อ (A-Z)",
+        "sortUsage": "จำนวนการใช้",
+        "filter": "กรอง",
+        "filterWithCount": "กรอง ({count})",
+        "commonOnly": "เฉพาะทรัพยากรทั่วไป (ใช้ใน 3 ไอเทมขึ้นไป)",
+        "showing": "แสดง {shown} จาก {total} ทรัพยากร",
+        "notes": {
+            "categories": " (กรองตาม {count, plural, other {{amount} หมวด}})",
+            "types": " (กรองตาม {count, plural, other {{amount} ประเภท}})",
+            "common": " (เฉพาะทรัพยากรทั่วไป)"
+        },
+        "panel": {
+            "title": "กรองทรัพยากร",
+            "byCategory": "กรองตามหมวด",
+            "byType": "กรองตามประเภททรัพยากร",
+            "clear": "ล้างที่เลือก",
+            "itemCount": "{count, plural, other {{amount} ไอเทม}}",
+            "done": "แสดง {count} ทรัพยากร",
+            "option": "{name}, {items}"
+        },
+        "card": {
+            "usedIn": "{count, plural, other {ใช้ใน {amount} ไอเทม}}",
+            "categories": "หมวด",
+            "usedInList": "ใช้ใน",
+            "showMore": "แสดงอีก {count}...",
+            "showLess": "แสดงน้อยลง"
+        },
+        "empty": {
+            "title": "ไม่มีทรัพยากรที่ตรงกับตัวกรองเหล่านี้",
+            "description": "ลองใช้ชื่ออื่น หรือล้างที่เลือก",
+            "clear": "ล้างที่เลือก"
+        }
+    },
+    "weight": {
+        "title": "เครื่องคำนวณน้ำหนัก",
+        "subline": "คำนวณราคาของที่หนักจากน้ำหนัก · {count} ไอเทม",
+        "picker": "เลือกไอเทม",
+        "perKg": "{price} ต่อ กก.",
+        "range": "{min} - {max} กก.",
+        "rangeLine": "ช่วงน้ำหนัก: {min} กก. - {max} กก.",
+        "weight": "น้ำหนัก: {weight} กก.",
+        "slider": "น้ำหนักเป็น กก.",
+        "minus": "ลดน้ำหนักลง {step} กก.",
+        "plus": "เพิ่มน้ำหนักขึ้น {step} กก.",
+        "min": "{min} กก.",
+        "max": "{max} กก.",
+        "stepNote": "ปรับทีละ {step} กก. การเลือกไอเทมอื่นจะรีเซ็ตน้ำหนักเป็นค่าต่ำสุด",
+        "total": "ราคารวม",
+        "dinks": "Dinks",
+        "formula": "{weight} กก. × {price} ต่อ กก. = {total}",
+        "rounded": "ปัดเป็น Dink ที่ใกล้ที่สุด",
+        "atMin": "ราคาที่น้ำหนักต่ำสุด",
+        "atMax": "ราคาที่น้ำหนักสูงสุด"
+    }
+}

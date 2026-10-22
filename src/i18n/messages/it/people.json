@@ -1,0 +1,98 @@
+{
+    "npcs": {
+        "title": "NPC",
+        "subline": "{hearts} di {total} cuori · {count} NPC · {name}",
+        "tiles": {
+            "total": "Cuori totali",
+            "full": "Cuori pieni",
+            "met": "Incontrati finora",
+            "of": "su {total}",
+            "ofNpcs": "su {total} NPC"
+        },
+        "filters": {
+            "search": "Cerca NPC per nome",
+            "sheetTitle": "Filtra NPC",
+            "relationship": "Relazione",
+            "residence": "Vive sull'isola",
+            "all": "Tutti",
+            "none": "Ancora nessun cuore",
+            "progress": "In corso",
+            "full": "Cuori pieni",
+            "canMoveIn": "Può trasferirsi",
+            "visitors": "Solo visitatori",
+            "showing": "Mostrati {shown} di {total} NPC · Cuori pieni {full} · Incontrati {met}",
+            "apply": "Mostra {count} NPC"
+        },
+        "hint": "Tocca un cuore per impostarlo. Tocca l'ultimo cuore pieno per toglierlo. Usa -{step} e +{step} per i quarti di cuore.",
+        "things": "NPC",
+        "card": {
+            "full": "Pieno",
+            "requirements": "Requisiti",
+            "visit": "Visita",
+            "moveIn": "Trasferimento",
+            "food": "Cibi preferiti",
+            "likes": "Gli piace",
+            "dislikes": "Non gli piace",
+            "none": "Nessuno"
+        },
+        "hearts": {
+            "label": "Cuori di {name}",
+            "setTo": "Imposta {name} a {count, plural, one {{amount} cuore} other {{amount} cuori}}",
+            "less": "- {step}",
+            "more": "+ {step}",
+            "lessLabel": "Diminuisci i cuori di {step}",
+            "moreLabel": "Aumenta i cuori di {step}",
+            "readout": "{hearts} / {max}"
+        },
+        "toast": {
+            "set": "{name}: {hearts} cuori su 5"
+        },
+        "empty": {
+            "title": "Nessun NPC corrisponde a questi filtri",
+            "description": "Prova un altro nome o azzera i filtri.",
+            "clear": "Azzera filtri"
+        }
+    },
+    "calendar": {
+        "title": "Calendario",
+        "subline": "{season} · {events} eventi · {birthdays} compleanni · {name}",
+        "previous": "Stagione precedente",
+        "next": "Stagione successiva",
+        "today": "Oggi",
+        "legend": {
+            "event": "Evento",
+            "birthday": "Compleanno",
+            "current": "Giorno attuale"
+        },
+        "alert": "Giorno attuale: {day} {season}. Tocca un giorno qualsiasi per impostarlo come giorno attuale. Le modifiche vengono salvate subito.",
+        "weekdays": {
+            "Sunday": "Dom",
+            "Monday": "Lun",
+            "Tuesday": "Mar",
+            "Wednesday": "Mer",
+            "Thursday": "Gio",
+            "Friday": "Ven",
+            "Saturday": "Sab"
+        },
+        "more": "+ altri {count}",
+        "dayLabel": "{weekday}, {day} {season}",
+        "details": {
+            "title": "{weekday}, {day} {season}",
+            "events": "Eventi",
+            "birthdays": "Compleanni",
+            "noEvents": "Nessun evento oggi.",
+            "noBirthdays": "Nessun compleanno oggi.",
+            "current": "Giorno attuale",
+            "close": "Chiudi"
+        },
+        "toast": {
+            "set": "Giorno attuale impostato su {day} {season}"
+        },
+        "cellEntries": "{count, plural, one {{amount} voce} other {{amount} voci}}",
+        "entries": {
+            "birthday": "Compleanno di {name}",
+            "range": "Giorni {start}-{end} di {season}",
+            "likes": "Gli piace: {food}"
+        }
+    }
+}

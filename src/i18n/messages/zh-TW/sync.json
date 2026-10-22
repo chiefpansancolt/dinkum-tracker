@@ -1,0 +1,234 @@
+{
+    "tab": {
+        "title": "雲端同步",
+        "description": "把你的存檔放在私人 GitHub 儲存庫中，並在各個裝置之間共用。"
+    },
+    "unavailable": "此版本不提供同步功能。",
+    "privacy": "你的資料會傳送到你自己 GitHub 帳號中的私人儲存庫。Gamerdex 沒有儲存資料的伺服器，應用程式也只能存取你選擇的那一個儲存庫。",
+    "repository": {
+        "title": "設定你的資料儲存庫",
+        "body": "你的資料會存放在 GitHub 帳號中名為 {name} 的私人儲存庫。Gamerdex Sync 只能存取那一個儲存庫。",
+        "checking": "正在尋找 {name}",
+        "checkFailed": "無法載入你的儲存庫。請檢查網路連線後再檢查一次。",
+        "found": "已找到 {fullName}",
+        "public": "儲存庫 {fullName} 是公開的。請在 GitHub 設定中將它改為私人，然後再檢查一次。公開的儲存庫無法使用，因為任何人都能讀取你的資料。",
+        "missing": "找不到儲存庫 {name}",
+        "steps": {
+            "create": "建立名為 {name} 的私人儲存庫。勾選「Add a README file」。",
+            "install": "只讓 Gamerdex Sync 存取該儲存庫。選擇「Only select repositories」，然後選取 {name}。",
+            "recheck": "回到這裡再檢查一次。"
+        },
+        "createButton": "建立儲存庫",
+        "installButton": "在 GitHub 上選擇儲存庫",
+        "recheckButton": "再檢查一次"
+    },
+    "connected": {
+        "title": "已連線",
+        "repository": "儲存庫",
+        "lastSync": "上次同步",
+        "never": "尚未同步",
+        "syncNow": "立即同步",
+        "signOut": "登出",
+        "signedOut": "已登出。此裝置上的資料維持不變。",
+        "storage": "儲存位置",
+        "folder": "資料夾 {name}",
+        "signInWith": "使用 {provider} 登入"
+    },
+    "status": {
+        "idle": "已同步",
+        "syncing": "同步中",
+        "offline": "離線",
+        "reauth": "請重新登入",
+        "needsChoice": "需要你的選擇",
+        "error": "同步失敗",
+        "signedOut": "未登入",
+        "needsRepository": "請選擇儲存庫",
+        "conflicts": "請檢視變更"
+    },
+    "error": {
+        "rateLimit": "GitHub 正在限制請求。幾分鐘後同步就會恢復。",
+        "notFound": "找不到儲存庫。請重新選擇。",
+        "server": "GitHub 回應不正確。請稍後再試。",
+        "data": "同步的資料無效，因此未做任何變更。",
+        "busy": "另一個裝置持續在變更資料。請稍後再試。",
+        "other": "發生問題。未做任何變更。",
+        "reauth": "你的登入已結束。請重新登入以繼續同步。",
+        "forbidden": "GitHub 拒絕存取該儲存庫。請確認 Gamerdex Sync 擁有 Contents 的讀寫權限，然後再同步一次。",
+        "httpStatus": "GitHub 回應 {status}。",
+        "notFoundFolder": "在 {provider} 中找不到檔案或資料夾。請再同步一次。",
+        "forbiddenFolder": "{provider} 拒絕存取。請重新登入，並允許存取 Gamerdex 建立的檔案。",
+        "httpStatusFolder": "{provider} 回應 {status}。"
+    },
+    "choice": {
+        "title": "此裝置和雲端都有資料",
+        "body": "這是此裝置的第一次同步。請選擇處理方式。在你做出選擇之前，不會刪除雲端上的任何內容。",
+        "counts": "此裝置：{local}。雲端：{cloud}。",
+        "merge": "合併兩邊",
+        "mergeHint": "保留兩邊的所有內容。等級較高者優先。",
+        "keepLocal": "保留此裝置",
+        "keepLocalHint": "用此裝置上的資料取代雲端資料。",
+        "keepCloud": "保留雲端",
+        "keepCloudHint": "用雲端資料取代此裝置上的資料。"
+    },
+    "conflicts": {
+        "title": "無法合併的變更",
+        "body": "兩個裝置變更了同一個值。目前保留雲端的值。選擇此裝置的值即可改用它。",
+        "cloudValue": "雲端",
+        "deviceValue": "此裝置",
+        "keepDevice": "使用此裝置的值",
+        "dismiss": "關閉",
+        "empty": "無",
+        "deletedEdited": "一個裝置移除了這一項，另一個裝置則修改了它。已保留修改後的版本。"
+    },
+    "callback": {
+        "title": "登入中",
+        "working": "正在完成登入",
+        "back": "返回設定",
+        "denied": "登入已取消。",
+        "state": "無法驗證登入。請從設定重新開始。",
+        "missing": "登入沒有傳回代碼。請從設定重新開始。",
+        "failed": "無法完成登入。請稍後再試。"
+    },
+    "playthroughCount": "{count, plural, other {{amount} 個存檔}}",
+    "provider": {
+        "github": {
+            "name": "GitHub",
+            "tile": "你擁有的私人儲存庫，名為 {name}。",
+            "badge": "適合開發者"
+        },
+        "google": {
+            "name": "Google Drive",
+            "tile": "你的 Drive 中一個可見的 Gamerdex 資料夾。Gamerdex 只看得到它自己建立的檔案。",
+            "badge": "推薦"
+        },
+        "dropbox": {
+            "name": "Dropbox",
+            "tile": "你的 Dropbox 「Apps」資料夾內的 Gamerdex 資料夾。Gamerdex 只看得到該資料夾。",
+            "badge": "僅限應用程式資料夾"
+        },
+        "microsoft": {
+            "name": "OneDrive",
+            "tile": "你的 OneDrive 「Apps」資料夾內的 Gamerdex 資料夾。Gamerdex 只看得到該資料夾。",
+            "badge": "個人帳號"
+        }
+    },
+    "connect": {
+        "title": "跨裝置同步",
+        "pill": "未連線",
+        "intro": "讓你的電腦和手機上的存檔保持一致。同步為選用功能，而且免費。請選擇副本要放在哪裡。",
+        "pickerLabel": "副本存放位置",
+        "panelTitle": "連線 {provider}",
+        "another": "登入前你還可以改選其他服務。",
+        "firstSync": "如果兩邊都已有資料，請在第一次同步時選擇要保留的內容。在你決定之前，不會取代任何資料。",
+        "google": {
+            "step1": "在此視窗中使用 Google 登入。",
+            "step2": "允許存取 Gamerdex 建立的檔案。應用程式看不到你的其他檔案。",
+            "button": "連線 Google Drive"
+        },
+        "github": {
+            "step1": "建立名為 {name} 的空白私人儲存庫。勾選「Add a README file」。",
+            "step2": "使用 GitHub 登入，然後只讓 Gamerdex Sync 存取該儲存庫。",
+            "button": "連線 GitHub"
+        },
+        "dropbox": {
+            "step1": "在此視窗中使用 Dropbox 登入。",
+            "step2": "允許存取 Gamerdex 應用程式資料夾。應用程式看不到你的其他檔案。",
+            "button": "連線 Dropbox"
+        },
+        "microsoft": {
+            "step1": "在此視窗中使用你的個人 Microsoft 帳號登入。",
+            "step2": "允許存取 Gamerdex 應用程式資料夾。應用程式看不到你的其他檔案。",
+            "button": "連線 OneDrive"
+        }
+    },
+    "how": {
+        "title": "同步的運作方式",
+        "one": "你的存檔會以一個檔案的形式存放在你自己的儲存空間，格式與備份檔案相同，另外還有一個記錄裝置清單的小檔案。",
+        "two": "Gamerdex 沒有儲存你資料的伺服器。你的瀏覽器會直接與你的儲存空間連線。",
+        "three": "已標記的項目和等級會保留任一裝置的變更，等級較高者優先。如果兩個裝置都變更了名稱或目前日期，則由你選擇要保留哪一個。",
+        "four": "每個裝置各自保留自己的使用中存檔。同步不會切換它。",
+        "five": "隨時都可以中斷連線。你的存檔會留在每個裝置上。"
+    },
+    "banner": {
+        "title": "{count, plural, other {{amount} 項變更需要你決定}}",
+        "body": "兩個裝置變更了同一個值。在你決定之前，會保留雲端的值。",
+        "review": "檢視",
+        "waiting": "第一次同步正在等你選擇。",
+        "choose": "選擇"
+    },
+    "playthroughs": {
+        "title": "存檔",
+        "thisDevice": "此裝置",
+        "cloud": "雲端，上次同步",
+        "notInCloud": "尚未上傳到雲端",
+        "review": "檢視",
+        "note": "刪除存檔後，下次同步時會從同步檔案中移除。",
+        "status": {
+            "synced": "已同步",
+            "changedHere": "此處已變更",
+            "conflict": "衝突",
+            "newHere": "此處新增"
+        },
+        "describe": "{season}第 {day} 天 · {percent}%"
+    },
+    "activity": {
+        "title": "近期同步活動",
+        "empty": "尚未同步任何內容。",
+        "connected": "已在此瀏覽器連線 {provider}。",
+        "uploaded": "已上傳此裝置的變更。",
+        "downloaded": "已下載雲端的變更。",
+        "merged": "已合併兩邊的變更。",
+        "conflicts": "{count, plural, other {{amount} 項變更需要你決定。}}",
+        "failed": "同步失敗。"
+    },
+    "settings": {
+        "title": "同步設定",
+        "auto": "自動同步",
+        "autoHint": "在追蹤器開啟時，以及每次變更後的幾秒內同步。",
+        "focus": "回到分頁時檢查變更",
+        "focusHint": "當你切回追蹤器時，拉取較新的雲端資料。",
+        "metered": "使用計量連線時等我決定",
+        "meteredHint": "瀏覽器回報為節省流量的連線時，跳過自動同步。「立即同步」仍可使用。"
+    },
+    "lives": {
+        "title": "你的資料存放位置",
+        "storage": "儲存空間",
+        "folder": "資料夾",
+        "dataFile": "資料檔案",
+        "metaFile": "中繼檔案",
+        "size": "大小",
+        "kb": "{amount} KB",
+        "note": "資料檔案的格式與備份檔案相同。中繼檔案記錄裝置清單，不含任何遊戲資料。你的登入資訊不會出現在這兩個檔案中。",
+        "googleNote": "Gamerdex 資料夾會顯示在你的 Drive 中。Gamerdex 只能開啟它自己建立的檔案。",
+        "githubNote": "請將儲存庫保持為私人。任何能開啟它的人都能讀取你的資料。",
+        "dropboxNote": "Gamerdex 資料夾位於你的 Dropbox「Apps」資料夾內。Gamerdex 只能開啟該資料夾。",
+        "microsoftNote": "Gamerdex 資料夾位於你的 OneDrive「Apps」資料夾內。Gamerdex 只能開啟該資料夾。"
+    },
+    "device": {
+        "title": "此裝置",
+        "name": "裝置名稱",
+        "nameHint": "同步檔案會以這個名稱顯示此裝置。重新命名後，會在下次同步時更新中繼檔案。",
+        "activePlaythrough": "使用中的存檔",
+        "noPlaythrough": "無",
+        "login": "同步登入",
+        "loginValue": "僅限此裝置",
+        "loginHint": "使用中的存檔由每個裝置各自決定，同步不會變更它。你的登入資訊只留在此裝置上，不會出現在已儲存的資料、備份檔案或同步檔案中。"
+    },
+    "disconnect": {
+        "title": "中斷連線",
+        "body": "停止此瀏覽器的同步。你的存檔會保留在此裝置和雲端。其他裝置會繼續同步。",
+        "button": "中斷 {provider} 連線",
+        "googleHint": "若要自行刪除雲端副本，請先中斷連線，再刪除 Google Drive 中的 Gamerdex 資料夾。",
+        "githubHint": "若要自行刪除雲端副本，請先中斷連線，再刪除儲存庫中的 Gamerdex 資料夾。",
+        "dropboxHint": "若要自行刪除雲端副本，請先中斷連線，再刪除 Dropbox「Apps」下的應用程式資料夾。",
+        "microsoftHint": "若要自行刪除雲端副本，請先中斷連線，再刪除 OneDrive「Apps」下的應用程式資料夾。"
+    },
+    "first": {
+        "thisDevice": "此裝置",
+        "cloud": "雲端",
+        "recommended": "推薦",
+        "later": "稍後決定",
+        "apply": "套用選擇",
+        "optionsLabel": "要保留的內容"
+    }
+}

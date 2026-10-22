@@ -1,0 +1,123 @@
+{
+    "common": {
+        "level": "Nivel {level}",
+        "levelCount": "Nivel {level}:",
+        "locked": "Completa antes el nivel anterior.",
+        "completeAll": "Completar todo",
+        "clearAll": "Borrar todo",
+        "requirement": "Requisito",
+        "requiredSkill": "Nivel de habilidad necesario",
+        "all": "Todos",
+        "collected": "Conseguidos",
+        "notCollected": "Por conseguir",
+        "clearFilters": "Borrar filtros",
+        "toast": {
+            "obtained": "{item}: nivel {level} obtenido",
+            "cleared": "{item}: {count, plural, one {{amount} nivel borrado} other {{amount} niveles borrados}}",
+            "allObtained": "{item}: todos los niveles obtenidos",
+            "allCleared": "{item}: todos los niveles borrados"
+        },
+        "empty": {
+            "title": "Ningún resultado de {things} con estos filtros",
+            "description": "Prueba con otro nombre o borra los filtros."
+        },
+        "permitPoints": "puntos de permiso"
+    },
+    "buildings": {
+        "title": "Edificios",
+        "subline": "{count} de {total} instalados · {percent}% · {name}",
+        "tiles": {
+            "installed": "Instalados",
+            "stillToInstall": "Por instalar",
+            "listed": "Edificios en la lista",
+            "of": "de {total}",
+            "breakdown": "{collectable} coleccionables · {movable} movibles · {reference} de referencia"
+        },
+        "filters": {
+            "deedType": "Tipo de escritura",
+            "npc": "PNJ",
+            "collected": "Conseguidos",
+            "search": "Buscar edificios por nombre...",
+            "sheetTitle": "Filtrar edificios",
+            "showing": "Mostrando {shown} de {total} edificios · Instalados {count}",
+            "apply": "Ver {count} edificios"
+        },
+        "card": {
+            "deed": "Escritura",
+            "npc": "PNJ",
+            "size": "Tamaño",
+            "buildTime": "Tiempo de obra",
+            "deedPrice": "Precio de la escritura",
+            "hours": "Horario",
+            "closed": "Cerrado",
+            "description": "Descripción",
+            "resources": "Recursos",
+            "resource": "{count} {name}"
+        },
+        "installed": "Instalado",
+        "nothingToInstall": "No hay nada que instalar para este tipo de escritura.",
+        "things": "edificios",
+        "toast": {
+            "installed": "{name} marcado como instalado",
+            "notInstalled": "{name} marcado como no instalado"
+        }
+    },
+    "licenses": {
+        "title": "Licencias",
+        "subline": "{count} de {total} niveles obtenidos · {percent}% · {name}",
+        "tiles": {
+            "levels": "Niveles obtenidos",
+            "complete": "Licencias completas",
+            "permit": "Puntos de permiso gastados",
+            "of": "de {total}",
+            "sentence": "Has gastado {amount} de los {total} puntos de permiso necesarios."
+        },
+        "filters": {
+            "category": "Categoría",
+            "collected": "Conseguidas",
+            "search": "Buscar licencias por nombre...",
+            "sheetTitle": "Filtrar licencias",
+            "showing": "Mostrando {shown} de {total} licencias · Niveles desbloqueados {count}",
+            "apply": "Ver {count} licencias"
+        },
+        "things": "licencias"
+    },
+    "milestones": {
+        "title": "Hitos",
+        "subline": "{count} de {total} niveles completados · {percent}% · {name}",
+        "tiles": {
+            "levels": "Niveles completados",
+            "complete": "Hitos completos",
+            "permit": "Puntos de permiso ganados",
+            "of": "de {total}",
+            "sentence": "Has ganado {amount} de los {total} puntos de permiso disponibles."
+        },
+        "filters": {
+            "category": "Categoría",
+            "allCategories": "Todas las categorías",
+            "collected": "Conseguidos",
+            "viewMode": "Modo de vista",
+            "grouped": "Agrupados por letra",
+            "all": "Todos los hitos",
+            "search": "Buscar hitos por nombre o descripción...",
+            "sheetTitle": "Filtrar hitos",
+            "showing": "Mostrando {shown} de {total} hitos · Niveles completados {count}",
+            "apply": "Ver {count} hitos"
+        },
+        "things": "hitos"
+    },
+    "skills": {
+        "title": "Habilidades",
+        "subline": "{skills} habilidades · {levels} niveles en total · Sin límite máximo · {name}",
+        "tiles": {
+            "total": "Niveles de habilidad en total",
+            "across": "en {count} habilidades",
+            "highest": "Habilidad más alta",
+            "atZero": "Habilidades en nivel 0",
+            "atZeroOf": "de {total}"
+        },
+        "level": "Nivel de habilidad",
+        "note": "Las licencias piden un nivel de habilidad en cada escalón. Mira <link>Licencias</link> para ver qué niveles te faltan.",
+        "toast": "{name} es ahora de nivel {level}"
+    }
+}

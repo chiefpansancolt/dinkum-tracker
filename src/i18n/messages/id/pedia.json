@@ -1,0 +1,85 @@
+{
+    "title": "Pedia",
+    "subline": "{done} dari {total} terkumpul · {percent}% · {name}",
+    "tabsLabel": "Bagian Pedia",
+    "tabs": {
+        "fish": "Ikan",
+        "bugs": "Serangga",
+        "critters": "Satwa kecil"
+    },
+    "nouns": {
+        "fish": "ikan",
+        "bugs": "serangga",
+        "critters": "satwa kecil"
+    },
+    "summary": {
+        "captured": "Tertangkap",
+        "donated": "Didonasikan ke museum",
+        "permit": "Poin izin diperoleh",
+        "of": "dari {total}"
+    },
+    "filters": {
+        "sheetTitle": "Filter {tab}",
+        "biome": "Bioma",
+        "rarity": "Kelangkaan",
+        "season": "Musim",
+        "time": "Waktu",
+        "collected": "Terkumpul",
+        "donated": "Didonasikan",
+        "allBiomes": "Semua bioma",
+        "allRarities": "Semua kelangkaan",
+        "allSeasons": "Semua musim",
+        "anyTime": "Kapan saja",
+        "all": "Semua",
+        "onlyCollected": "Terkumpul",
+        "notCollected": "Belum dikumpulkan",
+        "onlyDonated": "Didonasikan",
+        "notDonated": "Belum didonasikan",
+        "search": "Cari {tab} menurut nama",
+        "showing": "Menampilkan {shown} dari {total} {tab}",
+        "capturedCount": "Tertangkap {count}",
+        "donatedCount": "Didonasikan {count}",
+        "apply": "Tampilkan {count} {tab}"
+    },
+    "view": {
+        "label": "Tampilan",
+        "grid": "Kisi",
+        "list": "Daftar"
+    },
+    "card": {
+        "biome": "Bioma",
+        "seasons": "Musim",
+        "time": "Waktu",
+        "sell": "Harga jual",
+        "cooked": "Dimasak",
+        "cookedValue": "{price} · x{pieces}",
+        "status": "Status",
+        "missing": "Belum ada",
+        "caught": "Tertangkap",
+        "donated": "Didonasikan"
+    },
+    "table": {
+        "name": "Nama",
+        "rarity": "Kelangkaan",
+        "biome": "Bioma",
+        "seasons": "Musim",
+        "time": "Waktu",
+        "sell": "Jual",
+        "cooked": "Dimasak",
+        "status": "Status",
+        "caption": "{shown} dari {total} baris ditampilkan. Filter, kontrol status, dan level perdagangan yang sama berlaku di kedua tampilan."
+    },
+    "empty": {
+        "title": "Tidak ada {tab} yang cocok dengan filter ini",
+        "description": "Coba nama lain atau hapus filter.",
+        "clear": "Hapus filter"
+    },
+    "toast": {
+        "marked": "{name} ditandai sebagai {status}",
+        "statuses": {
+            "missing": "belum ada",
+            "caught": "tertangkap",
+            "donated": "didonasikan"
+        }
+    }
+}

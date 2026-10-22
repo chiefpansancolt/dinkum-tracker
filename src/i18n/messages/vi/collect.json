@@ -1,0 +1,226 @@
+{
+    "toast": {
+        "marked": "Đã đánh dấu {name} là {state}",
+        "collected": "đã thu thập",
+        "notCollected": "chưa thu thập",
+        "unlocked": "đã mở khóa",
+        "locked": "đã khóa"
+    },
+    "filters": {
+        "search": "Tìm {things} theo tên...",
+        "sheetTitle": "Lọc {things}",
+        "showingCollected": "Hiển thị {shown} trên {total} {things} · Đã thu thập {count}",
+        "showingUnlocked": "Hiển thị {shown} trên {total} {things} · Đã mở khóa {count}",
+        "apply": "Xem {count} {things}",
+        "all": "Tất cả",
+        "collected": "Đã thu thập",
+        "notCollected": "Chưa thu thập",
+        "unlocked": "Đã mở khóa",
+        "notUnlocked": "Chưa mở khóa",
+        "source": "Nguồn",
+        "allSources": "Mọi nguồn"
+    },
+    "empty": {
+        "title": "Không có {things} nào khớp bộ lọc",
+        "description": "Hãy thử tên khác hoặc xóa bộ lọc.",
+        "clear": "Xóa bộ lọc"
+    },
+    "list": {
+        "got": "Đã có",
+        "name": "Tên",
+        "caption": "Đã tải {shown} trên {total} dòng. Cuộn xuống để tải thêm.",
+        "prices": "Giá tính bằng dinks"
+    },
+    "card": {
+        "collected": "Đã thu thập",
+        "markCollected": "Đánh dấu đã thu thập",
+        "unlocked": "Đã mở khóa",
+        "sellPrice": "Giá bán",
+        "buyPrice": "Giá mua",
+        "source": "Nguồn",
+        "none": "–"
+    },
+    "gear": {
+        "title": "Trang bị",
+        "subline": "{count} trên {total} đã thu thập · {percent}% · {name}",
+        "tabsLabel": "Các mục trang bị",
+        "tabs": {
+            "books": "Sách",
+            "cassettes": "Băng cassette",
+            "tools": "Dụng cụ",
+            "weapons": "Vũ khí",
+            "equipment": "Thiết bị",
+            "vehicles": "Phương tiện"
+        },
+        "things": {
+            "books": "sách",
+            "cassettes": "băng cassette",
+            "tools": "dụng cụ",
+            "weapons": "vũ khí",
+            "equipment": "thiết bị",
+            "vehicles": "phương tiện"
+        },
+        "tiles": {
+            "collected": "Đã thu thập",
+            "of": "trên {total}",
+            "franklyn": "Franklyn mở khóa",
+            "craftable": "Chế tạo được",
+            "highDamage": "Sát thương cao (20+)"
+        },
+        "filters": {
+            "license": "Giấy phép",
+            "allLicenses": "Mọi giấy phép",
+            "purchaseType": "Hình thức mua",
+            "purchasable": "Mua được",
+            "dinks": "Dinks",
+            "permitPoints": "Điểm giấy phép",
+            "damage": "Sát thương",
+            "high": "Cao (20+)",
+            "medium": "Trung bình (10 đến 19)",
+            "low": "Thấp (dưới 10)",
+            "allDamage": "Mọi mức sát thương",
+            "requirement": "Loại yêu cầu",
+            "allRequirements": "Mọi loại yêu cầu",
+            "allPurchaseTypes": "Tất cả"
+        },
+        "card": {
+            "craftingRecipe": "Công thức chế tạo",
+            "license": "Giấy phép",
+            "licenseLevel": "Cấp giấy phép săn bắn",
+            "source": "Nguồn",
+            "damage": "Sát thương",
+            "unlocksAfter": "Mở khóa sau",
+            "shinyDiscs": "{count} Shiny Discs",
+            "berkonium": "{count} Berkonium Ore",
+            "ingredients": "Nguyên liệu",
+            "resources": "Tài nguyên",
+            "requirement": "Cấp yêu cầu",
+            "compatibleWith": "Tương thích với",
+            "windmill": "Cối xay gió",
+            "solarPanel": "Tấm pin mặt trời",
+            "acquiredFrom": "Nhận được từ",
+            "requirements": "Yêu cầu",
+            "buyPrice": "Giá mua",
+            "sellPrice": "Giá bán",
+            "dinks": "{amount} Dinks",
+            "permitPoints": "{count, plural, other {{amount} điểm giấy phép}}",
+            "ingredient": "{count}x {name}",
+            "none": "Không có",
+            "requirementLevel": "Cấp {type}"
+        }
+    },
+    "recipes": {
+        "title": "Công thức",
+        "subline": "{count} trên {total} đã mở khóa · {percent}% · {name}",
+        "tabsLabel": "Các mục công thức",
+        "tabs": {
+            "cooking": "Nấu ăn",
+            "crafting": "Chế tạo",
+            "signWriting": "Viết biển"
+        },
+        "things": {
+            "cooking": "công thức nấu ăn",
+            "crafting": "công thức chế tạo",
+            "signWriting": "công thức viết biển"
+        },
+        "tiles": {
+            "unlocked": "Đã mở khóa",
+            "of": "trên {total}",
+            "withBuffs": "Có hiệu ứng",
+            "vendors": "Do Sheila, Ted hoặc Jimmy bán",
+            "recipes": "Công thức"
+        },
+        "filters": {
+            "location": "Nơi nấu ăn",
+            "allLocations": "Mọi địa điểm",
+            "unlocked": "Đã mở khóa",
+            "sources": "Nguồn",
+            "allSources": "Mọi nguồn",
+            "buffs": "Hiệu ứng",
+            "buffsWithCount": "Hiệu ứng ({count})"
+        },
+        "buffs": {
+            "title": "Lọc theo hiệu ứng",
+            "match": "Khớp",
+            "any": "BẤT KỲ",
+            "all": "TẤT CẢ",
+            "clear": "Xóa lựa chọn",
+            "selected": "Đã chọn {count}",
+            "done": "Xong"
+        },
+        "card": {
+            "cookingLocation": "Nơi nấu ăn",
+            "buffs": "Hiệu ứng",
+            "duration": "{minutes, plural, other {{amount} phút}}",
+            "sellPrice": "Giá bán",
+            "sheilas": "Của Sheila",
+            "teds": "Của Ted",
+            "jimmys": "Của Jimmy",
+            "resources": "Tài nguyên",
+            "option": "Lựa chọn {n}",
+            "ingredient": "{count}x {name}",
+            "source": "Nguồn",
+            "unlocked": "Đã mở khóa",
+            "varies": "Thay đổi",
+            "output": "x{count}"
+        }
+    },
+    "wardrobe": {
+        "title": "Tủ đồ và nhà",
+        "subline": "{count} trên {total} đã thu thập · {percent}% · {name}",
+        "tabsLabel": "Các mục tủ đồ",
+        "tabs": {
+            "clothing": "Quần áo",
+            "furniture": "Nội thất",
+            "decorations": "Đồ trang trí"
+        },
+        "things": {
+            "clothing": "món quần áo",
+            "furniture": "nội thất",
+            "decorations": "đồ trang trí"
+        },
+        "progress": {
+            "clothing": "Tiến trình theo vị trí · chọn một ô để lọc",
+            "furniture": "Tiến trình theo bộ · chọn một ô để lọc",
+            "decorations": "Tiến trình theo danh mục · chọn một ô để lọc"
+        },
+        "filters": {
+            "slot": "Vị trí",
+            "type": "Loại",
+            "set": "Bộ",
+            "allSets": "Mọi bộ",
+            "catalogue": "Catalogue",
+            "melvins": "Catalogue của Melvin",
+            "notMelvins": "Không có trong Catalogue",
+            "category": "Danh mục",
+            "allCategories": "Mọi danh mục",
+            "source": "Nguồn",
+            "allSources": "Mọi nguồn",
+            "all": "Tất cả"
+        },
+        "list": {
+            "type": "Loại",
+            "slot": "Vị trí",
+            "set": "Bộ",
+            "price": "Giá",
+            "sell": "Bán",
+            "availableAt": "Có tại",
+            "catalogue": "Catalogue",
+            "category": "Danh mục",
+            "source": "Nguồn",
+            "buy": "Mua"
+        },
+        "card": {
+            "slot": "Vị trí",
+            "set": "Bộ",
+            "price": "Giá",
+            "sellPrice": "Giá bán",
+            "availableAt": "Có tại",
+            "cataloguePrice": "Giá trong Catalogue",
+            "source": "Nguồn",
+            "buyPrice": "Giá mua",
+            "category": "Danh mục"
+        },
+        "shop": "Cửa hàng của Clover"
+    }
+}

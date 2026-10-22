@@ -1,0 +1,8 @@
+{
+    "saveFailed": {
+        "title": "No guardado",
+        "message": "El navegador no pudo almacenar tus datos. Exporta una copia de seguridad para no perder tus cambios.",
+        "exportBackup": "Exportar copia"
+    },
+    "undo": "Deshacer"
+}

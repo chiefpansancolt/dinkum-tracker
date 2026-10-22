@@ -1,0 +1,70 @@
+{
+    "breakdown": {
+        "title": "Détail des objets",
+        "subline": "Quelles ressources entrent dans quels objets · {count} ressources",
+        "tiles": {
+            "resources": "Ressources",
+            "resourcesCaption": "utilisées dans les recettes et les constructions",
+            "common": "Courantes, utilisées dans 3 objets ou plus",
+            "of": "sur {total}",
+            "mostUsed": "La plus utilisée",
+            "items": "{count, plural, one {{amount} objet} other {{amount} objets}}"
+        },
+        "search": "Rechercher",
+        "searchPlaceholder": "Rechercher une ressource par nom",
+        "sortBy": "Trier par",
+        "sortName": "Nom (A-Z)",
+        "sortUsage": "Nombre d’usages",
+        "filter": "Filtrer",
+        "filterWithCount": "Filtrer ({count})",
+        "commonOnly": "Ressources courantes seulement (utilisées dans 3 objets ou plus)",
+        "showing": "Affichage de {shown} sur {total} ressources",
+        "notes": {
+            "categories": " (filtré par {count, plural, one {{amount} catégorie} other {{amount} catégories}})",
+            "types": " (filtré par {count, plural, one {{amount} type} other {{amount} types}})",
+            "common": " (ressources courantes seulement)"
+        },
+        "panel": {
+            "title": "Filtrer les ressources",
+            "byCategory": "Filtrer par catégorie",
+            "byType": "Filtrer par type de ressource",
+            "clear": "Effacer la sélection",
+            "itemCount": "{count, plural, one {{amount} objet} other {{amount} objets}}",
+            "done": "Afficher {count} ressources",
+            "option": "{name}, {items}"
+        },
+        "card": {
+            "usedIn": "{count, plural, one {Utilisée dans {amount} objet} other {Utilisée dans {amount} objets}}",
+            "categories": "Catégories",
+            "usedInList": "Utilisée dans",
+            "showMore": "Afficher {count} de plus...",
+            "showLess": "Afficher moins"
+        },
+        "empty": {
+            "title": "Aucune ressource ne correspond à ces filtres",
+            "description": "Essayez un autre nom ou effacez la sélection.",
+            "clear": "Effacer la sélection"
+        }
+    },
+    "weight": {
+        "title": "Calculateur de poids",
+        "subline": "Estimez le prix d’une trouvaille lourde selon son poids · {count} objets",
+        "picker": "Choisir un objet",
+        "perKg": "{price} par kg",
+        "range": "{min} - {max} kg",
+        "rangeLine": "Plage de poids : {min} kg - {max} kg",
+        "weight": "Poids : {weight} kg",
+        "slider": "Poids en kg",
+        "minus": "Diminuer le poids de {step} kg",
+        "plus": "Augmenter le poids de {step} kg",
+        "min": "{min} kg",
+        "max": "{max} kg",
+        "stepNote": "Pas de {step} kg. Choisir un autre objet remet le poids à son minimum.",
+        "total": "Prix total",
+        "dinks": "dinks",
+        "formula": "{weight} kg × {price} par kg = {total}",
+        "rounded": "Arrondi au dink le plus proche.",
+        "atMin": "Prix au poids minimum",
+        "atMax": "Prix au poids maximum"
+    }
+}

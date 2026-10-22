@@ -1,0 +1,78 @@
+{
+    "header": {
+        "features": "功能",
+        "track": "可追踪内容",
+        "view": "查看我的存档",
+        "new": "新建存档",
+        "menu": "菜单",
+        "menuOpen": "打开菜单",
+        "menuClose": "关闭菜单",
+        "nav": "主导航"
+    },
+    "hero": {
+        "eyebrow": "追踪你的进度",
+        "title": "Dinkum Tracker",
+        "intro": "为你的 Dinkum 冒险打造的全面追踪应用。管理多个存档，记录收集情况，在一处查看全部进度。所有内容都保存在浏览器中，也可以同步到你自己的云存储。",
+        "view": "查看我的存档",
+        "new": "开始新冒险",
+        "imageAlt": "Dinkum 游戏画面"
+    },
+    "counts": {
+        "title": "追踪你的完整收藏",
+        "intro": "按真实的物品数量设计，帮你管理 Dinkum 旅程的方方面面。",
+        "pedia": "图鉴",
+        "npcs": "NPC",
+        "licenses": "执照",
+        "milestones": "里程碑",
+        "buildings": "建筑",
+        "gear": "装备与配备",
+        "recipes": "配方",
+        "clothing": "服装"
+    },
+    "everything": {
+        "title": "全面追踪",
+        "intro": "Dinkum 通关所需的全部工具",
+        "imageAlt": "Dinkum Tracker 应用",
+        "closing": "从收集昆虫到经营与 NPC 的关系，Dinkum Tracker 帮你掌握游戏中的一切。",
+        "pedia": {
+            "title": "图鉴收集",
+            "text": "追踪所有鱼类、昆虫和小动物，按季节、地点和时段查看。记录博物馆捐赠和收集进度。"
+        },
+        "npcs": {
+            "title": "NPC 关系",
+            "text": "记录你与小镇居民的友谊、礼物喜好，以及全部 {count} 位 NPC 的好感度心数。"
+        },
+        "calendar": {
+            "title": "日历活动",
+            "text": "记下重要日期、生日和季节活动。再也不会错过 Dinkum 小镇的任何节日和特别场合。"
+        }
+    },
+    "needs": {
+        "title": "你需要的一切",
+        "intro": "记录 Dinkum 冒险中所有重要的细节。",
+        "milestones": {
+            "title": "里程碑与执照",
+            "one": "追踪 {count} 个游戏里程碑的完成情况",
+            "two": "管理所有执照及其升级等级",
+            "three": "查看许可点数进度和要求"
+        },
+        "recipes": {
+            "title": "配方与制作",
+            "one": "追踪所有烹饪配方及其食材",
+            "two": "记录制作配方和所需资源",
+            "three": "管理工具、武器和配备"
+        },
+        "collections": {
+            "title": "收藏与资源",
+            "one": "整理所有服装和家具",
+            "two": "追踪所有资源及其用途",
+            "three": "管理建筑项目和地契"
+        }
+    },
+    "cta": {
+        "title": "准备好开始追踪了吗？",
+        "text": "今天就开始整理你的 Dinkum 冒险，再也不用担心丢失进度。",
+        "create": "新建存档",
+        "existing": "查看已有存档"
+    }
+}

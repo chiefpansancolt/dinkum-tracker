@@ -1,0 +1,98 @@
+{
+    "npcs": {
+        "title": "NPC",
+        "subline": "Сердец: {hearts} из {total} · NPC: {count} · {name}",
+        "tiles": {
+            "total": "Всего сердец",
+            "full": "Полные сердца",
+            "met": "Знакомы",
+            "of": "из {total}",
+            "ofNpcs": "из {total} NPC"
+        },
+        "filters": {
+            "search": "Поиск NPC по имени",
+            "sheetTitle": "Фильтр NPC",
+            "relationship": "Отношения",
+            "residence": "Живёт на острове",
+            "all": "Все",
+            "none": "Пока без сердец",
+            "progress": "В процессе",
+            "full": "Полные сердца",
+            "canMoveIn": "Может переехать",
+            "visitors": "Только гости",
+            "showing": "Показано {shown} из {total} NPC · Полные сердца {full} · Знакомы {met}",
+            "apply": "Показать NPC: {count}"
+        },
+        "hint": "Нажмите на сердце, чтобы выбрать значение. Нажмите на последнее полное сердце, чтобы убрать его. Кнопки -{step} и +{step} меняют значение на четверть.",
+        "things": "NPC",
+        "card": {
+            "full": "Полно",
+            "requirements": "Требования",
+            "visit": "Визит",
+            "moveIn": "Переезд",
+            "food": "Предпочтения в еде",
+            "likes": "Нравится",
+            "dislikes": "Не нравится",
+            "none": "Нет"
+        },
+        "hearts": {
+            "label": "Сердца: {name}",
+            "setTo": "{name}: поставить {count, plural, one {{amount} сердце} few {{amount} сердца} many {{amount} сердец} other {{amount} сердца}}",
+            "less": "- {step}",
+            "more": "+ {step}",
+            "lessLabel": "Уменьшить сердца на {step}",
+            "moreLabel": "Увеличить сердца на {step}",
+            "readout": "{hearts} / {max}"
+        },
+        "toast": {
+            "set": "{name}: сердец {hearts} из 5"
+        },
+        "empty": {
+            "title": "Нет NPC по этим фильтрам",
+            "description": "Попробуйте другое имя или сбросьте фильтры.",
+            "clear": "Сбросить фильтры"
+        }
+    },
+    "calendar": {
+        "title": "Календарь",
+        "subline": "{season} · событий: {events} · дней рождения: {birthdays} · {name}",
+        "previous": "Прошлый сезон",
+        "next": "Следующий сезон",
+        "today": "Сегодня",
+        "legend": {
+            "event": "Событие",
+            "birthday": "День рождения",
+            "current": "Текущий день"
+        },
+        "alert": "Текущий день: {day}, {season}. Нажмите на любой день, чтобы сделать его текущим. Изменения сохраняются сразу.",
+        "weekdays": {
+            "Sunday": "Вс",
+            "Monday": "Пн",
+            "Tuesday": "Вт",
+            "Wednesday": "Ср",
+            "Thursday": "Чт",
+            "Friday": "Пт",
+            "Saturday": "Сб"
+        },
+        "more": "Ещё {count}",
+        "dayLabel": "{weekday}, {day}, {season}",
+        "details": {
+            "title": "{weekday}, {day}, {season}",
+            "events": "События",
+            "birthdays": "Дни рождения",
+            "noEvents": "Сегодня событий нет.",
+            "noBirthdays": "Сегодня дней рождения нет.",
+            "current": "Текущий день",
+            "close": "Закрыть"
+        },
+        "toast": {
+            "set": "Текущий день: {day}, {season}"
+        },
+        "cellEntries": "{count, plural, one {{amount} запись} few {{amount} записи} many {{amount} записей} other {{amount} записи}}",
+        "entries": {
+            "birthday": "День рождения: {name}",
+            "range": "Дни {start}-{end}, {season}",
+            "likes": "Нравится: {food}"
+        }
+    }
+}

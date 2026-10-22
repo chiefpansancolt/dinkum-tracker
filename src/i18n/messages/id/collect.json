@@ -1,0 +1,226 @@
+{
+    "toast": {
+        "marked": "{name} ditandai {state}",
+        "collected": "Terkumpul",
+        "notCollected": "Belum terkumpul",
+        "unlocked": "Terbuka",
+        "locked": "Terkunci"
+    },
+    "filters": {
+        "search": "Cari {things} menurut nama...",
+        "sheetTitle": "Filter {things}",
+        "showingCollected": "Menampilkan {shown} dari {total} {things} · Terkumpul {count}",
+        "showingUnlocked": "Menampilkan {shown} dari {total} {things} · Terbuka {count}",
+        "apply": "Tampilkan {count} {things}",
+        "all": "Semua",
+        "collected": "Terkumpul",
+        "notCollected": "Belum dikumpulkan",
+        "unlocked": "Terbuka",
+        "notUnlocked": "Belum dibuka",
+        "source": "Sumber",
+        "allSources": "Semua sumber"
+    },
+    "empty": {
+        "title": "Tidak ada {things} yang cocok dengan filter ini",
+        "description": "Coba nama lain atau hapus filter.",
+        "clear": "Hapus filter"
+    },
+    "list": {
+        "got": "Dapat",
+        "name": "Nama",
+        "caption": "{shown} dari {total} baris dimuat. Baris lain dimuat saat kamu menggulir.",
+        "prices": "Harga dalam dinks"
+    },
+    "card": {
+        "collected": "Terkumpul",
+        "markCollected": "Tandai terkumpul",
+        "unlocked": "Terbuka",
+        "sellPrice": "Harga jual",
+        "buyPrice": "Harga beli",
+        "source": "Sumber",
+        "none": "–"
+    },
+    "gear": {
+        "title": "Perlengkapan",
+        "subline": "{count} dari {total} terkumpul · {percent}% · {name}",
+        "tabsLabel": "Bagian perlengkapan",
+        "tabs": {
+            "books": "Buku",
+            "cassettes": "Kaset",
+            "tools": "Alat",
+            "weapons": "Senjata",
+            "equipment": "Peralatan",
+            "vehicles": "Kendaraan"
+        },
+        "things": {
+            "books": "buku",
+            "cassettes": "kaset",
+            "tools": "alat",
+            "weapons": "senjata",
+            "equipment": "peralatan",
+            "vehicles": "kendaraan"
+        },
+        "tiles": {
+            "collected": "Terkumpul",
+            "of": "dari {total}",
+            "franklyn": "Dibuka oleh Franklyn",
+            "craftable": "Bisa dibuat",
+            "highDamage": "Damage tinggi (20+)"
+        },
+        "filters": {
+            "license": "Lisensi",
+            "allLicenses": "Semua lisensi",
+            "purchaseType": "Jenis pembelian",
+            "purchasable": "Bisa dibeli",
+            "dinks": "Dinks",
+            "permitPoints": "Poin izin",
+            "damage": "Damage",
+            "high": "Tinggi (20+)",
+            "medium": "Sedang (10 sampai 19)",
+            "low": "Rendah (di bawah 10)",
+            "allDamage": "Semua damage",
+            "requirement": "Jenis syarat",
+            "allRequirements": "Semua jenis syarat",
+            "allPurchaseTypes": "Semua"
+        },
+        "card": {
+            "craftingRecipe": "Resep kerajinan",
+            "license": "Lisensi",
+            "licenseLevel": "Level lisensi berburu",
+            "source": "Sumber",
+            "damage": "Damage",
+            "unlocksAfter": "Terbuka setelah",
+            "shinyDiscs": "{count} Shiny Discs",
+            "berkonium": "{count} Berkonium Ore",
+            "ingredients": "Bahan",
+            "resources": "Sumber daya",
+            "requirement": "Level syarat",
+            "compatibleWith": "Cocok dengan",
+            "windmill": "Kincir angin",
+            "solarPanel": "Panel surya",
+            "acquiredFrom": "Didapat dari",
+            "requirements": "Syarat",
+            "buyPrice": "Harga beli",
+            "sellPrice": "Harga jual",
+            "dinks": "{amount} Dinks",
+            "permitPoints": "{count, plural, other {{amount} poin izin}}",
+            "ingredient": "{count}x {name}",
+            "none": "Tidak ada",
+            "requirementLevel": "Level {type}"
+        }
+    },
+    "recipes": {
+        "title": "Resep",
+        "subline": "{count} dari {total} terbuka · {percent}% · {name}",
+        "tabsLabel": "Bagian resep",
+        "tabs": {
+            "cooking": "Memasak",
+            "crafting": "Kerajinan",
+            "signWriting": "Tulisan papan"
+        },
+        "things": {
+            "cooking": "resep memasak",
+            "crafting": "resep kerajinan",
+            "signWriting": "resep tulisan papan"
+        },
+        "tiles": {
+            "unlocked": "Terbuka",
+            "of": "dari {total}",
+            "withBuffs": "Dengan buff",
+            "vendors": "Dijual oleh Sheila, Ted atau Jimmy",
+            "recipes": "Resep"
+        },
+        "filters": {
+            "location": "Tempat memasak",
+            "allLocations": "Semua tempat",
+            "unlocked": "Terbuka",
+            "sources": "Sumber",
+            "allSources": "Semua sumber",
+            "buffs": "Buff",
+            "buffsWithCount": "Buff ({count})"
+        },
+        "buffs": {
+            "title": "Filter menurut buff",
+            "match": "Cocok dengan",
+            "any": "SALAH SATU",
+            "all": "SEMUA",
+            "clear": "Hapus pilihan",
+            "selected": "{count} dipilih",
+            "done": "Selesai"
+        },
+        "card": {
+            "cookingLocation": "Tempat memasak",
+            "buffs": "Buff",
+            "duration": "{minutes, plural, other {{amount} mnt}}",
+            "sellPrice": "Harga jual",
+            "sheilas": "Sheila",
+            "teds": "Ted",
+            "jimmys": "Jimmy",
+            "resources": "Sumber daya",
+            "option": "Opsi {n}",
+            "ingredient": "{count}x {name}",
+            "source": "Sumber",
+            "unlocked": "Terbuka",
+            "varies": "Bervariasi",
+            "output": "x{count}"
+        }
+    },
+    "wardrobe": {
+        "title": "Lemari dan rumah",
+        "subline": "{count} dari {total} terkumpul · {percent}% · {name}",
+        "tabsLabel": "Bagian lemari",
+        "tabs": {
+            "clothing": "Pakaian",
+            "furniture": "Perabot",
+            "decorations": "Dekorasi"
+        },
+        "things": {
+            "clothing": "pakaian",
+            "furniture": "perabot",
+            "decorations": "dekorasi"
+        },
+        "progress": {
+            "clothing": "Progres menurut slot · pilih kotak untuk memfilter",
+            "furniture": "Progres menurut set · pilih kotak untuk memfilter",
+            "decorations": "Progres menurut kategori · pilih kotak untuk memfilter"
+        },
+        "filters": {
+            "slot": "Slot",
+            "type": "Jenis",
+            "set": "Set",
+            "allSets": "Semua set",
+            "catalogue": "Katalog",
+            "melvins": "Katalog Melvin",
+            "notMelvins": "Tidak ada di katalog",
+            "category": "Kategori",
+            "allCategories": "Semua kategori",
+            "source": "Sumber",
+            "allSources": "Semua sumber",
+            "all": "Semua"
+        },
+        "list": {
+            "type": "Jenis",
+            "slot": "Slot",
+            "set": "Set",
+            "price": "Harga",
+            "sell": "Jual",
+            "availableAt": "Tersedia di",
+            "catalogue": "Katalog",
+            "category": "Kategori",
+            "source": "Sumber",
+            "buy": "Beli"
+        },
+        "card": {
+            "slot": "Slot",
+            "set": "Set",
+            "price": "Harga",
+            "sellPrice": "Harga jual",
+            "availableAt": "Tersedia di",
+            "cataloguePrice": "Harga katalog",
+            "source": "Sumber",
+            "buyPrice": "Harga beli",
+            "category": "Kategori"
+        },
+        "shop": "Toko Clover"
+    }
+}

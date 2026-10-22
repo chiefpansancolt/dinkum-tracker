@@ -1,0 +1,91 @@
+{
+    "buffs": {
+        "attackLevel": "攻擊",
+        "charged": "充能",
+        "coolLevel": "涼爽",
+        "defenseLevel": "防禦",
+        "diligent": "勤奮",
+        "experienceLevel": "經驗",
+        "fastHealthTickSpeedLevel": "快速生命跳動速度",
+        "fishLevel": "釣魚",
+        "foragingLevel": "採集",
+        "healthMax": "生命上限",
+        "healthRegenRate": "生命恢復",
+        "length": "持續時間",
+        "miningLevel": "採礦",
+        "sleepless": "不眠",
+        "speedLevel": "速度",
+        "staminaMax": "體力上限",
+        "staminaRegenRate": "體力恢復",
+        "swimmingLevel": "游泳"
+    },
+    "categories": {
+        "buildings": "建築",
+        "tools": "工具",
+        "weapons": "武器",
+        "equipment": "裝備",
+        "vehicles": "載具",
+        "craftingRecipes": "製作配方",
+        "cookingRecipes": "烹飪配方",
+        "signWritingRecipes": "招牌書寫配方",
+        "otherCraftables": "其他可製作物"
+    },
+    "resourceTypes": {
+        "fish": "魚類",
+        "critter": "小動物",
+        "bug": "昆蟲",
+        "relic": "古物",
+        "crop": "作物",
+        "foragable": "採集物",
+        "animalProduct": "動物產品",
+        "paint": "顏料",
+        "mineral": "礦物",
+        "craftable": "可製作物",
+        "trophy": "獎盃",
+        "seed": "種子",
+        "flower": "花卉",
+        "resource": "資源"
+    },
+    "daily": {
+        "dayOneMilestones": "第一天",
+        "travelMilestones": "旅行",
+        "npcMilestones": "NPC",
+        "fishingMilestones": "釣魚",
+        "farmingMilestones": "農耕",
+        "foragingMilestones": "採集",
+        "loggingMilestones": "伐木",
+        "miningMilestones": "採礦",
+        "excavationMilestones": "挖掘",
+        "bugCatchingMilestones": "捉蟲",
+        "craftingMilestones": "製作",
+        "huntingMilestones": "狩獵",
+        "trappingMilestones": "設陷阱",
+        "dinksMilestones": "Dinks"
+    },
+    "animalTypes": {
+        "Wild Animal": "野生動物",
+        "Farm Animal": "農場動物",
+        "Tammed Animal": "馴服動物"
+    },
+    "temperaments": {
+        "Passive": "溫和",
+        "Neutral": "中立",
+        "Aggressive": "好鬥"
+    },
+    "seasons": {
+        "Spring": "春季",
+        "Summer": "夏季",
+        "Autumn": "秋季",
+        "Winter": "冬季",
+        "All": "全部"
+    },
+    "weekdays": {
+        "Sunday": "星期日",
+        "Monday": "星期一",
+        "Tuesday": "星期二",
+        "Wednesday": "星期三",
+        "Thursday": "星期四",
+        "Friday": "星期五",
+        "Saturday": "星期六"
+    }
+}

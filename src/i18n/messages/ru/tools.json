@@ -1,0 +1,70 @@
+{
+    "breakdown": {
+        "title": "Разбор предметов",
+        "subline": "Какие ресурсы идут в какие предметы · ресурсов: {count}",
+        "tiles": {
+            "resources": "Ресурсы",
+            "resourcesCaption": "используются в рецептах и постройках",
+            "common": "Частые, в 3+ предметах",
+            "of": "из {total}",
+            "mostUsed": "Чаще всего",
+            "items": "{count, plural, one {{amount} предмет} few {{amount} предмета} many {{amount} предметов} other {{amount} предмета}}"
+        },
+        "search": "Поиск",
+        "searchPlaceholder": "Поиск ресурсов по названию",
+        "sortBy": "Сортировка",
+        "sortName": "Название (А-Я)",
+        "sortUsage": "Частота использования",
+        "filter": "Фильтр",
+        "filterWithCount": "Фильтр ({count})",
+        "commonOnly": "Только частые ресурсы (в 3+ предметах)",
+        "showing": "Показано {shown} из {total} ресурсов",
+        "notes": {
+            "categories": " (фильтр: {count, plural, one {{amount} категория} few {{amount} категории} many {{amount} категорий} other {{amount} категории}})",
+            "types": " (фильтр: {count, plural, one {{amount} тип} few {{amount} типа} many {{amount} типов} other {{amount} типа}})",
+            "common": " (только частые ресурсы)"
+        },
+        "panel": {
+            "title": "Фильтр ресурсов",
+            "byCategory": "По категории",
+            "byType": "По типу ресурса",
+            "clear": "Сбросить выбор",
+            "itemCount": "{count, plural, one {{amount} предмет} few {{amount} предмета} many {{amount} предметов} other {{amount} предмета}}",
+            "done": "Показать ресурсы: {count}",
+            "option": "{name}, {items}"
+        },
+        "card": {
+            "usedIn": "{count, plural, one {Используется в {amount} предмете} few {Используется в {amount} предметах} many {Используется в {amount} предметах} other {Используется в {amount} предмета}}",
+            "categories": "Категории",
+            "usedInList": "Используется в",
+            "showMore": "Показать ещё {count}...",
+            "showLess": "Свернуть"
+        },
+        "empty": {
+            "title": "Нет ресурсов по этим фильтрам",
+            "description": "Попробуйте другое название или сбросьте выбор.",
+            "clear": "Сбросить выбор"
+        }
+    },
+    "weight": {
+        "title": "Калькулятор веса",
+        "subline": "Цена тяжёлой находки по её весу · предметов: {count}",
+        "picker": "Выберите предмет",
+        "perKg": "{price} за кг",
+        "range": "{min} - {max} кг",
+        "rangeLine": "Диапазон веса: {min} кг - {max} кг",
+        "weight": "Вес: {weight} кг",
+        "slider": "Вес в кг",
+        "minus": "Уменьшить вес на {step} кг",
+        "plus": "Увеличить вес на {step} кг",
+        "min": "{min} кг",
+        "max": "{max} кг",
+        "stepNote": "Шаг {step} кг. При выборе другого предмета вес сбрасывается до минимума.",
+        "total": "Итоговая цена",
+        "dinks": "Dinks",
+        "formula": "{weight} кг × {price} за кг = {total}",
+        "rounded": "Округлено до ближайшего Dink.",
+        "atMin": "Цена при минимальном весе",
+        "atMax": "Цена при максимальном весе"
+    }
+}

@@ -1,0 +1,98 @@
+{
+    "npcs": {
+        "title": "NPCs",
+        "subline": "{hearts} de {total} corações · {count} NPCs · {name}",
+        "tiles": {
+            "total": "Total de corações",
+            "full": "Corações cheios",
+            "met": "Conhecidos até agora",
+            "of": "de {total}",
+            "ofNpcs": "de {total} NPCs"
+        },
+        "filters": {
+            "search": "Buscar NPCs por nome",
+            "sheetTitle": "Filtrar NPCs",
+            "relationship": "Relação",
+            "residence": "Mora na ilha",
+            "all": "Todos",
+            "none": "Sem corações ainda",
+            "progress": "Em andamento",
+            "full": "Corações cheios",
+            "canMoveIn": "Podem se mudar",
+            "visitors": "Só visitantes",
+            "showing": "Mostrando {shown} de {total} NPCs · Corações cheios {full} · Conhecidos {met}",
+            "apply": "Mostrar {count} NPCs"
+        },
+        "hint": "Clique em um coração para definir o valor. Clique no último coração cheio para desfazer. Use -{step} e +{step} para passos de um quarto.",
+        "things": "NPCs",
+        "card": {
+            "full": "Cheio",
+            "requirements": "Requisitos",
+            "visit": "Visita",
+            "moveIn": "Mudança",
+            "food": "Comidas preferidas",
+            "likes": "Gosta de",
+            "dislikes": "Não gosta de",
+            "none": "Nenhum"
+        },
+        "hearts": {
+            "label": "Corações de {name}",
+            "setTo": "Definir {name} com {count, plural, one {{amount} coração} other {{amount} corações}}",
+            "less": "- {step}",
+            "more": "+ {step}",
+            "lessLabel": "Diminuir corações em {step}",
+            "moreLabel": "Aumentar corações em {step}",
+            "readout": "{hearts} / {max}"
+        },
+        "toast": {
+            "set": "{name}: {hearts} de 5 corações"
+        },
+        "empty": {
+            "title": "Nenhum NPC corresponde a estes filtros",
+            "description": "Tente outro nome ou limpe os filtros.",
+            "clear": "Limpar filtros"
+        }
+    },
+    "calendar": {
+        "title": "Calendário",
+        "subline": "{season} · {events} eventos · {birthdays} aniversários · {name}",
+        "previous": "Estação anterior",
+        "next": "Próxima estação",
+        "today": "Hoje",
+        "legend": {
+            "event": "Evento",
+            "birthday": "Aniversário",
+            "current": "Dia atual"
+        },
+        "alert": "Dia atual: {day} de {season}. Clique em qualquer dia para defini-lo como dia atual. As alterações são salvas na hora.",
+        "weekdays": {
+            "Sunday": "Dom",
+            "Monday": "Seg",
+            "Tuesday": "Ter",
+            "Wednesday": "Qua",
+            "Thursday": "Qui",
+            "Friday": "Sex",
+            "Saturday": "Sáb"
+        },
+        "more": "+ {count} mais",
+        "dayLabel": "{weekday}, {day} de {season}",
+        "details": {
+            "title": "{weekday}, {day} de {season}",
+            "events": "Eventos",
+            "birthdays": "Aniversários",
+            "noEvents": "Nenhum evento hoje.",
+            "noBirthdays": "Nenhum aniversário hoje.",
+            "current": "Dia atual",
+            "close": "Fechar"
+        },
+        "toast": {
+            "set": "Dia atual definido como {day} de {season}"
+        },
+        "cellEntries": "{count, plural, one {{amount} item} other {{amount} itens}}",
+        "entries": {
+            "birthday": "Aniversário de {name}",
+            "range": "Dias {start}-{end} de {season}",
+            "likes": "Gosta de: {food}"
+        }
+    }
+}

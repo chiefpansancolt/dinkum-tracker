@@ -1,0 +1,116 @@
+{
+    "title": "Обзор",
+    "subline": "{done} из {total} предметов · {percent}% · {name}",
+    "view": "Открыть",
+    "headline": {
+        "label": "Общий прогресс",
+        "ofItems": "{done} из {total} предметов",
+        "groups": {
+            "track": "Учёт",
+            "progress": "Прогресс",
+            "collect": "Коллекции"
+        },
+        "groupOf": "{done} из {total}",
+        "note": "Знаменатель фиксирован: {total} предметов. Pedia {pedia}, NPC {npcs}, достижения {milestones}, лицензии {licenses}, навыки {skills}, постройки {buildings}, снаряжение {gear}, гардероб и дом {wardrobe}, рецепты {recipes}. Каждая категория считается с первого дня, поэтому процент не прыгает, когда вы открываете новую вкладку."
+    },
+    "skills": {
+        "title": "Навыки персонажа",
+        "level": "Уровень {level}",
+        "empty": "Навыков пока нет."
+    },
+    "licenses": {
+        "title": "Прогресс лицензий",
+        "obtained": "Получено лицензий",
+        "complete": "{count}/{total} готово",
+        "levels": "Уровни лицензий",
+        "levelsValue": "{count}/{total} · {percent}%",
+        "permit": "Потрачено очков разрешений",
+        "spent": "Потрачено: {percent}%"
+    },
+    "milestones": {
+        "title": "Прогресс достижений",
+        "overall": "Общий прогресс",
+        "complete": "{count}/{total} готово",
+        "levels": "Уровни",
+        "levelsValue": "{count}/{total} · {percent}%",
+        "permit": "Заработано очков разрешений",
+        "earned": "Заработано: {percent}%"
+    },
+    "pedia": {
+        "title": "Прогресс Pedia",
+        "overall": "Общий прогресс ({count}/{total})",
+        "donations": "Пожертвования музею ({count}/{total})",
+        "fish": "Рыба ({count}/{total})",
+        "bugs": "Насекомые ({count}/{total})",
+        "critters": "Зверьки ({count}/{total})",
+        "donated": "Передано ({count}/{total})",
+        "permit": "Заработано очков разрешений",
+        "earned": "Заработано: {percent}%"
+    },
+    "gear": {
+        "title": "Снаряжение и экипировка",
+        "overall": "Общий прогресс ({count}/{total})",
+        "books": "Книги ({count}/{total})",
+        "tools": "Инструменты ({count}/{total})",
+        "weapons": "Оружие ({count}/{total})",
+        "equipment": "Экипировка ({count}/{total})",
+        "vehicles": "Транспорт ({count}/{total})",
+        "cassettes": "Кассеты ({count}/{total})",
+        "names": {
+            "books": "Книги",
+            "tools": "Инструменты",
+            "weapons": "Оружие",
+            "equipment": "Экипировка",
+            "vehicles": "Транспорт",
+            "cassettes": "Кассеты"
+        },
+        "mostComplete": "Больше всего собрано",
+        "leastComplete": "Меньше всего собрано"
+    },
+    "buildings": {
+        "title": "Прогресс построек",
+        "overall": "Общий прогресс",
+        "complete": "{count}/{total} готово",
+        "houseUpgrades": "Улучшения дома",
+        "shops": "Магазины",
+        "town": "Постройки города",
+        "utility": "Хозяйственные постройки",
+        "mostExpensive": "Самые дорогие постройки",
+        "price": "{amount} Dinks"
+    },
+    "recipes": {
+        "title": "Коллекция рецептов",
+        "overall": "Общий прогресс ({count}/{total})",
+        "cooking": "Готовка ({count}/{total})",
+        "crafting": "Крафт ({count}/{total})",
+        "signWriting": "Вывески ({count}/{total})",
+        "names": {
+            "cooking": "Готовка",
+            "crafting": "Крафт",
+            "signWriting": "Вывески"
+        },
+        "mostComplete": "Больше всего собрано",
+        "leastComplete": "Меньше всего собрано"
+    },
+    "npcs": {
+        "title": "Отношения с NPC",
+        "total": "Всего NPC",
+        "friends": "Друзья",
+        "oneHeart": "1+ сердце",
+        "maxHearts": "Макс. сердец",
+        "avgHearts": "Сред. сердец",
+        "top": "Лучшие отношения",
+        "hearts": "{hearts, plural, one {{amount} сердце} few {{amount} сердца} many {{amount} сердец} other {{amount} сердца}}",
+        "empty": "Отношений с NPC пока нет."
+    },
+    "game": {
+        "title": "Об игре",
+        "calendar": "Календарь игры",
+        "date": "День {day}, {season}",
+        "tracking": "Учёт в реальном времени",
+        "daysSince": "Дней с создания: {days}",
+        "lastUpdated": "Обновлено: {date}",
+        "milestones": "Достижения",
+        "completed": "Выполнено: {count}"
+    }
+}

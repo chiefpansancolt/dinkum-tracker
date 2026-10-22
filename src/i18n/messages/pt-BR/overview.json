@@ -1,0 +1,116 @@
+{
+    "title": "Visão geral",
+    "subline": "{done} de {total} itens · {percent}% · {name}",
+    "view": "Ver",
+    "headline": {
+        "label": "Conclusão geral",
+        "ofItems": "{done} de {total} itens",
+        "groups": {
+            "track": "Acompanhar",
+            "progress": "Progresso",
+            "collect": "Coletar"
+        },
+        "groupOf": "{done} de {total}",
+        "note": "Denominador fixo de {total} itens: Pedia {pedia}, NPCs {npcs}, Marcos {milestones}, Licenças {licenses}, Habilidades {skills}, Construções {buildings}, Apetrechos {gear}, Guarda-roupa e casa {wardrobe}, Receitas {recipes}. Toda categoria conta desde o primeiro dia, então a porcentagem não dá saltos quando você abre uma aba nova."
+    },
+    "skills": {
+        "title": "Habilidades do personagem",
+        "level": "Nível {level}",
+        "empty": "Nenhuma habilidade registrada ainda."
+    },
+    "licenses": {
+        "title": "Progresso das licenças",
+        "obtained": "Licenças obtidas",
+        "complete": "{count}/{total} concluídas",
+        "levels": "Níveis de licença",
+        "levelsValue": "{count}/{total} · {percent}%",
+        "permit": "Pontos de permissão gastos",
+        "spent": "{percent}% gastos"
+    },
+    "milestones": {
+        "title": "Progresso dos marcos",
+        "overall": "Progresso geral",
+        "complete": "{count}/{total} concluídos",
+        "levels": "Níveis",
+        "levelsValue": "{count}/{total} · {percent}%",
+        "permit": "Pontos de permissão ganhos",
+        "earned": "{percent}% ganhos"
+    },
+    "pedia": {
+        "title": "Progresso da Pedia",
+        "overall": "Progresso geral ({count}/{total})",
+        "donations": "Doações ao museu ({count}/{total})",
+        "fish": "Peixes ({count}/{total})",
+        "bugs": "Insetos ({count}/{total})",
+        "critters": "Criaturas ({count}/{total})",
+        "donated": "Doados ({count}/{total})",
+        "permit": "Pontos de permissão ganhos",
+        "earned": "{percent}% ganhos"
+    },
+    "gear": {
+        "title": "Apetrechos e equipamentos",
+        "overall": "Progresso geral ({count}/{total})",
+        "books": "Livros ({count}/{total})",
+        "tools": "Ferramentas ({count}/{total})",
+        "weapons": "Armas ({count}/{total})",
+        "equipment": "Equipamentos ({count}/{total})",
+        "vehicles": "Veículos ({count}/{total})",
+        "cassettes": "Fitas cassete ({count}/{total})",
+        "names": {
+            "books": "Livros",
+            "tools": "Ferramentas",
+            "weapons": "Armas",
+            "equipment": "Equipamentos",
+            "vehicles": "Veículos",
+            "cassettes": "Fitas cassete"
+        },
+        "mostComplete": "Mais completas",
+        "leastComplete": "Menos completas"
+    },
+    "buildings": {
+        "title": "Progresso das construções",
+        "overall": "Progresso geral",
+        "complete": "{count}/{total} concluídas",
+        "houseUpgrades": "Melhorias da casa",
+        "shops": "Lojas",
+        "town": "Construções da cidade",
+        "utility": "Construções utilitárias",
+        "mostExpensive": "Construções mais caras",
+        "price": "{amount} Dinks"
+    },
+    "recipes": {
+        "title": "Coleção de receitas",
+        "overall": "Progresso geral ({count}/{total})",
+        "cooking": "Culinária ({count}/{total})",
+        "crafting": "Fabricação ({count}/{total})",
+        "signWriting": "Letreiros ({count}/{total})",
+        "names": {
+            "cooking": "Culinária",
+            "crafting": "Fabricação",
+            "signWriting": "Letreiros"
+        },
+        "mostComplete": "Mais completas",
+        "leastComplete": "Menos completas"
+    },
+    "npcs": {
+        "title": "Relações com NPCs",
+        "total": "Total de NPCs",
+        "friends": "Amigos",
+        "oneHeart": "1+ corações",
+        "maxHearts": "Corações no máximo",
+        "avgHearts": "Média de corações",
+        "top": "Melhores relações",
+        "hearts": "{hearts, plural, one {{amount} coração} other {{amount} corações}}",
+        "empty": "Nenhum NPC registrado ainda."
+    },
+    "game": {
+        "title": "Informações do jogo",
+        "calendar": "Calendário do jogo",
+        "date": "Dia {day}, {season}",
+        "tracking": "Acompanhamento no mundo real",
+        "daysSince": "Dias desde a criação: {days}",
+        "lastUpdated": "Última atualização: {date}",
+        "milestones": "Marcos",
+        "completed": "{count} concluídos"
+    }
+}

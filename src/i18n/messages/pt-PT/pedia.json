@@ -1,0 +1,85 @@
+{
+    "title": "Pedia",
+    "subline": "{done} de {total} recolhidos · {percent}% · {name}",
+    "tabsLabel": "Secções da Pedia",
+    "tabs": {
+        "fish": "Peixes",
+        "bugs": "Insetos",
+        "critters": "Bichos"
+    },
+    "nouns": {
+        "fish": "peixes",
+        "bugs": "insetos",
+        "critters": "bichos"
+    },
+    "summary": {
+        "captured": "Capturados",
+        "donated": "Doados ao museu",
+        "permit": "Pontos de licença ganhos",
+        "of": "de {total}"
+    },
+    "filters": {
+        "sheetTitle": "Filtrar {tab}",
+        "biome": "Bioma",
+        "rarity": "Raridade",
+        "season": "Estação",
+        "time": "Hora",
+        "collected": "Recolhidos",
+        "donated": "Doados",
+        "allBiomes": "Todos os biomas",
+        "allRarities": "Todas as raridades",
+        "allSeasons": "Todas as estações",
+        "anyTime": "Qualquer hora",
+        "all": "Todos",
+        "onlyCollected": "Recolhidos",
+        "notCollected": "Por recolher",
+        "onlyDonated": "Doados",
+        "notDonated": "Por doar",
+        "search": "Pesquisar {tab} por nome",
+        "showing": "A mostrar {shown} de {total} {tab}",
+        "capturedCount": "Capturados {count}",
+        "donatedCount": "Doados {count}",
+        "apply": "Mostrar {count} {tab}"
+    },
+    "view": {
+        "label": "Vista",
+        "grid": "Grelha",
+        "list": "Lista"
+    },
+    "card": {
+        "biome": "Bioma",
+        "seasons": "Estações",
+        "time": "Hora",
+        "sell": "Preço de venda",
+        "cooked": "Cozinhado",
+        "cookedValue": "{price} · x{pieces}",
+        "status": "Estado",
+        "missing": "Em falta",
+        "caught": "Apanhado",
+        "donated": "Doado"
+    },
+    "table": {
+        "name": "Nome",
+        "rarity": "Raridade",
+        "biome": "Bioma",
+        "seasons": "Estações",
+        "time": "Hora",
+        "sell": "Venda",
+        "cooked": "Cozinhado",
+        "status": "Estado",
+        "caption": "{shown} de {total} linhas visíveis. Os mesmos filtros, o controlo de estado e o nível de comércio aplicam-se nas duas vistas."
+    },
+    "empty": {
+        "title": "Nenhum resultado em {tab} com estes filtros",
+        "description": "Experimentar outro nome ou limpar os filtros.",
+        "clear": "Limpar filtros"
+    },
+    "toast": {
+        "marked": "{name} marcado como {status}",
+        "statuses": {
+            "missing": "em falta",
+            "caught": "apanhado",
+            "donated": "doado"
+        }
+    }
+}

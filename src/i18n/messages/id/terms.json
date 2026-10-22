@@ -1,0 +1,91 @@
+{
+    "buffs": {
+        "attackLevel": "Serangan",
+        "charged": "Bertenaga",
+        "coolLevel": "Sejuk",
+        "defenseLevel": "Pertahanan",
+        "diligent": "Rajin",
+        "experienceLevel": "Pengalaman",
+        "fastHealthTickSpeedLevel": "Kecepatan detak kesehatan",
+        "fishLevel": "Memancing",
+        "foragingLevel": "Meramu",
+        "healthMax": "Kesehatan maks",
+        "healthRegenRate": "Regen kesehatan",
+        "length": "Durasi",
+        "miningLevel": "Menambang",
+        "sleepless": "Tanpa tidur",
+        "speedLevel": "Kecepatan",
+        "staminaMax": "Stamina maks",
+        "staminaRegenRate": "Regen stamina",
+        "swimmingLevel": "Berenang"
+    },
+    "categories": {
+        "buildings": "Bangunan",
+        "tools": "Alat",
+        "weapons": "Senjata",
+        "equipment": "Peralatan",
+        "vehicles": "Kendaraan",
+        "craftingRecipes": "Resep Kerajinan",
+        "cookingRecipes": "Resep Memasak",
+        "signWritingRecipes": "Resep Tulisan Papan",
+        "otherCraftables": "Bahan Kerajinan Lain"
+    },
+    "resourceTypes": {
+        "fish": "Ikan",
+        "critter": "Satwa kecil",
+        "bug": "Serangga",
+        "relic": "Peninggalan",
+        "crop": "Hasil panen",
+        "foragable": "Hasil meramu",
+        "animalProduct": "Hasil hewan",
+        "paint": "Cat",
+        "mineral": "Mineral",
+        "craftable": "Bisa dibuat",
+        "trophy": "Trofi",
+        "seed": "Benih",
+        "flower": "Bunga",
+        "resource": "Sumber daya"
+    },
+    "daily": {
+        "dayOneMilestones": "Hari Pertama",
+        "travelMilestones": "Perjalanan",
+        "npcMilestones": "NPC",
+        "fishingMilestones": "Memancing",
+        "farmingMilestones": "Bertani",
+        "foragingMilestones": "Meramu",
+        "loggingMilestones": "Menebang",
+        "miningMilestones": "Menambang",
+        "excavationMilestones": "Penggalian",
+        "bugCatchingMilestones": "Menangkap Serangga",
+        "craftingMilestones": "Kerajinan",
+        "huntingMilestones": "Berburu",
+        "trappingMilestones": "Menjebak",
+        "dinksMilestones": "Dinks"
+    },
+    "animalTypes": {
+        "Wild Animal": "Hewan Liar",
+        "Farm Animal": "Hewan Ternak",
+        "Tammed Animal": "Hewan Jinak"
+    },
+    "temperaments": {
+        "Passive": "Pasif",
+        "Neutral": "Netral",
+        "Aggressive": "Agresif"
+    },
+    "seasons": {
+        "Spring": "Musim Semi",
+        "Summer": "Musim Panas",
+        "Autumn": "Musim Gugur",
+        "Winter": "Musim Dingin",
+        "All": "Semua"
+    },
+    "weekdays": {
+        "Sunday": "Minggu",
+        "Monday": "Senin",
+        "Tuesday": "Selasa",
+        "Wednesday": "Rabu",
+        "Thursday": "Kamis",
+        "Friday": "Jumat",
+        "Saturday": "Sabtu"
+    }
+}

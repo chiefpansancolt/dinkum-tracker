@@ -1,0 +1,51 @@
+{
+    "close": "닫기",
+    "field": {
+        "optional": "선택"
+    },
+    "stepper": {
+        "lower": "{label} 낮추기",
+        "raise": "{label} 높이기",
+        "labelPrefix": "{label}, "
+    },
+    "switch": {
+        "on": "켜짐",
+        "off": "꺼짐"
+    },
+    "tabs": {
+        "locked": " (잠김)"
+    },
+    "toast": {
+        "dismiss": "닫기",
+        "variants": {
+            "success": "성공",
+            "info": "안내",
+            "warning": "주의",
+            "error": "오류"
+        },
+        "missingProvider": "useToast는 ToastProvider 안에서만 사용할 수 있어요"
+    },
+    "savedChip": {
+        "automatic": "자동으로 저장돼요",
+        "justNow": "방금 저장됨",
+        "minutesAgo": "{count}분 전에 저장됨",
+        "at": "{time}에 저장됨",
+        "failed": "저장되지 않았어요, 저장 공간이 가득 찼어요"
+    },
+    "filters": {
+        "filters": "필터",
+        "filtersWithCount": "필터 ({count})",
+        "clearFilters": "필터 지우기",
+        "clearAll": "모두 지우기",
+        "cancel": "취소",
+        "showResults": "결과 보기",
+        "search": "검색"
+    },
+    "commerce": {
+        "label": "상업 레벨 판매",
+        "base": "기본",
+        "plus5": "+5%",
+        "plus10": "+10%",
+        "plus15": "+15%"
+    }
+}

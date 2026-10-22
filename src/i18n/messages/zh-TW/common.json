@@ -1,0 +1,8 @@
+{
+    "saveFailed": {
+        "title": "未儲存",
+        "message": "瀏覽器無法儲存你的資料。請匯出備份，避免遺失你的變更。",
+        "exportBackup": "匯出備份"
+    },
+    "undo": "復原"
+}

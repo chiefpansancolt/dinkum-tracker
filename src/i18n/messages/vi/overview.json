@@ -1,0 +1,116 @@
+{
+    "title": "Tổng quan",
+    "subline": "{done} trên {total} vật phẩm · {percent}% · {name}",
+    "view": "Xem",
+    "headline": {
+        "label": "Mức hoàn thành chung",
+        "ofItems": "{done} trên {total} vật phẩm",
+        "groups": {
+            "track": "Theo dõi",
+            "progress": "Tiến trình",
+            "collect": "Thu thập"
+        },
+        "groupOf": "{done} trên {total}",
+        "note": "Mẫu số cố định là {total} vật phẩm: Pedia {pedia}, NPC {npcs}, Cột mốc {milestones}, Giấy phép {licenses}, Kỹ năng {skills}, Công trình {buildings}, Trang bị {gear}, Tủ đồ và nhà {wardrobe}, Công thức {recipes}. Mọi hạng mục được tính từ ngày đầu, nên phần trăm không nhảy khi bạn mở một tab mới."
+    },
+    "skills": {
+        "title": "Kỹ năng nhân vật",
+        "level": "Cấp {level}",
+        "empty": "Chưa ghi nhận kỹ năng nào."
+    },
+    "licenses": {
+        "title": "Tiến trình giấy phép",
+        "obtained": "Giấy phép đã có",
+        "complete": "{count}/{total} hoàn thành",
+        "levels": "Cấp giấy phép",
+        "levelsValue": "{count}/{total} · {percent}%",
+        "permit": "Điểm giấy phép đã dùng",
+        "spent": "Đã dùng {percent}%"
+    },
+    "milestones": {
+        "title": "Tiến trình cột mốc",
+        "overall": "Tiến trình chung",
+        "complete": "{count}/{total} hoàn thành",
+        "levels": "Cấp",
+        "levelsValue": "{count}/{total} · {percent}%",
+        "permit": "Điểm giấy phép đã nhận",
+        "earned": "Đã nhận {percent}%"
+    },
+    "pedia": {
+        "title": "Tiến trình Pedia",
+        "overall": "Tiến trình chung ({count}/{total})",
+        "donations": "Đã tặng bảo tàng ({count}/{total})",
+        "fish": "Cá ({count}/{total})",
+        "bugs": "Côn trùng ({count}/{total})",
+        "critters": "Sinh vật nhỏ ({count}/{total})",
+        "donated": "Đã tặng ({count}/{total})",
+        "permit": "Điểm giấy phép đã nhận",
+        "earned": "Đã nhận {percent}%"
+    },
+    "gear": {
+        "title": "Trang bị và thiết bị",
+        "overall": "Tiến trình chung ({count}/{total})",
+        "books": "Sách ({count}/{total})",
+        "tools": "Dụng cụ ({count}/{total})",
+        "weapons": "Vũ khí ({count}/{total})",
+        "equipment": "Thiết bị ({count}/{total})",
+        "vehicles": "Phương tiện ({count}/{total})",
+        "cassettes": "Băng cassette ({count}/{total})",
+        "names": {
+            "books": "Sách",
+            "tools": "Dụng cụ",
+            "weapons": "Vũ khí",
+            "equipment": "Thiết bị",
+            "vehicles": "Phương tiện",
+            "cassettes": "Băng cassette"
+        },
+        "mostComplete": "Đầy đủ nhất",
+        "leastComplete": "Ít đầy đủ nhất"
+    },
+    "buildings": {
+        "title": "Tiến trình công trình",
+        "overall": "Tiến trình chung",
+        "complete": "{count}/{total} hoàn thành",
+        "houseUpgrades": "Nâng cấp nhà",
+        "shops": "Cửa hàng",
+        "town": "Công trình thị trấn",
+        "utility": "Công trình tiện ích",
+        "mostExpensive": "Công trình đắt nhất",
+        "price": "{amount} Dinks"
+    },
+    "recipes": {
+        "title": "Bộ sưu tập công thức",
+        "overall": "Tiến trình chung ({count}/{total})",
+        "cooking": "Nấu ăn ({count}/{total})",
+        "crafting": "Chế tạo ({count}/{total})",
+        "signWriting": "Viết biển ({count}/{total})",
+        "names": {
+            "cooking": "Nấu ăn",
+            "crafting": "Chế tạo",
+            "signWriting": "Viết biển"
+        },
+        "mostComplete": "Đầy đủ nhất",
+        "leastComplete": "Ít đầy đủ nhất"
+    },
+    "npcs": {
+        "title": "Quan hệ với NPC",
+        "total": "Tổng số NPC",
+        "friends": "Bạn bè",
+        "oneHeart": "Từ 1 tim",
+        "maxHearts": "Tim tối đa",
+        "avgHearts": "Tim trung bình",
+        "top": "Quan hệ tốt nhất",
+        "hearts": "{hearts, plural, other {{amount} tim}}",
+        "empty": "Chưa ghi nhận NPC nào."
+    },
+    "game": {
+        "title": "Thông tin game",
+        "calendar": "Lịch trong game",
+        "date": "Ngày {day}, {season}",
+        "tracking": "Theo dõi thời gian thực",
+        "daysSince": "Số ngày từ khi tạo: {days}",
+        "lastUpdated": "Cập nhật lần cuối: {date}",
+        "milestones": "Cột mốc",
+        "completed": "{count} đã hoàn thành"
+    }
+}

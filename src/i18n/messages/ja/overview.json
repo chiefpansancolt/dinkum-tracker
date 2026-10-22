@@ -1,0 +1,116 @@
+{
+    "title": "概要",
+    "subline": "{total}個中{done}個 · {percent}% · {name}",
+    "view": "表示",
+    "headline": {
+        "label": "全体の達成率",
+        "ofItems": "{total}個中{done}個",
+        "groups": {
+            "track": "記録",
+            "progress": "進行",
+            "collect": "収集"
+        },
+        "groupOf": "{total}個中{done}個",
+        "note": "分母は{total}個で固定です。図鑑 {pedia}、NPC {npcs}、マイルストーン {milestones}、ライセンス {licenses}、スキル {skills}、建物 {buildings}、ギア {gear}、衣装と家 {wardrobe}、レシピ {recipes}。すべてのカテゴリーが初日から集計されるので、新しいタブを開いても達成率は急に変わりません。"
+    },
+    "skills": {
+        "title": "キャラクタースキル",
+        "level": "レベル{level}",
+        "empty": "記録されたスキルはまだありません。"
+    },
+    "licenses": {
+        "title": "ライセンスの進行状況",
+        "obtained": "取得したライセンス",
+        "complete": "{count}/{total} 完了",
+        "levels": "ライセンスレベル",
+        "levelsValue": "{count}/{total} · {percent}%",
+        "permit": "使用した許可ポイント",
+        "spent": "{percent}% 使用"
+    },
+    "milestones": {
+        "title": "マイルストーンの進行状況",
+        "overall": "全体の進行状況",
+        "complete": "{count}/{total} 完了",
+        "levels": "レベル",
+        "levelsValue": "{count}/{total} · {percent}%",
+        "permit": "獲得した許可ポイント",
+        "earned": "{percent}% 獲得"
+    },
+    "pedia": {
+        "title": "図鑑の進行状況",
+        "overall": "全体の進行状況（{count}/{total}）",
+        "donations": "博物館への寄贈（{count}/{total}）",
+        "fish": "魚（{count}/{total}）",
+        "bugs": "虫（{count}/{total}）",
+        "critters": "小動物（{count}/{total}）",
+        "donated": "寄贈済み（{count}/{total}）",
+        "permit": "獲得した許可ポイント",
+        "earned": "{percent}% 獲得"
+    },
+    "gear": {
+        "title": "ギアと装備",
+        "overall": "全体の進行状況（{count}/{total}）",
+        "books": "本（{count}/{total}）",
+        "tools": "道具（{count}/{total}）",
+        "weapons": "武器（{count}/{total}）",
+        "equipment": "装備（{count}/{total}）",
+        "vehicles": "乗り物（{count}/{total}）",
+        "cassettes": "カセット（{count}/{total}）",
+        "names": {
+            "books": "本",
+            "tools": "道具",
+            "weapons": "武器",
+            "equipment": "装備",
+            "vehicles": "乗り物",
+            "cassettes": "カセット"
+        },
+        "mostComplete": "達成率が高い順",
+        "leastComplete": "達成率が低い順"
+    },
+    "buildings": {
+        "title": "建物の進行状況",
+        "overall": "全体の進行状況",
+        "complete": "{count}/{total} 完了",
+        "houseUpgrades": "家のアップグレード",
+        "shops": "お店",
+        "town": "町の建物",
+        "utility": "設備の建物",
+        "mostExpensive": "高額な建物",
+        "price": "{amount} Dinks"
+    },
+    "recipes": {
+        "title": "レシピコレクション",
+        "overall": "全体の進行状況（{count}/{total}）",
+        "cooking": "料理（{count}/{total}）",
+        "crafting": "クラフト（{count}/{total}）",
+        "signWriting": "看板描き（{count}/{total}）",
+        "names": {
+            "cooking": "料理",
+            "crafting": "クラフト",
+            "signWriting": "看板描き"
+        },
+        "mostComplete": "達成率が高い順",
+        "leastComplete": "達成率が低い順"
+    },
+    "npcs": {
+        "title": "NPCとの関係",
+        "total": "NPC合計",
+        "friends": "友達",
+        "oneHeart": "ハート1以上",
+        "maxHearts": "最大ハート",
+        "avgHearts": "平均ハート",
+        "top": "上位の関係",
+        "hearts": "{hearts, plural, other {ハート{amount}個}}",
+        "empty": "記録されたNPCはまだありません。"
+    },
+    "game": {
+        "title": "ゲーム情報",
+        "calendar": "ゲーム内カレンダー",
+        "date": "{season}の{day}日目",
+        "tracking": "実時間の記録",
+        "daysSince": "作成からの日数：{days}",
+        "lastUpdated": "最終更新：{date}",
+        "milestones": "マイルストーン",
+        "completed": "{count}個完了"
+    }
+}

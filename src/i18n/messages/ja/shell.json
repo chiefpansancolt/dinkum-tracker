@@ -1,0 +1,91 @@
+{
+    "nav": {
+        "main": "メイン",
+        "groups": {
+            "track": "記録",
+            "progress": "進行",
+            "collect": "収集",
+            "tools": "ツール"
+        },
+        "items": {
+            "overview": "概要",
+            "pedia": "図鑑",
+            "npcs": "NPC",
+            "calendar": "カレンダー",
+            "buildings": "建物",
+            "licenses": "ライセンス",
+            "milestones": "マイルストーン",
+            "skills": "スキル",
+            "recipes": "レシピ",
+            "gear": "ギア",
+            "wardrobe": "衣装と家",
+            "itemsBreakdown": "アイテム内訳",
+            "weightCalculator": "重量計算",
+            "reference": "リファレンス",
+            "settings": "設定",
+            "playthroughs": "プレイスルー",
+            "newPlaythrough": "新しいプレイスルー"
+        }
+    },
+    "appShell": {
+        "skipToContent": "本文へスキップ",
+        "closeMenu": "メニューを閉じる"
+    },
+    "appBar": {
+        "openMenu": "メニューを開く"
+    },
+    "playthroughGate": {
+        "emptyTitle": "プレイスルーがありません",
+        "emptyDescription": "プレイスルーを作成して、進行状況の記録を始めましょう。",
+        "newPlaythrough": "新しいプレイスルー"
+    },
+    "playthroughSwitcher": {
+        "sectionLabel": "プレイスルー",
+        "switchPlaythrough": "プレイスルーを切り替える",
+        "loading": "読み込み中",
+        "noPlaythroughYet": "プレイスルーがありません",
+        "playthroughs": "プレイスルー",
+        "active": "使用中",
+        "allPlaythroughs": "すべてのプレイスルー",
+        "newPlaythrough": "新しいプレイスルー",
+        "detail": "{day}日目 · {percent}%"
+    },
+    "theme": {
+        "label": "テーマ",
+        "light": "ライト",
+        "dark": "ダーク",
+        "system": "システム"
+    },
+    "footer": {
+        "tagline": "Dinkumの進行状況を手軽に記録できます。",
+        "support": "サポート",
+        "about": "このアプリについて",
+        "settings": "設定",
+        "discord": "Discord",
+        "github": "GitHub",
+        "dinkumWiki": "Dinkum Wiki",
+        "privacyPolicy": "プライバシーポリシー",
+        "termsOfService": "利用規約",
+        "disclaimerTitle": "免責事項",
+        "disclaimer": "このアプリケーションは、Dinkumおよびその制作者とは提携、承認、関連のいずれもありません。ゲームデータはDinkum Wikiから取得しています。ゲームの画像と名称は参照目的でのみ使用しています。",
+        "copyright": "© {year} {appName}",
+        "framework": "無料のゲーム進行トラッカー向け共通基盤、Gamerdexフレームワークで作られています。データはブラウザー内に保存されます。同期をオンにすると、あなた自身のクラウドストレージにも保存されます。",
+        "visitGamerdex": "Gamerdexを見る"
+    },
+    "domainNotice": {
+        "label": "ドメイン変更のお知らせ：",
+        "movedTo": "Dinkum Trackerは<strong>{domain}</strong>に移転しました。保存したデータは自動では引き継がれません。このサイトから",
+        "exportLink": "データをエクスポート",
+        "retired": "して、新しいドメインでインポートしてください。このドメインは<strong>{date}</strong>に廃止されます。",
+        "goToNewSite": "新しいサイトへ移動",
+        "dismiss": "お知らせを閉じる"
+    },
+    "notFound": {
+        "code": "404",
+        "title": "ページが見つかりません",
+        "description": "このページは存在しないか、移動した可能性があります。",
+        "toOverview": "概要へ移動",
+        "toHome": "ホームページへ移動",
+        "hint": "404は、アドレスの入力ミスか、ページが削除されたことを意味します。サイドバーは引き続き使えます。"
+    }
+}

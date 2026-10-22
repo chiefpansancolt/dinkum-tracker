@@ -1,0 +1,234 @@
+{
+    "tab": {
+        "title": "Bulut senkronizasyonu",
+        "description": "Oynanışlarını özel bir GitHub deposunda tut ve cihazların arasında paylaş."
+    },
+    "unavailable": "Senkronizasyon bu sürümde kullanılamıyor.",
+    "privacy": "Verilerin, kendi GitHub hesabındaki özel bir depoya gider. Gamerdex'in verileri saklayan bir sunucusu yoktur ve uygulama yalnızca seçtiğin tek depoya erişebilir.",
+    "repository": {
+        "title": "Veri deposunu kur",
+        "body": "Verilerin GitHub hesabında {name} adlı özel bir depoda tutulur. Gamerdex Sync yalnızca bu tek depoya erişebilir.",
+        "checking": "{name} aranıyor",
+        "checkFailed": "Depoların yüklenemedi. Bağlantını kontrol et ve tekrar dene.",
+        "found": "{fullName} bulundu",
+        "public": "{fullName} deposu herkese açık. GitHub ayarlarından özel yap, sonra tekrar kontrol et. Herkese açık bir depo kullanılamaz, çünkü herkes verilerini okuyabilir.",
+        "missing": "{name} deposu bulunamadı",
+        "steps": {
+            "create": "{name} adında özel bir depo oluştur. README dosyası ekle kutusunu işaretle.",
+            "install": "Gamerdex Sync'e yalnızca o depo için erişim ver. Only select repositories seçeneğini seç, sonra {name} deposunu seç.",
+            "recheck": "Buraya dön ve tekrar kontrol et."
+        },
+        "createButton": "Depo oluştur",
+        "installButton": "GitHub'da depoları seç",
+        "recheckButton": "Tekrar kontrol et"
+    },
+    "connected": {
+        "title": "Bağlı",
+        "repository": "Depo",
+        "lastSync": "Son senkronizasyon",
+        "never": "Henüz senkronize edilmedi",
+        "syncNow": "Şimdi senkronize et",
+        "signOut": "Oturumu kapat",
+        "signedOut": "Oturum kapatıldı. Bu cihazdaki veri olduğu gibi kalır.",
+        "storage": "Saklandığı yer",
+        "folder": "{name} klasörü",
+        "signInWith": "{provider} ile giriş yap"
+    },
+    "status": {
+        "idle": "Senkronize",
+        "syncing": "Senkronize ediliyor",
+        "offline": "Çevrimdışı",
+        "reauth": "Tekrar giriş yap",
+        "needsChoice": "Seçimin gerekiyor",
+        "error": "Senkronizasyon başarısız",
+        "signedOut": "Giriş yapılmadı",
+        "needsRepository": "Bir depo seç",
+        "conflicts": "Değişiklikleri incele"
+    },
+    "error": {
+        "rateLimit": "GitHub istekleri sınırlıyor. Senkronizasyon birkaç dakika sonra tekrar çalışır.",
+        "notFound": "Depo bulunamadı. Tekrar seç.",
+        "server": "GitHub doğru yanıt vermedi. Daha sonra tekrar dene.",
+        "data": "Senkronize veri geçerli değil, bu yüzden hiçbir şey değiştirilmedi.",
+        "busy": "Başka bir cihaz veriyi değiştirmeye devam ediyor. Biraz sonra tekrar dene.",
+        "other": "Bir şeyler ters gitti. Hiçbir şey değiştirilmedi.",
+        "reauth": "Oturumun sona erdi. Senkronizasyonu sürdürmek için tekrar giriş yap.",
+        "forbidden": "GitHub depoya erişimi reddetti. Gamerdex Sync'in Contents için Read and write erişimi olduğunu kontrol et, sonra tekrar senkronize et.",
+        "httpStatus": "GitHub şu yanıtı verdi: {status}.",
+        "notFoundFolder": "{provider} içinde bir dosya veya klasör bulunamadı. Tekrar senkronize et.",
+        "forbiddenFolder": "{provider} erişimi reddetti. Tekrar giriş yap ve Gamerdex'in oluşturduğu dosyalara erişime izin ver.",
+        "httpStatusFolder": "{provider} şu yanıtı verdi: {status}."
+    },
+    "choice": {
+        "title": "Hem bu cihazda hem bulutta veri var",
+        "body": "Bu, bu cihazdan ilk senkronizasyon. Ne yapılacağını seç. Sen seçene kadar buluttan hiçbir şey silinmez.",
+        "counts": "Bu cihaz: {local}. Bulut: {cloud}.",
+        "merge": "İkisini birleştir",
+        "mergeHint": "İkisinden de her şeyi tut. Yüksek seviye geçerli olur.",
+        "keepLocal": "Bu cihazı tut",
+        "keepLocalHint": "Bulut verisini bu cihazdaki veriyle değiştir.",
+        "keepCloud": "Bulutu tut",
+        "keepCloudHint": "Bu cihazdaki veriyi bulut verisiyle değiştir."
+    },
+    "conflicts": {
+        "title": "Birleştirilemeyen değişiklikler",
+        "body": "İki cihaz aynı değeri değiştirdi. Bulut değeri korundu. Bunun yerine bu cihazın değerini kullanmak için onu seç.",
+        "cloudValue": "Bulut",
+        "deviceValue": "Bu cihaz",
+        "keepDevice": "Bu cihazın değerini kullan",
+        "dismiss": "Kapat",
+        "empty": "Hiçbir şey",
+        "deletedEdited": "Bir cihaz bunu kaldırdı, başka bir cihaz değiştirdi. Değiştirilen sürüm korundu."
+    },
+    "callback": {
+        "title": "Giriş yapılıyor",
+        "working": "Giriş tamamlanıyor",
+        "back": "Ayarlar'a dön",
+        "denied": "Giriş iptal edildi.",
+        "state": "Giriş doğrulanamadı. Ayarlar'dan yeniden başla.",
+        "missing": "Giriş bir kod göndermedi. Ayarlar'dan yeniden başla.",
+        "failed": "Giriş tamamlanamadı. Daha sonra tekrar dene."
+    },
+    "playthroughCount": "{count, plural, one {{amount} oynanış} other {{amount} oynanış}}",
+    "provider": {
+        "github": {
+            "name": "GitHub",
+            "tile": "Sahibi olduğun, {name} adlı özel bir depo.",
+            "badge": "Geliştiriciler için"
+        },
+        "google": {
+            "name": "Google Drive",
+            "tile": "Drive'ında görünen bir Gamerdex klasörü. Gamerdex yalnızca kendi oluşturduğu dosyaları görür.",
+            "badge": "Önerilen"
+        },
+        "dropbox": {
+            "name": "Dropbox",
+            "tile": "Dropbox'ının Apps klasörü içinde bir Gamerdex klasörü. Gamerdex yalnızca o klasörü görür.",
+            "badge": "Yalnızca uygulama klasörü"
+        },
+        "microsoft": {
+            "name": "OneDrive",
+            "tile": "OneDrive'ının Apps klasörü içinde bir Gamerdex klasörü. Gamerdex yalnızca o klasörü görür.",
+            "badge": "Kişisel hesaplar"
+        }
+    },
+    "connect": {
+        "title": "Cihazlar arasında senkronize et",
+        "pill": "Bağlı değil",
+        "intro": "Oynanışlarını bilgisayarında ve telefonunda aynı tut. Senkronizasyon isteğe bağlı ve ücretsizdir. Kopyanın nerede duracağını seç.",
+        "pickerLabel": "Kopyanın tutulacağı yer",
+        "panelTitle": "{provider} bağla",
+        "another": "Giriş yapmadan önce başka bir sağlayıcı seçebilirsin.",
+        "firstSync": "İki tarafta da zaten veri varsa, ilk senkronizasyonda neyin tutulacağını seç. Sen karar vermeden hiçbir şey değiştirilmez.",
+        "google": {
+            "step1": "Bu pencerede Google ile giriş yap.",
+            "step2": "Gamerdex'in oluşturduğu dosyalara erişime izin ver. Uygulama diğer dosyalarını göremez.",
+            "button": "Google Drive'ı bağla"
+        },
+        "github": {
+            "step1": "{name} adında boş, özel bir depo oluştur. README dosyası ekle kutusunu işaretle.",
+            "step2": "GitHub ile giriş yap, sonra Gamerdex Sync'e yalnızca o depo için erişim ver.",
+            "button": "GitHub'ı bağla"
+        },
+        "dropbox": {
+            "step1": "Bu pencerede Dropbox ile giriş yap.",
+            "step2": "Gamerdex uygulama klasörüne erişime izin ver. Uygulama diğer dosyalarını göremez.",
+            "button": "Dropbox'ı bağla"
+        },
+        "microsoft": {
+            "step1": "Bu pencerede kişisel Microsoft hesabınla giriş yap.",
+            "step2": "Gamerdex uygulama klasörüne erişime izin ver. Uygulama diğer dosyalarını göremez.",
+            "button": "OneDrive'ı bağla"
+        }
+    },
+    "how": {
+        "title": "Senkronizasyon nasıl çalışır",
+        "one": "Oynanışların, kendi depolamanda tek bir dosya olarak, yedek dosyasıyla aynı biçimde ve cihaz listesi için küçük bir dosyayla birlikte kaydedilir.",
+        "two": "Gamerdex'in verilerini saklayan bir sunucusu yoktur. Tarayıcın doğrudan depolamanla konuşur.",
+        "three": "İşaretlenen eşyalar ve seviyeler, iki cihazdan birinin değiştirdiğini korur ve yüksek seviye geçerli olur. İki cihaz da bir adı veya geçerli günü değiştirirse hangisinin kalacağını sen seçersin.",
+        "four": "Her cihaz kendi etkin oynanışını tutar. Senkronizasyon onu asla değiştirmez.",
+        "five": "İstediğin zaman bağlantıyı kes. Oynanışların her cihazda kalır."
+    },
+    "banner": {
+        "title": "{count, plural, one {{amount} değişiklik için karar gerekiyor} other {{amount} değişiklik için karar gerekiyor}}",
+        "body": "İki cihaz aynı değeri değiştirdi. Sen karar verene kadar bulut değeri korunur.",
+        "review": "İncele",
+        "waiting": "İlk senkronizasyon senin seçimini bekliyor.",
+        "choose": "Seç"
+    },
+    "playthroughs": {
+        "title": "Oynanışlar",
+        "thisDevice": "Bu cihaz",
+        "cloud": "Bulut, son senkronizasyon",
+        "notInCloud": "Henüz bulutta yok",
+        "review": "İncele",
+        "note": "Bir oynanışı silmek, onu bir sonraki senkronizasyonda senkronizasyon dosyasından kaldırır.",
+        "status": {
+            "synced": "Senkronize",
+            "changedHere": "Burada değişti",
+            "conflict": "Çakışma",
+            "newHere": "Burada yeni"
+        },
+        "describe": "{day}. gün, {season} · %{percent}"
+    },
+    "activity": {
+        "title": "Son senkronizasyon etkinliği",
+        "empty": "Henüz hiçbir şey senkronize edilmedi.",
+        "connected": "{provider} bu tarayıcıda bağlandı.",
+        "uploaded": "Bu cihazdaki değişiklikler yüklendi.",
+        "downloaded": "Buluttaki değişiklikler indirildi.",
+        "merged": "İki tarafın değişiklikleri birleştirildi.",
+        "conflicts": "{count, plural, one {{amount} değişiklik için karar gerekiyor.} other {{amount} değişiklik için karar gerekiyor.}}",
+        "failed": "Senkronizasyon başarısız oldu."
+    },
+    "settings": {
+        "title": "Senkronizasyon ayarları",
+        "auto": "Otomatik senkronize et",
+        "autoHint": "Takipçi açıldığında ve her değişiklikten birkaç saniye sonra senkronize eder.",
+        "focus": "Sekmeye döndüğümde değişiklikleri kontrol et",
+        "focusHint": "Takipçiye geri döndüğünde buluttaki daha yeni veriyi çeker.",
+        "metered": "Sınırlı bağlantıda ben isteyene kadar bekle",
+        "meteredHint": "Tarayıcı veri tasarrufu bağlantısı bildirirken otomatik senkronizasyonları atlar. Şimdi senkronize et yine çalışır."
+    },
+    "lives": {
+        "title": "Verilerin nerede duruyor",
+        "storage": "Depolama",
+        "folder": "Klasör",
+        "dataFile": "Veri dosyası",
+        "metaFile": "Meta dosyası",
+        "size": "Boyut",
+        "kb": "{amount} KB",
+        "note": "Veri dosyası, yedek dosyasıyla aynı biçimi kullanır. Meta dosyası cihaz listesini tutar, oyun verisi içermez. Girişin hiçbir dosyada bulunmaz.",
+        "googleNote": "Gamerdex klasörü Drive'ında görünür. Gamerdex yalnızca kendi oluşturduğu dosyaları açabilir.",
+        "githubNote": "Depoyu özel tut. Depoyu açabilen herkes verilerini okuyabilir.",
+        "dropboxNote": "Gamerdex klasörü Dropbox'ının Apps klasörünün içindedir. Gamerdex yalnızca o klasörü açabilir.",
+        "microsoftNote": "Gamerdex klasörü OneDrive'ının Apps klasörünün içindedir. Gamerdex yalnızca o klasörü açabilir."
+    },
+    "device": {
+        "title": "Bu cihaz",
+        "name": "Cihaz adı",
+        "nameHint": "Senkronizasyon dosyaları bu cihaz için bu adı gösterir. Adı değiştirmek, meta dosyasını bir sonraki senkronizasyonda günceller.",
+        "activePlaythrough": "Etkin oynanış",
+        "noPlaythrough": "Yok",
+        "login": "Senkronizasyon girişi",
+        "loginValue": "Yalnızca bu cihazda",
+        "loginHint": "Etkin oynanış her cihazda ayrı bir seçimdir ve senkronizasyon onu asla değiştirmez. Girişin bu cihazda kalır. Kayıtlı veride, yedek dosyasında veya senkronizasyon dosyalarında bulunmaz."
+    },
+    "disconnect": {
+        "title": "Bağlantıyı kes",
+        "body": "Bu tarayıcıda senkronizasyonu durdurur. Oynanışların bu cihazda ve bulutta kalır. Diğer cihazlar senkronize etmeye devam eder.",
+        "button": "{provider} bağlantısını kes",
+        "googleHint": "Bulut kopyasını kendin silmek için bağlantıyı kes, sonra Google Drive'ındaki Gamerdex klasörünü sil.",
+        "githubHint": "Bulut kopyasını kendin silmek için bağlantıyı kes, sonra deponun içindeki Gamerdex klasörünü sil.",
+        "dropboxHint": "Bulut kopyasını kendin silmek için bağlantıyı kes, sonra Dropbox'ında Apps altındaki uygulama klasörünü sil.",
+        "microsoftHint": "Bulut kopyasını kendin silmek için bağlantıyı kes, sonra OneDrive'ında Apps altındaki uygulama klasörünü sil."
+    },
+    "first": {
+        "thisDevice": "Bu cihaz",
+        "cloud": "Bulut",
+        "recommended": "Önerilen",
+        "later": "Sonra karar ver",
+        "apply": "Seçimi uygula",
+        "optionsLabel": "Neyin tutulacağı"
+    }
+}

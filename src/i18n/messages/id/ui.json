@@ -1,0 +1,51 @@
+{
+    "close": "Tutup",
+    "field": {
+        "optional": "Opsional"
+    },
+    "stepper": {
+        "lower": "Turunkan {label}",
+        "raise": "Naikkan {label}",
+        "labelPrefix": "{label}, "
+    },
+    "switch": {
+        "on": "Aktif",
+        "off": "Nonaktif"
+    },
+    "tabs": {
+        "locked": " (terkunci)"
+    },
+    "toast": {
+        "dismiss": "Tutup",
+        "variants": {
+            "success": "Berhasil",
+            "info": "Info",
+            "warning": "Peringatan",
+            "error": "Kesalahan"
+        },
+        "missingProvider": "useToast must be used within a ToastProvider"
+    },
+    "savedChip": {
+        "automatic": "Tersimpan otomatis",
+        "justNow": "Baru saja tersimpan",
+        "minutesAgo": "Tersimpan {count} mnt lalu",
+        "at": "Tersimpan {time}",
+        "failed": "Tidak tersimpan, penyimpanan penuh"
+    },
+    "filters": {
+        "filters": "Filter",
+        "filtersWithCount": "Filter ({count})",
+        "clearFilters": "Hapus filter",
+        "clearAll": "Hapus semua",
+        "cancel": "Batal",
+        "showResults": "Tampilkan hasil",
+        "search": "Cari"
+    },
+    "commerce": {
+        "label": "Dijual di level perdagangan",
+        "base": "Dasar",
+        "plus5": "+5%",
+        "plus10": "+10%",
+        "plus15": "+15%"
+    }
+}

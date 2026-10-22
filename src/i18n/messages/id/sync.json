@@ -1,0 +1,234 @@
+{
+    "tab": {
+        "title": "Sinkronisasi cloud",
+        "description": "Simpan permainanmu di repositori GitHub privat dan bagikan antar perangkatmu."
+    },
+    "unavailable": "Sinkronisasi tidak tersedia di build ini.",
+    "privacy": "Datamu dikirim ke repositori privat di akun GitHub milikmu sendiri. Gamerdex tidak punya server yang menyimpannya, dan aplikasi hanya bisa mengakses satu repositori yang kamu pilih.",
+    "repository": {
+        "title": "Siapkan repositori datamu",
+        "body": "Datamu disimpan di repositori privat bernama {name} di akun GitHub-mu. Gamerdex Sync hanya bisa mengakses satu repositori itu.",
+        "checking": "Mencari {name}",
+        "checkFailed": "Repositorimu tidak bisa dimuat. Periksa koneksimu lalu cek lagi.",
+        "found": "{fullName} ditemukan",
+        "public": "Repositori {fullName} bersifat publik. Jadikan privat di pengaturan GitHub-nya, lalu cek lagi. Repositori publik tidak bisa dipakai, karena siapa saja bisa membaca datamu.",
+        "missing": "Repositori {name} tidak ditemukan",
+        "steps": {
+            "create": "Buat repositori privat bernama {name}. Centang Add a README file.",
+            "install": "Beri Gamerdex Sync akses ke repositori itu saja. Pilih Only select repositories, lalu pilih {name}.",
+            "recheck": "Kembali ke sini dan cek lagi."
+        },
+        "createButton": "Buat repositori",
+        "installButton": "Pilih repositori di GitHub",
+        "recheckButton": "Cek lagi"
+    },
+    "connected": {
+        "title": "Terhubung",
+        "repository": "Repositori",
+        "lastSync": "Sinkronisasi terakhir",
+        "never": "Belum tersinkron",
+        "syncNow": "Sinkronkan sekarang",
+        "signOut": "Keluar",
+        "signedOut": "Sudah keluar. Data di perangkat ini tidak berubah.",
+        "storage": "Disimpan di",
+        "folder": "Folder {name}",
+        "signInWith": "Masuk dengan {provider}"
+    },
+    "status": {
+        "idle": "Tersinkron",
+        "syncing": "Menyinkronkan",
+        "offline": "Offline",
+        "reauth": "Masuk lagi",
+        "needsChoice": "Perlu pilihanmu",
+        "error": "Sinkronisasi gagal",
+        "signedOut": "Belum masuk",
+        "needsRepository": "Pilih repositori",
+        "conflicts": "Tinjau perubahan"
+    },
+    "error": {
+        "rateLimit": "GitHub membatasi permintaan. Sinkronisasi akan berfungsi lagi dalam beberapa menit.",
+        "notFound": "Repositori tidak ditemukan. Pilih lagi.",
+        "server": "GitHub tidak menjawab dengan benar. Coba lagi nanti.",
+        "data": "Data tersinkron tidak valid, jadi tidak ada yang diubah.",
+        "busy": "Perangkat lain terus mengubah data. Coba lagi sebentar lagi.",
+        "other": "Terjadi masalah. Tidak ada yang diubah.",
+        "reauth": "Sesi masukmu berakhir. Masuk lagi untuk terus menyinkronkan.",
+        "forbidden": "GitHub menolak akses ke repositori. Pastikan Gamerdex Sync punya akses Read and write ke Contents, lalu sinkronkan lagi.",
+        "httpStatus": "GitHub menjawab {status}.",
+        "notFoundFolder": "File atau folder di {provider} tidak ditemukan. Sinkronkan lagi.",
+        "forbiddenFolder": "{provider} menolak akses. Masuk lagi dan izinkan akses ke file yang dibuat Gamerdex.",
+        "httpStatusFolder": "{provider} menjawab {status}."
+    },
+    "choice": {
+        "title": "Perangkat ini dan cloud sama-sama punya data",
+        "body": "Ini sinkronisasi pertama dari perangkat ini. Pilih apa yang dilakukan. Tidak ada yang dihapus dari cloud sampai kamu memilih.",
+        "counts": "Perangkat ini: {local}. Cloud: {cloud}.",
+        "merge": "Gabungkan keduanya",
+        "mergeHint": "Simpan semuanya dari kedua sisi. Level yang lebih tinggi menang.",
+        "keepLocal": "Pakai perangkat ini",
+        "keepLocalHint": "Ganti data cloud dengan data di perangkat ini.",
+        "keepCloud": "Pakai cloud",
+        "keepCloudHint": "Ganti data di perangkat ini dengan data cloud."
+    },
+    "conflicts": {
+        "title": "Perubahan yang tidak bisa digabung",
+        "body": "Dua perangkat mengubah nilai yang sama. Nilai cloud dipertahankan. Pilih nilai perangkat ini untuk memakainya.",
+        "cloudValue": "Cloud",
+        "deviceValue": "Perangkat ini",
+        "keepDevice": "Pakai nilai perangkat ini",
+        "dismiss": "Tutup",
+        "empty": "Kosong",
+        "deletedEdited": "Satu perangkat menghapus ini dan perangkat lain mengubahnya. Versi yang diubah dipertahankan."
+    },
+    "callback": {
+        "title": "Sedang masuk",
+        "working": "Menyelesaikan proses masuk",
+        "back": "Kembali ke Pengaturan",
+        "denied": "Proses masuk dibatalkan.",
+        "state": "Proses masuk tidak bisa diperiksa. Mulai lagi dari Pengaturan.",
+        "missing": "Proses masuk tidak mengirim kode. Mulai lagi dari Pengaturan.",
+        "failed": "Proses masuk tidak bisa diselesaikan. Coba lagi nanti."
+    },
+    "playthroughCount": "{count, plural, other {{amount} permainan}}",
+    "provider": {
+        "github": {
+            "name": "GitHub",
+            "tile": "Repositori privat milikmu bernama {name}.",
+            "badge": "Untuk developer"
+        },
+        "google": {
+            "name": "Google Drive",
+            "tile": "Folder Gamerdex yang terlihat di Drive-mu. Gamerdex hanya melihat file yang dibuatnya sendiri.",
+            "badge": "Disarankan"
+        },
+        "dropbox": {
+            "name": "Dropbox",
+            "tile": "Folder Gamerdex di dalam folder Apps di Dropbox-mu. Gamerdex hanya melihat folder itu.",
+            "badge": "Hanya folder aplikasi"
+        },
+        "microsoft": {
+            "name": "OneDrive",
+            "tile": "Folder Gamerdex di dalam folder Apps di OneDrive-mu. Gamerdex hanya melihat folder itu.",
+            "badge": "Akun pribadi"
+        }
+    },
+    "connect": {
+        "title": "Sinkronkan antar perangkat",
+        "pill": "Tidak terhubung",
+        "intro": "Samakan permainanmu di komputer dan ponsel. Sinkronisasi bersifat opsional dan gratis. Pilih tempat salinan disimpan.",
+        "pickerLabel": "Tempat menyimpan salinan",
+        "panelTitle": "Hubungkan {provider}",
+        "another": "Kamu bisa memilih penyedia lain sebelum masuk.",
+        "firstSync": "Pilih apa yang dipertahankan saat sinkronisasi pertama jika kedua sisi sudah punya data. Tidak ada yang diganti sebelum kamu memutuskan.",
+        "google": {
+            "step1": "Masuk dengan Google di jendela ini.",
+            "step2": "Izinkan akses ke file yang dibuat Gamerdex. Aplikasi tidak bisa melihat file lainmu.",
+            "button": "Hubungkan Google Drive"
+        },
+        "github": {
+            "step1": "Buat repositori privat kosong bernama {name}. Centang Add a README file.",
+            "step2": "Masuk dengan GitHub, lalu beri Gamerdex Sync akses ke repositori itu saja.",
+            "button": "Hubungkan GitHub"
+        },
+        "dropbox": {
+            "step1": "Masuk dengan Dropbox di jendela ini.",
+            "step2": "Izinkan akses ke folder aplikasi Gamerdex. Aplikasi tidak bisa melihat file lainmu.",
+            "button": "Hubungkan Dropbox"
+        },
+        "microsoft": {
+            "step1": "Masuk dengan akun Microsoft pribadimu di jendela ini.",
+            "step2": "Izinkan akses ke folder aplikasi Gamerdex. Aplikasi tidak bisa melihat file lainmu.",
+            "button": "Hubungkan OneDrive"
+        }
+    },
+    "how": {
+        "title": "Cara kerja sinkronisasi",
+        "one": "Permainanmu disimpan sebagai satu file di penyimpananmu sendiri, dengan format yang sama seperti file cadangan, ditambah file kecil untuk daftar perangkat.",
+        "two": "Gamerdex tidak punya server yang menyimpan datamu. Browsermu berbicara langsung ke penyimpananmu.",
+        "three": "Item dan level yang ditandai mempertahankan perubahan dari perangkat mana pun, dan level yang lebih tinggi menang. Jika kedua perangkat mengubah nama atau hari saat ini, kamu memilih yang mana dipertahankan.",
+        "four": "Setiap perangkat menyimpan permainan aktifnya sendiri. Sinkronisasi tidak pernah menggantinya.",
+        "five": "Putuskan kapan saja. Permainanmu tetap ada di setiap perangkat."
+    },
+    "banner": {
+        "title": "{count, plural, other {{amount} perubahan perlu keputusan}}",
+        "body": "Dua perangkat mengubah nilai yang sama. Nilai cloud dipertahankan sampai kamu memutuskan.",
+        "review": "Tinjau",
+        "waiting": "Sinkronisasi pertama menunggu pilihanmu.",
+        "choose": "Pilih"
+    },
+    "playthroughs": {
+        "title": "Permainan",
+        "thisDevice": "Perangkat ini",
+        "cloud": "Cloud, sinkronisasi terakhir",
+        "notInCloud": "Belum ada di cloud",
+        "review": "Tinjau",
+        "note": "Menghapus permainan akan menghilangkannya dari file sinkronisasi pada sinkronisasi berikutnya.",
+        "status": {
+            "synced": "Tersinkron",
+            "changedHere": "Diubah di sini",
+            "conflict": "Konflik",
+            "newHere": "Baru di sini"
+        },
+        "describe": "Hari {day}, {season} · {percent}%"
+    },
+    "activity": {
+        "title": "Aktivitas sinkronisasi terbaru",
+        "empty": "Belum ada yang tersinkron.",
+        "connected": "{provider} terhubung di browser ini.",
+        "uploaded": "Perubahan dari perangkat ini diunggah.",
+        "downloaded": "Perubahan dari cloud diunduh.",
+        "merged": "Perubahan kedua sisi digabung.",
+        "conflicts": "{count, plural, other {{amount} perubahan perlu keputusan.}}",
+        "failed": "Sinkronisasi gagal."
+    },
+    "settings": {
+        "title": "Pengaturan sinkronisasi",
+        "auto": "Sinkronkan otomatis",
+        "autoHint": "Menyinkronkan saat pelacak dibuka dan beberapa detik setelah setiap perubahan.",
+        "focus": "Cek perubahan saat aku kembali ke tab",
+        "focusHint": "Mengambil data cloud yang lebih baru saat kamu kembali ke pelacak.",
+        "metered": "Tunggu aku di koneksi terbatas",
+        "meteredHint": "Melewati sinkronisasi otomatis saat browser melaporkan koneksi penghemat data. Sinkronkan sekarang tetap berfungsi."
+    },
+    "lives": {
+        "title": "Tempat datamu disimpan",
+        "storage": "Penyimpanan",
+        "folder": "Folder",
+        "dataFile": "File data",
+        "metaFile": "File meta",
+        "size": "Ukuran",
+        "kb": "{amount} KB",
+        "note": "File data memakai format yang sama dengan file cadangan. File meta berisi daftar perangkat dan tidak ada data game. Info masukmu tidak pernah ada di kedua file.",
+        "googleNote": "Folder Gamerdex terlihat di Drive-mu. Gamerdex hanya bisa membuka file yang dibuatnya.",
+        "githubNote": "Jaga repositori tetap privat. Siapa saja yang bisa membukanya bisa membaca datamu.",
+        "dropboxNote": "Folder Gamerdex ada di dalam folder Apps di Dropbox-mu. Gamerdex hanya bisa membuka folder itu.",
+        "microsoftNote": "Folder Gamerdex ada di dalam folder Apps di OneDrive-mu. Gamerdex hanya bisa membuka folder itu."
+    },
+    "device": {
+        "title": "Perangkat ini",
+        "name": "Nama perangkat",
+        "nameHint": "File sinkronisasi menampilkan nama ini untuk perangkat ini. Mengganti nama memperbarui file meta pada sinkronisasi berikutnya.",
+        "activePlaythrough": "Permainan aktif",
+        "noPlaythrough": "Tidak ada",
+        "login": "Login sinkronisasi",
+        "loginValue": "Hanya di perangkat ini",
+        "loginHint": "Permainan aktif dipilih di setiap perangkat, dan sinkronisasi tidak pernah mengubahnya. Info masukmu tetap di perangkat ini. Info itu tidak pernah ada di data tersimpan, file cadangan, atau file sinkronisasi."
+    },
+    "disconnect": {
+        "title": "Putuskan",
+        "body": "Menghentikan sinkronisasi di browser ini. Permainanmu tetap ada di perangkat ini dan di cloud. Perangkat lain terus menyinkronkan.",
+        "button": "Putuskan {provider}",
+        "googleHint": "Untuk menghapus salinan cloud sendiri, putuskan, lalu hapus folder Gamerdex di Google Drive-mu.",
+        "githubHint": "Untuk menghapus salinan cloud sendiri, putuskan, lalu hapus folder Gamerdex di repositorimu.",
+        "dropboxHint": "Untuk menghapus salinan cloud sendiri, putuskan, lalu hapus folder aplikasi di bawah Apps di Dropbox-mu.",
+        "microsoftHint": "Untuk menghapus salinan cloud sendiri, putuskan, lalu hapus folder aplikasi di bawah Apps di OneDrive-mu."
+    },
+    "first": {
+        "thisDevice": "Perangkat ini",
+        "cloud": "Cloud",
+        "recommended": "Disarankan",
+        "later": "Putuskan nanti",
+        "apply": "Terapkan pilihan",
+        "optionsLabel": "Yang dipertahankan"
+    }
+}

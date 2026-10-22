@@ -1,0 +1,116 @@
+{
+    "title": "Resumo",
+    "subline": "{done} de {total} itens · {percent}% · {name}",
+    "view": "Ver",
+    "headline": {
+        "label": "Conclusão total",
+        "ofItems": "{done} de {total} itens",
+        "groups": {
+            "track": "Acompanhar",
+            "progress": "Progresso",
+            "collect": "Recolher"
+        },
+        "groupOf": "{done} de {total}",
+        "note": "Denominador fixo de {total} itens: Pedia {pedia}, NPCs {npcs}, Marcos {milestones}, Licenças {licenses}, Competências {skills}, Edifícios {buildings}, Material {gear}, Roupa e casa {wardrobe}, Receitas {recipes}. Todas as categorias contam desde o primeiro dia, por isso a percentagem não salta ao abrir um separador novo."
+    },
+    "skills": {
+        "title": "Competências da personagem",
+        "level": "Nível {level}",
+        "empty": "Ainda sem competências registadas."
+    },
+    "licenses": {
+        "title": "Progresso das licenças",
+        "obtained": "Licenças obtidas",
+        "complete": "{count}/{total} concluídas",
+        "levels": "Níveis de licença",
+        "levelsValue": "{count}/{total} · {percent}%",
+        "permit": "Pontos de licença gastos",
+        "spent": "{percent}% gastos"
+    },
+    "milestones": {
+        "title": "Progresso dos marcos",
+        "overall": "Progresso total",
+        "complete": "{count}/{total} concluídos",
+        "levels": "Níveis",
+        "levelsValue": "{count}/{total} · {percent}%",
+        "permit": "Pontos de licença ganhos",
+        "earned": "{percent}% ganhos"
+    },
+    "pedia": {
+        "title": "Progresso da Pedia",
+        "overall": "Progresso total ({count}/{total})",
+        "donations": "Doações ao museu ({count}/{total})",
+        "fish": "Peixes ({count}/{total})",
+        "bugs": "Insetos ({count}/{total})",
+        "critters": "Bichos ({count}/{total})",
+        "donated": "Doados ({count}/{total})",
+        "permit": "Pontos de licença ganhos",
+        "earned": "{percent}% ganhos"
+    },
+    "gear": {
+        "title": "Material e equipamento",
+        "overall": "Progresso total ({count}/{total})",
+        "books": "Livros ({count}/{total})",
+        "tools": "Ferramentas ({count}/{total})",
+        "weapons": "Armas ({count}/{total})",
+        "equipment": "Equipamento ({count}/{total})",
+        "vehicles": "Veículos ({count}/{total})",
+        "cassettes": "Cassetes ({count}/{total})",
+        "names": {
+            "books": "Livros",
+            "tools": "Ferramentas",
+            "weapons": "Armas",
+            "equipment": "Equipamento",
+            "vehicles": "Veículos",
+            "cassettes": "Cassetes"
+        },
+        "mostComplete": "Mais completo",
+        "leastComplete": "Menos completo"
+    },
+    "buildings": {
+        "title": "Progresso dos edifícios",
+        "overall": "Progresso total",
+        "complete": "{count}/{total} concluídos",
+        "houseUpgrades": "Melhorias da casa",
+        "shops": "Lojas",
+        "town": "Edifícios da vila",
+        "utility": "Edifícios utilitários",
+        "mostExpensive": "Edifícios mais caros",
+        "price": "{amount} Dinks"
+    },
+    "recipes": {
+        "title": "Coleção de receitas",
+        "overall": "Progresso total ({count}/{total})",
+        "cooking": "Culinária ({count}/{total})",
+        "crafting": "Criação ({count}/{total})",
+        "signWriting": "Letreiros ({count}/{total})",
+        "names": {
+            "cooking": "Culinária",
+            "crafting": "Criação",
+            "signWriting": "Letreiros"
+        },
+        "mostComplete": "Mais completa",
+        "leastComplete": "Menos completa"
+    },
+    "npcs": {
+        "title": "Relações com NPCs",
+        "total": "Total de NPCs",
+        "friends": "Amigos",
+        "oneHeart": "1+ corações",
+        "maxHearts": "Máx. de corações",
+        "avgHearts": "Média de corações",
+        "top": "Melhores relações",
+        "hearts": "{hearts, plural, one {{amount} coração} other {{amount} corações}}",
+        "empty": "Ainda sem NPCs registados."
+    },
+    "game": {
+        "title": "Informação do jogo",
+        "calendar": "Calendário do jogo",
+        "date": "Dia {day}, {season}",
+        "tracking": "Acompanhamento real",
+        "daysSince": "Dias desde a criação: {days}",
+        "lastUpdated": "Última atualização: {date}",
+        "milestones": "Marcos",
+        "completed": "{count} concluídos"
+    }
+}

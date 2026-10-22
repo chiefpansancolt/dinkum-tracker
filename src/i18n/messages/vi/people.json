@@ -1,0 +1,98 @@
+{
+    "npcs": {
+        "title": "NPC",
+        "subline": "{hearts} trên {total} tim · {count} NPC · {name}",
+        "tiles": {
+            "total": "Tổng số tim",
+            "full": "Đủ tim",
+            "met": "Đã gặp",
+            "of": "trên {total}",
+            "ofNpcs": "trên {total} NPC"
+        },
+        "filters": {
+            "search": "Tìm NPC theo tên",
+            "sheetTitle": "Lọc NPC",
+            "relationship": "Quan hệ",
+            "residence": "Sống trên đảo",
+            "all": "Tất cả",
+            "none": "Chưa có tim",
+            "progress": "Đang tiến triển",
+            "full": "Đủ tim",
+            "canMoveIn": "Có thể chuyển đến",
+            "visitors": "Chỉ khách ghé thăm",
+            "showing": "Hiển thị {shown} trên {total} NPC · Đủ tim {full} · Đã gặp {met}",
+            "apply": "Xem {count} NPC"
+        },
+        "hint": "Bấm vào một tim để đặt số tim. Bấm vào tim đầy cuối cùng để bỏ nó. Dùng -{step} và +{step} để chỉnh theo từng phần tư.",
+        "things": "NPC",
+        "card": {
+            "full": "Đủ",
+            "requirements": "Yêu cầu",
+            "visit": "Ghé thăm",
+            "moveIn": "Chuyển đến",
+            "food": "Món ăn ưa thích",
+            "likes": "Thích",
+            "dislikes": "Không thích",
+            "none": "Không có"
+        },
+        "hearts": {
+            "label": "Tim của {name}",
+            "setTo": "Đặt {name} thành {count, plural, other {{amount} tim}}",
+            "less": "- {step}",
+            "more": "+ {step}",
+            "lessLabel": "Giảm {step} tim",
+            "moreLabel": "Tăng {step} tim",
+            "readout": "{hearts} / {max}"
+        },
+        "toast": {
+            "set": "{name}: {hearts} trên 5 tim"
+        },
+        "empty": {
+            "title": "Không có NPC nào khớp bộ lọc",
+            "description": "Hãy thử tên khác hoặc xóa bộ lọc.",
+            "clear": "Xóa bộ lọc"
+        }
+    },
+    "calendar": {
+        "title": "Lịch",
+        "subline": "{season} · {events} sự kiện · {birthdays} sinh nhật · {name}",
+        "previous": "Mùa trước",
+        "next": "Mùa sau",
+        "today": "Hôm nay",
+        "legend": {
+            "event": "Sự kiện",
+            "birthday": "Sinh nhật",
+            "current": "Ngày hiện tại"
+        },
+        "alert": "Ngày hiện tại: {day} {season}. Bấm vào một ngày bất kỳ để đặt làm ngày hiện tại. Thay đổi được lưu ngay.",
+        "weekdays": {
+            "Sunday": "CN",
+            "Monday": "T2",
+            "Tuesday": "T3",
+            "Wednesday": "T4",
+            "Thursday": "T5",
+            "Friday": "T6",
+            "Saturday": "T7"
+        },
+        "more": "+ {count} nữa",
+        "dayLabel": "{weekday}, {day} {season}",
+        "details": {
+            "title": "{weekday}, {day} {season}",
+            "events": "Sự kiện",
+            "birthdays": "Sinh nhật",
+            "noEvents": "Hôm nay không có sự kiện.",
+            "noBirthdays": "Hôm nay không có sinh nhật.",
+            "current": "Ngày hiện tại",
+            "close": "Đóng"
+        },
+        "toast": {
+            "set": "Đã đặt ngày hiện tại là {day} {season}"
+        },
+        "cellEntries": "{count, plural, other {{amount} mục}}",
+        "entries": {
+            "birthday": "Sinh nhật của {name}",
+            "range": "Ngày {start}-{end} của mùa {season}",
+            "likes": "Thích: {food}"
+        }
+    }
+}

@@ -1,0 +1,91 @@
+{
+    "buffs": {
+        "attackLevel": "Angriff",
+        "charged": "Aufgeladen",
+        "coolLevel": "Coolness",
+        "defenseLevel": "Verteidigung",
+        "diligent": "Fleißig",
+        "experienceLevel": "Erfahrung",
+        "fastHealthTickSpeedLevel": "Schnelle Gesundheitsticks",
+        "fishLevel": "Fischen",
+        "foragingLevel": "Sammeln",
+        "healthMax": "Max. Gesundheit",
+        "healthRegenRate": "Gesundheitsregeneration",
+        "length": "Dauer",
+        "miningLevel": "Bergbau",
+        "sleepless": "Schlaflos",
+        "speedLevel": "Tempo",
+        "staminaMax": "Max. Ausdauer",
+        "staminaRegenRate": "Ausdauerregeneration",
+        "swimmingLevel": "Schwimmen"
+    },
+    "categories": {
+        "buildings": "Gebäude",
+        "tools": "Werkzeuge",
+        "weapons": "Waffen",
+        "equipment": "Zubehör",
+        "vehicles": "Fahrzeuge",
+        "craftingRecipes": "Bastelrezepte",
+        "cookingRecipes": "Kochrezepte",
+        "signWritingRecipes": "Schilder-Rezepte",
+        "otherCraftables": "Weitere Bastelobjekte"
+    },
+    "resourceTypes": {
+        "fish": "Fisch",
+        "critter": "Kleintier",
+        "bug": "Insekt",
+        "relic": "Relikt",
+        "crop": "Feldfrucht",
+        "foragable": "Sammelware",
+        "animalProduct": "Tierprodukt",
+        "paint": "Farbe",
+        "mineral": "Mineral",
+        "craftable": "Bastelobjekt",
+        "trophy": "Trophäe",
+        "seed": "Samen",
+        "flower": "Blume",
+        "resource": "Rohstoff"
+    },
+    "daily": {
+        "dayOneMilestones": "Tag eins",
+        "travelMilestones": "Reisen",
+        "npcMilestones": "NPCs",
+        "fishingMilestones": "Angeln",
+        "farmingMilestones": "Landwirtschaft",
+        "foragingMilestones": "Sammeln",
+        "loggingMilestones": "Holzfällen",
+        "miningMilestones": "Bergbau",
+        "excavationMilestones": "Ausgraben",
+        "bugCatchingMilestones": "Insektenfang",
+        "craftingMilestones": "Basteln",
+        "huntingMilestones": "Jagen",
+        "trappingMilestones": "Fallenstellen",
+        "dinksMilestones": "Dinks"
+    },
+    "animalTypes": {
+        "Wild Animal": "Wildtier",
+        "Farm Animal": "Nutztier",
+        "Tammed Animal": "Gezähmtes Tier"
+    },
+    "temperaments": {
+        "Passive": "Friedlich",
+        "Neutral": "Neutral",
+        "Aggressive": "Aggressiv"
+    },
+    "seasons": {
+        "Spring": "Frühling",
+        "Summer": "Sommer",
+        "Autumn": "Herbst",
+        "Winter": "Winter",
+        "All": "Alle"
+    },
+    "weekdays": {
+        "Sunday": "Sonntag",
+        "Monday": "Montag",
+        "Tuesday": "Dienstag",
+        "Wednesday": "Mittwoch",
+        "Thursday": "Donnerstag",
+        "Friday": "Freitag",
+        "Saturday": "Samstag"
+    }
+}

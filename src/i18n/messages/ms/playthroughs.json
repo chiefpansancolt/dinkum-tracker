@@ -1,0 +1,124 @@
+{
+    "title": "Permainan",
+    "subline": "Urus pengembaraan Dinkum anda. {count, plural, other {{amount} permainan}}, {name} aktif.",
+    "sublineNoneActive": "Urus pengembaraan Dinkum anda. {count, plural, other {{amount} permainan}}.",
+    "sublineEmpty": "Belum ada permainan.",
+    "loading": "Memuatkan permainan...",
+    "stats": {
+        "playthroughs": "Permainan",
+        "playthroughsCaption": "dalam pelayar ini",
+        "active": "Aktif",
+        "noneActive": "Tiada",
+        "furthest": "Paling maju",
+        "average": "Purata kemajuan",
+        "averageCaption": "merentas semua"
+    },
+    "filters": {
+        "sortBy": "Isih mengikut",
+        "sort": {
+            "lastUpdated": "Terakhir dikemas kini",
+            "name": "Nama",
+            "createdAt": "Tarikh dicipta",
+            "completion": "Peratusan kemajuan"
+        },
+        "search": "Cari permainan mengikut nama",
+        "showing": "Menunjukkan {shown} daripada {total} {total, plural, other {permainan}}",
+        "defaultSortFrom": "Isihan lalai datang daripada <link>Tetapan</link>"
+    },
+    "noMatch": {
+        "title": "Tiada permainan sepadan dengan \"{query}\"",
+        "description": "Cuba nama lain.",
+        "clear": "Kosongkan carian"
+    },
+    "empty": {
+        "title": "Tiada permainan ditemui",
+        "description": "Anda belum mencipta sebarang permainan. Mula menjejak pengembaraan Dinkum anda dengan mencipta permainan pertama. Setiap satu disimpan dalam pelayar ini.",
+        "create": "Cipta permainan pertama anda",
+        "importBackup": "Import sandaran sebaliknya"
+    },
+    "card": {
+        "created": "Dicipta: {date}",
+        "updated": "Dikemas kini: {when}",
+        "complete": "{percent}% siap",
+        "overall": "Kemajuan keseluruhan",
+        "pedia": "Pedia",
+        "licenses": "Lesen",
+        "milestones": "Pencapaian",
+        "buildings": "Bangunan",
+        "pediaDetail": "Ikan {fish} · Serangga {bugs} · Hidupan kecil {critters}",
+        "count": "{count}/{total}",
+        "gameDate": "Hari {day}, {season}",
+        "currentGameDate": "Tarikh game semasa",
+        "setActive": "Jadikan aktif",
+        "active": "Aktif",
+        "openOverview": "Buka ringkasan",
+        "edit": "Sunting",
+        "delete": "Padam",
+        "activePlaythrough": "Permainan aktif"
+    },
+    "seasons": {
+        "Spring": "Musim bunga",
+        "Summer": "Musim panas",
+        "Autumn": "Musim luruh",
+        "Winter": "Musim sejuk"
+    },
+    "relative": {
+        "today": "Hari ini",
+        "yesterday": "Semalam",
+        "daysAgo": "{count, plural, other {{amount} hari lalu}}",
+        "weeksAgo": "{count, plural, other {{amount} minggu lalu}}",
+        "monthsAgo": "{count, plural, other {{amount} bulan lalu}}",
+        "unknown": "T/B"
+    },
+    "new": {
+        "action": "Permainan baharu",
+        "actionShort": "Baharu",
+        "pageTitle": "Permainan baharu",
+        "pageSubline": "Beri nama dan mula menjejak. Semuanya disimpan dalam pelayar ini.",
+        "back": "Kembali ke semua permainan",
+        "next": {
+            "title": "Apa yang berlaku seterusnya",
+            "one": "Permainan kosong disimpan dalam pelayar ini serta-merta.",
+            "two": "Ia menjadi permainan aktif jika kotak ditandakan. Penukar di bar sisi menunjukkannya.",
+            "three": "Anda dibawa ke senarai Permainan dengan kad baharu di atas dan toast Buat asal."
+        },
+        "createdToast": "{name} dicipta"
+    },
+    "form": {
+        "title": "Cipta permainan baharu",
+        "nameLabel": "Nama permainan",
+        "required": "Wajib",
+        "placeholder": "Pengembaraan Dinkum saya",
+        "help": "Beri permainan anda nama yang mudah diingat supaya mudah dikenali kemudian.",
+        "counter": "{count} / {max}",
+        "errorEmpty": "Sila masukkan nama untuk permainan anda",
+        "makeActive": "Jadikan ini permainan aktif",
+        "create": "Cipta permainan",
+        "creating": "Mencipta...",
+        "cancel": "Batal",
+        "failed": "Gagal mencipta permainan. Sila cuba lagi.",
+        "tryAgain": "Cuba lagi"
+    },
+    "edit": {
+        "title": "Sunting permainan",
+        "save": "Simpan",
+        "saving": "Menyimpan...",
+        "savedToast": "Disimpan",
+        "renamed": "Dinamakan semula kepada {name}",
+        "description": "{name} · dicipta {date}",
+        "nameLabel": "Nama permainan",
+        "help": "Tekan Enter untuk menyimpan. Simpan kekal tidak aktif selagi nama kosong."
+    },
+    "delete": {
+        "title": "Padam {name}?",
+        "description": "Ini membuang semua kemajuan tersimpannya pada peranti ini.",
+        "activeNext": "Ini permainan aktif anda. {next} paling baru dikemas kini, jadi ia menjadi aktif selepas pemadaman.",
+        "activeLast": "Ini permainan aktif anda dan satu-satunya. Tiada permainan aktif selepas pemadaman.",
+        "exportFirst": "Eksport sandaran dahulu",
+        "confirm": "Padam",
+        "cancel": "Batal",
+        "toast": "{name} dipadam",
+        "toastMessage": "Buat asal tersedia selama 10 saat",
+        "updated": "Dikemas kini {when} · {date}"
+    }
+}

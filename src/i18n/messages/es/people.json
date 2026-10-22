@@ -1,0 +1,98 @@
+{
+    "npcs": {
+        "title": "PNJ",
+        "subline": "{hearts} de {total} corazones · {count} PNJ · {name}",
+        "tiles": {
+            "total": "Corazones en total",
+            "full": "Corazones completos",
+            "met": "Conocidos hasta ahora",
+            "of": "de {total}",
+            "ofNpcs": "de {total} PNJ"
+        },
+        "filters": {
+            "search": "Buscar PNJ por nombre",
+            "sheetTitle": "Filtrar PNJ",
+            "relationship": "Relación",
+            "residence": "Vive en la isla",
+            "all": "Todos",
+            "none": "Sin corazones",
+            "progress": "En curso",
+            "full": "Corazones completos",
+            "canMoveIn": "Pueden mudarse",
+            "visitors": "Solo visitantes",
+            "showing": "Mostrando {shown} de {total} PNJ · Corazones completos {full} · Conocidos {met}",
+            "apply": "Ver {count} PNJ"
+        },
+        "hint": "Pulsa un corazón para fijarlo. Pulsa el último corazón lleno para quitarlo. Usa -{step} y +{step} para ajustar por cuartos.",
+        "things": "PNJ",
+        "card": {
+            "full": "Completo",
+            "requirements": "Requisitos",
+            "visit": "Visita",
+            "moveIn": "Mudanza",
+            "food": "Preferencias de comida",
+            "likes": "Le gusta",
+            "dislikes": "No le gusta",
+            "none": "Ninguna"
+        },
+        "hearts": {
+            "label": "Corazones de {name}",
+            "setTo": "Poner a {name} en {count, plural, one {{amount} corazón} other {{amount} corazones}}",
+            "less": "- {step}",
+            "more": "+ {step}",
+            "lessLabel": "Restar {step} corazones",
+            "moreLabel": "Sumar {step} corazones",
+            "readout": "{hearts} / {max}"
+        },
+        "toast": {
+            "set": "{name}: {hearts} de 5 corazones"
+        },
+        "empty": {
+            "title": "Ningún PNJ coincide con estos filtros",
+            "description": "Prueba con otro nombre o borra los filtros.",
+            "clear": "Borrar filtros"
+        }
+    },
+    "calendar": {
+        "title": "Calendario",
+        "subline": "{season} · {events} eventos · {birthdays} cumpleaños · {name}",
+        "previous": "Estación anterior",
+        "next": "Estación siguiente",
+        "today": "Hoy",
+        "legend": {
+            "event": "Evento",
+            "birthday": "Cumpleaños",
+            "current": "Día actual"
+        },
+        "alert": "Día actual: {day} {season}. Pulsa cualquier día para fijarlo como día actual. Los cambios se guardan al momento.",
+        "weekdays": {
+            "Sunday": "dom",
+            "Monday": "lun",
+            "Tuesday": "mar",
+            "Wednesday": "mié",
+            "Thursday": "jue",
+            "Friday": "vie",
+            "Saturday": "sáb"
+        },
+        "more": "+ {count} más",
+        "dayLabel": "{weekday}, {day} {season}",
+        "details": {
+            "title": "{weekday}, {day} {season}",
+            "events": "Eventos",
+            "birthdays": "Cumpleaños",
+            "noEvents": "Hoy no hay eventos.",
+            "noBirthdays": "Hoy no hay cumpleaños.",
+            "current": "Día actual",
+            "close": "Cerrar"
+        },
+        "toast": {
+            "set": "Día actual fijado en {day} {season}"
+        },
+        "cellEntries": "{count, plural, one {{amount} entrada} other {{amount} entradas}}",
+        "entries": {
+            "birthday": "Cumpleaños de {name}",
+            "range": "Días {start}-{end} de {season}",
+            "likes": "Le gusta: {food}"
+        }
+    }
+}

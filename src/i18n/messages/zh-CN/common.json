@@ -1,0 +1,8 @@
+{
+    "saveFailed": {
+        "title": "未保存",
+        "message": "浏览器无法存储你的数据。请导出备份，以免丢失修改。",
+        "exportBackup": "导出备份"
+    },
+    "undo": "撤销"
+}

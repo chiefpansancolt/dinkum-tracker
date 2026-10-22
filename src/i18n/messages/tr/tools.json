@@ -1,0 +1,70 @@
+{
+    "breakdown": {
+        "title": "Eşya dökümü",
+        "subline": "Hangi kaynak hangi eşyalarda kullanılır · {count} kaynak",
+        "tiles": {
+            "resources": "Kaynaklar",
+            "resourcesCaption": "tariflerde ve yapılarda kullanılır",
+            "common": "Yaygın, 3+ eşyada kullanılır",
+            "of": "/ {total}",
+            "mostUsed": "En çok kullanılan",
+            "items": "{count, plural, one {{amount} eşya} other {{amount} eşya}}"
+        },
+        "search": "Ara",
+        "searchPlaceholder": "Kaynakları ada göre ara",
+        "sortBy": "Sırala",
+        "sortName": "Ad (A-Z)",
+        "sortUsage": "Kullanım sayısı",
+        "filter": "Filtre",
+        "filterWithCount": "Filtre ({count})",
+        "commonOnly": "Yalnızca yaygın kaynaklar (3+ eşyada kullanılan)",
+        "showing": "{total} kaynaktan {shown} tanesi gösteriliyor",
+        "notes": {
+            "categories": " ({count, plural, one {{amount} kategoriye} other {{amount} kategoriye}} göre filtrelendi)",
+            "types": " ({count, plural, one {{amount} türe} other {{amount} türe}} göre filtrelendi)",
+            "common": " (yalnızca yaygın kaynaklar)"
+        },
+        "panel": {
+            "title": "Kaynakları filtrele",
+            "byCategory": "Kategoriye göre filtrele",
+            "byType": "Kaynak türüne göre filtrele",
+            "clear": "Seçimleri temizle",
+            "itemCount": "{count, plural, one {{amount} eşya} other {{amount} eşya}}",
+            "done": "{count} kaynak göster",
+            "option": "{name}, {items}"
+        },
+        "card": {
+            "usedIn": "{count, plural, one {{amount} eşyada kullanılır} other {{amount} eşyada kullanılır}}",
+            "categories": "Kategoriler",
+            "usedInList": "Kullanıldığı yerler",
+            "showMore": "{count} tane daha göster...",
+            "showLess": "Daha az göster"
+        },
+        "empty": {
+            "title": "Bu filtrelere uyan kaynak yok",
+            "description": "Başka bir ad dene ya da seçimleri temizle.",
+            "clear": "Seçimleri temizle"
+        }
+    },
+    "weight": {
+        "title": "Ağırlık hesaplayıcı",
+        "subline": "Ağır bir buluntunun fiyatını ağırlığından hesapla · {count} eşya",
+        "picker": "Eşya seç",
+        "perKg": "kg başına {price}",
+        "range": "{min} - {max} kg",
+        "rangeLine": "Ağırlık aralığı: {min}kg - {max}kg",
+        "weight": "Ağırlık: {weight} kg",
+        "slider": "Ağırlık (kg)",
+        "minus": "Ağırlığı {step} kg azalt",
+        "plus": "Ağırlığı {step} kg artır",
+        "min": "{min}kg",
+        "max": "{max}kg",
+        "stepNote": "Adım {step} kg. Başka bir eşya seçmek ağırlığı en düşük değerine sıfırlar.",
+        "total": "Toplam fiyat",
+        "dinks": "dinks",
+        "formula": "{weight} kg × kg başına {price} = {total}",
+        "rounded": "En yakın dinke yuvarlanır.",
+        "atMin": "En düşük ağırlıkta fiyat",
+        "atMax": "En yüksek ağırlıkta fiyat"
+    }
+}

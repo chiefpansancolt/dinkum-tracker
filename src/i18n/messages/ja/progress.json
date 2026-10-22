@@ -1,0 +1,123 @@
+{
+    "common": {
+        "level": "レベル{level}",
+        "levelCount": "レベル{level}：",
+        "locked": "先に前のレベルを完了してください。",
+        "completeAll": "すべて完了",
+        "clearAll": "すべてクリア",
+        "requirement": "必要条件",
+        "requiredSkill": "必要なスキルレベル",
+        "all": "すべて",
+        "collected": "収集済み",
+        "notCollected": "未収集",
+        "clearFilters": "フィルターをクリア",
+        "toast": {
+            "obtained": "{item}：レベル{level}を取得しました",
+            "cleared": "{item}：{count, plural, other {{amount}レベル}}をクリアしました",
+            "allObtained": "{item}：すべてのレベルを取得しました",
+            "allCleared": "{item}：すべてのレベルをクリアしました"
+        },
+        "empty": {
+            "title": "条件に一致する{things}はありません",
+            "description": "別の名前を試すか、フィルターをクリアしてください。"
+        },
+        "permitPoints": "許可ポイント"
+    },
+    "buildings": {
+        "title": "建物",
+        "subline": "{total}個中{count}個設置済み · {percent}% · {name}",
+        "tiles": {
+            "installed": "設置済み",
+            "stillToInstall": "未設置",
+            "listed": "掲載中の建物",
+            "of": "{total}中",
+            "breakdown": "収集可能 {collectable} · 移動可能 {movable} · 参照用 {reference}"
+        },
+        "filters": {
+            "deedType": "権利書の種類",
+            "npc": "NPC",
+            "collected": "収集済み",
+            "search": "建物を名前で検索...",
+            "sheetTitle": "建物をフィルター",
+            "showing": "建物 {total}件中{shown}件を表示 · 設置済み {count}",
+            "apply": "建物を{count}件表示"
+        },
+        "card": {
+            "deed": "権利書",
+            "npc": "NPC",
+            "size": "サイズ",
+            "buildTime": "建築時間",
+            "deedPrice": "権利書の価格",
+            "hours": "営業時間",
+            "closed": "休業",
+            "description": "説明",
+            "resources": "資源",
+            "resource": "{name} {count}"
+        },
+        "installed": "設置済み",
+        "nothingToInstall": "この権利書の種類には設置するものがありません。",
+        "things": "建物",
+        "toast": {
+            "installed": "{name}を設置済みにしました",
+            "notInstalled": "{name}を未設置にしました"
+        }
+    },
+    "licenses": {
+        "title": "ライセンス",
+        "subline": "{total}レベル中{count}レベル取得 · {percent}% · {name}",
+        "tiles": {
+            "levels": "取得したレベル",
+            "complete": "完了したライセンス",
+            "permit": "使用した許可ポイント",
+            "of": "{total}中",
+            "sentence": "必要な許可ポイント{total}のうち、{amount}を使用しました。"
+        },
+        "filters": {
+            "category": "カテゴリー",
+            "collected": "収集済み",
+            "search": "ライセンスを名前で検索...",
+            "sheetTitle": "ライセンスをフィルター",
+            "showing": "ライセンス {total}件中{shown}件を表示 · 解放済みレベル {count}",
+            "apply": "ライセンスを{count}件表示"
+        },
+        "things": "ライセンス"
+    },
+    "milestones": {
+        "title": "マイルストーン",
+        "subline": "{total}レベル中{count}レベル完了 · {percent}% · {name}",
+        "tiles": {
+            "levels": "完了したレベル",
+            "complete": "完了したマイルストーン",
+            "permit": "獲得した許可ポイント",
+            "of": "{total}中",
+            "sentence": "獲得可能な許可ポイント{total}のうち、{amount}を獲得しました。"
+        },
+        "filters": {
+            "category": "カテゴリー",
+            "allCategories": "すべてのカテゴリー",
+            "collected": "収集済み",
+            "viewMode": "表示モード",
+            "grouped": "頭文字でグループ化",
+            "all": "すべてのマイルストーン",
+            "search": "マイルストーンを名前または説明で検索...",
+            "sheetTitle": "マイルストーンをフィルター",
+            "showing": "マイルストーン {total}件中{shown}件を表示 · 完了したレベル {count}",
+            "apply": "マイルストーンを{count}件表示"
+        },
+        "things": "マイルストーン"
+    },
+    "skills": {
+        "title": "スキル",
+        "subline": "スキル{skills}個 · 合計{levels}レベル · 上限なし · {name}",
+        "tiles": {
+            "total": "スキルレベルの合計",
+            "across": "{count}個のスキルの合計",
+            "highest": "最高のスキル",
+            "atZero": "レベル0のスキル",
+            "atZeroOf": "{total}中"
+        },
+        "level": "スキルレベル",
+        "note": "ライセンスは各段階でスキルレベルを求めます。まだ足りないレベルは<link>ライセンス</link>で確認できます。",
+        "toast": "{name}がレベル{level}になりました"
+    }
+}

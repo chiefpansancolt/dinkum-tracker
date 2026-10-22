@@ -1,0 +1,116 @@
+{
+    "title": "Ringkasan",
+    "subline": "{done} daripada {total} item · {percent}% · {name}",
+    "view": "Lihat",
+    "headline": {
+        "label": "Kemajuan keseluruhan",
+        "ofItems": "{done} daripada {total} item",
+        "groups": {
+            "track": "Jejak",
+            "progress": "Kemajuan",
+            "collect": "Kumpul"
+        },
+        "groupOf": "{done} daripada {total}",
+        "note": "Penyebut tetap {total} item: Pedia {pedia}, NPC {npcs}, Pencapaian {milestones}, Lesen {licenses}, Kemahiran {skills}, Bangunan {buildings}, Peralatan {gear}, Pakaian dan rumah {wardrobe}, Resipi {recipes}. Setiap kategori dikira dari hari pertama, jadi peratusan tidak melonjak apabila anda membuka tab baharu."
+    },
+    "skills": {
+        "title": "Kemahiran watak",
+        "level": "Tahap {level}",
+        "empty": "Belum ada kemahiran direkodkan."
+    },
+    "licenses": {
+        "title": "Kemajuan lesen",
+        "obtained": "Lesen diperoleh",
+        "complete": "{count}/{total} siap",
+        "levels": "Tahap lesen",
+        "levelsValue": "{count}/{total} · {percent}%",
+        "permit": "Mata permit dibelanjakan",
+        "spent": "{percent}% dibelanjakan"
+    },
+    "milestones": {
+        "title": "Kemajuan pencapaian",
+        "overall": "Kemajuan keseluruhan",
+        "complete": "{count}/{total} siap",
+        "levels": "Tahap",
+        "levelsValue": "{count}/{total} · {percent}%",
+        "permit": "Mata permit diperoleh",
+        "earned": "{percent}% diperoleh"
+    },
+    "pedia": {
+        "title": "Kemajuan Pedia",
+        "overall": "Kemajuan keseluruhan ({count}/{total})",
+        "donations": "Sumbangan muzium ({count}/{total})",
+        "fish": "Ikan ({count}/{total})",
+        "bugs": "Serangga ({count}/{total})",
+        "critters": "Hidupan kecil ({count}/{total})",
+        "donated": "Disumbang ({count}/{total})",
+        "permit": "Mata permit diperoleh",
+        "earned": "{percent}% diperoleh"
+    },
+    "gear": {
+        "title": "Peralatan dan kelengkapan",
+        "overall": "Kemajuan keseluruhan ({count}/{total})",
+        "books": "Buku ({count}/{total})",
+        "tools": "Alat ({count}/{total})",
+        "weapons": "Senjata ({count}/{total})",
+        "equipment": "Kelengkapan ({count}/{total})",
+        "vehicles": "Kenderaan ({count}/{total})",
+        "cassettes": "Kaset ({count}/{total})",
+        "names": {
+            "books": "Buku",
+            "tools": "Alat",
+            "weapons": "Senjata",
+            "equipment": "Kelengkapan",
+            "vehicles": "Kenderaan",
+            "cassettes": "Kaset"
+        },
+        "mostComplete": "Paling lengkap",
+        "leastComplete": "Paling kurang lengkap"
+    },
+    "buildings": {
+        "title": "Kemajuan bangunan",
+        "overall": "Kemajuan keseluruhan",
+        "complete": "{count}/{total} siap",
+        "houseUpgrades": "Naik taraf rumah",
+        "shops": "Kedai",
+        "town": "Bangunan bandar",
+        "utility": "Bangunan utiliti",
+        "mostExpensive": "Bangunan paling mahal",
+        "price": "{amount} Dinks"
+    },
+    "recipes": {
+        "title": "Koleksi resipi",
+        "overall": "Kemajuan keseluruhan ({count}/{total})",
+        "cooking": "Memasak ({count}/{total})",
+        "crafting": "Pembuatan ({count}/{total})",
+        "signWriting": "Penulisan papan tanda ({count}/{total})",
+        "names": {
+            "cooking": "Memasak",
+            "crafting": "Pembuatan",
+            "signWriting": "Penulisan papan tanda"
+        },
+        "mostComplete": "Paling lengkap",
+        "leastComplete": "Paling kurang lengkap"
+    },
+    "npcs": {
+        "title": "Hubungan NPC",
+        "total": "Jumlah NPC",
+        "friends": "Rakan",
+        "oneHeart": "1+ hati",
+        "maxHearts": "Hati maks",
+        "avgHearts": "Purata hati",
+        "top": "Hubungan teratas",
+        "hearts": "{hearts, plural, other {{amount} hati}}",
+        "empty": "Belum ada NPC direkodkan."
+    },
+    "game": {
+        "title": "Maklumat game",
+        "calendar": "Kalendar game",
+        "date": "Hari {day}, {season}",
+        "tracking": "Penjejakan dunia sebenar",
+        "daysSince": "Hari sejak dicipta: {days}",
+        "lastUpdated": "Dikemas kini kali terakhir: {date}",
+        "milestones": "Pencapaian",
+        "completed": "{count} siap"
+    }
+}

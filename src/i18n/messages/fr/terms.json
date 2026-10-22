@@ -1,0 +1,91 @@
+{
+    "buffs": {
+        "attackLevel": "Attaque",
+        "charged": "Chargé",
+        "coolLevel": "Classe",
+        "defenseLevel": "Défense",
+        "diligent": "Appliqué",
+        "experienceLevel": "Expérience",
+        "fastHealthTickSpeedLevel": "Cadence de santé rapide",
+        "fishLevel": "Pêche",
+        "foragingLevel": "Cueillette",
+        "healthMax": "Santé max",
+        "healthRegenRate": "Régén. de santé",
+        "length": "Durée",
+        "miningLevel": "Minage",
+        "sleepless": "Insomniaque",
+        "speedLevel": "Vitesse",
+        "staminaMax": "Endurance max",
+        "staminaRegenRate": "Régén. d’endurance",
+        "swimmingLevel": "Natation"
+    },
+    "categories": {
+        "buildings": "Bâtiments",
+        "tools": "Outils",
+        "weapons": "Armes",
+        "equipment": "Équipement",
+        "vehicles": "Véhicules",
+        "craftingRecipes": "Recettes de fabrication",
+        "cookingRecipes": "Recettes de cuisine",
+        "signWritingRecipes": "Recettes d’écriture de panneaux",
+        "otherCraftables": "Autres objets fabricables"
+    },
+    "resourceTypes": {
+        "fish": "Poisson",
+        "critter": "Bestiole",
+        "bug": "Insecte",
+        "relic": "Relique",
+        "crop": "Culture",
+        "foragable": "Cueillette",
+        "animalProduct": "Produit animal",
+        "paint": "Peinture",
+        "mineral": "Minéral",
+        "craftable": "Fabricable",
+        "trophy": "Trophée",
+        "seed": "Graine",
+        "flower": "Fleur",
+        "resource": "Ressource"
+    },
+    "daily": {
+        "dayOneMilestones": "Premier jour",
+        "travelMilestones": "Voyage",
+        "npcMilestones": "PNJ",
+        "fishingMilestones": "Pêche",
+        "farmingMilestones": "Agriculture",
+        "foragingMilestones": "Cueillette",
+        "loggingMilestones": "Bûcheronnage",
+        "miningMilestones": "Minage",
+        "excavationMilestones": "Fouille",
+        "bugCatchingMilestones": "Capture d’insectes",
+        "craftingMilestones": "Fabrication",
+        "huntingMilestones": "Chasse",
+        "trappingMilestones": "Piégeage",
+        "dinksMilestones": "Dinks"
+    },
+    "animalTypes": {
+        "Wild Animal": "Animal sauvage",
+        "Farm Animal": "Animal de ferme",
+        "Tammed Animal": "Animal apprivoisé"
+    },
+    "temperaments": {
+        "Passive": "Passif",
+        "Neutral": "Neutre",
+        "Aggressive": "Agressif"
+    },
+    "seasons": {
+        "Spring": "Printemps",
+        "Summer": "Été",
+        "Autumn": "Automne",
+        "Winter": "Hiver",
+        "All": "Toutes"
+    },
+    "weekdays": {
+        "Sunday": "Dimanche",
+        "Monday": "Lundi",
+        "Tuesday": "Mardi",
+        "Wednesday": "Mercredi",
+        "Thursday": "Jeudi",
+        "Friday": "Vendredi",
+        "Saturday": "Samedi"
+    }
+}

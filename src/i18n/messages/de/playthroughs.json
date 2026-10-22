@@ -1,0 +1,124 @@
+{
+    "title": "Spielstände",
+    "subline": "Verwalte deine Dinkum-Abenteuer. {count, plural, one {{amount} Spielstand} other {{amount} Spielstände}}, {name} ist aktiv.",
+    "sublineNoneActive": "Verwalte deine Dinkum-Abenteuer. {count, plural, one {{amount} Spielstand} other {{amount} Spielstände}}.",
+    "sublineEmpty": "Noch keine Spielstände.",
+    "loading": "Spielstände werden geladen...",
+    "stats": {
+        "playthroughs": "Spielstände",
+        "playthroughsCaption": "in diesem Browser",
+        "active": "Aktiv",
+        "noneActive": "Keiner",
+        "furthest": "Am weitesten",
+        "average": "Ø Fortschritt",
+        "averageCaption": "über alle"
+    },
+    "filters": {
+        "sortBy": "Sortieren nach",
+        "sort": {
+            "lastUpdated": "Zuletzt geändert",
+            "name": "Name",
+            "createdAt": "Erstellt am",
+            "completion": "Fortschritt in Prozent"
+        },
+        "search": "Spielstände nach Name suchen",
+        "showing": "{shown} von {total} {total, plural, one {Spielstand} other {Spielständen}} angezeigt",
+        "defaultSortFrom": "Standardsortierung aus den <link>Einstellungen</link>"
+    },
+    "noMatch": {
+        "title": "Keine Spielstände passen zu \"{query}\"",
+        "description": "Versuche einen anderen Namen.",
+        "clear": "Suche löschen"
+    },
+    "empty": {
+        "title": "Keine Spielstände gefunden",
+        "description": "Du hast noch keinen Spielstand erstellt. Erstelle deinen ersten und verfolge dein Dinkum-Abenteuer. Jeder wird in diesem Browser gespeichert.",
+        "create": "Ersten Spielstand erstellen",
+        "importBackup": "Stattdessen Backup importieren"
+    },
+    "card": {
+        "created": "Erstellt: {date}",
+        "updated": "Geändert: {when}",
+        "complete": "{percent}% abgeschlossen",
+        "overall": "Gesamtfortschritt",
+        "pedia": "Pedia",
+        "licenses": "Lizenzen",
+        "milestones": "Meilensteine",
+        "buildings": "Gebäude",
+        "pediaDetail": "Fische {fish} · Insekten {bugs} · Kleintiere {critters}",
+        "count": "{count}/{total}",
+        "gameDate": "Tag {day}, {season}",
+        "currentGameDate": "Aktuelles Spieldatum",
+        "setActive": "Aktiv setzen",
+        "active": "Aktiv",
+        "openOverview": "Übersicht öffnen",
+        "edit": "Bearbeiten",
+        "delete": "Löschen",
+        "activePlaythrough": "Aktiver Spielstand"
+    },
+    "seasons": {
+        "Spring": "Frühling",
+        "Summer": "Sommer",
+        "Autumn": "Herbst",
+        "Winter": "Winter"
+    },
+    "relative": {
+        "today": "Heute",
+        "yesterday": "Gestern",
+        "daysAgo": "{count, plural, one {Vor {amount} Tag} other {Vor {amount} Tagen}}",
+        "weeksAgo": "{count, plural, one {Vor {amount} Woche} other {Vor {amount} Wochen}}",
+        "monthsAgo": "{count, plural, one {Vor {amount} Monat} other {Vor {amount} Monaten}}",
+        "unknown": "k. A."
+    },
+    "new": {
+        "action": "Neuer Spielstand",
+        "actionShort": "Neu",
+        "pageTitle": "Neuer Spielstand",
+        "pageSubline": "Gib ihm einen Namen und leg los. Alles wird in diesem Browser gespeichert.",
+        "back": "Zurück zu allen Spielständen",
+        "next": {
+            "title": "Was dann passiert",
+            "one": "Ein leerer Spielstand wird sofort in diesem Browser gespeichert.",
+            "two": "Er wird der aktive Spielstand, wenn das Kästchen angehakt ist. Die Auswahl in der Seitenleiste zeigt ihn.",
+            "three": "Du landest in der Liste der Spielstände, die neue Karte steht oben, dazu gibt es einen Rückgängig-Hinweis."
+        },
+        "createdToast": "{name} erstellt"
+    },
+    "form": {
+        "title": "Neuen Spielstand erstellen",
+        "nameLabel": "Name des Spielstands",
+        "required": "Pflichtfeld",
+        "placeholder": "Mein Dinkum-Abenteuer",
+        "help": "Gib deinem Spielstand einen einprägsamen Namen, damit du ihn später wiederfindest.",
+        "counter": "{count} / {max}",
+        "errorEmpty": "Bitte gib einen Namen für deinen Spielstand ein",
+        "makeActive": "Diesen Spielstand aktiv setzen",
+        "create": "Spielstand erstellen",
+        "creating": "Wird erstellt...",
+        "cancel": "Abbrechen",
+        "failed": "Der Spielstand konnte nicht erstellt werden. Bitte versuche es noch einmal.",
+        "tryAgain": "Erneut versuchen"
+    },
+    "edit": {
+        "title": "Spielstand bearbeiten",
+        "save": "Speichern",
+        "saving": "Speichert...",
+        "savedToast": "Gespeichert",
+        "renamed": "Umbenannt in {name}",
+        "description": "{name} · erstellt {date}",
+        "nameLabel": "Name des Spielstands",
+        "help": "Drücke Enter zum Speichern. Speichern bleibt aus, solange der Name leer ist."
+    },
+    "delete": {
+        "title": "{name} löschen?",
+        "description": "Damit wird sein gesamter gespeicherter Fortschritt auf diesem Gerät entfernt.",
+        "activeNext": "Das ist dein aktiver Spielstand. {next} wurde zuletzt geändert und wird nach dem Löschen aktiv.",
+        "activeLast": "Das ist dein aktiver und einziger Spielstand. Nach dem Löschen ist keiner aktiv.",
+        "exportFirst": "Zuerst Backup exportieren",
+        "confirm": "Löschen",
+        "cancel": "Abbrechen",
+        "toast": "{name} gelöscht",
+        "toastMessage": "Rückgängig ist 10 Sekunden möglich",
+        "updated": "Geändert {when} · {date}"
+    }
+}

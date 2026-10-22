@@ -1,0 +1,116 @@
+{
+    "title": "Resumen",
+    "subline": "{done} de {total} objetos · {percent}% · {name}",
+    "view": "Ver",
+    "headline": {
+        "label": "Progreso total",
+        "ofItems": "{done} de {total} objetos",
+        "groups": {
+            "track": "Seguimiento",
+            "progress": "Progreso",
+            "collect": "Colección"
+        },
+        "groupOf": "{done} de {total}",
+        "note": "Denominador fijo de {total} objetos: Pedia {pedia}, PNJ {npcs}, Hitos {milestones}, Licencias {licenses}, Habilidades {skills}, Edificios {buildings}, Equipo {gear}, Armario y hogar {wardrobe}, Recetas {recipes}. Cada categoría cuenta desde el primer día, así que el porcentaje no da saltos al abrir una pestaña nueva."
+    },
+    "skills": {
+        "title": "Habilidades del personaje",
+        "level": "Nivel {level}",
+        "empty": "Aún no hay habilidades registradas."
+    },
+    "licenses": {
+        "title": "Progreso de licencias",
+        "obtained": "Licencias obtenidas",
+        "complete": "{count}/{total} completas",
+        "levels": "Niveles de licencia",
+        "levelsValue": "{count}/{total} · {percent}%",
+        "permit": "Puntos de permiso gastados",
+        "spent": "{percent}% gastado"
+    },
+    "milestones": {
+        "title": "Progreso de hitos",
+        "overall": "Progreso total",
+        "complete": "{count}/{total} completos",
+        "levels": "Niveles",
+        "levelsValue": "{count}/{total} · {percent}%",
+        "permit": "Puntos de permiso ganados",
+        "earned": "{percent}% ganado"
+    },
+    "pedia": {
+        "title": "Progreso de la Pedia",
+        "overall": "Progreso total ({count}/{total})",
+        "donations": "Donaciones al museo ({count}/{total})",
+        "fish": "Peces ({count}/{total})",
+        "bugs": "Insectos ({count}/{total})",
+        "critters": "Bichos ({count}/{total})",
+        "donated": "Donados ({count}/{total})",
+        "permit": "Puntos de permiso ganados",
+        "earned": "{percent}% ganado"
+    },
+    "gear": {
+        "title": "Equipo y equipamiento",
+        "overall": "Progreso total ({count}/{total})",
+        "books": "Libros ({count}/{total})",
+        "tools": "Herramientas ({count}/{total})",
+        "weapons": "Armas ({count}/{total})",
+        "equipment": "Equipamiento ({count}/{total})",
+        "vehicles": "Vehículos ({count}/{total})",
+        "cassettes": "Casetes ({count}/{total})",
+        "names": {
+            "books": "Libros",
+            "tools": "Herramientas",
+            "weapons": "Armas",
+            "equipment": "Equipamiento",
+            "vehicles": "Vehículos",
+            "cassettes": "Casetes"
+        },
+        "mostComplete": "Más completo",
+        "leastComplete": "Menos completo"
+    },
+    "buildings": {
+        "title": "Progreso de edificios",
+        "overall": "Progreso total",
+        "complete": "{count}/{total} completos",
+        "houseUpgrades": "Mejoras de la casa",
+        "shops": "Tiendas",
+        "town": "Edificios del pueblo",
+        "utility": "Edificios de servicio",
+        "mostExpensive": "Edificios más caros",
+        "price": "{amount} Dinks"
+    },
+    "recipes": {
+        "title": "Colección de recetas",
+        "overall": "Progreso total ({count}/{total})",
+        "cooking": "Cocina ({count}/{total})",
+        "crafting": "Fabricación ({count}/{total})",
+        "signWriting": "Rotulación ({count}/{total})",
+        "names": {
+            "cooking": "Cocina",
+            "crafting": "Fabricación",
+            "signWriting": "Rotulación"
+        },
+        "mostComplete": "Más completa",
+        "leastComplete": "Menos completa"
+    },
+    "npcs": {
+        "title": "Relaciones con los PNJ",
+        "total": "PNJ en total",
+        "friends": "Amigos",
+        "oneHeart": "1+ corazones",
+        "maxHearts": "Corazones máx.",
+        "avgHearts": "Corazones (media)",
+        "top": "Mejores relaciones",
+        "hearts": "{hearts, plural, one {{amount} corazón} other {{amount} corazones}}",
+        "empty": "Aún no hay PNJ registrados."
+    },
+    "game": {
+        "title": "Datos del juego",
+        "calendar": "Calendario del juego",
+        "date": "Día {day}, {season}",
+        "tracking": "Seguimiento en el mundo real",
+        "daysSince": "Días desde la creación: {days}",
+        "lastUpdated": "Última actualización: {date}",
+        "milestones": "Hitos",
+        "completed": "{count} completados"
+    }
+}

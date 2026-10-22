@@ -1,0 +1,91 @@
+{
+    "nav": {
+        "main": "Chính",
+        "groups": {
+            "track": "Theo dõi",
+            "progress": "Tiến trình",
+            "collect": "Thu thập",
+            "tools": "Công cụ"
+        },
+        "items": {
+            "overview": "Tổng quan",
+            "pedia": "Pedia",
+            "npcs": "NPC",
+            "calendar": "Lịch",
+            "buildings": "Công trình",
+            "licenses": "Giấy phép",
+            "milestones": "Cột mốc",
+            "skills": "Kỹ năng",
+            "recipes": "Công thức",
+            "gear": "Trang bị",
+            "wardrobe": "Tủ đồ và nhà",
+            "itemsBreakdown": "Phân tích vật phẩm",
+            "weightCalculator": "Tính cân nặng",
+            "reference": "Tra cứu",
+            "settings": "Cài đặt",
+            "playthroughs": "Lượt chơi",
+            "newPlaythrough": "Lượt chơi mới"
+        }
+    },
+    "appShell": {
+        "skipToContent": "Chuyển đến nội dung",
+        "closeMenu": "Đóng menu"
+    },
+    "appBar": {
+        "openMenu": "Mở menu"
+    },
+    "playthroughGate": {
+        "emptyTitle": "Chưa có lượt chơi",
+        "emptyDescription": "Tạo một lượt chơi để bắt đầu theo dõi tiến trình của bạn.",
+        "newPlaythrough": "Lượt chơi mới"
+    },
+    "playthroughSwitcher": {
+        "sectionLabel": "Lượt chơi",
+        "switchPlaythrough": "Đổi lượt chơi",
+        "loading": "Đang tải",
+        "noPlaythroughYet": "Chưa có lượt chơi",
+        "playthroughs": "Lượt chơi",
+        "active": "Đang dùng",
+        "allPlaythroughs": "Tất cả lượt chơi",
+        "newPlaythrough": "Lượt chơi mới",
+        "detail": "Ngày {day} · {percent}%"
+    },
+    "theme": {
+        "label": "Giao diện",
+        "light": "Sáng",
+        "dark": "Tối",
+        "system": "Theo hệ thống"
+    },
+    "footer": {
+        "tagline": "Theo dõi tiến trình Dinkum của bạn thật dễ dàng.",
+        "support": "Hỗ trợ",
+        "about": "Giới thiệu",
+        "settings": "Cài đặt",
+        "discord": "Discord",
+        "github": "GitHub",
+        "dinkumWiki": "Dinkum Wiki",
+        "privacyPolicy": "Chính sách riêng tư",
+        "termsOfService": "Điều khoản dịch vụ",
+        "disclaimerTitle": "Miễn trừ trách nhiệm",
+        "disclaimer": "Ứng dụng này không liên kết, không được bảo trợ và không có quan hệ với Dinkum hay những người tạo ra game. Dữ liệu game lấy từ Dinkum Wiki. Hình ảnh và tên trong game chỉ dùng để tham khảo.",
+        "copyright": "© {year} {appName}",
+        "framework": "Xây dựng trên nền tảng Gamerdex, một nền tảng chung cho các công cụ theo dõi tiến trình game miễn phí. Dữ liệu của bạn nằm trong trình duyệt, hoặc trong kho lưu trữ đám mây của riêng bạn nếu bạn bật đồng bộ.",
+        "visitGamerdex": "Đến Gamerdex"
+    },
+    "domainNotice": {
+        "label": "Thông báo đổi tên miền:",
+        "movedTo": "Dinkum Tracker đã chuyển sang <strong>{domain}</strong>. Dữ liệu đã lưu của bạn sẽ không tự chuyển sang. Hãy",
+        "exportLink": "xuất dữ liệu của bạn",
+        "retired": "từ trang này và nhập vào tên miền mới. Tên miền này sẽ ngừng hoạt động vào <strong>{date}</strong>.",
+        "goToNewSite": "Đến trang mới",
+        "dismiss": "Đóng thông báo"
+    },
+    "notFound": {
+        "code": "404",
+        "title": "Không tìm thấy trang",
+        "description": "Trang này không tồn tại hoặc đã được chuyển đi.",
+        "toOverview": "Đến Tổng quan",
+        "toHome": "Về trang chủ",
+        "hint": "Lỗi 404 nghĩa là địa chỉ bị gõ sai hoặc trang đã bị xóa. Thanh bên vẫn dùng được."
+    }
+}

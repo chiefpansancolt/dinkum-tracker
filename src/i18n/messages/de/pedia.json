@@ -1,0 +1,85 @@
+{
+    "title": "Pedia",
+    "subline": "{done} von {total} gesammelt · {percent}% · {name}",
+    "tabsLabel": "Pedia-Bereiche",
+    "tabs": {
+        "fish": "Fische",
+        "bugs": "Insekten",
+        "critters": "Kleintiere"
+    },
+    "nouns": {
+        "fish": "Fische",
+        "bugs": "Insekten",
+        "critters": "Kleintiere"
+    },
+    "summary": {
+        "captured": "Gefangen",
+        "donated": "Ans Museum gespendet",
+        "permit": "Verdiente Genehmigungspunkte",
+        "of": "von {total}"
+    },
+    "filters": {
+        "sheetTitle": "{tab} filtern",
+        "biome": "Biom",
+        "rarity": "Seltenheit",
+        "season": "Jahreszeit",
+        "time": "Zeit",
+        "collected": "Gesammelt",
+        "donated": "Gespendet",
+        "allBiomes": "Alle Biome",
+        "allRarities": "Alle Seltenheiten",
+        "allSeasons": "Alle Jahreszeiten",
+        "anyTime": "Jede Zeit",
+        "all": "Alle",
+        "onlyCollected": "Gesammelt",
+        "notCollected": "Noch zu sammeln",
+        "onlyDonated": "Gespendet",
+        "notDonated": "Noch zu spenden",
+        "search": "{tab} nach Name suchen",
+        "showing": "{shown} von {total} {tab} angezeigt",
+        "capturedCount": "Gefangen {count}",
+        "donatedCount": "Gespendet {count}",
+        "apply": "{count} {tab} zeigen"
+    },
+    "view": {
+        "label": "Ansicht",
+        "grid": "Raster",
+        "list": "Liste"
+    },
+    "card": {
+        "biome": "Biom",
+        "seasons": "Jahreszeiten",
+        "time": "Zeit",
+        "sell": "Verkaufspreis",
+        "cooked": "Gekocht",
+        "cookedValue": "{price} · x{pieces}",
+        "status": "Status",
+        "missing": "Fehlt",
+        "caught": "Gefangen",
+        "donated": "Gespendet"
+    },
+    "table": {
+        "name": "Name",
+        "rarity": "Seltenheit",
+        "biome": "Biom",
+        "seasons": "Jahreszeiten",
+        "time": "Zeit",
+        "sell": "Verkauf",
+        "cooked": "Gekocht",
+        "status": "Status",
+        "caption": "{shown} von {total} Zeilen angezeigt. Dieselben Filter, die Statussteuerung und die Handelsstufe gelten in beiden Ansichten."
+    },
+    "empty": {
+        "title": "Keine {tab} passen zu diesen Filtern",
+        "description": "Versuche einen anderen Namen oder lösche die Filter.",
+        "clear": "Filter löschen"
+    },
+    "toast": {
+        "marked": "{name} als {status} markiert",
+        "statuses": {
+            "missing": "fehlend",
+            "caught": "gefangen",
+            "donated": "gespendet"
+        }
+    }
+}

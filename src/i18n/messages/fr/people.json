@@ -1,0 +1,98 @@
+{
+    "npcs": {
+        "title": "PNJ",
+        "subline": "Cœurs : {hearts} sur {total} · {count} PNJ · {name}",
+        "tiles": {
+            "total": "Total des cœurs",
+            "full": "Cœurs pleins",
+            "met": "Déjà rencontrés",
+            "of": "sur {total}",
+            "ofNpcs": "sur {total} PNJ"
+        },
+        "filters": {
+            "search": "Rechercher un PNJ par nom",
+            "sheetTitle": "Filtrer les PNJ",
+            "relationship": "Relation",
+            "residence": "Vit sur l’île",
+            "all": "Tous",
+            "none": "Aucun cœur",
+            "progress": "En cours",
+            "full": "Cœurs pleins",
+            "canMoveIn": "Peut emménager",
+            "visitors": "Visiteurs seulement",
+            "showing": "Affichage de {shown} sur {total} PNJ · Cœurs pleins {full} · Rencontrés {met}",
+            "apply": "Afficher {count} PNJ"
+        },
+        "hint": "Cliquez sur un cœur pour le définir. Cliquez sur le dernier cœur plein pour le retirer. Utilisez -{step} et +{step} pour avancer par quarts.",
+        "things": "PNJ",
+        "card": {
+            "full": "Plein",
+            "requirements": "Conditions",
+            "visit": "Visite",
+            "moveIn": "Emménagement",
+            "food": "Préférences alimentaires",
+            "likes": "Aime",
+            "dislikes": "N’aime pas",
+            "none": "Aucun"
+        },
+        "hearts": {
+            "label": "Cœurs de {name}",
+            "setTo": "Définir {name} à {count, plural, one {{amount} cœur} other {{amount} cœurs}}",
+            "less": "- {step}",
+            "more": "+ {step}",
+            "lessLabel": "Diminuer les cœurs de {step}",
+            "moreLabel": "Augmenter les cœurs de {step}",
+            "readout": "{hearts} / {max}"
+        },
+        "toast": {
+            "set": "{name} : {hearts} cœurs sur 5"
+        },
+        "empty": {
+            "title": "Aucun PNJ ne correspond à ces filtres",
+            "description": "Essayez un autre nom ou effacez les filtres.",
+            "clear": "Effacer les filtres"
+        }
+    },
+    "calendar": {
+        "title": "Calendrier",
+        "subline": "{season} · Événements : {events} · Anniversaires : {birthdays} · {name}",
+        "previous": "Saison précédente",
+        "next": "Saison suivante",
+        "today": "Aujourd’hui",
+        "legend": {
+            "event": "Événement",
+            "birthday": "Anniversaire",
+            "current": "Jour actuel"
+        },
+        "alert": "Jour actuel : {day} {season}. Cliquez sur un jour pour le définir comme jour actuel. Les changements sont enregistrés aussitôt.",
+        "weekdays": {
+            "Sunday": "Dim",
+            "Monday": "Lun",
+            "Tuesday": "Mar",
+            "Wednesday": "Mer",
+            "Thursday": "Jeu",
+            "Friday": "Ven",
+            "Saturday": "Sam"
+        },
+        "more": "+ {count} de plus",
+        "dayLabel": "{weekday}, {day} {season}",
+        "details": {
+            "title": "{weekday}, {day} {season}",
+            "events": "Événements",
+            "birthdays": "Anniversaires",
+            "noEvents": "Aucun événement aujourd’hui.",
+            "noBirthdays": "Aucun anniversaire aujourd’hui.",
+            "current": "Jour actuel",
+            "close": "Fermer"
+        },
+        "toast": {
+            "set": "Jour actuel défini sur {day} {season}"
+        },
+        "cellEntries": "{count, plural, one {{amount} entrée} other {{amount} entrées}}",
+        "entries": {
+            "birthday": "Anniversaire de {name}",
+            "range": "Jours {start}-{end} de {season}",
+            "likes": "Aime : {food}"
+        }
+    }
+}

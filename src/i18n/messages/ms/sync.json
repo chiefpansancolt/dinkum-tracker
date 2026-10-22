@@ -1,0 +1,234 @@
+{
+    "tab": {
+        "title": "Segerak awan",
+        "description": "Simpan permainan anda dalam repositori GitHub peribadi dan kongsikannya antara peranti anda."
+    },
+    "unavailable": "Segerak tidak tersedia dalam binaan ini.",
+    "privacy": "Data anda dihantar ke repositori peribadi dalam akaun GitHub anda sendiri. Gamerdex tiada pelayan yang menyimpannya, dan aplikasi hanya boleh mencapai satu repositori yang anda pilih.",
+    "repository": {
+        "title": "Sediakan repositori data anda",
+        "body": "Data anda disimpan dalam repositori peribadi bernama {name} dalam akaun GitHub anda. Gamerdex Sync hanya boleh mencapai satu repositori itu.",
+        "checking": "Mencari {name}",
+        "checkFailed": "Repositori anda tidak dapat dimuatkan. Semak sambungan anda dan semak semula.",
+        "found": "{fullName} ditemui",
+        "public": "Repositori {fullName} adalah awam. Jadikan ia peribadi dalam tetapan GitHubnya, kemudian semak semula. Repositori awam tidak boleh digunakan kerana sesiapa sahaja boleh membaca data anda.",
+        "missing": "Repositori {name} tidak ditemui",
+        "steps": {
+            "create": "Cipta repositori peribadi bernama {name}. Tandakan Add a README file.",
+            "install": "Beri Gamerdex Sync akses kepada repositori itu sahaja. Pilih Only select repositories, kemudian pilih {name}.",
+            "recheck": "Kembali ke sini dan semak semula."
+        },
+        "createButton": "Cipta repositori",
+        "installButton": "Pilih repositori di GitHub",
+        "recheckButton": "Semak semula"
+    },
+    "connected": {
+        "title": "Bersambung",
+        "repository": "Repositori",
+        "lastSync": "Segerak terakhir",
+        "never": "Belum disegerak",
+        "syncNow": "Segerak sekarang",
+        "signOut": "Log keluar",
+        "signedOut": "Telah log keluar. Data pada peranti ini kekal seperti sedia ada.",
+        "storage": "Disimpan dalam",
+        "folder": "Folder {name}",
+        "signInWith": "Log masuk dengan {provider}"
+    },
+    "status": {
+        "idle": "Tersegerak",
+        "syncing": "Menyegerak",
+        "offline": "Luar talian",
+        "reauth": "Log masuk semula",
+        "needsChoice": "Perlu pilihan anda",
+        "error": "Segerak gagal",
+        "signedOut": "Belum log masuk",
+        "needsRepository": "Pilih repositori",
+        "conflicts": "Semak perubahan"
+    },
+    "error": {
+        "rateLimit": "GitHub menghadkan permintaan. Segerak akan berfungsi semula dalam beberapa minit.",
+        "notFound": "Repositori tidak ditemui. Pilih semula.",
+        "server": "GitHub tidak menjawab dengan betul. Cuba lagi kemudian.",
+        "data": "Data tersegerak tidak sah, jadi tiada apa-apa yang diubah.",
+        "busy": "Peranti lain terus mengubah data. Cuba lagi sebentar nanti.",
+        "other": "Sesuatu telah berlaku. Tiada apa-apa yang diubah.",
+        "reauth": "Log masuk anda telah tamat. Log masuk semula untuk terus menyegerak.",
+        "forbidden": "GitHub menolak akses kepada repositori. Pastikan Gamerdex Sync mempunyai akses Read and write kepada Contents, kemudian segerak semula.",
+        "httpStatus": "GitHub menjawab {status}.",
+        "notFoundFolder": "Fail atau folder dalam {provider} tidak ditemui. Segerak semula.",
+        "forbiddenFolder": "{provider} menolak akses. Log masuk semula dan benarkan akses kepada fail yang dicipta Gamerdex.",
+        "httpStatusFolder": "{provider} menjawab {status}."
+    },
+    "choice": {
+        "title": "Peranti ini dan awan kedua-duanya mempunyai data",
+        "body": "Ini segerak pertama daripada peranti ini. Pilih apa yang perlu dibuat. Tiada apa-apa dipadam daripada awan sehingga anda memilih.",
+        "counts": "Peranti ini: {local}. Awan: {cloud}.",
+        "merge": "Gabung kedua-duanya",
+        "mergeHint": "Simpan semuanya daripada kedua-dua pihak. Tahap yang lebih tinggi menang.",
+        "keepLocal": "Kekalkan peranti ini",
+        "keepLocalHint": "Ganti data awan dengan data pada peranti ini.",
+        "keepCloud": "Kekalkan awan",
+        "keepCloudHint": "Ganti data pada peranti ini dengan data awan."
+    },
+    "conflicts": {
+        "title": "Perubahan yang tidak dapat digabung",
+        "body": "Dua peranti mengubah nilai yang sama. Nilai awan dikekalkan. Pilih nilai peranti ini untuk menggunakannya sebaliknya.",
+        "cloudValue": "Awan",
+        "deviceValue": "Peranti ini",
+        "keepDevice": "Guna nilai peranti ini",
+        "dismiss": "Tutup",
+        "empty": "Tiada",
+        "deletedEdited": "Satu peranti membuang ini dan peranti lain mengubahnya. Versi yang diubah dikekalkan."
+    },
+    "callback": {
+        "title": "Log masuk",
+        "working": "Menyelesaikan log masuk",
+        "back": "Kembali ke Tetapan",
+        "denied": "Log masuk dibatalkan.",
+        "state": "Log masuk tidak dapat disemak. Mula semula daripada Tetapan.",
+        "missing": "Log masuk tidak menghantar kod. Mula semula daripada Tetapan.",
+        "failed": "Log masuk tidak dapat diselesaikan. Cuba lagi kemudian."
+    },
+    "playthroughCount": "{count, plural, other {{amount} permainan}}",
+    "provider": {
+        "github": {
+            "name": "GitHub",
+            "tile": "Repositori peribadi milik anda, bernama {name}.",
+            "badge": "Untuk pembangun"
+        },
+        "google": {
+            "name": "Google Drive",
+            "tile": "Folder Gamerdex yang kelihatan dalam Drive anda. Gamerdex hanya melihat fail yang dicipta olehnya.",
+            "badge": "Disyorkan"
+        },
+        "dropbox": {
+            "name": "Dropbox",
+            "tile": "Folder Gamerdex di dalam folder Apps pada Dropbox anda. Gamerdex hanya melihat folder itu.",
+            "badge": "Folder aplikasi sahaja"
+        },
+        "microsoft": {
+            "name": "OneDrive",
+            "tile": "Folder Gamerdex di dalam folder Apps pada OneDrive anda. Gamerdex hanya melihat folder itu.",
+            "badge": "Akaun peribadi"
+        }
+    },
+    "connect": {
+        "title": "Segerak merentas peranti",
+        "pill": "Tidak bersambung",
+        "intro": "Pastikan permainan anda sama pada komputer dan telefon anda. Segerak adalah pilihan dan percuma. Pilih tempat salinan disimpan.",
+        "pickerLabel": "Tempat menyimpan salinan",
+        "panelTitle": "Sambung {provider}",
+        "another": "Anda boleh memilih penyedia lain sebelum log masuk.",
+        "firstSync": "Pilih apa yang dikekalkan pada segerak pertama jika kedua-dua pihak sudah mempunyai data. Tiada apa-apa diganti sebelum anda memutuskan.",
+        "google": {
+            "step1": "Log masuk dengan Google dalam tetingkap ini.",
+            "step2": "Benarkan akses kepada fail yang dicipta Gamerdex. Aplikasi tidak dapat melihat fail anda yang lain.",
+            "button": "Sambung Google Drive"
+        },
+        "github": {
+            "step1": "Cipta repositori peribadi kosong bernama {name}. Tandakan Add a README file.",
+            "step2": "Log masuk dengan GitHub, kemudian beri Gamerdex Sync akses kepada repositori itu sahaja.",
+            "button": "Sambung GitHub"
+        },
+        "dropbox": {
+            "step1": "Log masuk dengan Dropbox dalam tetingkap ini.",
+            "step2": "Benarkan akses kepada folder aplikasi Gamerdex. Aplikasi tidak dapat melihat fail anda yang lain.",
+            "button": "Sambung Dropbox"
+        },
+        "microsoft": {
+            "step1": "Log masuk dengan akaun Microsoft peribadi anda dalam tetingkap ini.",
+            "step2": "Benarkan akses kepada folder aplikasi Gamerdex. Aplikasi tidak dapat melihat fail anda yang lain.",
+            "button": "Sambung OneDrive"
+        }
+    },
+    "how": {
+        "title": "Cara segerak berfungsi",
+        "one": "Permainan anda disimpan sebagai satu fail dalam storan anda sendiri, dalam format yang sama dengan fail sandaran, serta satu fail kecil untuk senarai peranti.",
+        "two": "Gamerdex tiada pelayan yang menyimpan data anda. Pelayar anda berhubung terus dengan storan anda.",
+        "three": "Item yang ditanda dan tahap mengekalkan apa yang diubah oleh mana-mana peranti, dan tahap yang lebih tinggi menang. Jika kedua-dua peranti mengubah nama atau hari semasa, anda memilih yang mana satu dikekalkan.",
+        "four": "Setiap peranti menyimpan permainan aktifnya sendiri. Segerak tidak pernah menukarnya.",
+        "five": "Putuskan sambungan pada bila-bila masa. Permainan anda kekal pada setiap peranti."
+    },
+    "banner": {
+        "title": "{count, plural, other {{amount} perubahan perlu keputusan}}",
+        "body": "Dua peranti mengubah nilai yang sama. Nilai awan dikekalkan sehingga anda memutuskan.",
+        "review": "Semak",
+        "waiting": "Segerak pertama menunggu pilihan anda.",
+        "choose": "Pilih"
+    },
+    "playthroughs": {
+        "title": "Permainan",
+        "thisDevice": "Peranti ini",
+        "cloud": "Awan, segerak terakhir",
+        "notInCloud": "Belum ada dalam awan",
+        "review": "Semak",
+        "note": "Memadam permainan membuangnya daripada fail segerak pada segerak seterusnya.",
+        "status": {
+            "synced": "Tersegerak",
+            "changedHere": "Diubah di sini",
+            "conflict": "Konflik",
+            "newHere": "Baharu di sini"
+        },
+        "describe": "Hari {day}, {season} · {percent}%"
+    },
+    "activity": {
+        "title": "Aktiviti segerak terkini",
+        "empty": "Belum ada yang disegerak.",
+        "connected": "{provider} disambung pada pelayar ini.",
+        "uploaded": "Perubahan daripada peranti ini dimuat naik.",
+        "downloaded": "Perubahan daripada awan dimuat turun.",
+        "merged": "Perubahan kedua-dua pihak digabung.",
+        "conflicts": "{count, plural, other {{amount} perubahan perlu keputusan.}}",
+        "failed": "Segerak gagal."
+    },
+    "settings": {
+        "title": "Tetapan segerak",
+        "auto": "Segerak secara automatik",
+        "autoHint": "Menyegerak apabila penjejak dibuka dan beberapa saat selepas setiap perubahan.",
+        "focus": "Semak perubahan apabila saya kembali ke tab",
+        "focusHint": "Menarik data awan yang lebih baharu apabila anda kembali ke penjejak.",
+        "metered": "Tunggu saya pada sambungan bermeter",
+        "meteredHint": "Melangkau segerak automatik apabila pelayar melaporkan sambungan penjimat data. Segerak sekarang masih berfungsi."
+    },
+    "lives": {
+        "title": "Tempat data anda disimpan",
+        "storage": "Storan",
+        "folder": "Folder",
+        "dataFile": "Fail data",
+        "metaFile": "Fail meta",
+        "size": "Saiz",
+        "kb": "{amount} KB",
+        "note": "Fail data menggunakan format yang sama dengan fail sandaran. Fail meta mengandungi senarai peranti dan tiada data game. Log masuk anda tidak pernah ada dalam kedua-dua fail.",
+        "googleNote": "Folder Gamerdex kelihatan dalam Drive anda. Gamerdex hanya boleh membuka fail yang dicipta olehnya.",
+        "githubNote": "Pastikan repositori peribadi. Sesiapa yang boleh membukanya boleh membaca data anda.",
+        "dropboxNote": "Folder Gamerdex berada di dalam folder Apps pada Dropbox anda. Gamerdex hanya boleh membuka folder itu.",
+        "microsoftNote": "Folder Gamerdex berada di dalam folder Apps pada OneDrive anda. Gamerdex hanya boleh membuka folder itu."
+    },
+    "device": {
+        "title": "Peranti ini",
+        "name": "Nama peranti",
+        "nameHint": "Fail segerak menunjukkan nama ini untuk peranti ini. Menamakannya semula mengemas kini fail meta pada segerak seterusnya.",
+        "activePlaythrough": "Permainan aktif",
+        "noPlaythrough": "Tiada",
+        "login": "Log masuk segerak",
+        "loginValue": "Pada peranti ini sahaja",
+        "loginHint": "Permainan aktif ialah pilihan pada setiap peranti, dan segerak tidak pernah mengubahnya. Log masuk anda kekal pada peranti ini. Ia tidak pernah ada dalam data tersimpan, fail sandaran atau fail segerak."
+    },
+    "disconnect": {
+        "title": "Putuskan sambungan",
+        "body": "Menghentikan segerak pada pelayar ini. Permainan anda kekal pada peranti ini dan dalam awan. Peranti lain terus menyegerak.",
+        "button": "Putuskan {provider}",
+        "googleHint": "Untuk memadam salinan awan sendiri, putuskan sambungan, kemudian padam folder Gamerdex dalam Google Drive anda.",
+        "githubHint": "Untuk memadam salinan awan sendiri, putuskan sambungan, kemudian padam folder Gamerdex dalam repositori anda.",
+        "dropboxHint": "Untuk memadam salinan awan sendiri, putuskan sambungan, kemudian padam folder aplikasi di bawah Apps dalam Dropbox anda.",
+        "microsoftHint": "Untuk memadam salinan awan sendiri, putuskan sambungan, kemudian padam folder aplikasi di bawah Apps dalam OneDrive anda."
+    },
+    "first": {
+        "thisDevice": "Peranti ini",
+        "cloud": "Awan",
+        "recommended": "Disyorkan",
+        "later": "Putuskan kemudian",
+        "apply": "Guna pilihan",
+        "optionsLabel": "Apa yang dikekalkan"
+    }
+}

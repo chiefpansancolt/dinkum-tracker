@@ -1,0 +1,116 @@
+{
+    "title": "Übersicht",
+    "subline": "{done} von {total} Items · {percent}% · {name}",
+    "view": "Ansehen",
+    "headline": {
+        "label": "Gesamtfortschritt",
+        "ofItems": "{done} von {total} Items",
+        "groups": {
+            "track": "Verfolgen",
+            "progress": "Fortschritt",
+            "collect": "Sammeln"
+        },
+        "groupOf": "{done} von {total}",
+        "note": "Feste Basis von {total} Items: Pedia {pedia}, NPCs {npcs}, Meilensteine {milestones}, Lizenzen {licenses}, Fähigkeiten {skills}, Gebäude {buildings}, Ausrüstung {gear}, Garderobe und Heim {wardrobe}, Rezepte {recipes}. Jede Kategorie zählt ab dem ersten Tag, damit der Prozentwert nicht springt, wenn du einen neuen Tab öffnest."
+    },
+    "skills": {
+        "title": "Charakterfähigkeiten",
+        "level": "Stufe {level}",
+        "empty": "Noch keine Fähigkeiten erfasst."
+    },
+    "licenses": {
+        "title": "Lizenzfortschritt",
+        "obtained": "Erworbene Lizenzen",
+        "complete": "{count}/{total} abgeschlossen",
+        "levels": "Lizenzstufen",
+        "levelsValue": "{count}/{total} · {percent}%",
+        "permit": "Ausgegebene Genehmigungspunkte",
+        "spent": "{percent}% ausgegeben"
+    },
+    "milestones": {
+        "title": "Meilensteinfortschritt",
+        "overall": "Gesamtfortschritt",
+        "complete": "{count}/{total} abgeschlossen",
+        "levels": "Stufen",
+        "levelsValue": "{count}/{total} · {percent}%",
+        "permit": "Verdiente Genehmigungspunkte",
+        "earned": "{percent}% verdient"
+    },
+    "pedia": {
+        "title": "Pedia-Fortschritt",
+        "overall": "Gesamtfortschritt ({count}/{total})",
+        "donations": "Museumsspenden ({count}/{total})",
+        "fish": "Fische ({count}/{total})",
+        "bugs": "Insekten ({count}/{total})",
+        "critters": "Kleintiere ({count}/{total})",
+        "donated": "Gespendet ({count}/{total})",
+        "permit": "Verdiente Genehmigungspunkte",
+        "earned": "{percent}% verdient"
+    },
+    "gear": {
+        "title": "Ausrüstung und Zubehör",
+        "overall": "Gesamtfortschritt ({count}/{total})",
+        "books": "Bücher ({count}/{total})",
+        "tools": "Werkzeuge ({count}/{total})",
+        "weapons": "Waffen ({count}/{total})",
+        "equipment": "Zubehör ({count}/{total})",
+        "vehicles": "Fahrzeuge ({count}/{total})",
+        "cassettes": "Kassetten ({count}/{total})",
+        "names": {
+            "books": "Bücher",
+            "tools": "Werkzeuge",
+            "weapons": "Waffen",
+            "equipment": "Zubehör",
+            "vehicles": "Fahrzeuge",
+            "cassettes": "Kassetten"
+        },
+        "mostComplete": "Am vollständigsten",
+        "leastComplete": "Am unvollständigsten"
+    },
+    "buildings": {
+        "title": "Gebäudefortschritt",
+        "overall": "Gesamtfortschritt",
+        "complete": "{count}/{total} abgeschlossen",
+        "houseUpgrades": "Hausausbauten",
+        "shops": "Läden",
+        "town": "Stadtgebäude",
+        "utility": "Nutzgebäude",
+        "mostExpensive": "Teuerste Gebäude",
+        "price": "{amount} Dinks"
+    },
+    "recipes": {
+        "title": "Rezeptsammlung",
+        "overall": "Gesamtfortschritt ({count}/{total})",
+        "cooking": "Kochen ({count}/{total})",
+        "crafting": "Basteln ({count}/{total})",
+        "signWriting": "Schilder ({count}/{total})",
+        "names": {
+            "cooking": "Kochen",
+            "crafting": "Basteln",
+            "signWriting": "Schilder"
+        },
+        "mostComplete": "Am vollständigsten",
+        "leastComplete": "Am unvollständigsten"
+    },
+    "npcs": {
+        "title": "NPC-Beziehungen",
+        "total": "NPCs gesamt",
+        "friends": "Freunde",
+        "oneHeart": "1+ Herzen",
+        "maxHearts": "Max. Herzen",
+        "avgHearts": "Ø Herzen",
+        "top": "Beste Beziehungen",
+        "hearts": "{hearts, plural, one {{amount} Herz} other {{amount} Herzen}}",
+        "empty": "Noch kein NPC erfasst."
+    },
+    "game": {
+        "title": "Spielinfo",
+        "calendar": "Spielkalender",
+        "date": "Tag {day}, {season}",
+        "tracking": "Echtzeit-Tracking",
+        "daysSince": "Tage seit Erstellung: {days}",
+        "lastUpdated": "Zuletzt aktualisiert: {date}",
+        "milestones": "Meilensteine",
+        "completed": "{count} abgeschlossen"
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "close": "Kapat",
+    "field": {
+        "optional": "İsteğe bağlı"
+    },
+    "stepper": {
+        "lower": "{label} azalt",
+        "raise": "{label} artır",
+        "labelPrefix": "{label}, "
+    },
+    "switch": {
+        "on": "Açık",
+        "off": "Kapalı"
+    },
+    "tabs": {
+        "locked": " (kilitli)"
+    },
+    "toast": {
+        "dismiss": "Kapat",
+        "variants": {
+            "success": "Başarılı",
+            "info": "Bilgi",
+            "warning": "Uyarı",
+            "error": "Hata"
+        },
+        "missingProvider": "useToast must be used within a ToastProvider"
+    },
+    "savedChip": {
+        "automatic": "Otomatik kaydedilir",
+        "justNow": "Az önce kaydedildi",
+        "minutesAgo": "{count} dk önce kaydedildi",
+        "at": "{time} kaydedildi",
+        "failed": "Kaydedilmedi, depolama dolu"
+    },
+    "filters": {
+        "filters": "Filtreler",
+        "filtersWithCount": "Filtreler ({count})",
+        "clearFilters": "Filtreleri temizle",
+        "clearAll": "Tümünü temizle",
+        "cancel": "İptal",
+        "showResults": "Sonuçları göster",
+        "search": "Ara"
+    },
+    "commerce": {
+        "label": "Ticaret seviyesinde satış",
+        "base": "Temel",
+        "plus5": "+%5",
+        "plus10": "+%10",
+        "plus15": "+%15"
+    }
+}

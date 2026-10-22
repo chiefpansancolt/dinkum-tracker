@@ -1,0 +1,124 @@
+{
+    "title": "プレイスルー",
+    "subline": "Dinkumの冒険を管理します。{count, plural, other {プレイスルー{amount}件}}、{name}が使用中です。",
+    "sublineNoneActive": "Dinkumの冒険を管理します。{count, plural, other {プレイスルー{amount}件}}。",
+    "sublineEmpty": "プレイスルーはまだありません。",
+    "loading": "プレイスルーを読み込み中...",
+    "stats": {
+        "playthroughs": "プレイスルー",
+        "playthroughsCaption": "このブラウザー内",
+        "active": "使用中",
+        "noneActive": "なし",
+        "furthest": "最も進んでいる",
+        "average": "平均達成率",
+        "averageCaption": "全体"
+    },
+    "filters": {
+        "sortBy": "並べ替え",
+        "sort": {
+            "lastUpdated": "最終更新",
+            "name": "名前",
+            "createdAt": "作成日",
+            "completion": "達成率"
+        },
+        "search": "プレイスルーを名前で検索",
+        "showing": "プレイスルー{total, plural, other {{total}件}}中{shown}件を表示",
+        "defaultSortFrom": "既定の並び順は<link>設定</link>で決まります"
+    },
+    "noMatch": {
+        "title": "「{query}」に一致するプレイスルーはありません",
+        "description": "別の名前を試してください。",
+        "clear": "検索をクリア"
+    },
+    "empty": {
+        "title": "プレイスルーが見つかりません",
+        "description": "プレイスルーはまだ作成されていません。最初のプレイスルーを作成して、Dinkumの冒険の記録を始めましょう。プレイスルーはこのブラウザーに保存されます。",
+        "create": "最初のプレイスルーを作成",
+        "importBackup": "代わりにバックアップをインポート"
+    },
+    "card": {
+        "created": "作成日：{date}",
+        "updated": "更新日：{when}",
+        "complete": "{percent}% 達成",
+        "overall": "全体の進行状況",
+        "pedia": "図鑑",
+        "licenses": "ライセンス",
+        "milestones": "マイルストーン",
+        "buildings": "建物",
+        "pediaDetail": "魚 {fish} · 虫 {bugs} · 小動物 {critters}",
+        "count": "{count}/{total}",
+        "gameDate": "{season}の{day}日目",
+        "currentGameDate": "ゲーム内の現在の日付",
+        "setActive": "使用中にする",
+        "active": "使用中",
+        "openOverview": "概要を開く",
+        "edit": "編集",
+        "delete": "削除",
+        "activePlaythrough": "使用中のプレイスルー"
+    },
+    "seasons": {
+        "Spring": "春",
+        "Summer": "夏",
+        "Autumn": "秋",
+        "Winter": "冬"
+    },
+    "relative": {
+        "today": "今日",
+        "yesterday": "昨日",
+        "daysAgo": "{count, plural, other {{amount}日前}}",
+        "weeksAgo": "{count, plural, other {{amount}週間前}}",
+        "monthsAgo": "{count, plural, other {{amount}か月前}}",
+        "unknown": "不明"
+    },
+    "new": {
+        "action": "新しいプレイスルー",
+        "actionShort": "新規",
+        "pageTitle": "新しいプレイスルー",
+        "pageSubline": "名前を付けて記録を始めましょう。すべてこのブラウザーに保存されます。",
+        "back": "すべてのプレイスルーに戻る",
+        "next": {
+            "title": "このあとの流れ",
+            "one": "空のプレイスルーがすぐにこのブラウザーに保存されます。",
+            "two": "チェックを入れると、使用中のプレイスルーになります。サイドバーの切り替えに表示されます。",
+            "three": "プレイスルー一覧に移動し、新しいカードが先頭に表示されます。元に戻すトーストも表示されます。"
+        },
+        "createdToast": "{name}を作成しました"
+    },
+    "form": {
+        "title": "新しいプレイスルーを作成",
+        "nameLabel": "プレイスルー名",
+        "required": "必須",
+        "placeholder": "私のDinkumの冒険",
+        "help": "あとで見分けやすいように、わかりやすい名前を付けてください。",
+        "counter": "{count} / {max}",
+        "errorEmpty": "プレイスルーの名前を入力してください",
+        "makeActive": "このプレイスルーを使用中にする",
+        "create": "プレイスルーを作成",
+        "creating": "作成中...",
+        "cancel": "キャンセル",
+        "failed": "プレイスルーを作成できませんでした。もう一度お試しください。",
+        "tryAgain": "再試行"
+    },
+    "edit": {
+        "title": "プレイスルーを編集",
+        "save": "保存",
+        "saving": "保存中...",
+        "savedToast": "保存しました",
+        "renamed": "名前を{name}に変更しました",
+        "description": "{name} · 作成日 {date}",
+        "nameLabel": "プレイスルー名",
+        "help": "Enterキーで保存します。名前が空の間は保存できません。"
+    },
+    "delete": {
+        "title": "{name}を削除しますか？",
+        "description": "このデバイスに保存されている進行状況がすべて削除されます。",
+        "activeNext": "これは使用中のプレイスルーです。{next}が最も新しく更新されているので、削除後はそちらが使用中になります。",
+        "activeLast": "これは使用中で、唯一のプレイスルーです。削除後は使用中のプレイスルーがなくなります。",
+        "exportFirst": "先にバックアップをエクスポート",
+        "confirm": "削除",
+        "cancel": "キャンセル",
+        "toast": "{name}を削除しました",
+        "toastMessage": "元に戻せるのは10秒間です",
+        "updated": "更新 {when} · {date}"
+    }
+}

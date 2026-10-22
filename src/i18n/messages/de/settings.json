@@ -1,0 +1,141 @@
+{
+    "title": "Einstellungen",
+    "subline": "{count, plural, one {{amount} Spielstand} other {{amount} Spielstände}} in diesem Browser gespeichert · Einstellungen werden automatisch gespeichert",
+    "storage": {
+        "title": "Datenspeicher!",
+        "body": "Deine Daten liegen im Browser. Sie gehen verloren, wenn die Browserdaten gelöscht werden, außer du nutzt Sync oder ein Backup.",
+        "action": "Nutze die Funktionen unten, um deine Daten zu exportieren und zu sichern."
+    },
+    "manage": {
+        "title": "Spielstände",
+        "description": "Benenne Spielstände um, lösche oder erstelle sie auf der Seite Spielstände.",
+        "link": "Spielstände verwalten"
+    },
+    "data": {
+        "title": "Datenverwaltung",
+        "count": "{count, plural, one {{amount} Spielstand} other {{amount} Spielstände}}",
+        "exportButton": "Alle Spielstände exportieren",
+        "exportHint": "Lade eine Backup-Datei mit allen gespeicherten Spielständen herunter.",
+        "exportDone": "Export erfolgreich!",
+        "importButton": "Daten importieren",
+        "importHint": "Lade eine zuvor exportierte Datei (.json) hoch. Ein Bestätigungsschritt fragt, ob zusammengeführt oder ersetzt wird.",
+        "importDone": "Import erfolgreich!",
+        "importFailed": "Ungültiges Dateiformat",
+        "resetWarning": "Achtung: Damit werden alle Spielstände gelöscht. Das lässt sich nicht rückgängig machen.",
+        "resetButton": "Alle Daten zurücksetzen",
+        "resetConfirm": "Zurücksetzen bestätigen",
+        "resetCancel": "Abbrechen",
+        "resetDone": "Daten zurückgesetzt",
+        "importFile": "Backup-Datei",
+        "description": "Eine Backup-Datei enthält alle Spielstände.",
+        "exportTitle": "Daten exportieren",
+        "importTitle": "Daten importieren",
+        "resetTitle": "Alle Daten zurücksetzen",
+        "resetSyncedCopy": "Auch die synchronisierte Kopie in {provider} löschen",
+        "resetSyncedOn": "Sync bleibt an. Deine anderen Geräte verlieren diese Spielstände bei der nächsten Synchronisierung. Exportiere zuerst ein Backup, wenn du unsicher bist.",
+        "resetSyncedOff": "Die synchronisierte Kopie bleibt bestehen. Sync wird in diesem Browser getrennt, damit die Cloud nicht geleert wird.",
+        "providers": {
+            "github": "GitHub",
+            "google": "Google Drive",
+            "dropbox": "Dropbox",
+            "microsoft": "OneDrive"
+        }
+    },
+    "import": {
+        "title": "Backup importieren",
+        "description": "Wähle, was mit den Spielständen auf diesem Gerät passiert.",
+        "fileSummary": "{inFile, plural, one {{inFileAmount} Spielstand} other {{inFileAmount} Spielstände}} in der Datei · {onDeviceAmount} auf diesem Gerät",
+        "mode": "Importmodus",
+        "merge": "Zusammenführen (empfohlen)",
+        "mergeDescription": "Fügt neue Spielstände hinzu. Ist ein Spielstand an beiden Orten vorhanden, gewinnt die zuletzt geänderte Kopie. Spielstände nur auf diesem Gerät bleiben erhalten.",
+        "replace": "Alle ersetzen",
+        "replaceDescription": "Löscht {onDevice, plural, one {den {onDeviceAmount} Spielstand} other {die {onDeviceAmount} Spielstände}} auf diesem Gerät und lädt die {inFileAmount} aus der Datei. Das lässt sich nicht rückgängig machen.",
+        "table": {
+            "playthrough": "Spielstand",
+            "inFile": "In Datei",
+            "onDevice": "Auf diesem Gerät",
+            "result": "Ergebnis"
+        },
+        "updatedOn": "Geändert {date}",
+        "notOnDevice": "Nicht auf dem Gerät",
+        "notInFile": "Nicht in der Datei",
+        "results": {
+            "added": "Hinzugefügt",
+            "updated": "Dateikopie gewinnt",
+            "kept": "Gerätekopie bleibt",
+            "replaced": "Ersetzt",
+            "removed": "Entfernt"
+        },
+        "exportFirst": "Zuerst aktuelle Daten exportieren",
+        "cancel": "Abbrechen",
+        "confirmMerge": "{count, plural, one {{amount} Spielstand} other {{amount} Spielstände}} zusammenführen",
+        "confirmReplace": "Alle Daten ersetzen"
+    },
+    "appearance": {
+        "title": "Darstellung und Einstellungen",
+        "theme": "Design",
+        "themeHint": "System folgt deinem Gerät.",
+        "defaultSort": "Standardsortierung der Spielstände",
+        "defaultSortHint": "Wähle, wie Spielstände standardmäßig sortiert werden. Wird sofort gespeichert.",
+        "resources": "Weitere Ressourcen",
+        "opensInNewTab": "Öffnet in neuem Tab",
+        "wiki": "Dinkum Wiki",
+        "repository": "Projekt-Repository"
+    },
+    "page": {
+        "title": "Einstellungen",
+        "tabsLabel": "Einstellungen",
+        "tabs": {
+            "sync": "Cloud-Sync",
+            "preferences": "Einstellungen",
+            "data": "Backup und Daten",
+            "about": "Info"
+        }
+    },
+    "preferences": {
+        "appearance": {
+            "title": "Darstellung",
+            "description": "Wird sofort auf diesem Gerät gespeichert."
+        },
+        "playthroughList": {
+            "title": "Spielstandliste",
+            "description": "Wie die Seite Spielstände startet."
+        }
+    },
+    "about": {
+        "version": "Version {version}",
+        "summary": "Verfolge deinen Dinkum-Fortschritt: Fische, Insekten, Kleintiere, Meilensteine, Lizenzen, NPCs und mehr. Alles wird in diesem Browser gespeichert.",
+        "resources": "Weitere Ressourcen",
+        "disclaimer": "Steht in keiner Verbindung zu den Machern von Dinkum und wird von ihnen nicht unterstützt."
+    },
+    "region": {
+        "title": "Sprache und Region",
+        "description": "Wähle die Sprache und die Schreibweise von Zahlen und Datum. Wird auf diesem Gerät gespeichert.",
+        "language": {
+            "label": "Sprache",
+            "hint": "Namen von Tieren, Items, NPCs und den anderen Spieldaten stammen aus den Spieldaten und bleiben Englisch."
+        },
+        "numberFormat": {
+            "label": "Zahlenformat",
+            "hint": "Beispiel: {example}",
+            "options": {
+                "auto": "Automatisch, folgt der Sprache",
+                "us": "1,234.56 (USA)",
+                "european": "1.234,56 (Deutschland)",
+                "french": "1 234,56 (Frankreich)",
+                "swiss": "1’234.56 (Schweiz)",
+                "indian": "12,34,567.89 (Indien)"
+            }
+        },
+        "dateFormat": {
+            "label": "Datumsformat",
+            "hint": "Beispiel: {example}",
+            "options": {
+                "auto": "Automatisch, folgt der Sprache",
+                "mdy": "Monat/Tag/Jahr",
+                "dmy": "Tag/Monat/Jahr",
+                "ymd": "Jahr-Monat-Tag"
+            }
+        }
+    }
+}

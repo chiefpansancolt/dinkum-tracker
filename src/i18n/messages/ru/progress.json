@@ -1,0 +1,123 @@
+{
+    "common": {
+        "level": "Уровень {level}",
+        "levelCount": "Уровень {level}:",
+        "locked": "Сначала завершите предыдущий уровень.",
+        "completeAll": "Выполнить все",
+        "clearAll": "Сбросить все",
+        "requirement": "Требование",
+        "requiredSkill": "Требуемый уровень навыка",
+        "all": "Все",
+        "collected": "Собрано",
+        "notCollected": "Не собрано",
+        "clearFilters": "Сбросить фильтры",
+        "toast": {
+            "obtained": "{item}: получен уровень {level}",
+            "cleared": "{item}: сброшено {count, plural, one {{amount} уровень} few {{amount} уровня} many {{amount} уровней} other {{amount} уровня}}",
+            "allObtained": "{item}: все уровни получены",
+            "allCleared": "{item}: все уровни сброшены"
+        },
+        "empty": {
+            "title": "По этим фильтрам ничего не найдено: {things}",
+            "description": "Попробуйте другое название или сбросьте фильтры."
+        },
+        "permitPoints": "очков разрешений"
+    },
+    "buildings": {
+        "title": "Постройки",
+        "subline": "{count} из {total} установлено · {percent}% · {name}",
+        "tiles": {
+            "installed": "Установлено",
+            "stillToInstall": "Осталось установить",
+            "listed": "Построек в списке",
+            "of": "из {total}",
+            "breakdown": "Собираемых: {collectable} · переносимых: {movable} · справочных: {reference}"
+        },
+        "filters": {
+            "deedType": "Тип купчей",
+            "npc": "NPC",
+            "collected": "Собрано",
+            "search": "Поиск построек по названию...",
+            "sheetTitle": "Фильтр построек",
+            "showing": "Показано {shown} из {total} построек · Установлено {count}",
+            "apply": "Показать построек: {count}"
+        },
+        "card": {
+            "deed": "Купчая",
+            "npc": "NPC",
+            "size": "Размер",
+            "buildTime": "Время постройки",
+            "deedPrice": "Цена купчей",
+            "hours": "Часы работы",
+            "closed": "Закрыто",
+            "description": "Описание",
+            "resources": "Ресурсы",
+            "resource": "{count} {name}"
+        },
+        "installed": "Установлено",
+        "nothingToInstall": "Для этого типа купчей устанавливать нечего.",
+        "things": "постройки",
+        "toast": {
+            "installed": "{name}: отмечено как установленное",
+            "notInstalled": "{name}: отмечено как неустановленное"
+        }
+    },
+    "licenses": {
+        "title": "Лицензии",
+        "subline": "{count} из {total} уровней получено · {percent}% · {name}",
+        "tiles": {
+            "levels": "Получено уровней",
+            "complete": "Лицензий завершено",
+            "permit": "Потрачено очков разрешений",
+            "of": "из {total}",
+            "sentence": "Вы потратили {amount} из {total} нужных очков разрешений."
+        },
+        "filters": {
+            "category": "Категория",
+            "collected": "Собрано",
+            "search": "Поиск лицензий по названию...",
+            "sheetTitle": "Фильтр лицензий",
+            "showing": "Показано {shown} из {total} лицензий · Открыто уровней {count}",
+            "apply": "Показать лицензий: {count}"
+        },
+        "things": "лицензии"
+    },
+    "milestones": {
+        "title": "Достижения",
+        "subline": "{count} из {total} уровней выполнено · {percent}% · {name}",
+        "tiles": {
+            "levels": "Выполнено уровней",
+            "complete": "Достижений завершено",
+            "permit": "Заработано очков разрешений",
+            "of": "из {total}",
+            "sentence": "Вы заработали {amount} из {total} доступных очков разрешений."
+        },
+        "filters": {
+            "category": "Категория",
+            "allCategories": "Все категории",
+            "collected": "Собрано",
+            "viewMode": "Вид",
+            "grouped": "По буквам",
+            "all": "Все достижения",
+            "search": "Поиск достижений по названию или описанию...",
+            "sheetTitle": "Фильтр достижений",
+            "showing": "Показано {shown} из {total} достижений · Выполнено уровней {count}",
+            "apply": "Показать достижений: {count}"
+        },
+        "things": "достижения"
+    },
+    "skills": {
+        "title": "Навыки",
+        "subline": "Навыков: {skills} · всего уровней: {levels} · без верхнего предела · {name}",
+        "tiles": {
+            "total": "Всего уровней навыков",
+            "across": "навыков: {count}",
+            "highest": "Лучший навык",
+            "atZero": "Навыков на уровне 0",
+            "atZeroOf": "из {total}"
+        },
+        "level": "Уровень навыка",
+        "note": "Лицензии требуют определённого уровня навыка на каждой ступени. Загляните в <link>лицензии</link>, чтобы увидеть, какие уровни вам ещё нужны.",
+        "toast": "{name}: теперь уровень {level}"
+    }
+}

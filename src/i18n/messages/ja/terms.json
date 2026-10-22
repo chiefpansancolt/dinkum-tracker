@@ -1,0 +1,91 @@
+{
+    "buffs": {
+        "attackLevel": "攻撃",
+        "charged": "チャージ",
+        "coolLevel": "クール",
+        "defenseLevel": "防御",
+        "diligent": "勤勉",
+        "experienceLevel": "経験",
+        "fastHealthTickSpeedLevel": "体力の高速ティック",
+        "fishLevel": "釣り",
+        "foragingLevel": "採集",
+        "healthMax": "最大体力",
+        "healthRegenRate": "体力回復",
+        "length": "持続時間",
+        "miningLevel": "採掘",
+        "sleepless": "不眠",
+        "speedLevel": "速度",
+        "staminaMax": "最大スタミナ",
+        "staminaRegenRate": "スタミナ回復",
+        "swimmingLevel": "水泳"
+    },
+    "categories": {
+        "buildings": "建物",
+        "tools": "道具",
+        "weapons": "武器",
+        "equipment": "装備",
+        "vehicles": "乗り物",
+        "craftingRecipes": "クラフトレシピ",
+        "cookingRecipes": "料理レシピ",
+        "signWritingRecipes": "看板描きレシピ",
+        "otherCraftables": "その他のクラフト品"
+    },
+    "resourceTypes": {
+        "fish": "魚",
+        "critter": "小動物",
+        "bug": "虫",
+        "relic": "遺物",
+        "crop": "作物",
+        "foragable": "採集物",
+        "animalProduct": "動物の産物",
+        "paint": "ペイント",
+        "mineral": "鉱物",
+        "craftable": "クラフト品",
+        "trophy": "トロフィー",
+        "seed": "種",
+        "flower": "花",
+        "resource": "資源"
+    },
+    "daily": {
+        "dayOneMilestones": "初日",
+        "travelMilestones": "旅行",
+        "npcMilestones": "NPC",
+        "fishingMilestones": "釣り",
+        "farmingMilestones": "農業",
+        "foragingMilestones": "採集",
+        "loggingMilestones": "伐採",
+        "miningMilestones": "採掘",
+        "excavationMilestones": "発掘",
+        "bugCatchingMilestones": "虫捕り",
+        "craftingMilestones": "クラフト",
+        "huntingMilestones": "狩猟",
+        "trappingMilestones": "罠猟",
+        "dinksMilestones": "Dinks"
+    },
+    "animalTypes": {
+        "Wild Animal": "野生動物",
+        "Farm Animal": "家畜",
+        "Tammed Animal": "手なずけた動物"
+    },
+    "temperaments": {
+        "Passive": "おとなしい",
+        "Neutral": "中立",
+        "Aggressive": "攻撃的"
+    },
+    "seasons": {
+        "Spring": "春",
+        "Summer": "夏",
+        "Autumn": "秋",
+        "Winter": "冬",
+        "All": "すべて"
+    },
+    "weekdays": {
+        "Sunday": "日曜日",
+        "Monday": "月曜日",
+        "Tuesday": "火曜日",
+        "Wednesday": "水曜日",
+        "Thursday": "木曜日",
+        "Friday": "金曜日",
+        "Saturday": "土曜日"
+    }
+}

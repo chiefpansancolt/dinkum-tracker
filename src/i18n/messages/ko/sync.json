@@ -1,0 +1,234 @@
+{
+    "tab": {
+        "title": "클라우드 동기화",
+        "description": "플레이 기록을 비공개 GitHub 저장소에 보관하고 여러 기기에서 공유하세요."
+    },
+    "unavailable": "이 빌드에서는 동기화를 사용할 수 없어요.",
+    "privacy": "데이터는 내 GitHub 계정의 비공개 저장소로 전송돼요. Gamerdex에는 데이터를 저장하는 서버가 없고, 앱은 내가 고른 저장소 하나에만 접근할 수 있어요.",
+    "repository": {
+        "title": "데이터 저장소 설정",
+        "body": "데이터는 내 GitHub 계정의 {name}이라는 비공개 저장소에 보관돼요. Gamerdex Sync는 그 저장소 하나에만 접근할 수 있어요.",
+        "checking": "{name} 찾는 중",
+        "checkFailed": "저장소를 불러오지 못했어요. 연결을 확인하고 다시 확인해 주세요.",
+        "found": "{fullName}을 찾았어요",
+        "public": "{fullName} 저장소가 공개 상태예요. GitHub 설정에서 비공개로 바꾼 뒤 다시 확인해 주세요. 공개 저장소는 누구나 데이터를 읽을 수 있어서 사용할 수 없어요.",
+        "missing": "{name} 저장소를 찾지 못했어요",
+        "steps": {
+            "create": "{name}이라는 비공개 저장소를 만드세요. Add a README file을 선택하세요.",
+            "install": "Gamerdex Sync가 그 저장소에만 접근하도록 허용하세요. Only select repositories를 선택한 뒤 {name}을 고르세요.",
+            "recheck": "이곳으로 돌아와 다시 확인하세요."
+        },
+        "createButton": "저장소 만들기",
+        "installButton": "GitHub에서 저장소 선택",
+        "recheckButton": "다시 확인"
+    },
+    "connected": {
+        "title": "연결됨",
+        "repository": "저장소",
+        "lastSync": "마지막 동기화",
+        "never": "아직 동기화하지 않았어요",
+        "syncNow": "지금 동기화",
+        "signOut": "로그아웃",
+        "signedOut": "로그아웃했어요. 이 기기의 데이터는 그대로 남아요.",
+        "storage": "저장 위치",
+        "folder": "폴더 {name}",
+        "signInWith": "{provider}(으)로 로그인"
+    },
+    "status": {
+        "idle": "동기화됨",
+        "syncing": "동기화 중",
+        "offline": "오프라인",
+        "reauth": "다시 로그인",
+        "needsChoice": "선택 필요",
+        "error": "동기화 실패",
+        "signedOut": "로그인하지 않음",
+        "needsRepository": "저장소 선택",
+        "conflicts": "변경 내용 검토"
+    },
+    "error": {
+        "rateLimit": "GitHub가 요청을 제한하고 있어요. 몇 분 뒤에 동기화가 다시 가능해요.",
+        "notFound": "저장소를 찾지 못했어요. 다시 선택해 주세요.",
+        "server": "GitHub가 올바르게 응답하지 않았어요. 나중에 다시 시도해 주세요.",
+        "data": "동기화된 데이터가 올바르지 않아 아무것도 바꾸지 않았어요.",
+        "busy": "다른 기기가 계속 데이터를 바꾸고 있어요. 잠시 후 다시 시도해 주세요.",
+        "other": "문제가 생겼어요. 아무것도 바뀌지 않았어요.",
+        "reauth": "로그인이 만료됐어요. 동기화를 이어가려면 다시 로그인하세요.",
+        "forbidden": "GitHub가 저장소 접근을 거부했어요. Gamerdex Sync에 Contents 읽기 및 쓰기 권한이 있는지 확인한 뒤 다시 동기화하세요.",
+        "httpStatus": "GitHub가 {status}(으)로 응답했어요.",
+        "notFoundFolder": "{provider}에서 파일이나 폴더를 찾지 못했어요. 다시 동기화하세요.",
+        "forbiddenFolder": "{provider}가 접근을 거부했어요. 다시 로그인하고 Gamerdex가 만드는 파일에 대한 접근을 허용하세요.",
+        "httpStatusFolder": "{provider}가 {status}(으)로 응답했어요."
+    },
+    "choice": {
+        "title": "이 기기와 클라우드에 모두 데이터가 있어요",
+        "body": "이 기기에서 처음 하는 동기화예요. 어떻게 할지 선택하세요. 선택하기 전에는 클라우드에서 아무것도 삭제되지 않아요.",
+        "counts": "이 기기: {local}. 클라우드: {cloud}.",
+        "merge": "둘 다 병합",
+        "mergeHint": "양쪽 데이터를 모두 유지해요. 더 높은 레벨이 우선해요.",
+        "keepLocal": "이 기기 유지",
+        "keepLocalHint": "클라우드 데이터를 이 기기의 데이터로 바꿔요.",
+        "keepCloud": "클라우드 유지",
+        "keepCloudHint": "이 기기의 데이터를 클라우드 데이터로 바꿔요."
+    },
+    "conflicts": {
+        "title": "병합하지 못한 변경 내용",
+        "body": "두 기기가 같은 값을 바꿨어요. 클라우드 값을 유지했어요. 이 기기의 값을 쓰려면 선택하세요.",
+        "cloudValue": "클라우드",
+        "deviceValue": "이 기기",
+        "keepDevice": "이 기기의 값 사용",
+        "dismiss": "닫기",
+        "empty": "없음",
+        "deletedEdited": "한 기기에서는 삭제하고 다른 기기에서는 수정했어요. 수정한 버전을 유지했어요."
+    },
+    "callback": {
+        "title": "로그인 중",
+        "working": "로그인을 마무리하는 중",
+        "back": "설정으로 돌아가기",
+        "denied": "로그인이 취소되었어요.",
+        "state": "로그인을 확인하지 못했어요. 설정에서 다시 시작해 주세요.",
+        "missing": "로그인에서 코드가 전달되지 않았어요. 설정에서 다시 시작해 주세요.",
+        "failed": "로그인을 완료하지 못했어요. 나중에 다시 시도해 주세요."
+    },
+    "playthroughCount": "{count, plural, other {플레이 기록 {amount}개}}",
+    "provider": {
+        "github": {
+            "name": "GitHub",
+            "tile": "내가 소유한 {name}이라는 비공개 저장소예요.",
+            "badge": "개발자용"
+        },
+        "google": {
+            "name": "Google Drive",
+            "tile": "내 Drive에 보이는 Gamerdex 폴더예요. Gamerdex는 직접 만든 파일만 볼 수 있어요.",
+            "badge": "권장"
+        },
+        "dropbox": {
+            "name": "Dropbox",
+            "tile": "내 Dropbox의 Apps 폴더 안에 있는 Gamerdex 폴더예요. Gamerdex는 그 폴더만 볼 수 있어요.",
+            "badge": "앱 폴더만"
+        },
+        "microsoft": {
+            "name": "OneDrive",
+            "tile": "내 OneDrive의 Apps 폴더 안에 있는 Gamerdex 폴더예요. Gamerdex는 그 폴더만 볼 수 있어요.",
+            "badge": "개인 계정"
+        }
+    },
+    "connect": {
+        "title": "기기 간 동기화",
+        "pill": "연결 안 됨",
+        "intro": "컴퓨터와 휴대폰에서 플레이 기록을 똑같이 유지하세요. 동기화는 선택 사항이며 무료예요. 사본을 보관할 곳을 고르세요.",
+        "pickerLabel": "사본을 보관할 곳",
+        "panelTitle": "{provider} 연결",
+        "another": "로그인하기 전에 다른 서비스를 고를 수 있어요.",
+        "firstSync": "양쪽에 이미 데이터가 있다면 첫 동기화에서 무엇을 유지할지 선택하세요. 선택하기 전에는 아무것도 바뀌지 않아요.",
+        "google": {
+            "step1": "이 창에서 Google로 로그인하세요.",
+            "step2": "Gamerdex가 만드는 파일에 대한 접근을 허용하세요. 앱은 다른 파일을 볼 수 없어요.",
+            "button": "Google Drive 연결"
+        },
+        "github": {
+            "step1": "{name}이라는 빈 비공개 저장소를 만드세요. Add a README file을 선택하세요.",
+            "step2": "GitHub로 로그인한 뒤 Gamerdex Sync가 그 저장소에만 접근하도록 허용하세요.",
+            "button": "GitHub 연결"
+        },
+        "dropbox": {
+            "step1": "이 창에서 Dropbox로 로그인하세요.",
+            "step2": "Gamerdex 앱 폴더에 대한 접근을 허용하세요. 앱은 다른 파일을 볼 수 없어요.",
+            "button": "Dropbox 연결"
+        },
+        "microsoft": {
+            "step1": "이 창에서 개인 Microsoft 계정으로 로그인하세요.",
+            "step2": "Gamerdex 앱 폴더에 대한 접근을 허용하세요. 앱은 다른 파일을 볼 수 없어요.",
+            "button": "OneDrive 연결"
+        }
+    },
+    "how": {
+        "title": "동기화 방식",
+        "one": "플레이 기록은 백업 파일과 같은 형식의 파일 하나로 내 저장소에 저장되고, 기기 목록을 담은 작은 파일이 함께 저장돼요.",
+        "two": "Gamerdex에는 데이터를 저장하는 서버가 없어요. 브라우저가 내 저장소와 직접 통신해요.",
+        "three": "표시한 항목과 레벨은 어느 기기에서 바꾼 내용이든 유지되고, 더 높은 레벨이 우선해요. 두 기기에서 이름이나 현재 날짜를 모두 바꾸면 유지할 쪽을 직접 고르게 돼요.",
+        "four": "각 기기는 자신의 사용 중인 플레이 기록을 따로 유지해요. 동기화는 이를 바꾸지 않아요.",
+        "five": "언제든지 연결을 해제할 수 있어요. 플레이 기록은 모든 기기에 그대로 남아요."
+    },
+    "banner": {
+        "title": "{count, plural, other {변경 내용 {amount}개를 결정해야 해요}}",
+        "body": "두 기기가 같은 값을 바꿨어요. 결정하기 전까지 클라우드 값을 유지해요.",
+        "review": "검토",
+        "waiting": "첫 동기화가 선택을 기다리고 있어요.",
+        "choose": "선택"
+    },
+    "playthroughs": {
+        "title": "플레이 기록",
+        "thisDevice": "이 기기",
+        "cloud": "클라우드, 마지막 동기화",
+        "notInCloud": "아직 클라우드에 없음",
+        "review": "검토",
+        "note": "플레이 기록을 삭제하면 다음 동기화 때 동기화 파일에서도 삭제돼요.",
+        "status": {
+            "synced": "동기화됨",
+            "changedHere": "여기서 변경됨",
+            "conflict": "충돌",
+            "newHere": "여기에서 새로 생김"
+        },
+        "describe": "{season} {day}일 · {percent}%"
+    },
+    "activity": {
+        "title": "최근 동기화 활동",
+        "empty": "아직 동기화된 내용이 없어요.",
+        "connected": "이 브라우저에서 {provider}에 연결했어요.",
+        "uploaded": "이 기기의 변경 내용을 업로드했어요.",
+        "downloaded": "클라우드의 변경 내용을 내려받았어요.",
+        "merged": "양쪽의 변경 내용을 병합했어요.",
+        "conflicts": "{count, plural, other {변경 내용 {amount}개를 결정해야 해요.}}",
+        "failed": "동기화에 실패했어요."
+    },
+    "settings": {
+        "title": "동기화 설정",
+        "auto": "자동으로 동기화",
+        "autoHint": "트래커를 열 때와 변경 후 몇 초 뒤에 동기화해요.",
+        "focus": "탭으로 돌아오면 변경 내용 확인",
+        "focusHint": "트래커로 다시 전환하면 더 새로운 클라우드 데이터를 가져와요.",
+        "metered": "데이터 요금 연결에서는 대기",
+        "meteredHint": "브라우저가 데이터 절약 연결이라고 알리면 자동 동기화를 건너뛰어요. 지금 동기화는 그대로 사용할 수 있어요."
+    },
+    "lives": {
+        "title": "데이터 보관 위치",
+        "storage": "저장소",
+        "folder": "폴더",
+        "dataFile": "데이터 파일",
+        "metaFile": "메타 파일",
+        "size": "크기",
+        "kb": "{amount} KB",
+        "note": "데이터 파일은 백업 파일과 같은 형식을 써요. 메타 파일에는 기기 목록만 있고 게임 데이터는 없어요. 로그인 정보는 어느 파일에도 들어가지 않아요.",
+        "googleNote": "Gamerdex 폴더는 내 Drive에 보여요. Gamerdex는 직접 만든 파일만 열 수 있어요.",
+        "githubNote": "저장소를 비공개로 유지하세요. 저장소를 열 수 있는 사람은 누구나 데이터를 읽을 수 있어요.",
+        "dropboxNote": "Gamerdex 폴더는 내 Dropbox의 Apps 폴더 안에 있어요. Gamerdex는 그 폴더만 열 수 있어요.",
+        "microsoftNote": "Gamerdex 폴더는 내 OneDrive의 Apps 폴더 안에 있어요. Gamerdex는 그 폴더만 열 수 있어요."
+    },
+    "device": {
+        "title": "이 기기",
+        "name": "기기 이름",
+        "nameHint": "동기화 파일에 이 기기의 이름이 표시돼요. 이름을 바꾸면 다음 동기화 때 메타 파일이 업데이트돼요.",
+        "activePlaythrough": "사용 중인 플레이 기록",
+        "noPlaythrough": "없음",
+        "login": "동기화 로그인",
+        "loginValue": "이 기기에만 저장",
+        "loginHint": "사용 중인 플레이 기록은 기기마다 따로 정하며, 동기화가 바꾸지 않아요. 로그인 정보는 이 기기에만 남아요. 저장된 데이터, 백업 파일, 동기화 파일에는 들어가지 않아요."
+    },
+    "disconnect": {
+        "title": "연결 해제",
+        "body": "이 브라우저에서 동기화를 멈춰요. 플레이 기록은 이 기기와 클라우드에 그대로 남아요. 다른 기기는 계속 동기화돼요.",
+        "button": "{provider} 연결 해제",
+        "googleHint": "클라우드 사본을 직접 삭제하려면 연결을 해제한 뒤 Google Drive의 Gamerdex 폴더를 삭제하세요.",
+        "githubHint": "클라우드 사본을 직접 삭제하려면 연결을 해제한 뒤 저장소의 Gamerdex 폴더를 삭제하세요.",
+        "dropboxHint": "클라우드 사본을 직접 삭제하려면 연결을 해제한 뒤 Dropbox의 Apps 아래에 있는 앱 폴더를 삭제하세요.",
+        "microsoftHint": "클라우드 사본을 직접 삭제하려면 연결을 해제한 뒤 OneDrive의 Apps 아래에 있는 앱 폴더를 삭제하세요."
+    },
+    "first": {
+        "thisDevice": "이 기기",
+        "cloud": "클라우드",
+        "recommended": "권장",
+        "later": "나중에 결정",
+        "apply": "선택 적용",
+        "optionsLabel": "유지할 항목"
+    }
+}

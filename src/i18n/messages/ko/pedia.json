@@ -1,0 +1,85 @@
+{
+    "title": "도감",
+    "subline": "{total}개 중 {done}개 수집 · {percent}% · {name}",
+    "tabsLabel": "도감 구분",
+    "tabs": {
+        "fish": "물고기",
+        "bugs": "곤충",
+        "critters": "작은 동물"
+    },
+    "nouns": {
+        "fish": "물고기",
+        "bugs": "곤충",
+        "critters": "작은 동물"
+    },
+    "summary": {
+        "captured": "포획",
+        "donated": "박물관 기증",
+        "permit": "얻은 허가 포인트",
+        "of": "전체 {total}개"
+    },
+    "filters": {
+        "sheetTitle": "{tab} 필터",
+        "biome": "바이옴",
+        "rarity": "희귀도",
+        "season": "계절",
+        "time": "시간",
+        "collected": "수집 상태",
+        "donated": "기증 상태",
+        "allBiomes": "모든 바이옴",
+        "allRarities": "모든 희귀도",
+        "allSeasons": "모든 계절",
+        "anyTime": "모든 시간",
+        "all": "전체",
+        "onlyCollected": "수집 완료",
+        "notCollected": "수집 전",
+        "onlyDonated": "기증 완료",
+        "notDonated": "기증 전",
+        "search": "이름으로 {tab} 검색",
+        "showing": "{tab} {total}개 중 {shown}개 표시",
+        "capturedCount": "포획 {count}",
+        "donatedCount": "기증 {count}",
+        "apply": "{tab} {count}개 보기"
+    },
+    "view": {
+        "label": "보기",
+        "grid": "격자",
+        "list": "목록"
+    },
+    "card": {
+        "biome": "바이옴",
+        "seasons": "계절",
+        "time": "시간",
+        "sell": "판매가",
+        "cooked": "요리",
+        "cookedValue": "{price} · x{pieces}",
+        "status": "상태",
+        "missing": "없음",
+        "caught": "포획함",
+        "donated": "기증함"
+    },
+    "table": {
+        "name": "이름",
+        "rarity": "희귀도",
+        "biome": "바이옴",
+        "seasons": "계절",
+        "time": "시간",
+        "sell": "판매",
+        "cooked": "요리",
+        "status": "상태",
+        "caption": "{total}개 행 중 {shown}개를 표시해요. 두 보기 모두 같은 필터, 상태 설정, 상업 레벨이 적용돼요."
+    },
+    "empty": {
+        "title": "필터에 맞는 {tab} 없음",
+        "description": "다른 이름을 입력하거나 필터를 지워 보세요.",
+        "clear": "필터 지우기"
+    },
+    "toast": {
+        "marked": "{name}: {status}(으)로 표시했어요",
+        "statuses": {
+            "missing": "없음",
+            "caught": "포획함",
+            "donated": "기증함"
+        }
+    }
+}

@@ -1,0 +1,91 @@
+{
+    "nav": {
+        "main": "الرئيسية",
+        "groups": {
+            "track": "التتبع",
+            "progress": "التقدم",
+            "collect": "الجمع",
+            "tools": "الأدوات"
+        },
+        "items": {
+            "overview": "نظرة عامة",
+            "pedia": "Pedia",
+            "npcs": "الشخصيات",
+            "calendar": "التقويم",
+            "buildings": "المباني",
+            "licenses": "التراخيص",
+            "milestones": "الإنجازات",
+            "skills": "المهارات",
+            "recipes": "الوصفات",
+            "gear": "العتاد",
+            "wardrobe": "الملابس والمنزل",
+            "itemsBreakdown": "تفصيل العناصر",
+            "weightCalculator": "حاسبة الوزن",
+            "reference": "المرجع",
+            "settings": "الإعدادات",
+            "playthroughs": "مسارات اللعب",
+            "newPlaythrough": "مسار لعب جديد"
+        }
+    },
+    "appShell": {
+        "skipToContent": "التخطي إلى المحتوى",
+        "closeMenu": "إغلاق القائمة"
+    },
+    "appBar": {
+        "openMenu": "فتح القائمة"
+    },
+    "playthroughGate": {
+        "emptyTitle": "لا يوجد مسار لعب بعد",
+        "emptyDescription": "يلزم إنشاء مسار لعب لبدء تتبع التقدم.",
+        "newPlaythrough": "مسار لعب جديد"
+    },
+    "playthroughSwitcher": {
+        "sectionLabel": "مسار اللعب",
+        "switchPlaythrough": "تبديل مسار اللعب",
+        "loading": "جارٍ التحميل",
+        "noPlaythroughYet": "لا يوجد مسار لعب بعد",
+        "playthroughs": "مسارات اللعب",
+        "active": "نشط",
+        "allPlaythroughs": "كل مسارات اللعب",
+        "newPlaythrough": "مسار لعب جديد",
+        "detail": "اليوم {day} · {percent}%"
+    },
+    "theme": {
+        "label": "المظهر",
+        "light": "فاتح",
+        "dark": "داكن",
+        "system": "النظام"
+    },
+    "footer": {
+        "tagline": "تتبع تقدمك في Dinkum بسهولة.",
+        "support": "الدعم",
+        "about": "حول",
+        "settings": "الإعدادات",
+        "discord": "Discord",
+        "github": "GitHub",
+        "dinkumWiki": "ويكي Dinkum",
+        "privacyPolicy": "سياسة الخصوصية",
+        "termsOfService": "شروط الخدمة",
+        "disclaimerTitle": "إخلاء مسؤولية",
+        "disclaimer": "هذا التطبيق غير تابع للعبة Dinkum أو لمطوريها، ولا يحظى بدعمهم أو ارتباط بهم. بيانات اللعبة مأخوذة من ويكي Dinkum. صور اللعبة وأسماؤها مستخدمة للإشارة فقط.",
+        "copyright": "© {year} {appName}",
+        "framework": "مبني على إطار Gamerdex، وهو أساس مشترك لمتتبعات تقدم الألعاب المجانية. تبقى بياناتك في المتصفح، أو في التخزين السحابي الخاص بك عند تفعيل المزامنة.",
+        "visitGamerdex": "زيارة Gamerdex"
+    },
+    "domainNotice": {
+        "label": "إشعار تغيير النطاق:",
+        "movedTo": "انتقل Dinkum Tracker إلى <strong>{domain}</strong>. لن تنتقل البيانات المحفوظة تلقائيًا. يُرجى",
+        "exportLink": "تصدير البيانات",
+        "retired": "من هذا الموقع واستيرادها في النطاق الجديد. سيتوقف هذا النطاق في <strong>{date}</strong>.",
+        "goToNewSite": "الانتقال إلى الموقع الجديد",
+        "dismiss": "إخفاء الإشعار"
+    },
+    "notFound": {
+        "code": "404",
+        "title": "الصفحة غير موجودة",
+        "description": "هذه الصفحة غير موجودة أو ربما نُقلت.",
+        "toOverview": "الانتقال إلى نظرة عامة",
+        "toHome": "الانتقال إلى الصفحة الرئيسية",
+        "hint": "الرمز 404 يعني أن العنوان مكتوب بشكل خاطئ أو أن الصفحة أُزيلت. الشريط الجانبي يبقى متاحًا."
+    }
+}

@@ -1,0 +1,78 @@
+{
+    "header": {
+        "features": "Tính năng",
+        "track": "Bạn có thể theo dõi gì",
+        "view": "Xem lượt chơi của tôi",
+        "new": "Lượt chơi mới",
+        "menu": "Menu",
+        "menuOpen": "Mở menu",
+        "menuClose": "Đóng menu",
+        "nav": "Chính"
+    },
+    "hero": {
+        "eyebrow": "Theo dõi tiến trình của bạn",
+        "title": "Dinkum Tracker",
+        "intro": "Ứng dụng theo dõi đầy đủ cho hành trình Dinkum của bạn. Quản lý nhiều lượt chơi, theo dõi bộ sưu tập và tiến trình ở cùng một nơi. Mọi thứ được lưu trong trình duyệt, và bạn có thể đồng bộ lên kho lưu trữ đám mây của riêng mình.",
+        "view": "Xem lượt chơi của tôi",
+        "new": "Cuộc phiêu lưu mới",
+        "imageAlt": "Game Dinkum"
+    },
+    "counts": {
+        "title": "Theo dõi toàn bộ bộ sưu tập",
+        "intro": "Quản lý mọi mặt trong hành trình Dinkum của bạn với công cụ dựa trên số lượng vật phẩm thật.",
+        "pedia": "Pedia",
+        "npcs": "NPC",
+        "licenses": "Giấy phép",
+        "milestones": "Cột mốc",
+        "buildings": "Công trình",
+        "gear": "Trang bị và thiết bị",
+        "recipes": "Công thức",
+        "clothing": "Quần áo"
+    },
+    "everything": {
+        "title": "Theo dõi mọi thứ",
+        "intro": "Mọi công cụ bạn cần để thành công trong Dinkum",
+        "imageAlt": "Ứng dụng Dinkum Tracker",
+        "closing": "Từ sưu tầm côn trùng đến chăm sóc quan hệ với NPC, Dinkum Tracker giúp bạn nắm rõ mọi thứ trong game.",
+        "pedia": {
+            "title": "Bộ sưu tập Pedia",
+            "text": "Theo dõi mọi loài cá, côn trùng và sinh vật nhỏ theo mùa, địa điểm và thời gian trong ngày. Theo dõi các món đã tặng bảo tàng và tiến trình sưu tập."
+        },
+        "npcs": {
+            "title": "Quan hệ với NPC",
+            "text": "Theo dõi tình bạn với cư dân thị trấn, món quà họ thích và số tim với cả {count} NPC."
+        },
+        "calendar": {
+            "title": "Sự kiện trong lịch",
+            "text": "Theo dõi các ngày quan trọng, sinh nhật và sự kiện theo mùa. Không bao giờ bỏ lỡ lễ hội hay dịp đặc biệt nào trong thị trấn Dinkum của bạn."
+        }
+    },
+    "needs": {
+        "title": "Mọi thứ bạn cần",
+        "intro": "Theo dõi mọi chi tiết quan trọng trong cuộc phiêu lưu Dinkum của bạn.",
+        "milestones": {
+            "title": "Cột mốc và Giấy phép",
+            "one": "Theo dõi việc hoàn thành {count} cột mốc trong game",
+            "two": "Quản lý mọi giấy phép và các cấp nâng cấp",
+            "three": "Xem tiến trình và yêu cầu về điểm giấy phép"
+        },
+        "recipes": {
+            "title": "Công thức và Chế tạo",
+            "one": "Theo dõi mọi công thức nấu ăn và nguyên liệu",
+            "two": "Theo dõi công thức chế tạo và tài nguyên",
+            "three": "Quản lý dụng cụ, vũ khí và thiết bị"
+        },
+        "collections": {
+            "title": "Bộ sưu tập và Tài nguyên",
+            "one": "Lập danh mục mọi món quần áo và nội thất",
+            "two": "Theo dõi mọi tài nguyên và công dụng của chúng",
+            "three": "Quản lý các dự án xây dựng và giấy tờ đất"
+        }
+    },
+    "cta": {
+        "title": "Sẵn sàng theo dõi chưa?",
+        "text": "Hãy bắt đầu sắp xếp cuộc phiêu lưu Dinkum của bạn ngay hôm nay và không bao giờ lạc mất tiến trình nữa.",
+        "create": "Tạo lượt chơi mới",
+        "existing": "Xem các lượt chơi hiện có"
+    }
+}

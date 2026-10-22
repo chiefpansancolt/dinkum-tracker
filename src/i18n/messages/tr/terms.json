@@ -1,0 +1,91 @@
+{
+    "buffs": {
+        "attackLevel": "Saldırı",
+        "charged": "Yüklü",
+        "coolLevel": "Serinlik",
+        "defenseLevel": "Savunma",
+        "diligent": "Çalışkan",
+        "experienceLevel": "Deneyim",
+        "fastHealthTickSpeedLevel": "Hızlı can yenilenme hızı",
+        "fishLevel": "Balık",
+        "foragingLevel": "Toplayıcılık",
+        "healthMax": "Azami can",
+        "healthRegenRate": "Can yenilenmesi",
+        "length": "Uzunluk",
+        "miningLevel": "Madencilik",
+        "sleepless": "Uykusuz",
+        "speedLevel": "Hız",
+        "staminaMax": "Azami dayanıklılık",
+        "staminaRegenRate": "Dayanıklılık yenilenmesi",
+        "swimmingLevel": "Yüzme"
+    },
+    "categories": {
+        "buildings": "Binalar",
+        "tools": "Aletler",
+        "weapons": "Silahlar",
+        "equipment": "Ekipman",
+        "vehicles": "Araçlar",
+        "craftingRecipes": "Üretim tarifleri",
+        "cookingRecipes": "Yemek tarifleri",
+        "signWritingRecipes": "Tabela yazım tarifleri",
+        "otherCraftables": "Diğer üretilebilirler"
+    },
+    "resourceTypes": {
+        "fish": "Balık",
+        "critter": "Küçük hayvan",
+        "bug": "Böcek",
+        "relic": "Kalıntı",
+        "crop": "Ürün",
+        "foragable": "Toplanabilir",
+        "animalProduct": "Hayvan ürünü",
+        "paint": "Boya",
+        "mineral": "Mineral",
+        "craftable": "Üretilebilir",
+        "trophy": "Kupa",
+        "seed": "Tohum",
+        "flower": "Çiçek",
+        "resource": "Kaynak"
+    },
+    "daily": {
+        "dayOneMilestones": "İlk gün",
+        "travelMilestones": "Seyahat",
+        "npcMilestones": "NPC'ler",
+        "fishingMilestones": "Balıkçılık",
+        "farmingMilestones": "Çiftçilik",
+        "foragingMilestones": "Toplayıcılık",
+        "loggingMilestones": "Odunculuk",
+        "miningMilestones": "Madencilik",
+        "excavationMilestones": "Kazı",
+        "bugCatchingMilestones": "Böcek yakalama",
+        "craftingMilestones": "Üretim",
+        "huntingMilestones": "Avcılık",
+        "trappingMilestones": "Tuzakla avlanma",
+        "dinksMilestones": "Dinks"
+    },
+    "animalTypes": {
+        "Wild Animal": "Yabani hayvan",
+        "Farm Animal": "Çiftlik hayvanı",
+        "Tammed Animal": "Evcilleştirilmiş hayvan"
+    },
+    "temperaments": {
+        "Passive": "Pasif",
+        "Neutral": "Nötr",
+        "Aggressive": "Saldırgan"
+    },
+    "seasons": {
+        "Spring": "İlkbahar",
+        "Summer": "Yaz",
+        "Autumn": "Sonbahar",
+        "Winter": "Kış",
+        "All": "Tümü"
+    },
+    "weekdays": {
+        "Sunday": "Pazar",
+        "Monday": "Pazartesi",
+        "Tuesday": "Salı",
+        "Wednesday": "Çarşamba",
+        "Thursday": "Perşembe",
+        "Friday": "Cuma",
+        "Saturday": "Cumartesi"
+    }
+}

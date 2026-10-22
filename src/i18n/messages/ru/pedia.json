@@ -1,0 +1,85 @@
+{
+    "title": "Pedia",
+    "subline": "{done} из {total} собрано · {percent}% · {name}",
+    "tabsLabel": "Разделы Pedia",
+    "tabs": {
+        "fish": "Рыба",
+        "bugs": "Насекомые",
+        "critters": "Зверьки"
+    },
+    "nouns": {
+        "fish": "рыба",
+        "bugs": "насекомые",
+        "critters": "зверьки"
+    },
+    "summary": {
+        "captured": "Поймано",
+        "donated": "Передано в музей",
+        "permit": "Заработано очков разрешений",
+        "of": "из {total}"
+    },
+    "filters": {
+        "sheetTitle": "Фильтр: {tab}",
+        "biome": "Биом",
+        "rarity": "Редкость",
+        "season": "Сезон",
+        "time": "Время",
+        "collected": "Собрано",
+        "donated": "Передано",
+        "allBiomes": "Все биомы",
+        "allRarities": "Любая редкость",
+        "allSeasons": "Все сезоны",
+        "anyTime": "Любое время",
+        "all": "Все",
+        "onlyCollected": "Собрано",
+        "notCollected": "Не собрано",
+        "onlyDonated": "Передано",
+        "notDonated": "Не передано",
+        "search": "Поиск по названию: {tab}",
+        "showing": "Показано {shown} из {total}: {tab}",
+        "capturedCount": "Поймано: {count}",
+        "donatedCount": "Передано: {count}",
+        "apply": "Показать {count}: {tab}"
+    },
+    "view": {
+        "label": "Вид",
+        "grid": "Сетка",
+        "list": "Список"
+    },
+    "card": {
+        "biome": "Биом",
+        "seasons": "Сезоны",
+        "time": "Время",
+        "sell": "Цена продажи",
+        "cooked": "Приготовлено",
+        "cookedValue": "{price} · x{pieces}",
+        "status": "Статус",
+        "missing": "Нет",
+        "caught": "Поймано",
+        "donated": "Передано"
+    },
+    "table": {
+        "name": "Название",
+        "rarity": "Редкость",
+        "biome": "Биом",
+        "seasons": "Сезоны",
+        "time": "Время",
+        "sell": "Продажа",
+        "cooked": "Готовка",
+        "status": "Статус",
+        "caption": "Показано строк: {shown} из {total}. Одни и те же фильтры, переключатель статуса и уровень торговли действуют в обоих видах."
+    },
+    "empty": {
+        "title": "По этим фильтрам ничего не найдено: {tab}",
+        "description": "Попробуйте другое название или сбросьте фильтры.",
+        "clear": "Сбросить фильтры"
+    },
+    "toast": {
+        "marked": "{name}: {status}",
+        "statuses": {
+            "missing": "нет",
+            "caught": "поймано",
+            "donated": "передано"
+        }
+    }
+}

@@ -1,0 +1,78 @@
+{
+    "header": {
+        "features": "Ciri",
+        "track": "Apa yang boleh dijejak",
+        "view": "Lihat permainan saya",
+        "new": "Permainan baharu",
+        "menu": "Menu",
+        "menuOpen": "Buka menu",
+        "menuClose": "Tutup menu",
+        "nav": "Utama"
+    },
+    "hero": {
+        "eyebrow": "Jejak kemajuan anda",
+        "title": "Dinkum Tracker",
+        "intro": "Aplikasi penjejak lengkap untuk pengembaraan Dinkum anda. Urus pelbagai permainan, jejak koleksi dan pantau kemajuan di satu tempat. Semuanya disimpan dalam pelayar anda, dan anda boleh menyegerakkannya ke storan awan anda sendiri.",
+        "view": "Lihat permainan saya",
+        "new": "Pengembaraan baharu",
+        "imageAlt": "Game Dinkum"
+    },
+    "counts": {
+        "title": "Jejak koleksi lengkap anda",
+        "intro": "Urus setiap aspek perjalanan Dinkum anda dengan penjejak yang dibina mengikut bilangan item sebenar.",
+        "pedia": "Pedia",
+        "npcs": "NPC",
+        "licenses": "Lesen",
+        "milestones": "Pencapaian",
+        "buildings": "Bangunan",
+        "gear": "Peralatan dan kelengkapan",
+        "recipes": "Resipi",
+        "clothing": "Pakaian"
+    },
+    "everything": {
+        "title": "Jejak segalanya",
+        "intro": "Semua alat yang anda perlukan untuk berjaya dalam Dinkum",
+        "imageAlt": "Aplikasi Dinkum Tracker",
+        "closing": "Daripada mengumpul serangga hingga mengurus hubungan dengan NPC, Dinkum Tracker membantu anda menjejak segalanya dalam game anda.",
+        "pedia": {
+            "title": "Koleksi Pedia",
+            "text": "Jejak semua ikan, serangga dan hidupan kecil mengikut musim, lokasi dan waktu dalam sehari. Pantau sumbangan muzium dan kemajuan koleksi anda."
+        },
+        "npcs": {
+            "title": "Hubungan NPC",
+            "text": "Jejak persahabatan anda dengan penduduk bandar, hadiah kegemaran dan tahap hati bersama semua {count} NPC."
+        },
+        "calendar": {
+            "title": "Acara kalendar",
+            "text": "Jejak tarikh penting, hari lahir dan acara bermusim. Jangan terlepas lagi sebarang perayaan atau majlis istimewa di bandar Dinkum anda."
+        }
+    },
+    "needs": {
+        "title": "Semua yang anda perlukan",
+        "intro": "Jejak semua butiran penting dalam pengembaraan Dinkum anda.",
+        "milestones": {
+            "title": "Pencapaian dan lesen",
+            "one": "Jejak penyiapan {count} pencapaian game",
+            "two": "Urus semua lesen dan tahap naik taraf",
+            "three": "Lihat kemajuan mata permit dan keperluannya"
+        },
+        "recipes": {
+            "title": "Resipi dan pembuatan",
+            "one": "Jejak semua resipi masakan dan bahannya",
+            "two": "Jejak resipi pembuatan dan sumber",
+            "three": "Urus alat, senjata dan kelengkapan"
+        },
+        "collections": {
+            "title": "Koleksi dan sumber",
+            "one": "Senaraikan semua pakaian dan perabot",
+            "two": "Jejak semua sumber dan kegunaannya",
+            "three": "Urus projek bangunan dan surat hak milik"
+        }
+    },
+    "cta": {
+        "title": "Sedia untuk mula menjejak?",
+        "text": "Mula atur pengembaraan Dinkum anda hari ini dan jangan hilang jejak kemajuan anda lagi.",
+        "create": "Cipta permainan baharu",
+        "existing": "Lihat permainan sedia ada"
+    }
+}

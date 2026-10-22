@@ -1,0 +1,124 @@
+{
+    "title": "Partidas",
+    "subline": "Gerir as aventuras em Dinkum. {count, plural, one {{amount} partida} other {{amount} partidas}}, {name} está ativa.",
+    "sublineNoneActive": "Gerir as aventuras em Dinkum. {count, plural, one {{amount} partida} other {{amount} partidas}}.",
+    "sublineEmpty": "Ainda sem partidas.",
+    "loading": "A carregar partidas...",
+    "stats": {
+        "playthroughs": "Partidas",
+        "playthroughsCaption": "neste navegador",
+        "active": "Ativa",
+        "noneActive": "Nenhuma",
+        "furthest": "Mais avançada",
+        "average": "Conclusão média",
+        "averageCaption": "em todas"
+    },
+    "filters": {
+        "sortBy": "Ordenar por",
+        "sort": {
+            "lastUpdated": "Última atualização",
+            "name": "Nome",
+            "createdAt": "Data de criação",
+            "completion": "Percentagem de conclusão"
+        },
+        "search": "Pesquisar partidas por nome",
+        "showing": "A mostrar {shown} de {total} {total, plural, one {partida} other {partidas}}",
+        "defaultSortFrom": "A ordenação predefinida vem das <link>Definições</link>"
+    },
+    "noMatch": {
+        "title": "Nenhuma partida corresponde a \"{query}\"",
+        "description": "Experimentar outro nome.",
+        "clear": "Limpar pesquisa"
+    },
+    "empty": {
+        "title": "Nenhuma partida encontrada",
+        "description": "Ainda não foi criada nenhuma partida. Criar a primeira partida para começar a acompanhar a aventura em Dinkum. Cada uma é guardada neste navegador.",
+        "create": "Criar a primeira partida",
+        "importBackup": "Importar antes uma cópia de segurança"
+    },
+    "card": {
+        "created": "Criada: {date}",
+        "updated": "Atualizada: {when}",
+        "complete": "{percent}% concluída",
+        "overall": "Progresso total",
+        "pedia": "Pedia",
+        "licenses": "Licenças",
+        "milestones": "Marcos",
+        "buildings": "Edifícios",
+        "pediaDetail": "Peixes {fish} · Insetos {bugs} · Bichos {critters}",
+        "count": "{count}/{total}",
+        "gameDate": "Dia {day}, {season}",
+        "currentGameDate": "Data atual do jogo",
+        "setActive": "Tornar ativa",
+        "active": "Ativa",
+        "openOverview": "Abrir resumo",
+        "edit": "Editar",
+        "delete": "Eliminar",
+        "activePlaythrough": "Partida ativa"
+    },
+    "seasons": {
+        "Spring": "Primavera",
+        "Summer": "Verão",
+        "Autumn": "Outono",
+        "Winter": "Inverno"
+    },
+    "relative": {
+        "today": "Hoje",
+        "yesterday": "Ontem",
+        "daysAgo": "{count, plural, one {há {amount} dia} other {há {amount} dias}}",
+        "weeksAgo": "{count, plural, one {há {amount} semana} other {há {amount} semanas}}",
+        "monthsAgo": "{count, plural, one {há {amount} mês} other {há {amount} meses}}",
+        "unknown": "N/D"
+    },
+    "new": {
+        "action": "Nova partida",
+        "actionShort": "Nova",
+        "pageTitle": "Nova partida",
+        "pageSubline": "Dar-lhe um nome e começar a acompanhar. Tudo é guardado neste navegador.",
+        "back": "Voltar a todas as partidas",
+        "next": {
+            "title": "O que acontece a seguir",
+            "one": "Uma partida vazia é guardada de imediato neste navegador.",
+            "two": "Torna-se a partida ativa se a caixa estiver marcada. O seletor da barra lateral mostra-a.",
+            "three": "A página seguinte é a lista de Partidas, com o novo cartão no topo e um aviso para Anular."
+        },
+        "createdToast": "{name} criada"
+    },
+    "form": {
+        "title": "Criar nova partida",
+        "nameLabel": "Nome da partida",
+        "required": "Obrigatório",
+        "placeholder": "A minha aventura em Dinkum",
+        "help": "Dar à partida um nome fácil de recordar ajuda a identificá-la mais tarde.",
+        "counter": "{count} / {max}",
+        "errorEmpty": "Indicar um nome para a partida",
+        "makeActive": "Tornar esta a partida ativa",
+        "create": "Criar partida",
+        "creating": "A criar...",
+        "cancel": "Cancelar",
+        "failed": "Não foi possível criar a partida. Tentar novamente.",
+        "tryAgain": "Tentar novamente"
+    },
+    "edit": {
+        "title": "Editar partida",
+        "save": "Guardar",
+        "saving": "A guardar...",
+        "savedToast": "Guardado",
+        "renamed": "Renomeada para {name}",
+        "description": "{name} · criada em {date}",
+        "nameLabel": "Nome da partida",
+        "help": "Premir Enter para guardar. Guardar fica desativado enquanto o nome estiver vazio."
+    },
+    "delete": {
+        "title": "Eliminar {name}?",
+        "description": "Isto remove todo o progresso guardado neste dispositivo.",
+        "activeNext": "Esta é a partida ativa. {next} é a atualizada mais recentemente, por isso passa a ser a ativa depois de eliminar.",
+        "activeLast": "Esta é a partida ativa e a única. Depois de eliminar, nenhuma partida fica ativa.",
+        "exportFirst": "Exportar primeiro uma cópia de segurança",
+        "confirm": "Eliminar",
+        "cancel": "Cancelar",
+        "toast": "{name} eliminada",
+        "toastMessage": "A opção Anular fica disponível durante 10 segundos",
+        "updated": "Atualizada {when} · {date}"
+    }
+}

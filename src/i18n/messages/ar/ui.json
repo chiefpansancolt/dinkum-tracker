@@ -1,0 +1,51 @@
+{
+    "close": "إغلاق",
+    "field": {
+        "optional": "اختياري"
+    },
+    "stepper": {
+        "lower": "تقليل {label}",
+        "raise": "زيادة {label}",
+        "labelPrefix": "{label}، "
+    },
+    "switch": {
+        "on": "مفعّل",
+        "off": "معطّل"
+    },
+    "tabs": {
+        "locked": " (مقفل)"
+    },
+    "toast": {
+        "dismiss": "إخفاء",
+        "variants": {
+            "success": "نجاح",
+            "info": "معلومة",
+            "warning": "تنبيه",
+            "error": "خطأ"
+        },
+        "missingProvider": "useToast must be used within a ToastProvider"
+    },
+    "savedChip": {
+        "automatic": "يُحفظ تلقائيًا",
+        "justNow": "تم الحفظ الآن",
+        "minutesAgo": "تم الحفظ قبل {count} د",
+        "at": "تم الحفظ {time}",
+        "failed": "لم يتم الحفظ، مساحة التخزين ممتلئة"
+    },
+    "filters": {
+        "filters": "عوامل التصفية",
+        "filtersWithCount": "عوامل التصفية ({count})",
+        "clearFilters": "مسح عوامل التصفية",
+        "clearAll": "مسح الكل",
+        "cancel": "إلغاء",
+        "showResults": "عرض النتائج",
+        "search": "بحث"
+    },
+    "commerce": {
+        "label": "البيع بمستوى التجارة",
+        "base": "الأساسي",
+        "plus5": "+5%",
+        "plus10": "+10%",
+        "plus15": "+15%"
+    }
+}

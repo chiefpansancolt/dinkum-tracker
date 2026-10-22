@@ -1,0 +1,116 @@
+{
+    "title": "Genel Bakış",
+    "subline": "{total} eşyadan {done} · %{percent} · {name}",
+    "view": "Görüntüle",
+    "headline": {
+        "label": "Genel tamamlanma",
+        "ofItems": "{total} eşyadan {done}",
+        "groups": {
+            "track": "Takip",
+            "progress": "İlerleme",
+            "collect": "Koleksiyon"
+        },
+        "groupOf": "{total} içinden {done}",
+        "note": "Sabit payda {total} eşyadır: Pedia {pedia}, NPC'ler {npcs}, Kilometre taşları {milestones}, Lisanslar {licenses}, Beceriler {skills}, Binalar {buildings}, Teçhizat {gear}, Gardırop ve ev {wardrobe}, Tarifler {recipes}. Her kategori ilk günden sayılır, bu yüzden yeni bir sekme açtığında yüzde zıplamaz."
+    },
+    "skills": {
+        "title": "Karakter becerileri",
+        "level": "Seviye {level}",
+        "empty": "Henüz kayıtlı beceri yok."
+    },
+    "licenses": {
+        "title": "Lisans ilerlemesi",
+        "obtained": "Alınan lisanslar",
+        "complete": "{count}/{total} tamamlandı",
+        "levels": "Lisans seviyeleri",
+        "levelsValue": "{count}/{total} · %{percent}",
+        "permit": "Harcanan izin puanları",
+        "spent": "%{percent} harcandı"
+    },
+    "milestones": {
+        "title": "Kilometre taşı ilerlemesi",
+        "overall": "Genel ilerleme",
+        "complete": "{count}/{total} tamamlandı",
+        "levels": "Seviyeler",
+        "levelsValue": "{count}/{total} · %{percent}",
+        "permit": "Kazanılan izin puanları",
+        "earned": "%{percent} kazanıldı"
+    },
+    "pedia": {
+        "title": "Pedia ilerlemesi",
+        "overall": "Genel ilerleme ({count}/{total})",
+        "donations": "Müze bağışları ({count}/{total})",
+        "fish": "Balıklar ({count}/{total})",
+        "bugs": "Böcekler ({count}/{total})",
+        "critters": "Küçük hayvanlar ({count}/{total})",
+        "donated": "Bağışlandı ({count}/{total})",
+        "permit": "Kazanılan izin puanları",
+        "earned": "%{percent} kazanıldı"
+    },
+    "gear": {
+        "title": "Teçhizat ve ekipman",
+        "overall": "Genel ilerleme ({count}/{total})",
+        "books": "Kitaplar ({count}/{total})",
+        "tools": "Aletler ({count}/{total})",
+        "weapons": "Silahlar ({count}/{total})",
+        "equipment": "Ekipman ({count}/{total})",
+        "vehicles": "Araçlar ({count}/{total})",
+        "cassettes": "Kasetler ({count}/{total})",
+        "names": {
+            "books": "Kitaplar",
+            "tools": "Aletler",
+            "weapons": "Silahlar",
+            "equipment": "Ekipman",
+            "vehicles": "Araçlar",
+            "cassettes": "Kasetler"
+        },
+        "mostComplete": "En tamamlanan",
+        "leastComplete": "En az tamamlanan"
+    },
+    "buildings": {
+        "title": "Bina ilerlemesi",
+        "overall": "Genel ilerleme",
+        "complete": "{count}/{total} tamamlandı",
+        "houseUpgrades": "Ev yükseltmeleri",
+        "shops": "Dükkanlar",
+        "town": "Kasaba binaları",
+        "utility": "Hizmet binaları",
+        "mostExpensive": "En pahalı binalar",
+        "price": "{amount} Dinks"
+    },
+    "recipes": {
+        "title": "Tarif koleksiyonu",
+        "overall": "Genel ilerleme ({count}/{total})",
+        "cooking": "Yemek ({count}/{total})",
+        "crafting": "Üretim ({count}/{total})",
+        "signWriting": "Tabela yazımı ({count}/{total})",
+        "names": {
+            "cooking": "Yemek",
+            "crafting": "Üretim",
+            "signWriting": "Tabela yazımı"
+        },
+        "mostComplete": "En tamamlanan",
+        "leastComplete": "En az tamamlanan"
+    },
+    "npcs": {
+        "title": "NPC ilişkileri",
+        "total": "Toplam NPC",
+        "friends": "Arkadaşlar",
+        "oneHeart": "1+ kalp",
+        "maxHearts": "Azami kalp",
+        "avgHearts": "Ort. kalp",
+        "top": "En iyi ilişkiler",
+        "hearts": "{hearts, plural, one {{amount} kalp} other {{amount} kalp}}",
+        "empty": "Henüz kayıtlı NPC yok."
+    },
+    "game": {
+        "title": "Oyun bilgisi",
+        "calendar": "Oyun takvimi",
+        "date": "{day}. gün, {season}",
+        "tracking": "Gerçek dünya takibi",
+        "daysSince": "Oluşturulmadan beri geçen gün: {days}",
+        "lastUpdated": "Son güncelleme: {date}",
+        "milestones": "Kilometre taşları",
+        "completed": "{count} tamamlandı"
+    }
+}

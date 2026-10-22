@@ -1,0 +1,70 @@
+{
+    "breakdown": {
+        "title": "Item-Aufschlüsselung",
+        "subline": "Welche Rohstoffe in welche Items fließen · {count} Rohstoffe",
+        "tiles": {
+            "resources": "Rohstoffe",
+            "resourcesCaption": "in Rezepten und Bauten genutzt",
+            "common": "Häufig, in 3+ Items genutzt",
+            "of": "von {total}",
+            "mostUsed": "Am häufigsten genutzt",
+            "items": "{count, plural, one {{amount} Item} other {{amount} Items}}"
+        },
+        "search": "Suche",
+        "searchPlaceholder": "Rohstoffe nach Name suchen",
+        "sortBy": "Sortieren nach",
+        "sortName": "Name (A-Z)",
+        "sortUsage": "Nutzungsanzahl",
+        "filter": "Filter",
+        "filterWithCount": "Filter ({count})",
+        "commonOnly": "Nur häufige Rohstoffe (in 3+ Items genutzt)",
+        "showing": "{shown} von {total} Rohstoffen angezeigt",
+        "notes": {
+            "categories": " (gefiltert nach {count, plural, one {{amount} Kategorie} other {{amount} Kategorien}})",
+            "types": " (gefiltert nach {count, plural, one {{amount} Art} other {{amount} Arten}})",
+            "common": " (nur häufige Rohstoffe)"
+        },
+        "panel": {
+            "title": "Rohstoffe filtern",
+            "byCategory": "Nach Kategorie filtern",
+            "byType": "Nach Rohstoffart filtern",
+            "clear": "Auswahl löschen",
+            "itemCount": "{count, plural, one {{amount} Item} other {{amount} Items}}",
+            "done": "{count} Rohstoffe zeigen",
+            "option": "{name}, {items}"
+        },
+        "card": {
+            "usedIn": "{count, plural, one {In {amount} Item genutzt} other {In {amount} Items genutzt}}",
+            "categories": "Kategorien",
+            "usedInList": "Verwendet in",
+            "showMore": "{count} weitere zeigen...",
+            "showLess": "Weniger zeigen"
+        },
+        "empty": {
+            "title": "Keine Rohstoffe passen zu diesen Filtern",
+            "description": "Versuche einen anderen Namen oder lösche die Auswahl.",
+            "clear": "Auswahl löschen"
+        }
+    },
+    "weight": {
+        "title": "Gewichtsrechner",
+        "subline": "Berechne den Preis eines schweren Fundes aus seinem Gewicht · {count} Items",
+        "picker": "Item wählen",
+        "perKg": "{price} pro kg",
+        "range": "{min} - {max} kg",
+        "rangeLine": "Gewichtsbereich: {min}kg - {max}kg",
+        "weight": "Gewicht: {weight} kg",
+        "slider": "Gewicht in kg",
+        "minus": "Gewicht um {step} kg verringern",
+        "plus": "Gewicht um {step} kg erhöhen",
+        "min": "{min}kg",
+        "max": "{max}kg",
+        "stepNote": "Schritt {step} kg. Ein anderes Item setzt das Gewicht auf sein Minimum zurück.",
+        "total": "Gesamtpreis",
+        "dinks": "Dinks",
+        "formula": "{weight} kg × {price} pro kg = {total}",
+        "rounded": "Auf den nächsten Dink gerundet.",
+        "atMin": "Preis bei Mindestgewicht",
+        "atMax": "Preis bei Höchstgewicht"
+    }
+}

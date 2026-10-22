@@ -1,0 +1,51 @@
+{
+    "close": "Đóng",
+    "field": {
+        "optional": "Tùy chọn"
+    },
+    "stepper": {
+        "lower": "Giảm {label}",
+        "raise": "Tăng {label}",
+        "labelPrefix": "{label}, "
+    },
+    "switch": {
+        "on": "Bật",
+        "off": "Tắt"
+    },
+    "tabs": {
+        "locked": " (đã khóa)"
+    },
+    "toast": {
+        "dismiss": "Bỏ qua",
+        "variants": {
+            "success": "Thành công",
+            "info": "Thông tin",
+            "warning": "Cảnh báo",
+            "error": "Lỗi"
+        },
+        "missingProvider": "useToast phải được dùng bên trong ToastProvider"
+    },
+    "savedChip": {
+        "automatic": "Tự động lưu",
+        "justNow": "Vừa lưu xong",
+        "minutesAgo": "Đã lưu {count} phút trước",
+        "at": "Đã lưu {time}",
+        "failed": "Chưa lưu, bộ nhớ đã đầy"
+    },
+    "filters": {
+        "filters": "Bộ lọc",
+        "filtersWithCount": "Bộ lọc ({count})",
+        "clearFilters": "Xóa bộ lọc",
+        "clearAll": "Xóa tất cả",
+        "cancel": "Hủy",
+        "showResults": "Xem kết quả",
+        "search": "Tìm kiếm"
+    },
+    "commerce": {
+        "label": "Bán ở cấp thương mại",
+        "base": "Gốc",
+        "plus5": "+5%",
+        "plus10": "+10%",
+        "plus15": "+15%"
+    }
+}

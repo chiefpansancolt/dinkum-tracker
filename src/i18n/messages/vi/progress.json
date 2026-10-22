@@ -1,0 +1,123 @@
+{
+    "common": {
+        "level": "Cấp {level}",
+        "levelCount": "Cấp {level}:",
+        "locked": "Hãy hoàn thành cấp trước đó trước.",
+        "completeAll": "Hoàn thành tất cả",
+        "clearAll": "Xóa tất cả",
+        "requirement": "Yêu cầu",
+        "requiredSkill": "Cấp kỹ năng yêu cầu",
+        "all": "Tất cả",
+        "collected": "Đã thu thập",
+        "notCollected": "Chưa thu thập",
+        "clearFilters": "Xóa bộ lọc",
+        "toast": {
+            "obtained": "{item}: đã có cấp {level}",
+            "cleared": "{item}: đã xóa {count, plural, other {{amount} cấp}}",
+            "allObtained": "{item}: đã có mọi cấp",
+            "allCleared": "{item}: đã xóa mọi cấp"
+        },
+        "empty": {
+            "title": "Không có {things} nào khớp bộ lọc",
+            "description": "Hãy thử tên khác hoặc xóa bộ lọc."
+        },
+        "permitPoints": "điểm giấy phép"
+    },
+    "buildings": {
+        "title": "Công trình",
+        "subline": "{count} trên {total} đã lắp đặt · {percent}% · {name}",
+        "tiles": {
+            "installed": "Đã lắp đặt",
+            "stillToInstall": "Còn phải lắp đặt",
+            "listed": "Công trình trong danh sách",
+            "of": "trên {total}",
+            "breakdown": "{collectable} có thể thu thập · {movable} có thể di chuyển · {reference} để tham khảo"
+        },
+        "filters": {
+            "deedType": "Loại giấy tờ đất",
+            "npc": "NPC",
+            "collected": "Đã thu thập",
+            "search": "Tìm công trình theo tên...",
+            "sheetTitle": "Lọc công trình",
+            "showing": "Hiển thị {shown} trên {total} công trình · Đã lắp đặt {count}",
+            "apply": "Xem {count} công trình"
+        },
+        "card": {
+            "deed": "Giấy tờ đất",
+            "npc": "NPC",
+            "size": "Kích thước",
+            "buildTime": "Thời gian xây",
+            "deedPrice": "Giá giấy tờ đất",
+            "hours": "Giờ mở cửa",
+            "closed": "Đóng cửa",
+            "description": "Mô tả",
+            "resources": "Tài nguyên",
+            "resource": "{count} {name}"
+        },
+        "installed": "Đã lắp đặt",
+        "nothingToInstall": "Không có gì để lắp đặt cho loại giấy tờ đất này.",
+        "things": "công trình",
+        "toast": {
+            "installed": "Đã đánh dấu {name} là đã lắp đặt",
+            "notInstalled": "Đã đánh dấu {name} là chưa lắp đặt"
+        }
+    },
+    "licenses": {
+        "title": "Giấy phép",
+        "subline": "{count} trên {total} cấp đã có · {percent}% · {name}",
+        "tiles": {
+            "levels": "Cấp đã có",
+            "complete": "Giấy phép hoàn thành",
+            "permit": "Điểm giấy phép đã dùng",
+            "of": "trên {total}",
+            "sentence": "Bạn đã dùng {amount} trên {total} điểm giấy phép cần có."
+        },
+        "filters": {
+            "category": "Danh mục",
+            "collected": "Đã thu thập",
+            "search": "Tìm giấy phép theo tên...",
+            "sheetTitle": "Lọc giấy phép",
+            "showing": "Hiển thị {shown} trên {total} giấy phép · Cấp đã mở khóa {count}",
+            "apply": "Xem {count} giấy phép"
+        },
+        "things": "giấy phép"
+    },
+    "milestones": {
+        "title": "Cột mốc",
+        "subline": "{count} trên {total} cấp đã hoàn thành · {percent}% · {name}",
+        "tiles": {
+            "levels": "Cấp đã hoàn thành",
+            "complete": "Cột mốc hoàn thành",
+            "permit": "Điểm giấy phép đã nhận",
+            "of": "trên {total}",
+            "sentence": "Bạn đã nhận {amount} trên {total} điểm giấy phép có thể nhận."
+        },
+        "filters": {
+            "category": "Danh mục",
+            "allCategories": "Mọi danh mục",
+            "collected": "Đã thu thập",
+            "viewMode": "Chế độ xem",
+            "grouped": "Nhóm theo chữ cái",
+            "all": "Tất cả cột mốc",
+            "search": "Tìm cột mốc theo tên hoặc mô tả...",
+            "sheetTitle": "Lọc cột mốc",
+            "showing": "Hiển thị {shown} trên {total} cột mốc · Cấp đã hoàn thành {count}",
+            "apply": "Xem {count} cột mốc"
+        },
+        "things": "cột mốc"
+    },
+    "skills": {
+        "title": "Kỹ năng",
+        "subline": "{skills} kỹ năng · tổng {levels} cấp · Không giới hạn trên · {name}",
+        "tiles": {
+            "total": "Tổng cấp kỹ năng",
+            "across": "trên {count} kỹ năng",
+            "highest": "Kỹ năng cao nhất",
+            "atZero": "Kỹ năng ở cấp 0",
+            "atZeroOf": "trên {total}"
+        },
+        "level": "Cấp kỹ năng",
+        "note": "Giấy phép yêu cầu một cấp kỹ năng ở mỗi bậc. Xem <link>Giấy phép</link> để biết bạn còn cần cấp nào.",
+        "toast": "{name} giờ là cấp {level}"
+    }
+}

@@ -1,0 +1,85 @@
+{
+    "title": "Pedia",
+    "subline": "{done} sur {total} collectés · {percent} % · {name}",
+    "tabsLabel": "Sections de la Pedia",
+    "tabs": {
+        "fish": "Poissons",
+        "bugs": "Insectes",
+        "critters": "Bestioles"
+    },
+    "nouns": {
+        "fish": "poissons",
+        "bugs": "insectes",
+        "critters": "bestioles"
+    },
+    "summary": {
+        "captured": "Capturés",
+        "donated": "Donnés au musée",
+        "permit": "Points de permis gagnés",
+        "of": "sur {total}"
+    },
+    "filters": {
+        "sheetTitle": "Filtrer {tab}",
+        "biome": "Biome",
+        "rarity": "Rareté",
+        "season": "Saison",
+        "time": "Moment",
+        "collected": "Collecté",
+        "donated": "Donné",
+        "allBiomes": "Tous les biomes",
+        "allRarities": "Toutes les raretés",
+        "allSeasons": "Toutes les saisons",
+        "anyTime": "À tout moment",
+        "all": "Tous",
+        "onlyCollected": "Collectés",
+        "notCollected": "À collecter",
+        "onlyDonated": "Donnés",
+        "notDonated": "À donner",
+        "search": "Rechercher {tab} par nom",
+        "showing": "Affichage de {shown} sur {total} {tab}",
+        "capturedCount": "Capturés : {count}",
+        "donatedCount": "Donnés : {count}",
+        "apply": "Afficher {count} {tab}"
+    },
+    "view": {
+        "label": "Vue",
+        "grid": "Grille",
+        "list": "Liste"
+    },
+    "card": {
+        "biome": "Biome",
+        "seasons": "Saisons",
+        "time": "Moment",
+        "sell": "Prix de vente",
+        "cooked": "Cuisiné",
+        "cookedValue": "{price} · x{pieces}",
+        "status": "Statut",
+        "missing": "Manquant",
+        "caught": "Attrapé",
+        "donated": "Donné"
+    },
+    "table": {
+        "name": "Nom",
+        "rarity": "Rareté",
+        "biome": "Biome",
+        "seasons": "Saisons",
+        "time": "Moment",
+        "sell": "Vente",
+        "cooked": "Cuisiné",
+        "status": "Statut",
+        "caption": "{shown} lignes sur {total} affichées. Les mêmes filtres, le même contrôle de statut et le même niveau de commerce s’appliquent aux deux vues."
+    },
+    "empty": {
+        "title": "Aucun résultat dans {tab} avec ces filtres",
+        "description": "Essayez un autre nom ou effacez les filtres.",
+        "clear": "Effacer les filtres"
+    },
+    "toast": {
+        "marked": "{name} : statut {status}",
+        "statuses": {
+            "missing": "manquant",
+            "caught": "attrapé",
+            "donated": "donné"
+        }
+    }
+}

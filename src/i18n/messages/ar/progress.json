@@ -1,0 +1,123 @@
+{
+    "common": {
+        "level": "المستوى {level}",
+        "levelCount": "المستوى {level}:",
+        "locked": "يلزم إكمال المستوى السابق أولًا.",
+        "completeAll": "إكمال الكل",
+        "clearAll": "مسح الكل",
+        "requirement": "المتطلب",
+        "requiredSkill": "مستوى المهارة المطلوب",
+        "all": "الكل",
+        "collected": "تم الجمع",
+        "notCollected": "لم يُجمع بعد",
+        "clearFilters": "مسح عوامل التصفية",
+        "toast": {
+            "obtained": "{item}: تم الحصول على المستوى {level}",
+            "cleared": "{item}: {count, plural, zero {تم مسح {amount} مستويات} one {تم مسح {amount} مستوى} two {تم مسح مستويين} few {تم مسح {amount} مستويات} many {تم مسح {amount} مستوى} other {تم مسح {amount} مستوى}}",
+            "allObtained": "{item}: تم الحصول على كل المستويات",
+            "allCleared": "{item}: تم مسح كل المستويات"
+        },
+        "empty": {
+            "title": "لا توجد نتائج في {things} تطابق عوامل التصفية هذه",
+            "description": "يمكن تجربة اسم آخر أو مسح عوامل التصفية."
+        },
+        "permitPoints": "نقاط التصريح"
+    },
+    "buildings": {
+        "title": "المباني",
+        "subline": "تم تركيب {count} من {total} · {percent}% · {name}",
+        "tiles": {
+            "installed": "تم التركيب",
+            "stillToInstall": "بانتظار التركيب",
+            "listed": "المباني المدرجة",
+            "of": "من {total}",
+            "breakdown": "{collectable} قابل للجمع · {movable} قابل للنقل · {reference} للمرجع"
+        },
+        "filters": {
+            "deedType": "نوع الصك",
+            "npc": "الشخصية",
+            "collected": "تم الجمع",
+            "search": "البحث في المباني بالاسم...",
+            "sheetTitle": "تصفية المباني",
+            "showing": "عرض {shown} من {total} في المباني · تم تركيب {count}",
+            "apply": "عرض {count} في المباني"
+        },
+        "card": {
+            "deed": "الصك",
+            "npc": "الشخصية",
+            "size": "الحجم",
+            "buildTime": "مدة البناء",
+            "deedPrice": "سعر الصك",
+            "hours": "الساعات",
+            "closed": "مغلق",
+            "description": "الوصف",
+            "resources": "الموارد",
+            "resource": "{count} {name}"
+        },
+        "installed": "تم التركيب",
+        "nothingToInstall": "لا شيء للتركيب في نوع الصك هذا.",
+        "things": "المباني",
+        "toast": {
+            "installed": "تم تحديد {name} كمركّب",
+            "notInstalled": "تم تحديد {name} كغير مركّب"
+        }
+    },
+    "licenses": {
+        "title": "التراخيص",
+        "subline": "تم الحصول على {count} من {total} مستوى · {percent}% · {name}",
+        "tiles": {
+            "levels": "المستويات المحصّلة",
+            "complete": "التراخيص المكتملة",
+            "permit": "نقاط التصريح المنفقة",
+            "of": "من {total}",
+            "sentence": "تم إنفاق {amount} من {total} نقطة تصريح لازمة."
+        },
+        "filters": {
+            "category": "الفئة",
+            "collected": "تم الجمع",
+            "search": "البحث في التراخيص بالاسم...",
+            "sheetTitle": "تصفية التراخيص",
+            "showing": "عرض {shown} من {total} في التراخيص · المستويات المفتوحة {count}",
+            "apply": "عرض {count} في التراخيص"
+        },
+        "things": "التراخيص"
+    },
+    "milestones": {
+        "title": "الإنجازات",
+        "subline": "اكتمل {count} من {total} مستوى · {percent}% · {name}",
+        "tiles": {
+            "levels": "المستويات المكتملة",
+            "complete": "الإنجازات المكتملة",
+            "permit": "نقاط التصريح المكتسبة",
+            "of": "من {total}",
+            "sentence": "تم اكتساب {amount} من {total} نقطة تصريح متاحة."
+        },
+        "filters": {
+            "category": "الفئة",
+            "allCategories": "كل الفئات",
+            "collected": "تم الجمع",
+            "viewMode": "وضع العرض",
+            "grouped": "مجمّعة حسب الحرف",
+            "all": "كل الإنجازات",
+            "search": "البحث في الإنجازات بالاسم أو الوصف...",
+            "sheetTitle": "تصفية الإنجازات",
+            "showing": "عرض {shown} من {total} في الإنجازات · المستويات المكتملة {count}",
+            "apply": "عرض {count} في الإنجازات"
+        },
+        "things": "الإنجازات"
+    },
+    "skills": {
+        "title": "المهارات",
+        "subline": "{skills} مهارة · {levels} مستوى في المجموع · بلا حد أقصى · {name}",
+        "tiles": {
+            "total": "إجمالي مستويات المهارات",
+            "across": "عبر {count} مهارة",
+            "highest": "أعلى مهارة",
+            "atZero": "مهارات في المستوى 0",
+            "atZeroOf": "من {total}"
+        },
+        "level": "مستوى المهارة",
+        "note": "تتطلب التراخيص مستوى مهارة عند كل درجة. صفحة <link>التراخيص</link> توضح المستويات التي لا تزال مطلوبة.",
+        "toast": "{name} أصبح الآن في المستوى {level}"
+    }
+}

@@ -1,0 +1,91 @@
+{
+    "buffs": {
+        "attackLevel": "Атака",
+        "charged": "Заряд",
+        "coolLevel": "Прохлада",
+        "defenseLevel": "Защита",
+        "diligent": "Усердие",
+        "experienceLevel": "Опыт",
+        "fastHealthTickSpeedLevel": "Быстрый тик здоровья",
+        "fishLevel": "Рыбалка",
+        "foragingLevel": "Собирательство",
+        "healthMax": "Макс. здоровье",
+        "healthRegenRate": "Регенерация здоровья",
+        "length": "Длительность",
+        "miningLevel": "Добыча",
+        "sleepless": "Бессонница",
+        "speedLevel": "Скорость",
+        "staminaMax": "Макс. выносливость",
+        "staminaRegenRate": "Регенерация выносливости",
+        "swimmingLevel": "Плавание"
+    },
+    "categories": {
+        "buildings": "Постройки",
+        "tools": "Инструменты",
+        "weapons": "Оружие",
+        "equipment": "Экипировка",
+        "vehicles": "Транспорт",
+        "craftingRecipes": "Рецепты крафта",
+        "cookingRecipes": "Рецепты готовки",
+        "signWritingRecipes": "Рецепты вывесок",
+        "otherCraftables": "Прочие предметы крафта"
+    },
+    "resourceTypes": {
+        "fish": "Рыба",
+        "critter": "Зверёк",
+        "bug": "Насекомое",
+        "relic": "Реликвия",
+        "crop": "Культура",
+        "foragable": "Дикорос",
+        "animalProduct": "Продукт животных",
+        "paint": "Краска",
+        "mineral": "Минерал",
+        "craftable": "Крафт",
+        "trophy": "Трофей",
+        "seed": "Семя",
+        "flower": "Цветок",
+        "resource": "Ресурс"
+    },
+    "daily": {
+        "dayOneMilestones": "Первый день",
+        "travelMilestones": "Путешествия",
+        "npcMilestones": "NPC",
+        "fishingMilestones": "Рыбалка",
+        "farmingMilestones": "Фермерство",
+        "foragingMilestones": "Собирательство",
+        "loggingMilestones": "Лесозаготовка",
+        "miningMilestones": "Добыча",
+        "excavationMilestones": "Раскопки",
+        "bugCatchingMilestones": "Ловля насекомых",
+        "craftingMilestones": "Крафт",
+        "huntingMilestones": "Охота",
+        "trappingMilestones": "Ловушки",
+        "dinksMilestones": "Dinks"
+    },
+    "animalTypes": {
+        "Wild Animal": "Дикое животное",
+        "Farm Animal": "Домашнее животное",
+        "Tammed Animal": "Прирученное животное"
+    },
+    "temperaments": {
+        "Passive": "Спокойный",
+        "Neutral": "Нейтральный",
+        "Aggressive": "Агрессивный"
+    },
+    "seasons": {
+        "Spring": "Весна",
+        "Summer": "Лето",
+        "Autumn": "Осень",
+        "Winter": "Зима",
+        "All": "Все"
+    },
+    "weekdays": {
+        "Sunday": "Воскресенье",
+        "Monday": "Понедельник",
+        "Tuesday": "Вторник",
+        "Wednesday": "Среда",
+        "Thursday": "Четверг",
+        "Friday": "Пятница",
+        "Saturday": "Суббота"
+    }
+}

@@ -1,0 +1,91 @@
+{
+    "nav": {
+        "main": "เมนูหลัก",
+        "groups": {
+            "track": "ติดตาม",
+            "progress": "ความคืบหน้า",
+            "collect": "สะสม",
+            "tools": "เครื่องมือ"
+        },
+        "items": {
+            "overview": "ภาพรวม",
+            "pedia": "Pedia",
+            "npcs": "NPC",
+            "calendar": "ปฏิทิน",
+            "buildings": "อาคาร",
+            "licenses": "ใบอนุญาต",
+            "milestones": "หมุดหมาย",
+            "skills": "ทักษะ",
+            "recipes": "สูตร",
+            "gear": "อุปกรณ์",
+            "wardrobe": "ตู้เสื้อผ้าและบ้าน",
+            "itemsBreakdown": "แยกส่วนประกอบไอเทม",
+            "weightCalculator": "เครื่องคำนวณน้ำหนัก",
+            "reference": "ข้อมูลอ้างอิง",
+            "settings": "ตั้งค่า",
+            "playthroughs": "รอบการเล่น",
+            "newPlaythrough": "รอบการเล่นใหม่"
+        }
+    },
+    "appShell": {
+        "skipToContent": "ข้ามไปที่เนื้อหา",
+        "closeMenu": "ปิดเมนู"
+    },
+    "appBar": {
+        "openMenu": "เปิดเมนู"
+    },
+    "playthroughGate": {
+        "emptyTitle": "ยังไม่มีรอบการเล่น",
+        "emptyDescription": "สร้างรอบการเล่นเพื่อเริ่มติดตามความคืบหน้า",
+        "newPlaythrough": "รอบการเล่นใหม่"
+    },
+    "playthroughSwitcher": {
+        "sectionLabel": "รอบการเล่น",
+        "switchPlaythrough": "สลับรอบการเล่น",
+        "loading": "กำลังโหลด",
+        "noPlaythroughYet": "ยังไม่มีรอบการเล่น",
+        "playthroughs": "รอบการเล่น",
+        "active": "ใช้งานอยู่",
+        "allPlaythroughs": "รอบการเล่นทั้งหมด",
+        "newPlaythrough": "รอบการเล่นใหม่",
+        "detail": "วันที่ {day} · {percent}%"
+    },
+    "theme": {
+        "label": "ธีม",
+        "light": "สว่าง",
+        "dark": "มืด",
+        "system": "ตามระบบ"
+    },
+    "footer": {
+        "tagline": "ติดตามความคืบหน้าใน Dinkum ได้อย่างสบาย",
+        "support": "ช่วยเหลือ",
+        "about": "เกี่ยวกับ",
+        "settings": "ตั้งค่า",
+        "discord": "Discord",
+        "github": "GitHub",
+        "dinkumWiki": "Dinkum Wiki",
+        "privacyPolicy": "นโยบายความเป็นส่วนตัว",
+        "termsOfService": "ข้อกำหนดการใช้งาน",
+        "disclaimerTitle": "ข้อสงวนสิทธิ์",
+        "disclaimer": "แอปนี้ไม่ได้เกี่ยวข้อง ได้รับการรับรอง หรือเชื่อมโยงกับ Dinkum หรือผู้สร้างเกม ข้อมูลเกมมาจาก Dinkum Wiki รูปภาพและชื่อในเกมใช้เพื่อการอ้างอิงเท่านั้น",
+        "copyright": "© {year} {appName}",
+        "framework": "สร้างด้วยเฟรมเวิร์ก Gamerdex ฐานกลางสำหรับตัวติดตามความคืบหน้าเกมแบบฟรี ข้อมูลของคุณอยู่ในเบราว์เซอร์ หรือในพื้นที่เก็บข้อมูลคลาวด์ของคุณเองถ้าเปิดการซิงค์",
+        "visitGamerdex": "ไปที่ Gamerdex"
+    },
+    "domainNotice": {
+        "label": "แจ้งการเปลี่ยนโดเมน:",
+        "movedTo": "Dinkum Tracker ย้ายไปที่ <strong>{domain}</strong> แล้ว ข้อมูลที่บันทึกไว้จะไม่ย้ายตามอัตโนมัติ โปรด",
+        "exportLink": "ส่งออกข้อมูลของคุณ",
+        "retired": "จากเว็บไซต์นี้ แล้วนำเข้าที่โดเมนใหม่ โดเมนนี้จะปิดใช้งานใน <strong>{date}</strong>",
+        "goToNewSite": "ไปที่เว็บไซต์ใหม่",
+        "dismiss": "ปิดประกาศ"
+    },
+    "notFound": {
+        "code": "404",
+        "title": "ไม่พบหน้านี้",
+        "description": "ไม่มีหน้านี้ หรืออาจถูกย้ายไปแล้ว",
+        "toOverview": "ไปที่ภาพรวม",
+        "toHome": "ไปที่หน้าแรก",
+        "hint": "404 หมายความว่าที่อยู่พิมพ์ผิดหรือหน้านี้ถูกลบแล้ว แถบด้านข้างยังใช้งานได้"
+    }
+}

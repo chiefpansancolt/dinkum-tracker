@@ -1,0 +1,98 @@
+{
+    "npcs": {
+        "title": "NPC",
+        "subline": "หัวใจ {hearts} จาก {total} · {count} NPC · {name}",
+        "tiles": {
+            "total": "หัวใจทั้งหมด",
+            "full": "หัวใจเต็ม",
+            "met": "พบแล้ว",
+            "of": "จาก {total}",
+            "ofNpcs": "จาก NPC {total} คน"
+        },
+        "filters": {
+            "search": "ค้นหา NPC ตามชื่อ",
+            "sheetTitle": "กรอง NPC",
+            "relationship": "ความสัมพันธ์",
+            "residence": "อาศัยบนเกาะ",
+            "all": "ทั้งหมด",
+            "none": "ยังไม่มีหัวใจ",
+            "progress": "กำลังคืบหน้า",
+            "full": "หัวใจเต็ม",
+            "canMoveIn": "ย้ายเข้าได้",
+            "visitors": "ผู้มาเยือนเท่านั้น",
+            "showing": "แสดง {shown} จาก {total} NPC · หัวใจเต็ม {full} · พบแล้ว {met}",
+            "apply": "แสดง {count} NPC"
+        },
+        "hint": "กดที่หัวใจเพื่อตั้งค่า กดหัวใจดวงสุดท้ายที่เต็มเพื่อถอนกลับ ใช้ -{step} และ +{step} เพื่อปรับทีละหนึ่งในสี่",
+        "things": "NPC",
+        "card": {
+            "full": "เต็ม",
+            "requirements": "เงื่อนไข",
+            "visit": "มาเยือน",
+            "moveIn": "ย้ายเข้า",
+            "food": "อาหารที่ชอบ",
+            "likes": "ชอบ",
+            "dislikes": "ไม่ชอบ",
+            "none": "ไม่มี"
+        },
+        "hearts": {
+            "label": "หัวใจของ {name}",
+            "setTo": "ตั้ง {name} เป็น {count, plural, other {{amount} หัวใจ}}",
+            "less": "- {step}",
+            "more": "+ {step}",
+            "lessLabel": "ลดหัวใจลง {step}",
+            "moreLabel": "เพิ่มหัวใจขึ้น {step}",
+            "readout": "{hearts} / {max}"
+        },
+        "toast": {
+            "set": "{name}: {hearts} จาก 5 หัวใจ"
+        },
+        "empty": {
+            "title": "ไม่มี NPC ที่ตรงกับตัวกรองเหล่านี้",
+            "description": "ลองใช้ชื่ออื่น หรือล้างตัวกรอง",
+            "clear": "ล้างตัวกรอง"
+        }
+    },
+    "calendar": {
+        "title": "ปฏิทิน",
+        "subline": "{season} · {events} กิจกรรม · {birthdays} วันเกิด · {name}",
+        "previous": "ฤดูก่อนหน้า",
+        "next": "ฤดูถัดไป",
+        "today": "วันนี้",
+        "legend": {
+            "event": "กิจกรรม",
+            "birthday": "วันเกิด",
+            "current": "วันปัจจุบัน"
+        },
+        "alert": "วันปัจจุบัน: {day} {season} กดที่วันใดก็ได้เพื่อตั้งเป็นวันปัจจุบัน การเปลี่ยนแปลงบันทึกทันที",
+        "weekdays": {
+            "Sunday": "อา.",
+            "Monday": "จ.",
+            "Tuesday": "อ.",
+            "Wednesday": "พ.",
+            "Thursday": "พฤ.",
+            "Friday": "ศ.",
+            "Saturday": "ส."
+        },
+        "more": "+ อีก {count}",
+        "dayLabel": "{weekday}, {day} {season}",
+        "details": {
+            "title": "{weekday}, {day} {season}",
+            "events": "กิจกรรม",
+            "birthdays": "วันเกิด",
+            "noEvents": "วันนี้ไม่มีกิจกรรม",
+            "noBirthdays": "วันนี้ไม่มีวันเกิด",
+            "current": "วันปัจจุบัน",
+            "close": "ปิด"
+        },
+        "toast": {
+            "set": "ตั้งวันปัจจุบันเป็น {day} {season} แล้ว"
+        },
+        "cellEntries": "{count, plural, other {{amount} รายการ}}",
+        "entries": {
+            "birthday": "วันเกิดของ {name}",
+            "range": "วันที่ {start}-{end} ของ{season}",
+            "likes": "ชอบ: {food}"
+        }
+    }
+}

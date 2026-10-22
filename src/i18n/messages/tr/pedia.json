@@ -1,0 +1,85 @@
+{
+    "title": "Pedia",
+    "subline": "{total} içinden {done} toplandı · %{percent} · {name}",
+    "tabsLabel": "Pedia bölümleri",
+    "tabs": {
+        "fish": "Balıklar",
+        "bugs": "Böcekler",
+        "critters": "Küçük hayvanlar"
+    },
+    "nouns": {
+        "fish": "balık",
+        "bugs": "böcek",
+        "critters": "küçük hayvan"
+    },
+    "summary": {
+        "captured": "Yakalandı",
+        "donated": "Müzeye bağışlandı",
+        "permit": "Kazanılan izin puanları",
+        "of": "/ {total}"
+    },
+    "filters": {
+        "sheetTitle": "{tab} filtrele",
+        "biome": "Biyom",
+        "rarity": "Nadirlik",
+        "season": "Mevsim",
+        "time": "Zaman",
+        "collected": "Toplandı",
+        "donated": "Bağışlandı",
+        "allBiomes": "Tüm biyomlar",
+        "allRarities": "Tüm nadirlikler",
+        "allSeasons": "Tüm mevsimler",
+        "anyTime": "Her zaman",
+        "all": "Tümü",
+        "onlyCollected": "Toplandı",
+        "notCollected": "Toplanacak",
+        "onlyDonated": "Bağışlandı",
+        "notDonated": "Bağışlanacak",
+        "search": "{tab} içinde ada göre ara",
+        "showing": "{total} {tab} içinden {shown} gösteriliyor",
+        "capturedCount": "Yakalanan {count}",
+        "donatedCount": "Bağışlanan {count}",
+        "apply": "{count} {tab} göster"
+    },
+    "view": {
+        "label": "Görünüm",
+        "grid": "Izgara",
+        "list": "Liste"
+    },
+    "card": {
+        "biome": "Biyom",
+        "seasons": "Mevsimler",
+        "time": "Zaman",
+        "sell": "Satış fiyatı",
+        "cooked": "Pişmiş",
+        "cookedValue": "{price} · x{pieces}",
+        "status": "Durum",
+        "missing": "Eksik",
+        "caught": "Yakalandı",
+        "donated": "Bağışlandı"
+    },
+    "table": {
+        "name": "Ad",
+        "rarity": "Nadirlik",
+        "biome": "Biyom",
+        "seasons": "Mevsimler",
+        "time": "Zaman",
+        "sell": "Satış",
+        "cooked": "Pişmiş",
+        "status": "Durum",
+        "caption": "{total} satırdan {shown} tanesi gösteriliyor. Aynı filtreler, durum kontrolü ve ticaret seviyesi her iki görünümde de geçerlidir."
+    },
+    "empty": {
+        "title": "Bu filtrelere uyan {tab} yok",
+        "description": "Başka bir ad dene ya da filtreleri temizle.",
+        "clear": "Filtreleri temizle"
+    },
+    "toast": {
+        "marked": "{name}: {status} olarak işaretlendi",
+        "statuses": {
+            "missing": "eksik",
+            "caught": "yakalandı",
+            "donated": "bağışlandı"
+        }
+    }
+}

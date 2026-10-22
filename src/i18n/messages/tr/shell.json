@@ -1,0 +1,91 @@
+{
+    "nav": {
+        "main": "Ana menü",
+        "groups": {
+            "track": "Takip",
+            "progress": "İlerleme",
+            "collect": "Koleksiyon",
+            "tools": "Araçlar"
+        },
+        "items": {
+            "overview": "Genel Bakış",
+            "pedia": "Pedia",
+            "npcs": "NPC'ler",
+            "calendar": "Takvim",
+            "buildings": "Binalar",
+            "licenses": "Lisanslar",
+            "milestones": "Kilometre taşları",
+            "skills": "Beceriler",
+            "recipes": "Tarifler",
+            "gear": "Teçhizat",
+            "wardrobe": "Gardırop ve ev",
+            "itemsBreakdown": "Eşya dökümü",
+            "weightCalculator": "Ağırlık hesaplayıcı",
+            "reference": "Başvuru",
+            "settings": "Ayarlar",
+            "playthroughs": "Oynanışlar",
+            "newPlaythrough": "Yeni oynanış"
+        }
+    },
+    "appShell": {
+        "skipToContent": "İçeriğe geç",
+        "closeMenu": "Menüyü kapat"
+    },
+    "appBar": {
+        "openMenu": "Menüyü aç"
+    },
+    "playthroughGate": {
+        "emptyTitle": "Henüz oynanış yok",
+        "emptyDescription": "İlerlemeni takip etmeye başlamak için bir oynanış oluştur.",
+        "newPlaythrough": "Yeni oynanış"
+    },
+    "playthroughSwitcher": {
+        "sectionLabel": "Oynanış",
+        "switchPlaythrough": "Oynanışı değiştir",
+        "loading": "Yükleniyor",
+        "noPlaythroughYet": "Henüz oynanış yok",
+        "playthroughs": "Oynanışlar",
+        "active": "Etkin",
+        "allPlaythroughs": "Tüm oynanışlar",
+        "newPlaythrough": "Yeni oynanış",
+        "detail": "{day}. gün · %{percent}"
+    },
+    "theme": {
+        "label": "Tema",
+        "light": "Açık",
+        "dark": "Koyu",
+        "system": "Sistem"
+    },
+    "footer": {
+        "tagline": "Dinkum ilerlemeni kolayca takip et.",
+        "support": "Destek",
+        "about": "Hakkında",
+        "settings": "Ayarlar",
+        "discord": "Discord",
+        "github": "GitHub",
+        "dinkumWiki": "Dinkum Wiki",
+        "privacyPolicy": "Gizlilik politikası",
+        "termsOfService": "Kullanım koşulları",
+        "disclaimerTitle": "Sorumluluk reddi",
+        "disclaimer": "Bu uygulama Dinkum veya yapımcılarıyla bağlantılı değildir ve onlar tarafından onaylanmamıştır. Oyun verileri Dinkum Wiki'den alınır. Oyun görselleri ve adları yalnızca referans amacıyla kullanılır.",
+        "copyright": "© {year} {appName}",
+        "framework": "Gamerdex çatısıyla geliştirildi. Bu çatı, ücretsiz oyun ilerleme takipçileri için ortak bir temeldir. Verilerin tarayıcında kalır. Senkronizasyonu açarsan kendi bulut depolamanda tutulur.",
+        "visitGamerdex": "Gamerdex'i ziyaret et"
+    },
+    "domainNotice": {
+        "label": "Alan adı değişikliği duyurusu:",
+        "movedTo": "Dinkum Tracker artık <strong>{domain}</strong> adresinde. Kayıtlı verilerin otomatik olarak taşınmaz. Lütfen bu siteden",
+        "exportLink": "verilerini dışa aktar",
+        "retired": "ve yeni alan adında içe aktar. Bu alan adı <strong>{date}</strong> tarihinde kapatılacak.",
+        "goToNewSite": "Yeni siteye git",
+        "dismiss": "Duyuruyu kapat"
+    },
+    "notFound": {
+        "code": "404",
+        "title": "Sayfa bulunamadı",
+        "description": "Bu sayfa yok ya da taşınmış olabilir.",
+        "toOverview": "Genel Bakış'a git",
+        "toHome": "Ana sayfaya git",
+        "hint": "404, adresin yanlış yazıldığı veya sayfanın kaldırıldığı anlamına gelir. Kenar çubuğu kullanılabilir durumda."
+    }
+}

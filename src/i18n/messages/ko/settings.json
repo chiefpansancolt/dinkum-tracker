@@ -1,0 +1,141 @@
+{
+    "title": "설정",
+    "subline": "이 브라우저에 저장된 {count, plural, other {플레이 기록 {amount}개}} · 환경설정은 자동으로 저장돼요",
+    "storage": {
+        "title": "데이터 저장 안내",
+        "body": "데이터는 브라우저에 저장돼요. 동기화하거나 백업하지 않으면 브라우저 데이터를 지울 때 함께 사라져요.",
+        "action": "아래 기능으로 데이터를 내보내고 백업해 주세요."
+    },
+    "manage": {
+        "title": "플레이 기록",
+        "description": "플레이 기록 페이지에서 이름을 바꾸거나 삭제하거나 새로 만들 수 있어요.",
+        "link": "플레이 기록 관리"
+    },
+    "data": {
+        "title": "데이터 관리",
+        "count": "{count, plural, other {플레이 기록 {amount}개}}",
+        "exportButton": "모든 플레이 기록 내보내기",
+        "exportHint": "저장된 모든 플레이 기록의 백업 파일을 내려받아요.",
+        "exportDone": "내보내기를 완료했어요!",
+        "importButton": "데이터 가져오기",
+        "importHint": "이전에 내보낸 파일(.json)을 올려 주세요. 병합할지 바꿀지 확인하는 단계가 있어요.",
+        "importDone": "가져오기를 완료했어요!",
+        "importFailed": "올바르지 않은 파일 형식이에요",
+        "resetWarning": "주의: 모든 플레이 기록이 삭제되고 되돌릴 수 없어요.",
+        "resetButton": "모든 데이터 초기화",
+        "resetConfirm": "초기화 확인",
+        "resetCancel": "취소",
+        "resetDone": "데이터를 초기화했어요",
+        "importFile": "백업 파일",
+        "description": "백업 파일 하나에 모든 플레이 기록이 들어 있어요.",
+        "exportTitle": "데이터 내보내기",
+        "importTitle": "데이터 가져오기",
+        "resetTitle": "모든 데이터 초기화",
+        "resetSyncedCopy": "{provider}에 동기화된 사본도 삭제",
+        "resetSyncedOn": "동기화는 켜진 상태로 유지돼요. 다른 기기는 다음 동기화 때 이 플레이 기록을 잃게 돼요. 확실하지 않다면 먼저 백업을 내보내세요.",
+        "resetSyncedOff": "동기화된 사본은 그대로 남아요. 클라우드가 비워지지 않도록 이 브라우저의 동기화 연결이 해제돼요.",
+        "providers": {
+            "github": "GitHub",
+            "google": "Google Drive",
+            "dropbox": "Dropbox",
+            "microsoft": "OneDrive"
+        }
+    },
+    "import": {
+        "title": "백업 가져오기",
+        "description": "이 기기에 이미 있는 플레이 기록을 어떻게 할지 선택하세요.",
+        "fileSummary": "파일 {inFile, plural, other {플레이 기록 {inFileAmount}개}} · 이 기기 {onDeviceAmount}개",
+        "mode": "가져오기 방식",
+        "merge": "병합 (권장)",
+        "mergeDescription": "새 플레이 기록을 추가해요. 양쪽에 같은 플레이 기록이 있으면 가장 최근에 업데이트한 사본을 사용해요. 이 기기에만 있는 플레이 기록은 그대로 남아요.",
+        "replace": "모두 바꾸기",
+        "replaceDescription": "이 기기의 {onDevice, plural, other {플레이 기록 {onDeviceAmount}개}}를 삭제하고 파일의 {inFileAmount}개를 불러와요. 되돌릴 수 없어요.",
+        "table": {
+            "playthrough": "플레이 기록",
+            "inFile": "파일",
+            "onDevice": "이 기기",
+            "result": "결과"
+        },
+        "updatedOn": "{date} 업데이트",
+        "notOnDevice": "기기에 없음",
+        "notInFile": "파일에 없음",
+        "results": {
+            "added": "추가됨",
+            "updated": "파일 사본 사용",
+            "kept": "기기 사본 유지",
+            "replaced": "바뀜",
+            "removed": "삭제됨"
+        },
+        "exportFirst": "현재 데이터 먼저 내보내기",
+        "cancel": "취소",
+        "confirmMerge": "{count, plural, other {플레이 기록 {amount}개}} 병합",
+        "confirmReplace": "모든 데이터 바꾸기"
+    },
+    "appearance": {
+        "title": "화면 및 환경설정",
+        "theme": "테마",
+        "themeHint": "시스템을 선택하면 기기 설정을 따라요.",
+        "defaultSort": "기본 플레이 기록 정렬",
+        "defaultSortHint": "플레이 기록의 기본 정렬 방식을 고르세요. 바꾸면 바로 저장돼요.",
+        "resources": "추가 자료",
+        "opensInNewTab": "새 탭에서 열려요",
+        "wiki": "Dinkum 위키",
+        "repository": "프로젝트 저장소"
+    },
+    "page": {
+        "title": "설정",
+        "tabsLabel": "설정",
+        "tabs": {
+            "sync": "클라우드 동기화",
+            "preferences": "환경설정",
+            "data": "백업 및 데이터",
+            "about": "정보"
+        }
+    },
+    "preferences": {
+        "appearance": {
+            "title": "화면",
+            "description": "이 기기에 바로 저장돼요."
+        },
+        "playthroughList": {
+            "title": "플레이 기록 목록",
+            "description": "플레이 기록 페이지의 시작 방식이에요."
+        }
+    },
+    "about": {
+        "version": "버전 {version}",
+        "summary": "Dinkum 진행 상황을 기록하세요: 물고기, 곤충, 작은 동물, 마일스톤, 면허, NPC 등. 모든 데이터는 이 브라우저에 저장돼요.",
+        "resources": "추가 자료",
+        "disclaimer": "Dinkum 제작자와 관련이 없으며, 승인을 받지 않았어요."
+    },
+    "region": {
+        "title": "언어 및 지역",
+        "description": "언어와 숫자, 날짜 표기 방식을 고르세요. 이 기기에 저장돼요.",
+        "language": {
+            "label": "언어",
+            "hint": "동물, 아이템, NPC 등 게임 데이터의 이름은 게임 데이터에서 가져오므로 영어로 표시돼요."
+        },
+        "numberFormat": {
+            "label": "숫자 형식",
+            "hint": "예: {example}",
+            "options": {
+                "auto": "자동, 언어에 따름",
+                "us": "1,234.56 (미국)",
+                "european": "1.234,56 (독일)",
+                "french": "1 234,56 (프랑스)",
+                "swiss": "1’234.56 (스위스)",
+                "indian": "12,34,567.89 (인도)"
+            }
+        },
+        "dateFormat": {
+            "label": "날짜 형식",
+            "hint": "예: {example}",
+            "options": {
+                "auto": "자동, 언어에 따름",
+                "mdy": "월/일/년",
+                "dmy": "일/월/년",
+                "ymd": "년-월-일"
+            }
+        }
+    }
+}

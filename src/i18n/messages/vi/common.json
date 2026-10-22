@@ -1,0 +1,8 @@
+{
+    "saveFailed": {
+        "title": "Chưa lưu",
+        "message": "Trình duyệt không thể lưu dữ liệu của bạn. Hãy xuất bản sao lưu để không mất thay đổi.",
+        "exportBackup": "Xuất bản sao lưu"
+    },
+    "undo": "Hoàn tác"
+}

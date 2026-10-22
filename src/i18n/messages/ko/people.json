@@ -1,0 +1,98 @@
+{
+    "npcs": {
+        "title": "NPC",
+        "subline": "하트 {total}개 중 {hearts}개 · NPC {count}명 · {name}",
+        "tiles": {
+            "total": "전체 하트",
+            "full": "하트 가득",
+            "met": "만난 NPC",
+            "of": "전체 {total}개",
+            "ofNpcs": "전체 NPC {total}명"
+        },
+        "filters": {
+            "search": "이름으로 NPC 검색",
+            "sheetTitle": "NPC 필터",
+            "relationship": "관계",
+            "residence": "섬에 거주",
+            "all": "전체",
+            "none": "아직 하트 없음",
+            "progress": "진행 중",
+            "full": "하트 가득",
+            "canMoveIn": "이사 가능",
+            "visitors": "방문자만",
+            "showing": "NPC {total}명 중 {shown}명 표시 · 하트 가득 {full} · 만남 {met}",
+            "apply": "NPC {count}명 보기"
+        },
+        "hint": "하트를 누르면 값이 설정돼요. 마지막 가득 찬 하트를 누르면 되돌려요. -{step}와 +{step}로 4분의 1씩 조정할 수 있어요.",
+        "things": "NPC",
+        "card": {
+            "full": "가득",
+            "requirements": "요구 조건",
+            "visit": "방문",
+            "moveIn": "이사",
+            "food": "음식 취향",
+            "likes": "좋아함",
+            "dislikes": "싫어함",
+            "none": "없음"
+        },
+        "hearts": {
+            "label": "{name}의 하트",
+            "setTo": "{name}을(를) {count, plural, other {하트 {amount}개}}(으)로 설정",
+            "less": "- {step}",
+            "more": "+ {step}",
+            "lessLabel": "하트 {step} 줄이기",
+            "moreLabel": "하트 {step} 늘리기",
+            "readout": "{hearts} / {max}"
+        },
+        "toast": {
+            "set": "{name}: 하트 5개 중 {hearts}개"
+        },
+        "empty": {
+            "title": "필터에 맞는 NPC 없음",
+            "description": "다른 이름을 입력하거나 필터를 지워 보세요.",
+            "clear": "필터 지우기"
+        }
+    },
+    "calendar": {
+        "title": "달력",
+        "subline": "{season} · 이벤트 {events}개 · 생일 {birthdays}개 · {name}",
+        "previous": "이전 계절",
+        "next": "다음 계절",
+        "today": "오늘",
+        "legend": {
+            "event": "이벤트",
+            "birthday": "생일",
+            "current": "현재 날짜"
+        },
+        "alert": "현재 날짜: {season} {day}일. 날짜를 누르면 현재 날짜로 설정돼요. 변경 내용은 바로 저장돼요.",
+        "weekdays": {
+            "Sunday": "일",
+            "Monday": "월",
+            "Tuesday": "화",
+            "Wednesday": "수",
+            "Thursday": "목",
+            "Friday": "금",
+            "Saturday": "토"
+        },
+        "more": "+ {count}개 더",
+        "dayLabel": "{season} {day}일, {weekday}",
+        "details": {
+            "title": "{season} {day}일, {weekday}",
+            "events": "이벤트",
+            "birthdays": "생일",
+            "noEvents": "오늘은 이벤트가 없어요.",
+            "noBirthdays": "오늘은 생일이 없어요.",
+            "current": "현재 날짜",
+            "close": "닫기"
+        },
+        "toast": {
+            "set": "현재 날짜를 {season} {day}일로 설정했어요"
+        },
+        "cellEntries": "{count, plural, other {항목 {amount}개}}",
+        "entries": {
+            "birthday": "{name}의 생일",
+            "range": "{season} {start}~{end}일",
+            "likes": "좋아함: {food}"
+        }
+    }
+}

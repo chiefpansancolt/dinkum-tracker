@@ -1,0 +1,85 @@
+{
+    "title": "Pedia",
+    "subline": "{done} trên {total} đã thu thập · {percent}% · {name}",
+    "tabsLabel": "Các mục Pedia",
+    "tabs": {
+        "fish": "Cá",
+        "bugs": "Côn trùng",
+        "critters": "Sinh vật nhỏ"
+    },
+    "nouns": {
+        "fish": "cá",
+        "bugs": "côn trùng",
+        "critters": "sinh vật nhỏ"
+    },
+    "summary": {
+        "captured": "Đã bắt",
+        "donated": "Đã tặng bảo tàng",
+        "permit": "Điểm giấy phép đã nhận",
+        "of": "trên {total}"
+    },
+    "filters": {
+        "sheetTitle": "Lọc {tab}",
+        "biome": "Quần xã",
+        "rarity": "Độ hiếm",
+        "season": "Mùa",
+        "time": "Thời gian",
+        "collected": "Đã thu thập",
+        "donated": "Đã tặng",
+        "allBiomes": "Mọi quần xã",
+        "allRarities": "Mọi độ hiếm",
+        "allSeasons": "Mọi mùa",
+        "anyTime": "Mọi lúc",
+        "all": "Tất cả",
+        "onlyCollected": "Đã thu thập",
+        "notCollected": "Chưa thu thập",
+        "onlyDonated": "Đã tặng",
+        "notDonated": "Chưa tặng",
+        "search": "Tìm {tab} theo tên",
+        "showing": "Hiển thị {shown} trên {total} {tab}",
+        "capturedCount": "Đã bắt {count}",
+        "donatedCount": "Đã tặng {count}",
+        "apply": "Xem {count} {tab}"
+    },
+    "view": {
+        "label": "Chế độ xem",
+        "grid": "Lưới",
+        "list": "Danh sách"
+    },
+    "card": {
+        "biome": "Quần xã",
+        "seasons": "Mùa",
+        "time": "Thời gian",
+        "sell": "Giá bán",
+        "cooked": "Đã nấu",
+        "cookedValue": "{price} · x{pieces}",
+        "status": "Trạng thái",
+        "missing": "Còn thiếu",
+        "caught": "Đã bắt",
+        "donated": "Đã tặng"
+    },
+    "table": {
+        "name": "Tên",
+        "rarity": "Độ hiếm",
+        "biome": "Quần xã",
+        "seasons": "Mùa",
+        "time": "Thời gian",
+        "sell": "Bán",
+        "cooked": "Đã nấu",
+        "status": "Trạng thái",
+        "caption": "Hiển thị {shown} trên {total} dòng. Cùng bộ lọc, điều khiển trạng thái và cấp thương mại áp dụng cho cả hai chế độ xem."
+    },
+    "empty": {
+        "title": "Không có {tab} nào khớp bộ lọc",
+        "description": "Hãy thử tên khác hoặc xóa bộ lọc.",
+        "clear": "Xóa bộ lọc"
+    },
+    "toast": {
+        "marked": "Đã đánh dấu {name} là {status}",
+        "statuses": {
+            "missing": "còn thiếu",
+            "caught": "đã bắt",
+            "donated": "đã tặng"
+        }
+    }
+}

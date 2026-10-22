@@ -1,0 +1,51 @@
+{
+    "close": "Schließen",
+    "field": {
+        "optional": "Optional"
+    },
+    "stepper": {
+        "lower": "{label} verringern",
+        "raise": "{label} erhöhen",
+        "labelPrefix": "{label}, "
+    },
+    "switch": {
+        "on": "An",
+        "off": "Aus"
+    },
+    "tabs": {
+        "locked": " (gesperrt)"
+    },
+    "toast": {
+        "dismiss": "Schließen",
+        "variants": {
+            "success": "Erfolg",
+            "info": "Info",
+            "warning": "Warnung",
+            "error": "Fehler"
+        },
+        "missingProvider": "useToast must be used within a ToastProvider"
+    },
+    "savedChip": {
+        "automatic": "Speichert automatisch",
+        "justNow": "Gerade gespeichert",
+        "minutesAgo": "Vor {count} Min. gespeichert",
+        "at": "Gespeichert {time}",
+        "failed": "Nicht gespeichert, Speicher voll"
+    },
+    "filters": {
+        "filters": "Filter",
+        "filtersWithCount": "Filter ({count})",
+        "clearFilters": "Filter löschen",
+        "clearAll": "Alle löschen",
+        "cancel": "Abbrechen",
+        "showResults": "Ergebnisse zeigen",
+        "search": "Suche"
+    },
+    "commerce": {
+        "label": "Verkauf mit Handelsstufe",
+        "base": "Basis",
+        "plus5": "+5%",
+        "plus10": "+10%",
+        "plus15": "+15%"
+    }
+}

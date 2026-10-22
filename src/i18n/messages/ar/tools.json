@@ -1,0 +1,70 @@
+{
+    "breakdown": {
+        "title": "تفصيل العناصر",
+        "subline": "أي الموارد تدخل في أي العناصر · {count} مورد",
+        "tiles": {
+            "resources": "الموارد",
+            "resourcesCaption": "مستخدمة في الوصفات والبناء",
+            "common": "شائعة، تُستخدم في 3+ عناصر",
+            "of": "من {total}",
+            "mostUsed": "الأكثر استخدامًا",
+            "items": "{count, plural, zero {{amount} عناصر} one {{amount} عنصر} two {عنصران} few {{amount} عناصر} many {{amount} عنصرًا} other {{amount} عنصر}}"
+        },
+        "search": "بحث",
+        "searchPlaceholder": "البحث في الموارد بالاسم",
+        "sortBy": "الترتيب حسب",
+        "sortName": "الاسم (أ-ي)",
+        "sortUsage": "عدد مرات الاستخدام",
+        "filter": "تصفية",
+        "filterWithCount": "تصفية ({count})",
+        "commonOnly": "الموارد الشائعة فقط (تُستخدم في 3+ عناصر)",
+        "showing": "عرض {shown} من {total} مورد",
+        "notes": {
+            "categories": " (مصفّاة حسب {count, plural, zero {{amount} فئات} one {{amount} فئة} two {فئتين} few {{amount} فئات} many {{amount} فئة} other {{amount} فئة}})",
+            "types": " (مصفّاة حسب {count, plural, zero {{amount} أنواع} one {{amount} نوع} two {نوعين} few {{amount} أنواع} many {{amount} نوعًا} other {{amount} نوع}})",
+            "common": " (الموارد الشائعة فقط)"
+        },
+        "panel": {
+            "title": "تصفية الموارد",
+            "byCategory": "التصفية حسب الفئة",
+            "byType": "التصفية حسب نوع المورد",
+            "clear": "مسح التحديدات",
+            "itemCount": "{count, plural, zero {{amount} عناصر} one {{amount} عنصر} two {عنصران} few {{amount} عناصر} many {{amount} عنصرًا} other {{amount} عنصر}}",
+            "done": "عرض {count} مورد",
+            "option": "{name}، {items}"
+        },
+        "card": {
+            "usedIn": "{count, plural, zero {يُستخدم في {amount} عناصر} one {يُستخدم في {amount} عنصر} two {يُستخدم في عنصرين} few {يُستخدم في {amount} عناصر} many {يُستخدم في {amount} عنصرًا} other {يُستخدم في {amount} عنصر}}",
+            "categories": "الفئات",
+            "usedInList": "يُستخدم في",
+            "showMore": "عرض {count} أخرى...",
+            "showLess": "عرض أقل"
+        },
+        "empty": {
+            "title": "لا توجد موارد تطابق عوامل التصفية هذه",
+            "description": "يمكن تجربة اسم آخر أو مسح التحديدات.",
+            "clear": "مسح التحديدات"
+        }
+    },
+    "weight": {
+        "title": "حاسبة الوزن",
+        "subline": "تقدير سعر اللقى الثقيلة من وزنها · {count} عنصر",
+        "picker": "اختيار عنصر",
+        "perKg": "{price} لكل كغ",
+        "range": "{min} - {max} كغ",
+        "rangeLine": "نطاق الوزن: {min} كغ - {max} كغ",
+        "weight": "الوزن: {weight} كغ",
+        "slider": "الوزن بالكيلوغرام",
+        "minus": "إنقاص الوزن بمقدار {step} كغ",
+        "plus": "زيادة الوزن بمقدار {step} كغ",
+        "min": "{min} كغ",
+        "max": "{max} كغ",
+        "stepNote": "الخطوة {step} كغ. اختيار عنصر آخر يعيد الوزن إلى حده الأدنى.",
+        "total": "السعر الإجمالي",
+        "dinks": "Dinks",
+        "formula": "{weight} كغ × {price} لكل كغ = {total}",
+        "rounded": "مقرّب إلى أقرب Dink.",
+        "atMin": "السعر عند أدنى وزن",
+        "atMax": "السعر عند أقصى وزن"
+    }
+}
