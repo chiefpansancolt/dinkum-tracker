@@ -13,7 +13,7 @@
     "hero": {
         "eyebrow": "Track your progress",
         "title": "Dinkum Tracker",
-        "intro": "A comprehensive tracking application for your Dinkum adventures. Manage multiple playthroughs, track collections, and monitor progress all in one place. Everything is saved locally in your browser.",
+        "intro": "A comprehensive tracking application for your Dinkum adventures. Manage multiple playthroughs, track collections, and monitor progress all in one place. Everything is saved in your browser, and you can sync it to your own cloud storage.",
         "view": "View My Playthroughs",
         "new": "New Adventure",
         "imageAlt": "The Dinkum game"

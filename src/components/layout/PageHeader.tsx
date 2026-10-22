@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { SavedChip } from "@/comps/ui/SavedChip";
+import { SyncChip } from "./SyncChip";
 
 interface PageHeaderProps {
 	title: string;
@@ -19,8 +20,9 @@ export function PageHeader({ title, subline, actions, showSaved = true }: PageHe
 			<div className="flex flex-wrap items-center gap-3">
 				{actions}
 				{showSaved && (
-					<span className="max-lg:hidden">
+					<span className="flex items-center gap-3 max-lg:hidden">
 						<SavedChip />
+						<SyncChip />
 					</span>
 				)}
 			</div>

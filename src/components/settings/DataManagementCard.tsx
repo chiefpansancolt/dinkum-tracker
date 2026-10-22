@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { useRef, useState } from "react";
 import { usePlaythrough } from "@/lib/contexts/PlaythroughContext";
+import { useSync } from "@/lib/contexts/SyncContext";
 import { useTransientValue } from "@/lib/hooks/useTransientValue";
 import type { ImportMode } from "@/service/backup";
 import { applyImport, downloadBackup, parseBackup } from "@/service/backup";
@@ -12,6 +13,7 @@ import {
 	replaceAllPlaythroughs,
 } from "@/service/store";
 import { Button } from "@/comps/ui/Button";
+import { Checkbox } from "@/comps/ui/Checkbox";
 import { Input } from "@/comps/ui/Input";
 import { Note } from "@/comps/ui/Note";
 import { ImportDialog } from "./ImportDialog";
@@ -32,6 +34,9 @@ function StatusText({ tone, children }: { tone: "success" | "danger"; children: 
 export function DataManagementCard() {
 	const t = useTranslations("settings.data");
 	const { playthroughs, commit } = usePlaythrough();
+	const sync = useSync();
+	const syncOn = sync.status !== "signedOut" && sync.provider !== null;
+	const [alsoDeleteSynced, setAlsoDeleteSynced] = useState(false);
 	const fileInput = useRef<HTMLInputElement>(null);
 	const [file, setFile] = useState<File | null>(null);
 	const [pending, setPending] = useState<PendingImport | null>(null);
@@ -78,8 +83,14 @@ export function DataManagementCard() {
 			return;
 		}
 
-		if (commit(clearAllPlaythroughs)) showResetMessage(true);
+		// Without this, the next sync would carry the empty list to the cloud and to the other devices.
+		if (syncOn && !alsoDeleteSynced) sync.signOut();
+		if (commit(clearAllPlaythroughs)) {
+			showResetMessage(true);
+			if (syncOn && alsoDeleteSynced) void sync.syncNow();
+		}
 		setConfirmingReset(false);
+		setAlsoDeleteSynced(false);
 	};
 
 	return (
@@ -140,6 +151,20 @@ export function DataManagementCard() {
 					{resetMessage && <StatusText tone="success">{t("resetDone")}</StatusText>}
 				</div>
 				<Note tone="warning">{t("resetWarning")}</Note>
+				{confirmingReset && syncOn && sync.provider && (
+					<div className="flex flex-col gap-1">
+						<Checkbox
+							label={t("resetSyncedCopy", {
+								provider: t(`providers.${sync.provider}`),
+							})}
+							checked={alsoDeleteSynced}
+							onChange={setAlsoDeleteSynced}
+						/>
+						<p className="text-muted">
+							{alsoDeleteSynced ? t("resetSyncedOn") : t("resetSyncedOff")}
+						</p>
+					</div>
+				)}
 				<div className="flex flex-wrap gap-2">
 					{confirmingReset ? (
 						<>

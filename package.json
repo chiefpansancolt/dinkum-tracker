@@ -33,6 +33,7 @@
         "postinstall": "bash scripts/copy-game-assets.sh"
     },
     "dependencies": {
+        "@gamerdexapp/gamerdex-sync": "0.5.0",
         "dinkum-data": "1.0.3",
         "next": "16.3.6",
         "next-intl": "^4.14.9",

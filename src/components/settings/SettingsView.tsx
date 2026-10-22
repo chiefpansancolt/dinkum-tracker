@@ -2,19 +2,22 @@
 
 import { useTranslations } from "next-intl";
 import { usePlaythrough } from "@/lib/contexts/PlaythroughContext";
+import { useSync } from "@/lib/contexts/SyncContext";
 import { useUrlTab } from "@/lib/hooks/useUrlTab";
 import { PageHeader } from "@/comps/layout/PageHeader";
 import { Tabs } from "@/comps/ui/Tabs";
 import { AboutTab } from "./AboutTab";
 import { DataTab } from "./DataTab";
 import { PreferencesTab } from "./PreferencesTab";
+import { SyncTab } from "./SyncTab";
 
-const tabIds = ["preferences", "data", "about"] as const;
+const tabIds = ["sync", "preferences", "data", "about"] as const;
 
 export function SettingsView() {
 	const t = useTranslations("settings");
 	const { playthroughs } = usePlaythrough();
-	const [activeTab, setActiveTab] = useUrlTab(tabIds, "preferences");
+	const { available } = useSync();
+	const [activeTab, setActiveTab] = useUrlTab(tabIds, available ? "sync" : "preferences");
 
 	return (
 		<>
@@ -25,6 +28,7 @@ export function SettingsView() {
 				activeId={activeTab}
 				onChange={setActiveTab}
 			>
+				{activeTab === "sync" && <SyncTab />}
 				{activeTab === "preferences" && <PreferencesTab />}
 				{activeTab === "data" && <DataTab />}
 				{activeTab === "about" && <AboutTab />}

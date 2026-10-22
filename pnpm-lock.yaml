@@ -11,6 +11,9 @@ importers:
 
   .:
     dependencies:
+      '@gamerdexapp/gamerdex-sync':
+        specifier: 0.5.0
+        version: 0.5.0
       dinkum-data:
         specifier: 1.0.3
         version: 1.0.3
@@ -228,6 +231,10 @@ packages:
 
   '@formatjs/intl-localematcher@0.8.14':
     resolution: {integrity: sha512-8O7V38QmbB11+ryJ3KM/znrzXtiqgpXzqNoqDsndHZZ5/zDKTTL+cf5F0mzXkQEwhx8IlWnqYvEovf2S5EwLTw==}
+
+  '@gamerdexapp/gamerdex-sync@0.5.0':
+    resolution: {integrity: sha512-LGsDW2MD/y2AONga5OGyPpwihwi6BlbYcfcDxpCVkFmL7FvZvQWD4jLC0++G99nqMguzzx/LfIjLO59YSz1E+A==}
+    engines: {node: '>=24'}
 
   '@humanfs/core@0.19.2':
     resolution: {integrity: sha512-UhXNm+CFMWcbChXywFwkmhqjs3PRCmcSa/hfBgLIb7oQ5HNb1wS0icWsGtSAUNgefHeI+eBrA8I1fxmbHsGdvA==}
@@ -2978,6 +2985,8 @@ snapshots:
   '@formatjs/intl-localematcher@0.8.14':
     dependencies:
       '@formatjs/fast-memoize': 3.1.7
+
+  '@gamerdexapp/gamerdex-sync@0.5.0': {}
 
   '@humanfs/core@0.19.2':
     dependencies:

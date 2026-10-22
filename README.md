@@ -46,9 +46,8 @@ A comprehensive tracking application for your Dinkum adventures. Manage multiple
 - **React 19**: Latest React features and improvements
 - **TypeScript**: Type-safe code development
 - **Tailwind CSS 4.1.0**: Utility-first styling approach
-- **Flowbite-React**: UI component library built on Tailwind
-- **Zustand**: State management for persistent UI state
-- **React-Toastify**: Toast notifications for user feedback
+- **next-intl**: Messages and formatting
+- **@gamerdexapp/gamerdex-sync**: Optional cloud sync
 - **React-Icons**: Comprehensive icon library
 - **LocalStorage API**: Client-side data persistence
 
@@ -127,8 +126,15 @@ This application stores all data in your browser's localStorage. This means:
 - All data is saved locally on your device
 - Data persists between browser sessions
 - Clearing browser data will remove your saved playthroughs
-- Data is not synced between devices
 - Use the export/import feature to backup or transfer your data
+- Optional cloud sync (Settings, Cloud sync) copies your playthroughs between devices through your own Google Drive, Dropbox, OneDrive or a private GitHub repository. Gamerdex has no server that stores your data. The synced file is the same format as the export file.
+
+### Sync settings
+
+All variables are optional and public. Next.js reads them at build time, so redeploy after a change.
+
+- `NEXT_PUBLIC_GAMERDEX_AUTH_URL`: the address of the sign-in service. The package `@gamerdexapp/gamerdex-sync` has a default. An empty value turns sync off.
+- `NEXT_PUBLIC_GOOGLE_CLIENT_ID`, `NEXT_PUBLIC_DROPBOX_CLIENT_ID`, `NEXT_PUBLIC_MICROSOFT_CLIENT_ID`: override the client ID of a provider. An empty value leaves that provider out.
 
 ## 🔍 Usage
 

@@ -31,6 +31,14 @@ export const formatShortDate = (iso: string) =>
     year: "numeric",
   });
 
+export const formatDateTime = (iso: string) =>
+  new Date(iso).toLocaleString(languageTag, {
+    month: "short",
+    day: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+  });
+
 /**
  * A translator for code that is not a component, such as a service that builds a sentence. A
  * component uses the `useTranslations` hook instead.

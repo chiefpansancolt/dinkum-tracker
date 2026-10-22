@@ -69,7 +69,7 @@
         "disclaimerTitle": "Disclaimer",
         "disclaimer": "This application is not affiliated with, endorsed by, or connected to Dinkum or its creators. Game data is sourced from the Dinkum Wiki. Game images and names are used for reference purposes only.",
         "copyright": "© {year} {appName}",
-        "framework": "Built with the Gamerdex framework, a shared base for free game progress trackers. Your data stays in your browser.",
+        "framework": "Built with the Gamerdex framework, a shared base for free game progress trackers. Your data stays in your browser, or in your own cloud storage if you turn on sync.",
         "visitGamerdex": "Visit Gamerdex"
     },
     "domainNotice": {

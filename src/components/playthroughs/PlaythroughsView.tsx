@@ -103,7 +103,8 @@ export function PlaythroughsView() {
 			action: {
 				label: common("undo"),
 				onAction: () => {
-					restore(playthrough, index);
+					// A newer date keeps the next sync from deleting the restored playthrough again.
+					restore({ ...playthrough, lastUpdated: new Date().toISOString() }, index);
 					if (wasActive) setActivePlaythrough(playthrough.id);
 				},
 			},

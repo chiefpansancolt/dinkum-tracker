@@ -3,7 +3,7 @@
     "subline": "{count, plural, one {# playthrough} other {# playthroughs}} stored in this browser · Preferences save automatically",
     "storage": {
         "title": "Data Storage!",
-        "body": "Your data is stored locally in the browser. Data is lost when the browser cache is cleared.",
+        "body": "Your data is stored in the browser. It is lost when the browser data is cleared, unless you sync or back it up.",
         "action": "Please use the functions below to export and backup your data."
     },
     "manage": {
@@ -35,7 +35,16 @@
         "description": "One backup file holds every playthrough.",
         "exportTitle": "Export data",
         "importTitle": "Import data",
-        "resetTitle": "Reset all data"
+        "resetTitle": "Reset all data",
+        "resetSyncedCopy": "Also delete the synced copy in {provider}",
+        "resetSyncedOn": "Sync stays on. Your other devices lose these playthroughs at their next sync. Export a backup first if you are not sure.",
+        "resetSyncedOff": "The synced copy stays where it is. Sync disconnects on this browser so it does not empty the cloud.",
+        "providers": {
+            "github": "GitHub",
+            "google": "Google Drive",
+            "dropbox": "Dropbox",
+            "microsoft": "OneDrive"
+        }
     },
     "import": {
         "title": "Import backup",
@@ -82,6 +91,7 @@
         "title": "Settings",
         "tabsLabel": "Settings",
         "tabs": {
+            "sync": "Cloud sync",
             "preferences": "Preferences",
             "data": "Backup and data",
             "about": "About"

@@ -2,7 +2,7 @@ import type { ImportData, Playthrough } from "@/types/app";
 import { readStoredPlaythroughs } from "./store";
 
 /** The backup file format is shared with the old app and must not change. */
-const BACKUP_VERSION = "1.0.0";
+export const BACKUP_VERSION = "1.0.0";
 
 const backupFileName = (date = new Date()) =>
   `dinkum-tracker-backup-${date.toISOString().slice(0, 10)}.json`;
