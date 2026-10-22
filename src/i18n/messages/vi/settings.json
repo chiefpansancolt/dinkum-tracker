@@ -1,0 +1,141 @@
+{
+    "title": "Cài đặt",
+    "subline": "{count, plural, other {{amount} lượt chơi}} được lưu trong trình duyệt này · Tùy chọn tự động lưu",
+    "storage": {
+        "title": "Lưu trữ dữ liệu!",
+        "body": "Dữ liệu của bạn được lưu trong trình duyệt. Dữ liệu sẽ mất khi bạn xóa dữ liệu trình duyệt, trừ khi bạn đồng bộ hoặc sao lưu.",
+        "action": "Hãy dùng các chức năng bên dưới để xuất và sao lưu dữ liệu của bạn."
+    },
+    "manage": {
+        "title": "Lượt chơi",
+        "description": "Đổi tên, xóa hoặc tạo lượt chơi ở trang Lượt chơi.",
+        "link": "Quản lý lượt chơi"
+    },
+    "data": {
+        "title": "Quản lý dữ liệu",
+        "count": "{count, plural, other {{amount} lượt chơi}}",
+        "exportButton": "Xuất tất cả lượt chơi",
+        "exportHint": "Tải về tệp sao lưu của mọi lượt chơi đã lưu.",
+        "exportDone": "Xuất thành công!",
+        "importButton": "Nhập dữ liệu",
+        "importHint": "Tải lên một tệp (.json) đã xuất trước đó. Một bước xác nhận sẽ hỏi bạn muốn gộp hay thay thế.",
+        "importDone": "Nhập thành công!",
+        "importFailed": "Định dạng tệp không hợp lệ",
+        "resetWarning": "Cảnh báo: Thao tác này sẽ xóa mọi lượt chơi và không thể hoàn tác.",
+        "resetButton": "Đặt lại toàn bộ dữ liệu",
+        "resetConfirm": "Xác nhận đặt lại",
+        "resetCancel": "Hủy",
+        "resetDone": "Đã đặt lại dữ liệu",
+        "importFile": "Tệp sao lưu",
+        "description": "Một tệp sao lưu chứa mọi lượt chơi.",
+        "exportTitle": "Xuất dữ liệu",
+        "importTitle": "Nhập dữ liệu",
+        "resetTitle": "Đặt lại toàn bộ dữ liệu",
+        "resetSyncedCopy": "Xóa luôn bản đã đồng bộ trên {provider}",
+        "resetSyncedOn": "Đồng bộ vẫn bật. Các thiết bị khác của bạn sẽ mất những lượt chơi này ở lần đồng bộ tiếp theo. Hãy xuất bản sao lưu trước nếu bạn chưa chắc.",
+        "resetSyncedOff": "Bản đã đồng bộ được giữ nguyên. Đồng bộ sẽ ngắt kết nối trên trình duyệt này để không làm trống đám mây.",
+        "providers": {
+            "github": "GitHub",
+            "google": "Google Drive",
+            "dropbox": "Dropbox",
+            "microsoft": "OneDrive"
+        }
+    },
+    "import": {
+        "title": "Nhập bản sao lưu",
+        "description": "Chọn cách xử lý các lượt chơi đang có trên thiết bị này.",
+        "fileSummary": "{inFile, plural, other {{inFileAmount} lượt chơi}} trong tệp · {onDeviceAmount} trên thiết bị này",
+        "mode": "Chế độ nhập",
+        "merge": "Gộp (nên dùng)",
+        "mergeDescription": "Thêm các lượt chơi mới. Khi một lượt chơi có ở cả hai nơi, bản cập nhật gần nhất sẽ được giữ. Các lượt chơi chỉ có trên thiết bị này vẫn được giữ.",
+        "replace": "Thay thế tất cả",
+        "replaceDescription": "Xóa {onDevice, plural, other {{onDeviceAmount} lượt chơi}} trên thiết bị này và nạp {inFileAmount} từ tệp. Không thể hoàn tác.",
+        "table": {
+            "playthrough": "Lượt chơi",
+            "inFile": "Trong tệp",
+            "onDevice": "Trên thiết bị này",
+            "result": "Kết quả"
+        },
+        "updatedOn": "Cập nhật {date}",
+        "notOnDevice": "Không có trên thiết bị",
+        "notInFile": "Không có trong tệp",
+        "results": {
+            "added": "Đã thêm",
+            "updated": "Bản trong tệp được giữ",
+            "kept": "Bản trên thiết bị được giữ",
+            "replaced": "Đã thay thế",
+            "removed": "Đã xóa"
+        },
+        "exportFirst": "Xuất dữ liệu hiện tại trước",
+        "cancel": "Hủy",
+        "confirmMerge": "Gộp {count, plural, other {{amount} lượt chơi}}",
+        "confirmReplace": "Thay thế toàn bộ dữ liệu"
+    },
+    "appearance": {
+        "title": "Giao diện và tùy chọn",
+        "theme": "Giao diện",
+        "themeHint": "Theo hệ thống sẽ dùng chế độ của thiết bị.",
+        "defaultSort": "Cách sắp xếp lượt chơi mặc định",
+        "defaultSortHint": "Chọn cách sắp xếp lượt chơi mặc định. Được lưu ngay khi bạn đổi.",
+        "resources": "Tài nguyên bổ sung",
+        "opensInNewTab": "Mở trong tab mới",
+        "wiki": "Dinkum Wiki",
+        "repository": "Kho mã nguồn dự án"
+    },
+    "page": {
+        "title": "Cài đặt",
+        "tabsLabel": "Cài đặt",
+        "tabs": {
+            "sync": "Đồng bộ đám mây",
+            "preferences": "Tùy chọn",
+            "data": "Sao lưu và dữ liệu",
+            "about": "Giới thiệu"
+        }
+    },
+    "preferences": {
+        "appearance": {
+            "title": "Giao diện",
+            "description": "Được lưu ngay trên thiết bị này."
+        },
+        "playthroughList": {
+            "title": "Danh sách lượt chơi",
+            "description": "Cách trang Lượt chơi bắt đầu."
+        }
+    },
+    "about": {
+        "version": "Phiên bản {version}",
+        "summary": "Theo dõi tiến trình Dinkum của bạn: cá, côn trùng, sinh vật nhỏ, cột mốc, giấy phép, NPC và nhiều hơn nữa. Mọi thứ được lưu trong trình duyệt này.",
+        "resources": "Tài nguyên bổ sung",
+        "disclaimer": "Không liên kết với hay được bảo trợ bởi những người tạo ra Dinkum."
+    },
+    "region": {
+        "title": "Ngôn ngữ và khu vực",
+        "description": "Chọn ngôn ngữ và cách viết số, ngày. Được lưu trên thiết bị này.",
+        "language": {
+            "label": "Ngôn ngữ",
+            "hint": "Tên động vật, vật phẩm, NPC và các dữ liệu game khác lấy từ dữ liệu game và giữ nguyên tiếng Anh."
+        },
+        "numberFormat": {
+            "label": "Định dạng số",
+            "hint": "Ví dụ: {example}",
+            "options": {
+                "auto": "Tự động, theo ngôn ngữ",
+                "us": "1,234.56 (Hoa Kỳ)",
+                "european": "1.234,56 (Đức)",
+                "french": "1 234,56 (Pháp)",
+                "swiss": "1’234.56 (Thụy Sĩ)",
+                "indian": "12,34,567.89 (Ấn Độ)"
+            }
+        },
+        "dateFormat": {
+            "label": "Định dạng ngày",
+            "hint": "Ví dụ: {example}",
+            "options": {
+                "auto": "Tự động, theo ngôn ngữ",
+                "mdy": "Tháng/Ngày/Năm",
+                "dmy": "Ngày/Tháng/Năm",
+                "ymd": "Năm-Tháng-Ngày"
+            }
+        }
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "saveFailed": {
+        "title": "Non enregistré",
+        "message": "Le navigateur n’a pas pu stocker vos données. Exportez une sauvegarde pour ne pas perdre vos modifications.",
+        "exportBackup": "Exporter la sauvegarde"
+    },
+    "undo": "Annuler"
+}

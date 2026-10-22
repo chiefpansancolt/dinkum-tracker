@@ -1,0 +1,141 @@
+{
+    "title": "Paramètres",
+    "subline": "{count, plural, one {{amount} partie enregistrée} other {{amount} parties enregistrées}} dans ce navigateur · Les préférences sont enregistrées automatiquement",
+    "storage": {
+        "title": "Stockage des données !",
+        "body": "Vos données sont stockées dans le navigateur. Elles sont perdues si les données du navigateur sont effacées, sauf si vous les synchronisez ou les sauvegardez.",
+        "action": "Utilisez les fonctions ci-dessous pour exporter et sauvegarder vos données."
+    },
+    "manage": {
+        "title": "Parties",
+        "description": "Renommez, supprimez ou créez des parties sur la page Parties.",
+        "link": "Gérer les parties"
+    },
+    "data": {
+        "title": "Gestion des données",
+        "count": "{count, plural, one {{amount} partie} other {{amount} parties}}",
+        "exportButton": "Exporter toutes les parties",
+        "exportHint": "Téléchargez un fichier de sauvegarde de toutes vos parties enregistrées.",
+        "exportDone": "Export réussi !",
+        "importButton": "Importer des données",
+        "importHint": "Envoyez un fichier (.json) exporté auparavant. Une étape de confirmation demande s’il faut fusionner ou remplacer.",
+        "importDone": "Import réussi !",
+        "importFailed": "Format de fichier non valide",
+        "resetWarning": "Attention : cette action supprime toutes les parties et ne peut pas être annulée.",
+        "resetButton": "Réinitialiser toutes les données",
+        "resetConfirm": "Confirmer la réinitialisation",
+        "resetCancel": "Annuler",
+        "resetDone": "Données réinitialisées",
+        "importFile": "Fichier de sauvegarde",
+        "description": "Un seul fichier de sauvegarde contient toutes les parties.",
+        "exportTitle": "Exporter les données",
+        "importTitle": "Importer les données",
+        "resetTitle": "Réinitialiser toutes les données",
+        "resetSyncedCopy": "Supprimer aussi la copie synchronisée dans {provider}",
+        "resetSyncedOn": "La synchronisation reste activée. Vos autres appareils perdent ces parties à leur prochaine synchronisation. Exportez d’abord une sauvegarde en cas de doute.",
+        "resetSyncedOff": "La copie synchronisée reste en place. La synchronisation se déconnecte sur ce navigateur pour ne pas vider le cloud.",
+        "providers": {
+            "github": "GitHub",
+            "google": "Google Drive",
+            "dropbox": "Dropbox",
+            "microsoft": "OneDrive"
+        }
+    },
+    "import": {
+        "title": "Importer une sauvegarde",
+        "description": "Choisissez ce qu’il advient des parties déjà présentes sur cet appareil.",
+        "fileSummary": "{inFile, plural, one {{inFileAmount} partie} other {{inFileAmount} parties}} dans le fichier · {onDeviceAmount} sur cet appareil",
+        "mode": "Mode d’import",
+        "merge": "Fusionner (recommandé)",
+        "mergeDescription": "Ajoute les parties nouvelles. Quand une partie existe aux deux endroits, la copie mise à jour le plus récemment l’emporte. Les parties présentes seulement sur cet appareil sont conservées.",
+        "replace": "Tout remplacer",
+        "replaceDescription": "Supprime {onDevice, plural, one {la {onDeviceAmount} partie} other {les {onDeviceAmount} parties}} de cet appareil et charge les {inFileAmount} du fichier. Cette action ne peut pas être annulée.",
+        "table": {
+            "playthrough": "Partie",
+            "inFile": "Dans le fichier",
+            "onDevice": "Sur cet appareil",
+            "result": "Résultat"
+        },
+        "updatedOn": "Mise à jour {date}",
+        "notOnDevice": "Absente de l’appareil",
+        "notInFile": "Absente du fichier",
+        "results": {
+            "added": "Ajoutée",
+            "updated": "La copie du fichier l’emporte",
+            "kept": "La copie de l’appareil est conservée",
+            "replaced": "Remplacée",
+            "removed": "Supprimée"
+        },
+        "exportFirst": "Exporter d’abord les données actuelles",
+        "cancel": "Annuler",
+        "confirmMerge": "Fusionner {count, plural, one {{amount} partie} other {{amount} parties}}",
+        "confirmReplace": "Remplacer toutes les données"
+    },
+    "appearance": {
+        "title": "Apparence et préférences",
+        "theme": "Thème",
+        "themeHint": "Système suit votre appareil.",
+        "defaultSort": "Tri par défaut des parties",
+        "defaultSortHint": "Choisissez comment les parties sont triées par défaut. Enregistré dès que vous le modifiez.",
+        "resources": "Ressources supplémentaires",
+        "opensInNewTab": "S’ouvre dans un nouvel onglet",
+        "wiki": "Wiki Dinkum",
+        "repository": "Dépôt du projet"
+    },
+    "page": {
+        "title": "Paramètres",
+        "tabsLabel": "Paramètres",
+        "tabs": {
+            "sync": "Synchro cloud",
+            "preferences": "Préférences",
+            "data": "Sauvegarde et données",
+            "about": "À propos"
+        }
+    },
+    "preferences": {
+        "appearance": {
+            "title": "Apparence",
+            "description": "Enregistrée aussitôt sur cet appareil."
+        },
+        "playthroughList": {
+            "title": "Liste des parties",
+            "description": "Comment la page Parties s’affiche au départ."
+        }
+    },
+    "about": {
+        "version": "Version {version}",
+        "summary": "Suivez votre progression dans Dinkum : poissons, insectes, bestioles, jalons, licences, PNJ et plus encore. Tout est stocké dans ce navigateur.",
+        "resources": "Ressources supplémentaires",
+        "disclaimer": "Non affilié aux créateurs de Dinkum et non approuvé par eux."
+    },
+    "region": {
+        "title": "Langue et région",
+        "description": "Choisissez la langue et l’écriture des nombres et des dates. Enregistré sur cet appareil.",
+        "language": {
+            "label": "Langue",
+            "hint": "Les noms des animaux, objets, PNJ et des autres données du jeu viennent des données du jeu et restent en anglais."
+        },
+        "numberFormat": {
+            "label": "Format des nombres",
+            "hint": "Exemple : {example}",
+            "options": {
+                "auto": "Automatique, suit la langue",
+                "us": "1,234.56 (États-Unis)",
+                "european": "1.234,56 (Allemagne)",
+                "french": "1 234,56 (France)",
+                "swiss": "1’234.56 (Suisse)",
+                "indian": "12,34,567.89 (Inde)"
+            }
+        },
+        "dateFormat": {
+            "label": "Format des dates",
+            "hint": "Exemple : {example}",
+            "options": {
+                "auto": "Automatique, suit la langue",
+                "mdy": "Mois/Jour/Année",
+                "dmy": "Jour/Mois/Année",
+                "ymd": "Année-Mois-Jour"
+            }
+        }
+    }
+}

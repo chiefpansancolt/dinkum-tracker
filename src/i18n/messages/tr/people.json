@@ -1,0 +1,98 @@
+{
+    "npcs": {
+        "title": "NPC'ler",
+        "subline": "{total} kalpten {hearts} · {count} NPC · {name}",
+        "tiles": {
+            "total": "Toplam kalp",
+            "full": "Dolu kalpler",
+            "met": "Şimdiye kadar tanışılan",
+            "of": "/ {total}",
+            "ofNpcs": "/ {total} NPC"
+        },
+        "filters": {
+            "search": "NPC'leri ada göre ara",
+            "sheetTitle": "NPC'leri filtrele",
+            "relationship": "İlişki",
+            "residence": "Adada yaşıyor",
+            "all": "Tümü",
+            "none": "Henüz kalp yok",
+            "progress": "Devam ediyor",
+            "full": "Dolu kalpler",
+            "canMoveIn": "Taşınabilir",
+            "visitors": "Yalnızca ziyaretçiler",
+            "showing": "{total} NPC içinden {shown} gösteriliyor · Dolu kalp {full} · Tanışılan {met}",
+            "apply": "{count} NPC göster"
+        },
+        "hint": "Ayarlamak için bir kalbe tıkla. Geri almak için son dolu kalbe tıkla. Çeyrek adımlar için -{step} ve +{step} kullan.",
+        "things": "NPC",
+        "card": {
+            "full": "Dolu",
+            "requirements": "Gereksinimler",
+            "visit": "Ziyaret",
+            "moveIn": "Taşınma",
+            "food": "Yemek tercihleri",
+            "likes": "Sevdikleri",
+            "dislikes": "Sevmedikleri",
+            "none": "Yok"
+        },
+        "hearts": {
+            "label": "{name} için kalpler",
+            "setTo": "{name} için {count, plural, one {{amount} kalp} other {{amount} kalp}} ayarla",
+            "less": "- {step}",
+            "more": "+ {step}",
+            "lessLabel": "Kalbi {step} azalt",
+            "moreLabel": "Kalbi {step} artır",
+            "readout": "{hearts} / {max}"
+        },
+        "toast": {
+            "set": "{name}: 5 kalpten {hearts}"
+        },
+        "empty": {
+            "title": "Bu filtrelere uyan NPC yok",
+            "description": "Başka bir ad dene ya da filtreleri temizle.",
+            "clear": "Filtreleri temizle"
+        }
+    },
+    "calendar": {
+        "title": "Takvim",
+        "subline": "{season} · {events} etkinlik · {birthdays} doğum günü · {name}",
+        "previous": "Önceki mevsim",
+        "next": "Sonraki mevsim",
+        "today": "Bugün",
+        "legend": {
+            "event": "Etkinlik",
+            "birthday": "Doğum günü",
+            "current": "Geçerli gün"
+        },
+        "alert": "Geçerli gün: {day} {season}. Geçerli gün olarak ayarlamak için herhangi bir güne tıkla. Değişiklikler hemen kaydedilir.",
+        "weekdays": {
+            "Sunday": "Paz",
+            "Monday": "Pzt",
+            "Tuesday": "Sal",
+            "Wednesday": "Çar",
+            "Thursday": "Per",
+            "Friday": "Cum",
+            "Saturday": "Cmt"
+        },
+        "more": "+ {count} daha",
+        "dayLabel": "{weekday}, {day} {season}",
+        "details": {
+            "title": "{weekday}, {day} {season}",
+            "events": "Etkinlikler",
+            "birthdays": "Doğum günleri",
+            "noEvents": "Bugün etkinlik yok.",
+            "noBirthdays": "Bugün doğum günü yok.",
+            "current": "Geçerli gün",
+            "close": "Kapat"
+        },
+        "toast": {
+            "set": "Geçerli gün {day} {season} olarak ayarlandı"
+        },
+        "cellEntries": "{count, plural, one {{amount} kayıt} other {{amount} kayıt}}",
+        "entries": {
+            "birthday": "{name} Doğum Günü",
+            "range": "{season} mevsiminin {start}-{end}. günleri",
+            "likes": "Sevdikleri: {food}"
+        }
+    }
+}

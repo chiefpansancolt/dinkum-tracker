@@ -1,0 +1,124 @@
+{
+    "title": "存档",
+    "subline": "管理你的 Dinkum 冒险。共 {count, plural, other {{amount} 个存档}}，当前使用 {name}。",
+    "sublineNoneActive": "管理你的 Dinkum 冒险。共 {count, plural, other {{amount} 个存档}}。",
+    "sublineEmpty": "还没有存档。",
+    "loading": "正在加载存档...",
+    "stats": {
+        "playthroughs": "存档",
+        "playthroughsCaption": "在此浏览器中",
+        "active": "当前",
+        "noneActive": "无",
+        "furthest": "进度最快",
+        "average": "平均完成度",
+        "averageCaption": "全部存档"
+    },
+    "filters": {
+        "sortBy": "排序方式",
+        "sort": {
+            "lastUpdated": "最近更新",
+            "name": "名称",
+            "createdAt": "创建日期",
+            "completion": "完成百分比"
+        },
+        "search": "按名称搜索存档",
+        "showing": "显示 {shown} / {total} 个{total, plural, other {存档}}",
+        "defaultSortFrom": "默认排序来自<link>设置</link>"
+    },
+    "noMatch": {
+        "title": "没有与“{query}”匹配的存档",
+        "description": "换个名称试试。",
+        "clear": "清除搜索"
+    },
+    "empty": {
+        "title": "未找到存档",
+        "description": "你还没有创建任何存档。创建第一个存档，开始记录你的 Dinkum 冒险。每个存档都保存在此浏览器中。",
+        "create": "创建第一个存档",
+        "importBackup": "改为导入备份"
+    },
+    "card": {
+        "created": "创建于：{date}",
+        "updated": "更新于：{when}",
+        "complete": "已完成 {percent}%",
+        "overall": "总进度",
+        "pedia": "图鉴",
+        "licenses": "执照",
+        "milestones": "里程碑",
+        "buildings": "建筑",
+        "pediaDetail": "鱼类 {fish} · 昆虫 {bugs} · 小动物 {critters}",
+        "count": "{count}/{total}",
+        "gameDate": "{season}第 {day} 天",
+        "currentGameDate": "当前游戏日期",
+        "setActive": "设为当前",
+        "active": "当前",
+        "openOverview": "打开总览",
+        "edit": "编辑",
+        "delete": "删除",
+        "activePlaythrough": "当前存档"
+    },
+    "seasons": {
+        "Spring": "春季",
+        "Summer": "夏季",
+        "Autumn": "秋季",
+        "Winter": "冬季"
+    },
+    "relative": {
+        "today": "今天",
+        "yesterday": "昨天",
+        "daysAgo": "{count, plural, other {{amount} 天前}}",
+        "weeksAgo": "{count, plural, other {{amount} 周前}}",
+        "monthsAgo": "{count, plural, other {{amount} 个月前}}",
+        "unknown": "无"
+    },
+    "new": {
+        "action": "新建存档",
+        "actionShort": "新建",
+        "pageTitle": "新建存档",
+        "pageSubline": "起个名字，开始记录。所有内容都保存在此浏览器中。",
+        "back": "返回全部存档",
+        "next": {
+            "title": "接下来会发生什么",
+            "one": "一个空存档会立即保存在此浏览器中。",
+            "two": "如果勾选了该选项，它会成为当前存档，并显示在侧边栏的切换器中。",
+            "three": "你会回到存档列表，新卡片排在最前，并显示带“撤销”的提示。"
+        },
+        "createdToast": "已创建 {name}"
+    },
+    "form": {
+        "title": "新建存档",
+        "nameLabel": "存档名称",
+        "required": "必填",
+        "placeholder": "我的 Dinkum 冒险",
+        "help": "给存档起一个好记的名字，方便以后辨认。",
+        "counter": "{count} / {max}",
+        "errorEmpty": "请输入存档名称",
+        "makeActive": "设为当前存档",
+        "create": "创建存档",
+        "creating": "正在创建...",
+        "cancel": "取消",
+        "failed": "创建存档失败。请重试。",
+        "tryAgain": "重试"
+    },
+    "edit": {
+        "title": "编辑存档",
+        "save": "保存",
+        "saving": "正在保存...",
+        "savedToast": "已保存",
+        "renamed": "已重命名为 {name}",
+        "description": "{name} · 创建于 {date}",
+        "nameLabel": "存档名称",
+        "help": "按 Enter 保存。名称为空时无法保存。"
+    },
+    "delete": {
+        "title": "删除 {name}？",
+        "description": "这会删除它在此设备上保存的全部进度。",
+        "activeNext": "这是你的当前存档。{next} 是最近更新的存档，删除后将成为当前存档。",
+        "activeLast": "这是你的当前存档，也是唯一的存档。删除后将没有当前存档。",
+        "exportFirst": "先导出备份",
+        "confirm": "删除",
+        "cancel": "取消",
+        "toast": "已删除 {name}",
+        "toastMessage": "可在 10 秒内撤销",
+        "updated": "更新于 {when} · {date}"
+    }
+}

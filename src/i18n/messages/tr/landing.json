@@ -1,0 +1,78 @@
+{
+    "header": {
+        "features": "Özellikler",
+        "track": "Neleri takip edebilirsin",
+        "view": "Oynanışlarımı gör",
+        "new": "Yeni oynanış",
+        "menu": "Menü",
+        "menuOpen": "Menüyü aç",
+        "menuClose": "Menüyü kapat",
+        "nav": "Ana menü"
+    },
+    "hero": {
+        "eyebrow": "İlerlemeni takip et",
+        "title": "Dinkum Tracker",
+        "intro": "Dinkum maceraların için kapsamlı bir takip uygulaması. Birden fazla oynanışı yönet, koleksiyonlarını takip et ve ilerlemeni tek yerden izle. Her şey tarayıcında saklanır, istersen kendi bulut depolamanla senkronize edebilirsin.",
+        "view": "Oynanışlarımı gör",
+        "new": "Yeni macera",
+        "imageAlt": "Dinkum oyunu"
+    },
+    "counts": {
+        "title": "Tüm koleksiyonunu takip et",
+        "intro": "Dinkum yolculuğunun her yönünü, gerçek eşya sayıları üzerine kurulu bir takipçiyle yönet.",
+        "pedia": "Pedia",
+        "npcs": "NPC'ler",
+        "licenses": "Lisanslar",
+        "milestones": "Kilometre taşları",
+        "buildings": "Binalar",
+        "gear": "Teçhizat ve ekipman",
+        "recipes": "Tarifler",
+        "clothing": "Kıyafetler"
+    },
+    "everything": {
+        "title": "Her şeyi takip et",
+        "intro": "Dinkum'da başarılı olmak için gereken tüm araçlar",
+        "imageAlt": "Dinkum Tracker uygulaması",
+        "closing": "Böcek toplamaktan NPC'lerle ilişkileri yönetmeye kadar, Dinkum Tracker oyunundaki her şeyi takip etmene yardım eder.",
+        "pedia": {
+            "title": "Pedia koleksiyonları",
+            "text": "Tüm balıkları, böcekleri ve küçük hayvanları mevsime, konuma ve günün saatine göre takip et. Müze bağışlarını ve koleksiyon ilerlemeni izle."
+        },
+        "npcs": {
+            "title": "NPC ilişkileri",
+            "text": "Kasaba sakinleriyle arkadaşlıklarını, hediye tercihlerini ve kalp seviyelerini tüm {count} NPC için takip et."
+        },
+        "calendar": {
+            "title": "Takvim etkinlikleri",
+            "text": "Önemli tarihleri, doğum günlerini ve mevsimlik etkinlikleri takip et. Dinkum kasabandaki hiçbir festivali ya da özel günü kaçırma."
+        }
+    },
+    "needs": {
+        "title": "İhtiyacın olan her şey",
+        "intro": "Dinkum maceranda önemli olan tüm ayrıntıları takip et.",
+        "milestones": {
+            "title": "Kilometre taşları ve lisanslar",
+            "one": "{count} oyun kilometre taşının tamamlanmasını takip et",
+            "two": "Tüm lisansları ve yükseltme seviyelerini yönet",
+            "three": "İzin puanı ilerlemesini ve gereksinimleri gör"
+        },
+        "recipes": {
+            "title": "Tarifler ve üretim",
+            "one": "Tüm yemek tariflerini ve malzemelerini takip et",
+            "two": "Üretim tariflerini ve kaynakları takip et",
+            "three": "Aletleri, silahları ve ekipmanı yönet"
+        },
+        "collections": {
+            "title": "Koleksiyonlar ve kaynaklar",
+            "one": "Tüm kıyafetleri ve mobilyaları listele",
+            "two": "Tüm kaynakları ve kullanım alanlarını takip et",
+            "three": "İnşaat projelerini ve tapuları yönet"
+        }
+    },
+    "cta": {
+        "title": "Takibe başlamaya hazır mısın?",
+        "text": "Dinkum maceranı bugün düzenlemeye başla ve ilerlemeni bir daha kaybetme.",
+        "create": "Yeni oynanış oluştur",
+        "existing": "Mevcut oynanışları gör"
+    }
+}

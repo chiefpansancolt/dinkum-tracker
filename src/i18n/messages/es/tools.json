@@ -1,0 +1,70 @@
+{
+    "breakdown": {
+        "title": "Desglose de objetos",
+        "subline": "Qué recursos entran en qué objetos · {count} recursos",
+        "tiles": {
+            "resources": "Recursos",
+            "resourcesCaption": "usados en recetas y obras",
+            "common": "Comunes, usados en 3+ objetos",
+            "of": "de {total}",
+            "mostUsed": "Más usado",
+            "items": "{count, plural, one {{amount} objeto} other {{amount} objetos}}"
+        },
+        "search": "Buscar",
+        "searchPlaceholder": "Buscar recursos por nombre",
+        "sortBy": "Ordenar por",
+        "sortName": "Nombre (A-Z)",
+        "sortUsage": "Número de usos",
+        "filter": "Filtrar",
+        "filterWithCount": "Filtrar ({count})",
+        "commonOnly": "Solo recursos comunes (usados en 3+ objetos)",
+        "showing": "Mostrando {shown} de {total} recursos",
+        "notes": {
+            "categories": " (filtrado por {count, plural, one {{amount} categoría} other {{amount} categorías}})",
+            "types": " (filtrado por {count, plural, one {{amount} tipo} other {{amount} tipos}})",
+            "common": " (solo recursos comunes)"
+        },
+        "panel": {
+            "title": "Filtrar recursos",
+            "byCategory": "Filtrar por categoría",
+            "byType": "Filtrar por tipo de recurso",
+            "clear": "Borrar selección",
+            "itemCount": "{count, plural, one {{amount} objeto} other {{amount} objetos}}",
+            "done": "Ver {count} recursos",
+            "option": "{name}, {items}"
+        },
+        "card": {
+            "usedIn": "{count, plural, one {Se usa en {amount} objeto} other {Se usa en {amount} objetos}}",
+            "categories": "Categorías",
+            "usedInList": "Se usa en",
+            "showMore": "Ver {count} más...",
+            "showLess": "Ver menos"
+        },
+        "empty": {
+            "title": "Ningún recurso coincide con estos filtros",
+            "description": "Prueba con otro nombre o borra la selección.",
+            "clear": "Borrar selección"
+        }
+    },
+    "weight": {
+        "title": "Calculadora de peso",
+        "subline": "Calcula el precio de un hallazgo pesado a partir de su peso · {count} objetos",
+        "picker": "Elegir objeto",
+        "perKg": "{price} por kg",
+        "range": "{min} - {max} kg",
+        "rangeLine": "Rango de peso: {min} kg - {max} kg",
+        "weight": "Peso: {weight} kg",
+        "slider": "Peso en kg",
+        "minus": "Reducir el peso {step} kg",
+        "plus": "Aumentar el peso {step} kg",
+        "min": "{min} kg",
+        "max": "{max} kg",
+        "stepNote": "Paso de {step} kg. Al elegir otro objeto, el peso vuelve a su mínimo.",
+        "total": "Precio total",
+        "dinks": "dinks",
+        "formula": "{weight} kg × {price} por kg = {total}",
+        "rounded": "Redondeado al dink más cercano.",
+        "atMin": "Precio con el peso mínimo",
+        "atMax": "Precio con el peso máximo"
+    }
+}

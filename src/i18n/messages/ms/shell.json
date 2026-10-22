@@ -1,0 +1,91 @@
+{
+    "nav": {
+        "main": "Utama",
+        "groups": {
+            "track": "Jejak",
+            "progress": "Kemajuan",
+            "collect": "Kumpul",
+            "tools": "Alat"
+        },
+        "items": {
+            "overview": "Ringkasan",
+            "pedia": "Pedia",
+            "npcs": "NPC",
+            "calendar": "Kalendar",
+            "buildings": "Bangunan",
+            "licenses": "Lesen",
+            "milestones": "Pencapaian",
+            "skills": "Kemahiran",
+            "recipes": "Resipi",
+            "gear": "Peralatan",
+            "wardrobe": "Pakaian dan rumah",
+            "itemsBreakdown": "Pecahan item",
+            "weightCalculator": "Kalkulator berat",
+            "reference": "Rujukan",
+            "settings": "Tetapan",
+            "playthroughs": "Permainan",
+            "newPlaythrough": "Permainan baharu"
+        }
+    },
+    "appShell": {
+        "skipToContent": "Langkau ke kandungan",
+        "closeMenu": "Tutup menu"
+    },
+    "appBar": {
+        "openMenu": "Buka menu"
+    },
+    "playthroughGate": {
+        "emptyTitle": "Belum ada permainan",
+        "emptyDescription": "Cipta permainan untuk mula menjejak kemajuan anda.",
+        "newPlaythrough": "Permainan baharu"
+    },
+    "playthroughSwitcher": {
+        "sectionLabel": "Permainan",
+        "switchPlaythrough": "Tukar permainan",
+        "loading": "Memuatkan",
+        "noPlaythroughYet": "Belum ada permainan",
+        "playthroughs": "Permainan",
+        "active": "Aktif",
+        "allPlaythroughs": "Semua permainan",
+        "newPlaythrough": "Permainan baharu",
+        "detail": "Hari {day} · {percent}%"
+    },
+    "theme": {
+        "label": "Tema",
+        "light": "Cerah",
+        "dark": "Gelap",
+        "system": "Sistem"
+    },
+    "footer": {
+        "tagline": "Jejak kemajuan Dinkum anda dengan mudah.",
+        "support": "Sokongan",
+        "about": "Perihal",
+        "settings": "Tetapan",
+        "discord": "Discord",
+        "github": "GitHub",
+        "dinkumWiki": "Dinkum Wiki",
+        "privacyPolicy": "Dasar privasi",
+        "termsOfService": "Syarat perkhidmatan",
+        "disclaimerTitle": "Penafian",
+        "disclaimer": "Aplikasi ini tidak berkaitan dengan, disokong oleh, atau dihubungkan dengan Dinkum atau penciptanya. Data game diambil daripada Dinkum Wiki. Imej dan nama game digunakan sebagai rujukan sahaja.",
+        "copyright": "© {year} {appName}",
+        "framework": "Dibina dengan rangka kerja Gamerdex, asas bersama untuk penjejak kemajuan game percuma. Data anda kekal dalam pelayar anda, atau dalam storan awan anda sendiri jika anda menghidupkan segerak.",
+        "visitGamerdex": "Lawati Gamerdex"
+    },
+    "domainNotice": {
+        "label": "Notis pertukaran domain:",
+        "movedTo": "Dinkum Tracker telah berpindah ke <strong>{domain}</strong>. Data tersimpan anda tidak akan dipindahkan secara automatik. Sila",
+        "exportLink": "eksport data anda",
+        "retired": "daripada tapak ini dan import ke domain baharu. Domain ini akan ditamatkan pada <strong>{date}</strong>.",
+        "goToNewSite": "Ke tapak baharu",
+        "dismiss": "Tutup notis"
+    },
+    "notFound": {
+        "code": "404",
+        "title": "Halaman tidak ditemui",
+        "description": "Halaman itu tidak wujud atau mungkin telah dipindahkan.",
+        "toOverview": "Ke Ringkasan",
+        "toHome": "Ke halaman utama",
+        "hint": "Ralat 404 bermaksud alamat tersalah taip atau halaman telah dibuang. Bar sisi masih tersedia."
+    }
+}

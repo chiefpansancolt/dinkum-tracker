@@ -1,0 +1,35 @@
+import collect from "./en/collect.json";
+import common from "./en/common.json";
+import landing from "./en/landing.json";
+import overview from "./en/overview.json";
+import pedia from "./en/pedia.json";
+import people from "./en/people.json";
+import playthroughs from "./en/playthroughs.json";
+import progress from "./en/progress.json";
+import reference from "./en/reference.json";
+import settings from "./en/settings.json";
+import shell from "./en/shell.json";
+import sync from "./en/sync.json";
+import terms from "./en/terms.json";
+import tools from "./en/tools.json";
+import ui from "./en/ui.json";
+
+const en = {
+  common,
+  ui,
+  shell,
+  playthroughs,
+  settings,
+  overview,
+  pedia,
+  progress,
+  collect,
+  people,
+  tools,
+  reference,
+  landing,
+  sync,
+  terms,
+};
+
+export default en;

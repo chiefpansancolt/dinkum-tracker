@@ -1,0 +1,116 @@
+{
+    "title": "نظرة عامة",
+    "subline": "{done} من {total} عنصر · {percent}% · {name}",
+    "view": "عرض",
+    "headline": {
+        "label": "نسبة الإنجاز الكلية",
+        "ofItems": "{done} من {total} عنصر",
+        "groups": {
+            "track": "التتبع",
+            "progress": "التقدم",
+            "collect": "الجمع"
+        },
+        "groupOf": "{done} من {total}",
+        "note": "المقام ثابت وهو {total} عنصر: Pedia {pedia}، الشخصيات {npcs}، الإنجازات {milestones}، التراخيص {licenses}، المهارات {skills}، المباني {buildings}، العتاد {gear}، الملابس والمنزل {wardrobe}، الوصفات {recipes}. تُحتسب كل فئة منذ اليوم الأول، لذلك لا تقفز النسبة عند فتح تبويب جديد."
+    },
+    "skills": {
+        "title": "مهارات الشخصية",
+        "level": "المستوى {level}",
+        "empty": "لم تُسجَّل مهارات بعد."
+    },
+    "licenses": {
+        "title": "تقدم التراخيص",
+        "obtained": "التراخيص المحصّلة",
+        "complete": "اكتمل {count}/{total}",
+        "levels": "مستويات التراخيص",
+        "levelsValue": "{count}/{total} · {percent}%",
+        "permit": "نقاط التصريح المنفقة",
+        "spent": "أُنفق {percent}%"
+    },
+    "milestones": {
+        "title": "تقدم الإنجازات",
+        "overall": "التقدم الكلي",
+        "complete": "اكتمل {count}/{total}",
+        "levels": "المستويات",
+        "levelsValue": "{count}/{total} · {percent}%",
+        "permit": "نقاط التصريح المكتسبة",
+        "earned": "اكتسب {percent}%"
+    },
+    "pedia": {
+        "title": "تقدم Pedia",
+        "overall": "التقدم الكلي ({count}/{total})",
+        "donations": "تبرعات المتحف ({count}/{total})",
+        "fish": "الأسماك ({count}/{total})",
+        "bugs": "الحشرات ({count}/{total})",
+        "critters": "المخلوقات الصغيرة ({count}/{total})",
+        "donated": "تم التبرع ({count}/{total})",
+        "permit": "نقاط التصريح المكتسبة",
+        "earned": "اكتسب {percent}%"
+    },
+    "gear": {
+        "title": "العتاد والمعدات",
+        "overall": "التقدم الكلي ({count}/{total})",
+        "books": "الكتب ({count}/{total})",
+        "tools": "الأدوات ({count}/{total})",
+        "weapons": "الأسلحة ({count}/{total})",
+        "equipment": "المعدات ({count}/{total})",
+        "vehicles": "المركبات ({count}/{total})",
+        "cassettes": "الكاسيتات ({count}/{total})",
+        "names": {
+            "books": "الكتب",
+            "tools": "الأدوات",
+            "weapons": "الأسلحة",
+            "equipment": "المعدات",
+            "vehicles": "المركبات",
+            "cassettes": "الكاسيتات"
+        },
+        "mostComplete": "الأكثر اكتمالًا",
+        "leastComplete": "الأقل اكتمالًا"
+    },
+    "buildings": {
+        "title": "تقدم المباني",
+        "overall": "التقدم الكلي",
+        "complete": "اكتمل {count}/{total}",
+        "houseUpgrades": "ترقيات المنزل",
+        "shops": "المتاجر",
+        "town": "مباني البلدة",
+        "utility": "مباني الخدمات",
+        "mostExpensive": "أغلى المباني",
+        "price": "{amount} Dinks"
+    },
+    "recipes": {
+        "title": "مجموعة الوصفات",
+        "overall": "التقدم الكلي ({count}/{total})",
+        "cooking": "الطبخ ({count}/{total})",
+        "crafting": "الصناعة ({count}/{total})",
+        "signWriting": "كتابة اللافتات ({count}/{total})",
+        "names": {
+            "cooking": "الطبخ",
+            "crafting": "الصناعة",
+            "signWriting": "كتابة اللافتات"
+        },
+        "mostComplete": "الأكثر اكتمالًا",
+        "leastComplete": "الأقل اكتمالًا"
+    },
+    "npcs": {
+        "title": "علاقات الشخصيات",
+        "total": "إجمالي الشخصيات",
+        "friends": "الأصدقاء",
+        "oneHeart": "قلب واحد فأكثر",
+        "maxHearts": "أقصى قلوب",
+        "avgHearts": "متوسط القلوب",
+        "top": "أقوى العلاقات",
+        "hearts": "{hearts, plural, zero {{amount} قلوب} one {{amount} قلب} two {قلبان} few {{amount} قلوب} many {{amount} قلبًا} other {{amount} قلب}}",
+        "empty": "لم تُسجَّل شخصيات بعد."
+    },
+    "game": {
+        "title": "معلومات اللعبة",
+        "calendar": "تقويم اللعبة",
+        "date": "اليوم {day}، {season}",
+        "tracking": "التتبع في العالم الحقيقي",
+        "daysSince": "الأيام منذ الإنشاء: {days}",
+        "lastUpdated": "آخر تحديث: {date}",
+        "milestones": "الإنجازات",
+        "completed": "اكتمل {count}"
+    }
+}

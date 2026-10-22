@@ -1,0 +1,85 @@
+{
+    "title": "Pedia",
+    "subline": "สะสมแล้ว {done} จาก {total} · {percent}% · {name}",
+    "tabsLabel": "หมวดของ Pedia",
+    "tabs": {
+        "fish": "ปลา",
+        "bugs": "แมลง",
+        "critters": "สัตว์เล็ก"
+    },
+    "nouns": {
+        "fish": "ปลา",
+        "bugs": "แมลง",
+        "critters": "สัตว์เล็ก"
+    },
+    "summary": {
+        "captured": "จับได้แล้ว",
+        "donated": "บริจาคให้พิพิธภัณฑ์",
+        "permit": "แต้มใบอนุญาตที่ได้รับ",
+        "of": "จาก {total}"
+    },
+    "filters": {
+        "sheetTitle": "กรอง{tab}",
+        "biome": "ไบโอม",
+        "rarity": "ความหายาก",
+        "season": "ฤดู",
+        "time": "เวลา",
+        "collected": "สะสมแล้ว",
+        "donated": "บริจาคแล้ว",
+        "allBiomes": "ทุกไบโอม",
+        "allRarities": "ทุกระดับความหายาก",
+        "allSeasons": "ทุกฤดู",
+        "anyTime": "ทุกเวลา",
+        "all": "ทั้งหมด",
+        "onlyCollected": "สะสมแล้ว",
+        "notCollected": "ยังไม่สะสม",
+        "onlyDonated": "บริจาคแล้ว",
+        "notDonated": "ยังไม่บริจาค",
+        "search": "ค้นหา{tab}ตามชื่อ",
+        "showing": "แสดง{tab} {shown} จาก {total}",
+        "capturedCount": "จับได้ {count}",
+        "donatedCount": "บริจาคแล้ว {count}",
+        "apply": "แสดง{tab} {count}"
+    },
+    "view": {
+        "label": "มุมมอง",
+        "grid": "ตาราง",
+        "list": "รายการ"
+    },
+    "card": {
+        "biome": "ไบโอม",
+        "seasons": "ฤดู",
+        "time": "เวลา",
+        "sell": "ราคาขาย",
+        "cooked": "ปรุงสุก",
+        "cookedValue": "{price} · x{pieces}",
+        "status": "สถานะ",
+        "missing": "ยังไม่มี",
+        "caught": "จับได้แล้ว",
+        "donated": "บริจาคแล้ว"
+    },
+    "table": {
+        "name": "ชื่อ",
+        "rarity": "ความหายาก",
+        "biome": "ไบโอม",
+        "seasons": "ฤดู",
+        "time": "เวลา",
+        "sell": "ขาย",
+        "cooked": "ปรุงสุก",
+        "status": "สถานะ",
+        "caption": "แสดง {shown} จาก {total} แถว ตัวกรอง ตัวควบคุมสถานะ และระดับการค้าเดียวกันใช้กับทั้งสองมุมมอง"
+    },
+    "empty": {
+        "title": "ไม่มี{tab}ที่ตรงกับตัวกรองเหล่านี้",
+        "description": "ลองใช้ชื่ออื่น หรือล้างตัวกรอง",
+        "clear": "ล้างตัวกรอง"
+    },
+    "toast": {
+        "marked": "ทำเครื่องหมาย {name} เป็น{status}แล้ว",
+        "statuses": {
+            "missing": "ยังไม่มี",
+            "caught": "จับได้แล้ว",
+            "donated": "บริจาคแล้ว"
+        }
+    }
+}

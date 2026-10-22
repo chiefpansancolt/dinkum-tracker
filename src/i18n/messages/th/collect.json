@@ -1,0 +1,234 @@
+{
+    "toast": {
+        "marked": "ทำเครื่องหมาย {name} เป็น{state}แล้ว",
+        "collected": "สะสมแล้ว",
+        "notCollected": "ยังไม่สะสม",
+        "unlocked": "ปลดล็อกแล้ว",
+        "locked": "ล็อกอยู่"
+    },
+    "filters": {
+        "search": "ค้นหา{things}ตามชื่อ...",
+        "sheetTitle": "กรอง{things}",
+        "showingCollected": "แสดง{things} {shown} จาก {total} · สะสมแล้ว {count}",
+        "showingUnlocked": "แสดง{things} {shown} จาก {total} · ปลดล็อกแล้ว {count}",
+        "apply": "แสดง{things} {count}",
+        "all": "ทั้งหมด",
+        "collected": "สะสมแล้ว",
+        "notCollected": "ยังไม่สะสม",
+        "unlocked": "ปลดล็อกแล้ว",
+        "notUnlocked": "ยังไม่ปลดล็อก",
+        "source": "แหล่งที่มา",
+        "allSources": "ทุกแหล่งที่มา"
+    },
+    "empty": {
+        "title": "ไม่มี{things}ที่ตรงกับตัวกรองเหล่านี้",
+        "description": "ลองใช้ชื่ออื่น หรือล้างตัวกรอง",
+        "clear": "ล้างตัวกรอง"
+    },
+    "list": {
+        "got": "ได้แล้ว",
+        "name": "ชื่อ",
+        "caption": "โหลดแล้ว {shown} จาก {total} แถว เลื่อนลงเพื่อโหลดเพิ่ม",
+        "prices": "ราคาเป็น Dinks"
+    },
+    "card": {
+        "collected": "สะสมแล้ว",
+        "markCollected": "ทำเครื่องหมายว่าสะสมแล้ว",
+        "unlocked": "ปลดล็อกแล้ว",
+        "sellPrice": "ราคาขาย",
+        "buyPrice": "ราคาซื้อ",
+        "source": "แหล่งที่มา",
+        "none": "–"
+    },
+    "gear": {
+        "title": "อุปกรณ์",
+        "subline": "สะสมแล้ว {count} จาก {total} · {percent}% · {name}",
+        "tabsLabel": "หมวดของอุปกรณ์",
+        "tabs": {
+            "books": "หนังสือ",
+            "cassettes": "เทปคาสเซ็ต",
+            "tools": "เครื่องมือ",
+            "weapons": "อาวุธ",
+            "equipment": "อุปกรณ์เสริม",
+            "vehicles": "ยานพาหนะ"
+        },
+        "things": {
+            "books": "หนังสือ",
+            "cassettes": "เทปคาสเซ็ต",
+            "tools": "เครื่องมือ",
+            "weapons": "อาวุธ",
+            "equipment": "อุปกรณ์เสริม",
+            "vehicles": "ยานพาหนะ"
+        },
+        "tiles": {
+            "collected": "สะสมแล้ว",
+            "of": "จาก {total}",
+            "franklyn": "Franklyn ปลดล็อก",
+            "craftable": "คราฟต์ได้",
+            "highDamage": "ดาเมจสูง (20 ขึ้นไป)"
+        },
+        "filters": {
+            "license": "ใบอนุญาต",
+            "allLicenses": "ทุกใบอนุญาต",
+            "purchaseType": "ประเภทการซื้อ",
+            "purchasable": "ซื้อได้",
+            "dinks": "Dinks",
+            "permitPoints": "แต้มใบอนุญาต",
+            "damage": "ดาเมจ",
+            "high": "สูง (20 ขึ้นไป)",
+            "medium": "กลาง (10 ถึง 19)",
+            "low": "ต่ำ (ต่ำกว่า 10)",
+            "allDamage": "ทุกระดับดาเมจ",
+            "requirement": "ประเภทเงื่อนไข",
+            "allRequirements": "ทุกประเภทเงื่อนไข",
+            "allPurchaseTypes": "ทั้งหมด"
+        },
+        "card": {
+            "craftingRecipe": "สูตรคราฟต์",
+            "license": "ใบอนุญาต",
+            "licenseLevel": "เลเวลใบอนุญาตล่าสัตว์",
+            "source": "แหล่งที่มา",
+            "damage": "ดาเมจ",
+            "unlocksAfter": "ปลดล็อกหลังจาก",
+            "shinyDiscs": "Shiny Discs {count} ชิ้น",
+            "berkonium": "Berkonium Ore {count} ชิ้น",
+            "ingredients": "วัตถุดิบ",
+            "resources": "ทรัพยากร",
+            "requirement": "เลเวลที่ต้องมี",
+            "compatibleWith": "ใช้ร่วมกับ",
+            "windmill": "กังหันลม",
+            "solarPanel": "แผงโซลาร์เซลล์",
+            "acquiredFrom": "ได้มาจาก",
+            "requirements": "เงื่อนไข",
+            "buyPrice": "ราคาซื้อ",
+            "sellPrice": "ราคาขาย",
+            "dinks": "{amount} Dinks",
+            "permitPoints": "{count, plural, other {{amount} แต้มใบอนุญาต}}",
+            "ingredient": "{count}x {name}",
+            "none": "ไม่มี",
+            "requirementLevel": "เลเวล{type}"
+        }
+    },
+    "recipes": {
+        "title": "สูตร",
+        "subline": "ปลดล็อกแล้ว {count} จาก {total} · {percent}% · {name}",
+        "tabsLabel": "หมวดของสูตร",
+        "tabs": {
+            "cooking": "ทำอาหาร",
+            "crafting": "คราฟต์",
+            "signWriting": "เขียนป้าย"
+        },
+        "things": {
+            "cooking": "สูตรทำอาหาร",
+            "crafting": "สูตรคราฟต์",
+            "signWriting": "สูตรเขียนป้าย"
+        },
+        "tiles": {
+            "unlocked": "ปลดล็อกแล้ว",
+            "of": "จาก {total}",
+            "withBuffs": "มีบัฟ",
+            "vendors": "ขายโดย Sheila, Ted หรือ Jimmy",
+            "recipes": "สูตร"
+        },
+        "filters": {
+            "location": "สถานที่ทำอาหาร",
+            "allLocations": "ทุกสถานที่",
+            "unlocked": "ปลดล็อกแล้ว",
+            "sources": "แหล่งที่มา",
+            "allSources": "ทุกแหล่งที่มา",
+            "buffs": "บัฟ",
+            "buffsWithCount": "บัฟ ({count})"
+        },
+        "buffs": {
+            "title": "กรองตามบัฟ",
+            "match": "ตรงกับ",
+            "any": "อย่างใดอย่างหนึ่ง",
+            "all": "ทั้งหมด",
+            "clear": "ล้างที่เลือก",
+            "selected": "เลือกแล้ว {count}",
+            "done": "เสร็จสิ้น"
+        },
+        "card": {
+            "cookingLocation": "สถานที่ทำอาหาร",
+            "buffs": "บัฟ",
+            "duration": "{minutes, plural, other {{amount} นาที}}",
+            "sellPrice": "ราคาขาย",
+            "sheilas": "ร้าน Sheila",
+            "teds": "ร้าน Ted",
+            "jimmys": "ร้าน Jimmy",
+            "resources": "ทรัพยากร",
+            "option": "ตัวเลือก {n}",
+            "ingredient": "{count}x {name}",
+            "source": "แหล่งที่มา",
+            "unlocked": "ปลดล็อกแล้ว",
+            "varies": "แตกต่างกัน",
+            "output": "x{count}"
+        }
+    },
+    "wardrobe": {
+        "title": "ตู้เสื้อผ้าและบ้าน",
+        "subline": "สะสมแล้ว {count} จาก {total} · {percent}% · {name}",
+        "tabsLabel": "หมวดของตู้เสื้อผ้าและบ้าน",
+        "tabs": {
+            "clothing": "เสื้อผ้า",
+            "furniture": "เฟอร์นิเจอร์",
+            "decorations": "ของตกแต่ง"
+        },
+        "things": {
+            "clothing": "เสื้อผ้า",
+            "furniture": "เฟอร์นิเจอร์",
+            "decorations": "ของตกแต่ง"
+        },
+        "progress": {
+            "clothing": "ความคืบหน้าตามช่อง · เลือกไทล์เพื่อกรอง",
+            "furniture": "ความคืบหน้าตามชุด · เลือกไทล์เพื่อกรอง",
+            "decorations": "ความคืบหน้าตามหมวด · เลือกไทล์เพื่อกรอง"
+        },
+        "filters": {
+            "slot": "ช่อง",
+            "type": "ประเภท",
+            "set": "ชุด",
+            "allSets": "ทุกชุด",
+            "catalogue": "แคตตาล็อก",
+            "melvins": "แคตตาล็อกของ Melvin",
+            "notMelvins": "ไม่อยู่ในแคตตาล็อก",
+            "category": "หมวด",
+            "allCategories": "ทุกหมวด",
+            "source": "แหล่งที่มา",
+            "allSources": "ทุกแหล่งที่มา",
+            "all": "ทั้งหมด"
+        },
+        "list": {
+            "type": "ประเภท",
+            "slot": "ช่อง",
+            "set": "ชุด",
+            "price": "ราคา",
+            "sell": "ขาย",
+            "availableAt": "มีขายที่",
+            "catalogue": "แคตตาล็อก",
+            "category": "หมวด",
+            "source": "แหล่งที่มา",
+            "buy": "ซื้อ"
+        },
+        "card": {
+            "slot": "ช่อง",
+            "set": "ชุด",
+            "price": "ราคา",
+            "sellPrice": "ราคาขาย",
+            "availableAt": "มีขายที่",
+            "cataloguePrice": "ราคาในแคตตาล็อก",
+            "source": "แหล่งที่มา",
+            "buyPrice": "ราคาซื้อ",
+            "category": "หมวด"
+        },
+        "shop": "ร้านของ Clover",
+        "hints": {
+            "slots": "{count, plural, other {ทั้งหมดและอีก {amount} ช่อง}}",
+            "typesForSlot": "{count, plural, other {{amount} ประเภทสำหรับ {slot} รีเซ็ตเป็นทั้งหมดเมื่อเปลี่ยนช่อง}}",
+            "typeNeedsSlot": "เมื่อช่องเป็นทั้งหมด ประเภทจะมีให้เลือกแค่ทั้งหมด เลือกช่องก่อนเพื่อดูประเภทของช่องนั้น",
+            "sets": "{count, plural, other {ทั้งหมดและอีก {amount} ชุด}}",
+            "sources": "ทั้งหมดและทุกแหล่งที่มา",
+            "categories": "{count, plural, other {{amount} หมวด กำหนดจากไทล์ด้านบน}}"
+        }
+    }
+}

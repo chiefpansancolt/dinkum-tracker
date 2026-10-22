@@ -1,0 +1,234 @@
+{
+    "tab": {
+        "title": "云同步",
+        "description": "把你的存档保存在私有 GitHub 仓库中，并在多台设备间共享。"
+    },
+    "unavailable": "此版本不支持同步。",
+    "privacy": "你的数据会存入你自己 GitHub 账号下的私有仓库。Gamerdex 没有存储数据的服务器，应用也只能访问你选择的那一个仓库。",
+    "repository": {
+        "title": "设置你的数据仓库",
+        "body": "你的数据保存在 GitHub 账号下名为 {name} 的私有仓库中。Gamerdex Sync 只能访问这一个仓库。",
+        "checking": "正在查找 {name}",
+        "checkFailed": "无法加载你的仓库。请检查网络连接后重新检查。",
+        "found": "已找到 {fullName}",
+        "public": "仓库 {fullName} 是公开的。请在它的 GitHub 设置中改为私有，然后重新检查。公开仓库无法使用，因为任何人都能读取你的数据。",
+        "missing": "未找到仓库 {name}",
+        "steps": {
+            "create": "创建一个名为 {name} 的私有仓库。勾选“Add a README file”。",
+            "install": "只授予 Gamerdex Sync 访问该仓库的权限。选择“Only select repositories”，然后选择 {name}。",
+            "recheck": "回到这里重新检查。"
+        },
+        "createButton": "创建仓库",
+        "installButton": "在 GitHub 上选择仓库",
+        "recheckButton": "重新检查"
+    },
+    "connected": {
+        "title": "已连接",
+        "repository": "仓库",
+        "lastSync": "上次同步",
+        "never": "尚未同步",
+        "syncNow": "立即同步",
+        "signOut": "退出登录",
+        "signedOut": "已退出登录。此设备上的数据保持不变。",
+        "storage": "存储位置",
+        "folder": "文件夹 {name}",
+        "signInWith": "使用 {provider} 登录"
+    },
+    "status": {
+        "idle": "已同步",
+        "syncing": "正在同步",
+        "offline": "离线",
+        "reauth": "请重新登录",
+        "needsChoice": "需要你做选择",
+        "error": "同步失败",
+        "signedOut": "未登录",
+        "needsRepository": "请选择仓库",
+        "conflicts": "请查看更改"
+    },
+    "error": {
+        "rateLimit": "GitHub 正在限制请求。几分钟后同步会恢复。",
+        "notFound": "未找到该仓库。请重新选择。",
+        "server": "GitHub 没有正确响应。请稍后再试。",
+        "data": "同步的数据无效，所以没有做任何更改。",
+        "busy": "另一台设备在不断修改数据。请稍后再试。",
+        "other": "出了点问题。没有做任何更改。",
+        "reauth": "你的登录已失效。请重新登录以继续同步。",
+        "forbidden": "GitHub 拒绝访问该仓库。请确认 Gamerdex Sync 拥有 Contents 的读写权限，然后再次同步。",
+        "httpStatus": "GitHub 返回了 {status}。",
+        "notFoundFolder": "在 {provider} 中未找到文件或文件夹。请再次同步。",
+        "forbiddenFolder": "{provider} 拒绝访问。请重新登录，并允许访问 Gamerdex 创建的文件。",
+        "httpStatusFolder": "{provider} 返回了 {status}。"
+    },
+    "choice": {
+        "title": "此设备和云端都有数据",
+        "body": "这是此设备的首次同步。请选择处理方式。在你选择之前，云端不会删除任何内容。",
+        "counts": "此设备：{local}。云端：{cloud}。",
+        "merge": "合并两边",
+        "mergeHint": "保留两边的全部内容。等级高的优先。",
+        "keepLocal": "保留此设备",
+        "keepLocalHint": "用此设备上的数据替换云端数据。",
+        "keepCloud": "保留云端",
+        "keepCloudHint": "用云端数据替换此设备上的数据。"
+    },
+    "conflicts": {
+        "title": "无法合并的更改",
+        "body": "两台设备修改了同一个值。已保留云端的值。选择此设备的值可改用它。",
+        "cloudValue": "云端",
+        "deviceValue": "此设备",
+        "keepDevice": "使用此设备的值",
+        "dismiss": "忽略",
+        "empty": "无",
+        "deletedEdited": "一台设备删除了它，另一台设备修改了它。已保留修改后的版本。"
+    },
+    "callback": {
+        "title": "正在登录",
+        "working": "正在完成登录",
+        "back": "返回设置",
+        "denied": "登录已取消。",
+        "state": "无法验证此次登录。请从设置重新开始。",
+        "missing": "此次登录没有返回代码。请从设置重新开始。",
+        "failed": "无法完成登录。请稍后再试。"
+    },
+    "playthroughCount": "{count, plural, other {{amount} 个存档}}",
+    "provider": {
+        "github": {
+            "name": "GitHub",
+            "tile": "一个归你所有、名为 {name} 的私有仓库。",
+            "badge": "适合开发者"
+        },
+        "google": {
+            "name": "Google Drive",
+            "tile": "Drive 中一个可见的 Gamerdex 文件夹。Gamerdex 只能看到它自己创建的文件。",
+            "badge": "推荐"
+        },
+        "dropbox": {
+            "name": "Dropbox",
+            "tile": "Dropbox 的 Apps 文件夹内的一个 Gamerdex 文件夹。Gamerdex 只能看到该文件夹。",
+            "badge": "仅限应用文件夹"
+        },
+        "microsoft": {
+            "name": "OneDrive",
+            "tile": "OneDrive 的 Apps 文件夹内的一个 Gamerdex 文件夹。Gamerdex 只能看到该文件夹。",
+            "badge": "个人账号"
+        }
+    },
+    "connect": {
+        "title": "跨设备同步",
+        "pill": "未连接",
+        "intro": "让你的电脑和手机上的存档保持一致。同步是可选的，且免费。选择副本的存放位置。",
+        "pickerLabel": "副本存放位置",
+        "panelTitle": "连接 {provider}",
+        "another": "登录之前，你可以改选其他服务。",
+        "firstSync": "如果两边都已有数据，首次同步时请选择保留哪一边。在你决定之前，不会替换任何内容。",
+        "google": {
+            "step1": "在此窗口中使用 Google 登录。",
+            "step2": "允许访问 Gamerdex 创建的文件。应用看不到你的其他文件。",
+            "button": "连接 Google Drive"
+        },
+        "github": {
+            "step1": "创建一个名为 {name} 的空私有仓库。勾选“Add a README file”。",
+            "step2": "使用 GitHub 登录，然后只授予 Gamerdex Sync 访问该仓库的权限。",
+            "button": "连接 GitHub"
+        },
+        "dropbox": {
+            "step1": "在此窗口中使用 Dropbox 登录。",
+            "step2": "允许访问 Gamerdex 应用文件夹。应用看不到你的其他文件。",
+            "button": "连接 Dropbox"
+        },
+        "microsoft": {
+            "step1": "在此窗口中使用你的个人 Microsoft 账号登录。",
+            "step2": "允许访问 Gamerdex 应用文件夹。应用看不到你的其他文件。",
+            "button": "连接 OneDrive"
+        }
+    },
+    "how": {
+        "title": "同步如何运作",
+        "one": "你的存档会以一个文件的形式保存在你自己的存储中，格式与备份文件相同，另有一个记录设备列表的小文件。",
+        "two": "Gamerdex 没有存储你数据的服务器。你的浏览器直接与你的存储通信。",
+        "three": "已标记的物品和等级会保留任一设备的修改，等级高的优先。如果两台设备都修改了名称或当前日期，由你选择保留哪一个。",
+        "four": "每台设备各自保留自己的当前存档。同步不会切换它。",
+        "five": "你可以随时断开连接。你的存档会保留在每台设备上。"
+    },
+    "banner": {
+        "title": "{count, plural, other {{amount} 项更改需要你决定}}",
+        "body": "两台设备修改了同一个值。在你决定之前，会保留云端的值。",
+        "review": "查看",
+        "waiting": "首次同步正在等待你的选择。",
+        "choose": "选择"
+    },
+    "playthroughs": {
+        "title": "存档",
+        "thisDevice": "此设备",
+        "cloud": "云端，上次同步",
+        "notInCloud": "尚未上传到云端",
+        "review": "查看",
+        "note": "删除存档后，下次同步时它会从同步文件中移除。",
+        "status": {
+            "synced": "已同步",
+            "changedHere": "此处已更改",
+            "conflict": "冲突",
+            "newHere": "此处新增"
+        },
+        "describe": "{season}第 {day} 天 · {percent}%"
+    },
+    "activity": {
+        "title": "最近的同步记录",
+        "empty": "还没有同步过。",
+        "connected": "已在此浏览器上连接 {provider}。",
+        "uploaded": "已上传此设备的更改。",
+        "downloaded": "已下载云端的更改。",
+        "merged": "已合并两边的更改。",
+        "conflicts": "{count, plural, other {{amount} 项更改需要你决定。}}",
+        "failed": "同步失败。"
+    },
+    "settings": {
+        "title": "同步设置",
+        "auto": "自动同步",
+        "autoHint": "在追踪器打开时同步，并在每次更改几秒后同步。",
+        "focus": "返回标签页时检查更改",
+        "focusHint": "切换回追踪器时，拉取云端的较新数据。",
+        "metered": "按流量计费的连接下先等我确认",
+        "meteredHint": "当浏览器报告处于省流量连接时，跳过自动同步。“立即同步”仍可使用。"
+    },
+    "lives": {
+        "title": "你的数据存放位置",
+        "storage": "存储",
+        "folder": "文件夹",
+        "dataFile": "数据文件",
+        "metaFile": "元数据文件",
+        "size": "大小",
+        "kb": "{amount} KB",
+        "note": "数据文件的格式与备份文件相同。元数据文件保存设备列表，不含游戏数据。你的登录信息不会出现在任何一个文件中。",
+        "googleNote": "Gamerdex 文件夹在你的 Drive 中可见。Gamerdex 只能打开它自己创建的文件。",
+        "githubNote": "请保持仓库为私有。任何能打开它的人都能读取你的数据。",
+        "dropboxNote": "Gamerdex 文件夹位于你的 Dropbox 的 Apps 文件夹内。Gamerdex 只能打开该文件夹。",
+        "microsoftNote": "Gamerdex 文件夹位于你的 OneDrive 的 Apps 文件夹内。Gamerdex 只能打开该文件夹。"
+    },
+    "device": {
+        "title": "此设备",
+        "name": "设备名称",
+        "nameHint": "同步文件会用此名称显示这台设备。重命名后，下次同步时会更新元数据文件。",
+        "activePlaythrough": "当前存档",
+        "noPlaythrough": "无",
+        "login": "同步登录",
+        "loginValue": "仅在此设备上",
+        "loginHint": "当前存档由每台设备各自选择，同步不会更改它。你的登录信息只保留在此设备上，不会出现在已保存的数据、备份文件或同步文件中。"
+    },
+    "disconnect": {
+        "title": "断开连接",
+        "body": "停止在此浏览器上同步。你的存档会保留在此设备和云端。其他设备继续同步。",
+        "button": "断开 {provider}",
+        "googleHint": "如需自行删除云端副本，请先断开连接，再删除你 Google Drive 中的 Gamerdex 文件夹。",
+        "githubHint": "如需自行删除云端副本，请先断开连接，再删除你仓库中的 Gamerdex 文件夹。",
+        "dropboxHint": "如需自行删除云端副本，请先断开连接，再删除你 Dropbox 中 Apps 下的应用文件夹。",
+        "microsoftHint": "如需自行删除云端副本，请先断开连接，再删除你 OneDrive 中 Apps 下的应用文件夹。"
+    },
+    "first": {
+        "thisDevice": "此设备",
+        "cloud": "云端",
+        "recommended": "推荐",
+        "later": "稍后决定",
+        "apply": "应用选择",
+        "optionsLabel": "保留什么"
+    }
+}

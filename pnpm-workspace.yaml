@@ -1,7 +1,10 @@
 allowBuilds:
+  "@parcel/watcher": false
+  "@swc/core": false
   unrs-resolver: false
 autoInstallPeers: false
 minimumReleaseAgeExclude:
   - dinkum-data@1.0.3
+  - "@gamerdexapp/gamerdex-sync@0.5.0"
 overrides:
   deepmerge-ts: ^8.0.0

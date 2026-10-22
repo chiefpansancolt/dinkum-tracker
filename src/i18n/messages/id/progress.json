@@ -1,0 +1,123 @@
+{
+    "common": {
+        "level": "Level {level}",
+        "levelCount": "Level {level}:",
+        "locked": "Selesaikan level sebelumnya dulu.",
+        "completeAll": "Selesaikan Semua",
+        "clearAll": "Hapus Semua",
+        "requirement": "Syarat",
+        "requiredSkill": "Level keterampilan yang diperlukan",
+        "all": "Semua",
+        "collected": "Terkumpul",
+        "notCollected": "Belum dikumpulkan",
+        "clearFilters": "Hapus filter",
+        "toast": {
+            "obtained": "{item}: level {level} didapat",
+            "cleared": "{item}: {count, plural, other {{amount} level}} dihapus",
+            "allObtained": "{item}: semua level didapat",
+            "allCleared": "{item}: semua level dihapus"
+        },
+        "empty": {
+            "title": "Tidak ada {things} yang cocok dengan filter ini",
+            "description": "Coba nama lain atau hapus filter."
+        },
+        "permitPoints": "poin izin"
+    },
+    "buildings": {
+        "title": "Bangunan",
+        "subline": "{count} dari {total} terpasang · {percent}% · {name}",
+        "tiles": {
+            "installed": "Terpasang",
+            "stillToInstall": "Belum dipasang",
+            "listed": "Bangunan terdaftar",
+            "of": "dari {total}",
+            "breakdown": "{collectable} bisa dikoleksi · {movable} bisa dipindah · {reference} referensi"
+        },
+        "filters": {
+            "deedType": "Jenis akta",
+            "npc": "NPC",
+            "collected": "Terkumpul",
+            "search": "Cari bangunan menurut nama...",
+            "sheetTitle": "Filter bangunan",
+            "showing": "Menampilkan {shown} dari {total} bangunan · Terpasang {count}",
+            "apply": "Tampilkan {count} bangunan"
+        },
+        "card": {
+            "deed": "Akta",
+            "npc": "NPC",
+            "size": "Ukuran",
+            "buildTime": "Waktu bangun",
+            "deedPrice": "Harga akta",
+            "hours": "Jam",
+            "closed": "Tutup",
+            "description": "Deskripsi",
+            "resources": "Sumber daya",
+            "resource": "{count} {name}"
+        },
+        "installed": "Terpasang",
+        "nothingToInstall": "Tidak ada yang perlu dipasang untuk jenis akta ini.",
+        "things": "bangunan",
+        "toast": {
+            "installed": "{name} ditandai terpasang",
+            "notInstalled": "{name} ditandai belum terpasang"
+        }
+    },
+    "licenses": {
+        "title": "Lisensi",
+        "subline": "{count} dari {total} level didapat · {percent}% · {name}",
+        "tiles": {
+            "levels": "Level didapat",
+            "complete": "Lisensi selesai",
+            "permit": "Poin izin terpakai",
+            "of": "dari {total}",
+            "sentence": "Kamu sudah memakai {amount} dari {total} poin izin yang dibutuhkan."
+        },
+        "filters": {
+            "category": "Kategori",
+            "collected": "Terkumpul",
+            "search": "Cari lisensi menurut nama...",
+            "sheetTitle": "Filter lisensi",
+            "showing": "Menampilkan {shown} dari {total} lisensi · Level terbuka {count}",
+            "apply": "Tampilkan {count} lisensi"
+        },
+        "things": "lisensi"
+    },
+    "milestones": {
+        "title": "Pencapaian",
+        "subline": "{count} dari {total} level selesai · {percent}% · {name}",
+        "tiles": {
+            "levels": "Level selesai",
+            "complete": "Pencapaian selesai",
+            "permit": "Poin izin diperoleh",
+            "of": "dari {total}",
+            "sentence": "Kamu sudah memperoleh {amount} dari {total} poin izin yang tersedia."
+        },
+        "filters": {
+            "category": "Kategori",
+            "allCategories": "Semua kategori",
+            "collected": "Terkumpul",
+            "viewMode": "Mode tampilan",
+            "grouped": "Dikelompokkan menurut huruf",
+            "all": "Semua pencapaian",
+            "search": "Cari pencapaian menurut nama atau deskripsi...",
+            "sheetTitle": "Filter pencapaian",
+            "showing": "Menampilkan {shown} dari {total} pencapaian · Level selesai {count}",
+            "apply": "Tampilkan {count} pencapaian"
+        },
+        "things": "pencapaian"
+    },
+    "skills": {
+        "title": "Keterampilan",
+        "subline": "{skills} keterampilan · {levels} level total · Tanpa batas atas · {name}",
+        "tiles": {
+            "total": "Total level keterampilan",
+            "across": "dari {count} keterampilan",
+            "highest": "Keterampilan tertinggi",
+            "atZero": "Keterampilan di level 0",
+            "atZeroOf": "dari {total}"
+        },
+        "level": "Level keterampilan",
+        "note": "Lisensi meminta level keterampilan di setiap tingkat. Lihat <link>Lisensi</link> untuk tahu level mana yang masih kamu butuhkan.",
+        "toast": "{name} sekarang level {level}"
+    }
+}

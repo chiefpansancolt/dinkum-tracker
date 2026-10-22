@@ -1,0 +1,124 @@
+{
+    "title": "مسارات اللعب",
+    "subline": "إدارة مغامرات Dinkum. {count, plural, zero {{amount} مسارات لعب} one {{amount} مسار لعب} two {مساران للعب} few {{amount} مسارات لعب} many {{amount} مسار لعب} other {{amount} مسار لعب}}، والمسار النشط هو {name}.",
+    "sublineNoneActive": "إدارة مغامرات Dinkum. {count, plural, zero {{amount} مسارات لعب} one {{amount} مسار لعب} two {مساران للعب} few {{amount} مسارات لعب} many {{amount} مسار لعب} other {{amount} مسار لعب}}.",
+    "sublineEmpty": "لا توجد مسارات لعب بعد.",
+    "loading": "جارٍ تحميل مسارات اللعب...",
+    "stats": {
+        "playthroughs": "مسارات اللعب",
+        "playthroughsCaption": "في هذا المتصفح",
+        "active": "النشط",
+        "noneActive": "لا يوجد",
+        "furthest": "الأكثر تقدمًا",
+        "average": "متوسط الإنجاز",
+        "averageCaption": "عبر الكل"
+    },
+    "filters": {
+        "sortBy": "الترتيب حسب",
+        "sort": {
+            "lastUpdated": "آخر تحديث",
+            "name": "الاسم",
+            "createdAt": "تاريخ الإنشاء",
+            "completion": "نسبة الإنجاز"
+        },
+        "search": "البحث في مسارات اللعب بالاسم",
+        "showing": "عرض {shown} من {total} {total, plural, zero {مسارات لعب} one {مسار لعب} two {مساري لعب} few {مسارات لعب} many {مسار لعب} other {مسار لعب}}",
+        "defaultSortFrom": "الترتيب الافتراضي من <link>الإعدادات</link>"
+    },
+    "noMatch": {
+        "title": "لا توجد مسارات لعب تطابق \"{query}\"",
+        "description": "يمكن تجربة اسم آخر.",
+        "clear": "مسح البحث"
+    },
+    "empty": {
+        "title": "لم يُعثر على مسارات لعب",
+        "description": "لم يتم إنشاء أي مسار لعب بعد. يمكن بدء تتبع مغامرة Dinkum بإنشاء أول مسار لعب. يُحفظ كل مسار في هذا المتصفح.",
+        "create": "إنشاء أول مسار لعب",
+        "importBackup": "استيراد نسخة احتياطية بدلًا من ذلك"
+    },
+    "card": {
+        "created": "تاريخ الإنشاء: {date}",
+        "updated": "آخر تحديث: {when}",
+        "complete": "اكتمل {percent}%",
+        "overall": "التقدم الكلي",
+        "pedia": "Pedia",
+        "licenses": "التراخيص",
+        "milestones": "الإنجازات",
+        "buildings": "المباني",
+        "pediaDetail": "الأسماك {fish} · الحشرات {bugs} · المخلوقات الصغيرة {critters}",
+        "count": "{count}/{total}",
+        "gameDate": "اليوم {day}، {season}",
+        "currentGameDate": "تاريخ اللعبة الحالي",
+        "setActive": "تعيين كمسار نشط",
+        "active": "نشط",
+        "openOverview": "فتح نظرة عامة",
+        "edit": "تعديل",
+        "delete": "حذف",
+        "activePlaythrough": "مسار اللعب النشط"
+    },
+    "seasons": {
+        "Spring": "الربيع",
+        "Summer": "الصيف",
+        "Autumn": "الخريف",
+        "Winter": "الشتاء"
+    },
+    "relative": {
+        "today": "اليوم",
+        "yesterday": "أمس",
+        "daysAgo": "{count, plural, zero {قبل {amount} أيام} one {قبل {amount} يوم} two {قبل يومين} few {قبل {amount} أيام} many {قبل {amount} يومًا} other {قبل {amount} يوم}}",
+        "weeksAgo": "{count, plural, zero {قبل {amount} أسابيع} one {قبل {amount} أسبوع} two {قبل أسبوعين} few {قبل {amount} أسابيع} many {قبل {amount} أسبوعًا} other {قبل {amount} أسبوع}}",
+        "monthsAgo": "{count, plural, zero {قبل {amount} أشهر} one {قبل {amount} شهر} two {قبل شهرين} few {قبل {amount} أشهر} many {قبل {amount} شهرًا} other {قبل {amount} شهر}}",
+        "unknown": "غير متاح"
+    },
+    "new": {
+        "action": "مسار لعب جديد",
+        "actionShort": "جديد",
+        "pageTitle": "مسار لعب جديد",
+        "pageSubline": "يكفي اختيار اسم ثم بدء التتبع. كل شيء يُحفظ في هذا المتصفح.",
+        "back": "العودة إلى كل مسارات اللعب",
+        "next": {
+            "title": "ما يحدث بعد ذلك",
+            "one": "يُحفظ مسار لعب فارغ في هذا المتصفح فورًا.",
+            "two": "يصبح المسار النشط إذا كان المربع محددًا. يعرضه مبدّل الشريط الجانبي.",
+            "three": "يتم الانتقال إلى قائمة مسارات اللعب مع البطاقة الجديدة في الأعلى وإشعار للتراجع."
+        },
+        "createdToast": "تم إنشاء {name}"
+    },
+    "form": {
+        "title": "إنشاء مسار لعب جديد",
+        "nameLabel": "اسم مسار اللعب",
+        "required": "مطلوب",
+        "placeholder": "مغامرتي في Dinkum",
+        "help": "اسم لا يُنسى يسهّل التعرف على مسار اللعب لاحقًا.",
+        "counter": "{count} / {max}",
+        "errorEmpty": "يرجى إدخال اسم لمسار اللعب",
+        "makeActive": "جعله مسار اللعب النشط",
+        "create": "إنشاء مسار اللعب",
+        "creating": "جارٍ الإنشاء...",
+        "cancel": "إلغاء",
+        "failed": "تعذر إنشاء مسار اللعب. يرجى المحاولة مرة أخرى.",
+        "tryAgain": "إعادة المحاولة"
+    },
+    "edit": {
+        "title": "تعديل مسار اللعب",
+        "save": "حفظ",
+        "saving": "جارٍ الحفظ...",
+        "savedToast": "تم الحفظ",
+        "renamed": "تمت إعادة التسمية إلى {name}",
+        "description": "{name} · تاريخ الإنشاء {date}",
+        "nameLabel": "اسم مسار اللعب",
+        "help": "الضغط على Enter يحفظ. يبقى الحفظ معطلًا ما دام الاسم فارغًا."
+    },
+    "delete": {
+        "title": "حذف {name}؟",
+        "description": "سيؤدي هذا إلى إزالة كل تقدمه المحفوظ على هذا الجهاز.",
+        "activeNext": "هذا هو مسار اللعب النشط. {next} هو الأحدث تحديثًا، لذلك يصبح نشطًا بعد الحذف.",
+        "activeLast": "هذا هو مسار اللعب النشط والوحيد. لن يكون أي مسار نشطًا بعد الحذف.",
+        "exportFirst": "تصدير نسخة احتياطية أولًا",
+        "confirm": "حذف",
+        "cancel": "إلغاء",
+        "toast": "تم حذف {name}",
+        "toastMessage": "التراجع متاح لمدة 10 ثوانٍ",
+        "updated": "آخر تحديث {when} · {date}"
+    }
+}

@@ -1,0 +1,116 @@
+{
+    "title": "ภาพรวม",
+    "subline": "{done} จาก {total} รายการ · {percent}% · {name}",
+    "view": "ดู",
+    "headline": {
+        "label": "ความสมบูรณ์โดยรวม",
+        "ofItems": "{done} จาก {total} รายการ",
+        "groups": {
+            "track": "ติดตาม",
+            "progress": "ความคืบหน้า",
+            "collect": "สะสม"
+        },
+        "groupOf": "{done} จาก {total}",
+        "note": "ตัวหารคงที่ {total} รายการ: Pedia {pedia}, NPC {npcs}, หมุดหมาย {milestones}, ใบอนุญาต {licenses}, ทักษะ {skills}, อาคาร {buildings}, อุปกรณ์ {gear}, ตู้เสื้อผ้าและบ้าน {wardrobe}, สูตร {recipes} ทุกหมวดนับตั้งแต่วันแรก เปอร์เซ็นต์จึงไม่กระโดดเมื่อคุณเปิดแท็บใหม่"
+    },
+    "skills": {
+        "title": "ทักษะตัวละคร",
+        "level": "เลเวล {level}",
+        "empty": "ยังไม่มีทักษะที่บันทึกไว้"
+    },
+    "licenses": {
+        "title": "ความคืบหน้าใบอนุญาต",
+        "obtained": "ใบอนุญาตที่ได้รับ",
+        "complete": "สมบูรณ์ {count}/{total}",
+        "levels": "เลเวลใบอนุญาต",
+        "levelsValue": "{count}/{total} · {percent}%",
+        "permit": "แต้มใบอนุญาตที่ใช้ไป",
+        "spent": "ใช้ไป {percent}%"
+    },
+    "milestones": {
+        "title": "ความคืบหน้าหมุดหมาย",
+        "overall": "ความคืบหน้าโดยรวม",
+        "complete": "สมบูรณ์ {count}/{total}",
+        "levels": "เลเวล",
+        "levelsValue": "{count}/{total} · {percent}%",
+        "permit": "แต้มใบอนุญาตที่ได้รับ",
+        "earned": "ได้รับ {percent}%"
+    },
+    "pedia": {
+        "title": "ความคืบหน้า Pedia",
+        "overall": "ความคืบหน้าโดยรวม ({count}/{total})",
+        "donations": "บริจาคให้พิพิธภัณฑ์ ({count}/{total})",
+        "fish": "ปลา ({count}/{total})",
+        "bugs": "แมลง ({count}/{total})",
+        "critters": "สัตว์เล็ก ({count}/{total})",
+        "donated": "บริจาคแล้ว ({count}/{total})",
+        "permit": "แต้มใบอนุญาตที่ได้รับ",
+        "earned": "ได้รับ {percent}%"
+    },
+    "gear": {
+        "title": "อุปกรณ์และอุปกรณ์เสริม",
+        "overall": "ความคืบหน้าโดยรวม ({count}/{total})",
+        "books": "หนังสือ ({count}/{total})",
+        "tools": "เครื่องมือ ({count}/{total})",
+        "weapons": "อาวุธ ({count}/{total})",
+        "equipment": "อุปกรณ์เสริม ({count}/{total})",
+        "vehicles": "ยานพาหนะ ({count}/{total})",
+        "cassettes": "เทปคาสเซ็ต ({count}/{total})",
+        "names": {
+            "books": "หนังสือ",
+            "tools": "เครื่องมือ",
+            "weapons": "อาวุธ",
+            "equipment": "อุปกรณ์เสริม",
+            "vehicles": "ยานพาหนะ",
+            "cassettes": "เทปคาสเซ็ต"
+        },
+        "mostComplete": "ครบมากที่สุด",
+        "leastComplete": "ครบน้อยที่สุด"
+    },
+    "buildings": {
+        "title": "ความคืบหน้าอาคาร",
+        "overall": "ความคืบหน้าโดยรวม",
+        "complete": "สมบูรณ์ {count}/{total}",
+        "houseUpgrades": "อัปเกรดบ้าน",
+        "shops": "ร้านค้า",
+        "town": "อาคารในเมือง",
+        "utility": "อาคารสาธารณูปโภค",
+        "mostExpensive": "อาคารที่แพงที่สุด",
+        "price": "{amount} Dinks"
+    },
+    "recipes": {
+        "title": "สูตรที่สะสม",
+        "overall": "ความคืบหน้าโดยรวม ({count}/{total})",
+        "cooking": "ทำอาหาร ({count}/{total})",
+        "crafting": "คราฟต์ ({count}/{total})",
+        "signWriting": "เขียนป้าย ({count}/{total})",
+        "names": {
+            "cooking": "ทำอาหาร",
+            "crafting": "คราฟต์",
+            "signWriting": "เขียนป้าย"
+        },
+        "mostComplete": "ครบมากที่สุด",
+        "leastComplete": "ครบน้อยที่สุด"
+    },
+    "npcs": {
+        "title": "ความสัมพันธ์กับ NPC",
+        "total": "NPC ทั้งหมด",
+        "friends": "เพื่อน",
+        "oneHeart": "1 หัวใจขึ้นไป",
+        "maxHearts": "หัวใจเต็ม",
+        "avgHearts": "หัวใจเฉลี่ย",
+        "top": "ความสัมพันธ์สูงสุด",
+        "hearts": "{hearts, plural, other {{amount} หัวใจ}}",
+        "empty": "ยังไม่มี NPC ที่บันทึกไว้"
+    },
+    "game": {
+        "title": "ข้อมูลเกม",
+        "calendar": "ปฏิทินในเกม",
+        "date": "วันที่ {day}, {season}",
+        "tracking": "การติดตามในโลกจริง",
+        "daysSince": "ผ่านมาแล้ว {days} วันนับจากสร้าง",
+        "lastUpdated": "อัปเดตล่าสุด: {date}",
+        "milestones": "หมุดหมาย",
+        "completed": "สำเร็จแล้ว {count}"
+    }
+}

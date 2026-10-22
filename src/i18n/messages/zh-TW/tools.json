@@ -1,0 +1,70 @@
+{
+    "breakdown": {
+        "title": "物品分析",
+        "subline": "哪些資源用在哪些物品上 · {count} 種資源",
+        "tiles": {
+            "resources": "資源",
+            "resourcesCaption": "用於配方與建造",
+            "common": "常見，用於 3 項以上物品",
+            "of": "共 {total}",
+            "mostUsed": "最常使用",
+            "items": "{count, plural, other {{amount} 項物品}}"
+        },
+        "search": "搜尋",
+        "searchPlaceholder": "依名稱搜尋資源",
+        "sortBy": "排序方式",
+        "sortName": "名稱（A-Z）",
+        "sortUsage": "使用次數",
+        "filter": "篩選",
+        "filterWithCount": "篩選（{count}）",
+        "commonOnly": "僅顯示常見資源（用於 3 項以上物品）",
+        "showing": "顯示 {shown} / {total} 種資源",
+        "notes": {
+            "categories": "（已依 {count, plural, other {{amount} 個類別}}篩選）",
+            "types": "（已依 {count, plural, other {{amount} 種類型}}篩選）",
+            "common": "（僅常見資源）"
+        },
+        "panel": {
+            "title": "篩選資源",
+            "byCategory": "依類別篩選",
+            "byType": "依資源類型篩選",
+            "clear": "清除選擇",
+            "itemCount": "{count, plural, other {{amount} 項物品}}",
+            "done": "顯示 {count} 種資源",
+            "option": "{name}，{items}"
+        },
+        "card": {
+            "usedIn": "{count, plural, other {用於 {amount} 項物品}}",
+            "categories": "類別",
+            "usedInList": "用於",
+            "showMore": "再顯示 {count} 項...",
+            "showLess": "顯示較少"
+        },
+        "empty": {
+            "title": "沒有符合篩選條件的資源",
+            "description": "試試其他名稱，或清除選擇。",
+            "clear": "清除選擇"
+        }
+    },
+    "weight": {
+        "title": "重量計算機",
+        "subline": "依重量計算大型獵物的價格 · {count} 項物品",
+        "picker": "選擇物品",
+        "perKg": "每公斤 {price}",
+        "range": "{min} - {max} kg",
+        "rangeLine": "重量範圍：{min}kg - {max}kg",
+        "weight": "重量：{weight} kg",
+        "slider": "重量（kg）",
+        "minus": "重量減少 {step} kg",
+        "plus": "重量增加 {step} kg",
+        "min": "{min}kg",
+        "max": "{max}kg",
+        "stepNote": "每次調整 {step} kg。選擇其他物品時，重量會重設為最小值。",
+        "total": "總價",
+        "dinks": "dinks",
+        "formula": "{weight} kg × 每公斤 {price} = {total}",
+        "rounded": "四捨五入至最接近的 dink。",
+        "atMin": "最小重量的價格",
+        "atMax": "最大重量的價格"
+    }
+}

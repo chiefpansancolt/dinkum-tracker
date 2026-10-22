@@ -1,0 +1,124 @@
+{
+    "title": "Lượt chơi",
+    "subline": "Quản lý các cuộc phiêu lưu Dinkum của bạn. {count, plural, other {{amount} lượt chơi}}, {name} đang dùng.",
+    "sublineNoneActive": "Quản lý các cuộc phiêu lưu Dinkum của bạn. {count, plural, other {{amount} lượt chơi}}.",
+    "sublineEmpty": "Chưa có lượt chơi nào.",
+    "loading": "Đang tải lượt chơi...",
+    "stats": {
+        "playthroughs": "Lượt chơi",
+        "playthroughsCaption": "trong trình duyệt này",
+        "active": "Đang dùng",
+        "noneActive": "Không có",
+        "furthest": "Tiến xa nhất",
+        "average": "Mức hoàn thành trung bình",
+        "averageCaption": "trên tất cả"
+    },
+    "filters": {
+        "sortBy": "Sắp xếp theo",
+        "sort": {
+            "lastUpdated": "Cập nhật gần nhất",
+            "name": "Tên",
+            "createdAt": "Ngày tạo",
+            "completion": "Phần trăm hoàn thành"
+        },
+        "search": "Tìm lượt chơi theo tên",
+        "showing": "Hiển thị {shown} trên {total} {total, plural, other {lượt chơi}}",
+        "defaultSortFrom": "Cách sắp xếp mặc định lấy từ <link>Cài đặt</link>"
+    },
+    "noMatch": {
+        "title": "Không có lượt chơi nào khớp \"{query}\"",
+        "description": "Hãy thử tên khác.",
+        "clear": "Xóa tìm kiếm"
+    },
+    "empty": {
+        "title": "Không tìm thấy lượt chơi",
+        "description": "Bạn chưa tạo lượt chơi nào. Hãy bắt đầu theo dõi cuộc phiêu lưu Dinkum bằng cách tạo lượt chơi đầu tiên. Mỗi lượt chơi được lưu trong trình duyệt này.",
+        "create": "Tạo lượt chơi đầu tiên",
+        "importBackup": "Nhập bản sao lưu thay thế"
+    },
+    "card": {
+        "created": "Đã tạo: {date}",
+        "updated": "Cập nhật: {when}",
+        "complete": "Hoàn thành {percent}%",
+        "overall": "Tiến trình chung",
+        "pedia": "Pedia",
+        "licenses": "Giấy phép",
+        "milestones": "Cột mốc",
+        "buildings": "Công trình",
+        "pediaDetail": "Cá {fish} · Côn trùng {bugs} · Sinh vật nhỏ {critters}",
+        "count": "{count}/{total}",
+        "gameDate": "Ngày {day}, {season}",
+        "currentGameDate": "Ngày hiện tại trong game",
+        "setActive": "Đặt làm đang dùng",
+        "active": "Đang dùng",
+        "openOverview": "Mở tổng quan",
+        "edit": "Sửa",
+        "delete": "Xóa",
+        "activePlaythrough": "Lượt chơi đang dùng"
+    },
+    "seasons": {
+        "Spring": "Xuân",
+        "Summer": "Hạ",
+        "Autumn": "Thu",
+        "Winter": "Đông"
+    },
+    "relative": {
+        "today": "Hôm nay",
+        "yesterday": "Hôm qua",
+        "daysAgo": "{count, plural, other {{amount} ngày trước}}",
+        "weeksAgo": "{count, plural, other {{amount} tuần trước}}",
+        "monthsAgo": "{count, plural, other {{amount} tháng trước}}",
+        "unknown": "Không có"
+    },
+    "new": {
+        "action": "Lượt chơi mới",
+        "actionShort": "Mới",
+        "pageTitle": "Lượt chơi mới",
+        "pageSubline": "Đặt tên và bắt đầu theo dõi. Mọi thứ được lưu trong trình duyệt này.",
+        "back": "Quay lại tất cả lượt chơi",
+        "next": {
+            "title": "Điều gì xảy ra tiếp theo",
+            "one": "Một lượt chơi trống được lưu ngay trong trình duyệt này.",
+            "two": "Nó trở thành lượt chơi đang dùng nếu bạn đã chọn ô đó. Bộ chuyển ở thanh bên sẽ hiển thị nó.",
+            "three": "Bạn quay về danh sách Lượt chơi, thẻ mới ở trên cùng kèm thông báo Hoàn tác."
+        },
+        "createdToast": "Đã tạo {name}"
+    },
+    "form": {
+        "title": "Tạo lượt chơi mới",
+        "nameLabel": "Tên lượt chơi",
+        "required": "Bắt buộc",
+        "placeholder": "Cuộc phiêu lưu Dinkum của tôi",
+        "help": "Hãy đặt cho lượt chơi một cái tên dễ nhớ để nhận ra nó sau này.",
+        "counter": "{count} / {max}",
+        "errorEmpty": "Vui lòng nhập tên cho lượt chơi của bạn",
+        "makeActive": "Đặt làm lượt chơi đang dùng",
+        "create": "Tạo lượt chơi",
+        "creating": "Đang tạo...",
+        "cancel": "Hủy",
+        "failed": "Không tạo được lượt chơi. Vui lòng thử lại.",
+        "tryAgain": "Thử lại"
+    },
+    "edit": {
+        "title": "Sửa lượt chơi",
+        "save": "Lưu",
+        "saving": "Đang lưu...",
+        "savedToast": "Đã lưu",
+        "renamed": "Đã đổi tên thành {name}",
+        "description": "{name} · tạo ngày {date}",
+        "nameLabel": "Tên lượt chơi",
+        "help": "Nhấn Enter để lưu. Nút Lưu bị tắt khi tên còn trống."
+    },
+    "delete": {
+        "title": "Xóa {name}?",
+        "description": "Thao tác này xóa toàn bộ tiến trình đã lưu của nó trên thiết bị này.",
+        "activeNext": "Đây là lượt chơi đang dùng của bạn. {next} được cập nhật gần nhất, nên nó sẽ thành lượt chơi đang dùng sau khi xóa.",
+        "activeLast": "Đây là lượt chơi đang dùng và là lượt chơi duy nhất của bạn. Sau khi xóa sẽ không còn lượt chơi nào đang dùng.",
+        "exportFirst": "Xuất bản sao lưu trước",
+        "confirm": "Xóa",
+        "cancel": "Hủy",
+        "toast": "Đã xóa {name}",
+        "toastMessage": "Có thể hoàn tác trong 10 giây",
+        "updated": "Cập nhật {when} · {date}"
+    }
+}

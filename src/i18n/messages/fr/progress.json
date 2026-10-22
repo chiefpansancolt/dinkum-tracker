@@ -1,0 +1,123 @@
+{
+    "common": {
+        "level": "Niveau {level}",
+        "levelCount": "Niveau {level} :",
+        "locked": "Terminez d’abord le niveau précédent.",
+        "completeAll": "Tout terminer",
+        "clearAll": "Tout effacer",
+        "requirement": "Condition",
+        "requiredSkill": "Niveau de compétence requis",
+        "all": "Tous",
+        "collected": "Collecté",
+        "notCollected": "À collecter",
+        "clearFilters": "Effacer les filtres",
+        "toast": {
+            "obtained": "{item} : niveau {level} obtenu",
+            "cleared": "{item} : {count, plural, one {{amount} niveau effacé} other {{amount} niveaux effacés}}",
+            "allObtained": "{item} : tous les niveaux obtenus",
+            "allCleared": "{item} : tous les niveaux effacés"
+        },
+        "empty": {
+            "title": "Rien dans {things} ne correspond à ces filtres",
+            "description": "Essayez un autre nom ou effacez les filtres."
+        },
+        "permitPoints": "points de permis"
+    },
+    "buildings": {
+        "title": "Bâtiments",
+        "subline": "{count} sur {total} installés · {percent} % · {name}",
+        "tiles": {
+            "installed": "Installés",
+            "stillToInstall": "Restant à installer",
+            "listed": "Bâtiments répertoriés",
+            "of": "sur {total}",
+            "breakdown": "{collectable} collectables · {movable} déplaçables · {reference} de référence"
+        },
+        "filters": {
+            "deedType": "Type de titre",
+            "npc": "PNJ",
+            "collected": "Collecté",
+            "search": "Rechercher un bâtiment par nom...",
+            "sheetTitle": "Filtrer les bâtiments",
+            "showing": "Affichage de {shown} sur {total} bâtiments · Installés {count}",
+            "apply": "Afficher {count} bâtiments"
+        },
+        "card": {
+            "deed": "Titre",
+            "npc": "PNJ",
+            "size": "Taille",
+            "buildTime": "Temps de construction",
+            "deedPrice": "Prix du titre",
+            "hours": "Heures",
+            "closed": "Fermé",
+            "description": "Description",
+            "resources": "Ressources",
+            "resource": "{count} {name}"
+        },
+        "installed": "Installé",
+        "nothingToInstall": "Rien à installer pour ce type de titre.",
+        "things": "bâtiments",
+        "toast": {
+            "installed": "{name} marqué comme installé",
+            "notInstalled": "{name} marqué comme non installé"
+        }
+    },
+    "licenses": {
+        "title": "Licences",
+        "subline": "{count} sur {total} niveaux obtenus · {percent} % · {name}",
+        "tiles": {
+            "levels": "Niveaux obtenus",
+            "complete": "Licences terminées",
+            "permit": "Points de permis dépensés",
+            "of": "sur {total}",
+            "sentence": "Vous avez dépensé {amount} des {total} points de permis nécessaires."
+        },
+        "filters": {
+            "category": "Catégorie",
+            "collected": "Collecté",
+            "search": "Rechercher une licence par nom...",
+            "sheetTitle": "Filtrer les licences",
+            "showing": "Affichage de {shown} sur {total} licences · Niveaux débloqués {count}",
+            "apply": "Afficher {count} licences"
+        },
+        "things": "licences"
+    },
+    "milestones": {
+        "title": "Jalons",
+        "subline": "{count} sur {total} niveaux terminés · {percent} % · {name}",
+        "tiles": {
+            "levels": "Niveaux terminés",
+            "complete": "Jalons terminés",
+            "permit": "Points de permis gagnés",
+            "of": "sur {total}",
+            "sentence": "Vous avez gagné {amount} des {total} points de permis disponibles."
+        },
+        "filters": {
+            "category": "Catégorie",
+            "allCategories": "Toutes les catégories",
+            "collected": "Collecté",
+            "viewMode": "Mode d’affichage",
+            "grouped": "Groupés par lettre",
+            "all": "Tous les jalons",
+            "search": "Rechercher un jalon par nom ou description...",
+            "sheetTitle": "Filtrer les jalons",
+            "showing": "Affichage de {shown} sur {total} jalons · Niveaux terminés {count}",
+            "apply": "Afficher {count} jalons"
+        },
+        "things": "jalons"
+    },
+    "skills": {
+        "title": "Compétences",
+        "subline": "{skills} compétences · {levels} niveaux au total · Aucune limite · {name}",
+        "tiles": {
+            "total": "Total des niveaux de compétence",
+            "across": "sur {count} compétences",
+            "highest": "Meilleure compétence",
+            "atZero": "Compétences au niveau 0",
+            "atZeroOf": "sur {total}"
+        },
+        "level": "Niveau de compétence",
+        "note": "Les licences demandent un niveau de compétence à chaque palier. Consultez <link>Licences</link> pour voir les niveaux qu’il vous reste à atteindre.",
+        "toast": "{name} est maintenant au niveau {level}"
+    }
+}

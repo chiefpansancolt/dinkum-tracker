@@ -1,0 +1,123 @@
+{
+    "common": {
+        "level": "Seviye {level}",
+        "levelCount": "Seviye {level}:",
+        "locked": "Önce önceki seviyeyi tamamla.",
+        "completeAll": "Hepsini tamamla",
+        "clearAll": "Hepsini temizle",
+        "requirement": "Gereksinim",
+        "requiredSkill": "Gereken beceri seviyesi",
+        "all": "Tümü",
+        "collected": "Toplandı",
+        "notCollected": "Toplanacak",
+        "clearFilters": "Filtreleri temizle",
+        "toast": {
+            "obtained": "{item}: {level}. seviye alındı",
+            "cleared": "{item}: {count, plural, one {{amount} seviye} other {{amount} seviye}} temizlendi",
+            "allObtained": "{item}: tüm seviyeler alındı",
+            "allCleared": "{item}: tüm seviyeler temizlendi"
+        },
+        "empty": {
+            "title": "Bu filtrelere uyan {things} yok",
+            "description": "Başka bir ad dene ya da filtreleri temizle."
+        },
+        "permitPoints": "izin puanı"
+    },
+    "buildings": {
+        "title": "Binalar",
+        "subline": "{total} içinden {count} kuruldu · %{percent} · {name}",
+        "tiles": {
+            "installed": "Kurulu",
+            "stillToInstall": "Kurulacak",
+            "listed": "Listelenen binalar",
+            "of": "/ {total}",
+            "breakdown": "{collectable} toplanabilir · {movable} taşınabilir · {reference} başvuru"
+        },
+        "filters": {
+            "deedType": "Tapu türü",
+            "npc": "NPC",
+            "collected": "Toplandı",
+            "search": "Binaları ada göre ara...",
+            "sheetTitle": "Binaları filtrele",
+            "showing": "{total} binadan {shown} tanesi gösteriliyor · Kurulu {count}",
+            "apply": "{count} bina göster"
+        },
+        "card": {
+            "deed": "Tapu",
+            "npc": "NPC",
+            "size": "Boyut",
+            "buildTime": "İnşa süresi",
+            "deedPrice": "Tapu fiyatı",
+            "hours": "Saatler",
+            "closed": "Kapalı",
+            "description": "Açıklama",
+            "resources": "Kaynaklar",
+            "resource": "{count} {name}"
+        },
+        "installed": "Kurulu",
+        "nothingToInstall": "Bu tapu türü için kurulacak bir şey yok.",
+        "things": "bina",
+        "toast": {
+            "installed": "{name} kurulu olarak işaretlendi",
+            "notInstalled": "{name} kurulu değil olarak işaretlendi"
+        }
+    },
+    "licenses": {
+        "title": "Lisanslar",
+        "subline": "{total} içinden {count} seviye alındı · %{percent} · {name}",
+        "tiles": {
+            "levels": "Alınan seviyeler",
+            "complete": "Tamamlanan lisanslar",
+            "permit": "Harcanan izin puanları",
+            "of": "/ {total}",
+            "sentence": "Gereken {total} izin puanının {amount} tanesini harcadın."
+        },
+        "filters": {
+            "category": "Kategori",
+            "collected": "Toplandı",
+            "search": "Lisansları ada göre ara...",
+            "sheetTitle": "Lisansları filtrele",
+            "showing": "{total} lisanstan {shown} tanesi gösteriliyor · Açılan seviyeler {count}",
+            "apply": "{count} lisans göster"
+        },
+        "things": "lisans"
+    },
+    "milestones": {
+        "title": "Kilometre taşları",
+        "subline": "{total} içinden {count} seviye tamamlandı · %{percent} · {name}",
+        "tiles": {
+            "levels": "Tamamlanan seviyeler",
+            "complete": "Tamamlanan kilometre taşları",
+            "permit": "Kazanılan izin puanları",
+            "of": "/ {total}",
+            "sentence": "Kazanılabilir {total} izin puanının {amount} tanesini kazandın."
+        },
+        "filters": {
+            "category": "Kategori",
+            "allCategories": "Tüm kategoriler",
+            "collected": "Toplandı",
+            "viewMode": "Görünüm modu",
+            "grouped": "Harfe göre gruplu",
+            "all": "Tüm kilometre taşları",
+            "search": "Kilometre taşlarını ad veya açıklamaya göre ara...",
+            "sheetTitle": "Kilometre taşlarını filtrele",
+            "showing": "{total} kilometre taşından {shown} tanesi gösteriliyor · Tamamlanan seviyeler {count}",
+            "apply": "{count} kilometre taşı göster"
+        },
+        "things": "kilometre taşı"
+    },
+    "skills": {
+        "title": "Beceriler",
+        "subline": "{skills} beceri · toplam {levels} seviye · Üst sınır yok · {name}",
+        "tiles": {
+            "total": "Toplam beceri seviyesi",
+            "across": "{count} beceri genelinde",
+            "highest": "En yüksek beceri",
+            "atZero": "0. seviyedeki beceriler",
+            "atZeroOf": "/ {total}"
+        },
+        "level": "Beceri seviyesi",
+        "note": "Lisanslar her kademede bir beceri seviyesi ister. Hangi seviyelere hâlâ ihtiyacın olduğunu görmek için <link>Lisanslar</link> sayfasına bak.",
+        "toast": "{name} artık {level}. seviyede"
+    }
+}

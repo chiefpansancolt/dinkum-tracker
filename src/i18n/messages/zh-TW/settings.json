@@ -1,0 +1,141 @@
+{
+    "title": "設定",
+    "subline": "此瀏覽器中儲存了 {count, plural, other {{amount} 個存檔}} · 偏好設定會自動儲存",
+    "storage": {
+        "title": "資料儲存",
+        "body": "你的資料儲存在瀏覽器中。清除瀏覽器資料後就會遺失，除非你已同步或備份。",
+        "action": "請使用下方功能匯出並備份你的資料。"
+    },
+    "manage": {
+        "title": "存檔",
+        "description": "在存檔頁面重新命名、刪除或建立存檔。",
+        "link": "管理存檔"
+    },
+    "data": {
+        "title": "資料管理",
+        "count": "{count, plural, other {{amount} 個存檔}}",
+        "exportButton": "匯出所有存檔",
+        "exportHint": "下載包含所有已儲存存檔的備份檔案。",
+        "exportDone": "匯出成功！",
+        "importButton": "匯入資料",
+        "importHint": "上傳先前匯出的檔案（.json）。確認步驟會詢問要合併或取代。",
+        "importDone": "匯入成功！",
+        "importFailed": "檔案格式無效",
+        "resetWarning": "警告：這會刪除所有存檔，且無法復原。",
+        "resetButton": "重設所有資料",
+        "resetConfirm": "確認重設",
+        "resetCancel": "取消",
+        "resetDone": "資料重設成功",
+        "importFile": "備份檔案",
+        "description": "一個備份檔案包含所有存檔。",
+        "exportTitle": "匯出資料",
+        "importTitle": "匯入資料",
+        "resetTitle": "重設所有資料",
+        "resetSyncedCopy": "同時刪除 {provider} 中的同步副本",
+        "resetSyncedOn": "同步會維持開啟。你的其他裝置在下次同步時會失去這些存檔。如果不確定，請先匯出備份。",
+        "resetSyncedOff": "同步副本會保留在原處。此瀏覽器的同步會中斷，以免清空雲端。",
+        "providers": {
+            "github": "GitHub",
+            "google": "Google Drive",
+            "dropbox": "Dropbox",
+            "microsoft": "OneDrive"
+        }
+    },
+    "import": {
+        "title": "匯入備份",
+        "description": "選擇要如何處理此裝置上現有的存檔。",
+        "fileSummary": "檔案中有 {inFile, plural, other {{inFileAmount} 個存檔}} · 此裝置上有 {onDeviceAmount} 個",
+        "mode": "匯入模式",
+        "merge": "合併（建議）",
+        "mergeDescription": "加入新的存檔。若存檔兩邊都有，則以最近更新的副本為準。只存在於此裝置的存檔會保留。",
+        "replace": "全部取代",
+        "replaceDescription": "刪除此裝置上的 {onDevice, plural, other {{onDeviceAmount} 個存檔}}，並載入檔案中的 {inFileAmount} 個。此操作無法復原。",
+        "table": {
+            "playthrough": "存檔",
+            "inFile": "檔案中",
+            "onDevice": "此裝置上",
+            "result": "結果"
+        },
+        "updatedOn": "更新於 {date}",
+        "notOnDevice": "不在裝置上",
+        "notInFile": "不在檔案中",
+        "results": {
+            "added": "新增",
+            "updated": "採用檔案副本",
+            "kept": "保留裝置副本",
+            "replaced": "已取代",
+            "removed": "已移除"
+        },
+        "exportFirst": "先匯出目前資料",
+        "cancel": "取消",
+        "confirmMerge": "合併 {count, plural, other {{amount} 個存檔}}",
+        "confirmReplace": "取代所有資料"
+    },
+    "appearance": {
+        "title": "外觀與偏好設定",
+        "theme": "主題",
+        "themeHint": "「跟隨系統」會依照你的裝置設定。",
+        "defaultSort": "預設存檔排序",
+        "defaultSortHint": "選擇存檔的預設排序方式。變更後立即儲存。",
+        "resources": "其他資源",
+        "opensInNewTab": "在新分頁開啟",
+        "wiki": "Dinkum Wiki",
+        "repository": "專案儲存庫"
+    },
+    "page": {
+        "title": "設定",
+        "tabsLabel": "設定",
+        "tabs": {
+            "sync": "雲端同步",
+            "preferences": "偏好設定",
+            "data": "備份與資料",
+            "about": "關於"
+        }
+    },
+    "preferences": {
+        "appearance": {
+            "title": "外觀",
+            "description": "立即儲存在此裝置上。"
+        },
+        "playthroughList": {
+            "title": "存檔列表",
+            "description": "存檔頁面的起始排序方式。"
+        }
+    },
+    "about": {
+        "version": "版本 {version}",
+        "summary": "追蹤你的 Dinkum 進度：魚類、昆蟲、小動物、里程碑、執照、NPC 等等。所有資料都儲存在此瀏覽器中。",
+        "resources": "其他資源",
+        "disclaimer": "與 Dinkum 的開發者無隸屬或背書關係。"
+    },
+    "region": {
+        "title": "語言與地區",
+        "description": "選擇語言，以及數字和日期的顯示方式。儲存在此裝置上。",
+        "language": {
+            "label": "語言",
+            "hint": "動物、物品、NPC 和其他遊戲資料的名稱來自遊戲資料，維持英文。"
+        },
+        "numberFormat": {
+            "label": "數字格式",
+            "hint": "範例：{example}",
+            "options": {
+                "auto": "自動，跟隨語言",
+                "us": "1,234.56（美國）",
+                "european": "1.234,56（德國）",
+                "french": "1 234,56（法國）",
+                "swiss": "1’234.56（瑞士）",
+                "indian": "12,34,567.89（印度）"
+            }
+        },
+        "dateFormat": {
+            "label": "日期格式",
+            "hint": "範例：{example}",
+            "options": {
+                "auto": "自動，跟隨語言",
+                "mdy": "月/日/年",
+                "dmy": "日/月/年",
+                "ymd": "年-月-日"
+            }
+        }
+    }
+}

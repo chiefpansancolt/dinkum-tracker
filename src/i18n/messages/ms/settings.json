@@ -1,0 +1,141 @@
+{
+    "title": "Tetapan",
+    "subline": "{count, plural, other {{amount} permainan}} disimpan dalam pelayar ini · Pilihan disimpan secara automatik",
+    "storage": {
+        "title": "Storan data!",
+        "body": "Data anda disimpan dalam pelayar. Ia hilang apabila data pelayar dikosongkan, melainkan anda menyegerak atau membuat sandaran.",
+        "action": "Sila guna fungsi di bawah untuk mengeksport dan membuat sandaran data anda."
+    },
+    "manage": {
+        "title": "Permainan",
+        "description": "Namakan semula, padam atau cipta permainan di halaman Permainan.",
+        "link": "Urus permainan"
+    },
+    "data": {
+        "title": "Pengurusan data",
+        "count": "{count, plural, other {{amount} permainan}}",
+        "exportButton": "Eksport semua permainan",
+        "exportHint": "Muat turun fail sandaran bagi semua permainan tersimpan anda.",
+        "exportDone": "Eksport berjaya!",
+        "importButton": "Import data",
+        "importHint": "Muat naik fail (.json) yang pernah dieksport. Langkah pengesahan bertanya sama ada mahu menggabung atau menggantikan.",
+        "importDone": "Import berjaya!",
+        "importFailed": "Format fail tidak sah",
+        "resetWarning": "Amaran: Ini akan memadam semua permainan dan tidak boleh dibuat asal.",
+        "resetButton": "Tetapkan semula semua data",
+        "resetConfirm": "Sahkan tetapan semula",
+        "resetCancel": "Batal",
+        "resetDone": "Tetapan semula data berjaya",
+        "importFile": "Fail sandaran",
+        "description": "Satu fail sandaran mengandungi setiap permainan.",
+        "exportTitle": "Eksport data",
+        "importTitle": "Import data",
+        "resetTitle": "Tetapkan semula semua data",
+        "resetSyncedCopy": "Padam juga salinan tersegerak dalam {provider}",
+        "resetSyncedOn": "Segerak kekal hidup. Peranti anda yang lain kehilangan permainan ini pada segerak seterusnya. Eksport sandaran dahulu jika anda tidak pasti.",
+        "resetSyncedOff": "Salinan tersegerak kekal di tempatnya. Segerak diputuskan pada pelayar ini supaya awan tidak dikosongkan.",
+        "providers": {
+            "github": "GitHub",
+            "google": "Google Drive",
+            "dropbox": "Dropbox",
+            "microsoft": "OneDrive"
+        }
+    },
+    "import": {
+        "title": "Import sandaran",
+        "description": "Pilih apa yang berlaku kepada permainan yang sudah ada pada peranti ini.",
+        "fileSummary": "{inFile, plural, other {{inFileAmount} permainan}} dalam fail · {onDeviceAmount} pada peranti ini",
+        "mode": "Mod import",
+        "merge": "Gabung (disyorkan)",
+        "mergeDescription": "Menambah permainan yang baharu. Apabila permainan ada di kedua-dua tempat, salinan yang terakhir dikemas kini menang. Permainan yang hanya ada pada peranti ini kekal.",
+        "replace": "Ganti semua",
+        "replaceDescription": "Memadam {onDevice, plural, other {{onDeviceAmount} permainan}} pada peranti ini dan memuatkan {inFileAmount} daripada fail. Ini tidak boleh dibuat asal.",
+        "table": {
+            "playthrough": "Permainan",
+            "inFile": "Dalam fail",
+            "onDevice": "Pada peranti ini",
+            "result": "Hasil"
+        },
+        "updatedOn": "Dikemas kini {date}",
+        "notOnDevice": "Tiada pada peranti",
+        "notInFile": "Tiada dalam fail",
+        "results": {
+            "added": "Ditambah",
+            "updated": "Salinan fail menang",
+            "kept": "Salinan peranti kekal",
+            "replaced": "Diganti",
+            "removed": "Dibuang"
+        },
+        "exportFirst": "Eksport data semasa dahulu",
+        "cancel": "Batal",
+        "confirmMerge": "Gabung {count, plural, other {{amount} permainan}}",
+        "confirmReplace": "Ganti semua data"
+    },
+    "appearance": {
+        "title": "Penampilan dan pilihan",
+        "theme": "Tema",
+        "themeHint": "Sistem mengikut peranti anda.",
+        "defaultSort": "Isihan permainan lalai",
+        "defaultSortHint": "Pilih cara permainan diisih secara lalai. Disimpan sebaik sahaja anda mengubahnya.",
+        "resources": "Sumber tambahan",
+        "opensInNewTab": "Dibuka dalam tab baharu",
+        "wiki": "Dinkum Wiki",
+        "repository": "Repositori projek"
+    },
+    "page": {
+        "title": "Tetapan",
+        "tabsLabel": "Tetapan",
+        "tabs": {
+            "sync": "Segerak awan",
+            "preferences": "Pilihan",
+            "data": "Sandaran dan data",
+            "about": "Perihal"
+        }
+    },
+    "preferences": {
+        "appearance": {
+            "title": "Penampilan",
+            "description": "Disimpan serta-merta pada peranti ini."
+        },
+        "playthroughList": {
+            "title": "Senarai permainan",
+            "description": "Cara halaman Permainan bermula."
+        }
+    },
+    "about": {
+        "version": "Versi {version}",
+        "summary": "Jejak kemajuan Dinkum anda: ikan, serangga, hidupan kecil, pencapaian, lesen, NPC dan banyak lagi. Semuanya disimpan dalam pelayar ini.",
+        "resources": "Sumber tambahan",
+        "disclaimer": "Tidak berkaitan dengan atau disokong oleh pencipta Dinkum."
+    },
+    "region": {
+        "title": "Bahasa dan wilayah",
+        "description": "Pilih bahasa dan cara nombor serta tarikh ditulis. Disimpan pada peranti ini.",
+        "language": {
+            "label": "Bahasa",
+            "hint": "Nama haiwan, item, NPC dan data game lain datang daripada data game dan kekal dalam bahasa Inggeris."
+        },
+        "numberFormat": {
+            "label": "Format nombor",
+            "hint": "Contoh: {example}",
+            "options": {
+                "auto": "Automatik, ikut bahasa",
+                "us": "1,234.56 (Amerika Syarikat)",
+                "european": "1.234,56 (Jerman)",
+                "french": "1 234,56 (Perancis)",
+                "swiss": "1’234.56 (Switzerland)",
+                "indian": "12,34,567.89 (India)"
+            }
+        },
+        "dateFormat": {
+            "label": "Format tarikh",
+            "hint": "Contoh: {example}",
+            "options": {
+                "auto": "Automatik, ikut bahasa",
+                "mdy": "Bulan/Hari/Tahun",
+                "dmy": "Hari/Bulan/Tahun",
+                "ymd": "Tahun-Bulan-Hari"
+            }
+        }
+    }
+}

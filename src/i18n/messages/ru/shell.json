@@ -1,0 +1,91 @@
+{
+    "nav": {
+        "main": "Главное",
+        "groups": {
+            "track": "Учёт",
+            "progress": "Прогресс",
+            "collect": "Коллекции",
+            "tools": "Инструменты"
+        },
+        "items": {
+            "overview": "Обзор",
+            "pedia": "Pedia",
+            "npcs": "NPC",
+            "calendar": "Календарь",
+            "buildings": "Постройки",
+            "licenses": "Лицензии",
+            "milestones": "Достижения",
+            "skills": "Навыки",
+            "recipes": "Рецепты",
+            "gear": "Снаряжение",
+            "wardrobe": "Гардероб и дом",
+            "itemsBreakdown": "Разбор предметов",
+            "weightCalculator": "Калькулятор веса",
+            "reference": "Справочник",
+            "settings": "Настройки",
+            "playthroughs": "Прохождения",
+            "newPlaythrough": "Новое прохождение"
+        }
+    },
+    "appShell": {
+        "skipToContent": "К содержимому",
+        "closeMenu": "Закрыть меню"
+    },
+    "appBar": {
+        "openMenu": "Открыть меню"
+    },
+    "playthroughGate": {
+        "emptyTitle": "Прохождений пока нет",
+        "emptyDescription": "Создайте прохождение, чтобы начать отслеживать прогресс.",
+        "newPlaythrough": "Новое прохождение"
+    },
+    "playthroughSwitcher": {
+        "sectionLabel": "Прохождение",
+        "switchPlaythrough": "Сменить прохождение",
+        "loading": "Загрузка",
+        "noPlaythroughYet": "Прохождений пока нет",
+        "playthroughs": "Прохождения",
+        "active": "Активно",
+        "allPlaythroughs": "Все прохождения",
+        "newPlaythrough": "Новое прохождение",
+        "detail": "День {day} · {percent}%"
+    },
+    "theme": {
+        "label": "Тема",
+        "light": "Светлая",
+        "dark": "Тёмная",
+        "system": "Системная"
+    },
+    "footer": {
+        "tagline": "Следите за прогрессом в Dinkum без лишних забот.",
+        "support": "Поддержка",
+        "about": "О проекте",
+        "settings": "Настройки",
+        "discord": "Discord",
+        "github": "GitHub",
+        "dinkumWiki": "Dinkum Wiki",
+        "privacyPolicy": "Политика конфиденциальности",
+        "termsOfService": "Условия использования",
+        "disclaimerTitle": "Отказ от ответственности",
+        "disclaimer": "Это приложение не связано с Dinkum и его создателями и не одобрено ими. Данные игры взяты из Dinkum Wiki. Изображения и названия из игры используются только для справки.",
+        "copyright": "© {year} {appName}",
+        "framework": "Создано на платформе Gamerdex, общей основе для бесплатных трекеров прогресса в играх. Ваши данные хранятся в браузере или в вашем облачном хранилище, если вы включите синхронизацию.",
+        "visitGamerdex": "Перейти на Gamerdex"
+    },
+    "domainNotice": {
+        "label": "Смена домена:",
+        "movedTo": "Dinkum Tracker переехал на <strong>{domain}</strong>. Сохранённые данные не переносятся автоматически. Пожалуйста,",
+        "exportLink": "экспортируйте данные",
+        "retired": "с этого сайта и импортируйте их на новом домене. Этот домен будет отключён: <strong>{date}</strong>.",
+        "goToNewSite": "На новый сайт",
+        "dismiss": "Скрыть уведомление"
+    },
+    "notFound": {
+        "code": "404",
+        "title": "Страница не найдена",
+        "description": "Такой страницы нет, или она переехала.",
+        "toOverview": "К обзору",
+        "toHome": "На главную",
+        "hint": "Ошибка 404 значит, что в адресе опечатка или страницу удалили. Боковое меню остаётся доступным."
+    }
+}

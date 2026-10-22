@@ -1,0 +1,123 @@
+{
+    "common": {
+        "level": "Nível {level}",
+        "levelCount": "Nível {level}:",
+        "locked": "Concluir primeiro o nível anterior.",
+        "completeAll": "Concluir tudo",
+        "clearAll": "Limpar tudo",
+        "requirement": "Requisito",
+        "requiredSkill": "Nível de competência necessário",
+        "all": "Todos",
+        "collected": "Recolhidos",
+        "notCollected": "Por recolher",
+        "clearFilters": "Limpar filtros",
+        "toast": {
+            "obtained": "{item}: nível {level} obtido",
+            "cleared": "{item}: {count, plural, one {{amount} nível limpo} other {{amount} níveis limpos}}",
+            "allObtained": "{item}: todos os níveis obtidos",
+            "allCleared": "{item}: todos os níveis limpos"
+        },
+        "empty": {
+            "title": "Nenhum resultado em {things} com estes filtros",
+            "description": "Experimentar outro nome ou limpar os filtros."
+        },
+        "permitPoints": "pontos de licença"
+    },
+    "buildings": {
+        "title": "Edifícios",
+        "subline": "{count} de {total} instalados · {percent}% · {name}",
+        "tiles": {
+            "installed": "Instalados",
+            "stillToInstall": "Por instalar",
+            "listed": "Edifícios listados",
+            "of": "de {total}",
+            "breakdown": "{collectable} recolhíveis · {movable} móveis · {reference} de referência"
+        },
+        "filters": {
+            "deedType": "Tipo de escritura",
+            "npc": "NPC",
+            "collected": "Recolhidos",
+            "search": "Pesquisar edifícios por nome...",
+            "sheetTitle": "Filtrar edifícios",
+            "showing": "A mostrar {shown} de {total} edifícios · Instalados {count}",
+            "apply": "Mostrar {count} edifícios"
+        },
+        "card": {
+            "deed": "Escritura",
+            "npc": "NPC",
+            "size": "Tamanho",
+            "buildTime": "Tempo de construção",
+            "deedPrice": "Preço da escritura",
+            "hours": "Horário",
+            "closed": "Fechado",
+            "description": "Descrição",
+            "resources": "Recursos",
+            "resource": "{count} {name}"
+        },
+        "installed": "Instalado",
+        "nothingToInstall": "Nada para instalar neste tipo de escritura.",
+        "things": "edifícios",
+        "toast": {
+            "installed": "{name} marcado como instalado",
+            "notInstalled": "{name} marcado como não instalado"
+        }
+    },
+    "licenses": {
+        "title": "Licenças",
+        "subline": "{count} de {total} níveis obtidos · {percent}% · {name}",
+        "tiles": {
+            "levels": "Níveis obtidos",
+            "complete": "Licenças concluídas",
+            "permit": "Pontos de licença gastos",
+            "of": "de {total}",
+            "sentence": "Foram gastos {amount} de {total} pontos de licença necessários."
+        },
+        "filters": {
+            "category": "Categoria",
+            "collected": "Recolhidas",
+            "search": "Pesquisar licenças por nome...",
+            "sheetTitle": "Filtrar licenças",
+            "showing": "A mostrar {shown} de {total} licenças · Níveis desbloqueados {count}",
+            "apply": "Mostrar {count} licenças"
+        },
+        "things": "licenças"
+    },
+    "milestones": {
+        "title": "Marcos",
+        "subline": "{count} de {total} níveis concluídos · {percent}% · {name}",
+        "tiles": {
+            "levels": "Níveis concluídos",
+            "complete": "Marcos concluídos",
+            "permit": "Pontos de licença ganhos",
+            "of": "de {total}",
+            "sentence": "Foram ganhos {amount} de {total} pontos de licença disponíveis."
+        },
+        "filters": {
+            "category": "Categoria",
+            "allCategories": "Todas as categorias",
+            "collected": "Recolhidos",
+            "viewMode": "Modo de vista",
+            "grouped": "Agrupados por letra",
+            "all": "Todos os marcos",
+            "search": "Pesquisar marcos por nome ou descrição...",
+            "sheetTitle": "Filtrar marcos",
+            "showing": "A mostrar {shown} de {total} marcos · Níveis concluídos {count}",
+            "apply": "Mostrar {count} marcos"
+        },
+        "things": "marcos"
+    },
+    "skills": {
+        "title": "Competências",
+        "subline": "{skills} competências · {levels} níveis no total · Sem limite máximo · {name}",
+        "tiles": {
+            "total": "Total de níveis de competência",
+            "across": "em {count} competências",
+            "highest": "Competência mais alta",
+            "atZero": "Competências no nível 0",
+            "atZeroOf": "de {total}"
+        },
+        "level": "Nível de competência",
+        "note": "As licenças exigem um nível de competência em cada patamar. Consultar as <link>Licenças</link> para ver os níveis que ainda faltam.",
+        "toast": "{name} está agora no nível {level}"
+    }
+}

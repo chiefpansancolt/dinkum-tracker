@@ -1,0 +1,51 @@
+{
+    "close": "关闭",
+    "field": {
+        "optional": "可选"
+    },
+    "stepper": {
+        "lower": "降低{label}",
+        "raise": "提高{label}",
+        "labelPrefix": "{label}，"
+    },
+    "switch": {
+        "on": "开",
+        "off": "关"
+    },
+    "tabs": {
+        "locked": "（未解锁）"
+    },
+    "toast": {
+        "dismiss": "关闭",
+        "variants": {
+            "success": "成功",
+            "info": "提示",
+            "warning": "警告",
+            "error": "错误"
+        },
+        "missingProvider": "useToast must be used within a ToastProvider"
+    },
+    "savedChip": {
+        "automatic": "自动保存",
+        "justNow": "刚刚已保存",
+        "minutesAgo": "{count}分钟前已保存",
+        "at": "已保存 {time}",
+        "failed": "未保存，存储空间已满"
+    },
+    "filters": {
+        "filters": "筛选",
+        "filtersWithCount": "筛选（{count}）",
+        "clearFilters": "清除筛选",
+        "clearAll": "全部清除",
+        "cancel": "取消",
+        "showResults": "显示结果",
+        "search": "搜索"
+    },
+    "commerce": {
+        "label": "贸易等级售价",
+        "base": "基础",
+        "plus5": "+5%",
+        "plus10": "+10%",
+        "plus15": "+15%"
+    }
+}

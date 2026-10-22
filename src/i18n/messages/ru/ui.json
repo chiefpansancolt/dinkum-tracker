@@ -1,0 +1,51 @@
+{
+    "close": "Закрыть",
+    "field": {
+        "optional": "Необязательно"
+    },
+    "stepper": {
+        "lower": "Уменьшить: {label}",
+        "raise": "Увеличить: {label}",
+        "labelPrefix": "{label}, "
+    },
+    "switch": {
+        "on": "Вкл.",
+        "off": "Выкл."
+    },
+    "tabs": {
+        "locked": " (закрыто)"
+    },
+    "toast": {
+        "dismiss": "Скрыть",
+        "variants": {
+            "success": "Успех",
+            "info": "Информация",
+            "warning": "Предупреждение",
+            "error": "Ошибка"
+        },
+        "missingProvider": "useToast must be used within a ToastProvider"
+    },
+    "savedChip": {
+        "automatic": "Сохраняется автоматически",
+        "justNow": "Только что сохранено",
+        "minutesAgo": "Сохранено {count} мин. назад",
+        "at": "Сохранено в {time}",
+        "failed": "Не сохранено, хранилище заполнено"
+    },
+    "filters": {
+        "filters": "Фильтры",
+        "filtersWithCount": "Фильтры ({count})",
+        "clearFilters": "Сбросить фильтры",
+        "clearAll": "Сбросить всё",
+        "cancel": "Отмена",
+        "showResults": "Показать",
+        "search": "Поиск"
+    },
+    "commerce": {
+        "label": "Продажа на уровне торговли",
+        "base": "Базово",
+        "plus5": "+5%",
+        "plus10": "+10%",
+        "plus15": "+15%"
+    }
+}

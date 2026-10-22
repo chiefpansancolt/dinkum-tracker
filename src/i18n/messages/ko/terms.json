@@ -1,0 +1,91 @@
+{
+    "buffs": {
+        "attackLevel": "공격",
+        "charged": "충전됨",
+        "coolLevel": "멋짐",
+        "defenseLevel": "방어",
+        "diligent": "근면",
+        "experienceLevel": "경험",
+        "fastHealthTickSpeedLevel": "체력 빠른 틱 속도",
+        "fishLevel": "낚시",
+        "foragingLevel": "채집",
+        "healthMax": "최대 체력",
+        "healthRegenRate": "체력 재생",
+        "length": "지속 시간",
+        "miningLevel": "채굴",
+        "sleepless": "불면",
+        "speedLevel": "속도",
+        "staminaMax": "최대 스태미나",
+        "staminaRegenRate": "스태미나 재생",
+        "swimmingLevel": "수영"
+    },
+    "categories": {
+        "buildings": "건물",
+        "tools": "도구",
+        "weapons": "무기",
+        "equipment": "장착품",
+        "vehicles": "탈것",
+        "craftingRecipes": "제작 레시피",
+        "cookingRecipes": "요리 레시피",
+        "signWritingRecipes": "간판 쓰기 레시피",
+        "otherCraftables": "기타 제작품"
+    },
+    "resourceTypes": {
+        "fish": "물고기",
+        "critter": "작은 동물",
+        "bug": "곤충",
+        "relic": "유물",
+        "crop": "작물",
+        "foragable": "채집물",
+        "animalProduct": "동물 생산물",
+        "paint": "페인트",
+        "mineral": "광물",
+        "craftable": "제작품",
+        "trophy": "트로피",
+        "seed": "씨앗",
+        "flower": "꽃",
+        "resource": "자원"
+    },
+    "daily": {
+        "dayOneMilestones": "첫날",
+        "travelMilestones": "여행",
+        "npcMilestones": "NPC",
+        "fishingMilestones": "낚시",
+        "farmingMilestones": "농사",
+        "foragingMilestones": "채집",
+        "loggingMilestones": "벌목",
+        "miningMilestones": "채굴",
+        "excavationMilestones": "발굴",
+        "bugCatchingMilestones": "곤충 채집",
+        "craftingMilestones": "제작",
+        "huntingMilestones": "사냥",
+        "trappingMilestones": "덫 사냥",
+        "dinksMilestones": "Dinks"
+    },
+    "animalTypes": {
+        "Wild Animal": "야생 동물",
+        "Farm Animal": "농장 동물",
+        "Tammed Animal": "길들인 동물"
+    },
+    "temperaments": {
+        "Passive": "온순",
+        "Neutral": "중립",
+        "Aggressive": "공격적"
+    },
+    "seasons": {
+        "Spring": "봄",
+        "Summer": "여름",
+        "Autumn": "가을",
+        "Winter": "겨울",
+        "All": "전체"
+    },
+    "weekdays": {
+        "Sunday": "일요일",
+        "Monday": "월요일",
+        "Tuesday": "화요일",
+        "Wednesday": "수요일",
+        "Thursday": "목요일",
+        "Friday": "금요일",
+        "Saturday": "토요일"
+    }
+}

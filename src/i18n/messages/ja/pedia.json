@@ -1,0 +1,85 @@
+{
+    "title": "図鑑",
+    "subline": "{total}個中{done}個収集 · {percent}% · {name}",
+    "tabsLabel": "図鑑のセクション",
+    "tabs": {
+        "fish": "魚",
+        "bugs": "虫",
+        "critters": "小動物"
+    },
+    "nouns": {
+        "fish": "魚",
+        "bugs": "虫",
+        "critters": "小動物"
+    },
+    "summary": {
+        "captured": "捕獲済み",
+        "donated": "博物館に寄贈済み",
+        "permit": "獲得した許可ポイント",
+        "of": "{total}中"
+    },
+    "filters": {
+        "sheetTitle": "{tab}をフィルター",
+        "biome": "バイオーム",
+        "rarity": "レア度",
+        "season": "季節",
+        "time": "時間",
+        "collected": "収集",
+        "donated": "寄贈",
+        "allBiomes": "すべてのバイオーム",
+        "allRarities": "すべてのレア度",
+        "allSeasons": "すべての季節",
+        "anyTime": "いつでも",
+        "all": "すべて",
+        "onlyCollected": "収集済み",
+        "notCollected": "未収集",
+        "onlyDonated": "寄贈済み",
+        "notDonated": "未寄贈",
+        "search": "{tab}を名前で検索",
+        "showing": "{tab} {total}件中{shown}件を表示",
+        "capturedCount": "捕獲済み {count}",
+        "donatedCount": "寄贈済み {count}",
+        "apply": "{tab}を{count}件表示"
+    },
+    "view": {
+        "label": "表示",
+        "grid": "グリッド",
+        "list": "リスト"
+    },
+    "card": {
+        "biome": "バイオーム",
+        "seasons": "季節",
+        "time": "時間",
+        "sell": "売値",
+        "cooked": "調理後",
+        "cookedValue": "{price} · x{pieces}",
+        "status": "状態",
+        "missing": "未入手",
+        "caught": "捕獲済み",
+        "donated": "寄贈済み"
+    },
+    "table": {
+        "name": "名前",
+        "rarity": "レア度",
+        "biome": "バイオーム",
+        "seasons": "季節",
+        "time": "時間",
+        "sell": "売値",
+        "cooked": "調理後",
+        "status": "状態",
+        "caption": "{total}行中{shown}行を表示中。フィルター、状態の操作、商取引レベルはどちらの表示にも共通で適用されます。"
+    },
+    "empty": {
+        "title": "条件に一致する{tab}はありません",
+        "description": "別の名前を試すか、フィルターをクリアしてください。",
+        "clear": "フィルターをクリア"
+    },
+    "toast": {
+        "marked": "{name}を{status}にしました",
+        "statuses": {
+            "missing": "未入手",
+            "caught": "捕獲済み",
+            "donated": "寄贈済み"
+        }
+    }
+}

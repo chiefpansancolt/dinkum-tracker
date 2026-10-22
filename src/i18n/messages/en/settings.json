@@ -1,0 +1,141 @@
+{
+    "title": "Settings",
+    "subline": "{count, plural, one {{amount} playthrough} other {{amount} playthroughs}} stored in this browser · Preferences save automatically",
+    "storage": {
+        "title": "Data Storage!",
+        "body": "Your data is stored in the browser. It is lost when the browser data is cleared, unless you sync or back it up.",
+        "action": "Please use the functions below to export and backup your data."
+    },
+    "manage": {
+        "title": "Playthroughs",
+        "description": "Rename, delete or create playthroughs on the Playthroughs page.",
+        "link": "Manage playthroughs"
+    },
+    "data": {
+        "title": "Data management",
+        "count": "{count, plural, one {{amount} Playthrough} other {{amount} Playthroughs}}",
+        "exportButton": "Export All Playthroughs",
+        "exportHint": "Download a backup file of all your saved playthroughs.",
+        "exportDone": "Export successful!",
+        "importButton": "Import Data",
+        "importHint": "Upload a previously exported file (.json). A confirm step asks whether to merge or replace.",
+        "importDone": "Import successful!",
+        "importFailed": "Invalid file format",
+        "resetWarning": "Warning: This will delete all playthroughs and cannot be undone.",
+        "resetButton": "Reset All Data",
+        "resetConfirm": "Confirm Reset",
+        "resetCancel": "Cancel",
+        "resetDone": "Data reset successful",
+        "importFile": "Backup file",
+        "description": "One backup file holds every playthrough.",
+        "exportTitle": "Export data",
+        "importTitle": "Import data",
+        "resetTitle": "Reset all data",
+        "resetSyncedCopy": "Also delete the synced copy in {provider}",
+        "resetSyncedOn": "Sync stays on. Your other devices lose these playthroughs at their next sync. Export a backup first if you are not sure.",
+        "resetSyncedOff": "The synced copy stays where it is. Sync disconnects on this browser so it does not empty the cloud.",
+        "providers": {
+            "github": "GitHub",
+            "google": "Google Drive",
+            "dropbox": "Dropbox",
+            "microsoft": "OneDrive"
+        }
+    },
+    "import": {
+        "title": "Import backup",
+        "description": "Choose what happens to the playthroughs already on this device.",
+        "fileSummary": "{inFile, plural, one {{inFileAmount} playthrough} other {{inFileAmount} playthroughs}} in file · {onDeviceAmount} on this device",
+        "mode": "Import mode",
+        "merge": "Merge (recommended)",
+        "mergeDescription": "Adds playthroughs that are new. When a playthrough is in both places, the copy updated most recently wins. Playthroughs only on this device stay.",
+        "replace": "Replace all",
+        "replaceDescription": "Deletes the {onDevice, plural, one {{onDeviceAmount} playthrough} other {{onDeviceAmount} playthroughs}} on this device and loads the {inFileAmount} from the file. This cannot be undone.",
+        "table": {
+            "playthrough": "Playthrough",
+            "inFile": "In file",
+            "onDevice": "On this device",
+            "result": "Result"
+        },
+        "updatedOn": "Updated {date}",
+        "notOnDevice": "Not on device",
+        "notInFile": "Not in file",
+        "results": {
+            "added": "Added",
+            "updated": "File copy wins",
+            "kept": "Device copy stays",
+            "replaced": "Replaced",
+            "removed": "Removed"
+        },
+        "exportFirst": "Export current data first",
+        "cancel": "Cancel",
+        "confirmMerge": "Merge {count, plural, one {{amount} playthrough} other {{amount} playthroughs}}",
+        "confirmReplace": "Replace all data"
+    },
+    "appearance": {
+        "title": "Appearance and preferences",
+        "theme": "Theme",
+        "themeHint": "System follows your device.",
+        "defaultSort": "Default playthrough sort",
+        "defaultSortHint": "Choose how playthroughs are sorted by default. Saves as soon as you change it.",
+        "resources": "Additional resources",
+        "opensInNewTab": "Opens in a new tab",
+        "wiki": "Dinkum Wiki",
+        "repository": "Project Repository"
+    },
+    "page": {
+        "title": "Settings",
+        "tabsLabel": "Settings",
+        "tabs": {
+            "sync": "Cloud sync",
+            "preferences": "Preferences",
+            "data": "Backup and data",
+            "about": "About"
+        }
+    },
+    "preferences": {
+        "appearance": {
+            "title": "Appearance",
+            "description": "Saved at once on this device."
+        },
+        "playthroughList": {
+            "title": "Playthrough list",
+            "description": "How the Playthroughs page starts."
+        }
+    },
+    "about": {
+        "version": "Version {version}",
+        "summary": "Track your Dinkum progress: fish, bugs, critters, milestones, licenses, NPCs and more. Everything is stored in this browser.",
+        "resources": "Additional resources",
+        "disclaimer": "Not affiliated with or endorsed by the creators of Dinkum."
+    },
+    "region": {
+        "title": "Language and region",
+        "description": "Pick the language and how numbers and dates are written. Saved on this device.",
+        "language": {
+            "label": "Language",
+            "hint": "Names of animals, items, NPCs and the other game data come from the game data and stay in English."
+        },
+        "numberFormat": {
+            "label": "Number format",
+            "hint": "Example: {example}",
+            "options": {
+                "auto": "Automatic, follows the language",
+                "us": "1,234.56 (United States)",
+                "european": "1.234,56 (Germany)",
+                "french": "1 234,56 (France)",
+                "swiss": "1’234.56 (Switzerland)",
+                "indian": "12,34,567.89 (India)"
+            }
+        },
+        "dateFormat": {
+            "label": "Date format",
+            "hint": "Example: {example}",
+            "options": {
+                "auto": "Automatic, follows the language",
+                "mdy": "Month/Day/Year",
+                "dmy": "Day/Month/Year",
+                "ymd": "Year-Month-Day"
+            }
+        }
+    }
+}

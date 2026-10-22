@@ -1,0 +1,123 @@
+{
+    "common": {
+        "level": "Livello {level}",
+        "levelCount": "Livello {level}:",
+        "locked": "Completa prima il livello precedente.",
+        "completeAll": "Completa tutto",
+        "clearAll": "Azzera tutto",
+        "requirement": "Requisito",
+        "requiredSkill": "Livello di abilità richiesto",
+        "all": "Tutti",
+        "collected": "Raccolti",
+        "notCollected": "Da raccogliere",
+        "clearFilters": "Azzera filtri",
+        "toast": {
+            "obtained": "{item}: livello {level} ottenuto",
+            "cleared": "{item}: {count, plural, one {{amount} livello azzerato} other {{amount} livelli azzerati}}",
+            "allObtained": "{item}: tutti i livelli ottenuti",
+            "allCleared": "{item}: tutti i livelli azzerati"
+        },
+        "empty": {
+            "title": "Nessun risultato per {things} con questi filtri",
+            "description": "Prova un altro nome o azzera i filtri."
+        },
+        "permitPoints": "punti permesso"
+    },
+    "buildings": {
+        "title": "Edifici",
+        "subline": "{count} di {total} installati · {percent}% · {name}",
+        "tiles": {
+            "installed": "Installati",
+            "stillToInstall": "Ancora da installare",
+            "listed": "Edifici in elenco",
+            "of": "su {total}",
+            "breakdown": "{collectable} collezionabili · {movable} spostabili · {reference} di riferimento"
+        },
+        "filters": {
+            "deedType": "Tipo di atto",
+            "npc": "NPC",
+            "collected": "Raccolti",
+            "search": "Cerca edifici per nome...",
+            "sheetTitle": "Filtra edifici",
+            "showing": "Mostrati {shown} di {total} edifici · Installati {count}",
+            "apply": "Mostra {count} edifici"
+        },
+        "card": {
+            "deed": "Atto",
+            "npc": "NPC",
+            "size": "Dimensione",
+            "buildTime": "Tempo di costruzione",
+            "deedPrice": "Prezzo dell'atto",
+            "hours": "Ore",
+            "closed": "Chiuso",
+            "description": "Descrizione",
+            "resources": "Risorse",
+            "resource": "{count} {name}"
+        },
+        "installed": "Installato",
+        "nothingToInstall": "Niente da installare per questo tipo di atto.",
+        "things": "edifici",
+        "toast": {
+            "installed": "{name} segnato come installato",
+            "notInstalled": "{name} segnato come non installato"
+        }
+    },
+    "licenses": {
+        "title": "Licenze",
+        "subline": "{count} di {total} livelli ottenuti · {percent}% · {name}",
+        "tiles": {
+            "levels": "Livelli ottenuti",
+            "complete": "Licenze complete",
+            "permit": "Punti permesso spesi",
+            "of": "su {total}",
+            "sentence": "Hai speso {amount} dei {total} punti permesso necessari."
+        },
+        "filters": {
+            "category": "Categoria",
+            "collected": "Raccolte",
+            "search": "Cerca licenze per nome...",
+            "sheetTitle": "Filtra licenze",
+            "showing": "Mostrate {shown} di {total} licenze · Livelli sbloccati {count}",
+            "apply": "Mostra {count} licenze"
+        },
+        "things": "licenze"
+    },
+    "milestones": {
+        "title": "Traguardi",
+        "subline": "{count} di {total} livelli completati · {percent}% · {name}",
+        "tiles": {
+            "levels": "Livelli completati",
+            "complete": "Traguardi completati",
+            "permit": "Punti permesso guadagnati",
+            "of": "su {total}",
+            "sentence": "Hai guadagnato {amount} dei {total} punti permesso disponibili."
+        },
+        "filters": {
+            "category": "Categoria",
+            "allCategories": "Tutte le categorie",
+            "collected": "Raccolti",
+            "viewMode": "Modalità di vista",
+            "grouped": "Raggruppati per lettera",
+            "all": "Tutti i traguardi",
+            "search": "Cerca traguardi per nome o descrizione...",
+            "sheetTitle": "Filtra traguardi",
+            "showing": "Mostrati {shown} di {total} traguardi · Livelli completati {count}",
+            "apply": "Mostra {count} traguardi"
+        },
+        "things": "traguardi"
+    },
+    "skills": {
+        "title": "Abilità",
+        "subline": "{skills} abilità · {levels} livelli in totale · Nessun limite massimo · {name}",
+        "tiles": {
+            "total": "Livelli di abilità totali",
+            "across": "su {count} abilità",
+            "highest": "Abilità più alta",
+            "atZero": "Abilità a livello 0",
+            "atZeroOf": "su {total}"
+        },
+        "level": "Livello di abilità",
+        "note": "Le licenze richiedono un livello di abilità a ogni gradino. Guarda <link>Licenze</link> per vedere quali livelli ti mancano.",
+        "toast": "{name} è ora al livello {level}"
+    }
+}

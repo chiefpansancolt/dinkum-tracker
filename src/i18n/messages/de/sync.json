@@ -1,0 +1,234 @@
+{
+    "tab": {
+        "title": "Cloud-Sync",
+        "description": "Halte deine Spielstände in einem privaten GitHub-Repository und teile sie zwischen deinen Geräten."
+    },
+    "unavailable": "Sync ist in diesem Build nicht verfügbar.",
+    "privacy": "Deine Daten gehen in ein privates Repository in deinem eigenen GitHub-Konto. Gamerdex hat keinen Server, der sie speichert, und die App erreicht nur das eine Repository, das du wählst.",
+    "repository": {
+        "title": "Daten-Repository einrichten",
+        "body": "Deine Daten liegen in einem privaten Repository namens {name} in deinem GitHub-Konto. Gamerdex Sync erreicht nur dieses eine Repository.",
+        "checking": "Suche nach {name}",
+        "checkFailed": "Deine Repositories konnten nicht geladen werden. Prüfe deine Verbindung und versuche es erneut.",
+        "found": "{fullName} gefunden",
+        "public": "Das Repository {fullName} ist öffentlich. Stelle es in den GitHub-Einstellungen auf privat und prüfe dann erneut. Ein öffentliches Repository ist nicht nutzbar, weil jeder deine Daten lesen könnte.",
+        "missing": "Das Repository {name} wurde nicht gefunden",
+        "steps": {
+            "create": "Erstelle ein privates Repository namens {name}. Hake „Add a README file“ an.",
+            "install": "Gib Gamerdex Sync Zugriff nur auf dieses Repository. Wähle „Only select repositories“ und dann {name}.",
+            "recheck": "Komm hierher zurück und prüfe erneut."
+        },
+        "createButton": "Repository erstellen",
+        "installButton": "Repositories auf GitHub wählen",
+        "recheckButton": "Erneut prüfen"
+    },
+    "connected": {
+        "title": "Verbunden",
+        "repository": "Repository",
+        "lastSync": "Letzter Sync",
+        "never": "Noch nicht synchronisiert",
+        "syncNow": "Jetzt synchronisieren",
+        "signOut": "Abmelden",
+        "signedOut": "Abgemeldet. Die Daten auf diesem Gerät bleiben unverändert.",
+        "storage": "Gespeichert in",
+        "folder": "Ordner {name}",
+        "signInWith": "Mit {provider} anmelden"
+    },
+    "status": {
+        "idle": "Synchronisiert",
+        "syncing": "Synchronisiere",
+        "offline": "Offline",
+        "reauth": "Erneut anmelden",
+        "needsChoice": "Deine Wahl nötig",
+        "error": "Sync fehlgeschlagen",
+        "signedOut": "Nicht angemeldet",
+        "needsRepository": "Repository wählen",
+        "conflicts": "Änderungen prüfen"
+    },
+    "error": {
+        "rateLimit": "GitHub begrenzt die Anfragen. Sync funktioniert in ein paar Minuten wieder.",
+        "notFound": "Das Repository wurde nicht gefunden. Wähle es erneut.",
+        "server": "GitHub hat nicht korrekt geantwortet. Versuche es später noch einmal.",
+        "data": "Die synchronisierten Daten sind ungültig, deshalb wurde nichts geändert.",
+        "busy": "Ein anderes Gerät ändert ständig die Daten. Versuche es gleich noch einmal.",
+        "other": "Etwas ist schiefgelaufen. Es wurde nichts geändert.",
+        "reauth": "Deine Anmeldung ist abgelaufen. Melde dich erneut an, um weiter zu synchronisieren.",
+        "forbidden": "GitHub hat den Zugriff auf das Repository verweigert. Prüfe, ob Gamerdex Sync Lese- und Schreibzugriff (Read and write) auf Contents hat, und synchronisiere dann erneut.",
+        "httpStatus": "GitHub antwortete mit {status}.",
+        "notFoundFolder": "Eine Datei oder ein Ordner in {provider} wurde nicht gefunden. Synchronisiere erneut.",
+        "forbiddenFolder": "{provider} hat den Zugriff verweigert. Melde dich erneut an und erlaube den Zugriff auf die Dateien, die Gamerdex erstellt.",
+        "httpStatusFolder": "{provider} antwortete mit {status}."
+    },
+    "choice": {
+        "title": "Dieses Gerät und die Cloud haben beide Daten",
+        "body": "Das ist der erste Sync von diesem Gerät. Wähle, was passieren soll. Aus der Cloud wird nichts gelöscht, bevor du entscheidest.",
+        "counts": "Dieses Gerät: {local}. Cloud: {cloud}.",
+        "merge": "Beide zusammenführen",
+        "mergeHint": "Behält alles aus beiden. Die höhere Stufe gewinnt.",
+        "keepLocal": "Dieses Gerät behalten",
+        "keepLocalHint": "Ersetzt die Cloud-Daten durch die Daten auf diesem Gerät.",
+        "keepCloud": "Cloud behalten",
+        "keepCloudHint": "Ersetzt die Daten auf diesem Gerät durch die Cloud-Daten."
+    },
+    "conflicts": {
+        "title": "Änderungen, die sich nicht zusammenführen ließen",
+        "body": "Zwei Geräte haben denselben Wert geändert. Der Cloud-Wert wurde behalten. Wähle den Wert dieses Geräts, um ihn stattdessen zu nutzen.",
+        "cloudValue": "Cloud",
+        "deviceValue": "Dieses Gerät",
+        "keepDevice": "Wert dieses Geräts nutzen",
+        "dismiss": "Schließen",
+        "empty": "Nichts",
+        "deletedEdited": "Ein Gerät hat das entfernt, ein anderes hat es geändert. Die geänderte Version wurde behalten."
+    },
+    "callback": {
+        "title": "Anmeldung läuft",
+        "working": "Anmeldung wird abgeschlossen",
+        "back": "Zurück zu den Einstellungen",
+        "denied": "Die Anmeldung wurde abgebrochen.",
+        "state": "Die Anmeldung konnte nicht geprüft werden. Starte in den Einstellungen neu.",
+        "missing": "Die Anmeldung hat keinen Code gesendet. Starte in den Einstellungen neu.",
+        "failed": "Die Anmeldung konnte nicht abgeschlossen werden. Versuche es später noch einmal."
+    },
+    "playthroughCount": "{count, plural, one {{amount} Spielstand} other {{amount} Spielstände}}",
+    "provider": {
+        "github": {
+            "name": "GitHub",
+            "tile": "Ein privates Repository in deinem Besitz namens {name}.",
+            "badge": "Für Entwickler"
+        },
+        "google": {
+            "name": "Google Drive",
+            "tile": "Ein sichtbarer Gamerdex-Ordner in deinem Drive. Gamerdex sieht nur die Dateien, die es selbst erstellt.",
+            "badge": "Empfohlen"
+        },
+        "dropbox": {
+            "name": "Dropbox",
+            "tile": "Ein Gamerdex-Ordner im Ordner Apps deiner Dropbox. Gamerdex sieht nur diesen Ordner.",
+            "badge": "Nur App-Ordner"
+        },
+        "microsoft": {
+            "name": "OneDrive",
+            "tile": "Ein Gamerdex-Ordner im Ordner Apps deines OneDrive. Gamerdex sieht nur diesen Ordner.",
+            "badge": "Private Konten"
+        }
+    },
+    "connect": {
+        "title": "Geräteübergreifend synchronisieren",
+        "pill": "Nicht verbunden",
+        "intro": "Halte deine Spielstände auf Computer und Handy gleich. Sync ist optional und kostenlos. Wähle, wo die Kopie liegt.",
+        "pickerLabel": "Wo die Kopie liegt",
+        "panelTitle": "{provider} verbinden",
+        "another": "Du kannst vor der Anmeldung einen anderen Anbieter wählen.",
+        "firstSync": "Wähle beim ersten Sync, was du behältst, falls beide Seiten schon Daten haben. Vor deiner Entscheidung wird nichts ersetzt.",
+        "google": {
+            "step1": "Melde dich in diesem Fenster bei Google an.",
+            "step2": "Erlaube den Zugriff auf die Dateien, die Gamerdex erstellt. Die App sieht deine anderen Dateien nicht.",
+            "button": "Google Drive verbinden"
+        },
+        "github": {
+            "step1": "Erstelle ein leeres privates Repository namens {name}. Hake „Add a README file“ an.",
+            "step2": "Melde dich bei GitHub an und gib Gamerdex Sync Zugriff nur auf dieses Repository.",
+            "button": "GitHub verbinden"
+        },
+        "dropbox": {
+            "step1": "Melde dich in diesem Fenster bei Dropbox an.",
+            "step2": "Erlaube den Zugriff auf den Gamerdex-App-Ordner. Die App sieht deine anderen Dateien nicht.",
+            "button": "Dropbox verbinden"
+        },
+        "microsoft": {
+            "step1": "Melde dich in diesem Fenster mit deinem privaten Microsoft-Konto an.",
+            "step2": "Erlaube den Zugriff auf den Gamerdex-App-Ordner. Die App sieht deine anderen Dateien nicht.",
+            "button": "OneDrive verbinden"
+        }
+    },
+    "how": {
+        "title": "So funktioniert Sync",
+        "one": "Deine Spielstände werden als eine Datei in deinem eigenen Speicher abgelegt, im selben Format wie die Backup-Datei, plus eine kleine Datei mit der Geräteliste.",
+        "two": "Gamerdex hat keinen Server, der deine Daten speichert. Dein Browser spricht direkt mit deinem Speicher.",
+        "three": "Markierte Items und Stufen behalten, was ein Gerät geändert hat, und die höhere Stufe gewinnt. Ändern beide Geräte einen Namen oder den aktuellen Tag, wählst du, welcher bleibt.",
+        "four": "Jedes Gerät behält seinen eigenen aktiven Spielstand. Sync wechselt ihn nie.",
+        "five": "Trenne die Verbindung jederzeit. Deine Spielstände bleiben auf jedem Gerät."
+    },
+    "banner": {
+        "title": "{count, plural, one {{amount} Änderung braucht eine Entscheidung} other {{amount} Änderungen brauchen eine Entscheidung}}",
+        "body": "Zwei Geräte haben denselben Wert geändert. Der Cloud-Wert bleibt, bis du entscheidest.",
+        "review": "Prüfen",
+        "waiting": "Der erste Sync wartet auf deine Wahl.",
+        "choose": "Wählen"
+    },
+    "playthroughs": {
+        "title": "Spielstände",
+        "thisDevice": "Dieses Gerät",
+        "cloud": "Cloud, letzter Sync",
+        "notInCloud": "Noch nicht in der Cloud",
+        "review": "Prüfen",
+        "note": "Wenn du einen Spielstand löschst, wird er beim nächsten Sync aus der Sync-Datei entfernt.",
+        "status": {
+            "synced": "Synchronisiert",
+            "changedHere": "Hier geändert",
+            "conflict": "Konflikt",
+            "newHere": "Neu hier"
+        },
+        "describe": "Tag {day}, {season} · {percent}%"
+    },
+    "activity": {
+        "title": "Letzte Sync-Aktivität",
+        "empty": "Noch nichts synchronisiert.",
+        "connected": "{provider} in diesem Browser verbunden.",
+        "uploaded": "Änderungen von diesem Gerät hochgeladen.",
+        "downloaded": "Änderungen aus der Cloud heruntergeladen.",
+        "merged": "Änderungen beider Seiten zusammengeführt.",
+        "conflicts": "{count, plural, one {{amount} Änderung braucht eine Entscheidung.} other {{amount} Änderungen brauchen eine Entscheidung.}}",
+        "failed": "Der Sync ist fehlgeschlagen."
+    },
+    "settings": {
+        "title": "Sync-Einstellungen",
+        "auto": "Automatisch synchronisieren",
+        "autoHint": "Synchronisiert beim Öffnen des Trackers und ein paar Sekunden nach jeder Änderung.",
+        "focus": "Beim Zurückkehren zum Tab nach Änderungen suchen",
+        "focusHint": "Holt neuere Cloud-Daten, wenn du zum Tracker zurückwechselst.",
+        "metered": "Bei getakteter Verbindung warten",
+        "meteredHint": "Überspringt automatische Syncs, solange der Browser eine Datensparverbindung meldet. Jetzt synchronisieren funktioniert weiterhin."
+    },
+    "lives": {
+        "title": "Wo deine Daten liegen",
+        "storage": "Speicher",
+        "folder": "Ordner",
+        "dataFile": "Datendatei",
+        "metaFile": "Meta-Datei",
+        "size": "Größe",
+        "kb": "{amount} KB",
+        "note": "Die Datendatei hat dasselbe Format wie die Backup-Datei. Die Meta-Datei enthält die Geräteliste und keine Spieldaten. Deine Anmeldung steht in keiner der beiden Dateien.",
+        "googleNote": "Der Gamerdex-Ordner ist in deinem Drive sichtbar. Gamerdex kann nur die Dateien öffnen, die es selbst erstellt hat.",
+        "githubNote": "Halte das Repository privat. Jeder, der es öffnen kann, kann deine Daten lesen.",
+        "dropboxNote": "Der Gamerdex-Ordner liegt im Ordner Apps deiner Dropbox. Gamerdex kann nur diesen Ordner öffnen.",
+        "microsoftNote": "Der Gamerdex-Ordner liegt im Ordner Apps deines OneDrive. Gamerdex kann nur diesen Ordner öffnen."
+    },
+    "device": {
+        "title": "Dieses Gerät",
+        "name": "Gerätename",
+        "nameHint": "Die Sync-Dateien zeigen diesen Namen für dieses Gerät. Beim Umbenennen wird die Meta-Datei beim nächsten Sync aktualisiert.",
+        "activePlaythrough": "Aktiver Spielstand",
+        "noPlaythrough": "Keiner",
+        "login": "Sync-Anmeldung",
+        "loginValue": "Nur auf diesem Gerät",
+        "loginHint": "Der aktive Spielstand wird auf jedem Gerät einzeln gewählt, und Sync ändert ihn nie. Deine Anmeldung bleibt auf diesem Gerät. Sie steht nie in den gespeicherten Daten, der Backup-Datei oder den Sync-Dateien."
+    },
+    "disconnect": {
+        "title": "Trennen",
+        "body": "Beendet den Sync in diesem Browser. Deine Spielstände bleiben auf diesem Gerät und in der Cloud. Andere Geräte synchronisieren weiter.",
+        "button": "{provider} trennen",
+        "googleHint": "Um die Cloud-Kopie selbst zu löschen, trenne die Verbindung und lösche dann den Gamerdex-Ordner in deinem Google Drive.",
+        "githubHint": "Um die Cloud-Kopie selbst zu löschen, trenne die Verbindung und lösche dann den Gamerdex-Ordner in deinem Repository.",
+        "dropboxHint": "Um die Cloud-Kopie selbst zu löschen, trenne die Verbindung und lösche dann den App-Ordner unter Apps in deiner Dropbox.",
+        "microsoftHint": "Um die Cloud-Kopie selbst zu löschen, trenne die Verbindung und lösche dann den App-Ordner unter Apps in deinem OneDrive."
+    },
+    "first": {
+        "thisDevice": "Dieses Gerät",
+        "cloud": "Cloud",
+        "recommended": "Empfohlen",
+        "later": "Später entscheiden",
+        "apply": "Auswahl anwenden",
+        "optionsLabel": "Was behalten"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "saveFailed": {
+        "title": "Nicht gespeichert",
+        "message": "Der Browser konnte deine Daten nicht speichern. Exportiere ein Backup, damit deine Änderungen nicht verloren gehen.",
+        "exportBackup": "Backup exportieren"
+    },
+    "undo": "Rückgängig"
+}

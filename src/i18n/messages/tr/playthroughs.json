@@ -1,0 +1,124 @@
+{
+    "title": "Oynanışlar",
+    "subline": "Dinkum maceralarını yönet. {count, plural, one {{amount} oynanış} other {{amount} oynanış}}, {name} etkin.",
+    "sublineNoneActive": "Dinkum maceralarını yönet. {count, plural, one {{amount} oynanış} other {{amount} oynanış}}.",
+    "sublineEmpty": "Henüz oynanış yok.",
+    "loading": "Oynanışlar yükleniyor...",
+    "stats": {
+        "playthroughs": "Oynanışlar",
+        "playthroughsCaption": "bu tarayıcıda",
+        "active": "Etkin",
+        "noneActive": "Yok",
+        "furthest": "En ileride olan",
+        "average": "Ortalama tamamlanma",
+        "averageCaption": "tümü genelinde"
+    },
+    "filters": {
+        "sortBy": "Sırala",
+        "sort": {
+            "lastUpdated": "Son güncelleme",
+            "name": "Ad",
+            "createdAt": "Oluşturulma tarihi",
+            "completion": "Tamamlanma yüzdesi"
+        },
+        "search": "Oynanışları ada göre ara",
+        "showing": "{total} {total, plural, one {oynanış} other {oynanış}} içinden {shown} gösteriliyor",
+        "defaultSortFrom": "Varsayılan sıralama <link>Ayarlar</link> sayfasından gelir"
+    },
+    "noMatch": {
+        "title": "\"{query}\" ile eşleşen oynanış yok",
+        "description": "Başka bir ad dene.",
+        "clear": "Aramayı temizle"
+    },
+    "empty": {
+        "title": "Oynanış bulunamadı",
+        "description": "Henüz hiç oynanış oluşturmadın. İlk oynanışını oluşturarak Dinkum maceranı takip etmeye başla. Her biri bu tarayıcıya kaydedilir.",
+        "create": "İlk oynanışını oluştur",
+        "importBackup": "Bunun yerine bir yedek içe aktar"
+    },
+    "card": {
+        "created": "Oluşturuldu: {date}",
+        "updated": "Güncellendi: {when}",
+        "complete": "%{percent} tamamlandı",
+        "overall": "Genel ilerleme",
+        "pedia": "Pedia",
+        "licenses": "Lisanslar",
+        "milestones": "Kilometre taşları",
+        "buildings": "Binalar",
+        "pediaDetail": "Balık {fish} · Böcek {bugs} · Küçük hayvan {critters}",
+        "count": "{count}/{total}",
+        "gameDate": "{day}. gün, {season}",
+        "currentGameDate": "Geçerli oyun tarihi",
+        "setActive": "Etkin yap",
+        "active": "Etkin",
+        "openOverview": "Genel Bakış'ı aç",
+        "edit": "Düzenle",
+        "delete": "Sil",
+        "activePlaythrough": "Etkin oynanış"
+    },
+    "seasons": {
+        "Spring": "İlkbahar",
+        "Summer": "Yaz",
+        "Autumn": "Sonbahar",
+        "Winter": "Kış"
+    },
+    "relative": {
+        "today": "Bugün",
+        "yesterday": "Dün",
+        "daysAgo": "{count, plural, one {{amount} gün önce} other {{amount} gün önce}}",
+        "weeksAgo": "{count, plural, one {{amount} hafta önce} other {{amount} hafta önce}}",
+        "monthsAgo": "{count, plural, one {{amount} ay önce} other {{amount} ay önce}}",
+        "unknown": "Yok"
+    },
+    "new": {
+        "action": "Yeni oynanış",
+        "actionShort": "Yeni",
+        "pageTitle": "Yeni oynanış",
+        "pageSubline": "Ona bir ad ver ve takibe başla. Her şey bu tarayıcıya kaydedilir.",
+        "back": "Tüm oynanışlara dön",
+        "next": {
+            "title": "Sonra ne olur",
+            "one": "Boş bir oynanış hemen bu tarayıcıya kaydedilir.",
+            "two": "Kutu işaretliyse etkin oynanış olur. Kenar çubuğundaki değiştirici onu gösterir.",
+            "three": "Yeni kart en üstte olacak şekilde Oynanışlar listesine gelirsin ve bir Geri al bildirimi görürsün."
+        },
+        "createdToast": "{name} oluşturuldu"
+    },
+    "form": {
+        "title": "Yeni oynanış oluştur",
+        "nameLabel": "Oynanış adı",
+        "required": "Zorunlu",
+        "placeholder": "Dinkum Maceram",
+        "help": "Sonradan tanıyabilmek için oynanışına akılda kalıcı bir ad ver.",
+        "counter": "{count} / {max}",
+        "errorEmpty": "Lütfen oynanışın için bir ad gir",
+        "makeActive": "Bunu etkin oynanış yap",
+        "create": "Oynanış oluştur",
+        "creating": "Oluşturuluyor...",
+        "cancel": "İptal",
+        "failed": "Oynanış oluşturulamadı. Lütfen tekrar dene.",
+        "tryAgain": "Tekrar dene"
+    },
+    "edit": {
+        "title": "Oynanışı düzenle",
+        "save": "Kaydet",
+        "saving": "Kaydediliyor...",
+        "savedToast": "Kaydedildi",
+        "renamed": "Yeni ad: {name}",
+        "description": "{name} · {date} tarihinde oluşturuldu",
+        "nameLabel": "Oynanış adı",
+        "help": "Kaydetmek için Enter'a bas. Ad boşken Kaydet kapalı kalır."
+    },
+    "delete": {
+        "title": "{name} silinsin mi?",
+        "description": "Bu işlem, bu cihazda kayıtlı tüm ilerlemesini kaldırır.",
+        "activeNext": "Bu, etkin oynanışın. En son güncellenen {next} olduğu için silme işleminden sonra o etkin olur.",
+        "activeLast": "Bu, etkin oynanışın ve tek oynanışın. Silme işleminden sonra etkin oynanış kalmaz.",
+        "exportFirst": "Önce bir yedek dışa aktar",
+        "confirm": "Sil",
+        "cancel": "İptal",
+        "toast": "{name} silindi",
+        "toastMessage": "Geri alma 10 saniye açık kalır",
+        "updated": "{when} güncellendi · {date}"
+    }
+}

@@ -1,0 +1,85 @@
+{
+    "title": "圖鑑",
+    "subline": "已收集 {done} / {total} · {percent}% · {name}",
+    "tabsLabel": "圖鑑分類",
+    "tabs": {
+        "fish": "魚類",
+        "bugs": "昆蟲",
+        "critters": "小動物"
+    },
+    "nouns": {
+        "fish": "魚類",
+        "bugs": "昆蟲",
+        "critters": "小動物"
+    },
+    "summary": {
+        "captured": "已捕獲",
+        "donated": "已捐贈給博物館",
+        "permit": "已獲得許可點數",
+        "of": "共 {total}"
+    },
+    "filters": {
+        "sheetTitle": "篩選{tab}",
+        "biome": "生態區",
+        "rarity": "稀有度",
+        "season": "季節",
+        "time": "時間",
+        "collected": "已收集",
+        "donated": "已捐贈",
+        "allBiomes": "所有生態區",
+        "allRarities": "所有稀有度",
+        "allSeasons": "所有季節",
+        "anyTime": "任何時間",
+        "all": "全部",
+        "onlyCollected": "已收集",
+        "notCollected": "待收集",
+        "onlyDonated": "已捐贈",
+        "notDonated": "待捐贈",
+        "search": "依名稱搜尋{tab}",
+        "showing": "顯示 {shown} / {total} 筆{tab}",
+        "capturedCount": "已捕獲 {count}",
+        "donatedCount": "已捐贈 {count}",
+        "apply": "顯示 {count} 筆{tab}"
+    },
+    "view": {
+        "label": "檢視",
+        "grid": "格狀",
+        "list": "列表"
+    },
+    "card": {
+        "biome": "生態區",
+        "seasons": "季節",
+        "time": "時間",
+        "sell": "售價",
+        "cooked": "烹煮後",
+        "cookedValue": "{price} · x{pieces}",
+        "status": "狀態",
+        "missing": "未取得",
+        "caught": "已捕獲",
+        "donated": "已捐贈"
+    },
+    "table": {
+        "name": "名稱",
+        "rarity": "稀有度",
+        "biome": "生態區",
+        "seasons": "季節",
+        "time": "時間",
+        "sell": "售價",
+        "cooked": "烹煮後",
+        "status": "狀態",
+        "caption": "顯示 {shown} / {total} 列。兩種檢視共用相同的篩選、狀態控制和商業等級。"
+    },
+    "empty": {
+        "title": "沒有符合篩選條件的{tab}",
+        "description": "試試其他名稱，或清除篩選。",
+        "clear": "清除篩選"
+    },
+    "toast": {
+        "marked": "已將 {name} 標記為{status}",
+        "statuses": {
+            "missing": "未取得",
+            "caught": "已捕獲",
+            "donated": "已捐贈"
+        }
+    }
+}

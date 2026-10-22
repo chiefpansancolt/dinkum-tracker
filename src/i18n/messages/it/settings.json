@@ -1,0 +1,141 @@
+{
+    "title": "Impostazioni",
+    "subline": "{count, plural, one {{amount} partita salvata} other {{amount} partite salvate}} in questo browser · Le preferenze si salvano in automatico",
+    "storage": {
+        "title": "Archiviazione dei dati!",
+        "body": "I tuoi dati sono salvati nel browser. Si perdono se i dati del browser vengono cancellati, a meno che tu non li sincronizzi o ne faccia un backup.",
+        "action": "Usa le funzioni qui sotto per esportare e fare il backup dei tuoi dati."
+    },
+    "manage": {
+        "title": "Partite",
+        "description": "Rinomina, elimina o crea partite nella pagina Partite.",
+        "link": "Gestisci le partite"
+    },
+    "data": {
+        "title": "Gestione dei dati",
+        "count": "{count, plural, one {{amount} partita} other {{amount} partite}}",
+        "exportButton": "Esporta tutte le partite",
+        "exportHint": "Scarica un file di backup con tutte le tue partite salvate.",
+        "exportDone": "Esportazione riuscita!",
+        "importButton": "Importa dati",
+        "importHint": "Carica un file (.json) esportato in precedenza. Un passaggio di conferma chiede se unire o sostituire.",
+        "importDone": "Importazione riuscita!",
+        "importFailed": "Formato del file non valido",
+        "resetWarning": "Attenzione: questo elimina tutte le partite e non si può annullare.",
+        "resetButton": "Reimposta tutti i dati",
+        "resetConfirm": "Conferma reimpostazione",
+        "resetCancel": "Annulla",
+        "resetDone": "Dati reimpostati",
+        "importFile": "File di backup",
+        "description": "Un solo file di backup contiene tutte le partite.",
+        "exportTitle": "Esporta dati",
+        "importTitle": "Importa dati",
+        "resetTitle": "Reimposta tutti i dati",
+        "resetSyncedCopy": "Elimina anche la copia sincronizzata su {provider}",
+        "resetSyncedOn": "La sincronizzazione resta attiva. Gli altri tuoi dispositivi perdono queste partite alla prossima sincronizzazione. Se non sei sicuro, esporta prima un backup.",
+        "resetSyncedOff": "La copia sincronizzata resta dov'è. La sincronizzazione si disconnette in questo browser, così non svuota il cloud.",
+        "providers": {
+            "github": "GitHub",
+            "google": "Google Drive",
+            "dropbox": "Dropbox",
+            "microsoft": "OneDrive"
+        }
+    },
+    "import": {
+        "title": "Importa backup",
+        "description": "Scegli cosa succede alle partite già presenti su questo dispositivo.",
+        "fileSummary": "{inFile, plural, one {{inFileAmount} partita} other {{inFileAmount} partite}} nel file · {onDeviceAmount} su questo dispositivo",
+        "mode": "Modalità di importazione",
+        "merge": "Unisci (consigliato)",
+        "mergeDescription": "Aggiunge le partite nuove. Se una partita è in entrambi i posti, vince la copia aggiornata più di recente. Le partite presenti solo su questo dispositivo restano.",
+        "replace": "Sostituisci tutto",
+        "replaceDescription": "Elimina {onDevice, plural, one {{onDeviceAmount} partita} other {{onDeviceAmount} partite}} su questo dispositivo e carica le {inFileAmount} del file. Non si può annullare.",
+        "table": {
+            "playthrough": "Partita",
+            "inFile": "Nel file",
+            "onDevice": "Su questo dispositivo",
+            "result": "Risultato"
+        },
+        "updatedOn": "Aggiornata il {date}",
+        "notOnDevice": "Non sul dispositivo",
+        "notInFile": "Non nel file",
+        "results": {
+            "added": "Aggiunta",
+            "updated": "Vince la copia del file",
+            "kept": "Resta la copia del dispositivo",
+            "replaced": "Sostituita",
+            "removed": "Rimossa"
+        },
+        "exportFirst": "Esporta prima i dati attuali",
+        "cancel": "Annulla",
+        "confirmMerge": "Unisci {count, plural, one {{amount} partita} other {{amount} partite}}",
+        "confirmReplace": "Sostituisci tutti i dati"
+    },
+    "appearance": {
+        "title": "Aspetto e preferenze",
+        "theme": "Tema",
+        "themeHint": "Sistema segue il tuo dispositivo.",
+        "defaultSort": "Ordine predefinito delle partite",
+        "defaultSortHint": "Scegli come ordinare le partite per impostazione predefinita. Si salva appena lo cambi.",
+        "resources": "Altre risorse",
+        "opensInNewTab": "Si apre in una nuova scheda",
+        "wiki": "Dinkum Wiki",
+        "repository": "Repository del progetto"
+    },
+    "page": {
+        "title": "Impostazioni",
+        "tabsLabel": "Impostazioni",
+        "tabs": {
+            "sync": "Sincronizzazione cloud",
+            "preferences": "Preferenze",
+            "data": "Backup e dati",
+            "about": "Informazioni"
+        }
+    },
+    "preferences": {
+        "appearance": {
+            "title": "Aspetto",
+            "description": "Salvato subito su questo dispositivo."
+        },
+        "playthroughList": {
+            "title": "Elenco delle partite",
+            "description": "Come si apre la pagina Partite."
+        }
+    },
+    "about": {
+        "version": "Versione {version}",
+        "summary": "Tieni traccia dei tuoi progressi in Dinkum: pesci, insetti, animaletti, traguardi, licenze, NPC e altro. Tutto è salvato in questo browser.",
+        "resources": "Altre risorse",
+        "disclaimer": "Non affiliato né approvato dai creatori di Dinkum."
+    },
+    "region": {
+        "title": "Lingua e regione",
+        "description": "Scegli la lingua e come si scrivono numeri e date. Salvato su questo dispositivo.",
+        "language": {
+            "label": "Lingua",
+            "hint": "I nomi di animali, oggetti, NPC e degli altri dati di gioco vengono dai dati del gioco e restano in inglese."
+        },
+        "numberFormat": {
+            "label": "Formato dei numeri",
+            "hint": "Esempio: {example}",
+            "options": {
+                "auto": "Automatico, segue la lingua",
+                "us": "1,234.56 (Stati Uniti)",
+                "european": "1.234,56 (Germania)",
+                "french": "1 234,56 (Francia)",
+                "swiss": "1’234.56 (Svizzera)",
+                "indian": "12,34,567.89 (India)"
+            }
+        },
+        "dateFormat": {
+            "label": "Formato della data",
+            "hint": "Esempio: {example}",
+            "options": {
+                "auto": "Automatico, segue la lingua",
+                "mdy": "Mese/Giorno/Anno",
+                "dmy": "Giorno/Mese/Anno",
+                "ymd": "Anno-Mese-Giorno"
+            }
+        }
+    }
+}

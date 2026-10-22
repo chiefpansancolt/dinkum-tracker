@@ -1,0 +1,70 @@
+{
+    "breakdown": {
+        "title": "アイテム内訳",
+        "subline": "どの資源がどのアイテムに使われるか · 資源{count}種",
+        "tiles": {
+            "resources": "資源",
+            "resourcesCaption": "レシピと建築で使用",
+            "common": "よく使う（3個以上のアイテムで使用）",
+            "of": "{total}中",
+            "mostUsed": "最も使われる",
+            "items": "{count, plural, other {{amount}個のアイテム}}"
+        },
+        "search": "検索",
+        "searchPlaceholder": "資源を名前で検索",
+        "sortBy": "並べ替え",
+        "sortName": "名前（五十音順）",
+        "sortUsage": "使用数",
+        "filter": "フィルター",
+        "filterWithCount": "フィルター（{count}）",
+        "commonOnly": "よく使う資源のみ（3個以上のアイテムで使用）",
+        "showing": "資源 {total}件中{shown}件を表示",
+        "notes": {
+            "categories": "（{count, plural, other {{amount}カテゴリー}}で絞り込み中）",
+            "types": "（{count, plural, other {{amount}種類}}で絞り込み中）",
+            "common": "（よく使う資源のみ）"
+        },
+        "panel": {
+            "title": "資源をフィルター",
+            "byCategory": "カテゴリーで絞り込み",
+            "byType": "資源の種類で絞り込み",
+            "clear": "選択をクリア",
+            "itemCount": "{count, plural, other {{amount}個のアイテム}}",
+            "done": "資源を{count}件表示",
+            "option": "{name}、{items}"
+        },
+        "card": {
+            "usedIn": "{count, plural, other {{amount}個のアイテムで使用}}",
+            "categories": "カテゴリー",
+            "usedInList": "使用先",
+            "showMore": "他{count}件を表示...",
+            "showLess": "表示を減らす"
+        },
+        "empty": {
+            "title": "条件に一致する資源はありません",
+            "description": "別の名前を試すか、選択をクリアしてください。",
+            "clear": "選択をクリア"
+        }
+    },
+    "weight": {
+        "title": "重量計算",
+        "subline": "重い獲物の重さから価格を計算します · アイテム{count}個",
+        "picker": "アイテムを選択",
+        "perKg": "1kgあたり{price}",
+        "range": "{min} - {max} kg",
+        "rangeLine": "重量の範囲：{min}kg - {max}kg",
+        "weight": "重量：{weight} kg",
+        "slider": "重量（kg）",
+        "minus": "重量を{step} kg減らす",
+        "plus": "重量を{step} kg増やす",
+        "min": "{min}kg",
+        "max": "{max}kg",
+        "stepNote": "{step} kg刻みです。別のアイテムを選ぶと、重量は最小値に戻ります。",
+        "total": "合計価格",
+        "dinks": "Dinks",
+        "formula": "{weight} kg × 1kgあたり{price} = {total}",
+        "rounded": "1 Dinks単位に四捨五入しています。",
+        "atMin": "最小重量での価格",
+        "atMax": "最大重量での価格"
+    }
+}

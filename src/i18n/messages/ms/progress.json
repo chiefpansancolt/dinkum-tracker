@@ -1,0 +1,123 @@
+{
+    "common": {
+        "level": "Tahap {level}",
+        "levelCount": "Tahap {level}:",
+        "locked": "Siapkan tahap sebelumnya dahulu.",
+        "completeAll": "Siapkan semua",
+        "clearAll": "Kosongkan semua",
+        "requirement": "Keperluan",
+        "requiredSkill": "Tahap kemahiran diperlukan",
+        "all": "Semua",
+        "collected": "Dikumpul",
+        "notCollected": "Belum dikumpul",
+        "clearFilters": "Kosongkan penapis",
+        "toast": {
+            "obtained": "{item}: tahap {level} diperoleh",
+            "cleared": "{item}: {count, plural, other {{amount} tahap}} dikosongkan",
+            "allObtained": "{item}: semua tahap diperoleh",
+            "allCleared": "{item}: semua tahap dikosongkan"
+        },
+        "empty": {
+            "title": "Tiada {things} sepadan dengan penapis ini",
+            "description": "Cuba nama lain atau kosongkan penapis."
+        },
+        "permitPoints": "mata permit"
+    },
+    "buildings": {
+        "title": "Bangunan",
+        "subline": "{count} daripada {total} dipasang · {percent}% · {name}",
+        "tiles": {
+            "installed": "Dipasang",
+            "stillToInstall": "Belum dipasang",
+            "listed": "Bangunan disenaraikan",
+            "of": "daripada {total}",
+            "breakdown": "{collectable} boleh dikumpul · {movable} boleh dialih · {reference} rujukan"
+        },
+        "filters": {
+            "deedType": "Jenis surat hak milik",
+            "npc": "NPC",
+            "collected": "Dikumpul",
+            "search": "Cari bangunan mengikut nama...",
+            "sheetTitle": "Tapis bangunan",
+            "showing": "Menunjukkan {shown} daripada {total} bangunan · Dipasang {count}",
+            "apply": "Tunjuk {count} bangunan"
+        },
+        "card": {
+            "deed": "Surat hak milik",
+            "npc": "NPC",
+            "size": "Saiz",
+            "buildTime": "Masa pembinaan",
+            "deedPrice": "Harga surat hak milik",
+            "hours": "Waktu",
+            "closed": "Tutup",
+            "description": "Penerangan",
+            "resources": "Sumber",
+            "resource": "{count} {name}"
+        },
+        "installed": "Dipasang",
+        "nothingToInstall": "Tiada apa-apa untuk dipasang bagi jenis surat hak milik ini.",
+        "things": "bangunan",
+        "toast": {
+            "installed": "{name} ditanda sebagai dipasang",
+            "notInstalled": "{name} ditanda sebagai belum dipasang"
+        }
+    },
+    "licenses": {
+        "title": "Lesen",
+        "subline": "{count} daripada {total} tahap diperoleh · {percent}% · {name}",
+        "tiles": {
+            "levels": "Tahap diperoleh",
+            "complete": "Lesen siap",
+            "permit": "Mata permit dibelanjakan",
+            "of": "daripada {total}",
+            "sentence": "Anda telah membelanjakan {amount} daripada {total} mata permit yang diperlukan."
+        },
+        "filters": {
+            "category": "Kategori",
+            "collected": "Dikumpul",
+            "search": "Cari lesen mengikut nama...",
+            "sheetTitle": "Tapis lesen",
+            "showing": "Menunjukkan {shown} daripada {total} lesen · Tahap dibuka {count}",
+            "apply": "Tunjuk {count} lesen"
+        },
+        "things": "lesen"
+    },
+    "milestones": {
+        "title": "Pencapaian",
+        "subline": "{count} daripada {total} tahap siap · {percent}% · {name}",
+        "tiles": {
+            "levels": "Tahap siap",
+            "complete": "Pencapaian siap",
+            "permit": "Mata permit diperoleh",
+            "of": "daripada {total}",
+            "sentence": "Anda telah memperoleh {amount} daripada {total} mata permit yang ada."
+        },
+        "filters": {
+            "category": "Kategori",
+            "allCategories": "Semua kategori",
+            "collected": "Dikumpul",
+            "viewMode": "Mod paparan",
+            "grouped": "Dikumpulkan mengikut huruf",
+            "all": "Semua pencapaian",
+            "search": "Cari pencapaian mengikut nama atau penerangan...",
+            "sheetTitle": "Tapis pencapaian",
+            "showing": "Menunjukkan {shown} daripada {total} pencapaian · Tahap siap {count}",
+            "apply": "Tunjuk {count} pencapaian"
+        },
+        "things": "pencapaian"
+    },
+    "skills": {
+        "title": "Kemahiran",
+        "subline": "{skills} kemahiran · {levels} tahap keseluruhan · Tiada had atas · {name}",
+        "tiles": {
+            "total": "Jumlah tahap kemahiran",
+            "across": "merentas {count} kemahiran",
+            "highest": "Kemahiran tertinggi",
+            "atZero": "Kemahiran pada tahap 0",
+            "atZeroOf": "daripada {total}"
+        },
+        "level": "Tahap kemahiran",
+        "note": "Lesen meminta tahap kemahiran pada setiap peringkat. Lihat <link>Lesen</link> untuk mengetahui tahap yang masih anda perlukan.",
+        "toast": "{name} kini tahap {level}"
+    }
+}

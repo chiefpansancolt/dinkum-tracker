@@ -1,0 +1,78 @@
+{
+    "header": {
+        "features": "功能",
+        "track": "可追蹤的內容",
+        "view": "查看我的存檔",
+        "new": "新增存檔",
+        "menu": "選單",
+        "menuOpen": "開啟選單",
+        "menuClose": "關閉選單",
+        "nav": "主要"
+    },
+    "hero": {
+        "eyebrow": "追蹤你的進度",
+        "title": "Dinkum Tracker",
+        "intro": "為你的 Dinkum 冒險打造的完整追蹤應用程式。管理多個存檔、追蹤收集進度，一站掌握所有進展。所有資料都儲存在你的瀏覽器中，也可以同步到你自己的雲端儲存空間。",
+        "view": "查看我的存檔",
+        "new": "開始新冒險",
+        "imageAlt": "Dinkum 遊戲畫面"
+    },
+    "counts": {
+        "title": "追蹤你的完整收藏",
+        "intro": "依照遊戲中的實際數量，管理 Dinkum 旅程的每個面向。",
+        "pedia": "圖鑑",
+        "npcs": "NPC",
+        "licenses": "執照",
+        "milestones": "里程碑",
+        "buildings": "建築",
+        "gear": "裝備與配件",
+        "recipes": "配方",
+        "clothing": "服飾"
+    },
+    "everything": {
+        "title": "全部都能追蹤",
+        "intro": "邁向 Dinkum 成功所需的一切工具",
+        "imageAlt": "Dinkum Tracker 應用程式畫面",
+        "closing": "從收集昆蟲到經營與 NPC 的關係，Dinkum Tracker 幫你掌握遊戲中的一切。",
+        "pedia": {
+            "title": "圖鑑收藏",
+            "text": "追蹤所有魚類、昆蟲和小動物的季節、地點與出現時段。掌握博物館捐贈與收集進度。"
+        },
+        "npcs": {
+            "title": "NPC 關係",
+            "text": "記錄你與全部 {count} 位 NPC 的友誼、送禮偏好和愛心等級。"
+        },
+        "calendar": {
+            "title": "日曆活動",
+            "text": "記下重要日期、生日和季節活動。不再錯過 Dinkum 小鎮的任何節慶或特殊場合。"
+        }
+    },
+    "needs": {
+        "title": "你需要的一切",
+        "intro": "掌握 Dinkum 冒險中每一個重要細節。",
+        "milestones": {
+            "title": "里程碑與執照",
+            "one": "追蹤 {count} 個遊戲里程碑的完成狀況",
+            "two": "管理所有執照及其升級等級",
+            "three": "查看許可點數進度與需求"
+        },
+        "recipes": {
+            "title": "配方與製作",
+            "one": "追蹤所有烹飪配方及其食材",
+            "two": "記錄製作配方與所需資源",
+            "three": "管理工具、武器和裝備"
+        },
+        "collections": {
+            "title": "收藏與資源",
+            "one": "整理所有服飾和家具",
+            "two": "追蹤所有資源及其用途",
+            "three": "管理建築專案與地契"
+        }
+    },
+    "cta": {
+        "title": "準備好開始追蹤了嗎？",
+        "text": "今天就開始整理你的 Dinkum 冒險，再也不會弄丟進度。",
+        "create": "建立新存檔",
+        "existing": "查看現有存檔"
+    }
+}

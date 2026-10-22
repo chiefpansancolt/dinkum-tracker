@@ -1,0 +1,91 @@
+{
+    "buffs": {
+        "attackLevel": "โจมตี",
+        "charged": "ชาร์จพลัง",
+        "coolLevel": "ความเท่",
+        "defenseLevel": "ป้องกัน",
+        "diligent": "ขยัน",
+        "experienceLevel": "ประสบการณ์",
+        "fastHealthTickSpeedLevel": "เลือดฟื้นเร็วขึ้น",
+        "fishLevel": "ตกปลา",
+        "foragingLevel": "หาของป่า",
+        "healthMax": "เลือดสูงสุด",
+        "healthRegenRate": "เลือดฟื้นตัว",
+        "length": "ระยะเวลา",
+        "miningLevel": "ขุดเหมือง",
+        "sleepless": "ไม่ง่วง",
+        "speedLevel": "ความเร็ว",
+        "staminaMax": "ความทนทานสูงสุด",
+        "staminaRegenRate": "ความทนทานฟื้นตัว",
+        "swimmingLevel": "ว่ายน้ำ"
+    },
+    "categories": {
+        "buildings": "อาคาร",
+        "tools": "เครื่องมือ",
+        "weapons": "อาวุธ",
+        "equipment": "อุปกรณ์เสริม",
+        "vehicles": "ยานพาหนะ",
+        "craftingRecipes": "สูตรคราฟต์",
+        "cookingRecipes": "สูตรทำอาหาร",
+        "signWritingRecipes": "สูตรเขียนป้าย",
+        "otherCraftables": "ของคราฟต์อื่น ๆ"
+    },
+    "resourceTypes": {
+        "fish": "ปลา",
+        "critter": "สัตว์เล็ก",
+        "bug": "แมลง",
+        "relic": "โบราณวัตถุ",
+        "crop": "พืชผล",
+        "foragable": "ของป่า",
+        "animalProduct": "ผลผลิตจากสัตว์",
+        "paint": "สี",
+        "mineral": "แร่",
+        "craftable": "ของคราฟต์",
+        "trophy": "ถ้วยรางวัล",
+        "seed": "เมล็ดพันธุ์",
+        "flower": "ดอกไม้",
+        "resource": "ทรัพยากร"
+    },
+    "daily": {
+        "dayOneMilestones": "วันแรก",
+        "travelMilestones": "การเดินทาง",
+        "npcMilestones": "NPC",
+        "fishingMilestones": "ตกปลา",
+        "farmingMilestones": "ทำฟาร์ม",
+        "foragingMilestones": "หาของป่า",
+        "loggingMilestones": "ตัดไม้",
+        "miningMilestones": "ขุดเหมือง",
+        "excavationMilestones": "ขุดค้น",
+        "bugCatchingMilestones": "จับแมลง",
+        "craftingMilestones": "คราฟต์",
+        "huntingMilestones": "ล่าสัตว์",
+        "trappingMilestones": "ดักสัตว์",
+        "dinksMilestones": "Dinks"
+    },
+    "animalTypes": {
+        "Wild Animal": "สัตว์ป่า",
+        "Farm Animal": "สัตว์ในฟาร์ม",
+        "Tammed Animal": "สัตว์เลี้ยง"
+    },
+    "temperaments": {
+        "Passive": "ไม่ก้าวร้าว",
+        "Neutral": "เป็นกลาง",
+        "Aggressive": "ก้าวร้าว"
+    },
+    "seasons": {
+        "Spring": "ฤดูใบไม้ผลิ",
+        "Summer": "ฤดูร้อน",
+        "Autumn": "ฤดูใบไม้ร่วง",
+        "Winter": "ฤดูหนาว",
+        "All": "ทุกฤดู"
+    },
+    "weekdays": {
+        "Sunday": "วันอาทิตย์",
+        "Monday": "วันจันทร์",
+        "Tuesday": "วันอังคาร",
+        "Wednesday": "วันพุธ",
+        "Thursday": "วันพฤหัสบดี",
+        "Friday": "วันศุกร์",
+        "Saturday": "วันเสาร์"
+    }
+}

@@ -1,0 +1,85 @@
+{
+    "title": "Pedia",
+    "subline": "{done} de {total} coleccionados · {percent}% · {name}",
+    "tabsLabel": "Secciones de la Pedia",
+    "tabs": {
+        "fish": "Peces",
+        "bugs": "Insectos",
+        "critters": "Bichos"
+    },
+    "nouns": {
+        "fish": "peces",
+        "bugs": "insectos",
+        "critters": "bichos"
+    },
+    "summary": {
+        "captured": "Capturados",
+        "donated": "Donados al museo",
+        "permit": "Puntos de permiso ganados",
+        "of": "de {total}"
+    },
+    "filters": {
+        "sheetTitle": "Filtrar {tab}",
+        "biome": "Bioma",
+        "rarity": "Rareza",
+        "season": "Estación",
+        "time": "Hora",
+        "collected": "Coleccionados",
+        "donated": "Donados",
+        "allBiomes": "Todos los biomas",
+        "allRarities": "Todas las rarezas",
+        "allSeasons": "Todas las estaciones",
+        "anyTime": "Cualquier hora",
+        "all": "Todos",
+        "onlyCollected": "Coleccionados",
+        "notCollected": "Por coleccionar",
+        "onlyDonated": "Donados",
+        "notDonated": "Por donar",
+        "search": "Buscar {tab} por nombre",
+        "showing": "Mostrando {shown} de {total} {tab}",
+        "capturedCount": "Capturados {count}",
+        "donatedCount": "Donados {count}",
+        "apply": "Ver {count} {tab}"
+    },
+    "view": {
+        "label": "Vista",
+        "grid": "Cuadrícula",
+        "list": "Lista"
+    },
+    "card": {
+        "biome": "Bioma",
+        "seasons": "Estaciones",
+        "time": "Hora",
+        "sell": "Precio de venta",
+        "cooked": "Cocinado",
+        "cookedValue": "{price} · x{pieces}",
+        "status": "Estado",
+        "missing": "Falta",
+        "caught": "Atrapado",
+        "donated": "Donado"
+    },
+    "table": {
+        "name": "Nombre",
+        "rarity": "Rareza",
+        "biome": "Bioma",
+        "seasons": "Estaciones",
+        "time": "Hora",
+        "sell": "Venta",
+        "cooked": "Cocinado",
+        "status": "Estado",
+        "caption": "Se muestran {shown} de {total} filas. Los mismos filtros, el control de estado y el nivel de comercio se aplican en ambas vistas."
+    },
+    "empty": {
+        "title": "Ningún resultado en {tab} con estos filtros",
+        "description": "Prueba con otro nombre o borra los filtros.",
+        "clear": "Borrar filtros"
+    },
+    "toast": {
+        "marked": "{name} marcado como {status}",
+        "statuses": {
+            "missing": "faltante",
+            "caught": "atrapado",
+            "donated": "donado"
+        }
+    }
+}

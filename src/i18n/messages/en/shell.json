@@ -1,0 +1,91 @@
+{
+    "nav": {
+        "main": "Main",
+        "groups": {
+            "track": "Track",
+            "progress": "Progress",
+            "collect": "Collect",
+            "tools": "Tools"
+        },
+        "items": {
+            "overview": "Overview",
+            "pedia": "Pedia",
+            "npcs": "NPCs",
+            "calendar": "Calendar",
+            "buildings": "Buildings",
+            "licenses": "Licenses",
+            "milestones": "Milestones",
+            "skills": "Skills",
+            "recipes": "Recipes",
+            "gear": "Gear",
+            "wardrobe": "Wardrobe and home",
+            "itemsBreakdown": "Items breakdown",
+            "weightCalculator": "Weight calculator",
+            "reference": "Reference",
+            "settings": "Settings",
+            "playthroughs": "Playthroughs",
+            "newPlaythrough": "New playthrough"
+        }
+    },
+    "appShell": {
+        "skipToContent": "Skip to content",
+        "closeMenu": "Close menu"
+    },
+    "appBar": {
+        "openMenu": "Open menu"
+    },
+    "playthroughGate": {
+        "emptyTitle": "No playthrough yet",
+        "emptyDescription": "Create a playthrough to start tracking your progress.",
+        "newPlaythrough": "New playthrough"
+    },
+    "playthroughSwitcher": {
+        "sectionLabel": "Playthrough",
+        "switchPlaythrough": "Switch playthrough",
+        "loading": "Loading",
+        "noPlaythroughYet": "No playthrough yet",
+        "playthroughs": "Playthroughs",
+        "active": "Active",
+        "allPlaythroughs": "All playthroughs",
+        "newPlaythrough": "New playthrough",
+        "detail": "Day {day} · {percent}%"
+    },
+    "theme": {
+        "label": "Theme",
+        "light": "Light",
+        "dark": "Dark",
+        "system": "System"
+    },
+    "footer": {
+        "tagline": "Track your Dinkum progress with ease.",
+        "support": "Support",
+        "about": "About",
+        "settings": "Settings",
+        "discord": "Discord",
+        "github": "GitHub",
+        "dinkumWiki": "Dinkum Wiki",
+        "privacyPolicy": "Privacy policy",
+        "termsOfService": "Terms of service",
+        "disclaimerTitle": "Disclaimer",
+        "disclaimer": "This application is not affiliated with, endorsed by, or connected to Dinkum or its creators. Game data is sourced from the Dinkum Wiki. Game images and names are used for reference purposes only.",
+        "copyright": "© {year} {appName}",
+        "framework": "Built with the Gamerdex framework, a shared base for free game progress trackers. Your data stays in your browser, or in your own cloud storage if you turn on sync.",
+        "visitGamerdex": "Visit Gamerdex"
+    },
+    "domainNotice": {
+        "label": "Domain change notice:",
+        "movedTo": "Dinkum Tracker has moved to <strong>{domain}</strong>. Your saved data will not transfer automatically. Please",
+        "exportLink": "export your data",
+        "retired": "from this site and import it on the new domain. This domain will be retired in <strong>{date}</strong>.",
+        "goToNewSite": "Go to new site",
+        "dismiss": "Dismiss notice"
+    },
+    "notFound": {
+        "code": "404",
+        "title": "Page not found",
+        "description": "That page doesn't exist or may have moved.",
+        "toOverview": "Go to Overview",
+        "toHome": "Go to the home page",
+        "hint": "A 404 means the address is mistyped or the page was removed. The sidebar stays available."
+    }
+}

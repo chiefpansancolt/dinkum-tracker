@@ -1,0 +1,91 @@
+{
+    "nav": {
+        "main": "메인",
+        "groups": {
+            "track": "기록",
+            "progress": "진행",
+            "collect": "수집",
+            "tools": "도구"
+        },
+        "items": {
+            "overview": "개요",
+            "pedia": "도감",
+            "npcs": "NPC",
+            "calendar": "달력",
+            "buildings": "건물",
+            "licenses": "면허",
+            "milestones": "마일스톤",
+            "skills": "스킬",
+            "recipes": "레시피",
+            "gear": "장비",
+            "wardrobe": "옷장과 집",
+            "itemsBreakdown": "아이템 구성",
+            "weightCalculator": "무게 계산기",
+            "reference": "자료실",
+            "settings": "설정",
+            "playthroughs": "플레이 기록",
+            "newPlaythrough": "새 플레이 기록"
+        }
+    },
+    "appShell": {
+        "skipToContent": "본문으로 건너뛰기",
+        "closeMenu": "메뉴 닫기"
+    },
+    "appBar": {
+        "openMenu": "메뉴 열기"
+    },
+    "playthroughGate": {
+        "emptyTitle": "아직 플레이 기록이 없어요",
+        "emptyDescription": "플레이 기록을 만들면 진행 상황을 기록할 수 있어요.",
+        "newPlaythrough": "새 플레이 기록"
+    },
+    "playthroughSwitcher": {
+        "sectionLabel": "플레이 기록",
+        "switchPlaythrough": "플레이 기록 전환",
+        "loading": "불러오는 중",
+        "noPlaythroughYet": "아직 플레이 기록이 없어요",
+        "playthroughs": "플레이 기록",
+        "active": "사용 중",
+        "allPlaythroughs": "모든 플레이 기록",
+        "newPlaythrough": "새 플레이 기록",
+        "detail": "{day}일차 · {percent}%"
+    },
+    "theme": {
+        "label": "테마",
+        "light": "라이트",
+        "dark": "다크",
+        "system": "시스템"
+    },
+    "footer": {
+        "tagline": "Dinkum 진행 상황을 쉽게 기록하세요.",
+        "support": "지원",
+        "about": "정보",
+        "settings": "설정",
+        "discord": "Discord",
+        "github": "GitHub",
+        "dinkumWiki": "Dinkum 위키",
+        "privacyPolicy": "개인정보 처리방침",
+        "termsOfService": "이용약관",
+        "disclaimerTitle": "면책 조항",
+        "disclaimer": "이 앱은 Dinkum 및 제작자와 관련이 없으며, 승인을 받지 않았어요. 게임 데이터는 Dinkum 위키에서 가져왔어요. 게임 이미지와 이름은 참고용으로만 사용해요.",
+        "copyright": "© {year} {appName}",
+        "framework": "무료 게임 진행 트래커를 위한 공용 기반인 Gamerdex 프레임워크로 만들었어요. 데이터는 브라우저에 저장되고, 동기화를 켜면 내 클라우드 저장소에도 저장돼요.",
+        "visitGamerdex": "Gamerdex 방문"
+    },
+    "domainNotice": {
+        "label": "도메인 변경 안내:",
+        "movedTo": "Dinkum Tracker가 <strong>{domain}</strong>(으)로 옮겼어요. 저장된 데이터는 자동으로 옮겨지지 않아요. 이 사이트에서",
+        "exportLink": "데이터를 내보내고",
+        "retired": "새 도메인에서 가져와 주세요. 이 도메인은 <strong>{date}</strong>에 종료돼요.",
+        "goToNewSite": "새 사이트로 이동",
+        "dismiss": "안내 닫기"
+    },
+    "notFound": {
+        "code": "404",
+        "title": "페이지를 찾을 수 없어요",
+        "description": "없는 페이지이거나 다른 곳으로 옮겨졌을 수 있어요.",
+        "toOverview": "개요로 이동",
+        "toHome": "홈으로 이동",
+        "hint": "404는 주소가 잘못 입력되었거나 페이지가 삭제되었다는 뜻이에요. 사이드바는 그대로 사용할 수 있어요."
+    }
+}

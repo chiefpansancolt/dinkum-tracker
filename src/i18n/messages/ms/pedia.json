@@ -1,0 +1,85 @@
+{
+    "title": "Pedia",
+    "subline": "{done} daripada {total} dikumpul · {percent}% · {name}",
+    "tabsLabel": "Bahagian Pedia",
+    "tabs": {
+        "fish": "Ikan",
+        "bugs": "Serangga",
+        "critters": "Hidupan kecil"
+    },
+    "nouns": {
+        "fish": "ikan",
+        "bugs": "serangga",
+        "critters": "hidupan kecil"
+    },
+    "summary": {
+        "captured": "Ditangkap",
+        "donated": "Disumbang ke muzium",
+        "permit": "Mata permit diperoleh",
+        "of": "daripada {total}"
+    },
+    "filters": {
+        "sheetTitle": "Tapis {tab}",
+        "biome": "Biom",
+        "rarity": "Kelangkaan",
+        "season": "Musim",
+        "time": "Masa",
+        "collected": "Dikumpul",
+        "donated": "Disumbang",
+        "allBiomes": "Semua biom",
+        "allRarities": "Semua kelangkaan",
+        "allSeasons": "Semua musim",
+        "anyTime": "Bila-bila masa",
+        "all": "Semua",
+        "onlyCollected": "Dikumpul",
+        "notCollected": "Belum dikumpul",
+        "onlyDonated": "Disumbang",
+        "notDonated": "Belum disumbang",
+        "search": "Cari {tab} mengikut nama",
+        "showing": "Menunjukkan {shown} daripada {total} {tab}",
+        "capturedCount": "Ditangkap {count}",
+        "donatedCount": "Disumbang {count}",
+        "apply": "Tunjuk {count} {tab}"
+    },
+    "view": {
+        "label": "Paparan",
+        "grid": "Grid",
+        "list": "Senarai"
+    },
+    "card": {
+        "biome": "Biom",
+        "seasons": "Musim",
+        "time": "Masa",
+        "sell": "Harga jual",
+        "cooked": "Dimasak",
+        "cookedValue": "{price} · x{pieces}",
+        "status": "Status",
+        "missing": "Belum ada",
+        "caught": "Ditangkap",
+        "donated": "Disumbang"
+    },
+    "table": {
+        "name": "Nama",
+        "rarity": "Kelangkaan",
+        "biome": "Biom",
+        "seasons": "Musim",
+        "time": "Masa",
+        "sell": "Jual",
+        "cooked": "Dimasak",
+        "status": "Status",
+        "caption": "{shown} daripada {total} baris ditunjukkan. Penapis, kawalan status dan tahap perdagangan yang sama digunakan dalam kedua-dua paparan."
+    },
+    "empty": {
+        "title": "Tiada {tab} sepadan dengan penapis ini",
+        "description": "Cuba nama lain atau kosongkan penapis.",
+        "clear": "Kosongkan penapis"
+    },
+    "toast": {
+        "marked": "{name} ditanda sebagai {status}",
+        "statuses": {
+            "missing": "belum ada",
+            "caught": "ditangkap",
+            "donated": "disumbang"
+        }
+    }
+}

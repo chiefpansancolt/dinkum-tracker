@@ -1,0 +1,141 @@
+{
+    "title": "Ajustes",
+    "subline": "{count, plural, one {{amount} partida guardada} other {{amount} partidas guardadas}} en este navegador · Las preferencias se guardan solas",
+    "storage": {
+        "title": "¡Almacenamiento de datos!",
+        "body": "Tus datos se guardan en el navegador. Se pierden si se borran los datos del navegador, salvo que los sincronices o hagas una copia de seguridad.",
+        "action": "Usa las funciones de abajo para exportar y guardar una copia de seguridad de tus datos."
+    },
+    "manage": {
+        "title": "Partidas",
+        "description": "Renombra, elimina o crea partidas en la página Partidas.",
+        "link": "Gestionar partidas"
+    },
+    "data": {
+        "title": "Gestión de datos",
+        "count": "{count, plural, one {{amount} partida} other {{amount} partidas}}",
+        "exportButton": "Exportar todas las partidas",
+        "exportHint": "Descarga un archivo de copia de seguridad con todas tus partidas guardadas.",
+        "exportDone": "¡Exportación correcta!",
+        "importButton": "Importar datos",
+        "importHint": "Sube un archivo exportado antes (.json). Un paso de confirmación te pregunta si quieres combinar o reemplazar.",
+        "importDone": "¡Importación correcta!",
+        "importFailed": "Formato de archivo no válido",
+        "resetWarning": "Aviso: esto borrará todas las partidas y no se puede deshacer.",
+        "resetButton": "Restablecer todos los datos",
+        "resetConfirm": "Confirmar restablecimiento",
+        "resetCancel": "Cancelar",
+        "resetDone": "Datos restablecidos",
+        "importFile": "Archivo de copia de seguridad",
+        "description": "Un solo archivo de copia de seguridad contiene todas las partidas.",
+        "exportTitle": "Exportar datos",
+        "importTitle": "Importar datos",
+        "resetTitle": "Restablecer todos los datos",
+        "resetSyncedCopy": "Borrar también la copia sincronizada en {provider}",
+        "resetSyncedOn": "La sincronización sigue activa. Tus otros dispositivos perderán estas partidas en su próxima sincronización. Exporta antes una copia de seguridad si tienes dudas.",
+        "resetSyncedOff": "La copia sincronizada se queda donde está. La sincronización se desconecta en este navegador para no vaciar la nube.",
+        "providers": {
+            "github": "GitHub",
+            "google": "Google Drive",
+            "dropbox": "Dropbox",
+            "microsoft": "OneDrive"
+        }
+    },
+    "import": {
+        "title": "Importar copia de seguridad",
+        "description": "Elige qué pasa con las partidas que ya están en este dispositivo.",
+        "fileSummary": "{inFile, plural, one {{inFileAmount} partida} other {{inFileAmount} partidas}} en el archivo · {onDeviceAmount} en este dispositivo",
+        "mode": "Modo de importación",
+        "merge": "Combinar (recomendado)",
+        "mergeDescription": "Añade las partidas nuevas. Si una partida está en los dos sitios, gana la copia actualizada más recientemente. Las partidas que solo están en este dispositivo se quedan.",
+        "replace": "Reemplazar todo",
+        "replaceDescription": "Elimina {onDevice, plural, one {la {onDeviceAmount} partida} other {las {onDeviceAmount} partidas}} de este dispositivo y carga {inFileAmount} del archivo. No se puede deshacer.",
+        "table": {
+            "playthrough": "Partida",
+            "inFile": "En el archivo",
+            "onDevice": "En este dispositivo",
+            "result": "Resultado"
+        },
+        "updatedOn": "Actualizada {date}",
+        "notOnDevice": "No está en el dispositivo",
+        "notInFile": "No está en el archivo",
+        "results": {
+            "added": "Añadida",
+            "updated": "Gana la copia del archivo",
+            "kept": "Se queda la copia del dispositivo",
+            "replaced": "Reemplazada",
+            "removed": "Eliminada"
+        },
+        "exportFirst": "Exportar antes los datos actuales",
+        "cancel": "Cancelar",
+        "confirmMerge": "Combinar {count, plural, one {{amount} partida} other {{amount} partidas}}",
+        "confirmReplace": "Reemplazar todos los datos"
+    },
+    "appearance": {
+        "title": "Apariencia y preferencias",
+        "theme": "Tema",
+        "themeHint": "Sistema sigue el ajuste de tu dispositivo.",
+        "defaultSort": "Orden por defecto de las partidas",
+        "defaultSortHint": "Elige cómo se ordenan las partidas por defecto. Se guarda en cuanto lo cambias.",
+        "resources": "Recursos adicionales",
+        "opensInNewTab": "Se abre en una pestaña nueva",
+        "wiki": "Wiki de Dinkum",
+        "repository": "Repositorio del proyecto"
+    },
+    "page": {
+        "title": "Ajustes",
+        "tabsLabel": "Ajustes",
+        "tabs": {
+            "sync": "Sincronización",
+            "preferences": "Preferencias",
+            "data": "Copia y datos",
+            "about": "Acerca de"
+        }
+    },
+    "preferences": {
+        "appearance": {
+            "title": "Apariencia",
+            "description": "Se guarda al momento en este dispositivo."
+        },
+        "playthroughList": {
+            "title": "Lista de partidas",
+            "description": "Cómo empieza la página Partidas."
+        }
+    },
+    "about": {
+        "version": "Versión {version}",
+        "summary": "Sigue tu progreso en Dinkum: peces, insectos, bichos, hitos, licencias, PNJ y más. Todo se guarda en este navegador.",
+        "resources": "Recursos adicionales",
+        "disclaimer": "No está afiliado ni respaldado por los creadores de Dinkum."
+    },
+    "region": {
+        "title": "Idioma y región",
+        "description": "Elige el idioma y cómo se escriben los números y las fechas. Se guarda en este dispositivo.",
+        "language": {
+            "label": "Idioma",
+            "hint": "Los nombres de animales, objetos, PNJ y el resto de datos del juego vienen de los datos del juego y se quedan en inglés."
+        },
+        "numberFormat": {
+            "label": "Formato de números",
+            "hint": "Ejemplo: {example}",
+            "options": {
+                "auto": "Automático, según el idioma",
+                "us": "1,234.56 (Estados Unidos)",
+                "european": "1.234,56 (Alemania)",
+                "french": "1 234,56 (Francia)",
+                "swiss": "1’234.56 (Suiza)",
+                "indian": "12,34,567.89 (India)"
+            }
+        },
+        "dateFormat": {
+            "label": "Formato de fechas",
+            "hint": "Ejemplo: {example}",
+            "options": {
+                "auto": "Automático, según el idioma",
+                "mdy": "Mes/Día/Año",
+                "dmy": "Día/Mes/Año",
+                "ymd": "Año-Mes-Día"
+            }
+        }
+    }
+}

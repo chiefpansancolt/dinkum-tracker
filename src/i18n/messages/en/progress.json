@@ -1,0 +1,123 @@
+{
+    "common": {
+        "level": "Level {level}",
+        "levelCount": "Level {level}:",
+        "locked": "Complete the previous level first.",
+        "completeAll": "Complete All",
+        "clearAll": "Clear All",
+        "requirement": "Requirement",
+        "requiredSkill": "Required skill level",
+        "all": "All",
+        "collected": "Collected",
+        "notCollected": "To be collected",
+        "clearFilters": "Clear filters",
+        "toast": {
+            "obtained": "{item}: level {level} obtained",
+            "cleared": "{item}: {count, plural, one {{amount} level} other {{amount} levels}} cleared",
+            "allObtained": "{item}: all levels obtained",
+            "allCleared": "{item}: all levels cleared"
+        },
+        "empty": {
+            "title": "No {things} match these filters",
+            "description": "Try a different name or clear the filters."
+        },
+        "permitPoints": "permit points"
+    },
+    "buildings": {
+        "title": "Buildings",
+        "subline": "{count} of {total} installed · {percent}% · {name}",
+        "tiles": {
+            "installed": "Installed",
+            "stillToInstall": "Still to install",
+            "listed": "Buildings listed",
+            "of": "of {total}",
+            "breakdown": "{collectable} collectable · {movable} movable · {reference} reference"
+        },
+        "filters": {
+            "deedType": "Deed Type",
+            "npc": "NPC",
+            "collected": "Collected",
+            "search": "Search buildings by name...",
+            "sheetTitle": "Filter buildings",
+            "showing": "Showing {shown} of {total} buildings · Installed {count}",
+            "apply": "Show {count} buildings"
+        },
+        "card": {
+            "deed": "Deed",
+            "npc": "NPC",
+            "size": "Size",
+            "buildTime": "Build time",
+            "deedPrice": "Deed price",
+            "hours": "Hours",
+            "closed": "Closed",
+            "description": "Description",
+            "resources": "Resources",
+            "resource": "{count} {name}"
+        },
+        "installed": "Installed",
+        "nothingToInstall": "Nothing to install for this deed type.",
+        "things": "buildings",
+        "toast": {
+            "installed": "{name} marked as installed",
+            "notInstalled": "{name} marked as not installed"
+        }
+    },
+    "licenses": {
+        "title": "Licenses",
+        "subline": "{count} of {total} levels obtained · {percent}% · {name}",
+        "tiles": {
+            "levels": "Levels obtained",
+            "complete": "Licenses complete",
+            "permit": "Permit points spent",
+            "of": "of {total}",
+            "sentence": "You have spent {amount} of {total} needed permit points."
+        },
+        "filters": {
+            "category": "Category",
+            "collected": "Collected",
+            "search": "Search licenses by name...",
+            "sheetTitle": "Filter licenses",
+            "showing": "Showing {shown} of {total} licenses · Unlocked Levels {count}",
+            "apply": "Show {count} licenses"
+        },
+        "things": "licenses"
+    },
+    "milestones": {
+        "title": "Milestones",
+        "subline": "{count} of {total} levels completed · {percent}% · {name}",
+        "tiles": {
+            "levels": "Levels completed",
+            "complete": "Milestones complete",
+            "permit": "Permit points earned",
+            "of": "of {total}",
+            "sentence": "You have earned {amount} of {total} available permit points."
+        },
+        "filters": {
+            "category": "Category",
+            "allCategories": "All categories",
+            "collected": "Collected",
+            "viewMode": "View Mode",
+            "grouped": "Grouped by letter",
+            "all": "All milestones",
+            "search": "Search milestones by name or description...",
+            "sheetTitle": "Filter milestones",
+            "showing": "Showing {shown} of {total} milestones · Completed Levels {count}",
+            "apply": "Show {count} milestones"
+        },
+        "things": "milestones"
+    },
+    "skills": {
+        "title": "Skills",
+        "subline": "{skills} skills · {levels} levels in total · No upper limit · {name}",
+        "tiles": {
+            "total": "Total skill levels",
+            "across": "across {count} skills",
+            "highest": "Highest skill",
+            "atZero": "Skills at level 0",
+            "atZeroOf": "of {total}"
+        },
+        "level": "Skill Level",
+        "note": "Licenses ask for a skill level at each tier. Look at <link>Licenses</link> to see which levels you still need.",
+        "toast": "{name} is now level {level}"
+    }
+}

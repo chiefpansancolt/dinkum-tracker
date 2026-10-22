@@ -1,0 +1,8 @@
+{
+    "saveFailed": {
+        "title": "Tidak tersimpan",
+        "message": "Browser tidak bisa menyimpan datamu. Ekspor cadangan agar perubahanmu tidak hilang.",
+        "exportBackup": "Ekspor cadangan"
+    },
+    "undo": "Urungkan"
+}

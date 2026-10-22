@@ -1,0 +1,70 @@
+{
+    "breakdown": {
+        "title": "Rincian item",
+        "subline": "Sumber daya mana masuk ke item mana · {count} sumber daya",
+        "tiles": {
+            "resources": "Sumber daya",
+            "resourcesCaption": "dipakai di resep dan bangunan",
+            "common": "Umum, dipakai di 3+ item",
+            "of": "dari {total}",
+            "mostUsed": "Paling banyak dipakai",
+            "items": "{count, plural, other {{amount} item}}"
+        },
+        "search": "Cari",
+        "searchPlaceholder": "Cari sumber daya menurut nama",
+        "sortBy": "Urutkan menurut",
+        "sortName": "Nama (A-Z)",
+        "sortUsage": "Jumlah pemakaian",
+        "filter": "Filter",
+        "filterWithCount": "Filter ({count})",
+        "commonOnly": "Hanya sumber daya umum (dipakai di 3+ item)",
+        "showing": "Menampilkan {shown} dari {total} sumber daya",
+        "notes": {
+            "categories": " (difilter menurut {count, plural, other {{amount} kategori}})",
+            "types": " (difilter menurut {count, plural, other {{amount} jenis}})",
+            "common": " (hanya sumber daya umum)"
+        },
+        "panel": {
+            "title": "Filter sumber daya",
+            "byCategory": "Filter menurut kategori",
+            "byType": "Filter menurut jenis sumber daya",
+            "clear": "Hapus pilihan",
+            "itemCount": "{count, plural, other {{amount} item}}",
+            "done": "Tampilkan {count} sumber daya",
+            "option": "{name}, {items}"
+        },
+        "card": {
+            "usedIn": "{count, plural, other {Dipakai di {amount} item}}",
+            "categories": "Kategori",
+            "usedInList": "Dipakai di",
+            "showMore": "Tampilkan {count} lagi...",
+            "showLess": "Tampilkan lebih sedikit"
+        },
+        "empty": {
+            "title": "Tidak ada sumber daya yang cocok dengan filter ini",
+            "description": "Coba nama lain atau hapus pilihan.",
+            "clear": "Hapus pilihan"
+        }
+    },
+    "weight": {
+        "title": "Kalkulator berat",
+        "subline": "Hitung harga temuan berat dari beratnya · {count} item",
+        "picker": "Pilih item",
+        "perKg": "{price} per kg",
+        "range": "{min} - {max} kg",
+        "rangeLine": "Rentang berat: {min}kg - {max}kg",
+        "weight": "Berat: {weight} kg",
+        "slider": "Berat dalam kg",
+        "minus": "Kurangi berat sebesar {step} kg",
+        "plus": "Tambah berat sebesar {step} kg",
+        "min": "{min}kg",
+        "max": "{max}kg",
+        "stepNote": "Langkah {step} kg. Memilih item lain mengembalikan berat ke nilai minimumnya.",
+        "total": "Total harga",
+        "dinks": "dinks",
+        "formula": "{weight} kg × {price} per kg = {total}",
+        "rounded": "Dibulatkan ke dink terdekat.",
+        "atMin": "Harga di berat minimum",
+        "atMax": "Harga di berat maksimum"
+    }
+}

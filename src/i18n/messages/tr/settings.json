@@ -1,0 +1,141 @@
+{
+    "title": "Ayarlar",
+    "subline": "Bu tarayıcıda {count, plural, one {{amount} oynanış} other {{amount} oynanış}} saklanıyor · Tercihler otomatik kaydedilir",
+    "storage": {
+        "title": "Veri depolama!",
+        "body": "Verilerin tarayıcıda saklanır. Senkronize etmez veya yedeklemezsen, tarayıcı verileri temizlendiğinde kaybolur.",
+        "action": "Verilerini dışa aktarmak ve yedeklemek için lütfen aşağıdaki işlevleri kullan."
+    },
+    "manage": {
+        "title": "Oynanışlar",
+        "description": "Oynanışları yeniden adlandırmak, silmek veya oluşturmak için Oynanışlar sayfasını kullan.",
+        "link": "Oynanışları yönet"
+    },
+    "data": {
+        "title": "Veri yönetimi",
+        "count": "{count, plural, one {{amount} oynanış} other {{amount} oynanış}}",
+        "exportButton": "Tüm oynanışları dışa aktar",
+        "exportHint": "Kayıtlı tüm oynanışlarının yedek dosyasını indir.",
+        "exportDone": "Dışa aktarma başarılı!",
+        "importButton": "Veriyi içe aktar",
+        "importHint": "Daha önce dışa aktardığın bir dosyayı (.json) yükle. Bir onay adımı, birleştirmek mi yoksa değiştirmek mi istediğini sorar.",
+        "importDone": "İçe aktarma başarılı!",
+        "importFailed": "Geçersiz dosya biçimi",
+        "resetWarning": "Uyarı: Bu işlem tüm oynanışları siler ve geri alınamaz.",
+        "resetButton": "Tüm veriyi sıfırla",
+        "resetConfirm": "Sıfırlamayı onayla",
+        "resetCancel": "İptal",
+        "resetDone": "Veri sıfırlandı",
+        "importFile": "Yedek dosyası",
+        "description": "Tek bir yedek dosyası tüm oynanışları içerir.",
+        "exportTitle": "Veriyi dışa aktar",
+        "importTitle": "Veriyi içe aktar",
+        "resetTitle": "Tüm veriyi sıfırla",
+        "resetSyncedCopy": "{provider} üzerindeki senkronize kopyayı da sil",
+        "resetSyncedOn": "Senkronizasyon açık kalır. Diğer cihazların bu oynanışları bir sonraki senkronizasyonda kaybeder. Emin değilsen önce bir yedek dışa aktar.",
+        "resetSyncedOff": "Senkronize kopya olduğu yerde kalır. Bulutu boşaltmaması için senkronizasyonun bu tarayıcıda bağlantısı kesilir.",
+        "providers": {
+            "github": "GitHub",
+            "google": "Google Drive",
+            "dropbox": "Dropbox",
+            "microsoft": "OneDrive"
+        }
+    },
+    "import": {
+        "title": "Yedeği içe aktar",
+        "description": "Bu cihazdaki mevcut oynanışlara ne olacağını seç.",
+        "fileSummary": "Dosyada {inFile, plural, one {{inFileAmount} oynanış} other {{inFileAmount} oynanış}} · bu cihazda {onDeviceAmount}",
+        "mode": "İçe aktarma modu",
+        "merge": "Birleştir (önerilir)",
+        "mergeDescription": "Yeni olan oynanışları ekler. Bir oynanış her iki yerde de varsa, en son güncellenen kopya geçerli olur. Yalnızca bu cihazda olan oynanışlar kalır.",
+        "replace": "Hepsini değiştir",
+        "replaceDescription": "Bu cihazdaki {onDevice, plural, one {{onDeviceAmount} oynanışı} other {{onDeviceAmount} oynanışı}} siler ve dosyadaki {inFileAmount} oynanışı yükler. Bu işlem geri alınamaz.",
+        "table": {
+            "playthrough": "Oynanış",
+            "inFile": "Dosyada",
+            "onDevice": "Bu cihazda",
+            "result": "Sonuç"
+        },
+        "updatedOn": "{date} güncellendi",
+        "notOnDevice": "Cihazda yok",
+        "notInFile": "Dosyada yok",
+        "results": {
+            "added": "Eklendi",
+            "updated": "Dosyadaki kopya geçerli",
+            "kept": "Cihazdaki kopya kalır",
+            "replaced": "Değiştirildi",
+            "removed": "Kaldırıldı"
+        },
+        "exportFirst": "Önce mevcut veriyi dışa aktar",
+        "cancel": "İptal",
+        "confirmMerge": "{count, plural, one {{amount} oynanışı} other {{amount} oynanışı}} birleştir",
+        "confirmReplace": "Tüm veriyi değiştir"
+    },
+    "appearance": {
+        "title": "Görünüm ve tercihler",
+        "theme": "Tema",
+        "themeHint": "Sistem, cihazını izler.",
+        "defaultSort": "Varsayılan oynanış sıralaması",
+        "defaultSortHint": "Oynanışların varsayılan olarak nasıl sıralanacağını seç. Değiştirdiğin anda kaydedilir.",
+        "resources": "Ek kaynaklar",
+        "opensInNewTab": "Yeni sekmede açılır",
+        "wiki": "Dinkum Wiki",
+        "repository": "Proje deposu"
+    },
+    "page": {
+        "title": "Ayarlar",
+        "tabsLabel": "Ayarlar",
+        "tabs": {
+            "sync": "Bulut senkronizasyonu",
+            "preferences": "Tercihler",
+            "data": "Yedek ve veri",
+            "about": "Hakkında"
+        }
+    },
+    "preferences": {
+        "appearance": {
+            "title": "Görünüm",
+            "description": "Bu cihazda hemen kaydedilir."
+        },
+        "playthroughList": {
+            "title": "Oynanış listesi",
+            "description": "Oynanışlar sayfasının nasıl başlayacağı."
+        }
+    },
+    "about": {
+        "version": "Sürüm {version}",
+        "summary": "Dinkum ilerlemeni takip et: balıklar, böcekler, küçük hayvanlar, kilometre taşları, lisanslar, NPC'ler ve daha fazlası. Her şey bu tarayıcıda saklanır.",
+        "resources": "Ek kaynaklar",
+        "disclaimer": "Dinkum'un yapımcılarıyla bağlantılı değildir ve onlar tarafından onaylanmamıştır."
+    },
+    "region": {
+        "title": "Dil ve bölge",
+        "description": "Dili ve sayıların ile tarihlerin nasıl yazılacağını seç. Bu cihazda kaydedilir.",
+        "language": {
+            "label": "Dil",
+            "hint": "Hayvan, eşya, NPC adları ve diğer oyun verileri oyun verisinden gelir ve İngilizce kalır."
+        },
+        "numberFormat": {
+            "label": "Sayı biçimi",
+            "hint": "Örnek: {example}",
+            "options": {
+                "auto": "Otomatik, dili izler",
+                "us": "1,234.56 (Amerika Birleşik Devletleri)",
+                "european": "1.234,56 (Almanya)",
+                "french": "1 234,56 (Fransa)",
+                "swiss": "1’234.56 (İsviçre)",
+                "indian": "12,34,567.89 (Hindistan)"
+            }
+        },
+        "dateFormat": {
+            "label": "Tarih biçimi",
+            "hint": "Örnek: {example}",
+            "options": {
+                "auto": "Otomatik, dili izler",
+                "mdy": "Ay/Gün/Yıl",
+                "dmy": "Gün/Ay/Yıl",
+                "ymd": "Yıl-Ay-Gün"
+            }
+        }
+    }
+}

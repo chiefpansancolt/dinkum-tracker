@@ -1,0 +1,234 @@
+{
+    "toast": {
+        "marked": "{name} : {state}",
+        "collected": "Collecté",
+        "notCollected": "Non collecté",
+        "unlocked": "Débloqué",
+        "locked": "Verrouillé"
+    },
+    "filters": {
+        "search": "Rechercher dans {things} par nom...",
+        "sheetTitle": "Filtrer {things}",
+        "showingCollected": "Affichage de {shown} sur {total} {things} · Collectés {count}",
+        "showingUnlocked": "Affichage de {shown} sur {total} {things} · Débloqués {count}",
+        "apply": "Afficher {count} {things}",
+        "all": "Tous",
+        "collected": "Collectés",
+        "notCollected": "À collecter",
+        "unlocked": "Débloqués",
+        "notUnlocked": "À débloquer",
+        "source": "Source",
+        "allSources": "Toutes les sources"
+    },
+    "empty": {
+        "title": "Rien dans {things} ne correspond à ces filtres",
+        "description": "Essayez un autre nom ou effacez les filtres.",
+        "clear": "Effacer les filtres"
+    },
+    "list": {
+        "got": "Obtenu",
+        "name": "Nom",
+        "caption": "{shown} lignes sur {total} chargées. D’autres se chargent au défilement.",
+        "prices": "Prix en dinks"
+    },
+    "card": {
+        "collected": "Collecté",
+        "markCollected": "Marquer comme collecté",
+        "unlocked": "Débloqué",
+        "sellPrice": "Prix de vente",
+        "buyPrice": "Prix d’achat",
+        "source": "Source",
+        "none": "–"
+    },
+    "gear": {
+        "title": "Matériel",
+        "subline": "{count} sur {total} collectés · {percent} % · {name}",
+        "tabsLabel": "Sections du matériel",
+        "tabs": {
+            "books": "Livres",
+            "cassettes": "Cassettes",
+            "tools": "Outils",
+            "weapons": "Armes",
+            "equipment": "Équipement",
+            "vehicles": "Véhicules"
+        },
+        "things": {
+            "books": "livres",
+            "cassettes": "cassettes",
+            "tools": "outils",
+            "weapons": "armes",
+            "equipment": "équipement",
+            "vehicles": "véhicules"
+        },
+        "tiles": {
+            "collected": "Collectés",
+            "of": "sur {total}",
+            "franklyn": "Débloqués par Franklyn",
+            "craftable": "Fabricables",
+            "highDamage": "Dégâts élevés (20+)"
+        },
+        "filters": {
+            "license": "Licence",
+            "allLicenses": "Toutes les licences",
+            "purchaseType": "Type d’achat",
+            "purchasable": "Achetable",
+            "dinks": "Dinks",
+            "permitPoints": "Points de permis",
+            "damage": "Dégâts",
+            "high": "Élevés (20+)",
+            "medium": "Moyens (10 à 19)",
+            "low": "Faibles (moins de 10)",
+            "allDamage": "Tous les dégâts",
+            "requirement": "Type de condition",
+            "allRequirements": "Tous les types de condition",
+            "allPurchaseTypes": "Tous"
+        },
+        "card": {
+            "craftingRecipe": "Recette de fabrication",
+            "license": "Licence",
+            "licenseLevel": "Niveau de licence de chasse",
+            "source": "Source",
+            "damage": "Dégâts",
+            "unlocksAfter": "Se débloque après",
+            "shinyDiscs": "{count} Shiny Discs",
+            "berkonium": "{count} Berkonium Ore",
+            "ingredients": "Ingrédients",
+            "resources": "Ressources",
+            "requirement": "Niveau requis",
+            "compatibleWith": "Compatible avec",
+            "windmill": "Moulin à vent",
+            "solarPanel": "Panneau solaire",
+            "acquiredFrom": "Obtenu auprès de",
+            "requirements": "Conditions",
+            "buyPrice": "Prix d’achat",
+            "sellPrice": "Prix de vente",
+            "dinks": "{amount} Dinks",
+            "permitPoints": "{count, plural, one {{amount} point de permis} other {{amount} points de permis}}",
+            "ingredient": "{count}x {name}",
+            "none": "Aucun",
+            "requirementLevel": "Niveau {type}"
+        }
+    },
+    "recipes": {
+        "title": "Recettes",
+        "subline": "{count} sur {total} débloquées · {percent} % · {name}",
+        "tabsLabel": "Sections des recettes",
+        "tabs": {
+            "cooking": "Cuisine",
+            "crafting": "Fabrication",
+            "signWriting": "Écriture de panneaux"
+        },
+        "things": {
+            "cooking": "recettes de cuisine",
+            "crafting": "recettes de fabrication",
+            "signWriting": "recettes d’écriture de panneaux"
+        },
+        "tiles": {
+            "unlocked": "Débloquées",
+            "of": "sur {total}",
+            "withBuffs": "Avec bonus",
+            "vendors": "Vendues par Sheila, Ted ou Jimmy",
+            "recipes": "Recettes"
+        },
+        "filters": {
+            "location": "Lieux de cuisine",
+            "allLocations": "Tous les lieux",
+            "unlocked": "Débloquées",
+            "sources": "Sources",
+            "allSources": "Toutes les sources",
+            "buffs": "Bonus",
+            "buffsWithCount": "Bonus ({count})"
+        },
+        "buffs": {
+            "title": "Filtrer par bonus",
+            "match": "Correspondance",
+            "any": "UN",
+            "all": "TOUS",
+            "clear": "Effacer la sélection",
+            "selected": "{count} sélectionnés",
+            "done": "Terminé"
+        },
+        "card": {
+            "cookingLocation": "Lieu de cuisine",
+            "buffs": "Bonus",
+            "duration": "{minutes, plural, one {{amount} min} other {{amount} min}}",
+            "sellPrice": "Prix de vente",
+            "sheilas": "Chez Sheila",
+            "teds": "Chez Ted",
+            "jimmys": "Chez Jimmy",
+            "resources": "Ressources",
+            "option": "Option {n}",
+            "ingredient": "{count}x {name}",
+            "source": "Source",
+            "unlocked": "Débloquée",
+            "varies": "Variable",
+            "output": "x{count}"
+        }
+    },
+    "wardrobe": {
+        "title": "Garde-robe et maison",
+        "subline": "{count} sur {total} collectés · {percent} % · {name}",
+        "tabsLabel": "Sections de la garde-robe",
+        "tabs": {
+            "clothing": "Vêtements",
+            "furniture": "Meubles",
+            "decorations": "Décorations"
+        },
+        "things": {
+            "clothing": "vêtements",
+            "furniture": "meubles",
+            "decorations": "décorations"
+        },
+        "progress": {
+            "clothing": "Progression par emplacement · sélectionnez une tuile pour filtrer",
+            "furniture": "Progression par ensemble · sélectionnez une tuile pour filtrer",
+            "decorations": "Progression par catégorie · sélectionnez une tuile pour filtrer"
+        },
+        "filters": {
+            "slot": "Emplacement",
+            "type": "Type",
+            "set": "Ensemble",
+            "allSets": "Tous les ensembles",
+            "catalogue": "Catalogue",
+            "melvins": "Catalogue de Melvin",
+            "notMelvins": "Hors catalogue",
+            "category": "Catégorie",
+            "allCategories": "Toutes les catégories",
+            "source": "Source",
+            "allSources": "Toutes les sources",
+            "all": "Tous"
+        },
+        "list": {
+            "type": "Type",
+            "slot": "Emplacement",
+            "set": "Ensemble",
+            "price": "Prix",
+            "sell": "Vente",
+            "availableAt": "Disponible chez",
+            "catalogue": "Catalogue",
+            "category": "Catégorie",
+            "source": "Source",
+            "buy": "Achat"
+        },
+        "card": {
+            "slot": "Emplacement",
+            "set": "Ensemble",
+            "price": "Prix",
+            "sellPrice": "Prix de vente",
+            "availableAt": "Disponible chez",
+            "cataloguePrice": "Prix du catalogue",
+            "source": "Source",
+            "buyPrice": "Prix d’achat",
+            "category": "Catégorie"
+        },
+        "shop": "Boutique de Clover",
+        "hints": {
+            "slots": "{count, plural, one {Tous plus {amount} emplacement} other {Tous plus {amount} emplacements}}",
+            "typesForSlot": "{count, plural, one {{amount} type pour {slot}. Revient à Tous quand l’Emplacement change.} other {{amount} types pour {slot}. Revient à Tous quand l’Emplacement change.}}",
+            "typeNeedsSlot": "Avec l’Emplacement sur Tous, Type propose seulement Tous. Choisissez d’abord un emplacement pour voir ses types.",
+            "sets": "{count, plural, one {Tous plus {amount} ensemble} other {Tous plus {amount} ensembles}}",
+            "sources": "Tous plus toutes les sources",
+            "categories": "{count, plural, one {{amount} catégorie. Les tuiles ci-dessus la définissent.} other {{amount} catégories. Les tuiles ci-dessus les définissent.}}"
+        }
+    }
+}

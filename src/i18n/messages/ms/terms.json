@@ -1,0 +1,91 @@
+{
+    "buffs": {
+        "attackLevel": "Serangan",
+        "charged": "Bercas",
+        "coolLevel": "Sejuk",
+        "defenseLevel": "Pertahanan",
+        "diligent": "Rajin",
+        "experienceLevel": "Pengalaman",
+        "fastHealthTickSpeedLevel": "Kelajuan tik kesihatan pantas",
+        "fishLevel": "Ikan",
+        "foragingLevel": "Mencari makanan",
+        "healthMax": "Kesihatan maks",
+        "healthRegenRate": "Pulih kesihatan",
+        "length": "Panjang",
+        "miningLevel": "Melombong",
+        "sleepless": "Tanpa tidur",
+        "speedLevel": "Kelajuan",
+        "staminaMax": "Stamina maks",
+        "staminaRegenRate": "Pulih stamina",
+        "swimmingLevel": "Berenang"
+    },
+    "categories": {
+        "buildings": "Bangunan",
+        "tools": "Alat",
+        "weapons": "Senjata",
+        "equipment": "Kelengkapan",
+        "vehicles": "Kenderaan",
+        "craftingRecipes": "Resipi pembuatan",
+        "cookingRecipes": "Resipi masakan",
+        "signWritingRecipes": "Resipi penulisan papan tanda",
+        "otherCraftables": "Boleh dibuat lain"
+    },
+    "resourceTypes": {
+        "fish": "Ikan",
+        "critter": "Hidupan kecil",
+        "bug": "Serangga",
+        "relic": "Peninggalan",
+        "crop": "Tanaman",
+        "foragable": "Hasil carian",
+        "animalProduct": "Hasil haiwan",
+        "paint": "Cat",
+        "mineral": "Mineral",
+        "craftable": "Boleh dibuat",
+        "trophy": "Trofi",
+        "seed": "Benih",
+        "flower": "Bunga",
+        "resource": "Sumber"
+    },
+    "daily": {
+        "dayOneMilestones": "Hari pertama",
+        "travelMilestones": "Perjalanan",
+        "npcMilestones": "NPC",
+        "fishingMilestones": "Memancing",
+        "farmingMilestones": "Bertani",
+        "foragingMilestones": "Mencari makanan",
+        "loggingMilestones": "Membalak",
+        "miningMilestones": "Melombong",
+        "excavationMilestones": "Penggalian",
+        "bugCatchingMilestones": "Menangkap serangga",
+        "craftingMilestones": "Pembuatan",
+        "huntingMilestones": "Memburu",
+        "trappingMilestones": "Memerangkap",
+        "dinksMilestones": "Dinks"
+    },
+    "animalTypes": {
+        "Wild Animal": "Haiwan liar",
+        "Farm Animal": "Haiwan ladang",
+        "Tammed Animal": "Haiwan jinak"
+    },
+    "temperaments": {
+        "Passive": "Pasif",
+        "Neutral": "Neutral",
+        "Aggressive": "Agresif"
+    },
+    "seasons": {
+        "Spring": "Musim bunga",
+        "Summer": "Musim panas",
+        "Autumn": "Musim luruh",
+        "Winter": "Musim sejuk",
+        "All": "Semua"
+    },
+    "weekdays": {
+        "Sunday": "Ahad",
+        "Monday": "Isnin",
+        "Tuesday": "Selasa",
+        "Wednesday": "Rabu",
+        "Thursday": "Khamis",
+        "Friday": "Jumaat",
+        "Saturday": "Sabtu"
+    }
+}

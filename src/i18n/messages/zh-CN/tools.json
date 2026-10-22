@@ -1,0 +1,70 @@
+{
+    "breakdown": {
+        "title": "物品拆解",
+        "subline": "查看哪些资源用于哪些物品 · {count} 种资源",
+        "tiles": {
+            "resources": "资源",
+            "resourcesCaption": "用于配方和建造",
+            "common": "常用，用于 3 个以上物品",
+            "of": "共 {total}",
+            "mostUsed": "使用最多",
+            "items": "{count, plural, other {{amount} 个物品}}"
+        },
+        "search": "搜索",
+        "searchPlaceholder": "按名称搜索资源",
+        "sortBy": "排序方式",
+        "sortName": "名称（A-Z）",
+        "sortUsage": "使用次数",
+        "filter": "筛选",
+        "filterWithCount": "筛选（{count}）",
+        "commonOnly": "仅常用资源（用于 3 个以上物品）",
+        "showing": "显示 {shown} / {total} 种资源",
+        "notes": {
+            "categories": "（已按 {count, plural, other {{amount} 个类别}}筛选）",
+            "types": "（已按 {count, plural, other {{amount} 种类型}}筛选）",
+            "common": "（仅常用资源）"
+        },
+        "panel": {
+            "title": "筛选资源",
+            "byCategory": "按类别筛选",
+            "byType": "按资源类型筛选",
+            "clear": "清除选择",
+            "itemCount": "{count, plural, other {{amount} 个物品}}",
+            "done": "显示 {count} 种资源",
+            "option": "{name}，{items}"
+        },
+        "card": {
+            "usedIn": "{count, plural, other {用于 {amount} 个物品}}",
+            "categories": "类别",
+            "usedInList": "用于",
+            "showMore": "再显示 {count} 项...",
+            "showLess": "收起"
+        },
+        "empty": {
+            "title": "没有符合筛选条件的资源",
+            "description": "换个名称试试，或清除选择。",
+            "clear": "清除选择"
+        }
+    },
+    "weight": {
+        "title": "重量计算器",
+        "subline": "按重量为大件物品估价 · {count} 个物品",
+        "picker": "选择物品",
+        "perKg": "每公斤 {price}",
+        "range": "{min} - {max} kg",
+        "rangeLine": "重量范围：{min}kg - {max}kg",
+        "weight": "重量：{weight} kg",
+        "slider": "重量（kg）",
+        "minus": "减少 {step} kg",
+        "plus": "增加 {step} kg",
+        "min": "{min}kg",
+        "max": "{max}kg",
+        "stepNote": "步长 {step} kg。选择其他物品会把重量重置为最小值。",
+        "total": "总价",
+        "dinks": "Dinks",
+        "formula": "{weight} kg × 每公斤 {price} = {total}",
+        "rounded": "四舍五入到整数 Dink。",
+        "atMin": "最小重量时的价格",
+        "atMax": "最大重量时的价格"
+    }
+}

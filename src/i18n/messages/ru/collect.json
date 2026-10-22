@@ -1,0 +1,234 @@
+{
+    "toast": {
+        "marked": "{name}: {state}",
+        "collected": "Собрано",
+        "notCollected": "Не собрано",
+        "unlocked": "Открыто",
+        "locked": "Закрыто"
+    },
+    "filters": {
+        "search": "Поиск по названию: {things}...",
+        "sheetTitle": "Фильтр: {things}",
+        "showingCollected": "Показано {shown} из {total}: {things} · Собрано {count}",
+        "showingUnlocked": "Показано {shown} из {total}: {things} · Открыто {count}",
+        "apply": "Показать {count}: {things}",
+        "all": "Все",
+        "collected": "Собрано",
+        "notCollected": "Не собрано",
+        "unlocked": "Открыто",
+        "notUnlocked": "Не открыто",
+        "source": "Источник",
+        "allSources": "Все источники"
+    },
+    "empty": {
+        "title": "По этим фильтрам ничего не найдено: {things}",
+        "description": "Попробуйте другое название или сбросьте фильтры.",
+        "clear": "Сбросить фильтры"
+    },
+    "list": {
+        "got": "Есть",
+        "name": "Название",
+        "caption": "Загружено строк: {shown} из {total}. Остальные подгружаются при прокрутке.",
+        "prices": "Цены в Dinks"
+    },
+    "card": {
+        "collected": "Собрано",
+        "markCollected": "Отметить собранным",
+        "unlocked": "Открыто",
+        "sellPrice": "Цена продажи",
+        "buyPrice": "Цена покупки",
+        "source": "Источник",
+        "none": "–"
+    },
+    "gear": {
+        "title": "Снаряжение",
+        "subline": "{count} из {total} собрано · {percent}% · {name}",
+        "tabsLabel": "Разделы снаряжения",
+        "tabs": {
+            "books": "Книги",
+            "cassettes": "Кассеты",
+            "tools": "Инструменты",
+            "weapons": "Оружие",
+            "equipment": "Экипировка",
+            "vehicles": "Транспорт"
+        },
+        "things": {
+            "books": "книги",
+            "cassettes": "кассеты",
+            "tools": "инструменты",
+            "weapons": "оружие",
+            "equipment": "экипировка",
+            "vehicles": "транспорт"
+        },
+        "tiles": {
+            "collected": "Собрано",
+            "of": "из {total}",
+            "franklyn": "Открывает Franklyn",
+            "craftable": "Можно создать",
+            "highDamage": "Высокий урон (20+)"
+        },
+        "filters": {
+            "license": "Лицензия",
+            "allLicenses": "Все лицензии",
+            "purchaseType": "Способ покупки",
+            "purchasable": "Можно купить",
+            "dinks": "Dinks",
+            "permitPoints": "Очки разрешений",
+            "damage": "Урон",
+            "high": "Высокий (20+)",
+            "medium": "Средний (10-19)",
+            "low": "Низкий (до 10)",
+            "allDamage": "Любой урон",
+            "requirement": "Тип требования",
+            "allRequirements": "Все типы требований",
+            "allPurchaseTypes": "Все"
+        },
+        "card": {
+            "craftingRecipe": "Рецепт крафта",
+            "license": "Лицензия",
+            "licenseLevel": "Уровень лицензии охотника",
+            "source": "Источник",
+            "damage": "Урон",
+            "unlocksAfter": "Открывается после",
+            "shinyDiscs": "{count} Shiny Discs",
+            "berkonium": "{count} Berkonium Ore",
+            "ingredients": "Ингредиенты",
+            "resources": "Ресурсы",
+            "requirement": "Требуемый уровень",
+            "compatibleWith": "Совместимо с",
+            "windmill": "Ветряк",
+            "solarPanel": "Солнечная панель",
+            "acquiredFrom": "Где получить",
+            "requirements": "Требования",
+            "buyPrice": "Цена покупки",
+            "sellPrice": "Цена продажи",
+            "dinks": "{amount} Dinks",
+            "permitPoints": "{count, plural, one {{amount} очко разрешений} few {{amount} очка разрешений} many {{amount} очков разрешений} other {{amount} очка разрешений}}",
+            "ingredient": "{count}x {name}",
+            "none": "Нет",
+            "requirementLevel": "Уровень: {type}"
+        }
+    },
+    "recipes": {
+        "title": "Рецепты",
+        "subline": "{count} из {total} открыто · {percent}% · {name}",
+        "tabsLabel": "Разделы рецептов",
+        "tabs": {
+            "cooking": "Готовка",
+            "crafting": "Крафт",
+            "signWriting": "Вывески"
+        },
+        "things": {
+            "cooking": "рецепты готовки",
+            "crafting": "рецепты крафта",
+            "signWriting": "рецепты вывесок"
+        },
+        "tiles": {
+            "unlocked": "Открыто",
+            "of": "из {total}",
+            "withBuffs": "С баффами",
+            "vendors": "Продают Sheila, Ted или Jimmy",
+            "recipes": "Рецепты"
+        },
+        "filters": {
+            "location": "Места готовки",
+            "allLocations": "Все места",
+            "unlocked": "Открыто",
+            "sources": "Источники",
+            "allSources": "Все источники",
+            "buffs": "Баффы",
+            "buffsWithCount": "Баффы ({count})"
+        },
+        "buffs": {
+            "title": "Фильтр по баффам",
+            "match": "Совпадение",
+            "any": "ЛЮБОЙ",
+            "all": "ВСЕ",
+            "clear": "Сбросить выбор",
+            "selected": "Выбрано: {count}",
+            "done": "Готово"
+        },
+        "card": {
+            "cookingLocation": "Место готовки",
+            "buffs": "Баффы",
+            "duration": "{minutes, plural, one {{amount} мин.} few {{amount} мин.} many {{amount} мин.} other {{amount} мин.}}",
+            "sellPrice": "Цена продажи",
+            "sheilas": "Sheila",
+            "teds": "Ted",
+            "jimmys": "Jimmy",
+            "resources": "Ресурсы",
+            "option": "Вариант {n}",
+            "ingredient": "{count}x {name}",
+            "source": "Источник",
+            "unlocked": "Открыто",
+            "varies": "По-разному",
+            "output": "x{count}"
+        }
+    },
+    "wardrobe": {
+        "title": "Гардероб и дом",
+        "subline": "{count} из {total} собрано · {percent}% · {name}",
+        "tabsLabel": "Разделы гардероба",
+        "tabs": {
+            "clothing": "Одежда",
+            "furniture": "Мебель",
+            "decorations": "Декор"
+        },
+        "things": {
+            "clothing": "предметы одежды",
+            "furniture": "мебель",
+            "decorations": "декор"
+        },
+        "progress": {
+            "clothing": "Прогресс по слотам · выберите плитку для фильтра",
+            "furniture": "Прогресс по наборам · выберите плитку для фильтра",
+            "decorations": "Прогресс по категориям · выберите плитку для фильтра"
+        },
+        "filters": {
+            "slot": "Слот",
+            "type": "Тип",
+            "set": "Набор",
+            "allSets": "Все наборы",
+            "catalogue": "Каталог",
+            "melvins": "Каталог Melvin",
+            "notMelvins": "Не в каталоге",
+            "category": "Категория",
+            "allCategories": "Все категории",
+            "source": "Источник",
+            "allSources": "Все источники",
+            "all": "Все"
+        },
+        "list": {
+            "type": "Тип",
+            "slot": "Слот",
+            "set": "Набор",
+            "price": "Цена",
+            "sell": "Продажа",
+            "availableAt": "Где доступно",
+            "catalogue": "Каталог",
+            "category": "Категория",
+            "source": "Источник",
+            "buy": "Покупка"
+        },
+        "card": {
+            "slot": "Слот",
+            "set": "Набор",
+            "price": "Цена",
+            "sellPrice": "Цена продажи",
+            "availableAt": "Где доступно",
+            "cataloguePrice": "Цена в каталоге",
+            "source": "Источник",
+            "buyPrice": "Цена покупки",
+            "category": "Категория"
+        },
+        "shop": "Магазин Clover",
+        "hints": {
+            "slots": "{count, plural, one {Все плюс {amount} слот} few {Все плюс {amount} слота} many {Все плюс {amount} слотов} other {Все плюс {amount} слота}}",
+            "typesForSlot": "{count, plural, one {{amount} тип для {slot}. Сбрасывается на Все при смене слота.} few {{amount} типа для {slot}. Сбрасывается на Все при смене слота.} many {{amount} типов для {slot}. Сбрасывается на Все при смене слота.} other {{amount} типа для {slot}. Сбрасывается на Все при смене слота.}}",
+            "typeNeedsSlot": "Когда для слота выбрано Все, в списке Тип есть только Все. Сначала выберите слот, чтобы увидеть его типы.",
+            "sets": "{count, plural, one {Все плюс {amount} набор} few {Все плюс {amount} набора} many {Все плюс {amount} наборов} other {Все плюс {amount} набора}}",
+            "sources": "Все плюс все источники",
+            "categories": "{count, plural, one {{amount} категория. Задаётся плитками выше.} few {{amount} категории. Задаются плитками выше.} many {{amount} категорий. Задаются плитками выше.} other {{amount} категории. Задаются плитками выше.}}"
+        }
+    }
+}

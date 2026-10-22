@@ -1,0 +1,91 @@
+{
+    "nav": {
+        "main": "Principal",
+        "groups": {
+            "track": "Acompanhar",
+            "progress": "Progresso",
+            "collect": "Coletar",
+            "tools": "Ferramentas"
+        },
+        "items": {
+            "overview": "Visão geral",
+            "pedia": "Pedia",
+            "npcs": "NPCs",
+            "calendar": "Calendário",
+            "buildings": "Construções",
+            "licenses": "Licenças",
+            "milestones": "Marcos",
+            "skills": "Habilidades",
+            "recipes": "Receitas",
+            "gear": "Apetrechos",
+            "wardrobe": "Guarda-roupa e casa",
+            "itemsBreakdown": "Detalhamento de itens",
+            "weightCalculator": "Calculadora de peso",
+            "reference": "Referência",
+            "settings": "Configurações",
+            "playthroughs": "Partidas",
+            "newPlaythrough": "Nova partida"
+        }
+    },
+    "appShell": {
+        "skipToContent": "Pular para o conteúdo",
+        "closeMenu": "Fechar menu"
+    },
+    "appBar": {
+        "openMenu": "Abrir menu"
+    },
+    "playthroughGate": {
+        "emptyTitle": "Nenhuma partida ainda",
+        "emptyDescription": "Crie uma partida para começar a acompanhar seu progresso.",
+        "newPlaythrough": "Nova partida"
+    },
+    "playthroughSwitcher": {
+        "sectionLabel": "Partida",
+        "switchPlaythrough": "Trocar de partida",
+        "loading": "Carregando",
+        "noPlaythroughYet": "Nenhuma partida ainda",
+        "playthroughs": "Partidas",
+        "active": "Ativa",
+        "allPlaythroughs": "Todas as partidas",
+        "newPlaythrough": "Nova partida",
+        "detail": "Dia {day} · {percent}%"
+    },
+    "theme": {
+        "label": "Tema",
+        "light": "Claro",
+        "dark": "Escuro",
+        "system": "Sistema"
+    },
+    "footer": {
+        "tagline": "Acompanhe seu progresso no Dinkum com facilidade.",
+        "support": "Suporte",
+        "about": "Sobre",
+        "settings": "Configurações",
+        "discord": "Discord",
+        "github": "GitHub",
+        "dinkumWiki": "Dinkum Wiki",
+        "privacyPolicy": "Política de privacidade",
+        "termsOfService": "Termos de serviço",
+        "disclaimerTitle": "Aviso legal",
+        "disclaimer": "Este aplicativo não é afiliado, endossado nem conectado ao Dinkum ou a seus criadores. Os dados do jogo vêm da Dinkum Wiki. Imagens e nomes do jogo são usados apenas como referência.",
+        "copyright": "© {year} {appName}",
+        "framework": "Feito com o framework Gamerdex, uma base compartilhada para rastreadores gratuitos de progresso em jogos. Seus dados ficam no seu navegador, ou no seu próprio armazenamento na nuvem se você ativar a sincronização.",
+        "visitGamerdex": "Visitar o Gamerdex"
+    },
+    "domainNotice": {
+        "label": "Aviso de mudança de domínio:",
+        "movedTo": "O Dinkum Tracker mudou para <strong>{domain}</strong>. Seus dados salvos não serão transferidos automaticamente. Por favor,",
+        "exportLink": "exporte seus dados",
+        "retired": "deste site e importe no novo domínio. Este domínio será desativado em <strong>{date}</strong>.",
+        "goToNewSite": "Ir para o novo site",
+        "dismiss": "Dispensar aviso"
+    },
+    "notFound": {
+        "code": "404",
+        "title": "Página não encontrada",
+        "description": "Essa página não existe ou foi movida.",
+        "toOverview": "Ir para a Visão geral",
+        "toHome": "Ir para a página inicial",
+        "hint": "Um erro 404 significa que o endereço está errado ou que a página foi removida. A barra lateral continua disponível."
+    }
+}

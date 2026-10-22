@@ -1,0 +1,78 @@
+{
+    "header": {
+        "features": "Fitur",
+        "track": "Yang bisa kamu lacak",
+        "view": "Lihat permainanku",
+        "new": "Permainan baru",
+        "menu": "Menu",
+        "menuOpen": "Buka menu",
+        "menuClose": "Tutup menu",
+        "nav": "Utama"
+    },
+    "hero": {
+        "eyebrow": "Lacak progresmu",
+        "title": "Dinkum Tracker",
+        "intro": "Aplikasi pelacak lengkap untuk petualangan Dinkum-mu. Kelola banyak permainan, lacak koleksi, dan pantau progres di satu tempat. Semua tersimpan di browser, dan kamu bisa menyinkronkannya ke penyimpanan cloud milikmu sendiri.",
+        "view": "Lihat Permainanku",
+        "new": "Petualangan Baru",
+        "imageAlt": "Game Dinkum"
+    },
+    "counts": {
+        "title": "Lacak Seluruh Koleksimu",
+        "intro": "Kelola setiap sisi perjalanan Dinkum-mu dengan pelacak yang dibuat berdasarkan jumlah item sebenarnya.",
+        "pedia": "Pedia",
+        "npcs": "NPC",
+        "licenses": "Lisensi",
+        "milestones": "Pencapaian",
+        "buildings": "Bangunan",
+        "gear": "Perlengkapan dan peralatan",
+        "recipes": "Resep",
+        "clothing": "Pakaian"
+    },
+    "everything": {
+        "title": "Lacak Semuanya",
+        "intro": "Semua alat yang kamu butuhkan untuk sukses di Dinkum",
+        "imageAlt": "Aplikasi Dinkum Tracker",
+        "closing": "Dari mengumpulkan serangga sampai mengelola hubungan dengan NPC, Dinkum Tracker membantumu melacak semua yang ada di gamemu.",
+        "pedia": {
+            "title": "Koleksi Pedia",
+            "text": "Lacak semua ikan, serangga, dan satwa kecil menurut musim, lokasi, dan waktu. Pantau donasi museum dan progres koleksimu."
+        },
+        "npcs": {
+            "title": "Hubungan dengan NPC",
+            "text": "Catat persahabatanmu dengan warga kota, hadiah favorit, dan level hati dengan semua {count} NPC."
+        },
+        "calendar": {
+            "title": "Acara Kalender",
+            "text": "Catat tanggal penting, ulang tahun, dan acara musiman. Jangan lewatkan lagi festival atau acara spesial di kota Dinkum-mu."
+        }
+    },
+    "needs": {
+        "title": "Semua yang kamu butuhkan",
+        "intro": "Catat semua detail yang penting dalam petualangan Dinkum-mu.",
+        "milestones": {
+            "title": "Pencapaian dan Lisensi",
+            "one": "Lacak penyelesaian {count} pencapaian game",
+            "two": "Kelola semua lisensi dan level upgrade-nya",
+            "three": "Lihat progres poin izin dan syaratnya"
+        },
+        "recipes": {
+            "title": "Resep dan Kerajinan",
+            "one": "Lacak semua resep memasak dan bahannya",
+            "two": "Catat resep kerajinan dan sumber dayanya",
+            "three": "Kelola alat, senjata, dan peralatan"
+        },
+        "collections": {
+            "title": "Koleksi dan Sumber Daya",
+            "one": "Katalogkan semua pakaian dan perabot",
+            "two": "Lacak semua sumber daya dan kegunaannya",
+            "three": "Kelola proyek bangunan dan akta"
+        }
+    },
+    "cta": {
+        "title": "Siap mulai melacak?",
+        "text": "Mulai atur petualangan Dinkum-mu hari ini dan jangan pernah kehilangan jejak progresmu lagi.",
+        "create": "Buat Permainan Baru",
+        "existing": "Lihat Permainan yang Ada"
+    }
+}

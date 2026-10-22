@@ -1,0 +1,8 @@
+{
+    "saveFailed": {
+        "title": "Kaydedilmedi",
+        "message": "Tarayıcı verilerini saklayamadı. Değişikliklerini kaybetmemek için bir yedek dışa aktar.",
+        "exportBackup": "Yedeği dışa aktar"
+    },
+    "undo": "Geri al"
+}

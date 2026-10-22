@@ -1,0 +1,124 @@
+{
+    "title": "Partite",
+    "subline": "Gestisci le tue avventure in Dinkum. {count, plural, one {{amount} partita} other {{amount} partite}}, {name} è attiva.",
+    "sublineNoneActive": "Gestisci le tue avventure in Dinkum. {count, plural, one {{amount} partita} other {{amount} partite}}.",
+    "sublineEmpty": "Ancora nessuna partita.",
+    "loading": "Caricamento delle partite...",
+    "stats": {
+        "playthroughs": "Partite",
+        "playthroughsCaption": "in questo browser",
+        "active": "Attiva",
+        "noneActive": "Nessuna",
+        "furthest": "La più avanzata",
+        "average": "Completamento medio",
+        "averageCaption": "su tutte"
+    },
+    "filters": {
+        "sortBy": "Ordina per",
+        "sort": {
+            "lastUpdated": "Ultimo aggiornamento",
+            "name": "Nome",
+            "createdAt": "Data di creazione",
+            "completion": "Percentuale di completamento"
+        },
+        "search": "Cerca partite per nome",
+        "showing": "Mostrate {shown} di {total} {total, plural, one {partita} other {partite}}",
+        "defaultSortFrom": "L'ordine predefinito viene dalle <link>Impostazioni</link>"
+    },
+    "noMatch": {
+        "title": "Nessuna partita corrisponde a \"{query}\"",
+        "description": "Prova un altro nome.",
+        "clear": "Cancella ricerca"
+    },
+    "empty": {
+        "title": "Nessuna partita trovata",
+        "description": "Non hai ancora creato nessuna partita. Inizia a tracciare la tua avventura in Dinkum creando la prima. Ogni partita viene salvata in questo browser.",
+        "create": "Crea la tua prima partita",
+        "importBackup": "Importa invece un backup"
+    },
+    "card": {
+        "created": "Creata: {date}",
+        "updated": "Aggiornata: {when}",
+        "complete": "{percent}% completata",
+        "overall": "Progresso totale",
+        "pedia": "Pedia",
+        "licenses": "Licenze",
+        "milestones": "Traguardi",
+        "buildings": "Edifici",
+        "pediaDetail": "Pesci {fish} · Insetti {bugs} · Animaletti {critters}",
+        "count": "{count}/{total}",
+        "gameDate": "Giorno {day}, {season}",
+        "currentGameDate": "Data attuale nel gioco",
+        "setActive": "Imposta come attiva",
+        "active": "Attiva",
+        "openOverview": "Apri panoramica",
+        "edit": "Modifica",
+        "delete": "Elimina",
+        "activePlaythrough": "Partita attiva"
+    },
+    "seasons": {
+        "Spring": "Primavera",
+        "Summer": "Estate",
+        "Autumn": "Autunno",
+        "Winter": "Inverno"
+    },
+    "relative": {
+        "today": "Oggi",
+        "yesterday": "Ieri",
+        "daysAgo": "{count, plural, one {{amount} giorno fa} other {{amount} giorni fa}}",
+        "weeksAgo": "{count, plural, one {{amount} settimana fa} other {{amount} settimane fa}}",
+        "monthsAgo": "{count, plural, one {{amount} mese fa} other {{amount} mesi fa}}",
+        "unknown": "N/D"
+    },
+    "new": {
+        "action": "Nuova partita",
+        "actionShort": "Nuova",
+        "pageTitle": "Nuova partita",
+        "pageSubline": "Dalle un nome e inizia a tracciare. Tutto viene salvato in questo browser.",
+        "back": "Torna a tutte le partite",
+        "next": {
+            "title": "Cosa succede dopo",
+            "one": "Una partita vuota viene salvata subito in questo browser.",
+            "two": "Diventa la partita attiva se la casella è spuntata. Il selettore nella barra laterale la mostra.",
+            "three": "Arrivi all'elenco delle partite con la nuova scheda in cima e un avviso per annullare."
+        },
+        "createdToast": "{name} creata"
+    },
+    "form": {
+        "title": "Crea nuova partita",
+        "nameLabel": "Nome della partita",
+        "required": "Obbligatorio",
+        "placeholder": "La mia avventura in Dinkum",
+        "help": "Dai alla partita un nome facile da ricordare, così la riconosci più avanti.",
+        "counter": "{count} / {max}",
+        "errorEmpty": "Inserisci un nome per la tua partita",
+        "makeActive": "Imposta come partita attiva",
+        "create": "Crea partita",
+        "creating": "Creazione...",
+        "cancel": "Annulla",
+        "failed": "Creazione della partita non riuscita. Riprova.",
+        "tryAgain": "Riprova"
+    },
+    "edit": {
+        "title": "Modifica partita",
+        "save": "Salva",
+        "saving": "Salvataggio...",
+        "savedToast": "Salvato",
+        "renamed": "Rinominata in {name}",
+        "description": "{name} · creata il {date}",
+        "nameLabel": "Nome della partita",
+        "help": "Premi Invio per salvare. Il salvataggio resta disattivato se il nome è vuoto."
+    },
+    "delete": {
+        "title": "Eliminare {name}?",
+        "description": "Questo rimuove tutti i progressi salvati su questo dispositivo.",
+        "activeNext": "Questa è la tua partita attiva. {next} è la più recente, quindi diventa attiva dopo l'eliminazione.",
+        "activeLast": "Questa è la tua partita attiva e l'unica che hai. Dopo l'eliminazione nessuna partita sarà attiva.",
+        "exportFirst": "Esporta prima un backup",
+        "confirm": "Elimina",
+        "cancel": "Annulla",
+        "toast": "{name} eliminata",
+        "toastMessage": "Puoi annullare per 10 secondi",
+        "updated": "Aggiornata {when} · {date}"
+    }
+}

@@ -20,9 +20,6 @@ updates:
         patterns:
           - tailwindcss
           - "@tailwindcss/*"
-      flowbite:
-        patterns:
-          - flowbite-react
       vercel:
         patterns:
           - "@vercel/*"

@@ -1,0 +1,98 @@
+{
+    "npcs": {
+        "title": "NPCs",
+        "subline": "{hearts} de {total} corazones · {count} NPCs · {name}",
+        "tiles": {
+            "total": "Corazones totales",
+            "full": "Corazones completos",
+            "met": "Conocidos hasta ahora",
+            "of": "de {total}",
+            "ofNpcs": "de {total} NPCs"
+        },
+        "filters": {
+            "search": "Buscar NPCs por nombre",
+            "sheetTitle": "Filtrar NPCs",
+            "relationship": "Relación",
+            "residence": "Vive en la isla",
+            "all": "Todos",
+            "none": "Sin corazones aún",
+            "progress": "En progreso",
+            "full": "Corazones completos",
+            "canMoveIn": "Pueden mudarse",
+            "visitors": "Solo visitantes",
+            "showing": "Mostrando {shown} de {total} NPCs · Corazones completos {full} · Conocidos {met}",
+            "apply": "Ver {count} NPCs"
+        },
+        "hint": "Haz clic en un corazón para fijarlo. Haz clic en el último corazón lleno para quitarlo. Usa -{step} y +{step} para avanzar de cuarto en cuarto.",
+        "things": "NPCs",
+        "card": {
+            "full": "Completo",
+            "requirements": "Requisitos",
+            "visit": "Visita",
+            "moveIn": "Mudanza",
+            "food": "Preferencias de comida",
+            "likes": "Le gusta",
+            "dislikes": "No le gusta",
+            "none": "Ninguna"
+        },
+        "hearts": {
+            "label": "Corazones de {name}",
+            "setTo": "Fijar a {name} en {count, plural, one {{amount} corazón} other {{amount} corazones}}",
+            "less": "- {step}",
+            "more": "+ {step}",
+            "lessLabel": "Bajar los corazones en {step}",
+            "moreLabel": "Subir los corazones en {step}",
+            "readout": "{hearts} / {max}"
+        },
+        "toast": {
+            "set": "{name}: {hearts} de 5 corazones"
+        },
+        "empty": {
+            "title": "Ningún NPC coincide con estos filtros",
+            "description": "Prueba con otro nombre o borra los filtros.",
+            "clear": "Borrar filtros"
+        }
+    },
+    "calendar": {
+        "title": "Calendario",
+        "subline": "{season} · {events} eventos · {birthdays} cumpleaños · {name}",
+        "previous": "Estación anterior",
+        "next": "Estación siguiente",
+        "today": "Hoy",
+        "legend": {
+            "event": "Evento",
+            "birthday": "Cumpleaños",
+            "current": "Día actual"
+        },
+        "alert": "Día actual: {day} de {season}. Haz clic en cualquier día para fijarlo como día actual. Los cambios se guardan al instante.",
+        "weekdays": {
+            "Sunday": "Dom",
+            "Monday": "Lun",
+            "Tuesday": "Mar",
+            "Wednesday": "Mié",
+            "Thursday": "Jue",
+            "Friday": "Vie",
+            "Saturday": "Sáb"
+        },
+        "more": "+ {count} más",
+        "dayLabel": "{weekday}, {day} de {season}",
+        "details": {
+            "title": "{weekday}, {day} de {season}",
+            "events": "Eventos",
+            "birthdays": "Cumpleaños",
+            "noEvents": "Hoy no hay eventos.",
+            "noBirthdays": "Hoy no hay cumpleaños.",
+            "current": "Día actual",
+            "close": "Cerrar"
+        },
+        "toast": {
+            "set": "Día actual fijado en {day} de {season}"
+        },
+        "cellEntries": "{count, plural, one {{amount} entrada} other {{amount} entradas}}",
+        "entries": {
+            "birthday": "Cumpleaños de {name}",
+            "range": "Días {start}-{end} de {season}",
+            "likes": "Le gusta: {food}"
+        }
+    }
+}

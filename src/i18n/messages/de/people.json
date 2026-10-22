@@ -1,0 +1,98 @@
+{
+    "npcs": {
+        "title": "NPCs",
+        "subline": "{hearts} von {total} Herzen · {count} NPCs · {name}",
+        "tiles": {
+            "total": "Herzen gesamt",
+            "full": "Volle Herzen",
+            "met": "Bisher getroffen",
+            "of": "von {total}",
+            "ofNpcs": "von {total} NPCs"
+        },
+        "filters": {
+            "search": "NPCs nach Name suchen",
+            "sheetTitle": "NPCs filtern",
+            "relationship": "Beziehung",
+            "residence": "Wohnt auf der Insel",
+            "all": "Alle",
+            "none": "Noch keine Herzen",
+            "progress": "In Arbeit",
+            "full": "Volle Herzen",
+            "canMoveIn": "Kann einziehen",
+            "visitors": "Nur Besucher",
+            "showing": "{shown} von {total} NPCs angezeigt · Volle Herzen {full} · Getroffen {met}",
+            "apply": "{count} NPCs zeigen"
+        },
+        "hint": "Klicke auf ein Herz, um es zu setzen. Klicke auf das letzte volle Herz, um es zurückzunehmen. Mit -{step} und +{step} gehst du in Viertelschritten.",
+        "things": "NPCs",
+        "card": {
+            "full": "Voll",
+            "requirements": "Anforderungen",
+            "visit": "Besuch",
+            "moveIn": "Einzug",
+            "food": "Essensvorlieben",
+            "likes": "Mag",
+            "dislikes": "Mag nicht",
+            "none": "Keine"
+        },
+        "hearts": {
+            "label": "Herzen für {name}",
+            "setTo": "{name} auf {count, plural, one {{amount} Herz} other {{amount} Herzen}} setzen",
+            "less": "- {step}",
+            "more": "+ {step}",
+            "lessLabel": "Herzen um {step} verringern",
+            "moreLabel": "Herzen um {step} erhöhen",
+            "readout": "{hearts} / {max}"
+        },
+        "toast": {
+            "set": "{name}: {hearts} von 5 Herzen"
+        },
+        "empty": {
+            "title": "Keine NPCs passen zu diesen Filtern",
+            "description": "Versuche einen anderen Namen oder lösche die Filter.",
+            "clear": "Filter löschen"
+        }
+    },
+    "calendar": {
+        "title": "Kalender",
+        "subline": "{season} · {events} Ereignisse · {birthdays} Geburtstage · {name}",
+        "previous": "Vorherige Jahreszeit",
+        "next": "Nächste Jahreszeit",
+        "today": "Heute",
+        "legend": {
+            "event": "Ereignis",
+            "birthday": "Geburtstag",
+            "current": "Aktueller Tag"
+        },
+        "alert": "Aktueller Tag: {day} {season}. Klicke auf einen Tag, um ihn als aktuellen Tag zu setzen. Änderungen werden sofort gespeichert.",
+        "weekdays": {
+            "Sunday": "So",
+            "Monday": "Mo",
+            "Tuesday": "Di",
+            "Wednesday": "Mi",
+            "Thursday": "Do",
+            "Friday": "Fr",
+            "Saturday": "Sa"
+        },
+        "more": "+ {count} weitere",
+        "dayLabel": "{weekday}, {day} {season}",
+        "details": {
+            "title": "{weekday}, {day} {season}",
+            "events": "Ereignisse",
+            "birthdays": "Geburtstage",
+            "noEvents": "Heute keine Ereignisse.",
+            "noBirthdays": "Heute keine Geburtstage.",
+            "current": "Aktueller Tag",
+            "close": "Schließen"
+        },
+        "toast": {
+            "set": "Aktueller Tag gesetzt auf {day} {season}"
+        },
+        "cellEntries": "{count, plural, one {{amount} Eintrag} other {{amount} Einträge}}",
+        "entries": {
+            "birthday": "Geburtstag von {name}",
+            "range": "Tage {start}-{end}, {season}",
+            "likes": "Mag: {food}"
+        }
+    }
+}

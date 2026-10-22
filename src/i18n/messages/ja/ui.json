@@ -1,0 +1,51 @@
+{
+    "close": "閉じる",
+    "field": {
+        "optional": "任意"
+    },
+    "stepper": {
+        "lower": "{label}を下げる",
+        "raise": "{label}を上げる",
+        "labelPrefix": "{label}、"
+    },
+    "switch": {
+        "on": "オン",
+        "off": "オフ"
+    },
+    "tabs": {
+        "locked": "（ロック中）"
+    },
+    "toast": {
+        "dismiss": "閉じる",
+        "variants": {
+            "success": "成功",
+            "info": "情報",
+            "warning": "警告",
+            "error": "エラー"
+        },
+        "missingProvider": "useToast must be used within a ToastProvider"
+    },
+    "savedChip": {
+        "automatic": "自動で保存されます",
+        "justNow": "たった今保存しました",
+        "minutesAgo": "{count}分前に保存しました",
+        "at": "{time}に保存しました",
+        "failed": "保存できません。ストレージがいっぱいです"
+    },
+    "filters": {
+        "filters": "フィルター",
+        "filtersWithCount": "フィルター（{count}）",
+        "clearFilters": "フィルターをクリア",
+        "clearAll": "すべてクリア",
+        "cancel": "キャンセル",
+        "showResults": "結果を表示",
+        "search": "検索"
+    },
+    "commerce": {
+        "label": "商取引レベルでの売却",
+        "base": "基本",
+        "plus5": "+5%",
+        "plus10": "+10%",
+        "plus15": "+15%"
+    }
+}

@@ -1,0 +1,85 @@
+{
+    "title": "Pedia",
+    "subline": "{done} di {total} raccolti · {percent}% · {name}",
+    "tabsLabel": "Sezioni della Pedia",
+    "tabs": {
+        "fish": "Pesci",
+        "bugs": "Insetti",
+        "critters": "Animaletti"
+    },
+    "nouns": {
+        "fish": "pesci",
+        "bugs": "insetti",
+        "critters": "animaletti"
+    },
+    "summary": {
+        "captured": "Catturati",
+        "donated": "Donati al museo",
+        "permit": "Punti permesso guadagnati",
+        "of": "su {total}"
+    },
+    "filters": {
+        "sheetTitle": "Filtra {tab}",
+        "biome": "Bioma",
+        "rarity": "Rarità",
+        "season": "Stagione",
+        "time": "Ora",
+        "collected": "Raccolti",
+        "donated": "Donati",
+        "allBiomes": "Tutti i biomi",
+        "allRarities": "Tutte le rarità",
+        "allSeasons": "Tutte le stagioni",
+        "anyTime": "Qualsiasi ora",
+        "all": "Tutti",
+        "onlyCollected": "Raccolti",
+        "notCollected": "Da raccogliere",
+        "onlyDonated": "Donati",
+        "notDonated": "Da donare",
+        "search": "Cerca {tab} per nome",
+        "showing": "Mostrati {shown} di {total}: {tab}",
+        "capturedCount": "Catturati {count}",
+        "donatedCount": "Donati {count}",
+        "apply": "Mostra {count}: {tab}"
+    },
+    "view": {
+        "label": "Vista",
+        "grid": "Griglia",
+        "list": "Elenco"
+    },
+    "card": {
+        "biome": "Bioma",
+        "seasons": "Stagioni",
+        "time": "Ora",
+        "sell": "Prezzo di vendita",
+        "cooked": "Cucinato",
+        "cookedValue": "{price} · x{pieces}",
+        "status": "Stato",
+        "missing": "Mancante",
+        "caught": "Catturato",
+        "donated": "Donato"
+    },
+    "table": {
+        "name": "Nome",
+        "rarity": "Rarità",
+        "biome": "Bioma",
+        "seasons": "Stagioni",
+        "time": "Ora",
+        "sell": "Vendita",
+        "cooked": "Cucinato",
+        "status": "Stato",
+        "caption": "{shown} righe su {total} mostrate. Gli stessi filtri, lo stesso controllo dello stato e lo stesso livello di commercio valgono in entrambe le viste."
+    },
+    "empty": {
+        "title": "Nessun risultato per {tab} con questi filtri",
+        "description": "Prova un altro nome o azzera i filtri.",
+        "clear": "Azzera filtri"
+    },
+    "toast": {
+        "marked": "{name} segnato come {status}",
+        "statuses": {
+            "missing": "mancante",
+            "caught": "catturato",
+            "donated": "donato"
+        }
+    }
+}

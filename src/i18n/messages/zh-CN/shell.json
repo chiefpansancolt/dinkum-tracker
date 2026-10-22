@@ -1,0 +1,91 @@
+{
+    "nav": {
+        "main": "主导航",
+        "groups": {
+            "track": "追踪",
+            "progress": "进度",
+            "collect": "收集",
+            "tools": "工具"
+        },
+        "items": {
+            "overview": "总览",
+            "pedia": "图鉴",
+            "npcs": "NPC",
+            "calendar": "日历",
+            "buildings": "建筑",
+            "licenses": "执照",
+            "milestones": "里程碑",
+            "skills": "技能",
+            "recipes": "配方",
+            "gear": "装备",
+            "wardrobe": "衣橱与家居",
+            "itemsBreakdown": "物品拆解",
+            "weightCalculator": "重量计算器",
+            "reference": "资料库",
+            "settings": "设置",
+            "playthroughs": "存档",
+            "newPlaythrough": "新建存档"
+        }
+    },
+    "appShell": {
+        "skipToContent": "跳到正文",
+        "closeMenu": "关闭菜单"
+    },
+    "appBar": {
+        "openMenu": "打开菜单"
+    },
+    "playthroughGate": {
+        "emptyTitle": "还没有存档",
+        "emptyDescription": "新建一个存档，开始记录你的进度。",
+        "newPlaythrough": "新建存档"
+    },
+    "playthroughSwitcher": {
+        "sectionLabel": "存档",
+        "switchPlaythrough": "切换存档",
+        "loading": "加载中",
+        "noPlaythroughYet": "还没有存档",
+        "playthroughs": "存档",
+        "active": "当前",
+        "allPlaythroughs": "全部存档",
+        "newPlaythrough": "新建存档",
+        "detail": "第 {day} 天 · {percent}%"
+    },
+    "theme": {
+        "label": "主题",
+        "light": "浅色",
+        "dark": "深色",
+        "system": "跟随系统"
+    },
+    "footer": {
+        "tagline": "轻松记录你的 Dinkum 进度。",
+        "support": "支持",
+        "about": "关于",
+        "settings": "设置",
+        "discord": "Discord",
+        "github": "GitHub",
+        "dinkumWiki": "Dinkum Wiki",
+        "privacyPolicy": "隐私政策",
+        "termsOfService": "服务条款",
+        "disclaimerTitle": "免责声明",
+        "disclaimer": "本应用与 Dinkum 及其创作者没有任何关联，也未获得其认可。游戏数据来自 Dinkum Wiki。游戏图片和名称仅供参考。",
+        "copyright": "© {year} {appName}",
+        "framework": "基于 Gamerdex 框架构建，这是免费游戏进度追踪器的共用基础。你的数据保存在浏览器中，开启同步后也可保存在你自己的云存储中。",
+        "visitGamerdex": "访问 Gamerdex"
+    },
+    "domainNotice": {
+        "label": "域名变更通知：",
+        "movedTo": "Dinkum Tracker 已迁移到 <strong>{domain}</strong>。你保存的数据不会自动转移。请",
+        "exportLink": "导出你的数据",
+        "retired": "，然后在新域名上导入。当前域名将于 <strong>{date}</strong> 停用。",
+        "goToNewSite": "前往新网站",
+        "dismiss": "关闭通知"
+    },
+    "notFound": {
+        "code": "404",
+        "title": "页面不存在",
+        "description": "该页面不存在，或已被移动。",
+        "toOverview": "前往总览",
+        "toHome": "返回首页",
+        "hint": "404 表示地址输入有误，或页面已被删除。侧边栏仍可使用。"
+    }
+}

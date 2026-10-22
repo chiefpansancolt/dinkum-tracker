@@ -1,0 +1,98 @@
+{
+    "npcs": {
+        "title": "NPC",
+        "subline": "ハート{total}個中{hearts}個 · NPC {count}人 · {name}",
+        "tiles": {
+            "total": "ハート合計",
+            "full": "ハート満タン",
+            "met": "出会った人数",
+            "of": "{total}中",
+            "ofNpcs": "NPC {total}人中"
+        },
+        "filters": {
+            "search": "NPCを名前で検索",
+            "sheetTitle": "NPCをフィルター",
+            "relationship": "関係",
+            "residence": "島に住んでいる",
+            "all": "すべて",
+            "none": "ハートなし",
+            "progress": "進行中",
+            "full": "ハート満タン",
+            "canMoveIn": "引っ越し可能",
+            "visitors": "訪問者のみ",
+            "showing": "NPC {total}人中{shown}人を表示 · ハート満タン {full} · 出会った {met}",
+            "apply": "NPCを{count}人表示"
+        },
+        "hint": "ハートをクリックすると設定できます。最後の満タンのハートをクリックすると取り消せます。-{step}と+{step}で4分の1ずつ調整できます。",
+        "things": "NPC",
+        "card": {
+            "full": "満タン",
+            "requirements": "必要条件",
+            "visit": "訪問",
+            "moveIn": "引っ越し",
+            "food": "食べ物の好み",
+            "likes": "好き",
+            "dislikes": "苦手",
+            "none": "なし"
+        },
+        "hearts": {
+            "label": "{name}のハート",
+            "setTo": "{name}を{count, plural, other {ハート{amount}個}}に設定",
+            "less": "- {step}",
+            "more": "+ {step}",
+            "lessLabel": "ハートを{step}減らす",
+            "moreLabel": "ハートを{step}増やす",
+            "readout": "{hearts} / {max}"
+        },
+        "toast": {
+            "set": "{name}：ハート5個中{hearts}個"
+        },
+        "empty": {
+            "title": "条件に一致するNPCはいません",
+            "description": "別の名前を試すか、フィルターをクリアしてください。",
+            "clear": "フィルターをクリア"
+        }
+    },
+    "calendar": {
+        "title": "カレンダー",
+        "subline": "{season} · イベント{events}件 · 誕生日{birthdays}件 · {name}",
+        "previous": "前の季節",
+        "next": "次の季節",
+        "today": "今日",
+        "legend": {
+            "event": "イベント",
+            "birthday": "誕生日",
+            "current": "現在の日"
+        },
+        "alert": "現在の日：{season}{day}日。日付をクリックすると現在の日に設定できます。変更はすぐに保存されます。",
+        "weekdays": {
+            "Sunday": "日",
+            "Monday": "月",
+            "Tuesday": "火",
+            "Wednesday": "水",
+            "Thursday": "木",
+            "Friday": "金",
+            "Saturday": "土"
+        },
+        "more": "+ 他{count}件",
+        "dayLabel": "{season}{day}日（{weekday}）",
+        "details": {
+            "title": "{season}{day}日（{weekday}）",
+            "events": "イベント",
+            "birthdays": "誕生日",
+            "noEvents": "今日のイベントはありません。",
+            "noBirthdays": "今日誕生日の人はいません。",
+            "current": "現在の日",
+            "close": "閉じる"
+        },
+        "toast": {
+            "set": "現在の日を{season}{day}日に設定しました"
+        },
+        "cellEntries": "{count, plural, other {{amount}件}}",
+        "entries": {
+            "birthday": "{name}の誕生日",
+            "range": "{season}の{start}〜{end}日",
+            "likes": "好きなもの：{food}"
+        }
+    }
+}

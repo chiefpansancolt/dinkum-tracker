@@ -1,0 +1,123 @@
+{
+    "common": {
+        "level": "เลเวล {level}",
+        "levelCount": "เลเวล {level}:",
+        "locked": "ทำเลเวลก่อนหน้าให้สำเร็จก่อน",
+        "completeAll": "ทำให้ครบทั้งหมด",
+        "clearAll": "ล้างทั้งหมด",
+        "requirement": "เงื่อนไข",
+        "requiredSkill": "เลเวลทักษะที่ต้องมี",
+        "all": "ทั้งหมด",
+        "collected": "สะสมแล้ว",
+        "notCollected": "ยังไม่สะสม",
+        "clearFilters": "ล้างตัวกรอง",
+        "toast": {
+            "obtained": "{item}: ได้รับเลเวล {level} แล้ว",
+            "cleared": "{item}: ล้าง {count, plural, other {{amount} เลเวล}} แล้ว",
+            "allObtained": "{item}: ได้รับทุกเลเวลแล้ว",
+            "allCleared": "{item}: ล้างทุกเลเวลแล้ว"
+        },
+        "empty": {
+            "title": "ไม่มี{things}ที่ตรงกับตัวกรองเหล่านี้",
+            "description": "ลองใช้ชื่ออื่น หรือล้างตัวกรอง"
+        },
+        "permitPoints": "แต้มใบอนุญาต"
+    },
+    "buildings": {
+        "title": "อาคาร",
+        "subline": "ติดตั้งแล้ว {count} จาก {total} · {percent}% · {name}",
+        "tiles": {
+            "installed": "ติดตั้งแล้ว",
+            "stillToInstall": "ยังต้องติดตั้ง",
+            "listed": "อาคารในรายการ",
+            "of": "จาก {total}",
+            "breakdown": "สะสมได้ {collectable} · ย้ายได้ {movable} · อ้างอิง {reference}"
+        },
+        "filters": {
+            "deedType": "ประเภทโฉนด",
+            "npc": "NPC",
+            "collected": "สะสมแล้ว",
+            "search": "ค้นหาอาคารตามชื่อ...",
+            "sheetTitle": "กรองอาคาร",
+            "showing": "แสดง {shown} จาก {total} อาคาร · ติดตั้งแล้ว {count}",
+            "apply": "แสดง {count} อาคาร"
+        },
+        "card": {
+            "deed": "โฉนด",
+            "npc": "NPC",
+            "size": "ขนาด",
+            "buildTime": "เวลาก่อสร้าง",
+            "deedPrice": "ราคาโฉนด",
+            "hours": "ชั่วโมง",
+            "closed": "ปิด",
+            "description": "คำอธิบาย",
+            "resources": "ทรัพยากร",
+            "resource": "{count} {name}"
+        },
+        "installed": "ติดตั้งแล้ว",
+        "nothingToInstall": "ไม่มีอะไรให้ติดตั้งสำหรับโฉนดประเภทนี้",
+        "things": "อาคาร",
+        "toast": {
+            "installed": "ทำเครื่องหมาย {name} ว่าติดตั้งแล้ว",
+            "notInstalled": "ทำเครื่องหมาย {name} ว่ายังไม่ได้ติดตั้ง"
+        }
+    },
+    "licenses": {
+        "title": "ใบอนุญาต",
+        "subline": "ได้รับ {count} จาก {total} เลเวล · {percent}% · {name}",
+        "tiles": {
+            "levels": "เลเวลที่ได้รับ",
+            "complete": "ใบอนุญาตที่สมบูรณ์",
+            "permit": "แต้มใบอนุญาตที่ใช้ไป",
+            "of": "จาก {total}",
+            "sentence": "คุณใช้แต้มใบอนุญาตไป {amount} จาก {total} แต้มที่ต้องใช้"
+        },
+        "filters": {
+            "category": "หมวด",
+            "collected": "สะสมแล้ว",
+            "search": "ค้นหาใบอนุญาตตามชื่อ...",
+            "sheetTitle": "กรองใบอนุญาต",
+            "showing": "แสดง {shown} จาก {total} ใบอนุญาต · เลเวลที่ปลดล็อกแล้ว {count}",
+            "apply": "แสดง {count} ใบอนุญาต"
+        },
+        "things": "ใบอนุญาต"
+    },
+    "milestones": {
+        "title": "หมุดหมาย",
+        "subline": "สำเร็จ {count} จาก {total} เลเวล · {percent}% · {name}",
+        "tiles": {
+            "levels": "เลเวลที่สำเร็จ",
+            "complete": "หมุดหมายที่สมบูรณ์",
+            "permit": "แต้มใบอนุญาตที่ได้รับ",
+            "of": "จาก {total}",
+            "sentence": "คุณได้รับแต้มใบอนุญาต {amount} จาก {total} แต้มที่มี"
+        },
+        "filters": {
+            "category": "หมวด",
+            "allCategories": "ทุกหมวด",
+            "collected": "สะสมแล้ว",
+            "viewMode": "โหมดการดู",
+            "grouped": "จัดกลุ่มตามตัวอักษร",
+            "all": "หมุดหมายทั้งหมด",
+            "search": "ค้นหาหมุดหมายตามชื่อหรือคำอธิบาย...",
+            "sheetTitle": "กรองหมุดหมาย",
+            "showing": "แสดง {shown} จาก {total} หมุดหมาย · เลเวลที่สำเร็จแล้ว {count}",
+            "apply": "แสดง {count} หมุดหมาย"
+        },
+        "things": "หมุดหมาย"
+    },
+    "skills": {
+        "title": "ทักษะ",
+        "subline": "{skills} ทักษะ · รวม {levels} เลเวล · ไม่มีขีดจำกัด · {name}",
+        "tiles": {
+            "total": "เลเวลทักษะรวม",
+            "across": "จาก {count} ทักษะ",
+            "highest": "ทักษะสูงสุด",
+            "atZero": "ทักษะที่เลเวล 0",
+            "atZeroOf": "จาก {total}"
+        },
+        "level": "เลเวลทักษะ",
+        "note": "ใบอนุญาตต้องใช้เลเวลทักษะในแต่ละขั้น ดูที่ <link>ใบอนุญาต</link> เพื่อดูว่ายังขาดเลเวลไหน",
+        "toast": "{name} เป็นเลเวล {level} แล้ว"
+    }
+}

@@ -1,0 +1,141 @@
+{
+    "title": "設定",
+    "subline": "このブラウザーに{count, plural, other {プレイスルー{amount}件}}を保存中 · 設定は自動で保存されます",
+    "storage": {
+        "title": "データの保存について",
+        "body": "データはブラウザー内に保存されます。同期やバックアップをしていない場合、ブラウザーのデータを消去すると失われます。",
+        "action": "下の機能を使って、データをエクスポートしてバックアップしてください。"
+    },
+    "manage": {
+        "title": "プレイスルー",
+        "description": "プレイスルーの名前変更、削除、作成はプレイスルーのページで行えます。",
+        "link": "プレイスルーを管理"
+    },
+    "data": {
+        "title": "データ管理",
+        "count": "{count, plural, other {プレイスルー{amount}件}}",
+        "exportButton": "すべてのプレイスルーをエクスポート",
+        "exportHint": "保存済みのすべてのプレイスルーのバックアップファイルをダウンロードします。",
+        "exportDone": "エクスポートしました",
+        "importButton": "データをインポート",
+        "importHint": "以前にエクスポートしたファイル（.json）をアップロードします。統合するか置き換えるかを確認する手順があります。",
+        "importDone": "インポートしました",
+        "importFailed": "ファイル形式が正しくありません",
+        "resetWarning": "警告：すべてのプレイスルーが削除されます。元に戻せません。",
+        "resetButton": "すべてのデータをリセット",
+        "resetConfirm": "リセットを確定",
+        "resetCancel": "キャンセル",
+        "resetDone": "データをリセットしました",
+        "importFile": "バックアップファイル",
+        "description": "1つのバックアップファイルにすべてのプレイスルーが入ります。",
+        "exportTitle": "データのエクスポート",
+        "importTitle": "データのインポート",
+        "resetTitle": "すべてのデータをリセット",
+        "resetSyncedCopy": "{provider}の同期済みコピーも削除する",
+        "resetSyncedOn": "同期はオンのままです。ほかのデバイスでは、次回の同期でこれらのプレイスルーが失われます。迷う場合は、先にバックアップをエクスポートしてください。",
+        "resetSyncedOff": "同期済みのコピーはそのまま残ります。クラウドが空にならないよう、このブラウザーの同期は切断されます。",
+        "providers": {
+            "github": "GitHub",
+            "google": "Google Drive",
+            "dropbox": "Dropbox",
+            "microsoft": "OneDrive"
+        }
+    },
+    "import": {
+        "title": "バックアップをインポート",
+        "description": "このデバイスにすでにあるプレイスルーの扱いを選んでください。",
+        "fileSummary": "ファイル内 {inFile, plural, other {{inFileAmount}件}} · このデバイス内 {onDeviceAmount}件",
+        "mode": "インポート方法",
+        "merge": "統合（おすすめ）",
+        "mergeDescription": "新しいプレイスルーを追加します。両方にあるプレイスルーは、更新日が新しい方のコピーが残ります。このデバイスにだけあるプレイスルーはそのまま残ります。",
+        "replace": "すべて置き換え",
+        "replaceDescription": "このデバイスの{onDevice, plural, other {プレイスルー{onDeviceAmount}件}}を削除し、ファイルの{inFileAmount}件を読み込みます。元に戻せません。",
+        "table": {
+            "playthrough": "プレイスルー",
+            "inFile": "ファイル内",
+            "onDevice": "このデバイス内",
+            "result": "結果"
+        },
+        "updatedOn": "更新日 {date}",
+        "notOnDevice": "デバイスにありません",
+        "notInFile": "ファイルにありません",
+        "results": {
+            "added": "追加",
+            "updated": "ファイルのコピーを採用",
+            "kept": "デバイスのコピーを維持",
+            "replaced": "置き換え",
+            "removed": "削除"
+        },
+        "exportFirst": "先に現在のデータをエクスポート",
+        "cancel": "キャンセル",
+        "confirmMerge": "{count, plural, other {プレイスルー{amount}件}}を統合",
+        "confirmReplace": "すべてのデータを置き換え"
+    },
+    "appearance": {
+        "title": "外観と設定",
+        "theme": "テーマ",
+        "themeHint": "「システム」はデバイスの設定に従います。",
+        "defaultSort": "プレイスルーの既定の並び順",
+        "defaultSortHint": "プレイスルーを並べる既定の順序を選びます。変更するとすぐに保存されます。",
+        "resources": "その他のリソース",
+        "opensInNewTab": "新しいタブで開きます",
+        "wiki": "Dinkum Wiki",
+        "repository": "プロジェクトのリポジトリ"
+    },
+    "page": {
+        "title": "設定",
+        "tabsLabel": "設定",
+        "tabs": {
+            "sync": "クラウド同期",
+            "preferences": "環境設定",
+            "data": "バックアップとデータ",
+            "about": "このアプリについて"
+        }
+    },
+    "preferences": {
+        "appearance": {
+            "title": "外観",
+            "description": "このデバイスにすぐ保存されます。"
+        },
+        "playthroughList": {
+            "title": "プレイスルー一覧",
+            "description": "プレイスルーのページを開いたときの並び順です。"
+        }
+    },
+    "about": {
+        "version": "バージョン {version}",
+        "summary": "Dinkumの進行状況を記録できます。魚、虫、小動物、マイルストーン、ライセンス、NPCなど。すべてこのブラウザーに保存されます。",
+        "resources": "その他のリソース",
+        "disclaimer": "Dinkumの制作者とは提携・承認の関係にありません。"
+    },
+    "region": {
+        "title": "言語と地域",
+        "description": "言語と、数字や日付の表記を選びます。このデバイスに保存されます。",
+        "language": {
+            "label": "言語",
+            "hint": "動物、アイテム、NPCなどのゲームデータの名前はゲームデータに由来するため、英語のままです。"
+        },
+        "numberFormat": {
+            "label": "数字の表記",
+            "hint": "例：{example}",
+            "options": {
+                "auto": "自動（言語に合わせる）",
+                "us": "1,234.56（アメリカ）",
+                "european": "1.234,56（ドイツ）",
+                "french": "1 234,56（フランス）",
+                "swiss": "1’234.56（スイス）",
+                "indian": "12,34,567.89（インド）"
+            }
+        },
+        "dateFormat": {
+            "label": "日付の表記",
+            "hint": "例：{example}",
+            "options": {
+                "auto": "自動（言語に合わせる）",
+                "mdy": "月/日/年",
+                "dmy": "日/月/年",
+                "ymd": "年-月-日"
+            }
+        }
+    }
+}

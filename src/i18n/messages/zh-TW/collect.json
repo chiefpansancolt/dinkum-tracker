@@ -1,0 +1,234 @@
+{
+    "toast": {
+        "marked": "{name} 已標記為{state}",
+        "collected": "已收集",
+        "notCollected": "未收集",
+        "unlocked": "已解鎖",
+        "locked": "未解鎖"
+    },
+    "filters": {
+        "search": "依名稱搜尋{things}...",
+        "sheetTitle": "篩選{things}",
+        "showingCollected": "顯示 {shown} / {total} 項{things} · 已收集 {count}",
+        "showingUnlocked": "顯示 {shown} / {total} 項{things} · 已解鎖 {count}",
+        "apply": "顯示 {count} 項{things}",
+        "all": "全部",
+        "collected": "已收集",
+        "notCollected": "待收集",
+        "unlocked": "已解鎖",
+        "notUnlocked": "待解鎖",
+        "source": "來源",
+        "allSources": "所有來源"
+    },
+    "empty": {
+        "title": "沒有符合篩選條件的{things}",
+        "description": "試試其他名稱，或清除篩選。",
+        "clear": "清除篩選"
+    },
+    "list": {
+        "got": "已取得",
+        "name": "名稱",
+        "caption": "已載入 {shown} / {total} 列。向下捲動可載入更多。",
+        "prices": "價格單位為 dinks"
+    },
+    "card": {
+        "collected": "已收集",
+        "markCollected": "標記為已收集",
+        "unlocked": "已解鎖",
+        "sellPrice": "售價",
+        "buyPrice": "買價",
+        "source": "來源",
+        "none": "–"
+    },
+    "gear": {
+        "title": "裝備",
+        "subline": "已收集 {count} / {total} · {percent}% · {name}",
+        "tabsLabel": "裝備分類",
+        "tabs": {
+            "books": "書籍",
+            "cassettes": "卡帶",
+            "tools": "工具",
+            "weapons": "武器",
+            "equipment": "裝備",
+            "vehicles": "載具"
+        },
+        "things": {
+            "books": "書籍",
+            "cassettes": "卡帶",
+            "tools": "工具",
+            "weapons": "武器",
+            "equipment": "裝備",
+            "vehicles": "載具"
+        },
+        "tiles": {
+            "collected": "已收集",
+            "of": "共 {total}",
+            "franklyn": "Franklyn 解鎖",
+            "craftable": "可製作",
+            "highDamage": "高傷害（20 以上）"
+        },
+        "filters": {
+            "license": "執照",
+            "allLicenses": "所有執照",
+            "purchaseType": "購買類型",
+            "purchasable": "可購買",
+            "dinks": "Dinks",
+            "permitPoints": "許可點數",
+            "damage": "傷害",
+            "high": "高（20 以上）",
+            "medium": "中（10 至 19）",
+            "low": "低（低於 10）",
+            "allDamage": "所有傷害",
+            "requirement": "條件類型",
+            "allRequirements": "所有條件類型",
+            "allPurchaseTypes": "全部"
+        },
+        "card": {
+            "craftingRecipe": "製作配方",
+            "license": "執照",
+            "licenseLevel": "狩獵執照等級",
+            "source": "來源",
+            "damage": "傷害",
+            "unlocksAfter": "解鎖條件",
+            "shinyDiscs": "{count} Shiny Discs",
+            "berkonium": "{count} Berkonium Ore",
+            "ingredients": "材料",
+            "resources": "資源",
+            "requirement": "需求等級",
+            "compatibleWith": "相容於",
+            "windmill": "風車",
+            "solarPanel": "太陽能板",
+            "acquiredFrom": "取得來源",
+            "requirements": "條件",
+            "buyPrice": "買價",
+            "sellPrice": "售價",
+            "dinks": "{amount} Dinks",
+            "permitPoints": "{count, plural, other {{amount} 點許可點數}}",
+            "ingredient": "{count}x {name}",
+            "none": "無",
+            "requirementLevel": "{type}等級"
+        }
+    },
+    "recipes": {
+        "title": "配方",
+        "subline": "已解鎖 {count} / {total} · {percent}% · {name}",
+        "tabsLabel": "配方分類",
+        "tabs": {
+            "cooking": "烹飪",
+            "crafting": "製作",
+            "signWriting": "招牌書寫"
+        },
+        "things": {
+            "cooking": "烹飪配方",
+            "crafting": "製作配方",
+            "signWriting": "招牌書寫配方"
+        },
+        "tiles": {
+            "unlocked": "已解鎖",
+            "of": "共 {total}",
+            "withBuffs": "附帶增益",
+            "vendors": "由 Sheila、Ted 或 Jimmy 販售",
+            "recipes": "配方"
+        },
+        "filters": {
+            "location": "烹飪地點",
+            "allLocations": "所有地點",
+            "unlocked": "已解鎖",
+            "sources": "來源",
+            "allSources": "所有來源",
+            "buffs": "增益",
+            "buffsWithCount": "增益（{count}）"
+        },
+        "buffs": {
+            "title": "依增益篩選",
+            "match": "符合",
+            "any": "任一",
+            "all": "全部",
+            "clear": "清除選擇",
+            "selected": "已選 {count} 項",
+            "done": "完成"
+        },
+        "card": {
+            "cookingLocation": "烹飪地點",
+            "buffs": "增益",
+            "duration": "{minutes, plural, other {{amount} 分鐘}}",
+            "sellPrice": "售價",
+            "sheilas": "Sheila 的店",
+            "teds": "Ted 的店",
+            "jimmys": "Jimmy 的店",
+            "resources": "資源",
+            "option": "選項 {n}",
+            "ingredient": "{count}x {name}",
+            "source": "來源",
+            "unlocked": "已解鎖",
+            "varies": "不固定",
+            "output": "x{count}"
+        }
+    },
+    "wardrobe": {
+        "title": "衣櫥與居家",
+        "subline": "已收集 {count} / {total} · {percent}% · {name}",
+        "tabsLabel": "衣櫥與居家分類",
+        "tabs": {
+            "clothing": "服飾",
+            "furniture": "家具",
+            "decorations": "裝飾品"
+        },
+        "things": {
+            "clothing": "件服飾",
+            "furniture": "件家具",
+            "decorations": "件裝飾品"
+        },
+        "progress": {
+            "clothing": "各部位進度 · 選擇方塊即可篩選",
+            "furniture": "各套組進度 · 選擇方塊即可篩選",
+            "decorations": "各類別進度 · 選擇方塊即可篩選"
+        },
+        "filters": {
+            "slot": "部位",
+            "type": "類型",
+            "set": "套組",
+            "allSets": "所有套組",
+            "catalogue": "目錄",
+            "melvins": "Melvin 的目錄",
+            "notMelvins": "不在目錄中",
+            "category": "類別",
+            "allCategories": "所有類別",
+            "source": "來源",
+            "allSources": "所有來源",
+            "all": "全部"
+        },
+        "list": {
+            "type": "類型",
+            "slot": "部位",
+            "set": "套組",
+            "price": "價格",
+            "sell": "售價",
+            "availableAt": "販售地點",
+            "catalogue": "目錄",
+            "category": "類別",
+            "source": "來源",
+            "buy": "買價"
+        },
+        "card": {
+            "slot": "部位",
+            "set": "套組",
+            "price": "價格",
+            "sellPrice": "售價",
+            "availableAt": "販售地點",
+            "cataloguePrice": "目錄價格",
+            "source": "來源",
+            "buyPrice": "買價",
+            "category": "類別"
+        },
+        "shop": "Clover 的商店",
+        "hints": {
+            "slots": "{count, plural, other {全部，另加 {amount} 個部位}}",
+            "typesForSlot": "{count, plural, other {{slot} 有 {amount} 種類型。變更部位時會重設為全部。}}",
+            "typeNeedsSlot": "部位為全部時，類型只有全部。請先選擇部位，再查看其類型。",
+            "sets": "{count, plural, other {全部，另加 {amount} 個套組}}",
+            "sources": "全部加上所有來源",
+            "categories": "{count, plural, other {共 {amount} 個類別。由上方的卡片設定。}}"
+        }
+    }
+}

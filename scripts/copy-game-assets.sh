@@ -1,6 +1,5 @@
 #!/bin/bash
 # Copies image assets from dinkum-data package to public/
-# Run automatically via postinstall or manually as needed
 
 PACKAGE_DIR="node_modules/dinkum-data"
 TARGET_DIR="public/images"

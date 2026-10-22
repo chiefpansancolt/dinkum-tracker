@@ -1,0 +1,116 @@
+{
+    "title": "总览",
+    "subline": "{done} / {total} 项 · {percent}% · {name}",
+    "view": "查看",
+    "headline": {
+        "label": "总完成度",
+        "ofItems": "{done} / {total} 项",
+        "groups": {
+            "track": "追踪",
+            "progress": "进度",
+            "collect": "收集"
+        },
+        "groupOf": "{done} / {total}",
+        "note": "分母固定为 {total} 项：图鉴 {pedia}，NPC {npcs}，里程碑 {milestones}，执照 {licenses}，技能 {skills}，建筑 {buildings}，装备 {gear}，衣橱与家居 {wardrobe}，配方 {recipes}。每个类别从第一天起就计入，所以打开新标签页时百分比不会跳变。"
+    },
+    "skills": {
+        "title": "角色技能",
+        "level": "{level} 级",
+        "empty": "还没有技能记录。"
+    },
+    "licenses": {
+        "title": "执照进度",
+        "obtained": "已获得执照",
+        "complete": "已完成 {count}/{total}",
+        "levels": "执照等级",
+        "levelsValue": "{count}/{total} · {percent}%",
+        "permit": "已花费许可点数",
+        "spent": "已花费 {percent}%"
+    },
+    "milestones": {
+        "title": "里程碑进度",
+        "overall": "总进度",
+        "complete": "已完成 {count}/{total}",
+        "levels": "等级",
+        "levelsValue": "{count}/{total} · {percent}%",
+        "permit": "已获得许可点数",
+        "earned": "已获得 {percent}%"
+    },
+    "pedia": {
+        "title": "图鉴进度",
+        "overall": "总进度（{count}/{total}）",
+        "donations": "博物馆捐赠（{count}/{total}）",
+        "fish": "鱼类（{count}/{total}）",
+        "bugs": "昆虫（{count}/{total}）",
+        "critters": "小动物（{count}/{total}）",
+        "donated": "已捐赠（{count}/{total}）",
+        "permit": "已获得许可点数",
+        "earned": "已获得 {percent}%"
+    },
+    "gear": {
+        "title": "装备与配备",
+        "overall": "总进度（{count}/{total}）",
+        "books": "书籍（{count}/{total}）",
+        "tools": "工具（{count}/{total}）",
+        "weapons": "武器（{count}/{total}）",
+        "equipment": "配备（{count}/{total}）",
+        "vehicles": "载具（{count}/{total}）",
+        "cassettes": "磁带（{count}/{total}）",
+        "names": {
+            "books": "书籍",
+            "tools": "工具",
+            "weapons": "武器",
+            "equipment": "配备",
+            "vehicles": "载具",
+            "cassettes": "磁带"
+        },
+        "mostComplete": "完成度最高",
+        "leastComplete": "完成度最低"
+    },
+    "buildings": {
+        "title": "建筑进度",
+        "overall": "总进度",
+        "complete": "已完成 {count}/{total}",
+        "houseUpgrades": "房屋升级",
+        "shops": "商店",
+        "town": "小镇建筑",
+        "utility": "功能建筑",
+        "mostExpensive": "最贵的建筑",
+        "price": "{amount} Dinks"
+    },
+    "recipes": {
+        "title": "配方收藏",
+        "overall": "总进度（{count}/{total}）",
+        "cooking": "烹饪（{count}/{total}）",
+        "crafting": "制作（{count}/{total}）",
+        "signWriting": "招牌书写（{count}/{total}）",
+        "names": {
+            "cooking": "烹饪",
+            "crafting": "制作",
+            "signWriting": "招牌书写"
+        },
+        "mostComplete": "完成度最高",
+        "leastComplete": "完成度最低"
+    },
+    "npcs": {
+        "title": "NPC 关系",
+        "total": "NPC 总数",
+        "friends": "朋友",
+        "oneHeart": "1 颗心以上",
+        "maxHearts": "满心",
+        "avgHearts": "平均心数",
+        "top": "关系最好",
+        "hearts": "{hearts, plural, other {{amount} 颗心}}",
+        "empty": "还没有已收集的 NPC 记录。"
+    },
+    "game": {
+        "title": "游戏信息",
+        "calendar": "游戏日历",
+        "date": "{season}第 {day} 天",
+        "tracking": "现实时间记录",
+        "daysSince": "创建至今：{days} 天",
+        "lastUpdated": "最后更新：{date}",
+        "milestones": "里程碑",
+        "completed": "已完成 {count}"
+    }
+}

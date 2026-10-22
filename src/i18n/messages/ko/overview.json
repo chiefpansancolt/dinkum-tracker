@@ -1,0 +1,116 @@
+{
+    "title": "개요",
+    "subline": "{total}개 중 {done}개 · {percent}% · {name}",
+    "view": "보기",
+    "headline": {
+        "label": "전체 달성률",
+        "ofItems": "{total}개 중 {done}개",
+        "groups": {
+            "track": "기록",
+            "progress": "진행",
+            "collect": "수집"
+        },
+        "groupOf": "{total}개 중 {done}개",
+        "note": "총 {total}개 항목을 기준으로 계산해요: 도감 {pedia}, NPC {npcs}, 마일스톤 {milestones}, 면허 {licenses}, 스킬 {skills}, 건물 {buildings}, 장비 {gear}, 옷장과 집 {wardrobe}, 레시피 {recipes}. 모든 분류를 첫날부터 포함하므로 새 탭을 열어도 퍼센트가 갑자기 바뀌지 않아요."
+    },
+    "skills": {
+        "title": "캐릭터 스킬",
+        "level": "레벨 {level}",
+        "empty": "기록된 스킬이 아직 없어요."
+    },
+    "licenses": {
+        "title": "면허 진행 상황",
+        "obtained": "획득한 면허",
+        "complete": "{total}개 중 {count}개 완료",
+        "levels": "면허 레벨",
+        "levelsValue": "{count}/{total} · {percent}%",
+        "permit": "사용한 허가 포인트",
+        "spent": "{percent}% 사용"
+    },
+    "milestones": {
+        "title": "마일스톤 진행 상황",
+        "overall": "전체 진행 상황",
+        "complete": "{total}개 중 {count}개 완료",
+        "levels": "레벨",
+        "levelsValue": "{count}/{total} · {percent}%",
+        "permit": "얻은 허가 포인트",
+        "earned": "{percent}% 획득"
+    },
+    "pedia": {
+        "title": "도감 진행 상황",
+        "overall": "전체 진행 상황 ({count}/{total})",
+        "donations": "박물관 기증 ({count}/{total})",
+        "fish": "물고기 ({count}/{total})",
+        "bugs": "곤충 ({count}/{total})",
+        "critters": "작은 동물 ({count}/{total})",
+        "donated": "기증 ({count}/{total})",
+        "permit": "얻은 허가 포인트",
+        "earned": "{percent}% 획득"
+    },
+    "gear": {
+        "title": "장비와 장착품",
+        "overall": "전체 진행 상황 ({count}/{total})",
+        "books": "책 ({count}/{total})",
+        "tools": "도구 ({count}/{total})",
+        "weapons": "무기 ({count}/{total})",
+        "equipment": "장착품 ({count}/{total})",
+        "vehicles": "탈것 ({count}/{total})",
+        "cassettes": "카세트 ({count}/{total})",
+        "names": {
+            "books": "책",
+            "tools": "도구",
+            "weapons": "무기",
+            "equipment": "장착품",
+            "vehicles": "탈것",
+            "cassettes": "카세트"
+        },
+        "mostComplete": "가장 많이 완료",
+        "leastComplete": "가장 적게 완료"
+    },
+    "buildings": {
+        "title": "건물 진행 상황",
+        "overall": "전체 진행 상황",
+        "complete": "{total}개 중 {count}개 완료",
+        "houseUpgrades": "집 업그레이드",
+        "shops": "상점",
+        "town": "마을 건물",
+        "utility": "시설 건물",
+        "mostExpensive": "가장 비싼 건물",
+        "price": "{amount} Dinks"
+    },
+    "recipes": {
+        "title": "레시피 수집",
+        "overall": "전체 진행 상황 ({count}/{total})",
+        "cooking": "요리 ({count}/{total})",
+        "crafting": "제작 ({count}/{total})",
+        "signWriting": "간판 쓰기 ({count}/{total})",
+        "names": {
+            "cooking": "요리",
+            "crafting": "제작",
+            "signWriting": "간판 쓰기"
+        },
+        "mostComplete": "가장 많이 완료",
+        "leastComplete": "가장 적게 완료"
+    },
+    "npcs": {
+        "title": "NPC 관계",
+        "total": "전체 NPC",
+        "friends": "친구",
+        "oneHeart": "하트 1개 이상",
+        "maxHearts": "최대 하트",
+        "avgHearts": "평균 하트",
+        "top": "상위 관계",
+        "hearts": "{hearts, plural, other {하트 {amount}개}}",
+        "empty": "기록된 NPC가 아직 없어요."
+    },
+    "game": {
+        "title": "게임 정보",
+        "calendar": "게임 달력",
+        "date": "{season} {day}일",
+        "tracking": "실제 기록 시간",
+        "daysSince": "생성 후 경과일: {days}",
+        "lastUpdated": "마지막 업데이트: {date}",
+        "milestones": "마일스톤",
+        "completed": "{count}개 완료"
+    }
+}

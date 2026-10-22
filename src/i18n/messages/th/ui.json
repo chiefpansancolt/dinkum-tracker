@@ -1,0 +1,51 @@
+{
+    "close": "ปิด",
+    "field": {
+        "optional": "ไม่บังคับ"
+    },
+    "stepper": {
+        "lower": "ลด {label}",
+        "raise": "เพิ่ม {label}",
+        "labelPrefix": "{label}, "
+    },
+    "switch": {
+        "on": "เปิด",
+        "off": "ปิด"
+    },
+    "tabs": {
+        "locked": " (ล็อก)"
+    },
+    "toast": {
+        "dismiss": "ปิดการแจ้งเตือน",
+        "variants": {
+            "success": "สำเร็จ",
+            "info": "ข้อมูล",
+            "warning": "คำเตือน",
+            "error": "ข้อผิดพลาด"
+        },
+        "missingProvider": "ต้องใช้ useToast ภายใน ToastProvider"
+    },
+    "savedChip": {
+        "automatic": "บันทึกอัตโนมัติ",
+        "justNow": "เพิ่งบันทึก",
+        "minutesAgo": "บันทึกเมื่อ {count} นาทีก่อน",
+        "at": "บันทึกเมื่อ {time}",
+        "failed": "ยังไม่ได้บันทึก พื้นที่เก็บข้อมูลเต็ม"
+    },
+    "filters": {
+        "filters": "ตัวกรอง",
+        "filtersWithCount": "ตัวกรอง ({count})",
+        "clearFilters": "ล้างตัวกรอง",
+        "clearAll": "ล้างทั้งหมด",
+        "cancel": "ยกเลิก",
+        "showResults": "แสดงผลลัพธ์",
+        "search": "ค้นหา"
+    },
+    "commerce": {
+        "label": "ขายที่ระดับการค้า",
+        "base": "พื้นฐาน",
+        "plus5": "+5%",
+        "plus10": "+10%",
+        "plus15": "+15%"
+    }
+}

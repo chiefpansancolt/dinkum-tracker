@@ -1,0 +1,91 @@
+{
+    "buffs": {
+        "attackLevel": "Tấn công",
+        "charged": "Tích điện",
+        "coolLevel": "Mát mẻ",
+        "defenseLevel": "Phòng thủ",
+        "diligent": "Siêng năng",
+        "experienceLevel": "Kinh nghiệm",
+        "fastHealthTickSpeedLevel": "Tốc độ nhịp máu nhanh",
+        "fishLevel": "Câu cá",
+        "foragingLevel": "Hái lượm",
+        "healthMax": "Máu tối đa",
+        "healthRegenRate": "Hồi máu",
+        "length": "Thời lượng",
+        "miningLevel": "Đào mỏ",
+        "sleepless": "Không buồn ngủ",
+        "speedLevel": "Tốc độ",
+        "staminaMax": "Thể lực tối đa",
+        "staminaRegenRate": "Hồi thể lực",
+        "swimmingLevel": "Bơi lội"
+    },
+    "categories": {
+        "buildings": "Công trình",
+        "tools": "Dụng cụ",
+        "weapons": "Vũ khí",
+        "equipment": "Thiết bị",
+        "vehicles": "Phương tiện",
+        "craftingRecipes": "Công thức chế tạo",
+        "cookingRecipes": "Công thức nấu ăn",
+        "signWritingRecipes": "Công thức viết biển",
+        "otherCraftables": "Vật phẩm chế tạo khác"
+    },
+    "resourceTypes": {
+        "fish": "Cá",
+        "critter": "Sinh vật nhỏ",
+        "bug": "Côn trùng",
+        "relic": "Cổ vật",
+        "crop": "Cây trồng",
+        "foragable": "Đồ hái lượm",
+        "animalProduct": "Sản phẩm động vật",
+        "paint": "Sơn",
+        "mineral": "Khoáng sản",
+        "craftable": "Vật phẩm chế tạo",
+        "trophy": "Chiến lợi phẩm",
+        "seed": "Hạt giống",
+        "flower": "Hoa",
+        "resource": "Tài nguyên"
+    },
+    "daily": {
+        "dayOneMilestones": "Ngày đầu tiên",
+        "travelMilestones": "Du hành",
+        "npcMilestones": "NPC",
+        "fishingMilestones": "Câu cá",
+        "farmingMilestones": "Làm nông",
+        "foragingMilestones": "Hái lượm",
+        "loggingMilestones": "Đốn gỗ",
+        "miningMilestones": "Đào mỏ",
+        "excavationMilestones": "Khai quật",
+        "bugCatchingMilestones": "Bắt côn trùng",
+        "craftingMilestones": "Chế tạo",
+        "huntingMilestones": "Săn bắn",
+        "trappingMilestones": "Đặt bẫy",
+        "dinksMilestones": "Dinks"
+    },
+    "animalTypes": {
+        "Wild Animal": "Động vật hoang dã",
+        "Farm Animal": "Vật nuôi trang trại",
+        "Tammed Animal": "Thú đã thuần hóa"
+    },
+    "temperaments": {
+        "Passive": "Hiền lành",
+        "Neutral": "Trung lập",
+        "Aggressive": "Hung dữ"
+    },
+    "seasons": {
+        "Spring": "Xuân",
+        "Summer": "Hạ",
+        "Autumn": "Thu",
+        "Winter": "Đông",
+        "All": "Tất cả"
+    },
+    "weekdays": {
+        "Sunday": "Chủ nhật",
+        "Monday": "Thứ hai",
+        "Tuesday": "Thứ ba",
+        "Wednesday": "Thứ tư",
+        "Thursday": "Thứ năm",
+        "Friday": "Thứ sáu",
+        "Saturday": "Thứ bảy"
+    }
+}

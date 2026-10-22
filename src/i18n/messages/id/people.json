@@ -1,0 +1,98 @@
+{
+    "npcs": {
+        "title": "NPC",
+        "subline": "{hearts} dari {total} hati · {count} NPC · {name}",
+        "tiles": {
+            "total": "Total hati",
+            "full": "Hati penuh",
+            "met": "Sudah bertemu",
+            "of": "dari {total}",
+            "ofNpcs": "dari {total} NPC"
+        },
+        "filters": {
+            "search": "Cari NPC menurut nama",
+            "sheetTitle": "Filter NPC",
+            "relationship": "Hubungan",
+            "residence": "Tinggal di pulau",
+            "all": "Semua",
+            "none": "Belum ada hati",
+            "progress": "Sedang berjalan",
+            "full": "Hati penuh",
+            "canMoveIn": "Bisa pindah",
+            "visitors": "Hanya pengunjung",
+            "showing": "Menampilkan {shown} dari {total} NPC · Hati penuh {full} · Bertemu {met}",
+            "apply": "Tampilkan {count} NPC"
+        },
+        "hint": "Klik hati untuk mengaturnya. Klik hati penuh terakhir untuk membatalkannya. Pakai -{step} dan +{step} untuk langkah seperempat.",
+        "things": "NPC",
+        "card": {
+            "full": "Penuh",
+            "requirements": "Syarat",
+            "visit": "Berkunjung",
+            "moveIn": "Pindah",
+            "food": "Preferensi makanan",
+            "likes": "Suka",
+            "dislikes": "Tidak suka",
+            "none": "Tidak ada"
+        },
+        "hearts": {
+            "label": "Hati untuk {name}",
+            "setTo": "Atur {name} ke {count, plural, other {{amount} hati}}",
+            "less": "- {step}",
+            "more": "+ {step}",
+            "lessLabel": "Kurangi hati sebesar {step}",
+            "moreLabel": "Tambah hati sebesar {step}",
+            "readout": "{hearts} / {max}"
+        },
+        "toast": {
+            "set": "{name}: {hearts} dari 5 hati"
+        },
+        "empty": {
+            "title": "Tidak ada NPC yang cocok dengan filter ini",
+            "description": "Coba nama lain atau hapus filter.",
+            "clear": "Hapus filter"
+        }
+    },
+    "calendar": {
+        "title": "Kalender",
+        "subline": "{season} · {events} acara · {birthdays} ulang tahun · {name}",
+        "previous": "Musim sebelumnya",
+        "next": "Musim berikutnya",
+        "today": "Hari ini",
+        "legend": {
+            "event": "Acara",
+            "birthday": "Ulang tahun",
+            "current": "Hari ini di game"
+        },
+        "alert": "Hari ini di game: {day} {season}. Klik hari mana saja untuk menjadikannya hari ini. Perubahan langsung tersimpan.",
+        "weekdays": {
+            "Sunday": "Min",
+            "Monday": "Sen",
+            "Tuesday": "Sel",
+            "Wednesday": "Rab",
+            "Thursday": "Kam",
+            "Friday": "Jum",
+            "Saturday": "Sab"
+        },
+        "more": "+ {count} lagi",
+        "dayLabel": "{weekday}, {day} {season}",
+        "details": {
+            "title": "{weekday}, {day} {season}",
+            "events": "Acara",
+            "birthdays": "Ulang tahun",
+            "noEvents": "Tidak ada acara hari ini.",
+            "noBirthdays": "Tidak ada ulang tahun hari ini.",
+            "current": "Hari ini di game",
+            "close": "Tutup"
+        },
+        "toast": {
+            "set": "Hari ini di game diatur ke {day} {season}"
+        },
+        "cellEntries": "{count, plural, other {{amount} entri}}",
+        "entries": {
+            "birthday": "Ulang Tahun {name}",
+            "range": "Hari {start}-{end} {season}",
+            "likes": "Suka: {food}"
+        }
+    }
+}

@@ -1,0 +1,234 @@
+{
+    "toast": {
+        "marked": "{name} markiert: {state}",
+        "collected": "Gesammelt",
+        "notCollected": "Nicht gesammelt",
+        "unlocked": "Freigeschaltet",
+        "locked": "Gesperrt"
+    },
+    "filters": {
+        "search": "{things} nach Name suchen...",
+        "sheetTitle": "{things} filtern",
+        "showingCollected": "{shown} von {total} {things} angezeigt · Gesammelt {count}",
+        "showingUnlocked": "{shown} von {total} {things} angezeigt · Freigeschaltet {count}",
+        "apply": "{count} {things} zeigen",
+        "all": "Alle",
+        "collected": "Gesammelt",
+        "notCollected": "Noch zu sammeln",
+        "unlocked": "Freigeschaltet",
+        "notUnlocked": "Noch freizuschalten",
+        "source": "Quelle",
+        "allSources": "Alle Quellen"
+    },
+    "empty": {
+        "title": "Keine Treffer für {things}",
+        "description": "Versuche einen anderen Namen oder lösche die Filter.",
+        "clear": "Filter löschen"
+    },
+    "list": {
+        "got": "Hab ich",
+        "name": "Name",
+        "caption": "{shown} von {total} Zeilen geladen. Beim Scrollen werden weitere geladen.",
+        "prices": "Preise in Dinks"
+    },
+    "card": {
+        "collected": "Gesammelt",
+        "markCollected": "Als gesammelt markieren",
+        "unlocked": "Freigeschaltet",
+        "sellPrice": "Verkaufspreis",
+        "buyPrice": "Kaufpreis",
+        "source": "Quelle",
+        "none": "–"
+    },
+    "gear": {
+        "title": "Ausrüstung",
+        "subline": "{count} von {total} gesammelt · {percent}% · {name}",
+        "tabsLabel": "Ausrüstungsbereiche",
+        "tabs": {
+            "books": "Bücher",
+            "cassettes": "Kassetten",
+            "tools": "Werkzeuge",
+            "weapons": "Waffen",
+            "equipment": "Zubehör",
+            "vehicles": "Fahrzeuge"
+        },
+        "things": {
+            "books": "Bücher",
+            "cassettes": "Kassetten",
+            "tools": "Werkzeuge",
+            "weapons": "Waffen",
+            "equipment": "Zubehör",
+            "vehicles": "Fahrzeuge"
+        },
+        "tiles": {
+            "collected": "Gesammelt",
+            "of": "von {total}",
+            "franklyn": "Franklyn schaltet frei",
+            "craftable": "Bastelbar",
+            "highDamage": "Hoher Schaden (20+)"
+        },
+        "filters": {
+            "license": "Lizenz",
+            "allLicenses": "Alle Lizenzen",
+            "purchaseType": "Kaufart",
+            "purchasable": "Kaufbar",
+            "dinks": "Dinks",
+            "permitPoints": "Genehmigungspunkte",
+            "damage": "Schaden",
+            "high": "Hoch (20+)",
+            "medium": "Mittel (10 bis 19)",
+            "low": "Niedrig (unter 10)",
+            "allDamage": "Aller Schaden",
+            "requirement": "Anforderungsart",
+            "allRequirements": "Alle Anforderungsarten",
+            "allPurchaseTypes": "Alle"
+        },
+        "card": {
+            "craftingRecipe": "Bastelrezept",
+            "license": "Lizenz",
+            "licenseLevel": "Jagdlizenz-Stufe",
+            "source": "Quelle",
+            "damage": "Schaden",
+            "unlocksAfter": "Freigeschaltet nach",
+            "shinyDiscs": "{count} Shiny Discs",
+            "berkonium": "{count} Berkonium Ore",
+            "ingredients": "Zutaten",
+            "resources": "Rohstoffe",
+            "requirement": "Anforderungsstufe",
+            "compatibleWith": "Kompatibel mit",
+            "windmill": "Windmühle",
+            "solarPanel": "Solarpanel",
+            "acquiredFrom": "Erhältlich bei",
+            "requirements": "Anforderungen",
+            "buyPrice": "Kaufpreis",
+            "sellPrice": "Verkaufspreis",
+            "dinks": "{amount} Dinks",
+            "permitPoints": "{count, plural, one {{amount} Genehmigungspunkt} other {{amount} Genehmigungspunkte}}",
+            "ingredient": "{count}x {name}",
+            "none": "Keine",
+            "requirementLevel": "{type}-Stufe"
+        }
+    },
+    "recipes": {
+        "title": "Rezepte",
+        "subline": "{count} von {total} freigeschaltet · {percent}% · {name}",
+        "tabsLabel": "Rezeptbereiche",
+        "tabs": {
+            "cooking": "Kochen",
+            "crafting": "Basteln",
+            "signWriting": "Schilder"
+        },
+        "things": {
+            "cooking": "Kochrezepte",
+            "crafting": "Bastelrezepte",
+            "signWriting": "Schilder-Rezepte"
+        },
+        "tiles": {
+            "unlocked": "Freigeschaltet",
+            "of": "von {total}",
+            "withBuffs": "Mit Buffs",
+            "vendors": "Verkauft von Sheila, Ted oder Jimmy",
+            "recipes": "Rezepte"
+        },
+        "filters": {
+            "location": "Kochorte",
+            "allLocations": "Alle Orte",
+            "unlocked": "Freigeschaltet",
+            "sources": "Quellen",
+            "allSources": "Alle Quellen",
+            "buffs": "Buffs",
+            "buffsWithCount": "Buffs ({count})"
+        },
+        "buffs": {
+            "title": "Nach Buffs filtern",
+            "match": "Treffer bei",
+            "any": "EINEM",
+            "all": "ALLEN",
+            "clear": "Auswahl löschen",
+            "selected": "{count} ausgewählt",
+            "done": "Fertig"
+        },
+        "card": {
+            "cookingLocation": "Kochort",
+            "buffs": "Buffs",
+            "duration": "{minutes, plural, one {{amount} Min.} other {{amount} Min.}}",
+            "sellPrice": "Verkaufspreis",
+            "sheilas": "Sheilas",
+            "teds": "Teds",
+            "jimmys": "Jimmys",
+            "resources": "Rohstoffe",
+            "option": "Option {n}",
+            "ingredient": "{count}x {name}",
+            "source": "Quelle",
+            "unlocked": "Freigeschaltet",
+            "varies": "Variiert",
+            "output": "x{count}"
+        }
+    },
+    "wardrobe": {
+        "title": "Garderobe und Heim",
+        "subline": "{count} von {total} gesammelt · {percent}% · {name}",
+        "tabsLabel": "Garderobenbereiche",
+        "tabs": {
+            "clothing": "Kleidung",
+            "furniture": "Möbel",
+            "decorations": "Deko"
+        },
+        "things": {
+            "clothing": "Kleidungsstücke",
+            "furniture": "Möbel",
+            "decorations": "Deko"
+        },
+        "progress": {
+            "clothing": "Fortschritt je Slot · Kachel wählen zum Filtern",
+            "furniture": "Fortschritt je Set · Kachel wählen zum Filtern",
+            "decorations": "Fortschritt je Kategorie · Kachel wählen zum Filtern"
+        },
+        "filters": {
+            "slot": "Slot",
+            "type": "Typ",
+            "set": "Set",
+            "allSets": "Alle Sets",
+            "catalogue": "Katalog",
+            "melvins": "Melvins Katalog",
+            "notMelvins": "Nicht im Katalog",
+            "category": "Kategorie",
+            "allCategories": "Alle Kategorien",
+            "source": "Quelle",
+            "allSources": "Alle Quellen",
+            "all": "Alle"
+        },
+        "list": {
+            "type": "Typ",
+            "slot": "Slot",
+            "set": "Set",
+            "price": "Preis",
+            "sell": "Verkauf",
+            "availableAt": "Erhältlich bei",
+            "catalogue": "Katalog",
+            "category": "Kategorie",
+            "source": "Quelle",
+            "buy": "Kauf"
+        },
+        "card": {
+            "slot": "Slot",
+            "set": "Set",
+            "price": "Preis",
+            "sellPrice": "Verkaufspreis",
+            "availableAt": "Erhältlich bei",
+            "cataloguePrice": "Katalogpreis",
+            "source": "Quelle",
+            "buyPrice": "Kaufpreis",
+            "category": "Kategorie"
+        },
+        "shop": "Clovers Laden",
+        "hints": {
+            "slots": "{count, plural, one {Alle plus {amount} Slot} other {Alle plus {amount} Slots}}",
+            "typesForSlot": "{count, plural, one {{amount} Typ für {slot}. Wird beim Wechsel des Slots auf Alle zurückgesetzt.} other {{amount} Typen für {slot}. Wird beim Wechsel des Slots auf Alle zurückgesetzt.}}",
+            "typeNeedsSlot": "Ist Slot auf Alle gesetzt, bietet Typ nur Alle an. Wähle zuerst einen Slot, um seine Typen zu sehen.",
+            "sets": "{count, plural, one {Alle plus {amount} Set} other {Alle plus {amount} Sets}}",
+            "sources": "Alle plus jede Quelle",
+            "categories": "{count, plural, one {{amount} Kategorie. Die Kacheln oben legen sie fest.} other {{amount} Kategorien. Die Kacheln oben legen sie fest.}}"
+        }
+    }
+}

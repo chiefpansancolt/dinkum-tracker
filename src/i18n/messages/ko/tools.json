@@ -1,0 +1,70 @@
+{
+    "breakdown": {
+        "title": "아이템 구성",
+        "subline": "어떤 자원이 어떤 아이템에 들어가는지 확인해요 · 자원 {count}개",
+        "tiles": {
+            "resources": "자원",
+            "resourcesCaption": "레시피와 건축에 사용",
+            "common": "공통, 3개 이상의 아이템에 사용",
+            "of": "전체 {total}개",
+            "mostUsed": "가장 많이 사용",
+            "items": "{count, plural, other {아이템 {amount}개}}"
+        },
+        "search": "검색",
+        "searchPlaceholder": "이름으로 자원 검색",
+        "sortBy": "정렬 기준",
+        "sortName": "이름 (가나다순)",
+        "sortUsage": "사용 횟수",
+        "filter": "필터",
+        "filterWithCount": "필터 ({count})",
+        "commonOnly": "공통 자원만 (3개 이상의 아이템에 사용)",
+        "showing": "자원 {total}개 중 {shown}개 표시",
+        "notes": {
+            "categories": " (분류 {count, plural, other {{amount}개}}로 필터됨)",
+            "types": " (종류 {count, plural, other {{amount}개}}로 필터됨)",
+            "common": " (공통 자원만)"
+        },
+        "panel": {
+            "title": "자원 필터",
+            "byCategory": "분류로 필터",
+            "byType": "자원 종류로 필터",
+            "clear": "선택 해제",
+            "itemCount": "{count, plural, other {아이템 {amount}개}}",
+            "done": "자원 {count}개 보기",
+            "option": "{name}, {items}"
+        },
+        "card": {
+            "usedIn": "{count, plural, other {아이템 {amount}개에 사용}}",
+            "categories": "분류",
+            "usedInList": "사용처",
+            "showMore": "{count}개 더 보기...",
+            "showLess": "간단히 보기"
+        },
+        "empty": {
+            "title": "필터에 맞는 자원이 없어요",
+            "description": "다른 이름을 입력하거나 선택을 해제해 보세요.",
+            "clear": "선택 해제"
+        }
+    },
+    "weight": {
+        "title": "무게 계산기",
+        "subline": "무게로 무거운 발견물의 가격을 계산해요 · 아이템 {count}개",
+        "picker": "아이템 선택",
+        "perKg": "kg당 {price}",
+        "range": "{min} - {max} kg",
+        "rangeLine": "무게 범위: {min}kg - {max}kg",
+        "weight": "무게: {weight} kg",
+        "slider": "무게 (kg)",
+        "minus": "무게 {step} kg 줄이기",
+        "plus": "무게 {step} kg 늘리기",
+        "min": "{min}kg",
+        "max": "{max}kg",
+        "stepNote": "단위는 {step} kg예요. 다른 아이템을 고르면 무게가 최솟값으로 돌아가요.",
+        "total": "총 가격",
+        "dinks": "dinks",
+        "formula": "{weight} kg × kg당 {price} = {total}",
+        "rounded": "가장 가까운 dink 단위로 반올림해요.",
+        "atMin": "최소 무게일 때 가격",
+        "atMax": "최대 무게일 때 가격"
+    }
+}

@@ -1,0 +1,123 @@
+{
+    "common": {
+        "level": "等級 {level}",
+        "levelCount": "等級 {level}：",
+        "locked": "請先完成前一個等級。",
+        "completeAll": "全部完成",
+        "clearAll": "全部清除",
+        "requirement": "條件",
+        "requiredSkill": "所需技能等級",
+        "all": "全部",
+        "collected": "已收集",
+        "notCollected": "待收集",
+        "clearFilters": "清除篩選",
+        "toast": {
+            "obtained": "{item}：已取得等級 {level}",
+            "cleared": "{item}：已清除 {count, plural, other {{amount} 個等級}}",
+            "allObtained": "{item}：已取得所有等級",
+            "allCleared": "{item}：已清除所有等級"
+        },
+        "empty": {
+            "title": "沒有符合篩選條件的{things}",
+            "description": "試試其他名稱，或清除篩選。"
+        },
+        "permitPoints": "許可點數"
+    },
+    "buildings": {
+        "title": "建築",
+        "subline": "已安裝 {count} / {total} · {percent}% · {name}",
+        "tiles": {
+            "installed": "已安裝",
+            "stillToInstall": "尚待安裝",
+            "listed": "列出的建築",
+            "of": "共 {total}",
+            "breakdown": "{collectable} 可收集 · {movable} 可移動 · {reference} 參考"
+        },
+        "filters": {
+            "deedType": "地契類型",
+            "npc": "NPC",
+            "collected": "已收集",
+            "search": "依名稱搜尋建築...",
+            "sheetTitle": "篩選建築",
+            "showing": "顯示 {shown} / {total} 棟建築 · 已安裝 {count}",
+            "apply": "顯示 {count} 棟建築"
+        },
+        "card": {
+            "deed": "地契",
+            "npc": "NPC",
+            "size": "大小",
+            "buildTime": "建造時間",
+            "deedPrice": "地契價格",
+            "hours": "營業時間",
+            "closed": "休息",
+            "description": "說明",
+            "resources": "資源",
+            "resource": "{count} {name}"
+        },
+        "installed": "已安裝",
+        "nothingToInstall": "此地契類型沒有需要安裝的建築。",
+        "things": "棟建築",
+        "toast": {
+            "installed": "已將 {name} 標記為已安裝",
+            "notInstalled": "已將 {name} 標記為未安裝"
+        }
+    },
+    "licenses": {
+        "title": "執照",
+        "subline": "已取得 {count} / {total} 個等級 · {percent}% · {name}",
+        "tiles": {
+            "levels": "已取得等級",
+            "complete": "已完成執照",
+            "permit": "已花費許可點數",
+            "of": "共 {total}",
+            "sentence": "你已花費 {amount} / {total} 所需的許可點數。"
+        },
+        "filters": {
+            "category": "類別",
+            "collected": "已收集",
+            "search": "依名稱搜尋執照...",
+            "sheetTitle": "篩選執照",
+            "showing": "顯示 {shown} / {total} 張執照 · 已解鎖等級 {count}",
+            "apply": "顯示 {count} 張執照"
+        },
+        "things": "張執照"
+    },
+    "milestones": {
+        "title": "里程碑",
+        "subline": "已完成 {count} / {total} 個等級 · {percent}% · {name}",
+        "tiles": {
+            "levels": "已完成等級",
+            "complete": "已完成里程碑",
+            "permit": "已獲得許可點數",
+            "of": "共 {total}",
+            "sentence": "你已獲得 {amount} / {total} 可取得的許可點數。"
+        },
+        "filters": {
+            "category": "類別",
+            "allCategories": "所有類別",
+            "collected": "已收集",
+            "viewMode": "檢視模式",
+            "grouped": "依字母分組",
+            "all": "所有里程碑",
+            "search": "依名稱或說明搜尋里程碑...",
+            "sheetTitle": "篩選里程碑",
+            "showing": "顯示 {shown} / {total} 個里程碑 · 已完成等級 {count}",
+            "apply": "顯示 {count} 個里程碑"
+        },
+        "things": "個里程碑"
+    },
+    "skills": {
+        "title": "技能",
+        "subline": "{skills} 項技能 · 共 {levels} 級 · 無上限 · {name}",
+        "tiles": {
+            "total": "技能等級總和",
+            "across": "涵蓋 {count} 項技能",
+            "highest": "最高技能",
+            "atZero": "等級 0 的技能",
+            "atZeroOf": "共 {total}"
+        },
+        "level": "技能等級",
+        "note": "執照在每個階段都有技能等級要求。前往<link>執照</link>查看你還需要哪些等級。",
+        "toast": "{name} 現在是等級 {level}"
+    }
+}

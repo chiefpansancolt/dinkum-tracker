@@ -1,0 +1,141 @@
+{
+    "title": "Pengaturan",
+    "subline": "{count, plural, other {{amount} permainan}} tersimpan di browser ini · Preferensi tersimpan otomatis",
+    "storage": {
+        "title": "Penyimpanan Data!",
+        "body": "Datamu disimpan di browser. Data hilang saat data browser dihapus, kecuali kamu menyinkronkan atau mencadangkannya.",
+        "action": "Gunakan fungsi di bawah untuk mengekspor dan mencadangkan datamu."
+    },
+    "manage": {
+        "title": "Permainan",
+        "description": "Ubah nama, hapus, atau buat permainan di halaman Permainan.",
+        "link": "Kelola permainan"
+    },
+    "data": {
+        "title": "Pengelolaan data",
+        "count": "{count, plural, other {{amount} Permainan}}",
+        "exportButton": "Ekspor Semua Permainan",
+        "exportHint": "Unduh file cadangan dari semua permainan tersimpanmu.",
+        "exportDone": "Ekspor berhasil!",
+        "importButton": "Impor Data",
+        "importHint": "Unggah file yang pernah diekspor (.json). Langkah konfirmasi akan menanyakan apakah digabung atau diganti.",
+        "importDone": "Impor berhasil!",
+        "importFailed": "Format file tidak valid",
+        "resetWarning": "Peringatan: Ini akan menghapus semua permainan dan tidak bisa dibatalkan.",
+        "resetButton": "Reset Semua Data",
+        "resetConfirm": "Konfirmasi Reset",
+        "resetCancel": "Batal",
+        "resetDone": "Data berhasil direset",
+        "importFile": "File cadangan",
+        "description": "Satu file cadangan berisi semua permainan.",
+        "exportTitle": "Ekspor data",
+        "importTitle": "Impor data",
+        "resetTitle": "Reset semua data",
+        "resetSyncedCopy": "Hapus juga salinan tersinkron di {provider}",
+        "resetSyncedOn": "Sinkronisasi tetap aktif. Perangkat lainmu kehilangan permainan ini saat sinkronisasi berikutnya. Ekspor cadangan dulu jika kamu ragu.",
+        "resetSyncedOff": "Salinan tersinkron tetap di tempatnya. Sinkronisasi diputus di browser ini agar cloud tidak dikosongkan.",
+        "providers": {
+            "github": "GitHub",
+            "google": "Google Drive",
+            "dropbox": "Dropbox",
+            "microsoft": "OneDrive"
+        }
+    },
+    "import": {
+        "title": "Impor cadangan",
+        "description": "Pilih apa yang terjadi pada permainan yang sudah ada di perangkat ini.",
+        "fileSummary": "{inFile, plural, other {{inFileAmount} permainan}} di file · {onDeviceAmount} di perangkat ini",
+        "mode": "Mode impor",
+        "merge": "Gabung (disarankan)",
+        "mergeDescription": "Menambahkan permainan yang baru. Jika permainan ada di kedua tempat, salinan yang paling baru diperbarui menang. Permainan yang hanya ada di perangkat ini tetap ada.",
+        "replace": "Ganti semua",
+        "replaceDescription": "Menghapus {onDevice, plural, other {{onDeviceAmount} permainan}} di perangkat ini dan memuat {inFileAmount} dari file. Ini tidak bisa dibatalkan.",
+        "table": {
+            "playthrough": "Permainan",
+            "inFile": "Di file",
+            "onDevice": "Di perangkat ini",
+            "result": "Hasil"
+        },
+        "updatedOn": "Diperbarui {date}",
+        "notOnDevice": "Tidak ada di perangkat",
+        "notInFile": "Tidak ada di file",
+        "results": {
+            "added": "Ditambahkan",
+            "updated": "Salinan file menang",
+            "kept": "Salinan perangkat tetap",
+            "replaced": "Diganti",
+            "removed": "Dihapus"
+        },
+        "exportFirst": "Ekspor data saat ini dulu",
+        "cancel": "Batal",
+        "confirmMerge": "Gabungkan {count, plural, other {{amount} permainan}}",
+        "confirmReplace": "Ganti semua data"
+    },
+    "appearance": {
+        "title": "Tampilan dan preferensi",
+        "theme": "Tema",
+        "themeHint": "Sistem mengikuti perangkatmu.",
+        "defaultSort": "Urutan permainan bawaan",
+        "defaultSortHint": "Pilih cara permainan diurutkan secara bawaan. Tersimpan begitu kamu mengubahnya.",
+        "resources": "Sumber tambahan",
+        "opensInNewTab": "Terbuka di tab baru",
+        "wiki": "Dinkum Wiki",
+        "repository": "Repositori Proyek"
+    },
+    "page": {
+        "title": "Pengaturan",
+        "tabsLabel": "Pengaturan",
+        "tabs": {
+            "sync": "Sinkronisasi cloud",
+            "preferences": "Preferensi",
+            "data": "Cadangan dan data",
+            "about": "Tentang"
+        }
+    },
+    "preferences": {
+        "appearance": {
+            "title": "Tampilan",
+            "description": "Langsung tersimpan di perangkat ini."
+        },
+        "playthroughList": {
+            "title": "Daftar permainan",
+            "description": "Cara halaman Permainan dimulai."
+        }
+    },
+    "about": {
+        "version": "Versi {version}",
+        "summary": "Lacak progres Dinkum-mu: ikan, serangga, satwa kecil, pencapaian, lisensi, NPC, dan lainnya. Semua tersimpan di browser ini.",
+        "resources": "Sumber tambahan",
+        "disclaimer": "Tidak berafiliasi dengan atau didukung oleh pembuat Dinkum."
+    },
+    "region": {
+        "title": "Bahasa dan wilayah",
+        "description": "Pilih bahasa dan cara angka serta tanggal ditulis. Tersimpan di perangkat ini.",
+        "language": {
+            "label": "Bahasa",
+            "hint": "Nama hewan, item, NPC, dan data game lainnya berasal dari data game dan tetap dalam bahasa Inggris."
+        },
+        "numberFormat": {
+            "label": "Format angka",
+            "hint": "Contoh: {example}",
+            "options": {
+                "auto": "Otomatis, mengikuti bahasa",
+                "us": "1,234.56 (Amerika Serikat)",
+                "european": "1.234,56 (Jerman)",
+                "french": "1 234,56 (Prancis)",
+                "swiss": "1’234.56 (Swiss)",
+                "indian": "12,34,567.89 (India)"
+            }
+        },
+        "dateFormat": {
+            "label": "Format tanggal",
+            "hint": "Contoh: {example}",
+            "options": {
+                "auto": "Otomatis, mengikuti bahasa",
+                "mdy": "Bulan/Hari/Tahun",
+                "dmy": "Hari/Bulan/Tahun",
+                "ymd": "Tahun-Bulan-Hari"
+            }
+        }
+    }
+}

@@ -1,0 +1,78 @@
+{
+    "header": {
+        "features": "Funktionen",
+        "track": "Was du verfolgen kannst",
+        "view": "Meine Spielstände",
+        "new": "Neuer Spielstand",
+        "menu": "Menü",
+        "menuOpen": "Menü öffnen",
+        "menuClose": "Menü schließen",
+        "nav": "Hauptmenü"
+    },
+    "hero": {
+        "eyebrow": "Verfolge deinen Fortschritt",
+        "title": "Dinkum Tracker",
+        "intro": "Ein umfassender Tracker für deine Dinkum-Abenteuer. Verwalte mehrere Spielstände, verfolge Sammlungen und behalte deinen Fortschritt an einem Ort im Blick. Alles wird in deinem Browser gespeichert, und du kannst es mit deinem eigenen Cloud-Speicher synchronisieren.",
+        "view": "Meine Spielstände",
+        "new": "Neues Abenteuer",
+        "imageAlt": "Das Spiel Dinkum"
+    },
+    "counts": {
+        "title": "Verfolge deine ganze Sammlung",
+        "intro": "Verwalte jeden Teil deiner Dinkum-Reise mit einem Tracker, der auf den echten Item-Zahlen basiert.",
+        "pedia": "Pedia",
+        "npcs": "NPCs",
+        "licenses": "Lizenzen",
+        "milestones": "Meilensteine",
+        "buildings": "Gebäude",
+        "gear": "Ausrüstung und Zubehör",
+        "recipes": "Rezepte",
+        "clothing": "Kleidung"
+    },
+    "everything": {
+        "title": "Verfolge alles",
+        "intro": "Alle Werkzeuge für deinen Erfolg in Dinkum",
+        "imageAlt": "Die Dinkum-Tracker-App",
+        "closing": "Vom Käfersammeln bis zu den Beziehungen mit NPCs: Dinkum Tracker hilft dir, in deinem Spiel alles im Blick zu behalten.",
+        "pedia": {
+            "title": "Pedia-Sammlungen",
+            "text": "Verfolge alle Fische, Insekten und Kleintiere nach Jahreszeit, Ort und Tageszeit. Behalte deine Museumsspenden und den Sammelfortschritt im Blick."
+        },
+        "npcs": {
+            "title": "NPC-Beziehungen",
+            "text": "Behalte Freundschaften mit den Stadtbewohnern, Geschenkvorlieben und Herzstufen aller {count} NPCs im Blick."
+        },
+        "calendar": {
+            "title": "Kalenderereignisse",
+            "text": "Behalte wichtige Termine, Geburtstage und saisonale Ereignisse im Blick. Verpasse nie wieder ein Fest oder einen besonderen Anlass in deiner Dinkum-Stadt."
+        }
+    },
+    "needs": {
+        "title": "Alles, was du brauchst",
+        "intro": "Behalte alle Details im Blick, die in deinem Dinkum-Abenteuer zählen.",
+        "milestones": {
+            "title": "Meilensteine und Lizenzen",
+            "one": "Verfolge den Abschluss von {count} Spielmeilensteinen",
+            "two": "Verwalte alle Lizenzen und ihre Ausbaustufen",
+            "three": "Sieh Fortschritt und Anforderungen der Genehmigungspunkte"
+        },
+        "recipes": {
+            "title": "Rezepte und Basteln",
+            "one": "Verfolge alle Kochrezepte und ihre Zutaten",
+            "two": "Behalte Bastelrezepte und Rohstoffe im Blick",
+            "three": "Verwalte Werkzeuge, Waffen und Zubehör"
+        },
+        "collections": {
+            "title": "Sammlungen und Rohstoffe",
+            "one": "Erfasse alle Kleidungs- und Möbelstücke",
+            "two": "Verfolge alle Rohstoffe und ihre Verwendung",
+            "three": "Verwalte Bauprojekte und Urkunden"
+        }
+    },
+    "cta": {
+        "title": "Bereit zum Verfolgen?",
+        "text": "Organisiere dein Dinkum-Abenteuer noch heute und verliere nie wieder den Überblick über deinen Fortschritt.",
+        "create": "Neuen Spielstand erstellen",
+        "existing": "Vorhandene Spielstände ansehen"
+    }
+}

@@ -1,0 +1,85 @@
+{
+    "title": "Pedia",
+    "subline": "{done} de {total} coletados · {percent}% · {name}",
+    "tabsLabel": "Seções da Pedia",
+    "tabs": {
+        "fish": "Peixes",
+        "bugs": "Insetos",
+        "critters": "Criaturas"
+    },
+    "nouns": {
+        "fish": "peixes",
+        "bugs": "insetos",
+        "critters": "criaturas"
+    },
+    "summary": {
+        "captured": "Capturados",
+        "donated": "Doados ao museu",
+        "permit": "Pontos de permissão ganhos",
+        "of": "de {total}"
+    },
+    "filters": {
+        "sheetTitle": "Filtrar {tab}",
+        "biome": "Bioma",
+        "rarity": "Raridade",
+        "season": "Estação",
+        "time": "Horário",
+        "collected": "Coletado",
+        "donated": "Doado",
+        "allBiomes": "Todos os biomas",
+        "allRarities": "Todas as raridades",
+        "allSeasons": "Todas as estações",
+        "anyTime": "Qualquer horário",
+        "all": "Todos",
+        "onlyCollected": "Coletados",
+        "notCollected": "A coletar",
+        "onlyDonated": "Doados",
+        "notDonated": "A doar",
+        "search": "Buscar {tab} por nome",
+        "showing": "Mostrando {shown} de {total} {tab}",
+        "capturedCount": "Capturados {count}",
+        "donatedCount": "Doados {count}",
+        "apply": "Mostrar {count} {tab}"
+    },
+    "view": {
+        "label": "Exibição",
+        "grid": "Grade",
+        "list": "Lista"
+    },
+    "card": {
+        "biome": "Bioma",
+        "seasons": "Estações",
+        "time": "Horário",
+        "sell": "Preço de venda",
+        "cooked": "Cozido",
+        "cookedValue": "{price} · x{pieces}",
+        "status": "Situação",
+        "missing": "Pendente",
+        "caught": "Capturado",
+        "donated": "Doado"
+    },
+    "table": {
+        "name": "Nome",
+        "rarity": "Raridade",
+        "biome": "Bioma",
+        "seasons": "Estações",
+        "time": "Horário",
+        "sell": "Venda",
+        "cooked": "Cozido",
+        "status": "Situação",
+        "caption": "{shown} de {total} linhas exibidas. Os mesmos filtros, o controle de situação e o nível de comércio valem nas duas exibições."
+    },
+    "empty": {
+        "title": "Nenhum item de {tab} corresponde a estes filtros",
+        "description": "Tente outro nome ou limpe os filtros.",
+        "clear": "Limpar filtros"
+    },
+    "toast": {
+        "marked": "{name} marcado como {status}",
+        "statuses": {
+            "missing": "pendente",
+            "caught": "capturado",
+            "donated": "doado"
+        }
+    }
+}

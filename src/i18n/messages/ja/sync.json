@@ -1,0 +1,234 @@
+{
+    "tab": {
+        "title": "クラウド同期",
+        "description": "プレイスルーをGitHubのプライベートリポジトリに保管して、デバイス間で共有します。"
+    },
+    "unavailable": "このビルドでは同期を利用できません。",
+    "privacy": "データは、あなた自身のGitHubアカウントにあるプライベートリポジトリに送られます。Gamerdexにはデータを保存するサーバーがなく、アプリが触れるのは、あなたが選んだ1つのリポジトリだけです。",
+    "repository": {
+        "title": "データ用リポジトリを設定",
+        "body": "データは、あなたのGitHubアカウントにある{name}という名前のプライベートリポジトリに保管されます。Gamerdex Syncが触れるのは、そのリポジトリだけです。",
+        "checking": "{name}を探しています",
+        "checkFailed": "リポジトリを読み込めませんでした。接続を確認して、もう一度確認してください。",
+        "found": "{fullName}が見つかりました",
+        "public": "リポジトリ{fullName}は公開されています。GitHubの設定で非公開にしてから、もう一度確認してください。誰でもデータを読めてしまうため、公開リポジトリは使えません。",
+        "missing": "リポジトリ{name}が見つかりません",
+        "steps": {
+            "create": "{name}という名前のプライベートリポジトリを作成します。「Add a README file」にチェックを入れてください。",
+            "install": "そのリポジトリだけにGamerdex Syncのアクセスを許可します。「Only select repositories」を選び、{name}を選択してください。",
+            "recheck": "ここに戻って、もう一度確認してください。"
+        },
+        "createButton": "リポジトリを作成",
+        "installButton": "GitHubでリポジトリを選択",
+        "recheckButton": "もう一度確認"
+    },
+    "connected": {
+        "title": "接続済み",
+        "repository": "リポジトリ",
+        "lastSync": "最終同期",
+        "never": "未同期",
+        "syncNow": "今すぐ同期",
+        "signOut": "サインアウト",
+        "signedOut": "サインアウトしました。このデバイスのデータはそのまま残ります。",
+        "storage": "保存先",
+        "folder": "フォルダー {name}",
+        "signInWith": "{provider}でサインイン"
+    },
+    "status": {
+        "idle": "同期済み",
+        "syncing": "同期中",
+        "offline": "オフライン",
+        "reauth": "再度サインイン",
+        "needsChoice": "選択が必要です",
+        "error": "同期に失敗",
+        "signedOut": "未サインイン",
+        "needsRepository": "リポジトリを選択",
+        "conflicts": "変更を確認"
+    },
+    "error": {
+        "rateLimit": "GitHubがリクエストを制限しています。数分後に同期できるようになります。",
+        "notFound": "リポジトリが見つかりません。もう一度選択してください。",
+        "server": "GitHubから正しい応答がありませんでした。しばらくしてからもう一度お試しください。",
+        "data": "同期データが正しくないため、何も変更していません。",
+        "busy": "別のデバイスがデータを変更し続けています。少し待ってからもう一度お試しください。",
+        "other": "問題が発生しました。何も変更していません。",
+        "reauth": "サインインの有効期限が切れました。同期を続けるには、もう一度サインインしてください。",
+        "forbidden": "GitHubがリポジトリへのアクセスを拒否しました。Gamerdex SyncにContentsの読み取りと書き込みの権限があることを確認して、もう一度同期してください。",
+        "httpStatus": "GitHubの応答：{status}",
+        "notFoundFolder": "{provider}内のファイルまたはフォルダーが見つかりません。もう一度同期してください。",
+        "forbiddenFolder": "{provider}がアクセスを拒否しました。もう一度サインインして、Gamerdexが作成するファイルへのアクセスを許可してください。",
+        "httpStatusFolder": "{provider}の応答：{status}"
+    },
+    "choice": {
+        "title": "このデバイスとクラウドの両方にデータがあります",
+        "body": "このデバイスからの最初の同期です。どうするかを選んでください。選ぶまで、クラウドからは何も削除されません。",
+        "counts": "このデバイス：{local}。クラウド：{cloud}。",
+        "merge": "両方を統合",
+        "mergeHint": "両方のデータをすべて残します。レベルは高い方が優先されます。",
+        "keepLocal": "このデバイスを残す",
+        "keepLocalHint": "クラウドのデータを、このデバイスのデータで置き換えます。",
+        "keepCloud": "クラウドを残す",
+        "keepCloudHint": "このデバイスのデータを、クラウドのデータで置き換えます。"
+    },
+    "conflicts": {
+        "title": "統合できなかった変更",
+        "body": "2台のデバイスが同じ値を変更しました。クラウドの値を残してあります。このデバイスの値を使いたい場合は、それを選んでください。",
+        "cloudValue": "クラウド",
+        "deviceValue": "このデバイス",
+        "keepDevice": "このデバイスの値を使う",
+        "dismiss": "閉じる",
+        "empty": "なし",
+        "deletedEdited": "一方のデバイスで削除され、もう一方で変更されました。変更されたバージョンを残しました。"
+    },
+    "callback": {
+        "title": "サインイン中",
+        "working": "サインインを完了しています",
+        "back": "設定に戻る",
+        "denied": "サインインがキャンセルされました。",
+        "state": "サインインを確認できませんでした。設定からやり直してください。",
+        "missing": "サインインからコードが送られませんでした。設定からやり直してください。",
+        "failed": "サインインを完了できませんでした。しばらくしてからもう一度お試しください。"
+    },
+    "playthroughCount": "{count, plural, other {プレイスルー{amount}件}}",
+    "provider": {
+        "github": {
+            "name": "GitHub",
+            "tile": "あなたが所有する、{name}という名前のプライベートリポジトリです。",
+            "badge": "開発者向け"
+        },
+        "google": {
+            "name": "Google Drive",
+            "tile": "Drive内に表示されるGamerdexフォルダーです。Gamerdexは自分が作成したファイルだけを扱います。",
+            "badge": "おすすめ"
+        },
+        "dropbox": {
+            "name": "Dropbox",
+            "tile": "DropboxのAppsフォルダー内にあるGamerdexフォルダーです。Gamerdexはそのフォルダーだけを扱います。",
+            "badge": "アプリフォルダーのみ"
+        },
+        "microsoft": {
+            "name": "OneDrive",
+            "tile": "OneDriveのAppsフォルダー内にあるGamerdexフォルダーです。Gamerdexはそのフォルダーだけを扱います。",
+            "badge": "個人アカウント"
+        }
+    },
+    "connect": {
+        "title": "デバイス間で同期",
+        "pill": "未接続",
+        "intro": "パソコンとスマートフォンで、プレイスルーを同じ状態に保てます。同期は任意で、無料です。コピーの保管先を選んでください。",
+        "pickerLabel": "コピーの保管先",
+        "panelTitle": "{provider}に接続",
+        "another": "サインインする前なら、別のサービスを選べます。",
+        "firstSync": "最初の同期で両方にすでにデータがある場合は、残す方を選びます。選ぶまで何も置き換えられません。",
+        "google": {
+            "step1": "このウィンドウでGoogleにサインインします。",
+            "step2": "Gamerdexが作成するファイルへのアクセスを許可します。アプリがほかのファイルを見ることはできません。",
+            "button": "Google Driveに接続"
+        },
+        "github": {
+            "step1": "{name}という名前の空のプライベートリポジトリを作成します。「Add a README file」にチェックを入れてください。",
+            "step2": "GitHubにサインインし、そのリポジトリだけにGamerdex Syncのアクセスを許可します。",
+            "button": "GitHubに接続"
+        },
+        "dropbox": {
+            "step1": "このウィンドウでDropboxにサインインします。",
+            "step2": "Gamerdexのアプリフォルダーへのアクセスを許可します。アプリがほかのファイルを見ることはできません。",
+            "button": "Dropboxに接続"
+        },
+        "microsoft": {
+            "step1": "このウィンドウで個人のMicrosoftアカウントにサインインします。",
+            "step2": "Gamerdexのアプリフォルダーへのアクセスを許可します。アプリがほかのファイルを見ることはできません。",
+            "button": "OneDriveに接続"
+        }
+    },
+    "how": {
+        "title": "同期のしくみ",
+        "one": "プレイスルーは、バックアップファイルと同じ形式の1つのファイルと、デバイス一覧用の小さなファイルとして、あなた自身のストレージに保存されます。",
+        "two": "Gamerdexにはデータを保存するサーバーがありません。ブラウザーがストレージと直接やり取りします。",
+        "three": "チェックしたアイテムとレベルは、どちらかのデバイスで変更した内容が残り、レベルは高い方が優先されます。両方のデバイスで名前や現在の日を変更した場合は、どちらを残すかを選びます。",
+        "four": "使用中のプレイスルーはデバイスごとに保持されます。同期で切り替わることはありません。",
+        "five": "いつでも接続を解除できます。プレイスルーはすべてのデバイスに残ります。"
+    },
+    "banner": {
+        "title": "{count, plural, other {{amount}件の変更について判断が必要です}}",
+        "body": "2台のデバイスが同じ値を変更しました。判断するまで、クラウドの値を残します。",
+        "review": "確認",
+        "waiting": "最初の同期は、あなたの選択を待っています。",
+        "choose": "選択"
+    },
+    "playthroughs": {
+        "title": "プレイスルー",
+        "thisDevice": "このデバイス",
+        "cloud": "クラウド（最終同期）",
+        "notInCloud": "クラウドにはまだありません",
+        "review": "確認",
+        "note": "プレイスルーを削除すると、次の同期で同期ファイルからも削除されます。",
+        "status": {
+            "synced": "同期済み",
+            "changedHere": "ここで変更",
+            "conflict": "競合",
+            "newHere": "ここで新規"
+        },
+        "describe": "{season}の{day}日目 · {percent}%"
+    },
+    "activity": {
+        "title": "最近の同期の履歴",
+        "empty": "まだ何も同期されていません。",
+        "connected": "このブラウザーで{provider}に接続しました。",
+        "uploaded": "このデバイスの変更をアップロードしました。",
+        "downloaded": "クラウドの変更をダウンロードしました。",
+        "merged": "両方の変更を統合しました。",
+        "conflicts": "{count, plural, other {{amount}件の変更について判断が必要です。}}",
+        "failed": "同期に失敗しました。"
+    },
+    "settings": {
+        "title": "同期の設定",
+        "auto": "自動で同期",
+        "autoHint": "トラッカーを開いたときと、変更の数秒後に同期します。",
+        "focus": "タブに戻ったときに変更を確認",
+        "focusHint": "トラッカーに戻ったときに、クラウドの新しいデータを取得します。",
+        "metered": "従量制接続では待機",
+        "meteredHint": "ブラウザーがデータセーバー接続を報告している間は、自動同期を行いません。「今すぐ同期」は使えます。"
+    },
+    "lives": {
+        "title": "データの保管場所",
+        "storage": "ストレージ",
+        "folder": "フォルダー",
+        "dataFile": "データファイル",
+        "metaFile": "メタファイル",
+        "size": "サイズ",
+        "kb": "{amount} KB",
+        "note": "データファイルはバックアップファイルと同じ形式です。メタファイルにはデバイス一覧が入っていて、ゲームのデータは入っていません。どちらのファイルにもサインイン情報は含まれません。",
+        "googleNote": "GamerdexフォルダーはDrive内に表示されます。Gamerdexが開けるのは、自分が作成したファイルだけです。",
+        "githubNote": "リポジトリは非公開のままにしてください。開ける人は誰でもデータを読めます。",
+        "dropboxNote": "GamerdexフォルダーはDropboxのAppsフォルダー内にあります。Gamerdexが開けるのは、そのフォルダーだけです。",
+        "microsoftNote": "GamerdexフォルダーはOneDriveのAppsフォルダー内にあります。Gamerdexが開けるのは、そのフォルダーだけです。"
+    },
+    "device": {
+        "title": "このデバイス",
+        "name": "デバイス名",
+        "nameHint": "同期ファイルには、このデバイスがこの名前で表示されます。名前を変更すると、次の同期でメタファイルが更新されます。",
+        "activePlaythrough": "使用中のプレイスルー",
+        "noPlaythrough": "なし",
+        "login": "同期のサインイン",
+        "loginValue": "このデバイスのみ",
+        "loginHint": "使用中のプレイスルーはデバイスごとの選択で、同期で変わることはありません。サインイン情報はこのデバイスに残ります。保存データ、バックアップファイル、同期ファイルには含まれません。"
+    },
+    "disconnect": {
+        "title": "接続を解除",
+        "body": "このブラウザーでの同期を停止します。プレイスルーは、このデバイスとクラウドに残ります。ほかのデバイスは同期を続けます。",
+        "button": "{provider}の接続を解除",
+        "googleHint": "クラウドのコピーを自分で削除するには、接続を解除してから、Google Driveの「Gamerdex」フォルダーを削除してください。",
+        "githubHint": "クラウドのコピーを自分で削除するには、接続を解除してから、リポジトリ内の「Gamerdex」フォルダーを削除してください。",
+        "dropboxHint": "クラウドのコピーを自分で削除するには、接続を解除してから、DropboxのAppsにあるアプリフォルダーを削除してください。",
+        "microsoftHint": "クラウドのコピーを自分で削除するには、接続を解除してから、OneDriveのAppsにあるアプリフォルダーを削除してください。"
+    },
+    "first": {
+        "thisDevice": "このデバイス",
+        "cloud": "クラウド",
+        "recommended": "おすすめ",
+        "later": "あとで決める",
+        "apply": "選択を適用",
+        "optionsLabel": "残すもの"
+    }
+}

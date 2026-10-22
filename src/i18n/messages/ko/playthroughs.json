@@ -1,0 +1,124 @@
+{
+    "title": "플레이 기록",
+    "subline": "Dinkum 모험을 관리하세요. {count, plural, other {플레이 기록 {amount}개}}, 사용 중: {name}.",
+    "sublineNoneActive": "Dinkum 모험을 관리하세요. {count, plural, other {플레이 기록 {amount}개}}.",
+    "sublineEmpty": "아직 플레이 기록이 없어요.",
+    "loading": "플레이 기록을 불러오는 중...",
+    "stats": {
+        "playthroughs": "플레이 기록",
+        "playthroughsCaption": "이 브라우저",
+        "active": "사용 중",
+        "noneActive": "없음",
+        "furthest": "가장 많이 진행",
+        "average": "평균 달성률",
+        "averageCaption": "전체 기준"
+    },
+    "filters": {
+        "sortBy": "정렬 기준",
+        "sort": {
+            "lastUpdated": "최근 업데이트",
+            "name": "이름",
+            "createdAt": "생성일",
+            "completion": "달성률"
+        },
+        "search": "이름으로 플레이 기록 검색",
+        "showing": "{total}개 {total, plural, other {플레이 기록}} 중 {shown}개 표시",
+        "defaultSortFrom": "기본 정렬은 <link>설정</link>에서 바꿀 수 있어요"
+    },
+    "noMatch": {
+        "title": "\"{query}\"와 맞는 플레이 기록이 없어요",
+        "description": "다른 이름을 입력해 보세요.",
+        "clear": "검색 지우기"
+    },
+    "empty": {
+        "title": "플레이 기록이 없어요",
+        "description": "아직 만든 플레이 기록이 없어요. 첫 플레이 기록을 만들어 Dinkum 모험을 기록해 보세요. 각 플레이 기록은 이 브라우저에 저장돼요.",
+        "create": "첫 플레이 기록 만들기",
+        "importBackup": "대신 백업 가져오기"
+    },
+    "card": {
+        "created": "생성: {date}",
+        "updated": "업데이트: {when}",
+        "complete": "{percent}% 완료",
+        "overall": "전체 진행 상황",
+        "pedia": "도감",
+        "licenses": "면허",
+        "milestones": "마일스톤",
+        "buildings": "건물",
+        "pediaDetail": "물고기 {fish} · 곤충 {bugs} · 작은 동물 {critters}",
+        "count": "{count}/{total}",
+        "gameDate": "{season} {day}일",
+        "currentGameDate": "현재 게임 날짜",
+        "setActive": "사용 중으로 설정",
+        "active": "사용 중",
+        "openOverview": "개요 열기",
+        "edit": "편집",
+        "delete": "삭제",
+        "activePlaythrough": "사용 중인 플레이 기록"
+    },
+    "seasons": {
+        "Spring": "봄",
+        "Summer": "여름",
+        "Autumn": "가을",
+        "Winter": "겨울"
+    },
+    "relative": {
+        "today": "오늘",
+        "yesterday": "어제",
+        "daysAgo": "{count, plural, other {{amount}일 전}}",
+        "weeksAgo": "{count, plural, other {{amount}주 전}}",
+        "monthsAgo": "{count, plural, other {{amount}개월 전}}",
+        "unknown": "해당 없음"
+    },
+    "new": {
+        "action": "새 플레이 기록",
+        "actionShort": "새로 만들기",
+        "pageTitle": "새 플레이 기록",
+        "pageSubline": "이름을 정하고 기록을 시작하세요. 모든 데이터는 이 브라우저에 저장돼요.",
+        "back": "모든 플레이 기록으로 돌아가기",
+        "next": {
+            "title": "다음에 일어나는 일",
+            "one": "빈 플레이 기록이 이 브라우저에 바로 저장돼요.",
+            "two": "체크박스를 선택하면 사용 중인 플레이 기록이 돼요. 사이드바 전환 메뉴에 표시돼요.",
+            "three": "새 카드가 맨 위에 놓인 플레이 기록 목록으로 이동하고, 실행 취소 알림이 나타나요."
+        },
+        "createdToast": "{name}을(를) 만들었어요"
+    },
+    "form": {
+        "title": "새 플레이 기록 만들기",
+        "nameLabel": "플레이 기록 이름",
+        "required": "필수",
+        "placeholder": "나의 Dinkum 모험",
+        "help": "나중에 알아볼 수 있도록 기억하기 쉬운 이름을 지어 주세요.",
+        "counter": "{count} / {max}",
+        "errorEmpty": "플레이 기록 이름을 입력해 주세요",
+        "makeActive": "이 플레이 기록을 사용 중으로 설정",
+        "create": "플레이 기록 만들기",
+        "creating": "만드는 중...",
+        "cancel": "취소",
+        "failed": "플레이 기록을 만들지 못했어요. 다시 시도해 주세요.",
+        "tryAgain": "다시 시도"
+    },
+    "edit": {
+        "title": "플레이 기록 편집",
+        "save": "저장",
+        "saving": "저장하는 중...",
+        "savedToast": "저장됨",
+        "renamed": "이름을 {name}(으)로 바꿨어요",
+        "description": "{name} · {date} 생성",
+        "nameLabel": "플레이 기록 이름",
+        "help": "Enter 키를 누르면 저장돼요. 이름이 비어 있으면 저장할 수 없어요."
+    },
+    "delete": {
+        "title": "{name}을(를) 삭제할까요?",
+        "description": "이 기기에 저장된 모든 진행 상황이 삭제돼요.",
+        "activeNext": "사용 중인 플레이 기록이에요. 삭제하면 가장 최근에 업데이트한 {next}이(가) 사용 중으로 바뀌어요.",
+        "activeLast": "사용 중인 유일한 플레이 기록이에요. 삭제하면 사용 중인 플레이 기록이 없어요.",
+        "exportFirst": "먼저 백업 내보내기",
+        "confirm": "삭제",
+        "cancel": "취소",
+        "toast": "{name}을(를) 삭제했어요",
+        "toastMessage": "10초 동안 실행 취소할 수 있어요",
+        "updated": "{when} 업데이트 · {date}"
+    }
+}

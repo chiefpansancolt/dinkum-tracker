@@ -1,0 +1,234 @@
+{
+    "toast": {
+        "marked": "{name}: {state}(으)로 표시했어요",
+        "collected": "수집 완료",
+        "notCollected": "수집 전",
+        "unlocked": "해금됨",
+        "locked": "잠김"
+    },
+    "filters": {
+        "search": "이름으로 {things} 검색...",
+        "sheetTitle": "{things} 필터",
+        "showingCollected": "{things} {total}개 중 {shown}개 표시 · 수집 {count}",
+        "showingUnlocked": "{things} {total}개 중 {shown}개 표시 · 해금 {count}",
+        "apply": "{things} {count}개 보기",
+        "all": "전체",
+        "collected": "수집 완료",
+        "notCollected": "수집 전",
+        "unlocked": "해금됨",
+        "notUnlocked": "해금 전",
+        "source": "출처",
+        "allSources": "모든 출처"
+    },
+    "empty": {
+        "title": "필터에 맞는 {things} 없음",
+        "description": "다른 이름을 입력하거나 필터를 지워 보세요.",
+        "clear": "필터 지우기"
+    },
+    "list": {
+        "got": "획득",
+        "name": "이름",
+        "caption": "{total}개 행 중 {shown}개를 불러왔어요. 스크롤하면 더 불러와요.",
+        "prices": "가격 단위: dinks"
+    },
+    "card": {
+        "collected": "수집 완료",
+        "markCollected": "수집 완료로 표시",
+        "unlocked": "해금됨",
+        "sellPrice": "판매가",
+        "buyPrice": "구매가",
+        "source": "출처",
+        "none": "–"
+    },
+    "gear": {
+        "title": "장비",
+        "subline": "{total}개 중 {count}개 수집 · {percent}% · {name}",
+        "tabsLabel": "장비 구분",
+        "tabs": {
+            "books": "책",
+            "cassettes": "카세트",
+            "tools": "도구",
+            "weapons": "무기",
+            "equipment": "장착품",
+            "vehicles": "탈것"
+        },
+        "things": {
+            "books": "책",
+            "cassettes": "카세트",
+            "tools": "도구",
+            "weapons": "무기",
+            "equipment": "장착품",
+            "vehicles": "탈것"
+        },
+        "tiles": {
+            "collected": "수집 완료",
+            "of": "전체 {total}개",
+            "franklyn": "Franklyn 해금",
+            "craftable": "제작 가능",
+            "highDamage": "높은 대미지 (20+)"
+        },
+        "filters": {
+            "license": "면허",
+            "allLicenses": "모든 면허",
+            "purchaseType": "구매 방식",
+            "purchasable": "구매 가능",
+            "dinks": "Dinks",
+            "permitPoints": "허가 포인트",
+            "damage": "대미지",
+            "high": "높음 (20+)",
+            "medium": "보통 (10~19)",
+            "low": "낮음 (10 미만)",
+            "allDamage": "모든 대미지",
+            "requirement": "요구 조건 종류",
+            "allRequirements": "모든 요구 조건 종류",
+            "allPurchaseTypes": "전체"
+        },
+        "card": {
+            "craftingRecipe": "제작 레시피",
+            "license": "면허",
+            "licenseLevel": "사냥 면허 레벨",
+            "source": "출처",
+            "damage": "대미지",
+            "unlocksAfter": "해금 조건",
+            "shinyDiscs": "Shiny Discs {count}개",
+            "berkonium": "Berkonium Ore {count}개",
+            "ingredients": "재료",
+            "resources": "자원",
+            "requirement": "요구 레벨",
+            "compatibleWith": "호환",
+            "windmill": "풍차",
+            "solarPanel": "태양광 패널",
+            "acquiredFrom": "획득처",
+            "requirements": "요구 조건",
+            "buyPrice": "구매가",
+            "sellPrice": "판매가",
+            "dinks": "{amount} Dinks",
+            "permitPoints": "{count, plural, other {허가 포인트 {amount}점}}",
+            "ingredient": "{name} x{count}",
+            "none": "없음",
+            "requirementLevel": "{type} 레벨"
+        }
+    },
+    "recipes": {
+        "title": "레시피",
+        "subline": "{total}개 중 {count}개 해금 · {percent}% · {name}",
+        "tabsLabel": "레시피 구분",
+        "tabs": {
+            "cooking": "요리",
+            "crafting": "제작",
+            "signWriting": "간판 쓰기"
+        },
+        "things": {
+            "cooking": "요리 레시피",
+            "crafting": "제작 레시피",
+            "signWriting": "간판 쓰기 레시피"
+        },
+        "tiles": {
+            "unlocked": "해금됨",
+            "of": "전체 {total}개",
+            "withBuffs": "버프 있음",
+            "vendors": "Sheila, Ted, Jimmy가 판매",
+            "recipes": "레시피"
+        },
+        "filters": {
+            "location": "요리 장소",
+            "allLocations": "모든 장소",
+            "unlocked": "해금됨",
+            "sources": "출처",
+            "allSources": "모든 출처",
+            "buffs": "버프",
+            "buffsWithCount": "버프 ({count})"
+        },
+        "buffs": {
+            "title": "버프로 필터",
+            "match": "일치 조건",
+            "any": "하나라도",
+            "all": "모두",
+            "clear": "선택 해제",
+            "selected": "{count}개 선택됨",
+            "done": "완료"
+        },
+        "card": {
+            "cookingLocation": "요리 장소",
+            "buffs": "버프",
+            "duration": "{minutes, plural, other {{amount}분}}",
+            "sellPrice": "판매가",
+            "sheilas": "Sheila",
+            "teds": "Ted",
+            "jimmys": "Jimmy",
+            "resources": "자원",
+            "option": "옵션 {n}",
+            "ingredient": "{name} x{count}",
+            "source": "출처",
+            "unlocked": "해금됨",
+            "varies": "다양함",
+            "output": "x{count}"
+        }
+    },
+    "wardrobe": {
+        "title": "옷장과 집",
+        "subline": "{total}개 중 {count}개 수집 · {percent}% · {name}",
+        "tabsLabel": "옷장 구분",
+        "tabs": {
+            "clothing": "의류",
+            "furniture": "가구",
+            "decorations": "장식"
+        },
+        "things": {
+            "clothing": "의류",
+            "furniture": "가구",
+            "decorations": "장식"
+        },
+        "progress": {
+            "clothing": "부위별 진행 상황 · 타일을 선택하면 필터돼요",
+            "furniture": "세트별 진행 상황 · 타일을 선택하면 필터돼요",
+            "decorations": "분류별 진행 상황 · 타일을 선택하면 필터돼요"
+        },
+        "filters": {
+            "slot": "부위",
+            "type": "종류",
+            "set": "세트",
+            "allSets": "모든 세트",
+            "catalogue": "카탈로그",
+            "melvins": "Melvin 카탈로그",
+            "notMelvins": "카탈로그에 없음",
+            "category": "분류",
+            "allCategories": "모든 분류",
+            "source": "출처",
+            "allSources": "모든 출처",
+            "all": "전체"
+        },
+        "list": {
+            "type": "종류",
+            "slot": "부위",
+            "set": "세트",
+            "price": "가격",
+            "sell": "판매",
+            "availableAt": "판매처",
+            "catalogue": "카탈로그",
+            "category": "분류",
+            "source": "출처",
+            "buy": "구매"
+        },
+        "card": {
+            "slot": "부위",
+            "set": "세트",
+            "price": "가격",
+            "sellPrice": "판매가",
+            "availableAt": "판매처",
+            "cataloguePrice": "카탈로그 가격",
+            "source": "출처",
+            "buyPrice": "구매가",
+            "category": "분류"
+        },
+        "shop": "Clover 상점",
+        "hints": {
+            "slots": "{count, plural, other {전체 외 {amount}개 부위}}",
+            "typesForSlot": "{count, plural, other {{slot}의 종류 {amount}개. 부위를 바꾸면 전체로 돌아가요.}}",
+            "typeNeedsSlot": "부위가 전체이면 종류에는 전체만 나와요. 먼저 부위를 고르면 해당 종류가 보여요.",
+            "sets": "{count, plural, other {전체 외 {amount}개 세트}}",
+            "sources": "전체 외 모든 출처",
+            "categories": "{count, plural, other {분류 {amount}개. 위쪽 타일에서 정해져요.}}"
+        }
+    }
+}

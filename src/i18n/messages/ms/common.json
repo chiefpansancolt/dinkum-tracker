@@ -1,0 +1,8 @@
+{
+    "saveFailed": {
+        "title": "Tidak disimpan",
+        "message": "Pelayar tidak dapat menyimpan data anda. Eksport sandaran supaya perubahan anda tidak hilang.",
+        "exportBackup": "Eksport sandaran"
+    },
+    "undo": "Buat asal"
+}

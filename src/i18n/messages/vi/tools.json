@@ -1,0 +1,70 @@
+{
+    "breakdown": {
+        "title": "Phân tích vật phẩm",
+        "subline": "Tài nguyên nào dùng cho vật phẩm nào · {count} tài nguyên",
+        "tiles": {
+            "resources": "Tài nguyên",
+            "resourcesCaption": "dùng trong công thức và công trình",
+            "common": "Phổ biến, dùng trong 3+ vật phẩm",
+            "of": "trên {total}",
+            "mostUsed": "Dùng nhiều nhất",
+            "items": "{count, plural, other {{amount} vật phẩm}}"
+        },
+        "search": "Tìm kiếm",
+        "searchPlaceholder": "Tìm tài nguyên theo tên",
+        "sortBy": "Sắp xếp theo",
+        "sortName": "Tên (A-Z)",
+        "sortUsage": "Số lần sử dụng",
+        "filter": "Lọc",
+        "filterWithCount": "Lọc ({count})",
+        "commonOnly": "Chỉ tài nguyên phổ biến (dùng trong 3+ vật phẩm)",
+        "showing": "Hiển thị {shown} trên {total} tài nguyên",
+        "notes": {
+            "categories": " (đã lọc theo {count, plural, other {{amount} danh mục}})",
+            "types": " (đã lọc theo {count, plural, other {{amount} loại}})",
+            "common": " (chỉ tài nguyên phổ biến)"
+        },
+        "panel": {
+            "title": "Lọc tài nguyên",
+            "byCategory": "Lọc theo danh mục",
+            "byType": "Lọc theo loại tài nguyên",
+            "clear": "Xóa lựa chọn",
+            "itemCount": "{count, plural, other {{amount} vật phẩm}}",
+            "done": "Xem {count} tài nguyên",
+            "option": "{name}, {items}"
+        },
+        "card": {
+            "usedIn": "{count, plural, other {Dùng trong {amount} vật phẩm}}",
+            "categories": "Danh mục",
+            "usedInList": "Dùng trong",
+            "showMore": "Xem thêm {count}...",
+            "showLess": "Thu gọn"
+        },
+        "empty": {
+            "title": "Không có tài nguyên nào khớp bộ lọc",
+            "description": "Hãy thử tên khác hoặc xóa lựa chọn.",
+            "clear": "Xóa lựa chọn"
+        }
+    },
+    "weight": {
+        "title": "Tính cân nặng",
+        "subline": "Tính giá của món nặng từ cân nặng · {count} vật phẩm",
+        "picker": "Chọn vật phẩm",
+        "perKg": "{price} mỗi kg",
+        "range": "{min} - {max} kg",
+        "rangeLine": "Khoảng cân nặng: {min}kg - {max}kg",
+        "weight": "Cân nặng: {weight} kg",
+        "slider": "Cân nặng theo kg",
+        "minus": "Giảm cân nặng {step} kg",
+        "plus": "Tăng cân nặng {step} kg",
+        "min": "{min}kg",
+        "max": "{max}kg",
+        "stepNote": "Mỗi bước {step} kg. Chọn vật phẩm khác sẽ đặt lại cân nặng về mức nhỏ nhất.",
+        "total": "Tổng giá",
+        "dinks": "dinks",
+        "formula": "{weight} kg × {price} mỗi kg = {total}",
+        "rounded": "Làm tròn đến dink gần nhất.",
+        "atMin": "Giá ở cân nặng nhỏ nhất",
+        "atMax": "Giá ở cân nặng lớn nhất"
+    }
+}

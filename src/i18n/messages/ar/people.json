@@ -1,0 +1,98 @@
+{
+    "npcs": {
+        "title": "الشخصيات",
+        "subline": "{hearts} من {total} قلب · {count} شخصية · {name}",
+        "tiles": {
+            "total": "إجمالي القلوب",
+            "full": "القلوب الممتلئة",
+            "met": "تم لقاؤهم حتى الآن",
+            "of": "من {total}",
+            "ofNpcs": "من {total} شخصية"
+        },
+        "filters": {
+            "search": "البحث عن الشخصيات بالاسم",
+            "sheetTitle": "تصفية الشخصيات",
+            "relationship": "العلاقة",
+            "residence": "يسكن في الجزيرة",
+            "all": "الكل",
+            "none": "بلا قلوب بعد",
+            "progress": "قيد التقدم",
+            "full": "قلوب ممتلئة",
+            "canMoveIn": "يمكنه الانتقال للسكن",
+            "visitors": "زائرون فقط",
+            "showing": "عرض {shown} من {total} شخصية · قلوب ممتلئة {full} · تم اللقاء {met}",
+            "apply": "عرض {count} شخصية"
+        },
+        "hint": "النقر على قلب يضبط العدد. النقر على آخر قلب ممتلئ يسحبه. الزران -{step} و+{step} للتغيير بمقدار ربع قلب.",
+        "things": "الشخصيات",
+        "card": {
+            "full": "ممتلئ",
+            "requirements": "المتطلبات",
+            "visit": "زيارة",
+            "moveIn": "الانتقال للسكن",
+            "food": "تفضيلات الطعام",
+            "likes": "يحب",
+            "dislikes": "لا يحب",
+            "none": "لا شيء"
+        },
+        "hearts": {
+            "label": "قلوب {name}",
+            "setTo": "ضبط {name} على {count, plural, zero {{amount} قلوب} one {{amount} قلب} two {قلبين} few {{amount} قلوب} many {{amount} قلبًا} other {{amount} قلب}}",
+            "less": "- {step}",
+            "more": "+ {step}",
+            "lessLabel": "إنقاص القلوب بمقدار {step}",
+            "moreLabel": "زيادة القلوب بمقدار {step}",
+            "readout": "{hearts} / {max}"
+        },
+        "toast": {
+            "set": "{name}: {hearts} من 5 قلوب"
+        },
+        "empty": {
+            "title": "لا توجد شخصيات تطابق عوامل التصفية هذه",
+            "description": "يمكن تجربة اسم آخر أو مسح عوامل التصفية.",
+            "clear": "مسح عوامل التصفية"
+        }
+    },
+    "calendar": {
+        "title": "التقويم",
+        "subline": "{season} · {events} أحداث · {birthdays} أعياد ميلاد · {name}",
+        "previous": "الموسم السابق",
+        "next": "الموسم التالي",
+        "today": "اليوم",
+        "legend": {
+            "event": "حدث",
+            "birthday": "عيد ميلاد",
+            "current": "اليوم الحالي"
+        },
+        "alert": "اليوم الحالي: {day} {season}. النقر على أي يوم يضبطه كاليوم الحالي. تُحفظ التغييرات فورًا.",
+        "weekdays": {
+            "Sunday": "أحد",
+            "Monday": "اثنين",
+            "Tuesday": "ثلاثاء",
+            "Wednesday": "أربعاء",
+            "Thursday": "خميس",
+            "Friday": "جمعة",
+            "Saturday": "سبت"
+        },
+        "more": "+ {count} أخرى",
+        "dayLabel": "{weekday}، {day} {season}",
+        "details": {
+            "title": "{weekday}، {day} {season}",
+            "events": "الأحداث",
+            "birthdays": "أعياد الميلاد",
+            "noEvents": "لا أحداث اليوم.",
+            "noBirthdays": "لا أعياد ميلاد اليوم.",
+            "current": "اليوم الحالي",
+            "close": "إغلاق"
+        },
+        "toast": {
+            "set": "تم ضبط اليوم الحالي على {day} {season}"
+        },
+        "cellEntries": "{count, plural, zero {{amount} مدخلات} one {{amount} مدخل} two {مدخلان} few {{amount} مدخلات} many {{amount} مدخلًا} other {{amount} مدخل}}",
+        "entries": {
+            "birthday": "عيد ميلاد {name}",
+            "range": "الأيام {start}-{end} من {season}",
+            "likes": "يحب: {food}"
+        }
+    }
+}

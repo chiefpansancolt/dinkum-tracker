@@ -1,0 +1,123 @@
+{
+    "common": {
+        "level": "Stufe {level}",
+        "levelCount": "Stufe {level}:",
+        "locked": "Schließe zuerst die vorherige Stufe ab.",
+        "completeAll": "Alle abschließen",
+        "clearAll": "Alle zurücksetzen",
+        "requirement": "Anforderung",
+        "requiredSkill": "Nötige Fähigkeitsstufe",
+        "all": "Alle",
+        "collected": "Gesammelt",
+        "notCollected": "Noch zu sammeln",
+        "clearFilters": "Filter löschen",
+        "toast": {
+            "obtained": "{item}: Stufe {level} erreicht",
+            "cleared": "{item}: {count, plural, one {{amount} Stufe} other {{amount} Stufen}} zurückgesetzt",
+            "allObtained": "{item}: alle Stufen erreicht",
+            "allCleared": "{item}: alle Stufen zurückgesetzt"
+        },
+        "empty": {
+            "title": "Keine Treffer für {things}",
+            "description": "Versuche einen anderen Namen oder lösche die Filter."
+        },
+        "permitPoints": "Genehmigungspunkte"
+    },
+    "buildings": {
+        "title": "Gebäude",
+        "subline": "{count} von {total} gebaut · {percent}% · {name}",
+        "tiles": {
+            "installed": "Gebaut",
+            "stillToInstall": "Noch zu bauen",
+            "listed": "Gelistete Gebäude",
+            "of": "von {total}",
+            "breakdown": "{collectable} sammelbar · {movable} verschiebbar · {reference} Referenz"
+        },
+        "filters": {
+            "deedType": "Urkundenart",
+            "npc": "NPC",
+            "collected": "Gesammelt",
+            "search": "Gebäude nach Name suchen...",
+            "sheetTitle": "Gebäude filtern",
+            "showing": "{shown} von {total} Gebäuden angezeigt · Gebaut {count}",
+            "apply": "{count} Gebäude zeigen"
+        },
+        "card": {
+            "deed": "Urkunde",
+            "npc": "NPC",
+            "size": "Größe",
+            "buildTime": "Bauzeit",
+            "deedPrice": "Urkundenpreis",
+            "hours": "Stunden",
+            "closed": "Geschlossen",
+            "description": "Beschreibung",
+            "resources": "Rohstoffe",
+            "resource": "{count} {name}"
+        },
+        "installed": "Gebaut",
+        "nothingToInstall": "Für diese Urkundenart gibt es nichts zu bauen.",
+        "things": "Gebäude",
+        "toast": {
+            "installed": "{name} als gebaut markiert",
+            "notInstalled": "{name} als nicht gebaut markiert"
+        }
+    },
+    "licenses": {
+        "title": "Lizenzen",
+        "subline": "{count} von {total} Stufen erreicht · {percent}% · {name}",
+        "tiles": {
+            "levels": "Erreichte Stufen",
+            "complete": "Abgeschlossene Lizenzen",
+            "permit": "Ausgegebene Genehmigungspunkte",
+            "of": "von {total}",
+            "sentence": "Du hast {amount} von {total} nötigen Genehmigungspunkten ausgegeben."
+        },
+        "filters": {
+            "category": "Kategorie",
+            "collected": "Gesammelt",
+            "search": "Lizenzen nach Name suchen...",
+            "sheetTitle": "Lizenzen filtern",
+            "showing": "{shown} von {total} Lizenzen angezeigt · Freigeschaltete Stufen {count}",
+            "apply": "{count} Lizenzen zeigen"
+        },
+        "things": "Lizenzen"
+    },
+    "milestones": {
+        "title": "Meilensteine",
+        "subline": "{count} von {total} Stufen abgeschlossen · {percent}% · {name}",
+        "tiles": {
+            "levels": "Abgeschlossene Stufen",
+            "complete": "Abgeschlossene Meilensteine",
+            "permit": "Verdiente Genehmigungspunkte",
+            "of": "von {total}",
+            "sentence": "Du hast {amount} von {total} verfügbaren Genehmigungspunkten verdient."
+        },
+        "filters": {
+            "category": "Kategorie",
+            "allCategories": "Alle Kategorien",
+            "collected": "Gesammelt",
+            "viewMode": "Ansicht",
+            "grouped": "Nach Buchstaben gruppiert",
+            "all": "Alle Meilensteine",
+            "search": "Meilensteine nach Name oder Beschreibung suchen...",
+            "sheetTitle": "Meilensteine filtern",
+            "showing": "{shown} von {total} Meilensteinen angezeigt · Abgeschlossene Stufen {count}",
+            "apply": "{count} Meilensteine zeigen"
+        },
+        "things": "Meilensteine"
+    },
+    "skills": {
+        "title": "Fähigkeiten",
+        "subline": "{skills} Fähigkeiten · {levels} Stufen gesamt · Keine Obergrenze · {name}",
+        "tiles": {
+            "total": "Fähigkeitsstufen gesamt",
+            "across": "über {count} Fähigkeiten",
+            "highest": "Höchste Fähigkeit",
+            "atZero": "Fähigkeiten auf Stufe 0",
+            "atZeroOf": "von {total}"
+        },
+        "level": "Fähigkeitsstufe",
+        "note": "Lizenzen verlangen auf jeder Stufe eine Fähigkeitsstufe. In den <link>Lizenzen</link> siehst du, welche Stufen dir noch fehlen.",
+        "toast": "{name} ist jetzt Stufe {level}"
+    }
+}

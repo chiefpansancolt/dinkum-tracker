@@ -1,16 +1,183 @@
 @import "tailwindcss";
-@import "flowbite-react/plugin/tailwindcss";
-@source "../../.flowbite-react/class-list.json";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+:root {
+  --bg: #f6f0e1;
+  --surface: #fffbf2;
+  --line: #d8caaa;
+  --track: #e6dac0;
+  --ink: #35230f;
+  --muted: #6a573f;
+  --primary: #3c6e48;
+  --on-primary: #ffffff;
+  --tint: #e4ede2;
+  --link: #2b6a98;
+  --danger: #7f2f21;
+  --on-danger: #ffffff;
+  --warn: #9a4208;
+  --gold: #b88f3a;
+  --amber: #c98a1b;
+  --scrim: rgba(26, 21, 14, 0.55);
+  --sb-bg: #35230f;
+  --sb-text: #f9d794;
+  --sb-muted: #c9b58a;
+  --sb-line: #5a4428;
+  --sb-active-bg: #f9d794;
+  --sb-active-text: #35230f;
+  --success: #2e6a3a;
+  --info: #2b6a98;
+  --locked: #6a573f;
+  --rarity-common: #6a573f;
+  --rarity-uncommon: #2f6f9f;
+  --rarity-rare: #9b2f2f;
+  --rarity-super-rare: #4b4fa3;
+  --rarity-very-rare: #7a3f8f;
+  --ring: var(--primary);
+}
+
+.dark {
+  --bg: #1a150e;
+  --surface: #251e14;
+  --line: #4a3d29;
+  --track: #3a2f1f;
+  --ink: #f7ebcf;
+  --muted: #bfae8c;
+  --primary: #7db88b;
+  --on-primary: #1a150e;
+  --tint: #2a3a2c;
+  --link: #7db6e3;
+  --danger: #e58b78;
+  --on-danger: #1a150e;
+  --warn: #f29a55;
+  --gold: #d3ab55;
+  --amber: #e0b04a;
+  --scrim: rgba(0, 0, 0, 0.62);
+  --sb-bg: #120e09;
+  --sb-text: #f9d794;
+  --sb-muted: #bfae8c;
+  --sb-line: #3a2f1f;
+  --sb-active-bg: #3a2f1f;
+  --sb-active-text: #f9d794;
+  --success: #7db88b;
+  --info: #7db6e3;
+  --locked: #bfae8c;
+  --rarity-common: #bfae8c;
+  --rarity-uncommon: #7db6e3;
+  --rarity-rare: #e58b78;
+  --rarity-super-rare: #a9aceb;
+  --rarity-very-rare: #d4a0e3;
+}
+
 @theme {
-  --color-primary: #5a9367;
   --color-secondary: #6daedc;
   --color-accent: #8b572a;
   --color-highlight: #f39c12;
 }
 
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-track: var(--track);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
+  --color-tint: var(--tint);
+  --color-link: var(--link);
+  --color-danger: var(--danger);
+  --color-on-danger: var(--on-danger);
+  --color-warn: var(--warn);
+  --color-gold: var(--gold);
+  --color-amber: var(--amber);
+  --color-scrim: var(--scrim);
+  --color-sb-bg: var(--sb-bg);
+  --color-sb-text: var(--sb-text);
+  --color-sb-muted: var(--sb-muted);
+  --color-sb-line: var(--sb-line);
+  --color-sb-active-bg: var(--sb-active-bg);
+  --color-sb-active-text: var(--sb-active-text);
+  --color-success: var(--success);
+  --color-info: var(--info);
+  --color-locked: var(--locked);
+  --color-rarity-common: var(--rarity-common);
+  --color-rarity-uncommon: var(--rarity-uncommon);
+  --color-rarity-rare: var(--rarity-rare);
+  --color-rarity-super-rare: var(--rarity-super-rare);
+  --color-rarity-very-rare: var(--rarity-very-rare);
+
+  --font-sans: var(--font-plex-sans), system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+
+  /* A container that clips overflow would cut a focus ring drawn outside the control. */
+  [data-focus-inset] :focus-visible {
+    outline-offset: -3px;
+  }
+
+  /* Tailwind 4 resets buttons to the default cursor. Every control a user can click needs a pointer. */
+  a[href],
+  button:not(:disabled),
+  summary,
+  select:not(:disabled),
+  label[for],
+  [role="button"]:not([aria-disabled="true"]),
+  [role="tab"],
+  [role="switch"],
+  [role="menuitem"],
+  input:is(
+      [type="checkbox"],
+      [type="radio"],
+      [type="file"],
+      [type="date"],
+      [type="range"]
+    ):not(:disabled) {
+    cursor: pointer;
+  }
+
+  button:disabled,
+  select:disabled,
+  input:disabled,
+  [aria-disabled="true"] {
+    cursor: not-allowed;
+  }
+}
+
 .Toastify__toast {
   padding: 0 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

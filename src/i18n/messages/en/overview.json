@@ -1,0 +1,116 @@
+{
+    "title": "Overview",
+    "subline": "{done} of {total} items · {percent}% · {name}",
+    "view": "View",
+    "headline": {
+        "label": "Overall completion",
+        "ofItems": "{done} of {total} items",
+        "groups": {
+            "track": "Track",
+            "progress": "Progress",
+            "collect": "Collect"
+        },
+        "groupOf": "{done} of {total}",
+        "note": "Fixed denominator of {total} items: Pedia {pedia}, NPCs {npcs}, Milestones {milestones}, Licenses {licenses}, Skills {skills}, Buildings {buildings}, Gear {gear}, Wardrobe and home {wardrobe}, Recipes {recipes}. Every category counts from day one, so the percent does not jump when you open a new tab."
+    },
+    "skills": {
+        "title": "Character skills",
+        "level": "Level {level}",
+        "empty": "No skills recorded yet."
+    },
+    "licenses": {
+        "title": "License progress",
+        "obtained": "Licenses obtained",
+        "complete": "{count}/{total} complete",
+        "levels": "License levels",
+        "levelsValue": "{count}/{total} · {percent}%",
+        "permit": "Permit points spent",
+        "spent": "{percent}% spent"
+    },
+    "milestones": {
+        "title": "Milestone progress",
+        "overall": "Overall progress",
+        "complete": "{count}/{total} complete",
+        "levels": "Levels",
+        "levelsValue": "{count}/{total} · {percent}%",
+        "permit": "Permit points earned",
+        "earned": "{percent}% earned"
+    },
+    "pedia": {
+        "title": "Pedia progress",
+        "overall": "Overall progress ({count}/{total})",
+        "donations": "Museum donations ({count}/{total})",
+        "fish": "Fish ({count}/{total})",
+        "bugs": "Bugs ({count}/{total})",
+        "critters": "Critters ({count}/{total})",
+        "donated": "Donated ({count}/{total})",
+        "permit": "Permit points earned",
+        "earned": "{percent}% earned"
+    },
+    "gear": {
+        "title": "Gear and equipment",
+        "overall": "Overall progress ({count}/{total})",
+        "books": "Books ({count}/{total})",
+        "tools": "Tools ({count}/{total})",
+        "weapons": "Weapons ({count}/{total})",
+        "equipment": "Equipment ({count}/{total})",
+        "vehicles": "Vehicles ({count}/{total})",
+        "cassettes": "Cassettes ({count}/{total})",
+        "names": {
+            "books": "Books",
+            "tools": "Tools",
+            "weapons": "Weapons",
+            "equipment": "Equipment",
+            "vehicles": "Vehicles",
+            "cassettes": "Cassettes"
+        },
+        "mostComplete": "Most complete",
+        "leastComplete": "Least complete"
+    },
+    "buildings": {
+        "title": "Buildings progress",
+        "overall": "Overall progress",
+        "complete": "{count}/{total} complete",
+        "houseUpgrades": "House upgrades",
+        "shops": "Shops",
+        "town": "Town buildings",
+        "utility": "Utility buildings",
+        "mostExpensive": "Most expensive buildings",
+        "price": "{amount} Dinks"
+    },
+    "recipes": {
+        "title": "Recipe collection",
+        "overall": "Overall progress ({count}/{total})",
+        "cooking": "Cooking ({count}/{total})",
+        "crafting": "Crafting ({count}/{total})",
+        "signWriting": "Sign writing ({count}/{total})",
+        "names": {
+            "cooking": "Cooking",
+            "crafting": "Crafting",
+            "signWriting": "Sign writing"
+        },
+        "mostComplete": "Most complete",
+        "leastComplete": "Least complete"
+    },
+    "npcs": {
+        "title": "NPC relationships",
+        "total": "Total NPCs",
+        "friends": "Friends",
+        "oneHeart": "1+ hearts",
+        "maxHearts": "Max hearts",
+        "avgHearts": "Avg hearts",
+        "top": "Top relationships",
+        "hearts": "{hearts, plural, one {{amount} heart} other {{amount} hearts}}",
+        "empty": "No NPC collected recorded yet."
+    },
+    "game": {
+        "title": "Game info",
+        "calendar": "Game calendar",
+        "date": "Day {day}, {season}",
+        "tracking": "Real-world tracking",
+        "daysSince": "Days since creation: {days}",
+        "lastUpdated": "Last updated: {date}",
+        "milestones": "Milestones",
+        "completed": "{count} completed"
+    }
+}

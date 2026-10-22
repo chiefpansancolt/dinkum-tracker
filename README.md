@@ -1,192 +1,93 @@
 # Dinkum Tracker
 
-A comprehensive tracking application for your Dinkum adventures. Manage multiple playthroughs, track collections, and monitor progress all in one place - all saved locally in your browser.
+A free progress tracker for the game Dinkum. Keep several playthroughs, record what each one has found, built and unlocked, and see what is left. Everything is saved in your browser. There is no account. Cloud sync is optional and keeps your data in your own storage.
 
-![Dinkum Tracker Overview](.github/images/Dinkum_Tracker_Overview.png)
+This is an unofficial fan tool. It is not affiliated with, endorsed by, or connected to Dinkum or its creators. Game names and images belong to their owners.
 
-## 🌟 Features
+## What it does
 
-- **Multiple Playthrough Support**: Create and manage separate playthroughs for different Dinkum game saves
-- **Comprehensive Collection Tracking**:
-  - 🐟 Fish (45+ species)
-  - 🦋 Bugs (50+ species)
-  - 🦀 Critters (25+ species)
-- **Progress Monitoring**:
-  - 📅 Calendar with events and birthdays
-  - 🏆 Milestones (65+ in-game achievements)
-  - 🎓 Skills tracking
-  - 📜 License progression
-  - 🏠 Building construction
-  - 👫 NPC relationships
-- **Complete Item Database**:
-  - 📚 Books
-  - 🔨 Tools
-  - ⚔️ Weapons
-  - 🎒 Equipment
-  - 🚗 Vehicles
-  - 👕 Clothing
-  - 🪑 Furniture
-  - 📝 Recipes (Cooking, Crafting, Sign Writing)
-  - 💎 Resources (Minerals, Relics, Foragables, etc.)
-- **Detailed Analysis**:
-  - 📊 Dashboard with progress statistics
-  - 🧮 Items breakdown for crafting purposes
-  - 🏷️ Advanced filtering and search capabilities
-- **Local Storage**: All data saved in your browser - no account needed
-- **Data Management**:
-  - 💾 Export/import data for backup and transfer
-  - 🔄 Reset functionality
-- **Responsive Design**: Works on desktop and mobile devices
-- **Dark Mode Support**: Toggle between light and dark themes
-- **Weight Calculator**: Ability to calculate Weighted Items price
+Each playthrough has one page per game area. Every change saves at once, and a toast offers Undo.
 
-## 🔧 Technology Stack
+- **Overview**: progress across every area, with a fixed total of 2,103 items.
+- **Pedia**: fish, bugs and critters, with filters for season, biome, time of day and rarity, and a Missing, Caught or Donated control.
+- **NPCs and Calendar**: relationship hearts for every NPC, plus events and birthdays by season and day.
+- **Buildings, Licenses, Milestones and Skills**: levels that follow the game's rules, with Complete All and Clear All.
+- **Recipes**: cooking (with a Buffs filter), crafting and sign writing.
+- **Gear**: books, cassettes, tools, weapons, equipment and vehicles.
+- **Wardrobe and home**: clothing, furniture and decorations, with slot, set and category tiles that filter the list.
+- **Items breakdown and Weight calculator**: what a list of items costs in raw resources, and the price of weighted items.
+- **Reference**: read only pages for animals, resources, plants, the Food Modeller and the daily milestones.
+- **Settings**: language and region, number and date formats, theme (light, dark or system), backup export and import, optional cloud sync, and reset.
 
-- **Next.js 15.3.0**: Modern React framework with App Router
-- **React 19**: Latest React features and improvements
-- **TypeScript**: Type-safe code development
-- **Tailwind CSS 4.1.0**: Utility-first styling approach
-- **Flowbite-React**: UI component library built on Tailwind
-- **Zustand**: State management for persistent UI state
-- **React-Toastify**: Toast notifications for user feedback
-- **React-Icons**: Comprehensive icon library
-- **LocalStorage API**: Client-side data persistence
+Prices can be shown at any commerce level (Base, +5%, +10% or +15%). Long lists load as you scroll. Pedia and most Collect pages offer a grid and a list view.
 
-## 📋 Project Structure
+## Run it
 
-```text
-dinkum-tracker/
-├── app/                   # Next.js pages
-│   ├── (home)/            # Home page components
-│   ├── playthrough/       # Playthrough management
-│   │   ├── [id]/          # Dynamic routes for each playthrough
-│   │   ├── list/          # Playthrough listing
-│   │   └── new/           # Create new playthrough
-│   ├── settings/          # App settings
-│   ├── itemsBreakdown/    # Items analysis
-│   ├── weight-calculator/ # Weight Calculator for weighted items
-│   └── globals.css        # Global styles
-├── components/            # React components
-│   ├── playthrough/       # Playthrough-specific components
-│   │   ├── dashboard/     # Dashboard components
-│   │   └── ui/            # Reusable UI components for playthrough
-│   └── layout/            # Layout components (Sidebar, Navigation)
-├── data/                  # Game data
-│   ├── constants/         # App constants
-│   └── dinkum/            # Game-specific data
-│       ├── pedia/         # Collectible item data
-│       └── ...            # Other game data (buildings, licenses, etc.)
-├── lib/                   # Utility functions
-│   ├── localStorage.ts    # Storage operations
-│   └── services/          # Application services
-├── types/                 # TypeScript type definitions
-│   ├── app/               # Application-specific types
-│   ├── dinkum/            # Game data types
-│   └── ui/                # UI component types
-└── public/                # Static assets
+Node 24 and pnpm are required.
+
+```
+pnpm install
+pnpm dev
 ```
 
-## 🚀 Getting Started
+Then open http://localhost:3000. Other commands:
 
-### Prerequisites
+```
+pnpm build
+pnpm lint
+pnpm test
+pnpm format:check
+```
 
-- Node.js 22 or later
-- pnpm 10.0.0 or later (recommended) or npm/yarn
+`pnpm install` also copies the game images into `public/images` (see Game data).
 
-### Installation
+Two scripts keep the text catalogs honest:
 
-1. Clone the repository:
+```
+node scripts/check-catalogs.mjs     # every language against English
+node scripts/check-i18n.mjs         # text in code that is not in a catalog
+```
 
-   ```bash
-   git clone https://github.com/chiefpansancolt/dinkum-tracker.git
-   cd dinkum-tracker
-   ```
+### Environment variables
 
-2. Install dependencies:
+All are optional and public (`NEXT_PUBLIC_`). Next.js reads them at build time, so redeploy after a change.
 
-   ```bash
-   pnpm install
-   # or
-   npm install
-   ```
+- `NEXT_PUBLIC_GAMERDEX_AUTH_URL`: the address of the sign-in service. The package `@gamerdexapp/gamerdex-sync` has a default. An empty value turns sync off.
+- `NEXT_PUBLIC_GOOGLE_CLIENT_ID`, `NEXT_PUBLIC_DROPBOX_CLIENT_ID`, `NEXT_PUBLIC_MICROSOFT_CLIENT_ID`: override the client ID of a sync provider. An empty value leaves that provider out.
 
-3. Start the development server:
+## Project structure
 
-   ```bash
-   pnpm dev
-   # or
-   npm run dev
-   ```
+- `src/app`: routes. Old `/playthrough/{id}/...` addresses redirect to the matching page.
+- `src/components`: the app shell, the shared UI kit in `ui/`, and one folder per game area.
+- `src/lib`: contexts, hooks and services (storage, completion, levels, sync, calculators).
+- `src/i18n`: the language setup and the text catalogs.
+- `tests`: unit tests, run by Vitest.
+- `scripts`: the asset copy and the catalog checks.
 
-4. Open your browser and navigate to `http://localhost:3000`
+## Game data
 
-## 💾 Data Storage
+The game data comes from the `dinkum-data` package, pinned to one exact version. Names, prices, sources, descriptions and images are read from it and never copied by hand. The script `scripts/copy-game-assets.sh` copies the image folders from the package into `public/images`. That folder is not committed.
 
-This application stores all data in your browser's localStorage. This means:
+## Data and privacy
 
-- All data is saved locally on your device
-- Data persists between browser sessions
-- Clearing browser data will remove your saved playthroughs
-- Data is not synced between devices
-- Use the export/import feature to backup or transfer your data
+Your playthroughs and choices are stored in your browser, in four `localStorage` keys: `dinkum-tracker-playthroughs`, `dinkum-tracker-active-playthrough`, `dinkum-tracker-default-sort` and `dinkum-tracker-prefs`. The theme is kept in `flowbite-theme-mode`, and the cloud sync sign-in in `dinkum-tracker-sync`. The tracker has no analytics code and no account. Clearing site data removes it, so use Settings, Backup and data to export a JSON file. You can import it again later, on this device or another.
 
-## 🔍 Usage
+Language, number format, date format, theme and view choices belong to the device. They are not part of the export file or the synced file.
 
-### Managing Playthroughs
+Cloud sync is off until you turn it on in Settings, Cloud sync. You choose GitHub, Google Drive, Dropbox or OneDrive, and the app keeps one file in your own storage. The file has the same format as the export file. A small sign-in service, [gamerdex-auth](https://github.com/gamerdexapp/gamerdex-auth), only exchanges the login token and does not see or keep your data.
 
-1. **Create a Playthrough**: Start by creating a new playthrough with a memorable name
-2. **View Dashboard**: See your overall progress and statistics at a glance
-3. **Navigate Features**: Use the sidebar to access different tracking features
+## Language support
 
-### Tracking Collections
+The app ships in 19 languages: English, Arabic, German, Spanish (Spain and Latin America), French, Indonesian, Italian, Japanese, Korean, Malay, Portuguese (Brazil and Portugal), Russian, Thai, Turkish, Vietnamese and Chinese (Simplified and Traditional). Arabic reads right to left. The text lives in catalogs under `src/i18n/messages/<code>/`, so a new language is a new catalog folder and one entry in `src/i18n/locales.ts`. Game data such as item, NPC and fish names stays in English. Number and date formats are separate choices in Settings.
 
-- **Fish, Bugs, and Critters**: Mark items as collected and donated to the museum
-- **Advanced Filtering**: Filter by season, biome, time of day, or rarity
-- **Search**: Find specific items by name
+## Contributing
 
-### Monitoring Progress
+Issues and pull requests are welcome. Read [CONTRIBUTING.md](.github/CONTRIBUTING.md) first.
 
-- **Milestones**: Track achievement completion
-- **Licenses**: Monitor license acquisition
-- **Skills**: Record skill level progression
-- **Buildings**: Track building construction
-- **NPC Relationships**: Manage relationships with town NPCs
+## Changelog
 
-### Managing Items
+See [CHANGELOG.md](CHANGELOG.md).
 
-- **Recipes**: Track unlocked cooking, crafting, and sign writing recipes
-- **Equipment**: Keep track of tools, weapons, equipment, and vehicles
-- **Items Breakdown**: Analyze resource usage and requirements
+## License
 
-### Calendar
-
-- **Season and Day**: Keep track of the current day and season in your game
-- **Events**: View upcoming events and birthdays
-- **Planning**: Plan your activities based on seasonal availability
-
-## 📋 Changelog
-
-See [CHANGELOG.md](CHANGELOG.md) for a full history of releases and changes.
-
-## 🌐 Live Demo
-
-[Try Dinkum Tracker Online](https://dinkum-tracker.app)
-
-## 🤝 Contributing
-
-Contributions are welcome! Here's how you can help:
-
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature/amazing-feature`)
-3. Make your changes
-4. Commit your changes (`git commit -m 'Add some amazing feature'`)
-5. Push to the branch (`git push origin feature/amazing-feature`)
-6. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 📢 Disclaimer
-
-This project is not affiliated with, endorsed by, or connected to Dinkum or its creators. All game data is sourced from the [Dinkum Wiki](https://dinkum.fandom.com/wiki/Dinkum_Wiki). Game images and names are used for reference purposes only.
+MIT. See [LICENSE](LICENSE). The game, its name and its content belong to their owners. Game data comes from the [Dinkum Wiki](https://dinkum.fandom.com/wiki/Dinkum_Wiki).

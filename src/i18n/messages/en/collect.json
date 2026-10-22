@@ -1,0 +1,234 @@
+{
+    "toast": {
+        "marked": "{name} marked {state}",
+        "collected": "Collected",
+        "notCollected": "Not collected",
+        "unlocked": "Unlocked",
+        "locked": "Locked"
+    },
+    "filters": {
+        "search": "Search {things} by name...",
+        "sheetTitle": "Filter {things}",
+        "showingCollected": "Showing {shown} of {total} {things} · Collected {count}",
+        "showingUnlocked": "Showing {shown} of {total} {things} · Unlocked {count}",
+        "apply": "Show {count} {things}",
+        "all": "All",
+        "collected": "Collected",
+        "notCollected": "To be collected",
+        "unlocked": "Unlocked",
+        "notUnlocked": "To be unlocked",
+        "source": "Source",
+        "allSources": "All sources"
+    },
+    "empty": {
+        "title": "No {things} match these filters",
+        "description": "Try a different name or clear the filters.",
+        "clear": "Clear filters"
+    },
+    "list": {
+        "got": "Got",
+        "name": "Name",
+        "caption": "{shown} of {total} rows loaded. More rows load as you scroll.",
+        "prices": "Prices in dinks"
+    },
+    "card": {
+        "collected": "Collected",
+        "markCollected": "Mark collected",
+        "unlocked": "Unlocked",
+        "sellPrice": "Sell price",
+        "buyPrice": "Buy price",
+        "source": "Source",
+        "none": "–"
+    },
+    "gear": {
+        "title": "Gear",
+        "subline": "{count} of {total} collected · {percent}% · {name}",
+        "tabsLabel": "Gear sections",
+        "tabs": {
+            "books": "Books",
+            "cassettes": "Cassettes",
+            "tools": "Tools",
+            "weapons": "Weapons",
+            "equipment": "Equipment",
+            "vehicles": "Vehicles"
+        },
+        "things": {
+            "books": "books",
+            "cassettes": "cassettes",
+            "tools": "tools",
+            "weapons": "weapons",
+            "equipment": "equipment",
+            "vehicles": "vehicles"
+        },
+        "tiles": {
+            "collected": "Collected",
+            "of": "of {total}",
+            "franklyn": "Franklyn unlocks",
+            "craftable": "Craftable",
+            "highDamage": "High damage (20+)"
+        },
+        "filters": {
+            "license": "License",
+            "allLicenses": "All licenses",
+            "purchaseType": "Purchase Type",
+            "purchasable": "Purchasable",
+            "dinks": "Dinks",
+            "permitPoints": "Permit Points",
+            "damage": "Damage",
+            "high": "High (20+)",
+            "medium": "Medium (10 to 19)",
+            "low": "Low (under 10)",
+            "allDamage": "All damage",
+            "requirement": "Requirement Type",
+            "allRequirements": "All requirement types",
+            "allPurchaseTypes": "All"
+        },
+        "card": {
+            "craftingRecipe": "Crafting Recipe",
+            "license": "License",
+            "licenseLevel": "Hunting License Level",
+            "source": "Source",
+            "damage": "Damage",
+            "unlocksAfter": "Unlocks After",
+            "shinyDiscs": "{count} Shiny Discs",
+            "berkonium": "{count} Berkonium Ore",
+            "ingredients": "Ingredients",
+            "resources": "Resources",
+            "requirement": "Requirement Level",
+            "compatibleWith": "Compatible with",
+            "windmill": "Windmill",
+            "solarPanel": "Solar Panel",
+            "acquiredFrom": "Acquired From",
+            "requirements": "Requirements",
+            "buyPrice": "Buy price",
+            "sellPrice": "Sell price",
+            "dinks": "{amount} Dinks",
+            "permitPoints": "{count, plural, one {{amount} permit point} other {{amount} permit points}}",
+            "ingredient": "{count}x {name}",
+            "none": "None",
+            "requirementLevel": "{type} Level"
+        }
+    },
+    "recipes": {
+        "title": "Recipes",
+        "subline": "{count} of {total} unlocked · {percent}% · {name}",
+        "tabsLabel": "Recipe sections",
+        "tabs": {
+            "cooking": "Cooking",
+            "crafting": "Crafting",
+            "signWriting": "Sign writing"
+        },
+        "things": {
+            "cooking": "cooking recipes",
+            "crafting": "crafting recipes",
+            "signWriting": "sign writing recipes"
+        },
+        "tiles": {
+            "unlocked": "Unlocked",
+            "of": "of {total}",
+            "withBuffs": "With buffs",
+            "vendors": "Sold by Sheila, Ted or Jimmy",
+            "recipes": "Recipes"
+        },
+        "filters": {
+            "location": "Cooking Locations",
+            "allLocations": "All locations",
+            "unlocked": "Unlocked",
+            "sources": "Sources",
+            "allSources": "All sources",
+            "buffs": "Buffs",
+            "buffsWithCount": "Buffs ({count})"
+        },
+        "buffs": {
+            "title": "Filter by Buffs",
+            "match": "Match",
+            "any": "ANY",
+            "all": "ALL",
+            "clear": "Clear Selections",
+            "selected": "{count} selected",
+            "done": "Done"
+        },
+        "card": {
+            "cookingLocation": "Cooking Location",
+            "buffs": "Buffs",
+            "duration": "{minutes, plural, one {{amount} min} other {{amount} mins}}",
+            "sellPrice": "Sell Price",
+            "sheilas": "Sheila's",
+            "teds": "Ted's",
+            "jimmys": "Jimmy's",
+            "resources": "Resources",
+            "option": "Option {n}",
+            "ingredient": "{count}x {name}",
+            "source": "Source",
+            "unlocked": "Unlocked",
+            "varies": "Varies",
+            "output": "x{count}"
+        }
+    },
+    "wardrobe": {
+        "title": "Wardrobe and home",
+        "subline": "{count} of {total} collected · {percent}% · {name}",
+        "tabsLabel": "Wardrobe sections",
+        "tabs": {
+            "clothing": "Clothing",
+            "furniture": "Furniture",
+            "decorations": "Decorations"
+        },
+        "things": {
+            "clothing": "clothing items",
+            "furniture": "furniture",
+            "decorations": "decorations"
+        },
+        "progress": {
+            "clothing": "Progress by slot · select a tile to filter",
+            "furniture": "Progress by set · select a tile to filter",
+            "decorations": "Progress by category · select a tile to filter"
+        },
+        "filters": {
+            "slot": "Slot",
+            "type": "Type",
+            "set": "Set",
+            "allSets": "All sets",
+            "catalogue": "Catalogue",
+            "melvins": "Melvin's Catalogue",
+            "notMelvins": "Not in Catalogue",
+            "category": "Category",
+            "allCategories": "All categories",
+            "source": "Source",
+            "allSources": "All sources",
+            "all": "All"
+        },
+        "list": {
+            "type": "Type",
+            "slot": "Slot",
+            "set": "Set",
+            "price": "Price",
+            "sell": "Sell",
+            "availableAt": "Available at",
+            "catalogue": "Catalogue",
+            "category": "Category",
+            "source": "Source",
+            "buy": "Buy"
+        },
+        "card": {
+            "slot": "Slot",
+            "set": "Set",
+            "price": "Price",
+            "sellPrice": "Sell price",
+            "availableAt": "Available at",
+            "cataloguePrice": "Catalogue price",
+            "source": "Source",
+            "buyPrice": "Buy price",
+            "category": "Category"
+        },
+        "shop": "Clover's Shop",
+        "hints": {
+            "slots": "{count, plural, one {All plus {amount} slot} other {All plus {amount} slots}}",
+            "typesForSlot": "{count, plural, one {{amount} type for {slot}. Resets when Slot changes.} other {{amount} types for {slot}. Resets when Slot changes.}}",
+            "typeNeedsSlot": "With Slot set to All, Type offers only All. Pick a slot first to see its types.",
+            "sets": "{count, plural, one {All plus {amount} set} other {All plus {amount} sets}}",
+            "sources": "All plus every source",
+            "categories": "{count, plural, one {{amount} category. The tiles above set this.} other {{amount} categories. The tiles above set this.}}"
+        }
+    }
+}

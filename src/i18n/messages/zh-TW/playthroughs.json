@@ -1,0 +1,124 @@
+{
+    "title": "存檔",
+    "subline": "管理你的 Dinkum 冒險。共 {count, plural, other {{amount} 個存檔}}，使用中：{name}。",
+    "sublineNoneActive": "管理你的 Dinkum 冒險。共 {count, plural, other {{amount} 個存檔}}。",
+    "sublineEmpty": "尚無存檔。",
+    "loading": "正在載入存檔...",
+    "stats": {
+        "playthroughs": "存檔",
+        "playthroughsCaption": "在此瀏覽器中",
+        "active": "使用中",
+        "noneActive": "無",
+        "furthest": "進度最高",
+        "average": "平均完成度",
+        "averageCaption": "所有存檔"
+    },
+    "filters": {
+        "sortBy": "排序方式",
+        "sort": {
+            "lastUpdated": "最後更新",
+            "name": "名稱",
+            "createdAt": "建立日期",
+            "completion": "完成百分比"
+        },
+        "search": "依名稱搜尋存檔",
+        "showing": "顯示 {shown} / {total} {total, plural, other {個存檔}}",
+        "defaultSortFrom": "預設排序來自<link>設定</link>"
+    },
+    "noMatch": {
+        "title": "沒有符合「{query}」的存檔",
+        "description": "試試其他名稱。",
+        "clear": "清除搜尋"
+    },
+    "empty": {
+        "title": "找不到存檔",
+        "description": "你還沒有建立任何存檔。建立第一個存檔，開始追蹤你的 Dinkum 冒險。每個存檔都會儲存在此瀏覽器中。",
+        "create": "建立你的第一個存檔",
+        "importBackup": "改為匯入備份"
+    },
+    "card": {
+        "created": "建立：{date}",
+        "updated": "更新：{when}",
+        "complete": "已完成 {percent}%",
+        "overall": "整體進度",
+        "pedia": "圖鑑",
+        "licenses": "執照",
+        "milestones": "里程碑",
+        "buildings": "建築",
+        "pediaDetail": "魚類 {fish} · 昆蟲 {bugs} · 小動物 {critters}",
+        "count": "{count}/{total}",
+        "gameDate": "{season}第 {day} 天",
+        "currentGameDate": "目前遊戲日期",
+        "setActive": "設為使用中",
+        "active": "使用中",
+        "openOverview": "開啟總覽",
+        "edit": "編輯",
+        "delete": "刪除",
+        "activePlaythrough": "使用中的存檔"
+    },
+    "seasons": {
+        "Spring": "春季",
+        "Summer": "夏季",
+        "Autumn": "秋季",
+        "Winter": "冬季"
+    },
+    "relative": {
+        "today": "今天",
+        "yesterday": "昨天",
+        "daysAgo": "{count, plural, other {{amount} 天前}}",
+        "weeksAgo": "{count, plural, other {{amount} 週前}}",
+        "monthsAgo": "{count, plural, other {{amount} 個月前}}",
+        "unknown": "無"
+    },
+    "new": {
+        "action": "新增存檔",
+        "actionShort": "新增",
+        "pageTitle": "新增存檔",
+        "pageSubline": "取個名字就能開始追蹤。所有資料都儲存在此瀏覽器中。",
+        "back": "返回所有存檔",
+        "next": {
+            "title": "接下來會發生什麼",
+            "one": "空白存檔會立即儲存在此瀏覽器中。",
+            "two": "若勾選該選項，它會成為使用中的存檔，並顯示在側邊欄切換器中。",
+            "three": "你會回到存檔列表，新卡片位於最上方，並顯示復原通知。"
+        },
+        "createdToast": "已建立 {name}"
+    },
+    "form": {
+        "title": "建立新存檔",
+        "nameLabel": "存檔名稱",
+        "required": "必填",
+        "placeholder": "我的 Dinkum 冒險",
+        "help": "為存檔取個好記的名稱，方便日後辨識。",
+        "counter": "{count} / {max}",
+        "errorEmpty": "請輸入存檔名稱",
+        "makeActive": "設為使用中的存檔",
+        "create": "建立存檔",
+        "creating": "建立中...",
+        "cancel": "取消",
+        "failed": "無法建立存檔。請再試一次。",
+        "tryAgain": "再試一次"
+    },
+    "edit": {
+        "title": "編輯存檔",
+        "save": "儲存",
+        "saving": "儲存中...",
+        "savedToast": "已儲存",
+        "renamed": "已重新命名為 {name}",
+        "description": "{name} · 建立於 {date}",
+        "nameLabel": "存檔名稱",
+        "help": "按 Enter 儲存。名稱空白時無法儲存。"
+    },
+    "delete": {
+        "title": "刪除 {name}？",
+        "description": "這會移除此裝置上所有已儲存的進度。",
+        "activeNext": "這是你使用中的存檔。{next} 是最近更新的存檔，刪除後會成為使用中的存檔。",
+        "activeLast": "這是你使用中的存檔，也是唯一的存檔。刪除後將沒有使用中的存檔。",
+        "exportFirst": "先匯出備份",
+        "confirm": "刪除",
+        "cancel": "取消",
+        "toast": "已刪除 {name}",
+        "toastMessage": "可在 10 秒內復原",
+        "updated": "更新於 {when} · {date}"
+    }
+}

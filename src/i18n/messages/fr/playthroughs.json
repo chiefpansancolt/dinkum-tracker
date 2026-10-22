@@ -1,0 +1,124 @@
+{
+    "title": "Parties",
+    "subline": "Gérez vos aventures dans Dinkum. {count, plural, one {{amount} partie} other {{amount} parties}}, {name} est active.",
+    "sublineNoneActive": "Gérez vos aventures dans Dinkum. {count, plural, one {{amount} partie} other {{amount} parties}}.",
+    "sublineEmpty": "Aucune partie pour l’instant.",
+    "loading": "Chargement des parties...",
+    "stats": {
+        "playthroughs": "Parties",
+        "playthroughsCaption": "dans ce navigateur",
+        "active": "Active",
+        "noneActive": "Aucune",
+        "furthest": "La plus avancée",
+        "average": "Progression moyenne",
+        "averageCaption": "sur l’ensemble"
+    },
+    "filters": {
+        "sortBy": "Trier par",
+        "sort": {
+            "lastUpdated": "Dernière mise à jour",
+            "name": "Nom",
+            "createdAt": "Date de création",
+            "completion": "Pourcentage de progression"
+        },
+        "search": "Rechercher une partie par nom",
+        "showing": "Affichage de {shown} sur {total} {total, plural, one {partie} other {parties}}",
+        "defaultSortFrom": "Le tri par défaut vient des <link>Paramètres</link>"
+    },
+    "noMatch": {
+        "title": "Aucune partie ne correspond à « {query} »",
+        "description": "Essayez un autre nom.",
+        "clear": "Effacer la recherche"
+    },
+    "empty": {
+        "title": "Aucune partie trouvée",
+        "description": "Vous n’avez pas encore créé de partie. Commencez à suivre votre aventure dans Dinkum en créant votre première partie. Chacune est enregistrée dans ce navigateur.",
+        "create": "Créer votre première partie",
+        "importBackup": "Importer une sauvegarde à la place"
+    },
+    "card": {
+        "created": "Créée : {date}",
+        "updated": "Mise à jour : {when}",
+        "complete": "{percent} % terminé",
+        "overall": "Progression globale",
+        "pedia": "Pedia",
+        "licenses": "Licences",
+        "milestones": "Jalons",
+        "buildings": "Bâtiments",
+        "pediaDetail": "Poissons {fish} · Insectes {bugs} · Bestioles {critters}",
+        "count": "{count}/{total}",
+        "gameDate": "Jour {day}, {season}",
+        "currentGameDate": "Date actuelle du jeu",
+        "setActive": "Définir comme active",
+        "active": "Active",
+        "openOverview": "Ouvrir l’aperçu",
+        "edit": "Modifier",
+        "delete": "Supprimer",
+        "activePlaythrough": "Partie active"
+    },
+    "seasons": {
+        "Spring": "Printemps",
+        "Summer": "Été",
+        "Autumn": "Automne",
+        "Winter": "Hiver"
+    },
+    "relative": {
+        "today": "Aujourd’hui",
+        "yesterday": "Hier",
+        "daysAgo": "{count, plural, one {Il y a {amount} jour} other {Il y a {amount} jours}}",
+        "weeksAgo": "{count, plural, one {Il y a {amount} semaine} other {Il y a {amount} semaines}}",
+        "monthsAgo": "{count, plural, one {Il y a {amount} mois} other {Il y a {amount} mois}}",
+        "unknown": "N/D"
+    },
+    "new": {
+        "action": "Nouvelle partie",
+        "actionShort": "Nouvelle",
+        "pageTitle": "Nouvelle partie",
+        "pageSubline": "Donnez-lui un nom et commencez le suivi. Tout est enregistré dans ce navigateur.",
+        "back": "Retour à toutes les parties",
+        "next": {
+            "title": "Ce qui se passe ensuite",
+            "one": "Une partie vide est aussitôt enregistrée dans ce navigateur.",
+            "two": "Elle devient la partie active si la case est cochée. Le sélecteur de la barre latérale l’affiche.",
+            "three": "Vous arrivez sur la liste des parties, avec la nouvelle carte en haut et une notification Annuler."
+        },
+        "createdToast": "{name} créée"
+    },
+    "form": {
+        "title": "Créer une nouvelle partie",
+        "nameLabel": "Nom de la partie",
+        "required": "Obligatoire",
+        "placeholder": "Mon aventure Dinkum",
+        "help": "Donnez à votre partie un nom facile à retenir pour la retrouver plus tard.",
+        "counter": "{count} / {max}",
+        "errorEmpty": "Veuillez saisir un nom pour votre partie",
+        "makeActive": "Faire de celle-ci la partie active",
+        "create": "Créer la partie",
+        "creating": "Création...",
+        "cancel": "Annuler",
+        "failed": "Échec de la création de la partie. Veuillez réessayer.",
+        "tryAgain": "Réessayer"
+    },
+    "edit": {
+        "title": "Modifier la partie",
+        "save": "Enregistrer",
+        "saving": "Enregistrement...",
+        "savedToast": "Enregistré",
+        "renamed": "Renommée en {name}",
+        "description": "{name} · créée le {date}",
+        "nameLabel": "Nom de la partie",
+        "help": "Appuyez sur Entrée pour enregistrer. Le bouton Enregistrer reste désactivé tant que le nom est vide."
+    },
+    "delete": {
+        "title": "Supprimer {name} ?",
+        "description": "Cette action supprime toute sa progression enregistrée sur cet appareil.",
+        "activeNext": "C’est votre partie active. {next} est la plus récemment mise à jour, elle devient donc active après la suppression.",
+        "activeLast": "C’est votre partie active et la seule. Aucune partie n’est active après la suppression.",
+        "exportFirst": "Exporter d’abord une sauvegarde",
+        "confirm": "Supprimer",
+        "cancel": "Annuler",
+        "toast": "{name} supprimée",
+        "toastMessage": "Annulation possible pendant 10 secondes",
+        "updated": "Mise à jour {when} · {date}"
+    }
+}

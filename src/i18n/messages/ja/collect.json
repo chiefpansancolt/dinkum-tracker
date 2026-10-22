@@ -1,0 +1,234 @@
+{
+    "toast": {
+        "marked": "{name}を{state}にしました",
+        "collected": "収集済み",
+        "notCollected": "未収集",
+        "unlocked": "解放済み",
+        "locked": "ロック中"
+    },
+    "filters": {
+        "search": "{things}を名前で検索...",
+        "sheetTitle": "{things}をフィルター",
+        "showingCollected": "{things} {total}件中{shown}件を表示 · 収集済み {count}",
+        "showingUnlocked": "{things} {total}件中{shown}件を表示 · 解放済み {count}",
+        "apply": "{things}を{count}件表示",
+        "all": "すべて",
+        "collected": "収集済み",
+        "notCollected": "未収集",
+        "unlocked": "解放済み",
+        "notUnlocked": "未解放",
+        "source": "入手元",
+        "allSources": "すべての入手元"
+    },
+    "empty": {
+        "title": "条件に一致する{things}はありません",
+        "description": "別の名前を試すか、フィルターをクリアしてください。",
+        "clear": "フィルターをクリア"
+    },
+    "list": {
+        "got": "入手",
+        "name": "名前",
+        "caption": "{total}行中{shown}行を読み込み済み。スクロールすると続きを読み込みます。",
+        "prices": "価格（Dinks）"
+    },
+    "card": {
+        "collected": "収集済み",
+        "markCollected": "収集済みにする",
+        "unlocked": "解放済み",
+        "sellPrice": "売値",
+        "buyPrice": "買値",
+        "source": "入手元",
+        "none": "–"
+    },
+    "gear": {
+        "title": "ギア",
+        "subline": "{total}個中{count}個収集 · {percent}% · {name}",
+        "tabsLabel": "ギアのセクション",
+        "tabs": {
+            "books": "本",
+            "cassettes": "カセット",
+            "tools": "道具",
+            "weapons": "武器",
+            "equipment": "装備",
+            "vehicles": "乗り物"
+        },
+        "things": {
+            "books": "本",
+            "cassettes": "カセット",
+            "tools": "道具",
+            "weapons": "武器",
+            "equipment": "装備",
+            "vehicles": "乗り物"
+        },
+        "tiles": {
+            "collected": "収集済み",
+            "of": "{total}中",
+            "franklyn": "Franklynが解放",
+            "craftable": "クラフト可能",
+            "highDamage": "高ダメージ（20以上）"
+        },
+        "filters": {
+            "license": "ライセンス",
+            "allLicenses": "すべてのライセンス",
+            "purchaseType": "購入方法",
+            "purchasable": "購入可能",
+            "dinks": "Dinks",
+            "permitPoints": "許可ポイント",
+            "damage": "ダメージ",
+            "high": "高（20以上）",
+            "medium": "中（10〜19）",
+            "low": "低（10未満）",
+            "allDamage": "すべてのダメージ",
+            "requirement": "必要条件の種類",
+            "allRequirements": "すべての必要条件",
+            "allPurchaseTypes": "すべて"
+        },
+        "card": {
+            "craftingRecipe": "クラフトレシピ",
+            "license": "ライセンス",
+            "licenseLevel": "狩猟ライセンスのレベル",
+            "source": "入手元",
+            "damage": "ダメージ",
+            "unlocksAfter": "解放条件",
+            "shinyDiscs": "Shiny Discs {count}個",
+            "berkonium": "Berkonium Ore {count}個",
+            "ingredients": "材料",
+            "resources": "資源",
+            "requirement": "必要レベル",
+            "compatibleWith": "対応するもの",
+            "windmill": "Windmill",
+            "solarPanel": "Solar Panel",
+            "acquiredFrom": "入手元",
+            "requirements": "必要条件",
+            "buyPrice": "買値",
+            "sellPrice": "売値",
+            "dinks": "{amount} Dinks",
+            "permitPoints": "{count, plural, other {許可ポイント{amount}}}",
+            "ingredient": "{name} x{count}",
+            "none": "なし",
+            "requirementLevel": "{type}レベル"
+        }
+    },
+    "recipes": {
+        "title": "レシピ",
+        "subline": "{total}個中{count}個解放 · {percent}% · {name}",
+        "tabsLabel": "レシピのセクション",
+        "tabs": {
+            "cooking": "料理",
+            "crafting": "クラフト",
+            "signWriting": "看板描き"
+        },
+        "things": {
+            "cooking": "料理レシピ",
+            "crafting": "クラフトレシピ",
+            "signWriting": "看板描きレシピ"
+        },
+        "tiles": {
+            "unlocked": "解放済み",
+            "of": "{total}中",
+            "withBuffs": "バフあり",
+            "vendors": "Sheila、Ted、Jimmyが販売",
+            "recipes": "レシピ"
+        },
+        "filters": {
+            "location": "調理場所",
+            "allLocations": "すべての場所",
+            "unlocked": "解放済み",
+            "sources": "入手元",
+            "allSources": "すべての入手元",
+            "buffs": "バフ",
+            "buffsWithCount": "バフ（{count}）"
+        },
+        "buffs": {
+            "title": "バフで絞り込み",
+            "match": "一致条件",
+            "any": "いずれか",
+            "all": "すべて",
+            "clear": "選択をクリア",
+            "selected": "{count}件選択中",
+            "done": "完了"
+        },
+        "card": {
+            "cookingLocation": "調理場所",
+            "buffs": "バフ",
+            "duration": "{minutes, plural, other {{amount}分}}",
+            "sellPrice": "売値",
+            "sheilas": "Sheilaの店",
+            "teds": "Tedの店",
+            "jimmys": "Jimmyの店",
+            "resources": "資源",
+            "option": "選択肢{n}",
+            "ingredient": "{name} x{count}",
+            "source": "入手元",
+            "unlocked": "解放済み",
+            "varies": "さまざま",
+            "output": "x{count}"
+        }
+    },
+    "wardrobe": {
+        "title": "衣装と家",
+        "subline": "{total}個中{count}個収集 · {percent}% · {name}",
+        "tabsLabel": "衣装と家のセクション",
+        "tabs": {
+            "clothing": "衣類",
+            "furniture": "家具",
+            "decorations": "装飾品"
+        },
+        "things": {
+            "clothing": "衣類",
+            "furniture": "家具",
+            "decorations": "装飾品"
+        },
+        "progress": {
+            "clothing": "部位ごとの進行状況 · タイルを選ぶと絞り込めます",
+            "furniture": "セットごとの進行状況 · タイルを選ぶと絞り込めます",
+            "decorations": "カテゴリーごとの進行状況 · タイルを選ぶと絞り込めます"
+        },
+        "filters": {
+            "slot": "部位",
+            "type": "種類",
+            "set": "セット",
+            "allSets": "すべてのセット",
+            "catalogue": "カタログ",
+            "melvins": "Melvinのカタログ",
+            "notMelvins": "カタログにない",
+            "category": "カテゴリー",
+            "allCategories": "すべてのカテゴリー",
+            "source": "入手元",
+            "allSources": "すべての入手元",
+            "all": "すべて"
+        },
+        "list": {
+            "type": "種類",
+            "slot": "部位",
+            "set": "セット",
+            "price": "価格",
+            "sell": "売値",
+            "availableAt": "販売場所",
+            "catalogue": "カタログ",
+            "category": "カテゴリー",
+            "source": "入手元",
+            "buy": "買値"
+        },
+        "card": {
+            "slot": "部位",
+            "set": "セット",
+            "price": "価格",
+            "sellPrice": "売値",
+            "availableAt": "販売場所",
+            "cataloguePrice": "カタログ価格",
+            "source": "入手元",
+            "buyPrice": "買値",
+            "category": "カテゴリー"
+        },
+        "shop": "Cloverの店",
+        "hints": {
+            "slots": "{count, plural, other {すべてに加えて{amount}部位}}",
+            "typesForSlot": "{count, plural, other {{slot}の種類は{amount}件。部位を変えると「すべて」に戻ります。}}",
+            "typeNeedsSlot": "部位がすべての場合、種類にはすべてだけが表示されます。先に部位を選ぶと、その種類が表示されます。",
+            "sets": "{count, plural, other {すべてに加えて{amount}セット}}",
+            "sources": "すべてに加えて全入手元",
+            "categories": "{count, plural, other {カテゴリーは{amount}件。上のタイルで設定します。}}"
+        }
+    }
+}

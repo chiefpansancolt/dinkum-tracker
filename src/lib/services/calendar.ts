@@ -5,10 +5,7 @@ import {
   type CalendarEvent,
   type Season,
 } from "dinkum-data";
-import { create } from "zustand";
-import { CalendarState } from "@/types/ui/calendar";
 
-/** The in-game season cycle order, derived from the calendar's own day sequence. */
 export const SEASON_ORDER: Season[] = [
   ...new Set(
     calendar()
@@ -17,149 +14,67 @@ export const SEASON_ORDER: Season[] = [
   ),
 ];
 
-/**
- * Tracks the current in-playthrough day against the static Dinkum calendar
- * shipped by dinkum-data. dinkum-data's calendar() is read-only; this class
- * layers mutable "what day is it" state on top of it.
- */
-export class GameCalendar {
-  private currentDay = 1;
-  private currentSeason: Season = "Summer";
-  private readonly days: CalendarDay[];
+const DAYS_IN_SEASON = 28;
 
-  constructor() {
-    this.days = calendar().get();
-  }
+export type DayRef = { day: number; season: Season };
 
-  public getAllDays(): CalendarDay[] {
-    return this.days;
-  }
+export const sameDay = (a: DayRef, b: DayRef) =>
+  a.day === b.day && a.season === b.season;
 
-  public getCurrentDay(): CalendarDay {
-    const index =
-      this.getSeasonIndex(this.currentSeason) * 28 + (this.currentDay - 1);
-    return this.days[index];
-  }
+export const shiftSeason = (season: Season, step: 1 | -1): Season =>
+  SEASON_ORDER[
+    (SEASON_ORDER.indexOf(season) + step + SEASON_ORDER.length) %
+      SEASON_ORDER.length
+  ];
 
-  private getSeasonIndex(season: Season): number {
-    return SEASON_ORDER.indexOf(season);
-  }
+export const dayOf = ({ day, season }: DayRef): CalendarDay =>
+  calendar().get()[SEASON_ORDER.indexOf(season) * DAYS_IN_SEASON + (day - 1)];
 
-  public advanceDay(): CalendarDay {
-    this.currentDay++;
-
-    if (this.currentDay > 28) {
-      this.currentDay = 1;
-      const nextSeasonIndex = (this.getSeasonIndex(this.currentSeason) + 1) % 4;
-      this.currentSeason = SEASON_ORDER[nextSeasonIndex];
+export type DayEntry =
+  | {
+      kind: "event";
+      id: string;
+      name: string;
+      range?: { startDay: number; endDay: number; season: Season };
     }
+  | { kind: "birthday"; id: string; character: string; likes?: string };
 
-    return this.getCurrentDay();
-  }
+/** Events first, then birthdays, as the old grid listed them. */
+export const dayEntries = (day: CalendarDay): DayEntry[] => [
+  ...day.events.map((event) => ({
+    kind: "event" as const,
+    id: `event:${event.name}`,
+    name: event.name,
+    range:
+      event.startDay === event.endDay
+        ? undefined
+        : {
+            startDay: event.startDay,
+            endDay: event.endDay,
+            season: event.season,
+          },
+  })),
+  ...day.birthdays.map((birthday) => ({
+    kind: "birthday" as const,
+    id: `birthday:${birthday.character}`,
+    character: birthday.character,
+    likes: birthday.likes || undefined,
+  })),
+];
 
-  public getUpcomingBirthdays(daysAhead: number = 7): Birthday[] {
-    const currentDayIndex =
-      this.getSeasonIndex(this.currentSeason) * 28 + (this.currentDay - 1);
-    const upcomingBirthdays: Birthday[] = [];
-
-    for (let i = 1; i <= daysAhead; i++) {
-      const checkIndex = (currentDayIndex + i) % this.days.length;
-      const checkDay = this.days[checkIndex];
-
-      checkDay.birthdays.forEach((birthday) => {
-        upcomingBirthdays.push(birthday);
-      });
-    }
-
-    return upcomingBirthdays;
-  }
-
-  public getUpcomingEvents(daysAhead: number = 7): CalendarEvent[] {
-    const currentDayIndex =
-      this.getSeasonIndex(this.currentSeason) * 28 + (this.currentDay - 1);
-    const upcomingEvents: CalendarEvent[] = [];
-    const eventSet = new Set<string>();
-
-    for (let i = 1; i <= daysAhead; i++) {
-      const checkIndex = (currentDayIndex + i) % this.days.length;
-      const checkDay = this.days[checkIndex];
-
-      checkDay.events.forEach((event) => {
-        const eventKey = `${event.name}-${event.season}-${event.startDay}`;
-        if (!eventSet.has(eventKey)) {
-          upcomingEvents.push(event);
-          eventSet.add(eventKey);
-        }
-      });
-    }
-
-    return upcomingEvents;
-  }
-
-  public formatDate(day: CalendarDay): string {
-    return `${day.weekday}, ${day.day} ${day.season}`;
-  }
-
-  public getSeason(season: Season): CalendarDay[] {
-    return this.days.filter((day) => day.season === season);
-  }
-
-  public setDate(day: number, season: Season): void {
-    if (day < 1 || day > 28) {
-      throw new Error("Day must be between 1 and 28");
-    }
-
-    this.currentDay = day;
-    this.currentSeason = season;
-  }
-}
-
-export const useCalendarStore = create<CalendarState>((set, get) => {
-  const gameCalendar = new GameCalendar();
-  const currentDay = gameCalendar.getCurrentDay();
-
+export const seasonCounts = (season: Season) => {
+  const days = calendar()
+    .get()
+    .filter((day) => day.season === season);
   return {
-    calendar: gameCalendar,
-    currentDay,
-    selectedSeason: currentDay.season,
-
-    setSelectedSeason: (season: Season) => {
-      set({ selectedSeason: season });
-    },
-
-    advanceDay: () => {
-      const { calendar } = get();
-      const newDay = calendar.advanceDay();
-
-      set({
-        currentDay: newDay,
-        selectedSeason: newDay.season,
-      });
-    },
-
-    setDate: (day: number, season: Season) => {
-      const { calendar } = get();
-      calendar.setDate(day, season);
-
-      set({
-        currentDay: calendar.getCurrentDay(),
-        selectedSeason: season,
-      });
-    },
+    events: new Set(
+      days.flatMap((day) => day.events.map((event) => event.name)),
+    ).size,
+    birthdays: days.reduce((sum, day) => sum + day.birthdays.length, 0),
   };
-});
-
-export const getSeasonDays = (season: Season): CalendarDay[] => {
-  const { calendar } = useCalendarStore.getState();
-  return calendar.getSeason(season);
 };
 
-export const getUpcomingBirthdays = (days: number = 7) => {
-  const { calendar } = useCalendarStore.getState();
-  return calendar.getUpcomingBirthdays(days);
-};
-
-export const getUpcomingEvents = (days: number = 7) => {
-  const { calendar } = useCalendarStore.getState();
-  return calendar.getUpcomingEvents(days);
-};
+export const seasonDays = (season: Season): CalendarDay[] =>
+  calendar()
+    .get()
+    .filter((day) => day.season === season);

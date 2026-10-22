@@ -1,0 +1,234 @@
+{
+    "toast": {
+        "marked": "{name} 已标记为{state}",
+        "collected": "已收集",
+        "notCollected": "未收集",
+        "unlocked": "已解锁",
+        "locked": "未解锁"
+    },
+    "filters": {
+        "search": "按名称搜索{things}...",
+        "sheetTitle": "筛选{things}",
+        "showingCollected": "显示 {shown} / {total} 项{things} · 已收集 {count}",
+        "showingUnlocked": "显示 {shown} / {total} 项{things} · 已解锁 {count}",
+        "apply": "显示 {count} 项{things}",
+        "all": "全部",
+        "collected": "已收集",
+        "notCollected": "未收集",
+        "unlocked": "已解锁",
+        "notUnlocked": "未解锁",
+        "source": "来源",
+        "allSources": "全部来源"
+    },
+    "empty": {
+        "title": "没有符合筛选条件的{things}",
+        "description": "换个名称试试，或清除筛选。",
+        "clear": "清除筛选"
+    },
+    "list": {
+        "got": "已有",
+        "name": "名称",
+        "caption": "已加载 {shown} / {total} 行。向下滚动可加载更多。",
+        "prices": "价格（Dinks）"
+    },
+    "card": {
+        "collected": "已收集",
+        "markCollected": "标记为已收集",
+        "unlocked": "已解锁",
+        "sellPrice": "售价",
+        "buyPrice": "买价",
+        "source": "来源",
+        "none": "–"
+    },
+    "gear": {
+        "title": "装备",
+        "subline": "已收集 {count} / {total} · {percent}% · {name}",
+        "tabsLabel": "装备分区",
+        "tabs": {
+            "books": "书籍",
+            "cassettes": "磁带",
+            "tools": "工具",
+            "weapons": "武器",
+            "equipment": "配备",
+            "vehicles": "载具"
+        },
+        "things": {
+            "books": "书籍",
+            "cassettes": "磁带",
+            "tools": "工具",
+            "weapons": "武器",
+            "equipment": "配备",
+            "vehicles": "载具"
+        },
+        "tiles": {
+            "collected": "已收集",
+            "of": "共 {total}",
+            "franklyn": "Franklyn 解锁",
+            "craftable": "可制作",
+            "highDamage": "高伤害（20 以上）"
+        },
+        "filters": {
+            "license": "执照",
+            "allLicenses": "全部执照",
+            "purchaseType": "购买方式",
+            "purchasable": "可购买",
+            "dinks": "Dinks",
+            "permitPoints": "许可点数",
+            "damage": "伤害",
+            "high": "高（20 以上）",
+            "medium": "中（10 至 19）",
+            "low": "低（10 以下）",
+            "allDamage": "全部伤害",
+            "requirement": "要求类型",
+            "allRequirements": "全部要求类型",
+            "allPurchaseTypes": "全部"
+        },
+        "card": {
+            "craftingRecipe": "制作配方",
+            "license": "执照",
+            "licenseLevel": "狩猎执照等级",
+            "source": "来源",
+            "damage": "伤害",
+            "unlocksAfter": "解锁条件",
+            "shinyDiscs": "{count} Shiny Discs",
+            "berkonium": "{count} Berkonium Ore",
+            "ingredients": "材料",
+            "resources": "资源",
+            "requirement": "要求等级",
+            "compatibleWith": "兼容",
+            "windmill": "风车",
+            "solarPanel": "太阳能板",
+            "acquiredFrom": "获得途径",
+            "requirements": "要求",
+            "buyPrice": "买价",
+            "sellPrice": "售价",
+            "dinks": "{amount} Dinks",
+            "permitPoints": "{count, plural, other {{amount} 点许可点数}}",
+            "ingredient": "{count}x {name}",
+            "none": "无",
+            "requirementLevel": "{type}等级"
+        }
+    },
+    "recipes": {
+        "title": "配方",
+        "subline": "已解锁 {count} / {total} · {percent}% · {name}",
+        "tabsLabel": "配方分区",
+        "tabs": {
+            "cooking": "烹饪",
+            "crafting": "制作",
+            "signWriting": "招牌书写"
+        },
+        "things": {
+            "cooking": "烹饪配方",
+            "crafting": "制作配方",
+            "signWriting": "招牌书写配方"
+        },
+        "tiles": {
+            "unlocked": "已解锁",
+            "of": "共 {total}",
+            "withBuffs": "带增益",
+            "vendors": "由 Sheila、Ted 或 Jimmy 出售",
+            "recipes": "配方"
+        },
+        "filters": {
+            "location": "烹饪地点",
+            "allLocations": "全部地点",
+            "unlocked": "已解锁",
+            "sources": "来源",
+            "allSources": "全部来源",
+            "buffs": "增益",
+            "buffsWithCount": "增益（{count}）"
+        },
+        "buffs": {
+            "title": "按增益筛选",
+            "match": "匹配",
+            "any": "任一",
+            "all": "全部",
+            "clear": "清除选择",
+            "selected": "已选 {count} 项",
+            "done": "完成"
+        },
+        "card": {
+            "cookingLocation": "烹饪地点",
+            "buffs": "增益",
+            "duration": "{minutes, plural, other {{amount} 分钟}}",
+            "sellPrice": "售价",
+            "sheilas": "Sheila 处",
+            "teds": "Ted 处",
+            "jimmys": "Jimmy 处",
+            "resources": "资源",
+            "option": "方案 {n}",
+            "ingredient": "{count}x {name}",
+            "source": "来源",
+            "unlocked": "已解锁",
+            "varies": "不定",
+            "output": "x{count}"
+        }
+    },
+    "wardrobe": {
+        "title": "衣橱与家居",
+        "subline": "已收集 {count} / {total} · {percent}% · {name}",
+        "tabsLabel": "衣橱分区",
+        "tabs": {
+            "clothing": "服装",
+            "furniture": "家具",
+            "decorations": "装饰"
+        },
+        "things": {
+            "clothing": "服装",
+            "furniture": "家具",
+            "decorations": "装饰"
+        },
+        "progress": {
+            "clothing": "按部位查看进度 · 选择方块可筛选",
+            "furniture": "按套装查看进度 · 选择方块可筛选",
+            "decorations": "按类别查看进度 · 选择方块可筛选"
+        },
+        "filters": {
+            "slot": "部位",
+            "type": "类型",
+            "set": "套装",
+            "allSets": "全部套装",
+            "catalogue": "图册",
+            "melvins": "Melvin 的图册",
+            "notMelvins": "不在图册中",
+            "category": "类别",
+            "allCategories": "全部类别",
+            "source": "来源",
+            "allSources": "全部来源",
+            "all": "全部"
+        },
+        "list": {
+            "type": "类型",
+            "slot": "部位",
+            "set": "套装",
+            "price": "价格",
+            "sell": "售价",
+            "availableAt": "销售地点",
+            "catalogue": "图册",
+            "category": "类别",
+            "source": "来源",
+            "buy": "买价"
+        },
+        "card": {
+            "slot": "部位",
+            "set": "套装",
+            "price": "价格",
+            "sellPrice": "售价",
+            "availableAt": "销售地点",
+            "cataloguePrice": "图册价格",
+            "source": "来源",
+            "buyPrice": "买价",
+            "category": "类别"
+        },
+        "shop": "Clover 的商店",
+        "hints": {
+            "slots": "{count, plural, other {全部，另加 {amount} 个部位}}",
+            "typesForSlot": "{count, plural, other {{slot} 有 {amount} 个类型。更改部位时重置为全部。}}",
+            "typeNeedsSlot": "部位为全部时，类型只有全部。请先选择部位，再查看其类型。",
+            "sets": "{count, plural, other {全部，另加 {amount} 个套装}}",
+            "sources": "全部加上所有来源",
+            "categories": "{count, plural, other {共 {amount} 个类别。由上方的卡片设置。}}"
+        }
+    }
+}

@@ -1,0 +1,116 @@
+{
+    "title": "Aperçu",
+    "subline": "{done} sur {total} objets · {percent} % · {name}",
+    "view": "Voir",
+    "headline": {
+        "label": "Progression globale",
+        "ofItems": "{done} sur {total} objets",
+        "groups": {
+            "track": "Suivre",
+            "progress": "Progression",
+            "collect": "Collecter"
+        },
+        "groupOf": "{done} sur {total}",
+        "note": "Dénominateur fixe de {total} objets : Pedia {pedia}, PNJ {npcs}, jalons {milestones}, licences {licenses}, compétences {skills}, bâtiments {buildings}, matériel {gear}, garde-robe et maison {wardrobe}, recettes {recipes}. Chaque catégorie compte dès le premier jour, donc le pourcentage ne saute pas quand vous ouvrez un nouvel onglet."
+    },
+    "skills": {
+        "title": "Compétences du personnage",
+        "level": "Niveau {level}",
+        "empty": "Aucune compétence enregistrée pour l’instant."
+    },
+    "licenses": {
+        "title": "Progression des licences",
+        "obtained": "Licences obtenues",
+        "complete": "{count}/{total} terminées",
+        "levels": "Niveaux de licence",
+        "levelsValue": "{count}/{total} · {percent} %",
+        "permit": "Points de permis dépensés",
+        "spent": "{percent} % dépensés"
+    },
+    "milestones": {
+        "title": "Progression des jalons",
+        "overall": "Progression globale",
+        "complete": "{count}/{total} terminés",
+        "levels": "Niveaux",
+        "levelsValue": "{count}/{total} · {percent} %",
+        "permit": "Points de permis gagnés",
+        "earned": "{percent} % gagnés"
+    },
+    "pedia": {
+        "title": "Progression de la Pedia",
+        "overall": "Progression globale ({count}/{total})",
+        "donations": "Dons au musée ({count}/{total})",
+        "fish": "Poissons ({count}/{total})",
+        "bugs": "Insectes ({count}/{total})",
+        "critters": "Bestioles ({count}/{total})",
+        "donated": "Donnés ({count}/{total})",
+        "permit": "Points de permis gagnés",
+        "earned": "{percent} % gagnés"
+    },
+    "gear": {
+        "title": "Matériel et équipement",
+        "overall": "Progression globale ({count}/{total})",
+        "books": "Livres ({count}/{total})",
+        "tools": "Outils ({count}/{total})",
+        "weapons": "Armes ({count}/{total})",
+        "equipment": "Équipement ({count}/{total})",
+        "vehicles": "Véhicules ({count}/{total})",
+        "cassettes": "Cassettes ({count}/{total})",
+        "names": {
+            "books": "Livres",
+            "tools": "Outils",
+            "weapons": "Armes",
+            "equipment": "Équipement",
+            "vehicles": "Véhicules",
+            "cassettes": "Cassettes"
+        },
+        "mostComplete": "Les plus complètes",
+        "leastComplete": "Les moins complètes"
+    },
+    "buildings": {
+        "title": "Progression des bâtiments",
+        "overall": "Progression globale",
+        "complete": "{count}/{total} terminés",
+        "houseUpgrades": "Améliorations de la maison",
+        "shops": "Boutiques",
+        "town": "Bâtiments de la ville",
+        "utility": "Bâtiments utilitaires",
+        "mostExpensive": "Bâtiments les plus chers",
+        "price": "{amount} Dinks"
+    },
+    "recipes": {
+        "title": "Collection de recettes",
+        "overall": "Progression globale ({count}/{total})",
+        "cooking": "Cuisine ({count}/{total})",
+        "crafting": "Fabrication ({count}/{total})",
+        "signWriting": "Écriture de panneaux ({count}/{total})",
+        "names": {
+            "cooking": "Cuisine",
+            "crafting": "Fabrication",
+            "signWriting": "Écriture de panneaux"
+        },
+        "mostComplete": "Les plus complètes",
+        "leastComplete": "Les moins complètes"
+    },
+    "npcs": {
+        "title": "Relations avec les PNJ",
+        "total": "Total des PNJ",
+        "friends": "Amis",
+        "oneHeart": "1+ cœur",
+        "maxHearts": "Cœurs max",
+        "avgHearts": "Cœurs moy.",
+        "top": "Meilleures relations",
+        "hearts": "{hearts, plural, one {{amount} cœur} other {{amount} cœurs}}",
+        "empty": "Aucun PNJ collecté pour l’instant."
+    },
+    "game": {
+        "title": "Infos du jeu",
+        "calendar": "Calendrier du jeu",
+        "date": "Jour {day}, {season}",
+        "tracking": "Suivi en temps réel",
+        "daysSince": "Jours depuis la création : {days}",
+        "lastUpdated": "Dernière mise à jour : {date}",
+        "milestones": "Jalons",
+        "completed": "{count} terminés"
+    }
+}

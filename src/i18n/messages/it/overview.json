@@ -1,0 +1,116 @@
+{
+    "title": "Panoramica",
+    "subline": "{done} di {total} oggetti · {percent}% · {name}",
+    "view": "Vedi",
+    "headline": {
+        "label": "Completamento totale",
+        "ofItems": "{done} di {total} oggetti",
+        "groups": {
+            "track": "Tieni traccia",
+            "progress": "Progressi",
+            "collect": "Collezione"
+        },
+        "groupOf": "{done} di {total}",
+        "note": "Denominatore fisso di {total} oggetti: Pedia {pedia}, NPC {npcs}, Traguardi {milestones}, Licenze {licenses}, Abilità {skills}, Edifici {buildings}, Attrezzatura {gear}, Guardaroba e casa {wardrobe}, Ricette {recipes}. Ogni categoria conta dal primo giorno, quindi la percentuale non salta quando apri una nuova scheda."
+    },
+    "skills": {
+        "title": "Abilità del personaggio",
+        "level": "Livello {level}",
+        "empty": "Nessuna abilità registrata."
+    },
+    "licenses": {
+        "title": "Progressi delle licenze",
+        "obtained": "Licenze ottenute",
+        "complete": "{count}/{total} completate",
+        "levels": "Livelli delle licenze",
+        "levelsValue": "{count}/{total} · {percent}%",
+        "permit": "Punti permesso spesi",
+        "spent": "{percent}% spesi"
+    },
+    "milestones": {
+        "title": "Progressi dei traguardi",
+        "overall": "Progresso totale",
+        "complete": "{count}/{total} completati",
+        "levels": "Livelli",
+        "levelsValue": "{count}/{total} · {percent}%",
+        "permit": "Punti permesso guadagnati",
+        "earned": "{percent}% guadagnati"
+    },
+    "pedia": {
+        "title": "Progressi della Pedia",
+        "overall": "Progresso totale ({count}/{total})",
+        "donations": "Donazioni al museo ({count}/{total})",
+        "fish": "Pesci ({count}/{total})",
+        "bugs": "Insetti ({count}/{total})",
+        "critters": "Animaletti ({count}/{total})",
+        "donated": "Donati ({count}/{total})",
+        "permit": "Punti permesso guadagnati",
+        "earned": "{percent}% guadagnati"
+    },
+    "gear": {
+        "title": "Attrezzatura ed equipaggiamento",
+        "overall": "Progresso totale ({count}/{total})",
+        "books": "Libri ({count}/{total})",
+        "tools": "Strumenti ({count}/{total})",
+        "weapons": "Armi ({count}/{total})",
+        "equipment": "Equipaggiamento ({count}/{total})",
+        "vehicles": "Veicoli ({count}/{total})",
+        "cassettes": "Cassette ({count}/{total})",
+        "names": {
+            "books": "Libri",
+            "tools": "Strumenti",
+            "weapons": "Armi",
+            "equipment": "Equipaggiamento",
+            "vehicles": "Veicoli",
+            "cassettes": "Cassette"
+        },
+        "mostComplete": "Più completi",
+        "leastComplete": "Meno completi"
+    },
+    "buildings": {
+        "title": "Progressi degli edifici",
+        "overall": "Progresso totale",
+        "complete": "{count}/{total} completati",
+        "houseUpgrades": "Potenziamenti della casa",
+        "shops": "Negozi",
+        "town": "Edifici della città",
+        "utility": "Edifici di servizio",
+        "mostExpensive": "Edifici più costosi",
+        "price": "{amount} Dinks"
+    },
+    "recipes": {
+        "title": "Collezione di ricette",
+        "overall": "Progresso totale ({count}/{total})",
+        "cooking": "Cucina ({count}/{total})",
+        "crafting": "Creazione ({count}/{total})",
+        "signWriting": "Insegne ({count}/{total})",
+        "names": {
+            "cooking": "Cucina",
+            "crafting": "Creazione",
+            "signWriting": "Insegne"
+        },
+        "mostComplete": "Più complete",
+        "leastComplete": "Meno complete"
+    },
+    "npcs": {
+        "title": "Relazioni con gli NPC",
+        "total": "NPC totali",
+        "friends": "Amici",
+        "oneHeart": "1+ cuori",
+        "maxHearts": "Cuori al massimo",
+        "avgHearts": "Cuori medi",
+        "top": "Relazioni migliori",
+        "hearts": "{hearts, plural, one {{amount} cuore} other {{amount} cuori}}",
+        "empty": "Nessun NPC registrato."
+    },
+    "game": {
+        "title": "Info sul gioco",
+        "calendar": "Calendario del gioco",
+        "date": "Giorno {day}, {season}",
+        "tracking": "Tracciamento in tempo reale",
+        "daysSince": "Giorni dalla creazione: {days}",
+        "lastUpdated": "Ultimo aggiornamento: {date}",
+        "milestones": "Traguardi",
+        "completed": "{count} completati"
+    }
+}

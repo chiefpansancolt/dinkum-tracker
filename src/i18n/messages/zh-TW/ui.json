@@ -1,0 +1,51 @@
+{
+    "close": "關閉",
+    "field": {
+        "optional": "選填"
+    },
+    "stepper": {
+        "lower": "降低{label}",
+        "raise": "提高{label}",
+        "labelPrefix": "{label}，"
+    },
+    "switch": {
+        "on": "開",
+        "off": "關"
+    },
+    "tabs": {
+        "locked": "（已鎖定）"
+    },
+    "toast": {
+        "dismiss": "關閉通知",
+        "variants": {
+            "success": "成功",
+            "info": "資訊",
+            "warning": "警告",
+            "error": "錯誤"
+        },
+        "missingProvider": "useToast must be used within a ToastProvider"
+    },
+    "savedChip": {
+        "automatic": "自動儲存",
+        "justNow": "剛剛儲存",
+        "minutesAgo": "{count} 分鐘前儲存",
+        "at": "{time} 儲存",
+        "failed": "未儲存，儲存空間已滿"
+    },
+    "filters": {
+        "filters": "篩選",
+        "filtersWithCount": "篩選（{count}）",
+        "clearFilters": "清除篩選",
+        "clearAll": "全部清除",
+        "cancel": "取消",
+        "showResults": "顯示結果",
+        "search": "搜尋"
+    },
+    "commerce": {
+        "label": "販售商業等級",
+        "base": "基本",
+        "plus5": "+5%",
+        "plus10": "+10%",
+        "plus15": "+15%"
+    }
+}

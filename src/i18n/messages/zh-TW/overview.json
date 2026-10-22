@@ -1,0 +1,116 @@
+{
+    "title": "總覽",
+    "subline": "{done} / {total} 項 · {percent}% · {name}",
+    "view": "檢視",
+    "headline": {
+        "label": "整體完成度",
+        "ofItems": "{done} / {total} 項",
+        "groups": {
+            "track": "追蹤",
+            "progress": "進度",
+            "collect": "收集"
+        },
+        "groupOf": "{done} / {total}",
+        "note": "分母固定為 {total} 項：圖鑑 {pedia}、NPC {npcs}、里程碑 {milestones}、執照 {licenses}、技能 {skills}、建築 {buildings}、裝備 {gear}、衣櫥與居家 {wardrobe}、配方 {recipes}。每個類別從第一天起就會計入，所以開啟新分頁時百分比不會跳動。"
+    },
+    "skills": {
+        "title": "角色技能",
+        "level": "等級 {level}",
+        "empty": "尚未記錄任何技能。"
+    },
+    "licenses": {
+        "title": "執照進度",
+        "obtained": "已取得執照",
+        "complete": "已完成 {count}/{total}",
+        "levels": "執照等級",
+        "levelsValue": "{count}/{total} · {percent}%",
+        "permit": "已花費許可點數",
+        "spent": "已花費 {percent}%"
+    },
+    "milestones": {
+        "title": "里程碑進度",
+        "overall": "整體進度",
+        "complete": "已完成 {count}/{total}",
+        "levels": "等級",
+        "levelsValue": "{count}/{total} · {percent}%",
+        "permit": "已獲得許可點數",
+        "earned": "已獲得 {percent}%"
+    },
+    "pedia": {
+        "title": "圖鑑進度",
+        "overall": "整體進度（{count}/{total}）",
+        "donations": "博物館捐贈（{count}/{total}）",
+        "fish": "魚類（{count}/{total}）",
+        "bugs": "昆蟲（{count}/{total}）",
+        "critters": "小動物（{count}/{total}）",
+        "donated": "已捐贈（{count}/{total}）",
+        "permit": "已獲得許可點數",
+        "earned": "已獲得 {percent}%"
+    },
+    "gear": {
+        "title": "裝備與配件",
+        "overall": "整體進度（{count}/{total}）",
+        "books": "書籍（{count}/{total}）",
+        "tools": "工具（{count}/{total}）",
+        "weapons": "武器（{count}/{total}）",
+        "equipment": "裝備（{count}/{total}）",
+        "vehicles": "載具（{count}/{total}）",
+        "cassettes": "卡帶（{count}/{total}）",
+        "names": {
+            "books": "書籍",
+            "tools": "工具",
+            "weapons": "武器",
+            "equipment": "裝備",
+            "vehicles": "載具",
+            "cassettes": "卡帶"
+        },
+        "mostComplete": "完成度最高",
+        "leastComplete": "完成度最低"
+    },
+    "buildings": {
+        "title": "建築進度",
+        "overall": "整體進度",
+        "complete": "已完成 {count}/{total}",
+        "houseUpgrades": "房屋升級",
+        "shops": "商店",
+        "town": "小鎮建築",
+        "utility": "設施建築",
+        "mostExpensive": "最昂貴的建築",
+        "price": "{amount} Dinks"
+    },
+    "recipes": {
+        "title": "配方收藏",
+        "overall": "整體進度（{count}/{total}）",
+        "cooking": "烹飪（{count}/{total}）",
+        "crafting": "製作（{count}/{total}）",
+        "signWriting": "招牌書寫（{count}/{total}）",
+        "names": {
+            "cooking": "烹飪",
+            "crafting": "製作",
+            "signWriting": "招牌書寫"
+        },
+        "mostComplete": "完成度最高",
+        "leastComplete": "完成度最低"
+    },
+    "npcs": {
+        "title": "NPC 關係",
+        "total": "NPC 總數",
+        "friends": "朋友",
+        "oneHeart": "1 顆以上愛心",
+        "maxHearts": "最高愛心",
+        "avgHearts": "平均愛心",
+        "top": "關係最好",
+        "hearts": "{hearts, plural, other {{amount} 顆愛心}}",
+        "empty": "尚未記錄任何 NPC。"
+    },
+    "game": {
+        "title": "遊戲資訊",
+        "calendar": "遊戲日曆",
+        "date": "{season}第 {day} 天",
+        "tracking": "現實時間記錄",
+        "daysSince": "建立至今：{days} 天",
+        "lastUpdated": "最後更新：{date}",
+        "milestones": "里程碑",
+        "completed": "已完成 {count}"
+    }
+}

@@ -1,0 +1,124 @@
+{
+    "title": "Permainan",
+    "subline": "Kelola petualangan Dinkum-mu. {count, plural, other {{amount} permainan}}, {name} aktif.",
+    "sublineNoneActive": "Kelola petualangan Dinkum-mu. {count, plural, other {{amount} permainan}}.",
+    "sublineEmpty": "Belum ada permainan.",
+    "loading": "Memuat permainan...",
+    "stats": {
+        "playthroughs": "Permainan",
+        "playthroughsCaption": "di browser ini",
+        "active": "Aktif",
+        "noneActive": "Tidak ada",
+        "furthest": "Paling maju",
+        "average": "Rata-rata penyelesaian",
+        "averageCaption": "dari semua"
+    },
+    "filters": {
+        "sortBy": "Urutkan menurut",
+        "sort": {
+            "lastUpdated": "Terakhir diperbarui",
+            "name": "Nama",
+            "createdAt": "Tanggal dibuat",
+            "completion": "Persentase penyelesaian"
+        },
+        "search": "Cari permainan menurut nama",
+        "showing": "Menampilkan {shown} dari {total} {total, plural, other {permainan}}",
+        "defaultSortFrom": "Urutan bawaan berasal dari <link>Pengaturan</link>"
+    },
+    "noMatch": {
+        "title": "Tidak ada permainan yang cocok dengan \"{query}\"",
+        "description": "Coba nama lain.",
+        "clear": "Hapus pencarian"
+    },
+    "empty": {
+        "title": "Permainan Tidak Ditemukan",
+        "description": "Kamu belum membuat permainan. Mulai lacak petualangan Dinkum-mu dengan membuat permainan pertama. Setiap permainan tersimpan di browser ini.",
+        "create": "Buat Permainan Pertamamu",
+        "importBackup": "Impor cadangan saja"
+    },
+    "card": {
+        "created": "Dibuat: {date}",
+        "updated": "Diperbarui: {when}",
+        "complete": "{percent}% Selesai",
+        "overall": "Progres keseluruhan",
+        "pedia": "Pedia",
+        "licenses": "Lisensi",
+        "milestones": "Pencapaian",
+        "buildings": "Bangunan",
+        "pediaDetail": "Ikan {fish} · Serangga {bugs} · Satwa kecil {critters}",
+        "count": "{count}/{total}",
+        "gameDate": "Hari {day}, {season}",
+        "currentGameDate": "Tanggal game saat ini",
+        "setActive": "Jadikan Aktif",
+        "active": "Aktif",
+        "openOverview": "Buka ikhtisar",
+        "edit": "Ubah",
+        "delete": "Hapus",
+        "activePlaythrough": "Permainan aktif"
+    },
+    "seasons": {
+        "Spring": "Musim Semi",
+        "Summer": "Musim Panas",
+        "Autumn": "Musim Gugur",
+        "Winter": "Musim Dingin"
+    },
+    "relative": {
+        "today": "Hari ini",
+        "yesterday": "Kemarin",
+        "daysAgo": "{count, plural, other {{amount} hari lalu}}",
+        "weeksAgo": "{count, plural, other {{amount} minggu lalu}}",
+        "monthsAgo": "{count, plural, other {{amount} bulan lalu}}",
+        "unknown": "T/A"
+    },
+    "new": {
+        "action": "Permainan baru",
+        "actionShort": "Baru",
+        "pageTitle": "Permainan baru",
+        "pageSubline": "Beri nama dan mulai melacak. Semua tersimpan di browser ini.",
+        "back": "Kembali ke semua permainan",
+        "next": {
+            "title": "Yang terjadi berikutnya",
+            "one": "Permainan kosong langsung disimpan di browser ini.",
+            "two": "Permainan itu menjadi permainan aktif jika kotaknya dicentang. Pengalih di bilah samping menampilkannya.",
+            "three": "Kamu masuk ke daftar Permainan dengan kartu baru di paling atas dan toast Urungkan."
+        },
+        "createdToast": "{name} dibuat"
+    },
+    "form": {
+        "title": "Buat Permainan Baru",
+        "nameLabel": "Nama Permainan",
+        "required": "Wajib",
+        "placeholder": "Petualangan Dinkum-ku",
+        "help": "Beri permainanmu nama yang mudah diingat agar gampang dikenali nanti.",
+        "counter": "{count} / {max}",
+        "errorEmpty": "Masukkan nama untuk permainanmu",
+        "makeActive": "Jadikan permainan ini yang aktif",
+        "create": "Buat permainan",
+        "creating": "Membuat...",
+        "cancel": "Batal",
+        "failed": "Gagal membuat permainan. Coba lagi.",
+        "tryAgain": "Coba lagi"
+    },
+    "edit": {
+        "title": "Ubah permainan",
+        "save": "Simpan",
+        "saving": "Menyimpan...",
+        "savedToast": "Tersimpan",
+        "renamed": "Nama diubah menjadi {name}",
+        "description": "{name} · dibuat {date}",
+        "nameLabel": "Nama permainan",
+        "help": "Tekan Enter untuk menyimpan. Tombol Simpan nonaktif selama nama kosong."
+    },
+    "delete": {
+        "title": "Hapus {name}?",
+        "description": "Ini menghapus semua progres tersimpannya di perangkat ini.",
+        "activeNext": "Ini permainan aktifmu. {next} paling baru diperbarui, jadi menjadi aktif setelah penghapusan.",
+        "activeLast": "Ini permainan aktifmu dan satu-satunya. Tidak ada permainan aktif setelah penghapusan.",
+        "exportFirst": "Ekspor cadangan dulu",
+        "confirm": "Hapus",
+        "cancel": "Batal",
+        "toast": "{name} dihapus",
+        "toastMessage": "Urungkan tersedia selama 10 detik",
+        "updated": "Diperbarui {when} · {date}"
+    }
+}

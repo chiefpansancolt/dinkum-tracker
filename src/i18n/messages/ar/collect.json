@@ -1,0 +1,234 @@
+{
+    "toast": {
+        "marked": "{name}: {state}",
+        "collected": "تم الجمع",
+        "notCollected": "لم يُجمع",
+        "unlocked": "مفتوح",
+        "locked": "مقفل"
+    },
+    "filters": {
+        "search": "البحث في {things} بالاسم...",
+        "sheetTitle": "تصفية {things}",
+        "showingCollected": "عرض {shown} من {total} في {things} · تم جمع {count}",
+        "showingUnlocked": "عرض {shown} من {total} في {things} · تم فتح {count}",
+        "apply": "عرض {count} في {things}",
+        "all": "الكل",
+        "collected": "تم الجمع",
+        "notCollected": "لم يُجمع بعد",
+        "unlocked": "مفتوح",
+        "notUnlocked": "لم يُفتح بعد",
+        "source": "المصدر",
+        "allSources": "كل المصادر"
+    },
+    "empty": {
+        "title": "لا توجد نتائج في {things} تطابق عوامل التصفية هذه",
+        "description": "يمكن تجربة اسم آخر أو مسح عوامل التصفية.",
+        "clear": "مسح عوامل التصفية"
+    },
+    "list": {
+        "got": "تم",
+        "name": "الاسم",
+        "caption": "تم تحميل {shown} من {total} صفًا. تُحمَّل صفوف أخرى عند التمرير.",
+        "prices": "الأسعار بوحدة Dinks"
+    },
+    "card": {
+        "collected": "تم الجمع",
+        "markCollected": "تحديد كمجموع",
+        "unlocked": "مفتوح",
+        "sellPrice": "سعر البيع",
+        "buyPrice": "سعر الشراء",
+        "source": "المصدر",
+        "none": "–"
+    },
+    "gear": {
+        "title": "العتاد",
+        "subline": "تم جمع {count} من {total} · {percent}% · {name}",
+        "tabsLabel": "أقسام العتاد",
+        "tabs": {
+            "books": "الكتب",
+            "cassettes": "الكاسيتات",
+            "tools": "الأدوات",
+            "weapons": "الأسلحة",
+            "equipment": "المعدات",
+            "vehicles": "المركبات"
+        },
+        "things": {
+            "books": "الكتب",
+            "cassettes": "الكاسيتات",
+            "tools": "الأدوات",
+            "weapons": "الأسلحة",
+            "equipment": "المعدات",
+            "vehicles": "المركبات"
+        },
+        "tiles": {
+            "collected": "تم الجمع",
+            "of": "من {total}",
+            "franklyn": "ما يفتحه Franklyn",
+            "craftable": "قابل للصناعة",
+            "highDamage": "ضرر عالٍ (20+)"
+        },
+        "filters": {
+            "license": "الترخيص",
+            "allLicenses": "كل التراخيص",
+            "purchaseType": "نوع الشراء",
+            "purchasable": "قابل للشراء",
+            "dinks": "Dinks",
+            "permitPoints": "نقاط التصريح",
+            "damage": "الضرر",
+            "high": "عالٍ (20+)",
+            "medium": "متوسط (من 10 إلى 19)",
+            "low": "منخفض (أقل من 10)",
+            "allDamage": "كل مستويات الضرر",
+            "requirement": "نوع المتطلب",
+            "allRequirements": "كل أنواع المتطلبات",
+            "allPurchaseTypes": "الكل"
+        },
+        "card": {
+            "craftingRecipe": "وصفة الصناعة",
+            "license": "الترخيص",
+            "licenseLevel": "مستوى ترخيص الصيد",
+            "source": "المصدر",
+            "damage": "الضرر",
+            "unlocksAfter": "يُفتح بعد",
+            "shinyDiscs": "{count} Shiny Discs",
+            "berkonium": "{count} Berkonium Ore",
+            "ingredients": "المكونات",
+            "resources": "الموارد",
+            "requirement": "مستوى المتطلب",
+            "compatibleWith": "متوافق مع",
+            "windmill": "طاحونة الهواء",
+            "solarPanel": "لوح شمسي",
+            "acquiredFrom": "يُحصل عليه من",
+            "requirements": "المتطلبات",
+            "buyPrice": "سعر الشراء",
+            "sellPrice": "سعر البيع",
+            "dinks": "{amount} Dinks",
+            "permitPoints": "{count, plural, zero {{amount} نقاط تصريح} one {{amount} نقطة تصريح} two {نقطتا تصريح} few {{amount} نقاط تصريح} many {{amount} نقطة تصريح} other {{amount} نقطة تصريح}}",
+            "ingredient": "{count}x {name}",
+            "none": "لا شيء",
+            "requirementLevel": "مستوى {type}"
+        }
+    },
+    "recipes": {
+        "title": "الوصفات",
+        "subline": "تم فتح {count} من {total} · {percent}% · {name}",
+        "tabsLabel": "أقسام الوصفات",
+        "tabs": {
+            "cooking": "الطبخ",
+            "crafting": "الصناعة",
+            "signWriting": "كتابة اللافتات"
+        },
+        "things": {
+            "cooking": "وصفات الطبخ",
+            "crafting": "وصفات الصناعة",
+            "signWriting": "وصفات كتابة اللافتات"
+        },
+        "tiles": {
+            "unlocked": "مفتوح",
+            "of": "من {total}",
+            "withBuffs": "مع تعزيزات",
+            "vendors": "تبيعها Sheila أو Ted أو Jimmy",
+            "recipes": "الوصفات"
+        },
+        "filters": {
+            "location": "أماكن الطبخ",
+            "allLocations": "كل الأماكن",
+            "unlocked": "مفتوح",
+            "sources": "المصادر",
+            "allSources": "كل المصادر",
+            "buffs": "التعزيزات",
+            "buffsWithCount": "التعزيزات ({count})"
+        },
+        "buffs": {
+            "title": "التصفية حسب التعزيزات",
+            "match": "المطابقة",
+            "any": "أي",
+            "all": "كل",
+            "clear": "مسح التحديدات",
+            "selected": "تم تحديد {count}",
+            "done": "تم"
+        },
+        "card": {
+            "cookingLocation": "مكان الطبخ",
+            "buffs": "التعزيزات",
+            "duration": "{minutes, plural, zero {{amount} دقائق} one {{amount} دقيقة} two {دقيقتان} few {{amount} دقائق} many {{amount} دقيقة} other {{amount} دقيقة}}",
+            "sellPrice": "سعر البيع",
+            "sheilas": "Sheila",
+            "teds": "Ted",
+            "jimmys": "Jimmy",
+            "resources": "الموارد",
+            "option": "الخيار {n}",
+            "ingredient": "{count}x {name}",
+            "source": "المصدر",
+            "unlocked": "مفتوح",
+            "varies": "متغير",
+            "output": "x{count}"
+        }
+    },
+    "wardrobe": {
+        "title": "الملابس والمنزل",
+        "subline": "تم جمع {count} من {total} · {percent}% · {name}",
+        "tabsLabel": "أقسام الملابس والمنزل",
+        "tabs": {
+            "clothing": "الملابس",
+            "furniture": "الأثاث",
+            "decorations": "الزينة"
+        },
+        "things": {
+            "clothing": "قطع الملابس",
+            "furniture": "الأثاث",
+            "decorations": "الزينة"
+        },
+        "progress": {
+            "clothing": "التقدم حسب الخانة · اختيار بلاطة للتصفية",
+            "furniture": "التقدم حسب المجموعة · اختيار بلاطة للتصفية",
+            "decorations": "التقدم حسب الفئة · اختيار بلاطة للتصفية"
+        },
+        "filters": {
+            "slot": "الخانة",
+            "type": "النوع",
+            "set": "المجموعة",
+            "allSets": "كل المجموعات",
+            "catalogue": "الكتالوج",
+            "melvins": "كتالوج Melvin",
+            "notMelvins": "ليس في الكتالوج",
+            "category": "الفئة",
+            "allCategories": "كل الفئات",
+            "source": "المصدر",
+            "allSources": "كل المصادر",
+            "all": "الكل"
+        },
+        "list": {
+            "type": "النوع",
+            "slot": "الخانة",
+            "set": "المجموعة",
+            "price": "السعر",
+            "sell": "البيع",
+            "availableAt": "متوفر في",
+            "catalogue": "الكتالوج",
+            "category": "الفئة",
+            "source": "المصدر",
+            "buy": "الشراء"
+        },
+        "card": {
+            "slot": "الخانة",
+            "set": "المجموعة",
+            "price": "السعر",
+            "sellPrice": "سعر البيع",
+            "availableAt": "متوفر في",
+            "cataloguePrice": "سعر الكتالوج",
+            "source": "المصدر",
+            "buyPrice": "سعر الشراء",
+            "category": "الفئة"
+        },
+        "shop": "متجر Clover",
+        "hints": {
+            "slots": "{count, plural, zero {الكل فقط} one {الكل وخانة واحدة} two {الكل وخانتان} few {الكل و{amount} خانات} many {الكل و{amount} خانة} other {الكل و{amount} خانة}}",
+            "typesForSlot": "{count, plural, zero {لا أنواع لـ{slot}. يعود إلى الكل عند تغيير الخانة.} one {نوع واحد لـ{slot}. يعود إلى الكل عند تغيير الخانة.} two {نوعان لـ{slot}. يعود إلى الكل عند تغيير الخانة.} few {{amount} أنواع لـ{slot}. يعود إلى الكل عند تغيير الخانة.} many {{amount} نوعًا لـ{slot}. يعود إلى الكل عند تغيير الخانة.} other {{amount} نوع لـ{slot}. يعود إلى الكل عند تغيير الخانة.}}",
+            "typeNeedsSlot": "عندما تكون الخانة «الكل»، لا يعرض النوع إلا «الكل». اختر خانة أولًا لعرض أنواعها.",
+            "sets": "{count, plural, zero {الكل فقط} one {الكل ومجموعة واحدة} two {الكل ومجموعتان} few {الكل و{amount} مجموعات} many {الكل و{amount} مجموعة} other {الكل و{amount} مجموعة}}",
+            "sources": "الكل مع جميع المصادر",
+            "categories": "{count, plural, zero {لا فئات. تحددها البطاقات أعلاه.} one {فئة واحدة. تحددها البطاقات أعلاه.} two {فئتان. تحددهما البطاقات أعلاه.} few {{amount} فئات. تحددها البطاقات أعلاه.} many {{amount} فئة. تحددها البطاقات أعلاه.} other {{amount} فئة. تحددها البطاقات أعلاه.}}"
+        }
+    }
+}

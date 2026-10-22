@@ -1,0 +1,91 @@
+{
+    "buffs": {
+        "attackLevel": "الهجوم",
+        "charged": "مشحون",
+        "coolLevel": "البرودة",
+        "defenseLevel": "الدفاع",
+        "diligent": "مجتهد",
+        "experienceLevel": "الخبرة",
+        "fastHealthTickSpeedLevel": "سرعة نبض الصحة",
+        "fishLevel": "صيد السمك",
+        "foragingLevel": "جمع الموارد البرية",
+        "healthMax": "أقصى صحة",
+        "healthRegenRate": "تجدد الصحة",
+        "length": "المدة",
+        "miningLevel": "التعدين",
+        "sleepless": "بلا نوم",
+        "speedLevel": "السرعة",
+        "staminaMax": "أقصى طاقة",
+        "staminaRegenRate": "تجدد الطاقة",
+        "swimmingLevel": "السباحة"
+    },
+    "categories": {
+        "buildings": "المباني",
+        "tools": "الأدوات",
+        "weapons": "الأسلحة",
+        "equipment": "المعدات",
+        "vehicles": "المركبات",
+        "craftingRecipes": "وصفات الصناعة",
+        "cookingRecipes": "وصفات الطبخ",
+        "signWritingRecipes": "وصفات كتابة اللافتات",
+        "otherCraftables": "مصنوعات أخرى"
+    },
+    "resourceTypes": {
+        "fish": "سمك",
+        "critter": "مخلوق صغير",
+        "bug": "حشرة",
+        "relic": "أثر",
+        "crop": "محصول",
+        "foragable": "مورد بري",
+        "animalProduct": "منتج حيواني",
+        "paint": "طلاء",
+        "mineral": "معدن",
+        "craftable": "مصنوع",
+        "trophy": "كأس",
+        "seed": "بذرة",
+        "flower": "زهرة",
+        "resource": "مورد"
+    },
+    "daily": {
+        "dayOneMilestones": "اليوم الأول",
+        "travelMilestones": "السفر",
+        "npcMilestones": "الشخصيات",
+        "fishingMilestones": "صيد السمك",
+        "farmingMilestones": "الزراعة",
+        "foragingMilestones": "جمع الموارد البرية",
+        "loggingMilestones": "قطع الأخشاب",
+        "miningMilestones": "التعدين",
+        "excavationMilestones": "الحفر",
+        "bugCatchingMilestones": "صيد الحشرات",
+        "craftingMilestones": "الصناعة",
+        "huntingMilestones": "الصيد",
+        "trappingMilestones": "الفخاخ",
+        "dinksMilestones": "Dinks"
+    },
+    "animalTypes": {
+        "Wild Animal": "حيوان بري",
+        "Farm Animal": "حيوان مزرعة",
+        "Tammed Animal": "حيوان مروَّض"
+    },
+    "temperaments": {
+        "Passive": "مسالم",
+        "Neutral": "محايد",
+        "Aggressive": "عدواني"
+    },
+    "seasons": {
+        "Spring": "الربيع",
+        "Summer": "الصيف",
+        "Autumn": "الخريف",
+        "Winter": "الشتاء",
+        "All": "الكل"
+    },
+    "weekdays": {
+        "Sunday": "الأحد",
+        "Monday": "الاثنين",
+        "Tuesday": "الثلاثاء",
+        "Wednesday": "الأربعاء",
+        "Thursday": "الخميس",
+        "Friday": "الجمعة",
+        "Saturday": "السبت"
+    }
+}

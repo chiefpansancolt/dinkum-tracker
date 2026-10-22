@@ -1,0 +1,234 @@
+{
+    "toast": {
+        "marked": "{name}: {state}",
+        "collected": "Coleccionado",
+        "notCollected": "No coleccionado",
+        "unlocked": "Desbloqueado",
+        "locked": "Bloqueado"
+    },
+    "filters": {
+        "search": "Buscar {things} por nombre...",
+        "sheetTitle": "Filtrar {things}",
+        "showingCollected": "Mostrando {shown} de {total} {things} · Coleccionados {count}",
+        "showingUnlocked": "Mostrando {shown} de {total} {things} · Desbloqueados {count}",
+        "apply": "Ver {count} {things}",
+        "all": "Todos",
+        "collected": "Coleccionados",
+        "notCollected": "Por coleccionar",
+        "unlocked": "Desbloqueados",
+        "notUnlocked": "Por desbloquear",
+        "source": "Origen",
+        "allSources": "Todos los orígenes"
+    },
+    "empty": {
+        "title": "Ningún resultado en {things} con estos filtros",
+        "description": "Prueba con otro nombre o borra los filtros.",
+        "clear": "Borrar filtros"
+    },
+    "list": {
+        "got": "Tengo",
+        "name": "Nombre",
+        "caption": "Se cargaron {shown} de {total} filas. Al desplazarte se cargan más filas.",
+        "prices": "Precios en Dinks"
+    },
+    "card": {
+        "collected": "Coleccionado",
+        "markCollected": "Marcar como coleccionado",
+        "unlocked": "Desbloqueado",
+        "sellPrice": "Precio de venta",
+        "buyPrice": "Precio de compra",
+        "source": "Origen",
+        "none": "–"
+    },
+    "gear": {
+        "title": "Equipo",
+        "subline": "{count} de {total} coleccionados · {percent}% · {name}",
+        "tabsLabel": "Secciones de equipo",
+        "tabs": {
+            "books": "Libros",
+            "cassettes": "Casetes",
+            "tools": "Herramientas",
+            "weapons": "Armas",
+            "equipment": "Equipamiento",
+            "vehicles": "Vehículos"
+        },
+        "things": {
+            "books": "libros",
+            "cassettes": "casetes",
+            "tools": "herramientas",
+            "weapons": "armas",
+            "equipment": "equipamiento",
+            "vehicles": "vehículos"
+        },
+        "tiles": {
+            "collected": "Coleccionados",
+            "of": "de {total}",
+            "franklyn": "Desbloqueos de Franklyn",
+            "craftable": "Fabricables",
+            "highDamage": "Daño alto (20+)"
+        },
+        "filters": {
+            "license": "Licencia",
+            "allLicenses": "Todas las licencias",
+            "purchaseType": "Tipo de compra",
+            "purchasable": "Comprable",
+            "dinks": "Dinks",
+            "permitPoints": "Puntos de permiso",
+            "damage": "Daño",
+            "high": "Alto (20+)",
+            "medium": "Medio (10 a 19)",
+            "low": "Bajo (menos de 10)",
+            "allDamage": "Todo el daño",
+            "requirement": "Tipo de requisito",
+            "allRequirements": "Todos los tipos de requisito",
+            "allPurchaseTypes": "Todos"
+        },
+        "card": {
+            "craftingRecipe": "Receta de fabricación",
+            "license": "Licencia",
+            "licenseLevel": "Nivel de licencia de caza",
+            "source": "Origen",
+            "damage": "Daño",
+            "unlocksAfter": "Se desbloquea después de",
+            "shinyDiscs": "{count} Shiny Discs",
+            "berkonium": "{count} Berkonium Ore",
+            "ingredients": "Ingredientes",
+            "resources": "Recursos",
+            "requirement": "Nivel requerido",
+            "compatibleWith": "Compatible con",
+            "windmill": "Molino de viento",
+            "solarPanel": "Panel solar",
+            "acquiredFrom": "Se consigue en",
+            "requirements": "Requisitos",
+            "buyPrice": "Precio de compra",
+            "sellPrice": "Precio de venta",
+            "dinks": "{amount} Dinks",
+            "permitPoints": "{count, plural, one {{amount} punto de permiso} other {{amount} puntos de permiso}}",
+            "ingredient": "{count}x {name}",
+            "none": "Ninguno",
+            "requirementLevel": "Nivel de {type}"
+        }
+    },
+    "recipes": {
+        "title": "Recetas",
+        "subline": "{count} de {total} desbloqueadas · {percent}% · {name}",
+        "tabsLabel": "Secciones de recetas",
+        "tabs": {
+            "cooking": "Cocina",
+            "crafting": "Fabricación",
+            "signWriting": "Rotulación"
+        },
+        "things": {
+            "cooking": "recetas de cocina",
+            "crafting": "recetas de fabricación",
+            "signWriting": "recetas de rotulación"
+        },
+        "tiles": {
+            "unlocked": "Desbloqueadas",
+            "of": "de {total}",
+            "withBuffs": "Con efectos",
+            "vendors": "Las venden Sheila, Ted o Jimmy",
+            "recipes": "Recetas"
+        },
+        "filters": {
+            "location": "Lugares de cocina",
+            "allLocations": "Todos los lugares",
+            "unlocked": "Desbloqueadas",
+            "sources": "Orígenes",
+            "allSources": "Todos los orígenes",
+            "buffs": "Efectos",
+            "buffsWithCount": "Efectos ({count})"
+        },
+        "buffs": {
+            "title": "Filtrar por efectos",
+            "match": "Coincidir con",
+            "any": "ALGUNO",
+            "all": "TODOS",
+            "clear": "Borrar selección",
+            "selected": "{count} seleccionados",
+            "done": "Listo"
+        },
+        "card": {
+            "cookingLocation": "Lugar de cocina",
+            "buffs": "Efectos",
+            "duration": "{minutes, plural, one {{amount} min} other {{amount} min}}",
+            "sellPrice": "Precio de venta",
+            "sheilas": "Sheila's",
+            "teds": "Ted's",
+            "jimmys": "Jimmy's",
+            "resources": "Recursos",
+            "option": "Opción {n}",
+            "ingredient": "{count}x {name}",
+            "source": "Origen",
+            "unlocked": "Desbloqueada",
+            "varies": "Varía",
+            "output": "x{count}"
+        }
+    },
+    "wardrobe": {
+        "title": "Guardarropa y hogar",
+        "subline": "{count} de {total} coleccionados · {percent}% · {name}",
+        "tabsLabel": "Secciones del guardarropa",
+        "tabs": {
+            "clothing": "Ropa",
+            "furniture": "Muebles",
+            "decorations": "Decoraciones"
+        },
+        "things": {
+            "clothing": "prendas",
+            "furniture": "muebles",
+            "decorations": "decoraciones"
+        },
+        "progress": {
+            "clothing": "Progreso por ranura · elige un recuadro para filtrar",
+            "furniture": "Progreso por conjunto · elige un recuadro para filtrar",
+            "decorations": "Progreso por categoría · elige un recuadro para filtrar"
+        },
+        "filters": {
+            "slot": "Ranura",
+            "type": "Tipo",
+            "set": "Conjunto",
+            "allSets": "Todos los conjuntos",
+            "catalogue": "Catálogo",
+            "melvins": "Catálogo de Melvin",
+            "notMelvins": "Fuera del catálogo",
+            "category": "Categoría",
+            "allCategories": "Todas las categorías",
+            "source": "Origen",
+            "allSources": "Todos los orígenes",
+            "all": "Todos"
+        },
+        "list": {
+            "type": "Tipo",
+            "slot": "Ranura",
+            "set": "Conjunto",
+            "price": "Precio",
+            "sell": "Venta",
+            "availableAt": "Disponible en",
+            "catalogue": "Catálogo",
+            "category": "Categoría",
+            "source": "Origen",
+            "buy": "Compra"
+        },
+        "card": {
+            "slot": "Ranura",
+            "set": "Conjunto",
+            "price": "Precio",
+            "sellPrice": "Precio de venta",
+            "availableAt": "Disponible en",
+            "cataloguePrice": "Precio de catálogo",
+            "source": "Origen",
+            "buyPrice": "Precio de compra",
+            "category": "Categoría"
+        },
+        "shop": "Clover's Shop",
+        "hints": {
+            "slots": "{count, plural, one {Todos más {amount} ranura} other {Todos más {amount} ranuras}}",
+            "typesForSlot": "{count, plural, one {{amount} tipo para {slot}. Vuelve a Todos al cambiar la Ranura.} other {{amount} tipos para {slot}. Vuelve a Todos al cambiar la Ranura.}}",
+            "typeNeedsSlot": "Con Ranura en Todos, Tipo solo ofrece Todos. Elige primero una ranura para ver sus tipos.",
+            "sets": "{count, plural, one {Todos más {amount} conjunto} other {Todos más {amount} conjuntos}}",
+            "sources": "Todos más todos los orígenes",
+            "categories": "{count, plural, one {{amount} categoría. Las tarjetas de arriba la definen.} other {{amount} categorías. Las tarjetas de arriba las definen.}}"
+        }
+    }
+}
