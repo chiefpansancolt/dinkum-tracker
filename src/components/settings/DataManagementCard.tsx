@@ -1,5 +1,6 @@
 "use client";
 
+import { formatNumber } from "@/i18n/formatter";
 import { useTranslations } from "next-intl";
 import { useRef, useState } from "react";
 import { usePlaythrough } from "@/lib/contexts/PlaythroughContext";
@@ -99,7 +100,10 @@ export function DataManagementCard() {
 			description={t("description")}
 			aside={
 				<span className="bg-tint rounded-full px-3 py-0.5 font-mono text-xs">
-					{t("count", { count: playthroughs.length })}
+					{t("count", {
+						count: playthroughs.length,
+						amount: formatNumber(playthroughs.length),
+					})}
 				</span>
 			}
 		>

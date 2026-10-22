@@ -8,6 +8,7 @@ import { useThemeMode, writeThemeMode } from "@/lib/theme";
 import { Field } from "@/comps/ui/Field";
 import { SegmentedControl } from "@/comps/ui/SegmentedControl";
 import { Select } from "@/comps/ui/Select";
+import { RegionCard } from "./RegionCard";
 import { SettingsCard } from "./SettingsCard";
 
 const SORT_OPTIONS: PlaythroughSort[] = ["lastUpdated", "name", "createdAt", "completion"];
@@ -27,6 +28,7 @@ export function PreferencesTab() {
 
 	return (
 		<div className="grid grid-cols-1 items-start gap-4 lg:grid-cols-2">
+			<RegionCard />
 			<SettingsCard
 				title={t("preferences.appearance.title")}
 				description={t("preferences.appearance.description")}

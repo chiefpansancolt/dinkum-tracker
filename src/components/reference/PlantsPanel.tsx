@@ -1,10 +1,12 @@
 "use client";
 
+import { formatNumber } from "@/i18n/formatter";
 import type { Crop, Flower, Seed, Tree } from "dinkum-data";
 import { useTranslations } from "next-intl";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useId } from "react";
 import { useArrowTabs } from "@/lib/hooks/useArrowTabs";
+import { useTerms } from "@/lib/hooks/useTerms";
 import {
 	ALL,
 	allCrops,
@@ -41,11 +43,12 @@ import { ReferenceList } from "./ReferenceList";
 const SUB_PARAM = "sub";
 
 function SeasonChips({ seasons }: { seasons: readonly string[] }) {
+	const terms = useTerms();
 	return (
 		<span className="flex flex-wrap justify-end gap-1">
 			{seasons.map((season) => (
 				<Badge key={season} tone={SEASON_TONE[season] ?? "common"}>
-					{season}
+					{terms.season(season)}
 				</Badge>
 			))}
 		</span>
@@ -62,18 +65,24 @@ function SeedName({ seed }: { seed: { name: string; img?: string } }) {
 }
 
 const range = (min?: number, max?: number) =>
-	min === max || max === undefined ? String(min ?? "") : `${min}-${max}`;
+	min === max || max === undefined
+		? formatNumber(min ?? 0)
+		: `${formatNumber(min ?? 0)}-${formatNumber(max)}`;
 
 function useOptions() {
 	const t = useTranslations("reference.filters");
 	const all = { id: ALL, label: t("all") };
 	return {
 		t,
-		withAll: (labels: readonly string[]) => [all, ...labels.map((id) => ({ id, label: id }))],
+		withAll: (labels: readonly string[], label = (value: string) => value) => [
+			all,
+			...labels.map((id) => ({ id, label: label(id) })),
+		],
 	};
 }
 
 function SeedsList() {
+	const terms = useTerms();
 	const t = useTranslations("reference");
 	const card = useTranslations("reference.card");
 	const { t: f, withAll } = useOptions();
@@ -86,7 +95,7 @@ function SeedsList() {
 		{
 			id: "season",
 			label: f("season"),
-			options: withAll(seasons),
+			options: withAll(seasons, terms.season),
 			apply: (rest, value) => filterSeeds(rest, value, ALL),
 		},
 		{
@@ -135,7 +144,10 @@ function SeedsList() {
 						? [
 								{
 									label: card("growthPeriod"),
-									value: card("days", { count: seed.growthPeriod }),
+									value: card("days", {
+										count: seed.growthPeriod,
+										amount: formatNumber(seed.growthPeriod),
+									}),
 								},
 							]
 						: []),
@@ -143,7 +155,10 @@ function SeedsList() {
 						? [
 								{
 									label: card("regrowth"),
-									value: card("days", { count: seed.regrowth }),
+									value: card("days", {
+										count: seed.regrowth,
+										amount: formatNumber(seed.regrowth),
+									}),
 								},
 							]
 						: []),
@@ -180,6 +195,7 @@ function SeedsList() {
 }
 
 function CropsList() {
+	const terms = useTerms();
 	const t = useTranslations("reference");
 	const card = useTranslations("reference.card");
 	const { t: f, withAll } = useOptions();
@@ -189,7 +205,7 @@ function CropsList() {
 		{
 			id: "season",
 			label: f("season"),
-			options: withAll(["Spring", "Summer", "Autumn", "Winter"]),
+			options: withAll(["Spring", "Summer", "Autumn", "Winter"], terms.season),
 			apply: (rest, value) => filterCrops(rest, value),
 		},
 	];
@@ -214,7 +230,10 @@ function CropsList() {
 						? [
 								{
 									label: card("growthPeriod"),
-									value: card("days", { count: seed.growthPeriod }),
+									value: card("days", {
+										count: seed.growthPeriod,
+										amount: formatNumber(seed.growthPeriod),
+									}),
 								},
 							]
 						: []),
@@ -222,7 +241,10 @@ function CropsList() {
 						? [
 								{
 									label: card("regrowth"),
-									value: card("days", { count: seed.regrowth }),
+									value: card("days", {
+										count: seed.regrowth,
+										amount: formatNumber(seed.regrowth),
+									}),
 								},
 							]
 						: []),
@@ -293,7 +315,10 @@ function FlowersList() {
 						? [
 								{
 									label: card("growthPeriod"),
-									value: card("days", { count: flower.growthPeriod }),
+									value: card("days", {
+										count: flower.growthPeriod,
+										amount: formatNumber(flower.growthPeriod),
+									}),
 								},
 							]
 						: []),
@@ -301,7 +326,10 @@ function FlowersList() {
 						? [
 								{
 									label: card("regrowth"),
-									value: card("days", { count: flower.regrowth }),
+									value: card("days", {
+										count: flower.regrowth,
+										amount: formatNumber(flower.regrowth),
+									}),
 								},
 							]
 						: []),
@@ -370,7 +398,10 @@ function TreesList() {
 						? [
 								{
 									label: card("growthPeriod"),
-									value: card("days", { count: tree.growthPeriod }),
+									value: card("days", {
+										count: tree.growthPeriod,
+										amount: formatNumber(tree.growthPeriod),
+									}),
 								},
 							]
 						: []),
@@ -378,7 +409,10 @@ function TreesList() {
 						? [
 								{
 									label: card("regrowth"),
-									value: card("days", { count: tree.regrowth }),
+									value: card("days", {
+										count: tree.regrowth,
+										amount: formatNumber(tree.regrowth),
+									}),
 								},
 							]
 						: []),

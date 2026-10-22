@@ -1,8 +1,7 @@
 {
     "tab": {
         "title": "Cloud sync",
-        "description": "Keep your playthroughs in a private GitHub repository and share them between your devices.",
-        "descriptionGoogle": "Keep your playthroughs in your Google Drive and share them between your devices."
+        "description": "Keep your playthroughs in a private GitHub repository and share them between your devices."
     },
     "unavailable": "Sync is not available in this build.",
     "privacy": "Your data goes to a private repository in your own GitHub account. Gamerdex has no server that stores it, and the app can only reach the one repository you choose.",
@@ -32,7 +31,6 @@
         "signOut": "Sign out",
         "signedOut": "Signed out. The data on this device stays as it is.",
         "storage": "Stored in",
-        "googleValue": "Google Drive, folder {name}",
         "folder": "Folder {name}",
         "signInWith": "Sign in with {provider}"
     },

@@ -37,13 +37,13 @@ export function GearCard({ item, toggle, commerceLevel, inputsLabel }: GearCardP
 	const fields: ItemCardField[] = [
 		...(item.licence ? [{ label: t("license"), value: item.licence }] : []),
 		...(item.licenceLevel != null
-			? [{ label: t("licenseLevel"), value: String(item.licenceLevel), mono: true }]
+			? [{ label: t("licenseLevel"), value: formatNumber(item.licenceLevel), mono: true }]
 			: []),
 		...(item.requirementType && item.requirementLevel != null
 			? [
 					{
-						label: `${item.requirementType} Level`,
-						value: String(item.requirementLevel),
+						label: t("requirementLevel", { type: item.requirementType }),
+						value: formatNumber(item.requirementLevel),
 						mono: true,
 					},
 				]
@@ -108,7 +108,10 @@ export function GearCard({ item, toggle, commerceLevel, inputsLabel }: GearCardP
 						label: t("buyPrice"),
 						mono: true,
 						value: isPermitPointPrice(item)
-							? t("permitPoints", { amount: formatNumber(item.buyPrice) })
+							? t("permitPoints", {
+									count: item.buyPrice,
+									amount: formatNumber(item.buyPrice),
+								})
 							: t("dinks", { amount: formatNumber(item.buyPrice) }),
 					},
 				]

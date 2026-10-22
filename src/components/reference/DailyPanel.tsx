@@ -6,11 +6,11 @@ import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { LuSearch } from "react-icons/lu";
 import { useSearchInAddress } from "@/lib/hooks/useSearchInAddress";
+import { useTerms } from "@/lib/hooks/useTerms";
 import type { DailyCategory } from "@/service/reference";
 import {
 	ALL,
 	DAILY_CATEGORIES,
-	DAILY_LABELS,
 	DAILY_TASKS_PER_DAY,
 	dailyCategoryCount,
 	filterDaily,
@@ -28,6 +28,7 @@ type Selected = DailyCategory | typeof ALL;
 
 export function DailyPanel() {
 	const t = useTranslations("reference");
+	const terms = useTerms();
 	const searchParams = useSearchParams();
 	const [category, setCategory] = useState<Selected>(ALL);
 	const [query, setQuery] = useState(searchParams.get("q") ?? "");
@@ -77,7 +78,7 @@ export function DailyPanel() {
 						label: t("stats.largest"),
 						value: dailyCategoryCount(largestDailyCategory),
 						total,
-						caption: DAILY_LABELS[largestDailyCategory],
+						caption: terms.daily(largestDailyCategory),
 					},
 				]}
 			/>
@@ -91,7 +92,7 @@ export function DailyPanel() {
 				>
 					{chip(ALL, t("daily.allCategories"), total)}
 					{DAILY_CATEGORIES.map((key) =>
-						chip(key, DAILY_LABELS[key], dailyCategoryCount(key))
+						chip(key, terms.daily(key), dailyCategoryCount(key))
 					)}
 				</div>
 				<div className="flex flex-wrap items-center gap-x-4 gap-y-2">
@@ -130,9 +131,11 @@ export function DailyPanel() {
 					{groups.map((group) => (
 						<MasonryTile key={group.category}>
 							<Card className="p-0">
-								<section aria-label={group.label}>
+								<section aria-label={terms.daily(group.category)}>
 									<header className="flex items-center justify-between gap-3 px-4 pt-4 pb-3">
-										<h2 className="text-lg font-semibold">{group.label}</h2>
+										<h2 className="text-lg font-semibold">
+											{terms.daily(group.category)}
+										</h2>
 										<span className="border-line text-muted rounded-full border-[1.5px] px-2 font-mono text-xs">
 											{group.items.length}
 										</span>

@@ -32,27 +32,37 @@ export const shiftSeason = (season: Season, step: 1 | -1): Season =>
 export const dayOf = ({ day, season }: DayRef): CalendarDay =>
   calendar().get()[SEASON_ORDER.indexOf(season) * DAYS_IN_SEASON + (day - 1)];
 
-export interface DayEntry {
-  kind: "event" | "birthday";
-  name: string;
-  /** Detail line: the day range of an event, or the food a character likes. */
-  detail?: string;
-}
+export type DayEntry =
+  | {
+      kind: "event";
+      /** Names an entry in a list. */
+      id: string;
+      name: string;
+      /** Set when the event lasts more than one day. */
+      range?: { startDay: number; endDay: number; season: Season };
+    }
+  | { kind: "birthday"; id: string; character: string; likes?: string };
 
 /** Events first, then birthdays, as the old grid listed them. */
 export const dayEntries = (day: CalendarDay): DayEntry[] => [
   ...day.events.map((event) => ({
     kind: "event" as const,
+    id: `event:${event.name}`,
     name: event.name,
-    detail:
+    range:
       event.startDay === event.endDay
         ? undefined
-        : `Days ${event.startDay}-${event.endDay} of ${event.season}`,
+        : {
+            startDay: event.startDay,
+            endDay: event.endDay,
+            season: event.season,
+          },
   })),
   ...day.birthdays.map((birthday) => ({
     kind: "birthday" as const,
-    name: `${birthday.character}'s Birthday`,
-    detail: birthday.likes ? `Likes: ${birthday.likes}` : undefined,
+    id: `birthday:${birthday.character}`,
+    character: birthday.character,
+    likes: birthday.likes || undefined,
   })),
 ];
 

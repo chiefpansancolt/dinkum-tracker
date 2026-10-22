@@ -10,9 +10,7 @@ import {
   allTrees,
   animalSearch,
   animalSorts,
-  animalTypeLabel,
-  buffChipLabel,
-  buffChips,
+  buffPairs,
   DAILY_CATEGORIES,
   dailyCategoryCount,
   filterAnimals,
@@ -108,11 +106,6 @@ describe("animals", () => {
     expect(animalSearch(allAnimals, "")).toHaveLength(45);
     expect(animalSearch(allAnimals, "croco").length).toBeGreaterThan(0);
   });
-
-  it("spells Tamed Animal with one m on screen", () => {
-    expect(animalTypeLabel("Tammed Animal")).toBe("Tamed Animal");
-    expect(animalTypeLabel("Farm Animal")).toBe("Farm Animal");
-  });
 });
 
 describe("resources", () => {
@@ -193,16 +186,12 @@ describe("daily milestones", () => {
   });
 });
 
-describe("buff chips", () => {
-  it("writes short labels", () => {
-    expect(buffChipLabel("length", 10)).toBe("Length 10");
-    expect(buffChipLabel("healthRegenRate", 1)).toBe("Health regen 1");
-    expect(buffChipLabel("staminaMax", 15)).toBe("Stamina max 15");
-    expect(buffChipLabel("speedLevel", 2)).toBe("Speed 2");
-    expect(buffChips(undefined)).toEqual([]);
-    expect(buffChips({ length: 1, healthMax: 5 })).toEqual([
-      "Length 1",
-      "Health max 5",
+describe("buff pairs", () => {
+  it("lists the buffs of an item and leaves out a buff that is off", () => {
+    expect(buffPairs(undefined)).toEqual([]);
+    expect(buffPairs({ length: 1, healthMax: 5, sleepless: false })).toEqual([
+      ["length", 1],
+      ["healthMax", 5],
     ]);
   });
 

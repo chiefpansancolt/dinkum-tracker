@@ -100,7 +100,7 @@
         "maxHearts": "Max hearts",
         "avgHearts": "Avg hearts",
         "top": "Top relationships",
-        "hearts": "{hearts} hearts",
+        "hearts": "{hearts, plural, one {{amount} heart} other {{amount} hearts}}",
         "empty": "No NPC collected recorded yet."
     },
     "game": {

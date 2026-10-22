@@ -1,9 +1,10 @@
+import { formatDecimal } from "@/i18n/formatter";
 import { type NPC, npcs } from "dinkum-data";
 
 export const allNpcs: NPC[] = npcs().get();
 
 export const MAX_HEARTS = 5;
-const HEART_STEP = 0.25;
+export const HEART_STEP = 0.25;
 export const MAX_TOTAL_HEARTS = allNpcs.length * MAX_HEARTS;
 
 export type RelationshipFilter = "all" | "none" | "progress" | "full";

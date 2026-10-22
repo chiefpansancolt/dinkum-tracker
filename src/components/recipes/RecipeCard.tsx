@@ -1,10 +1,11 @@
 "use client";
 
-import { formatNumber } from "@/i18n/formatter";
+import { formatDecimal, formatNumber } from "@/i18n/formatter";
 import { useTranslations } from "next-intl";
 import type { CommerceLevel } from "@/types/app";
+import { useTerms } from "@/lib/hooks/useTerms";
 import { commercePrice } from "@/service/pedia";
-import { buffDuration, buffEntries, buffName, buffUnit } from "@/service/recipes";
+import { buffDuration, buffEntries, buffUnit } from "@/service/recipes";
 import type { CookingRecipe } from "@/service/recipes";
 import type { Toggle } from "@/comps/collect/CollectionPanel";
 import { ToggleRow } from "@/comps/collect/ToggleRow";
@@ -45,19 +46,25 @@ interface RecipeCardProps {
 }
 
 function Buffs({ recipe }: { recipe: CookingRecipe }) {
+	const terms = useTerms();
 	const t = useTranslations("collect.recipes.card");
 	const minutes = buffDuration(recipe);
 
 	return (
 		<span className="flex flex-wrap items-center justify-end gap-x-3 gap-y-1">
 			{minutes ? (
-				<span className="flex items-center gap-1" title={t("duration", { minutes })}>
+				<span
+					className="flex items-center gap-1"
+					title={t("duration", { minutes, amount: formatDecimal(minutes, 1) })}
+				>
 					<BuffIcon buff="length" size={24} />
-					<span className="font-mono text-xs">{t("duration", { minutes })}</span>
+					<span className="font-mono text-xs">
+						{t("duration", { minutes, amount: formatDecimal(minutes, 1) })}
+					</span>
 				</span>
 			) : null}
 			{buffEntries(recipe).map(([key, value]) => (
-				<span key={key} className="flex items-center gap-1" title={buffName(key)}>
+				<span key={key} className="flex items-center gap-1" title={terms.buff(key)}>
 					<BuffIcon buff={key} value={value} />
 					{typeof value === "number" && !key.endsWith("Level") && (
 						<span className="font-mono text-xs">

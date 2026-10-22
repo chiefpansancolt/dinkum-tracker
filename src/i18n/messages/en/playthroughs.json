@@ -1,14 +1,13 @@
 {
     "title": "Playthroughs",
-    "subline": "Manage your Dinkum adventures. {count, plural, one {# playthrough} other {# playthroughs}}, {name} is active.",
-    "sublineNoneActive": "Manage your Dinkum adventures. {count, plural, one {# playthrough} other {# playthroughs}}.",
+    "subline": "Manage your Dinkum adventures. {count, plural, one {{amount} playthrough} other {{amount} playthroughs}}, {name} is active.",
+    "sublineNoneActive": "Manage your Dinkum adventures. {count, plural, one {{amount} playthrough} other {{amount} playthroughs}}.",
     "sublineEmpty": "No playthroughs yet.",
     "loading": "Loading playthroughs...",
     "stats": {
         "playthroughs": "Playthroughs",
         "playthroughsCaption": "in this browser",
         "active": "Active",
-        "activeCaption": "{name}",
         "noneActive": "None",
         "furthest": "Furthest along",
         "average": "Average completion",
@@ -66,9 +65,9 @@
     "relative": {
         "today": "Today",
         "yesterday": "Yesterday",
-        "daysAgo": "{count} days ago",
-        "weeksAgo": "{count, plural, one {# week ago} other {# weeks ago}}",
-        "monthsAgo": "{count, plural, one {# month ago} other {# months ago}}",
+        "daysAgo": "{count, plural, one {{amount} day ago} other {{amount} days ago}}",
+        "weeksAgo": "{count, plural, one {{amount} week ago} other {{amount} weeks ago}}",
+        "monthsAgo": "{count, plural, one {{amount} month ago} other {{amount} months ago}}",
         "unknown": "N/A"
     },
     "new": {

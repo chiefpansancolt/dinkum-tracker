@@ -1,5 +1,6 @@
 "use client";
 
+import { formatNumber } from "@/i18n/formatter";
 import type { CalendarDay, Season } from "dinkum-data";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
@@ -7,6 +8,7 @@ import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
 import type { Playthrough } from "@/types/app";
 import { usePlaythrough } from "@/lib/contexts/PlaythroughContext";
 import { DESKTOP_QUERY } from "@/lib/hooks/useMediaQuery";
+import { useTerms } from "@/lib/hooks/useTerms";
 import type { DayEntry, DayRef } from "@/service/calendar";
 import {
 	dayEntries,
@@ -48,20 +50,45 @@ function Marker({ kind }: { kind: DayEntry["kind"] }) {
 	);
 }
 
+function useEntryText() {
+	const t = useTranslations("people.calendar.entries");
+	const terms = useTerms();
+
+	return {
+		title: (entry: DayEntry) =>
+			entry.kind === "event" ? entry.name : t("birthday", { name: entry.character }),
+		detail: (entry: DayEntry) => {
+			if (entry.kind === "birthday")
+				return entry.likes ? t("likes", { food: entry.likes }) : undefined;
+			return entry.range
+				? t("range", {
+						start: formatNumber(entry.range.startDay),
+						end: formatNumber(entry.range.endDay),
+						season: terms.season(entry.range.season),
+					})
+				: undefined;
+		},
+	};
+}
+
 function EntryList({ entries }: { entries: DayEntry[] }) {
+	const text = useEntryText();
+
 	return (
 		<ul className="flex flex-col gap-2">
 			{entries.map((entry) => (
 				<li
-					key={entry.name}
+					key={entry.id}
 					className="border-line bg-surface flex items-start gap-3 rounded-md border-[1.5px] p-3"
 				>
 					<span className="mt-1.5">
 						<Marker kind={entry.kind} />
 					</span>
 					<span className="flex flex-col">
-						<span className="font-semibold">{entry.name}</span>
-						{entry.detail && <span className="text-muted">{entry.detail}</span>}
+						<span className="font-semibold">{text.title(entry)}</span>
+						{text.detail(entry) && (
+							<span className="text-muted">{text.detail(entry)}</span>
+						)}
 					</span>
 				</li>
 			))}
@@ -71,6 +98,7 @@ function EntryList({ entries }: { entries: DayEntry[] }) {
 
 function DayDetails({ day, isCurrent }: { day: CalendarDay; isCurrent: boolean }) {
 	const t = useTranslations("people.calendar.details");
+	const terms = useTerms();
 	const entries = dayEntries(day);
 	const events = entries.filter((entry) => entry.kind === "event");
 	const birthdays = entries.filter((entry) => entry.kind === "birthday");
@@ -79,9 +107,13 @@ function DayDetails({ day, isCurrent }: { day: CalendarDay; isCurrent: boolean }
 		<div className="flex flex-col gap-4">
 			<div className="flex items-center justify-between gap-3">
 				<h2 className="text-xl font-semibold">
-					{t("title", { weekday: day.weekday, day: day.day, season: day.season })}
+					{t("title", {
+						weekday: terms.weekday(day.weekday),
+						day: formatNumber(day.day),
+						season: terms.season(day.season),
+					})}
 				</h2>
-				<Badge tone="common">{isCurrent ? t("current") : day.season}</Badge>
+				<Badge tone="common">{isCurrent ? t("current") : terms.season(day.season)}</Badge>
 			</div>
 			<div className="grid gap-4 lg:grid-cols-2">
 				<section className="flex flex-col gap-2">
@@ -115,6 +147,8 @@ interface DayCellProps {
 
 function DayCell({ day, isCurrent, isSelected, tint, onPick }: DayCellProps) {
 	const t = useTranslations("people.calendar");
+	const text = useEntryText();
+	const terms = useTerms();
 	const entries = dayEntries(day);
 	const hidden = entries.length - DESKTOP_ENTRIES;
 
@@ -133,13 +167,13 @@ function DayCell({ day, isCurrent, isSelected, tint, onPick }: DayCellProps) {
 				}`}
 			>
 				{day.day}
-				<span className="sr-only"> {day.season}</span>
+				<span className="sr-only"> {terms.season(day.season)}</span>
 			</span>
 			<span className="hidden w-full flex-col gap-0.5 lg:flex">
 				{entries.slice(0, DESKTOP_ENTRIES).map((entry) => (
-					<span key={entry.name} className="flex min-w-0 items-center gap-1.5 text-xs">
+					<span key={entry.id} className="flex min-w-0 items-center gap-1.5 text-xs">
 						<Marker kind={entry.kind} />
-						<span className="truncate">{entry.name}</span>
+						<span className="truncate">{text.title(entry)}</span>
 					</span>
 				))}
 				{hidden > 0 && (
@@ -148,12 +182,15 @@ function DayCell({ day, isCurrent, isSelected, tint, onPick }: DayCellProps) {
 			</span>
 			<span className="flex gap-1 lg:hidden" aria-hidden="true">
 				{entries.slice(0, MOBILE_DOTS).map((entry) => (
-					<Marker key={entry.name} kind={entry.kind} />
+					<Marker key={entry.id} kind={entry.kind} />
 				))}
 			</span>
 			{entries.length > 0 && (
 				<span className="sr-only lg:hidden">
-					{t("cellEntries", { count: entries.length })}
+					{t("cellEntries", {
+						count: entries.length,
+						amount: formatNumber(entries.length),
+					})}
 				</span>
 			)}
 		</button>
@@ -174,6 +211,7 @@ function CalendarContent({ playthrough }: { playthrough: Playthrough }) {
 	const [selected, setSelected] = useState<DayRef>(current);
 	const [sheetOpen, setSheetOpen] = useState(false);
 
+	const terms = useTerms();
 	const styles = getSeasonStyles(viewSeason);
 	const counts = seasonCounts(viewSeason);
 	const days = seasonDays(viewSeason);
@@ -192,7 +230,10 @@ function CalendarContent({ playthrough }: { playthrough: Playthrough }) {
 		showToast({
 			key: "calendar-day",
 			variant: "success",
-			title: t("toast.set", { day: next.day, season: next.season }),
+			title: t("toast.set", {
+				day: formatNumber(next.day),
+				season: terms.season(next.season),
+			}),
 			action: {
 				label: undo("undo"),
 				onAction: () =>
@@ -216,7 +257,7 @@ function CalendarContent({ playthrough }: { playthrough: Playthrough }) {
 			<PageHeader
 				title={t("title")}
 				subline={t("subline", {
-					season: viewSeason,
+					season: terms.season(viewSeason),
 					events: counts.events,
 					birthdays: counts.birthdays,
 					name: playthrough.name,
@@ -229,20 +270,20 @@ function CalendarContent({ playthrough }: { playthrough: Playthrough }) {
 						onClick={() => setViewSeason(shiftSeason(viewSeason, -1))}
 						className="border-line border-[1.5px]"
 					>
-						<LuChevronLeft size={20} aria-hidden="true" />
+						<LuChevronLeft size={20} aria-hidden="true" className="rtl:rotate-180" />
 					</IconButton>
 					<span
 						aria-live="polite"
 						className={`flex min-h-11 min-w-0 items-center justify-center rounded-md px-4 font-semibold max-lg:flex-1 lg:min-w-32 ${styles.bg} ${styles.text}`}
 					>
-						{viewSeason}
+						{terms.season(viewSeason)}
 					</span>
 					<IconButton
 						label={t("next")}
 						onClick={() => setViewSeason(shiftSeason(viewSeason, 1))}
 						className="border-line border-[1.5px]"
 					>
-						<LuChevronRight size={20} aria-hidden="true" />
+						<LuChevronRight size={20} aria-hidden="true" className="rtl:rotate-180" />
 					</IconButton>
 					<Button onClick={goToday}>{t("today")}</Button>
 				</div>
@@ -265,7 +306,10 @@ function CalendarContent({ playthrough }: { playthrough: Playthrough }) {
 				</ul>
 			</div>
 			<p className="border-line bg-tint rounded-md border-[1.5px] px-3 py-2.5">
-				{t("alert", { day: current.day, season: current.season })}
+				{t("alert", {
+					day: formatNumber(current.day),
+					season: terms.season(current.season),
+				})}
 			</p>
 			<div className="border-line bg-surface overflow-hidden rounded-md border-[1.5px]">
 				<div className="border-line grid grid-cols-[repeat(7,minmax(0,1fr))] border-b text-center font-semibold">
@@ -298,9 +342,9 @@ function CalendarContent({ playthrough }: { playthrough: Playthrough }) {
 				open={sheetOpen}
 				onClose={() => setSheetOpen(false)}
 				title={t("dayLabel", {
-					weekday: selectedDay.weekday,
-					day: selectedDay.day,
-					season: selectedDay.season,
+					weekday: terms.weekday(selectedDay.weekday),
+					day: formatNumber(selectedDay.day),
+					season: terms.season(selectedDay.season),
 				})}
 				footer={
 					<Button

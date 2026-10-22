@@ -1,6 +1,6 @@
 "use client";
 
-import { formatShortDate } from "@/i18n/formatter";
+import { formatNumber, formatShortDate } from "@/i18n/formatter";
 import { useTranslations } from "next-intl";
 import type { Playthrough } from "@/types/app";
 import type { GameSeason } from "@/service/playthrough";
@@ -21,7 +21,10 @@ export function useAgeText() {
       case "unknown":
         return t("unknown");
       default:
-        return t(age.kind, { count: age.count });
+        return t(age.kind, {
+          count: age.count,
+          amount: formatNumber(age.count),
+        });
     }
   };
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import { formatNumber } from "@/i18n/formatter";
 import { useTranslations } from "next-intl";
 import { usePlaythrough } from "@/lib/contexts/PlaythroughContext";
 import { useSync } from "@/lib/contexts/SyncContext";
@@ -21,7 +22,13 @@ export function SettingsView() {
 
 	return (
 		<>
-			<PageHeader title={t("title")} subline={t("subline", { count: playthroughs.length })} />
+			<PageHeader
+				title={t("title")}
+				subline={t("subline", {
+					count: playthroughs.length,
+					amount: formatNumber(playthroughs.length),
+				})}
+			/>
 			<Tabs
 				label={t("page.tabsLabel")}
 				tabs={tabIds.map((id) => ({ id, label: t(`page.tabs.${id}`) }))}

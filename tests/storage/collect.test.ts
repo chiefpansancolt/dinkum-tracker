@@ -22,7 +22,6 @@ import {
 } from "@/lib/services/gear";
 import {
   allBuffKeys,
-  buffName,
   buffUnit,
   cookingLocations,
   filterByBuffs,
@@ -223,11 +222,8 @@ describe("recipes", () => {
     expect(matches.length).toBeGreaterThan(0);
   });
 
-  it("lists 16 buffs and names them without the word Level", () => {
+  it("lists 16 buffs and leaves the duration out", () => {
     expect(allBuffKeys).toHaveLength(16);
-    expect(buffName("speedLevel")).toBe("Speed");
-    expect(buffName("healthRegenRate")).toBe("Health Regen Rate");
-    expect(buffName("fastHealthTickSpeedLevel")).toBe("Fast Health Tick Speed");
     expect(allBuffKeys).not.toContain("length");
   });
 

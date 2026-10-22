@@ -102,14 +102,17 @@ describe("calendar helpers", () => {
     ).toBe(false);
   });
 
-  it("lists events first, then birthdays, with their detail lines", () => {
+  it("lists events first, then birthdays, with the data for their detail lines", () => {
     const entries = dayEntries(dayOf({ day: 1, season: "Summer" }));
 
     expect(entries.map((entry) => entry.kind)).toEqual(["event", "birthday"]);
-    expect(entries[0].detail).toBe("Days 1-7 of Summer");
+    expect(entries[0]).toMatchObject({
+      name: "John's Goods Anniversary",
+      range: { startDay: 1, endDay: 7, season: "Summer" },
+    });
     expect(entries[1]).toMatchObject({
-      name: "Fletch's Birthday",
-      detail: "Likes: Bush Lime",
+      character: "Fletch",
+      likes: "Bush Lime",
     });
   });
 

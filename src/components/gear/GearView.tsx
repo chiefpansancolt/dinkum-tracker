@@ -150,7 +150,10 @@ function CassetteCard({
 								label: t("buyPrice"),
 								mono: true,
 								value: isPermitPointPrice(cassette)
-									? t("permitPoints", { amount: formatNumber(cassette.buyPrice) })
+									? t("permitPoints", {
+											count: cassette.buyPrice,
+											amount: formatNumber(cassette.buyPrice),
+										})
 									: t("dinks", { amount: formatNumber(cassette.buyPrice) }),
 							},
 						]

@@ -23,7 +23,7 @@
             "showing": "Showing {shown} of {total} NPCs · Full hearts {full} · Met {met}",
             "apply": "Show {count} NPCs"
         },
-        "hint": "Click a heart to set it. Click the last full heart to take it back. Use -0.25 and +0.25 for quarter steps.",
+        "hint": "Click a heart to set it. Click the last full heart to take it back. Use -{step} and +{step} for quarter steps.",
         "things": "NPCs",
         "card": {
             "full": "Full",
@@ -37,11 +37,11 @@
         },
         "hearts": {
             "label": "Hearts for {name}",
-            "setTo": "Set {name} to {count} hearts",
-            "less": "- 0.25",
-            "more": "+ 0.25",
-            "lessLabel": "Decrease hearts by 0.25",
-            "moreLabel": "Increase hearts by 0.25",
+            "setTo": "Set {name} to {count, plural, one {{amount} heart} other {{amount} hearts}}",
+            "less": "- {step}",
+            "more": "+ {step}",
+            "lessLabel": "Decrease hearts by {step}",
+            "moreLabel": "Increase hearts by {step}",
             "readout": "{hearts} / {max}"
         },
         "toast": {
@@ -59,7 +59,6 @@
         "previous": "Previous season",
         "next": "Next season",
         "today": "Today",
-        "seasonLabel": "Season",
         "legend": {
             "event": "Event",
             "birthday": "Birthday",
@@ -89,6 +88,11 @@
         "toast": {
             "set": "Current day set to {day} {season}"
         },
-        "cellEntries": "{count, plural, one {# entry} other {# entries}}"
+        "cellEntries": "{count, plural, one {{amount} entry} other {{amount} entries}}",
+        "entries": {
+            "birthday": "{name}'s Birthday",
+            "range": "Days {start}-{end} of {season}",
+            "likes": "Likes: {food}"
+        }
     }
 }

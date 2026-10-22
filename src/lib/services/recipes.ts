@@ -68,14 +68,6 @@ export const allBuffKeys = [
   ),
 ].sort();
 
-/** The name of a buff: spaced words, with the word Level removed. */
-export const buffName = (key: string) =>
-  key
-    .replace(/Level$/, "")
-    .replace(/([A-Z])/g, " $1")
-    .replace(/^./, (letter) => letter.toUpperCase())
-    .trim();
-
 export const buffDuration = (recipe: CookingRecipe) => recipe.buffs?.length;
 
 const UNITS: Record<string, string> = {

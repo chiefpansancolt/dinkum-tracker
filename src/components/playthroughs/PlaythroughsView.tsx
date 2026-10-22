@@ -1,5 +1,6 @@
 "use client";
 
+import { formatNumber } from "@/i18n/formatter";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
@@ -132,8 +133,12 @@ export function PlaythroughsView() {
 		: rows.length === 0
 			? t("sublineEmpty")
 			: activePlaythrough
-				? t("subline", { count: rows.length, name: activePlaythrough.name })
-				: t("sublineNoneActive", { count: rows.length });
+				? t("subline", {
+						count: rows.length,
+						amount: formatNumber(rows.length),
+						name: activePlaythrough.name,
+					})
+				: t("sublineNoneActive", { count: rows.length, amount: formatNumber(rows.length) });
 
 	return (
 		<>

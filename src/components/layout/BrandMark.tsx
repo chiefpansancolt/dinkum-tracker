@@ -17,6 +17,7 @@ export function BrandMark({ onNavigate }: { onNavigate?: () => void }) {
 				<span className="text-base font-semibold">Dinkum</span>
 				{/* i18n-ignore */}
 				<span className="text-sb-muted font-mono text-[11px] tracking-[0.08em] uppercase">
+					{/* i18n-ignore */}
 					Tracker
 				</span>
 			</span>

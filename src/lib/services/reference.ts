@@ -1,3 +1,4 @@
+import { formatNumber } from "@/i18n/formatter";
 import {
   type Animal,
   ANIMAL_TYPES,
@@ -213,10 +214,6 @@ export const treeSorts: SortChoice<Tree>[] = [
 export const temperamentOptions: readonly string[] = TEMPERAMENTS;
 export const animalTypeOptions: readonly string[] = ANIMAL_TYPES;
 
-/** The old data spells Tamed Animal with two m. The label on screen has one. */
-export const animalTypeLabel = (type: string) =>
-  type === "Tammed Animal" ? "Tamed Animal" : type;
-
 export const habitatOptions = [
   ...new Set(allAnimals.flatMap((animal) => animal.habitat ?? [])),
 ].sort();
@@ -278,24 +275,9 @@ export const treeLocationOptions = [
 
 export type DailyCategory = keyof DailyMilestones;
 
-export const DAILY_LABELS: Record<DailyCategory, string> = {
-  dayOneMilestones: "Day One",
-  travelMilestones: "Travel",
-  npcMilestones: "NPCs",
-  fishingMilestones: "Fishing",
-  farmingMilestones: "Farming",
-  foragingMilestones: "Foraging",
-  loggingMilestones: "Logging",
-  miningMilestones: "Mining",
-  excavationMilestones: "Excavation",
-  bugCatchingMilestones: "Bug Catching",
-  craftingMilestones: "Crafting",
-  huntingMilestones: "Hunting",
-  trappingMilestones: "Trapping",
-  dinksMilestones: "Dinks",
-};
-
-export const DAILY_CATEGORIES = Object.keys(DAILY_LABELS) as DailyCategory[];
+export const DAILY_CATEGORIES = Object.keys(
+  dailyMilestones(),
+) as DailyCategory[];
 
 /** Tasks given to the player on each new game day. */
 export const DAILY_TASKS_PER_DAY = 3;
@@ -307,7 +289,6 @@ export const dailyCategoryCount = (category: DailyCategory) =>
 
 export interface DailyGroup {
   category: DailyCategory;
-  label: string;
   items: DailyMilestones[DailyCategory];
 }
 
@@ -325,7 +306,6 @@ export const filterDaily = (
   return wanted
     .map((key) => ({
       category: key,
-      label: DAILY_LABELS[key],
       items: dailyData[key].filter(
         (task) => text === "" || task.name.toLowerCase().includes(text),
       ),
@@ -337,26 +317,17 @@ export const largestDailyCategory = DAILY_CATEGORIES.reduce((top, key) =>
   dailyCategoryCount(key) > dailyCategoryCount(top) ? key : top,
 );
 
-const WORD = /([a-z])([A-Z])/g;
-
-/** A short chip text for a buff, for example Length 10, Health regen 1 or Speed 2. */
-export const buffChipLabel = (key: string, value: number | boolean) => {
-  const words = key
-    .replace(/(Rate|Level)$/, "")
-    .replace(WORD, "$1 $2")
-    .toLowerCase();
-  const label = words.charAt(0).toUpperCase() + words.slice(1);
-  return typeof value === "number" ? `${label} ${value}` : label;
-};
-
-export const buffChips = (buffs: object | undefined) =>
-  (Object.entries(buffs ?? {}) as [string, number | boolean][])
-    .filter(([, value]) => value !== false)
-    .map(([key, value]) => buffChipLabel(key, value));
+/** The buffs of an item as pairs of key and value. A buff that is off is left out. */
+export const buffPairs = (buffs: object | undefined) =>
+  (Object.entries(buffs ?? {}) as [string, number | boolean][]).filter(
+    ([, value]) => value !== false,
+  );
 
 /** The ingredient set of a conversion, for example 5 Copper Ore. */
 export const inputsLabel = (inputs: { count: number; name: string }[]) =>
-  inputs.map((input) => `${input.count} ${input.name}`).join(", ");
+  inputs
+    .map((input) => `${formatNumber(input.count)} ${input.name}`)
+    .join(", ");
 
 /** Season, category and location filters come from the data package, so they match as before. */
 export const filterSeeds = (

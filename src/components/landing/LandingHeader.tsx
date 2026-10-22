@@ -37,8 +37,10 @@ export function LandingHeader() {
 						className="block size-8 shrink-0 rounded-md"
 					/>
 					<span className="flex flex-col leading-tight">
+						{/* i18n-ignore */}
 						<span className="text-base font-semibold">Dinkum</span>
 						<span className="text-muted font-mono text-[11px] tracking-[0.08em] uppercase">
+							{/* i18n-ignore */}
 							Tracker
 						</span>
 					</span>

@@ -1,6 +1,6 @@
 "use client";
 
-import { formatNumber } from "@/i18n/formatter";
+import { formatDecimal, formatNumber } from "@/i18n/formatter";
 import { useTranslations } from "next-intl";
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
@@ -14,6 +14,7 @@ import {
 	filterNpcs,
 	formatHearts,
 	fullHeartCount,
+	HEART_STEP,
 	heartsOf,
 	MAX_TOTAL_HEARTS,
 	metCount,
@@ -153,7 +154,7 @@ function NpcsContent({ playthrough }: { playthrough: Playthrough }) {
 					}
 				/>
 			</Card>
-			<p className="text-muted">{t("hint")}</p>
+			<p className="text-muted">{t("hint", { step: formatDecimal(HEART_STEP, 2) })}</p>
 			{shown.length === 0 ? (
 				<EmptyState
 					title={t("empty.title")}

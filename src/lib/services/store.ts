@@ -1,3 +1,5 @@
+import { isDateFormatId, isNumberFormatId } from "@/i18n/formats";
+import { isSupportedLocale } from "@/i18n/locales";
 import type {
   AppData,
   CommerceLevel,
@@ -117,6 +119,13 @@ const parsePrefs = (raw: string | null): Prefs => {
   return {
     commerceLevel: commerceLevel ?? DEFAULT_PREFS.commerceLevel,
     viewMode: viewMode ?? DEFAULT_PREFS.viewMode,
+    ...(isSupportedLocale(parsed.language) && { language: parsed.language }),
+    ...(isNumberFormatId(parsed.numberFormat) && {
+      numberFormat: parsed.numberFormat,
+    }),
+    ...(isDateFormatId(parsed.dateFormat) && {
+      dateFormat: parsed.dateFormat,
+    }),
   };
 };
 

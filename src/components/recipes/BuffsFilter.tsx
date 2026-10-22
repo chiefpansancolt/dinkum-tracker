@@ -3,7 +3,8 @@
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { LuCheck } from "react-icons/lu";
-import { allBuffKeys, buffName } from "@/service/recipes";
+import { useTerms } from "@/lib/hooks/useTerms";
+import { allBuffKeys } from "@/service/recipes";
 import { Button } from "@/comps/ui/Button";
 import { Dialog } from "@/comps/ui/Dialog";
 import { SegmentedControl } from "@/comps/ui/SegmentedControl";
@@ -23,6 +24,7 @@ export function BuffsFilter({
 	onChosenChange,
 	onMatchAllChange,
 }: BuffsFilterProps) {
+	const terms = useTerms();
 	const t = useTranslations("collect.recipes");
 	const [open, setOpen] = useState(false);
 
@@ -84,7 +86,7 @@ export function BuffsFilter({
 									}`}
 								>
 									<BuffIcon buff={key} size={28} />
-									<span className="min-w-0 flex-1">{buffName(key)}</span>
+									<span className="min-w-0 flex-1">{terms.buff(key)}</span>
 									{selected && (
 										<LuCheck
 											size={16}

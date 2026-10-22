@@ -1,6 +1,6 @@
 "use client";
 
-import { formatNumber } from "@/i18n/formatter";
+import { formatDecimal, formatNumber } from "@/i18n/formatter";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { LuMinus, LuPlus } from "react-icons/lu";
@@ -19,6 +19,7 @@ import { ItemIcon } from "@/comps/ui/ItemIcon";
 
 export function WeightCalculatorView() {
 	const t = useTranslations("tools.weight");
+	const step = formatDecimal(WEIGHT_STEP, 2);
 	const [itemId, setItemId] = useState(allWeightItems[0].id);
 	const item = allWeightItems.find((candidate) => candidate.id === itemId) ?? allWeightItems[0];
 	const [weight, setWeight] = useState(item.minWeight);
@@ -99,7 +100,7 @@ export function WeightCalculatorView() {
 						</label>
 						<div className="flex items-center gap-3">
 							<IconButton
-								label={t("minus")}
+								label={t("minus", { step })}
 								disabled={weight <= item.minWeight}
 								onClick={() => setWeight(stepWeight(item, weight, -1))}
 								className="border-line size-11 border-[1.5px]"
@@ -119,7 +120,7 @@ export function WeightCalculatorView() {
 								className="accent-primary h-11 min-w-0 flex-1"
 							/>
 							<IconButton
-								label={t("plus")}
+								label={t("plus", { step })}
 								disabled={weight >= item.maxWeight}
 								onClick={() => setWeight(stepWeight(item, weight, 1))}
 								className="border-line size-11 border-[1.5px]"
@@ -131,7 +132,7 @@ export function WeightCalculatorView() {
 							<span>{t("min", { min: item.minWeight })}</span>
 							<span>{t("max", { max: item.maxWeight })}</span>
 						</div>
-						<p className="text-muted">{t("stepNote")}</p>
+						<p className="text-muted">{t("stepNote", { step })}</p>
 					</div>
 					<div
 						role="status"

@@ -1,3 +1,4 @@
+import { formatFixed } from "@/i18n/formatter";
 import { type WeightItem, weightItems } from "dinkum-data";
 
 export const allWeightItems: WeightItem[] = weightItems().get();
@@ -19,4 +20,4 @@ export const stepWeight = (
 ) =>
   clampWeight(item, Math.round((weight + direction * WEIGHT_STEP) * 100) / 100);
 
-export const formatWeight = (weight: number) => weight.toFixed(2);
+export const formatWeight = (weight: number) => formatFixed(weight, 2);

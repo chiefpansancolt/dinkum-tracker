@@ -1,8 +1,10 @@
 "use client";
 
+import { formatNumber } from "@/i18n/formatter";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import type { UniqueResource } from "@/types/app";
+import { useTerms } from "@/lib/hooks/useTerms";
 import { ItemCard } from "@/comps/page/ItemCard";
 import { Badge } from "@/comps/ui/Badge";
 import { Button } from "@/comps/ui/Button";
@@ -10,6 +12,7 @@ import { Button } from "@/comps/ui/Button";
 const VISIBLE_USES = 5;
 
 export function ResourceCard({ resource }: { resource: UniqueResource }) {
+	const terms = useTerms();
 	const t = useTranslations("tools.breakdown.card");
 	const [showAll, setShowAll] = useState(false);
 	const uses = showAll ? resource.usedIn : resource.usedIn.slice(0, VISIBLE_USES);
@@ -21,8 +24,13 @@ export function ResourceCard({ resource }: { resource: UniqueResource }) {
 			name={resource.name}
 			badge={
 				<span className="flex flex-wrap gap-1">
-					<Badge tone="success">{t("usedIn", { count: resource.usedIn.length })}</Badge>
-					<Badge tone="info">{resource.resourceType}</Badge>
+					<Badge tone="success">
+						{t("usedIn", {
+							count: resource.usedIn.length,
+							amount: formatNumber(resource.usedIn.length),
+						})}
+					</Badge>
+					<Badge tone="info">{terms.resourceType(resource.resourceType)}</Badge>
 				</span>
 			}
 		>
@@ -31,7 +39,7 @@ export function ResourceCard({ resource }: { resource: UniqueResource }) {
 				<ul className="flex flex-wrap gap-1">
 					{resource.categories.map((category) => (
 						<li key={category}>
-							<Badge tone="common">{category}</Badge>
+							<Badge tone="common">{terms.category(category)}</Badge>
 						</li>
 					))}
 				</ul>

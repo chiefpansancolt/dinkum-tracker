@@ -61,7 +61,10 @@ export function NpcCard({ stats, className }: CardProps & { stats: NpcStats }) {
 								key={npc.id}
 								img={npc.img}
 								name={npc.name}
-								value={t("hearts", { hearts: formatDecimal(npc.hearts, 2) })}
+								value={t("hearts", {
+									hearts: npc.hearts,
+									amount: formatDecimal(npc.hearts, 2),
+								})}
 							/>
 						))}
 					</ul>

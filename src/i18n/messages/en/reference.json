@@ -73,8 +73,7 @@
         "tasks": "Tasks in the pool",
         "inCategories": "in {count} categories",
         "perDay": "Given per game day",
-        "largest": "Largest category",
-        "largestCaption": "{name}"
+        "largest": "Largest category"
     },
     "filters": {
         "all": "All",
@@ -119,9 +118,10 @@
         "typesWithCount": "Resource types ({count})",
         "panelTitle": "Filter by Resource Type",
         "clear": "Clear Filters",
-        "itemCount": "{count} items",
+        "itemCount": "{count, plural, one {{amount} item} other {{amount} items}}",
         "commonOnly": "Common Resources Only (Used in 3+ Items)",
-        "done": "Show {count} resources"
+        "done": "Show {count} resources",
+        "option": "{name}, {items}"
     },
     "empty": {
         "title": "No {things} match these filters",
@@ -145,11 +145,11 @@
         "moreBuffs": "+{count} more",
         "resources": "Resources",
         "usedIn": "Used in",
-        "usedInItems": "{count} items",
+        "usedInItems": "{count, plural, one {{amount} item} other {{amount} items}}",
         "seasons": "Seasons",
         "growthPeriod": "Growth period",
         "regrowth": "Regrowth",
-        "days": "{count} days",
+        "days": "{count, plural, one {{amount} day} other {{amount} days}}",
         "outputCount": "Output count",
         "seed": "Seed",
         "conditions": "Conditions",
@@ -164,7 +164,6 @@
         "intro": "Three of these tasks are randomly generated for the player on each new game day. Permit points are credited as soon as the requirements are met.",
         "categoryLabel": "Category",
         "allCategories": "All categories",
-        "points": "{count} pts",
-        "pointsLabel": "{count} permit points"
+        "points": "{count} pts"
     }
 }

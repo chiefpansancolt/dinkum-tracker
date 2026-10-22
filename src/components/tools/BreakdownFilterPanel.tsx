@@ -1,6 +1,8 @@
 "use client";
 
+import { formatNumber } from "@/i18n/formatter";
 import { useTranslations } from "next-intl";
+import { useTerms } from "@/lib/hooks/useTerms";
 import type { BreakdownFilters } from "@/service/breakdown";
 import { CATEGORIES, resourceIndex, toggled, typeCounts } from "@/service/breakdown";
 import type { ResourceType } from "@/data/constants/components";
@@ -23,6 +25,7 @@ export function BreakdownFilterPanel({
 	onCategoriesChange,
 	onTypesChange,
 }: BreakdownFilterPanelProps) {
+	const terms = useTerms();
 	const t = useTranslations("tools.breakdown.panel");
 	const nothingSelected = categories.length === 0 && types.length === 0;
 
@@ -47,7 +50,7 @@ export function BreakdownFilterPanel({
 				{CATEGORIES.map((category) => (
 					<li key={category} className={cell(categories.includes(category))}>
 						<Checkbox
-							label={category}
+							label={terms.category(category)}
 							checked={categories.includes(category)}
 							onChange={() => onCategoriesChange(toggled(categories, category))}
 						/>
@@ -59,7 +62,10 @@ export function BreakdownFilterPanel({
 				{counts.map(({ type, count }) => (
 					<li key={type} className={cell(types.includes(type))}>
 						<Checkbox
-							label={`${type}, ${t("itemCount", { count })}`}
+							label={t("option", {
+								name: terms.resourceType(type),
+								items: t("itemCount", { count, amount: formatNumber(count) }),
+							})}
 							checked={types.includes(type)}
 							onChange={() => onTypesChange(toggled(types, type))}
 						/>

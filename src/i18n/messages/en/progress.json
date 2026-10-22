@@ -13,7 +13,7 @@
         "clearFilters": "Clear filters",
         "toast": {
             "obtained": "{item}: level {level} obtained",
-            "cleared": "{item}: {count, plural, one {# level} other {# levels}} cleared",
+            "cleared": "{item}: {count, plural, one {{amount} level} other {{amount} levels}} cleared",
             "allObtained": "{item}: all levels obtained",
             "allCleared": "{item}: all levels cleared"
         },

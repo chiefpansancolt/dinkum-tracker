@@ -35,7 +35,6 @@
         "collected": "Collected",
         "markCollected": "Mark collected",
         "unlocked": "Unlocked",
-        "markUnlocked": "Mark unlocked",
         "sellPrice": "Sell price",
         "buyPrice": "Buy price",
         "source": "Source",
@@ -66,8 +65,7 @@
             "of": "of {total}",
             "franklyn": "Franklyn unlocks",
             "craftable": "Craftable",
-            "highDamage": "High damage (20+)",
-            "onTheShelf": "Items to find"
+            "highDamage": "High damage (20+)"
         },
         "filters": {
             "license": "License",
@@ -105,9 +103,10 @@
             "buyPrice": "Buy price",
             "sellPrice": "Sell price",
             "dinks": "{amount} Dinks",
-            "permitPoints": "{amount} permit points",
+            "permitPoints": "{count, plural, one {{amount} permit point} other {{amount} permit points}}",
             "ingredient": "{count}x {name}",
-            "none": "None"
+            "none": "None",
+            "requirementLevel": "{type} Level"
         }
     },
     "recipes": {
@@ -152,7 +151,7 @@
         "card": {
             "cookingLocation": "Cooking Location",
             "buffs": "Buffs",
-            "duration": "{minutes} min(s)",
+            "duration": "{minutes, plural, one {{amount} min} other {{amount} mins}}",
             "sellPrice": "Sell Price",
             "sheilas": "Sheila's",
             "teds": "Ted's",
@@ -197,10 +196,6 @@
             "allCategories": "All categories",
             "source": "Source",
             "allSources": "All sources",
-            "typeHint": "{count} types for {slot}. Resets when Slot changes.",
-            "typeHintAll": "Choose a slot to pick a type.",
-            "setHint": "{count} sets",
-            "categoryHint": "{count} categories",
             "all": "All"
         },
         "list": {

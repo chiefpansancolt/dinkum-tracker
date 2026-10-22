@@ -80,7 +80,10 @@ export function ItemsBreakdownView() {
 				<StatTile
 					label={t("tiles.mostUsed")}
 					value={topResource.name}
-					caption={t("tiles.items", { count: topResource.usedIn.length })}
+					caption={t("tiles.items", {
+						count: topResource.usedIn.length,
+						amount: formatNumber(topResource.usedIn.length),
+					})}
 					progress={1}
 				/>
 			</div>
@@ -136,9 +139,15 @@ export function ItemsBreakdownView() {
 					<p className="text-primary font-medium">
 						{t("showing", { shown: shown.length, total: resourceIndex.length })}
 						{filters.categories.length > 0 &&
-							t("notes.categories", { count: filters.categories.length })}
+							t("notes.categories", {
+								count: filters.categories.length,
+								amount: formatNumber(filters.categories.length),
+							})}
 						{filters.types.length > 0 &&
-							t("notes.types", { count: filters.types.length })}
+							t("notes.types", {
+								count: filters.types.length,
+								amount: formatNumber(filters.types.length),
+							})}
 						{filters.commonOnly && t("notes.common")}
 					</p>
 				</div>

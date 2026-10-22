@@ -1,13 +1,14 @@
 "use client";
 
+import { formatNumber } from "@/i18n/formatter";
 import type { Animal } from "dinkum-data";
 import { useTranslations } from "next-intl";
+import { useTerms } from "@/lib/hooks/useTerms";
 import {
 	ALL,
 	allAnimals,
 	animalSearch,
 	animalSorts,
-	animalTypeLabel,
 	animalTypeOptions,
 	filterAnimals,
 	habitatOptions,
@@ -35,6 +36,7 @@ const TYPE_TONE: Record<string, BadgeTone> = {
 const countOfType = (type: string) => allAnimals.filter((animal) => animal.type === type).length;
 
 function AnimalCard({ animal }: { animal: Animal }) {
+	const terms = useTerms();
 	const t = useTranslations("reference.card");
 	const { dinks, sellDinks } = useDinks();
 	const items = (list: { count: number; name: string }[]) =>
@@ -42,7 +44,7 @@ function AnimalCard({ animal }: { animal: Animal }) {
 
 	const fields: ItemCardField[] = [
 		...(animal.health != null
-			? [{ label: t("health"), value: String(animal.health), mono: true }]
+			? [{ label: t("health"), value: formatNumber(animal.health), mono: true }]
 			: []),
 		...(animal.domesticable ? [{ label: t("domesticable"), value: t("yes") }] : []),
 		...(animal.habitat?.length
@@ -76,10 +78,10 @@ function AnimalCard({ animal }: { animal: Animal }) {
 			badge={
 				<span className="flex flex-wrap gap-1">
 					<Badge tone={TEMPERAMENT_TONE[animal.temperament] ?? "common"}>
-						{animal.temperament}
+						{terms.temperament(animal.temperament)}
 					</Badge>
 					<Badge tone={TYPE_TONE[animal.type] ?? "common"}>
-						{animalTypeLabel(animal.type)}
+						{terms.animalType(animal.type)}
 					</Badge>
 				</span>
 			}
@@ -89,6 +91,7 @@ function AnimalCard({ animal }: { animal: Animal }) {
 }
 
 export function AnimalsPanel() {
+	const terms = useTerms();
 	const t = useTranslations("reference");
 	const all = { id: ALL, label: t("filters.all") };
 	const named = (labels: readonly string[], label = (value: string) => value) =>
@@ -98,14 +101,14 @@ export function AnimalsPanel() {
 		{
 			id: "temperament",
 			label: t("filters.temperament"),
-			options: [all, ...named(temperamentOptions)],
+			options: [all, ...named(temperamentOptions, terms.temperament)],
 			apply: (rest, value) =>
 				filterAnimals(rest, { temperament: value, type: ALL, habitat: ALL }),
 		},
 		{
 			id: "type",
 			label: t("filters.type"),
-			options: [all, ...named(animalTypeOptions, animalTypeLabel)],
+			options: [all, ...named(animalTypeOptions, terms.animalType)],
 			apply: (rest, value) =>
 				filterAnimals(rest, { temperament: ALL, type: value, habitat: ALL }),
 		},

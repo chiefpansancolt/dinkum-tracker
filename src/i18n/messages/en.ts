@@ -10,6 +10,7 @@ import reference from "./en/reference.json";
 import settings from "./en/settings.json";
 import shell from "./en/shell.json";
 import sync from "./en/sync.json";
+import terms from "./en/terms.json";
 import tools from "./en/tools.json";
 import ui from "./en/ui.json";
 
@@ -32,6 +33,7 @@ const en = {
   reference,
   landing,
   sync,
+  terms,
 };
 
 export default en;

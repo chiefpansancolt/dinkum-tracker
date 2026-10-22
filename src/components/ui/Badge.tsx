@@ -25,10 +25,19 @@ const toneClasses: Record<BadgeTone, string> = {
 	veryRare: "text-rarity-very-rare",
 };
 
-export function Badge({ tone, children }: { tone: BadgeTone; children: ReactNode }) {
+interface BadgeProps {
+	tone: BadgeTone;
+	children: ReactNode;
+	/** Lets a long value wrap inside its row instead of reaching past the edge of a card. */
+	wrap?: boolean;
+}
+
+export function Badge({ tone, children, wrap = false }: BadgeProps) {
 	return (
 		<span
-			className={`inline-flex shrink-0 items-center rounded-full border-[1.5px] border-current px-2 py-0.5 font-mono text-[11px] tracking-[0.06em] whitespace-nowrap uppercase ${toneClasses[tone]}`}
+			className={`inline-flex items-center rounded-full border-[1.5px] border-current px-2 py-0.5 font-mono text-[11px] tracking-[0.06em] uppercase ${
+				wrap ? "max-w-full min-w-0 text-start break-words" : "shrink-0 whitespace-nowrap"
+			} ${toneClasses[tone]}`}
 		>
 			{children}
 		</span>

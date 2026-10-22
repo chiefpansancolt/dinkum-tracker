@@ -1,5 +1,6 @@
 "use client";
 
+import { formatNumber } from "@/i18n/formatter";
 import { useTranslations } from "next-intl";
 import { usePlaythrough } from "@/lib/contexts/PlaythroughContext";
 import type { LevelFlags, Levelled } from "@/service/levels";
@@ -60,7 +61,11 @@ export function useLevelEditor(section: "licenses" | "milestones") {
       change,
       obtain
         ? t("obtained", { item: item.name, level })
-        : t("cleared", { item: item.name, count: clearedCount }),
+        : t("cleared", {
+            item: item.name,
+            count: clearedCount,
+            amount: formatNumber(clearedCount),
+          }),
     );
   };
 

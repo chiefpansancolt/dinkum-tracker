@@ -22,7 +22,7 @@ function ResourceLink({ href, name }: { href: string; name: string }) {
 			</span>
 			<span className="text-muted flex shrink-0 items-center gap-1 text-xs">
 				{t("opensInNewTab")}
-				<LuArrowUpRight size={14} aria-hidden="true" />
+				<LuArrowUpRight size={14} aria-hidden="true" className="rtl:-scale-x-100" />
 			</span>
 		</a>
 	);

@@ -1,6 +1,6 @@
 "use client";
 
-import { formatShortDate } from "@/i18n/formatter";
+import { formatNumber, formatShortDate } from "@/i18n/formatter";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { LuDownload } from "react-icons/lu";
@@ -46,7 +46,8 @@ function ImportBody({
 				<span className="text-muted">
 					{t("fileSummary", {
 						inFile: pending.playthroughs.length,
-						onDevice: devicePlaythroughs.length,
+						inFileAmount: formatNumber(pending.playthroughs.length),
+						onDeviceAmount: formatNumber(devicePlaythroughs.length),
 					})}
 				</span>
 			</p>
@@ -62,7 +63,8 @@ function ImportBody({
 						danger: true,
 						description: t("replaceDescription", {
 							onDevice: devicePlaythroughs.length,
-							inFile: pending.playthroughs.length,
+							onDeviceAmount: formatNumber(devicePlaythroughs.length),
+							inFileAmount: formatNumber(pending.playthroughs.length),
 						}),
 					},
 				]}
@@ -129,7 +131,10 @@ export function ImportDialog({ pending, onConfirm, onClose }: ImportDialogProps)
 					<Button onClick={onClose}>{t("cancel")}</Button>
 					{mode === "merge" ? (
 						<Button variant="primary" onClick={() => onConfirm(mode)}>
-							{t("confirmMerge", { count: pending?.playthroughs.length ?? 0 })}
+							{t("confirmMerge", {
+								count: pending?.playthroughs.length ?? 0,
+								amount: formatNumber(pending?.playthroughs.length ?? 0),
+							})}
 						</Button>
 					) : (
 						<Button variant="destructive" onClick={() => onConfirm(mode)}>

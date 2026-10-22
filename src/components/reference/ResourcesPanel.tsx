@@ -1,8 +1,10 @@
 "use client";
 
+import { formatNumber } from "@/i18n/formatter";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { LuListFilter } from "react-icons/lu";
+import { useTerms } from "@/lib/hooks/useTerms";
 import { toggled } from "@/service/breakdown";
 import type { ReferenceResource } from "@/service/reference";
 import {
@@ -46,6 +48,7 @@ function ResourceCard({
 	resource: ReferenceResource;
 	showUsedIn: boolean;
 }) {
+	const terms = useTerms();
 	const t = useTranslations("reference.card");
 	const { dinks, sellDinks } = useDinks();
 
@@ -81,7 +84,10 @@ function ResourceCard({
 			? [
 					{
 						label: t("usedIn"),
-						value: t("usedInItems", { count: usedInCount(resource) }),
+						value: t("usedInItems", {
+							count: usedInCount(resource),
+							amount: formatNumber(usedInCount(resource)),
+						}),
 						mono: true,
 					},
 				]
@@ -94,7 +100,7 @@ function ResourceCard({
 			name={resource.name}
 			badge={
 				<Badge tone={KIND_TONE[resource.resourceType] ?? "common"}>
-					{resource.resourceType}
+					{terms.resourceType(resource.resourceType)}
 				</Badge>
 			}
 			fields={fields}
@@ -109,6 +115,7 @@ function KindPanel({
 	kinds: ResourceType[];
 	onChange: (kinds: ResourceType[]) => void;
 }) {
+	const terms = useTerms();
 	const t = useTranslations("reference.resourcesPanel");
 
 	return (
@@ -130,7 +137,13 @@ function KindPanel({
 						}`}
 					>
 						<Checkbox
-							label={`${kind}, ${t("itemCount", { count: resourceKindCount(kind) })}`}
+							label={t("option", {
+								name: terms.resourceType(kind),
+								items: t("itemCount", {
+									count: resourceKindCount(kind),
+									amount: formatNumber(resourceKindCount(kind)),
+								}),
+							})}
 							checked={kinds.includes(kind)}
 							onChange={() => onChange(toggled(kinds, kind))}
 						/>
