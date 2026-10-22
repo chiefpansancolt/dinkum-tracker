@@ -41,9 +41,8 @@ export const createPlaythrough = (name: string): Playthrough => {
 };
 
 /**
- * Fills the sections that an older save may lack, so pages can read every section without a
- * guard. The result is for reading and for recipes. The store never writes a section that a recipe
- * left unchanged, so a default added here does not reach the saved data by itself.
+ * The store never writes a section that a recipe left unchanged, so a default added here does not
+ * reach the saved data by itself.
  */
 export const withDefaults = (stored: Playthrough): Playthrough => {
   const defaults = createPlaythrough(stored.name);
@@ -59,7 +58,6 @@ export const withDefaults = (stored: Playthrough): Playthrough => {
 const GAME_SEASONS = ["Spring", "Summer", "Autumn", "Winter"] as const;
 export type GameSeason = (typeof GAME_SEASONS)[number];
 
-/** The season of the game date. A save with an unknown season reads as Summer, as the old card did. */
 export const seasonOf = (playthrough: Playthrough): GameSeason =>
   GAME_SEASONS.find(
     (season) => season === playthrough.calendar.currentSeason,

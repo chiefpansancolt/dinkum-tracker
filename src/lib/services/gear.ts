@@ -101,7 +101,6 @@ export const matchesRequirement = (
   item.requirementType !== undefined &&
   normalizeSpelling(item.requirementType) === normalizeSpelling(wanted);
 
-/** The fields that the cards of tools, weapons, equipment and vehicles show. Each type has some of them. */
 export interface GearCardItem {
   id: string;
   name: string;
@@ -126,6 +125,5 @@ export interface GearCardItem {
 export const isPermitPointPrice = (item: { buyUnits?: string }) =>
   item.buyUnits === "Permit Points";
 
-/** Where a Crafting Recipe button leads: the Crafting tab, searched for the item. */
 export const craftingRecipeAddress = (name: string) =>
   `/recipes?tab=crafting&q=${encodeURIComponent(name)}`;

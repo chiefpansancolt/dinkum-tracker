@@ -3,13 +3,9 @@ interface ProgressBarProps {
 	label: string;
 	tone?: "primary" | "info" | "success" | "caution" | "danger";
 	className?: string;
-	/** A thicker bar for the main figure of a card. */
 	thick?: boolean;
 }
 
-/**
- * `value` runs from 0 to 1. The label names what the bar measures for screen readers.
- */
 const toneClasses = {
 	primary: "bg-primary",
 	info: "bg-info",

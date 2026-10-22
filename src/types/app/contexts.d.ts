@@ -12,19 +12,16 @@ export interface PlaythroughContextType {
   lastSavedAt: Date | null;
   saveFailed: boolean;
   /**
-   * Applies `recipe` to the active playthrough and saves only what changed. It returns the
-   * playthrough as it was before, so a caller can offer Undo, or null when nothing was saved.
-   * A browser that cannot store the data shows the Not saved toast.
+   * Saves only what changed and returns the previous playthrough for Undo, or null when nothing
+   * was saved. A failed save shows the Not saved toast.
    */
   update: (recipe: UpdateRecipe) => Playthrough | null;
-  /** Does the same as `update` for any playthrough, such as a rename on the Playthroughs page. */
   updateById: (id: string, recipe: UpdateRecipe) => Playthrough | null;
   /**
-   * Runs a write from the store and reports the result: the Saved chip on success and the Not
-   * saved toast on failure. It returns whether the write succeeded.
+   * Shows the Saved chip on success and the Not saved toast on failure. Returns whether the write
+   * succeeded.
    */
   commit: (write: () => boolean) => boolean;
-  /** Puts back a playthrough exactly as it was, for example after Undo. */
   restore: (playthrough: Playthrough, index?: number) => void;
   setActivePlaythrough: (id: string | null) => void;
   setDefaultSort: (sort: PlaythroughSort) => void;

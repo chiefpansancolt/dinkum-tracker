@@ -9,21 +9,16 @@ const DEVICE_KEY = "dinkum-tracker-sync";
 export type ActivityKind =
   "connected" | "uploaded" | "downloaded" | "merged" | "conflicts" | "failed";
 
-/** One line of the recent sync activity list. It stays on this device. */
 export interface ActivityEntry {
   at: string;
   kind: ActivityKind;
   provider: SyncProviderId;
-  /** The number of changes that need a decision, for the conflicts kind. */
   count?: number;
 }
 
 const MAX_ACTIVITY = 8;
 
-/**
- * What this device keeps about syncing. It lives outside the saved data and is never uploaded: the
- * provider, the login, the repository of GitHub, and the cloud copy as last seen.
- */
+/** This state lives outside the saved data and is never uploaded. */
 export interface DeviceSync {
   deviceId: string;
   deviceName: string;
@@ -33,11 +28,8 @@ export interface DeviceSync {
   state: SyncState | null;
   signInState: string | null;
   lastSyncAt: string | null;
-  /** Sync when the tracker opens and a few seconds after each change. */
   autoSync: boolean;
-  /** Sync when the player comes back to the tab. */
   syncOnReturn: boolean;
-  /** Skip automatic syncs while the browser reports a data saver connection. */
   waitOnMetered: boolean;
   activity: ActivityEntry[];
 }
@@ -105,7 +97,6 @@ export const deviceStore = {
     return true;
   },
 
-  /** Adds a line to the recent activity. The newest line comes first. */
   recordActivity(entry: Omit<ActivityEntry, "at">): boolean {
     const activity = [
       { ...entry, at: new Date().toISOString() },

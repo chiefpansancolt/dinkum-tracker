@@ -16,8 +16,8 @@ import { useToast } from "@/comps/ui/Toast";
 type NamedItem = Levelled & { name: string };
 
 /**
- * Edits the levels of licenses or milestones. Every change saves at once and shows one Undo toast
- * that puts back the flags the change touched, including the higher levels a clear removed.
+ * One Undo toast puts back the flags that the change touched, including the higher levels that a
+ * clear removed.
  */
 export function useLevelEditor(section: "licenses" | "milestones") {
   const t = useTranslations("progress.common.toast");

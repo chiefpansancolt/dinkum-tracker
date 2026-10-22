@@ -1,7 +1,6 @@
 /**
- * Licenses and milestones have levels. The saved data holds one flag for each level under the key
- * `{id}_level_{n}`. A level can be obtained only after the level before it, and clearing a level
- * clears every higher one. These rules are the ones of the old app.
+ * The saved data holds one flag for each level under the key `{id}_level_{n}`. A level can be
+ * obtained only after the level before it, and clearing a level clears every higher one.
  */
 
 export type LevelFlags = Record<string, boolean>;
@@ -16,14 +15,10 @@ export const levelKey = (id: string, level: number) => `${id}_level_${level}`;
 export const isObtained = (flags: LevelFlags, id: string, level: number) =>
   flags[levelKey(id, level)] === true;
 
-/** The first level is always open. Any other level opens when the level before it is obtained. */
 export const isUnlocked = (flags: LevelFlags, id: string, level: number) =>
   level === 1 || isObtained(flags, id, level - 1);
 
-/**
- * The flags to write when a level is switched on or off. A locked level cannot be switched on, so
- * that returns null. Switching a level off also switches off every higher level.
- */
+/** Returns null for a locked level. */
 export const levelChange = (
   flags: LevelFlags,
   item: Levelled,
@@ -43,7 +38,6 @@ export const levelChange = (
   );
 };
 
-/** The flags to write for Complete All or Clear All. */
 export const allLevelsChange = (item: Levelled, obtain: boolean): LevelFlags =>
   Object.fromEntries(
     item.levels.map((entry) => [levelKey(item.id, entry.level), obtain]),
@@ -58,7 +52,6 @@ export const anyObtained = (flags: LevelFlags, item: Levelled) =>
 export const noneObtained = (flags: LevelFlags, item: Levelled) =>
   item.levels.every((entry) => !flags[levelKey(item.id, entry.level)]);
 
-/** The values the changed flags had before, so a change can be undone in one step. */
 export const previousValues = (
   flags: LevelFlags,
   change: LevelFlags,

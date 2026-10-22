@@ -11,7 +11,6 @@ interface RowsOnScrollProps<Item> {
 	children: (visible: Item[]) => ReactNode;
 }
 
-/** Gives the first rows of a long list, and the next rows when the end of the list comes into view. */
 export function RowsOnScroll<Item>({ items, children }: RowsOnScrollProps<Item>) {
 	const [count, setCount] = useState(FIRST_ROWS);
 	const endRef = useRef<HTMLDivElement>(null);

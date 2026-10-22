@@ -9,7 +9,6 @@ interface InstalledToggleProps {
 	onChange: (checked: boolean) => void;
 }
 
-/** One full width row to mark a building installed. */
 export function InstalledToggle({ checked, onChange }: InstalledToggleProps) {
 	const t = useTranslations("progress.buildings");
 	const id = useId();

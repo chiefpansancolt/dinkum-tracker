@@ -7,7 +7,6 @@ import type { GameSeason } from "@/service/playthrough";
 import { seasonOf } from "@/service/playthrough";
 import { ageOf } from "@/service/relativeDate";
 
-/** The relative wording of the old playthrough card: Today, Yesterday, 3 days ago and so on. */
 export function useAgeText() {
   const t = useTranslations("playthroughs.relative");
 

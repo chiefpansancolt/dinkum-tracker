@@ -15,11 +15,7 @@ interface PlaythroughGateProps {
 	children: (playthrough: Playthrough) => ReactNode;
 }
 
-/**
- * Pages that read the active playthrough render through this gate. It shows the loading state while
- * saved data is read and the empty state when there is no playthrough. Its Suspense boundary lets
- * the views read their tab from the address with `useUrlTab`.
- */
+/** The Suspense boundary lets the views read their tab from the address with `useUrlTab`. */
 export function PlaythroughGate({ title, children }: PlaythroughGateProps) {
 	const t = useTranslations("shell.playthroughGate");
 	const { activePlaythrough, isLoaded } = usePlaythrough();

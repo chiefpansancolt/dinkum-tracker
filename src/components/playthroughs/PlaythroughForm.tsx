@@ -9,15 +9,12 @@ import { PlaythroughNameField } from "./PlaythroughNameField";
 
 interface PlaythroughFormProps {
 	formId: string;
-	/** Returns whether the playthrough was created. */
 	onCreate: (name: string, makeActive: boolean) => boolean;
 	onCreated: () => void;
 	onBusyChange?: (busy: boolean) => void;
-	/** True after a create that the browser could not store, so the button can read Try again. */
 	onFailedChange?: (failed: boolean) => void;
 }
 
-/** The fields of a new playthrough. The submit button sits outside, so a dialog and a page can place it. */
 export function PlaythroughForm({
 	formId,
 	onCreate,

@@ -7,18 +7,15 @@ import { LuCheck, LuLock } from "react-icons/lu";
 import { PermitPointsIcon } from "./PermitPointsIcon";
 
 interface LevelRowProps {
-	/** The title of the level, for example Level 2 or Level 3: 1,000 km. */
 	title: ReactNode;
-	/** The permit point cost, shown with the permit points picture. */
 	points: string;
 	checked: boolean;
-	/** A level opens only after the level before it. A locked level says so in text. */
+	/** A level opens only after the level before it. */
 	locked: boolean;
 	onToggle: () => void;
 	children?: ReactNode;
 }
 
-/** One level of a license or a milestone. The whole row is the control. */
 export function LevelRow({ title, points, checked, locked, onToggle, children }: LevelRowProps) {
 	const t = useTranslations("progress.common");
 	const id = useId();

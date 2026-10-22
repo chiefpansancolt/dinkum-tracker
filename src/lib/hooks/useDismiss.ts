@@ -1,9 +1,6 @@
 import { useEffect } from "react";
 import type { RefObject } from "react";
 
-/**
- * Calls `onDismiss` on a press outside `containerRef` or on the Escape key while `open` is true.
- */
 export const useDismiss = (
   containerRef: RefObject<HTMLElement | null>,
   open: boolean,

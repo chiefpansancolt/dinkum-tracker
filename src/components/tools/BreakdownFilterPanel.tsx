@@ -18,7 +18,6 @@ interface BreakdownFilterPanelProps {
 
 const counts = typeCounts(resourceIndex);
 
-/** The nine category checkboxes and the fourteen type checkboxes, with Clear Selections. */
 export function BreakdownFilterPanel({
 	categories,
 	types,

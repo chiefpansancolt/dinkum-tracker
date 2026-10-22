@@ -1,10 +1,7 @@
 import { DEFAULT_LOCALE, REGION_TAG } from "./locales";
 import type { Locale } from "./locales";
 
-/**
- * Number formats the player can pick. Auto follows the language. Each other choice names the
- * region whose separators it uses, and the label shows the result so nobody has to guess.
- */
+/** The label shows the result, so nobody has to guess. */
 export const NUMBER_FORMATS = [
   { id: "auto", tag: null },
   { id: "us", tag: "en-US" },

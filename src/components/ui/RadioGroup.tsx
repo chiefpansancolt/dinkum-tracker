@@ -6,7 +6,6 @@ interface RadioOption<Value extends string> {
 	id: Value;
 	label: string;
 	description?: string;
-	/** A destructive choice reads in the danger color. */
 	danger?: boolean;
 }
 

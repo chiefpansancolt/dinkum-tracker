@@ -49,12 +49,11 @@ const playthrough: Schema = {
 };
 
 /**
- * Says how the saved data merges. The data file is the export file of the tracker, so its shape
- * never changes. Marked items and levels take the higher side, lists of ids keep what either
- * device added and drop what either device removed, and the day of the calendar and the name of a
- * playthrough report a conflict when two devices changed them. The date of the export is the date of
- * the newest change. A playthrough that one device deleted is deleted on the others, unless one of them
- * changed it since the last sync. Then the changed copy stays and the merge reports a conflict.
+ * The data file is the export file, so its shape never changes. Marked items and levels take the
+ * higher side. Lists of ids keep what either device added and drop what either device removed. The
+ * calendar day and the playthrough name report a conflict when both devices changed them. A
+ * playthrough that one device deleted is deleted on the others, unless one of them changed it
+ * since the last sync. Then the changed copy stays and the merge reports a conflict.
  */
 export const syncSchema: Schema = {
   type: "object",

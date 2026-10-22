@@ -19,7 +19,6 @@ function SidebarLink({
 	onNavigate,
 }: {
 	item: NavItem;
-	/** The progress of the page, such as 9/27, shown at the end of the link. */
 	count?: string;
 	onNavigate?: () => void;
 }) {
@@ -53,7 +52,6 @@ function SidebarLink({
 
 interface SidebarContentProps {
 	onNavigate?: () => void;
-	/** The mobile drawer shows the theme choice. The desktop sidebar leaves it to Settings. */
 	showThemeSwitch?: boolean;
 }
 

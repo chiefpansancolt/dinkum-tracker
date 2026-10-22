@@ -6,10 +6,7 @@ import type { CollectSection, Flags } from "@/service/collect";
 import { isCollected, withFlag } from "@/service/collect";
 import { useToast } from "@/comps/ui/Toast";
 
-/**
- * Marks one item collected or unlocked and offers Undo. Repeated changes share one toast, and Undo
- * puts back only the item of the last change.
- */
+/** Repeated changes share one toast. Undo puts back only the item of the last change. */
 export function useCollectedToggle(
   section: CollectSection,
   mode: "collected" | "unlocked",

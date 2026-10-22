@@ -36,7 +36,6 @@ export type NavItemId =
   | "reference"
   | "settings";
 
-/** Pages that are not in the sidebar list but still have a title. */
 export type RouteId = NavItemId | "playthroughs" | "newPlaythrough";
 
 type NavGroupId = "track" | "progress" | "collect" | "tools";

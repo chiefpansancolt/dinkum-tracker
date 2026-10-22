@@ -3,7 +3,6 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-/** The permit points picture. Its text alternative reads as permit points. */
 export function PermitPointsIcon({ size = 18 }: { size?: number }) {
 	const t = useTranslations("progress.common");
 

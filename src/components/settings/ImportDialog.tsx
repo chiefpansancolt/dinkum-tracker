@@ -14,7 +14,6 @@ import { RadioGroup } from "@/comps/ui/RadioGroup";
 export interface PendingImport {
 	fileName: string;
 	playthroughs: Playthrough[];
-	/** The playthroughs on the device when the file was chosen, for the preview. */
 	devicePlaythroughs: Playthrough[];
 }
 

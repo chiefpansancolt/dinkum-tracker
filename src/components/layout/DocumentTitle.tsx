@@ -6,8 +6,8 @@ import { useEffect } from "react";
 import { APP_NAME, getPageRouteId } from "@/data/nav";
 
 /**
- * The server renders the English title. This sets the title again in the chosen language and
- * sets it again when Next replaces it on navigation.
+ * The server renders the English title. This sets the title again in the chosen language and after
+ * each Next navigation.
  */
 export function DocumentTitle() {
 	const t = useTranslations("shell.nav.items");

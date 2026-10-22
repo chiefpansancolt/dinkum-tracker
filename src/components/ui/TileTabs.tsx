@@ -20,7 +20,6 @@ interface TileTabsProps<TabId extends string> {
 	children: ReactNode;
 }
 
-/** Tabs drawn as tiles. Each tile shows how much of its section is done. */
 export function TileTabs<TabId extends string>({
 	label,
 	tabs,

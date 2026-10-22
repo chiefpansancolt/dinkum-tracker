@@ -25,7 +25,6 @@ interface GearCardProps {
 	item: GearCardItem;
 	toggle: Toggle;
 	commerceLevel: CommerceLevel;
-	/** The label of the list of inputs: Ingredients or Resources. */
 	inputsLabel: "ingredients" | "resources";
 }
 

@@ -11,7 +11,6 @@ interface PermitBannerProps {
 	sentence: string;
 }
 
-/** The permit points spent or earned, as a wide tile with the figure, a bar and a sentence. */
 export function PermitBanner({ label, amount, total, percent, sentence }: PermitBannerProps) {
 	return (
 		<Card className="flex flex-col gap-1.5 px-4 py-3">

@@ -1,8 +1,8 @@
 import type { Locale } from "./locales";
 
 /**
- * The name of each language written in that language. A fixed list, because Intl.DisplayNames
- * capitalizes names differently in Node and in the browser, which breaks hydration.
+ * Intl.DisplayNames capitalizes names differently in Node and in the browser, which breaks
+ * hydration.
  */
 const LANGUAGE_NAMES: Record<Locale, string> = {
   en: "English",

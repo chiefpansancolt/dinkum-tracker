@@ -32,7 +32,7 @@ const dismiss = () => {
 	window.dispatchEvent(new Event(DISMISSED_EVENT));
 };
 
-/** Tells players on the old domain where their data has to go. It shows on that domain only. */
+/** Shows on the old domain only. */
 export function DomainNotice() {
 	const t = useTranslations("shell.domainNotice");
 	const visible = useSyncExternalStore(subscribe, shouldShowNotice, () => false);

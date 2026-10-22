@@ -4,7 +4,6 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useSync } from "@/lib/contexts/SyncContext";
 
-/** The sync state in the page header. It opens the Sync tab of Settings. */
 export function SyncChip() {
 	const t = useTranslations("sync.status");
 	const { available, status, conflicts } = useSync();

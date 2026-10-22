@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 
-/** Keeps `?q=` in the address as the player types, so a link to a search can be shared. */
 export function useSearchInAddress(query: string) {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);

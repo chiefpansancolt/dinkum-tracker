@@ -19,7 +19,6 @@ interface HeartMeterProps {
 	onChange: (hearts: number) => void;
 }
 
-/** Five hearts the player can press, quarter step buttons and the value as a number. */
 export function HeartMeter({ name, hearts, onChange }: HeartMeterProps) {
 	const t = useTranslations("people.npcs.hearts");
 	const step = formatDecimal(HEART_STEP, 2);

@@ -67,7 +67,6 @@ export interface ReferenceResource {
   variants?: { id: string; inputs: { count: number; name: string }[] }[];
 }
 
-/** The six kinds of resource that the Reference page lists, in the order of the type panel. */
 export const RESOURCE_KINDS = [
   ResourceType.RELIC,
   ResourceType.FORAGABLE,
@@ -96,7 +95,6 @@ const usesByName = new Map(
   resourceIndex.map((resource) => [resource.name, resource]),
 );
 
-/** How many items use the resource as an ingredient. Zero when none does. */
 export const usedInCount = (resource: { name: string }) =>
   usesByName.get(resource.name)?.usedIn.length ?? 0;
 
@@ -224,7 +222,6 @@ export interface AnimalFilters {
   habitat: string;
 }
 
-/** The habitat filter reads the habitat list of each animal. */
 export const filterAnimals = (items: Animal[], filters: AnimalFilters) =>
   items.filter(
     (animal) =>
@@ -279,7 +276,6 @@ export const DAILY_CATEGORIES = Object.keys(
   dailyMilestones(),
 ) as DailyCategory[];
 
-/** Tasks given to the player on each new game day. */
 export const DAILY_TASKS_PER_DAY = 3;
 
 const dailyData = dailyMilestones();
@@ -317,13 +313,11 @@ export const largestDailyCategory = DAILY_CATEGORIES.reduce((top, key) =>
   dailyCategoryCount(key) > dailyCategoryCount(top) ? key : top,
 );
 
-/** The buffs of an item as pairs of key and value. A buff that is off is left out. */
 export const buffPairs = (buffs: object | undefined) =>
   (Object.entries(buffs ?? {}) as [string, number | boolean][]).filter(
     ([, value]) => value !== false,
   );
 
-/** The ingredient set of a conversion, for example 5 Copper Ore. */
 export const inputsLabel = (inputs: { count: number; name: string }[]) =>
   inputs
     .map((input) => `${formatNumber(input.count)} ${input.name}`)

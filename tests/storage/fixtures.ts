@@ -50,7 +50,6 @@ export const progressedPlaythrough = (): Playthrough => ({
   cassettes: { ambient_cassette: true },
 });
 
-/** An older save written before several sections existed. */
 export const legacyPlaythrough = (): Playthrough => {
   const {
     cassettes: _cassettes,
@@ -61,7 +60,6 @@ export const legacyPlaythrough = (): Playthrough => {
   return rest as Playthrough;
 };
 
-/** A save that carries a field this app does not know about. */
 export const playthroughWithUnknownFields = (): Playthrough =>
   ({
     ...emptyPlaythrough("1740000000000", "Future save"),

@@ -31,31 +31,21 @@ interface FilterControls {
 interface CollectionPanelProps<Item extends { id: string; name: string }> {
 	section: CollectSection;
 	mode: "collected" | "unlocked";
-	/** The plural noun, such as tools, for the search box and the results line. */
 	things: string;
 	items: Item[];
 	flags: Flags | undefined;
-	/** The filters before the Collected or Unlocked filter, which the panel adds last. */
 	buildSpecs: (values: Record<string, string>) => FilterSpec<Item>[];
 	afterChange?: (id: string, values: Record<string, string>) => Record<string, string>;
 	extraFilter?: (items: Item[]) => Item[];
 	searchAction?: ReactNode;
-	/** True while the extra filter is narrowing the list. */
 	extraFiltering?: boolean;
-	/** A strip above the filters. Its tiles can set the filters. */
 	tiles?: (controls: FilterControls) => ReactNode;
-	/** Called with Clear filters, for a filter that has its own state, such as Buffs. */
 	onClear?: () => void;
 	renderCard: (item: Item, toggle: Toggle) => ReactNode;
-	/** The dense view. Without it the list is always cards and there is no view toggle. */
 	renderList?: (shown: Item[], toggleOf: (item: Item) => Toggle, total: number) => ReactNode;
 	cardMinWidth?: string;
 }
 
-/**
- * One tab of a collect page: filters, a results line, and the items as cards or as a list. Every
- * change is saved at once and offers Undo.
- */
 export function CollectionPanel<Item extends { id: string; name: string }>({
 	section,
 	mode,

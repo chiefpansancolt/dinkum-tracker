@@ -11,13 +11,9 @@ import type { Locale, Messages } from "./locales";
 import en from "./messages/en";
 
 /**
- * Reads the language and formats from the saved preferences and gives every component its
- * messages. It sits outside the data provider, so it reads the stored preferences itself. English
- * is part of the first page load. Another language loads after the page opens and English shows
- * until then.
- *
- * Plain functions such as `formatNumber` read module state. The children are keyed by the
- * choices, so they render again with the new formats as soon as a choice changes.
+ * It sits outside the data provider, so it reads the stored preferences itself. English is part of
+ * the first page load. Another language loads after the page opens, and English shows until then.
+ * The children are keyed by the choices, so they render again when a choice changes.
  */
 export function I18nProvider({ children }: { children: ReactNode }) {
 	const prefs = useSyncExternalStore(

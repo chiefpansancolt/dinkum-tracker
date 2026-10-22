@@ -23,7 +23,6 @@ export const SEASON_TONE: Record<string, BadgeTone> = {
 	All: "common",
 };
 
-/** Chips that wrap and sit at the end of a card row. */
 export function Chips({ items, tone = "common" }: { items: string[]; tone?: BadgeTone }) {
 	return (
 		<span className="flex flex-wrap justify-end gap-1">
@@ -38,7 +37,6 @@ export function Chips({ items, tone = "common" }: { items: string[]; tone?: Badg
 
 const SHOWN_BUFFS = 3;
 
-/** The first buffs as chips, then one chip with the number left over. */
 export function BuffChips({ buffs }: { buffs: object | undefined }) {
 	const t = useTranslations("reference.card");
 	const terms = useTerms();
@@ -78,7 +76,6 @@ interface StatSpec {
 	caption?: string;
 }
 
-/** Up to three stat tiles and, when the tab shows prices, the commerce level control. */
 export function StatRow({
 	stats,
 	commerce = true,

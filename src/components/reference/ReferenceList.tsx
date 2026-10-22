@@ -18,27 +18,22 @@ import { Card } from "@/comps/ui/Card";
 import { EmptyState } from "@/comps/ui/EmptyState";
 
 interface ReferenceListProps<Item extends { id: string; name: string }> {
-	/** The plural noun, such as animals. */
 	things: string;
 	items: Item[];
 	filters: FilterSpec<Item>[];
 	sorts: SortChoice<Item>[];
-	/** Puts Sort By before the other filters, as the Resources tab does. */
 	sortFirst?: boolean;
 	search: (items: Item[], query: string) => Item[];
 	searchLabel: string;
-	/** A strip above the filters, such as stat tiles. */
 	tiles?: ReactNode;
 	extraFilter?: (items: Item[]) => Item[];
 	extraFiltering?: boolean;
 	onClear?: () => void;
 	searchAction?: ReactNode;
-	/** Content between the filter block and the list. */
 	belowFilters?: ReactNode;
 	renderCard: (item: Item) => ReactNode;
 }
 
-/** One list of the Reference page: filters, a sort, a name search, a count and masonry cards. */
 export function ReferenceList<Item extends { id: string; name: string }>({
 	things,
 	items,

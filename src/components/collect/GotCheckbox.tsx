@@ -8,7 +8,6 @@ interface GotCheckboxProps {
 	onChange: (checked: boolean) => void;
 }
 
-/** The square at the start of a list row. It is a real checkbox, drawn to match the list. */
 export function GotCheckbox({ checked, itemName, onChange }: GotCheckboxProps) {
 	return (
 		<label className="relative flex size-8 cursor-pointer items-center justify-center">

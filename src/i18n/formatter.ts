@@ -10,9 +10,8 @@ import type { Locale, Messages } from "./locales";
 import en from "./messages/en";
 
 /**
- * The language and formats that code outside React reads. `I18nProvider` sets them, and it
- * remounts its children when they change, so a plain function such as `formatNumber` is always
- * current while it renders.
+ * `I18nProvider` sets this state and remounts its children when it changes, so a plain function
+ * such as `formatNumber` is current while it renders.
  */
 interface I18nState {
   locale: Locale;
@@ -51,11 +50,9 @@ const numberFormatter = (options: Intl.NumberFormatOptions = {}) => {
 
 export const formatNumber = (value: number) => numberFormatter().format(value);
 
-/** A number with at most `maxFractionDigits` decimals, for example 4.75. */
 export const formatDecimal = (value: number, maxFractionDigits = 2) =>
   numberFormatter({ maximumFractionDigits: maxFractionDigits }).format(value);
 
-/** A number with exactly `digits` decimals, for example 1.50 kg. */
 export const formatFixed = (value: number, digits: number) =>
   numberFormatter({
     minimumFractionDigits: digits,
@@ -108,7 +105,6 @@ export const formatDateTime = (iso: string) => {
   });
 };
 
-/** The date of a moment, written the way the player chose. */
 export const formatShortDate = (iso: string) => {
   const date = new Date(iso);
   if (state.dateFormat !== "auto") return numericDate(date, state.dateFormat);
@@ -119,10 +115,7 @@ export const formatShortDate = (iso: string) => {
   });
 };
 
-/**
- * A translator for code that is not a component, such as a service that builds a sentence. A
- * component uses the `useTranslations` hook instead.
- */
+/** A component uses the `useTranslations` hook instead. */
 export const translator = <Namespace extends keyof Messages>(
   namespace: Namespace,
 ) =>

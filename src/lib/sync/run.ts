@@ -50,15 +50,14 @@ const isRejectedToken = (error: unknown) =>
   error.kind === "auth" &&
   error.status === 401;
 
-/** Makes the next request renew the access token, which the provider no longer accepts. */
 const expireAccessToken = () => {
   const { tokens } = deviceStore.load();
   if (tokens) deviceStore.update({ tokens: { ...tokens, accessExpiresAt: 0 } });
 };
 
 /**
- * Syncs once. When the provider rejects a token that has not expired by the clock, the token is
- * renewed and the sync runs once more. A sign in that is refused again reports the first error.
+ * A token that the provider rejects before its expiry is renewed, and the sync runs once more. A
+ * second refusal reports the first error.
  */
 export const runSync = async (
   local: SyncDocument,

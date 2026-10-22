@@ -7,8 +7,8 @@ import { addPlaythrough, removePlaythrough } from "@/service/store";
 import { useToast } from "@/comps/ui/Toast";
 
 /**
- * Creates an empty playthrough and offers Undo. Undo removes it and makes the playthrough that was
- * active before active again. It returns false when the browser could not store the data.
+ * Undo removes the playthrough and makes the previous active playthrough active again. Returns
+ * false when the browser could not store the data.
  */
 export function useCreatePlaythrough() {
   const t = useTranslations("playthroughs.new");

@@ -1,6 +1,5 @@
 import type { Playthrough } from "@/types/app";
 
-/** The sections of a playthrough that hold one collected or unlocked flag for each item. */
 export type CollectSection =
   | "books"
   | "cassettes"
@@ -22,7 +21,6 @@ export type Flags = Record<string, boolean>;
 export const isCollected = (flags: Flags | undefined, id: string) =>
   flags?.[id] === true;
 
-/** The number of flags that are on, as the old pages counted collected items. */
 export const collectedCount = (flags: Flags | undefined) =>
   Object.values(flags ?? {}).filter(Boolean).length;
 
@@ -54,7 +52,6 @@ export const normalizeSpelling = (label: string) =>
 
 export const uniqueSorted = (labels: string[]) => [...new Set(labels)].sort();
 
-/** True when any of the labels contains the wanted text, ignoring case and the spelling variants. */
 export const matchesLabel = (labels: string[], wanted: string) => {
   const target = normalizeSpelling(wanted).toLowerCase();
   return labels.some((label) =>

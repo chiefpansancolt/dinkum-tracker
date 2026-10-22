@@ -6,10 +6,8 @@ import { SectionLabel } from "./SectionLabel";
 interface StatTileProps {
 	value: ReactNode;
 	label: string;
-	/** A short note beside the value, such as the name the value belongs to. */
 	caption?: string;
 	emphasis?: boolean;
-	/** A share from 0 to 1. The tile shows a bar when it is set. */
 	progress?: number;
 }
 

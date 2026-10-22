@@ -6,7 +6,6 @@ interface PageHeaderProps {
 	title: string;
 	subline?: string;
 	actions?: ReactNode;
-	/** False for a page that saves nothing, such as a calculator. */
 	showSaved?: boolean;
 }
 

@@ -19,19 +19,14 @@ interface WardrobeTableProps<Item extends { id: string; name: string; img: strin
 	total: number;
 	toggleOf: (item: Item) => Toggle;
 	columns: Column<Item>[];
-	/** What a phone shows under the name of a row, such as the type badge. */
 	mobileDetail: (item: Item) => ReactNode;
-	/** The value at the end of a phone row, such as the sell price. */
 	mobileValue: (item: Item) => ReactNode;
 }
 
 const HEADER_CELL =
 	"px-3 py-2 text-start font-mono text-[11px] font-normal tracking-[0.08em] uppercase";
 
-/**
- * The dense view of a wardrobe tab. A wide screen gets a table with every column. A phone gets
- * compact rows. Rows load as the player scrolls, because a tab can have hundreds of items.
- */
+/** Rows load as the player scrolls, because a tab can have hundreds of items. */
 export function WardrobeTable<Item extends { id: string; name: string; img: string }>({
 	items,
 	total,

@@ -12,9 +12,8 @@ interface ActivateAndRedirectProps {
 }
 
 /**
- * Old addresses carried the playthrough id. Opening one makes that playthrough the active one, as
- * the old app did, and forwards to the page that replaced it. An id that no longer exists changes
- * nothing.
+ * Opening an old address makes its playthrough the active one, as the old app did. An id that no
+ * longer exists changes nothing.
  */
 export function ActivateAndRedirect({ playthroughId, to }: ActivateAndRedirectProps) {
 	const router = useRouter();

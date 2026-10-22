@@ -42,7 +42,6 @@ const authBase = AUTH_URL.replace(/\/+$/, "").replace(
   "",
 );
 
-/** The order of the picker in the design: the recommended provider first, GitHub last. */
 const PICKER_ORDER: SyncProviderId[] = [
   "google",
   "dropbox",
@@ -50,7 +49,6 @@ const PICKER_ORDER: SyncProviderId[] = [
   "github",
 ];
 
-/** The providers that this build can sign in with. */
 export const availableProviders: SyncProviderId[] = !authBase
   ? []
   : PICKER_ORDER.filter(
@@ -69,7 +67,6 @@ const PARENT_FOLDERS: Partial<Record<SyncProviderId, string>> = {
 export const dataFolderOf = (provider: SyncProviderId, appId: string) =>
   `${PARENT_FOLDERS[provider] ?? ROOT_FOLDER}/${appId}`;
 
-/** GitHub keeps the data in a repository. The other providers keep it in a folder. */
 export const usesRepository = (provider: SyncProviderId) =>
   provider === "github";
 
@@ -101,7 +98,6 @@ const FOLDER_PROVIDERS = {
   microsoft: OneDriveProvider,
 };
 
-/** Returns null while the provider still needs a setting, such as the repository of GitHub. */
 export const createProvider = (
   provider: SyncProviderId,
   device: DeviceSync,

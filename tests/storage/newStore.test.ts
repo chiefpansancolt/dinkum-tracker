@@ -11,7 +11,6 @@ import { describeStorageContract } from "./contract";
 
 const REPLACED_SECTIONS = new Set(["calendar"]);
 
-/** The merge rules of the old `updatePlaythroughData`, so the contract can drive the new store. */
 const applySections = (
   playthrough: Playthrough,
   updates: PlaythroughUpdateData,

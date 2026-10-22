@@ -8,7 +8,6 @@ export const WEIGHT_STEP = 0.01;
 export const clampWeight = (item: WeightItem, weight: number) =>
   Math.min(Math.max(weight, item.minWeight), item.maxWeight);
 
-/** The price is rounded to a whole dink. */
 export const priceFor = (item: WeightItem, weight: number) =>
   Math.round(item.pricePerKg * weight);
 

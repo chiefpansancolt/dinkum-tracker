@@ -46,10 +46,8 @@ export const matchesRecipeSource = (
 
 const BUFF_DURATION_KEY = "length";
 
-/** A buff has a number, such as a level, or is simply on, such as Sleepless. */
 export type BuffValue = number | boolean;
 
-/** A recipe has buffs when it lists anything besides the buff duration. */
 export const buffEntries = (recipe: CookingRecipe): [string, BuffValue][] =>
   Object.entries(recipe.buffs ?? {}).filter(
     (entry): entry is [string, BuffValue] =>
@@ -59,7 +57,6 @@ export const buffEntries = (recipe: CookingRecipe): [string, BuffValue][] =>
 export const hasBuffs = (recipe: CookingRecipe) =>
   buffEntries(recipe).length > 0;
 
-/** Every buff that any cooking recipe gives, in the order of the old panel. */
 export const allBuffKeys = [
   ...new Set(
     recipeItems.cooking.flatMap((recipe) =>
@@ -77,7 +74,6 @@ const UNITS: Record<string, string> = {
 
 export const buffUnit = (key: string) => UNITS[key] ?? "";
 
-/** Any keeps recipes that have at least one chosen buff. All needs every chosen buff. */
 export const filterByBuffs = (
   recipes: CookingRecipe[],
   chosen: string[],

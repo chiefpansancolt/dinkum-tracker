@@ -6,7 +6,6 @@ import { UIProvider } from "@/lib/contexts/UIContext";
 import { ToastProvider } from "@/comps/ui/Toast";
 import { AppShell } from "./AppShell";
 
-/** Everything a page of the app needs around it: language, drawer, toasts, saved data and the shell. */
 export function AppProviders({ children }: { children: ReactNode }) {
 	return (
 		<I18nProvider>

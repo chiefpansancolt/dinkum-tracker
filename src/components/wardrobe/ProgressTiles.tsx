@@ -7,18 +7,14 @@ import { CommerceLevelControl } from "@/comps/page/CommerceLevelControl";
 import { ProgressBar } from "@/comps/ui/ProgressBar";
 
 interface ProgressTilesProps {
-	/** The line above the tiles, such as Progress by slot. */
 	heading: string;
 	progress: Progress[];
-	/** The label of the tile that is also the current filter, if any. */
 	selected: string | null;
 	onSelect: (label: string) => void;
 	showPercent?: boolean;
-	/** Tile columns on a wide screen. */
 	columns: number;
 }
 
-/** A strip of tiles, one for each slot, set or category. A tile sets that filter. */
 export function ProgressTiles({
 	heading,
 	progress,

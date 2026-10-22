@@ -9,7 +9,6 @@ import { IconButton } from "@/comps/ui/IconButton";
 
 const linkClasses = "hover:text-primary flex min-h-11 items-center lg:min-h-9";
 
-/** The public header of the landing page. It has no app sidebar. */
 export function LandingHeader() {
 	const t = useTranslations("landing.header");
 	const [open, setOpen] = useState(false);

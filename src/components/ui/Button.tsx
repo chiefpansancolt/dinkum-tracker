@@ -24,7 +24,6 @@ const buttonClasses = (variant: ButtonVariant = "secondary", className = "") =>
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	variant?: ButtonVariant;
-	/** Disables the button and shows a spinner while the action it started is running. */
 	loading?: boolean;
 }
 

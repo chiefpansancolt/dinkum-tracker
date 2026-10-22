@@ -437,7 +437,7 @@ function TreesList() {
 	);
 }
 
-/** The four plant lists as sub tabs. The sub tab lives in the address as `?sub=`. */
+/** The sub tab lives in the address as `?sub=`. */
 export function PlantsPanel() {
 	const t = useTranslations("reference");
 	const router = useRouter();

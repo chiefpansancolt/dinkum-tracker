@@ -28,18 +28,16 @@ export const fullHeartCount = (
 export const metCount = (relationships: Record<string, number> | undefined) =>
   allNpcs.filter((npc) => heartsOf(relationships, npc.id) > 0).length;
 
-/** One step up or down, kept inside 0 to 5. */
 export const stepHearts = (hearts: number, direction: 1 | -1) =>
   Math.min(MAX_HEARTS, Math.max(0, hearts + direction * HEART_STEP));
 
 /**
- * The value after a click on the heart at `index` (0 to 4). A full heart sets the count to its own
- * position, so the last full heart takes a heart back. An empty or part filled heart fills up to it.
+ * A full heart sets the count to its own position, so the last full heart takes a heart back. An
+ * empty or part filled heart fills up to it.
  */
 export const heartsAfterClick = (hearts: number, index: number) =>
   index < Math.floor(hearts) ? index : index + 1;
 
-/** How much of the heart at `index` is filled, from 0 to 1 in quarters. */
 export const heartFill = (hearts: number, index: number) =>
   Math.min(1, Math.max(0, hearts - index));
 

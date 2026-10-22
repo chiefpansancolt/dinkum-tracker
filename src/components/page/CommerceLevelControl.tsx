@@ -14,7 +14,6 @@ const LEVEL_LABEL_KEYS = {
 
 const LEVELS = Object.keys(LEVEL_LABEL_KEYS).map(Number) as CommerceLevel[];
 
-/** Sets the commerce level that every sell price on the page uses. It is saved for all pages. */
 export function CommerceLevelControl() {
 	const t = useTranslations("ui.commerce");
 	const { prefs, updatePrefs } = usePlaythrough();

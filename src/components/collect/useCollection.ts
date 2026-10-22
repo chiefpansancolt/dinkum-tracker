@@ -10,20 +10,16 @@ export interface FilterSpec<Item> {
   label: string;
   /** The first option is the all choice. A filter on it does not narrow the list. */
   options: { id: string; label: string }[];
-  /** A short line under the select that says what the choices are or how they behave. */
   hint?: string;
   apply: (items: Item[], value: string) => Item[];
 }
 
 interface UseCollectionOptions<Item extends { id: string }> {
   items: Item[];
-  /** The filters, which may depend on the values chosen so far, as Type depends on Slot. */
   buildSpecs: (values: Record<string, string>) => FilterSpec<Item>[];
   search: (items: Item[], query: string) => Item[];
   initialQuery: string;
-  /** A filter with its own control outside the filter block, such as the Buffs panel. */
   extraFilter?: (items: Item[]) => Item[];
-  /** Lets a change reset another filter, as a new Slot resets the Type. */
   afterChange?: (
     id: string,
     values: Record<string, string>,
@@ -32,7 +28,6 @@ interface UseCollectionOptions<Item extends { id: string }> {
 
 const firstOption = <Item>(spec: FilterSpec<Item>) => spec.options[0].id;
 
-/** The filter state of one list, and the items that pass the filters and the name search. */
 export function useCollection<Item extends { id: string }>({
   items,
   buildSpecs,
@@ -81,13 +76,11 @@ export function useCollection<Item extends { id: string }>({
       setChosen({});
       setQuery("");
     },
-    /** How many items a draft of the filters would show, for the apply button of the mobile sheet. */
     countFor: (draft: Record<string, string>) =>
       run({ ...chosen, ...draft }, query).length,
   };
 }
 
-/** The Collected or Unlocked filter, which is the last filter of every list. */
 export const collectedSpec = <Item extends { id: string }>(
   label: string,
   options: { all: string; on: string; off: string },

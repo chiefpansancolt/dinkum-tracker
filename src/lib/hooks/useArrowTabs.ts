@@ -2,10 +2,7 @@ import type { KeyboardEvent } from "react";
 
 const STEPS: Record<string, number> = { ArrowRight: 1, ArrowLeft: -1 };
 
-/**
- * Keyboard support for a tab strip: arrow keys move between tabs, Home and End jump to the ends.
- * Put the handler on the element with role tablist. Each tab needs role tab.
- */
+/** Put the handler on the element with role tablist. Each tab needs role tab. */
 export function useArrowTabs<TabId extends string>(
   ids: readonly TabId[],
   active: TabId | null,

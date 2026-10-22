@@ -23,10 +23,7 @@ interface PediaListProps {
 const HEADER_CELL =
 	"px-3 py-2 text-start font-mono text-[11px] font-normal tracking-[0.08em] uppercase";
 
-/**
- * The dense view. A wide screen gets a table. A phone gets compact rows, because six columns do not
- * fit beside a three way control.
- */
+/** A phone gets compact rows, because six columns do not fit beside a three way control. */
 export function PediaList({
 	entries,
 	statusOf,

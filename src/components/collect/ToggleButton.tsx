@@ -10,7 +10,6 @@ interface ToggleButtonProps {
 	onChange: (checked: boolean) => void;
 }
 
-/** A full width button that marks an item collected. It shows the saved state in its label. */
 export function ToggleButton({
 	checked,
 	onLabel,

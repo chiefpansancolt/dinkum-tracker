@@ -12,7 +12,6 @@ import { useToast } from "@/comps/ui/Toast";
 import { PlaythroughNameField } from "./PlaythroughNameField";
 
 interface EditPlaythroughDialogProps {
-	/** The playthrough to rename. The dialog is closed while this is null. */
 	playthrough: Playthrough | null;
 	onClose: () => void;
 }

@@ -72,27 +72,21 @@ export type SyncSettingKey = "autoSync" | "syncOnReturn" | "waitOnMetered";
 export type CallbackOutcome = "ok" | "denied" | "state" | "missing" | "failed";
 
 interface SyncContextType {
-	/** False when this build has no sign in service address, so syncing is not offered. */
 	available: boolean;
-	/** The providers that this build can sign in with. */
 	providers: SyncProviderId[];
-	/** The provider that this device is signed in with, or chose to sign in with. */
 	provider: SyncProviderId | null;
 	status: SyncStatus;
 	errorKind: SyncErrorKind | null;
-	/** The HTTP status of the provider answer that failed the sync, when there is one. */
 	errorStatus: number | null;
 	repository: string | null;
 	lastSyncAt: string | null;
 	conflicts: Conflict[];
 	pendingChoice: PendingChoice | null;
-	/** The switches of the sync settings card. They live on this device. */
 	settings: Record<SyncSettingKey, boolean>;
 	setSyncSetting: (key: SyncSettingKey, value: boolean) => void;
 	deviceName: string;
 	setDeviceName: (name: string) => void;
 	activity: ActivityEntry[];
-	/** The cloud data as this device last saw it, or null before the first sync. */
 	cloudCopy: SyncDocument | null;
 	signIn: (provider: SyncProviderId) => void;
 	installApp: () => void;

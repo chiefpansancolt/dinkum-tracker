@@ -14,11 +14,9 @@ import { Select } from "@/comps/ui/Select";
 export interface FilterFieldConfig {
 	id: string;
 	label: string;
-	/** A short list of choices drawn as one control, such as a view mode, instead of a select. */
 	kind?: "select" | "segmented";
 	/** The first option is the "all" choice. A field on it counts as not filtering. */
 	options: { id: string; label: string }[];
-	/** A short line under a select. A segmented control does not show it. */
 	hint?: string;
 }
 
@@ -28,16 +26,11 @@ interface FilterBlockProps {
 	onChange: (fieldId: string, value: string) => void;
 	onClear: () => void;
 	search: { label: string; value: string; onChange: (value: string) => void };
-	/** The results line, for example Showing 8 of 45 fish. */
 	summary: ReactNode;
-	/** A button right after the search box, such as Buffs. */
 	searchAction?: ReactNode;
-	/** True when a control outside the fields, such as Buffs, is filtering the list. */
 	extraFiltering?: boolean;
-	/** Controls that sit beside the results line, such as the view mode. */
 	trailing?: ReactNode;
 	sheetTitle: string;
-	/** The text of the sheet's apply button for a draft, for example Show 8 fish. */
 	applyLabel?: (draft: Record<string, string>) => string;
 }
 

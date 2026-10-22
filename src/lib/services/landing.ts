@@ -8,7 +8,6 @@ import { wardrobeItems } from "./wardrobe";
 const sum = (lengths: number[]) =>
   lengths.reduce((total, length) => total + length, 0);
 
-/** The numbers on the landing page. They come from the data, so they stay true when the data grows. */
 export const collectionCounts = {
   pedia: sum(Object.values(pediaEntries).map((entries) => entries.length)),
   npcs: allNpcs.length,

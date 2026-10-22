@@ -17,9 +17,8 @@ import {
 } from "./storageKeys";
 
 /**
- * The saved data lives in separate `localStorage` keys that the old app also reads. Every write
- * reads the key again first and changes only the playthrough it was asked to change, so another
- * tab's edits and fields this app does not know about survive.
+ * Every write reads the key again first and changes only the requested playthrough, so edits
+ * from another tab and fields this app does not know about survive.
  */
 
 const SORT_KEYS: readonly PlaythroughSort[] = [
@@ -95,7 +94,6 @@ const readStoredEntries = (): unknown[] => {
   return Array.isArray(parsed) ? parsed : [];
 };
 
-/** The playthroughs exactly as saved, for export. */
 export const readStoredPlaythroughs = (): Playthrough[] =>
   readStoredEntries().filter(isPlaythrough);
 
@@ -232,7 +230,6 @@ export const updatePlaythrough = (
 export const setActivePlaythroughId = (id: string | null) =>
   writeKey(ACTIVE_PLAYTHROUGH_KEY, id);
 
-/** Adds a new playthrough at the end, as the old app did. */
 export const addPlaythrough = (
   playthrough: Playthrough,
   options: { activate: boolean },
@@ -242,7 +239,6 @@ export const addPlaythrough = (
   return saved;
 };
 
-/** Puts a playthrough back at its old place, or replaces it when its id is already there. */
 export const restorePlaythrough = (
   playthrough: Playthrough,
   index?: number,

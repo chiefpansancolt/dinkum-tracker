@@ -19,9 +19,7 @@ interface DialogProps {
 	onClose: () => void;
 	title: string;
 	description?: string;
-	/** A mark beside the title, such as the warning box of a delete confirm. */
 	icon?: ReactNode;
-	/** Leaves out the close button, for a confirm that has its own Cancel. */
 	hideClose?: boolean;
 	footer?: ReactNode;
 	variant?: DialogVariant;
@@ -29,9 +27,7 @@ interface DialogProps {
 }
 
 /**
- * A modal on desktop and a bottom sheet on mobile. The flyout variant is a 640 px panel on the right
- * on desktop. The children mount only while the dialog is
- * open, so a form inside always starts from its saved values.
+ * The children mount only while the dialog is open, so a form inside starts from its saved values.
  */
 export function Dialog({
 	open,

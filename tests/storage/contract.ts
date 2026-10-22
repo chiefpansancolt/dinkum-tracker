@@ -32,8 +32,8 @@ const withoutLastUpdated = (playthrough: Playthrough) => {
 const asFile = (text: string) => new File([text], "backup.json");
 
 /**
- * Behavior every storage implementation must keep. The old app passes this suite, so a
- * passing run means the implementation reads and writes saves the way the old app does.
+ * The old app passes this suite, so a passing run means the implementation reads and writes saves
+ * as the old app does.
  */
 export function describeStorageContract(
   name: string,

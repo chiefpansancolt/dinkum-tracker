@@ -14,7 +14,6 @@ interface OverviewCardProps {
 	children: ReactNode;
 }
 
-/** A card of the Overview. Its title links to the full page of that category. */
 export function OverviewCard({ title, href, className = "", children }: OverviewCardProps) {
 	const t = useTranslations("overview");
 
@@ -36,7 +35,6 @@ interface MeterRowProps {
 	label: string;
 	value: string;
 	progress: number;
-	/** The main row of a card is bold and green. A sub row is quieter, as the donation rows are. */
 	sub?: boolean;
 	tone?: "primary" | "info";
 	mono?: boolean;
@@ -88,7 +86,6 @@ export function PermitPointsRow({ label, amount, total, suffix, percent }: Permi
 	);
 }
 
-/** A number on a tinted tile, such as House upgrades 3. */
 export function StatBox({ label, value }: { label: string; value: string }) {
 	return (
 		<div className="bg-tint flex flex-col gap-1 rounded-md p-3">
@@ -105,7 +102,6 @@ interface HighlightBoxProps {
 	tone: "most" | "least";
 }
 
-/** The most or least complete category. The most complete one has a green border. */
 export function HighlightBox({ label, name, percent, tone }: HighlightBoxProps) {
 	return (
 		<div
@@ -122,7 +118,6 @@ export function HighlightBox({ label, name, percent, tone }: HighlightBoxProps) 
 	);
 }
 
-/** An image, a name and a value on one row, such as a top relationship. */
 export function ListRow({ img, name, value }: { img: string; name: string; value: string }) {
 	return (
 		<li className="bg-bg flex items-center gap-3 rounded-md px-3 py-2">

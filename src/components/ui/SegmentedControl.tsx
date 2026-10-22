@@ -8,7 +8,6 @@ interface SegmentedControlProps<Value extends string> {
 	options: { id: Value; label: string; icon?: ReactNode; tintWhenSelected?: boolean }[];
 	value: Value;
 	onChange: (value: Value) => void;
-	/** Stretches the options to share the width of the container, for example inside a card. */
 	fullWidth?: boolean;
 }
 

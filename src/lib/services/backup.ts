@@ -24,7 +24,6 @@ const isBackup = (data: unknown): data is ImportData => {
   );
 };
 
-/** Returns the playthroughs of a backup file, or null when the text is not a backup. */
 export const parseBackup = (text: string): Playthrough[] | null => {
   try {
     const data: unknown = JSON.parse(text);
@@ -66,7 +65,6 @@ const updatedAt = (playthrough: Playthrough) =>
 const fileCopyWins = (fromFile: Playthrough, onDevice: Playthrough) =>
   updatedAt(fromFile) > updatedAt(onDevice);
 
-/** What an import would do to each playthrough, for the preview in the confirm dialog. */
 export const planImport = (
   device: Playthrough[],
   file: Playthrough[],
@@ -107,9 +105,8 @@ export const planImport = (
 };
 
 /**
- * The playthroughs to save after an import. Merge keeps the order on the device, replaces a
- * playthrough with the file copy when that copy is newer, and appends the new ones. Entries
- * are kept as they are, so fields this app does not know about survive.
+ * Merge keeps the order on the device, replaces a playthrough with the file copy when that copy is
+ * newer, and appends the new ones. Fields this app does not know about survive.
  */
 export const applyImport = (
   device: Playthrough[],

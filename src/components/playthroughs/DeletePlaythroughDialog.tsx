@@ -9,11 +9,9 @@ import { CompletionBadge } from "./CompletionBadge";
 import { useAgeText, useGameDate } from "./playthroughText";
 
 interface DeletePlaythroughDialogProps {
-	/** The playthrough to delete. The dialog is closed while this is null. */
 	playthrough: Playthrough | null;
 	percent: number;
 	isActive: boolean;
-	/** The playthrough that becomes active after the delete, when the active one is deleted. */
 	nextActiveName: string | null;
 	onConfirm: (playthrough: Playthrough) => void;
 	onClose: () => void;

@@ -194,7 +194,6 @@ export const mostUsed = (resources: UniqueResource[]) =>
     resource.usedIn.length > top.usedIn.length ? resource : top,
   );
 
-/** Adds the value to the list, or takes it out when it is already there. */
 export const toggled = <Value>(list: Value[], value: Value) =>
   list.includes(value)
     ? list.filter((item) => item !== value)

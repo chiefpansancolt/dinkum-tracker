@@ -24,7 +24,6 @@ export default function Image() {
 				position: "relative",
 			}}
 		>
-			{/* Subtle texture overlay */}
 			<div
 				style={{
 					position: "absolute",
@@ -34,7 +33,6 @@ export default function Image() {
 				}}
 			/>
 
-			{/* Logo */}
 			<img
 				src={logoSrc}
 				width={120}
@@ -42,7 +40,6 @@ export default function Image() {
 				style={{ borderRadius: 24, marginBottom: 32 }}
 			/>
 
-			{/* Title */}
 			<div
 				style={{
 					color: "white",
@@ -57,7 +54,6 @@ export default function Image() {
 				Dinkum Tracker
 			</div>
 
-			{/* Subtitle */}
 			<div
 				style={{
 					color: "rgba(255,255,255,0.85)",
@@ -69,7 +65,6 @@ export default function Image() {
 				Track your Dinkum progress
 			</div>
 
-			{/* Decorative dots */}
 			<div
 				style={{
 					display: "flex",

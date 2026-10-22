@@ -6,7 +6,6 @@ import {
   type Season,
 } from "dinkum-data";
 
-/** The in-game season cycle order, derived from the calendar's own day sequence. */
 export const SEASON_ORDER: Season[] = [
   ...new Set(
     calendar()
@@ -22,7 +21,6 @@ export type DayRef = { day: number; season: Season };
 export const sameDay = (a: DayRef, b: DayRef) =>
   a.day === b.day && a.season === b.season;
 
-/** The season after or before, wrapping around the year. */
 export const shiftSeason = (season: Season, step: 1 | -1): Season =>
   SEASON_ORDER[
     (SEASON_ORDER.indexOf(season) + step + SEASON_ORDER.length) %
@@ -35,10 +33,8 @@ export const dayOf = ({ day, season }: DayRef): CalendarDay =>
 export type DayEntry =
   | {
       kind: "event";
-      /** Names an entry in a list. */
       id: string;
       name: string;
-      /** Set when the event lasts more than one day. */
       range?: { startDay: number; endDay: number; season: Season };
     }
   | { kind: "birthday"; id: string; character: string; likes?: string };

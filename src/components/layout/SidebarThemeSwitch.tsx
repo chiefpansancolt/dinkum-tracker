@@ -11,7 +11,6 @@ const OPTIONS: { mode: ThemeMode; labelKey: "light" | "dark" | "system" }[] = [
 	{ mode: "auto", labelKey: "system" },
 ];
 
-/** The theme choice at the bottom of the mobile drawer. Settings has the same choice. */
 export function SidebarThemeSwitch() {
 	const t = useTranslations("shell.theme");
 	const name = useId();

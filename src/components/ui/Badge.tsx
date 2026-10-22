@@ -28,7 +28,6 @@ const toneClasses: Record<BadgeTone, string> = {
 interface BadgeProps {
 	tone: BadgeTone;
 	children: ReactNode;
-	/** Lets a long value wrap inside its row instead of reaching past the edge of a card. */
 	wrap?: boolean;
 }
 

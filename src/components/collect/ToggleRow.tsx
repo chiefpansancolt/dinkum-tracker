@@ -3,15 +3,12 @@
 import { useId } from "react";
 
 interface ToggleRowProps {
-	/** The word beside the switch, such as Collected or Unlocked. */
 	label: string;
-	/** The name of the item, so each switch has its own name for a screen reader. */
 	itemName: string;
 	checked: boolean;
 	onChange: (checked: boolean) => void;
 }
 
-/** One full width row with a switch, to mark an item collected or a recipe unlocked. */
 export function ToggleRow({ label, itemName, checked, onChange }: ToggleRowProps) {
 	const id = useId();
 

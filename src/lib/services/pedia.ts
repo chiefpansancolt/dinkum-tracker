@@ -57,7 +57,6 @@ const withoutId = (ids: string[], id: string) =>
 const withId = (ids: string[], id: string) =>
   ids.includes(id) ? ids : [...ids, id];
 
-/** The playthrough after setting one item to a status. Other sections are not touched. */
 export const withStatus = (
   playthrough: Playthrough,
   tab: PediaTab,
@@ -122,7 +121,6 @@ export const seasonOptions = () => SEASONS.filter((season) => season !== ALL);
 
 export const timeOptions = () => TIME_PERIODS.filter((time) => time !== ALL);
 
-/** Applies the six filters and the name search, the way the old pages did. */
 export const filterEntries = (
   tab: PediaTab,
   playthrough: Playthrough,

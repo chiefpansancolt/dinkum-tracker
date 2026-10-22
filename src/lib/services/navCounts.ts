@@ -20,7 +20,6 @@ const levelTotal = (items: { levels: unknown[] }[]) =>
 const LICENSE_LEVELS = levelTotal(allLicenses);
 const MILESTONE_LEVELS = levelTotal(allMilestones);
 
-/** The progress shown beside a sidebar link. A page without a count has no entry. */
 export const navCounts = (
   playthrough: Playthrough,
 ): Partial<Record<NavItemId, string>> => ({
@@ -53,7 +52,6 @@ const percentOf = (
   return `${meter(done, total).percent}%`;
 };
 
-/** The share of recipes unlocked, gear collected and wardrobe items collected. */
 const collectCounts = (playthrough: Playthrough) => ({
   recipes: percentOf(
     RECIPE_TABS.map((tab) => ({

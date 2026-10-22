@@ -17,9 +17,8 @@ import {
 import type { Playthrough } from "@/types/app";
 
 /**
- * These are the figures of the old playthrough card, moved here unchanged so every percent a
- * player already sees stays the same. The overall percent counts clothing and furniture in the
- * numerator and leaves them out of the total, as the old card did.
+ * These figures are the figures of the old playthrough card, unchanged. The overall percent counts
+ * clothing and furniture in the numerator and leaves them out of the total, as the old card did.
  */
 
 const countTrue = (flags: Record<string, boolean> | undefined) =>

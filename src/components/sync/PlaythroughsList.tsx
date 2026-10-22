@@ -51,7 +51,6 @@ interface PlaythroughsListProps {
 	onReview: () => void;
 }
 
-/** One card for each playthrough: this device next to the cloud copy as it was at the last sync. */
 export function PlaythroughsList({ onReview }: PlaythroughsListProps) {
 	const t = useTranslations("sync.playthroughs");
 	const { playthroughs } = usePlaythrough();

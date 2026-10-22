@@ -43,10 +43,8 @@ const CATEGORY_KEYS: Record<string, string> = {
 };
 
 /**
- * The names of game ideas that the app writes itself: buffs, the categories of the Items breakdown,
- * the kinds of resource, the daily task categories, animal types, temperaments, seasons and
- * weekdays. A value that has no name in the catalog reads as it came, because the data package may
- * add values before the catalog has them.
+ * A value that has no name in the catalog reads as it came, because the data package may add
+ * values before the catalog has them.
  */
 export function useTerms() {
   const t = useTranslations("terms");

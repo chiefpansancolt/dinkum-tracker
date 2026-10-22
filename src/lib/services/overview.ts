@@ -24,8 +24,8 @@ import type { Playthrough } from "@/types/app";
 import { levelKey } from "./levels";
 
 /**
- * The figures of the Overview cards. Each card keeps the arithmetic of the old dashboard widget it
- * replaces. The headline is new: it counts every category against a fixed total.
+ * Each card keeps the arithmetic of the old dashboard widget. The headline is new: it counts every
+ * category against a fixed total.
  */
 
 export interface Meter {
@@ -361,7 +361,6 @@ export type HeadlineGroup = "track" | "progress" | "collect";
 export interface Headline {
   overall: Meter;
   groups: Record<HeadlineGroup, Meter>;
-  /** The fixed total of every category, for the note under the headline. */
   totals: {
     pedia: number;
     npcs: number;
@@ -376,10 +375,8 @@ export interface Headline {
 }
 
 /**
- * The share of everything done. The total is fixed, so a category counts from day one and the
- * percent does not jump when a page is opened. Done counts: collected pedia entries, NPCs with at
- * least a quarter heart, finished milestones and licenses, skills above level 0, installed
- * buildings, owned gear, cassettes, clothing, furniture, decorations and unlocked recipes.
+ * The total is fixed, so a category counts from day one and the percent does not jump when a page
+ * opens.
  */
 export const headline = (playthrough: Playthrough): Headline => {
   const pedia = pediaStats(playthrough).overall;

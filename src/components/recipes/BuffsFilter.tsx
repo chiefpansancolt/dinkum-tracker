@@ -17,7 +17,6 @@ interface BuffsFilterProps {
 	onMatchAllChange: (matchAll: boolean) => void;
 }
 
-/** The Buffs button and the panel in which the player picks buffs and the match mode. */
 export function BuffsFilter({
 	chosen,
 	matchAll,

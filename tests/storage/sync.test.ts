@@ -30,7 +30,6 @@ import {
 
 const APP_ID = "dinkum-tracker";
 
-/** One device: its saved playthroughs and what it remembers about the last sync. */
 class Device {
   state: SyncState | null = null;
   constructor(

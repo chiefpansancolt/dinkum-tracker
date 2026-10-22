@@ -2,11 +2,7 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 const TAB_PARAM = "tab";
 
-/**
- * A tab that lives in the address as `?tab=<id>`, so a reload or a shared link opens the same tab.
- * A missing or unknown value gives the fallback, and the rest of the query stays. The page must
- * sit inside a Suspense boundary.
- */
+/** The page must sit inside a Suspense boundary. */
 export function useUrlTab<TabId extends string>(
   ids: readonly TabId[],
   fallback: TabId,

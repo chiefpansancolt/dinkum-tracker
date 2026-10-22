@@ -15,11 +15,7 @@ interface ItemIconProps {
  */
 const escapePercent = (src: string) => src.replace(/%/g, "%25");
 
-/**
- * Some items have no image in the package, or the file cannot be loaded. They get a plain tinted
- * square, so a row never shows a broken image. The images are small files that ship with the app,
- * so they skip the image optimizer.
- */
+/** The images ship with the app and are small, so they skip the image optimizer. */
 export function ItemIcon({ src, size = 32, className = "" }: ItemIconProps) {
 	const [failures, setFailures] = useState(0);
 	const current = failures === 0 ? src : failures === 1 && src ? escapePercent(src) : undefined;

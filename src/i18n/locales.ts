@@ -6,15 +6,13 @@ type DeepPartial<T> = {
   [K in keyof T]?: T[K] extends object ? DeepPartial<T[K]> : T[K];
 };
 
-/** A catalog that may leave keys out. A missing key reads as the English text. */
 export type PartialMessages = {
   [K in keyof Messages]?: DeepPartial<Messages[K]>;
 };
 
 /**
- * The languages of the app, in the order of the Language select. A language that is not listed
- * here reads as English, so an old backup with an unknown language still opens. To add one, list
- * it here, give it a region tag, add its catalog folder `messages/<code>/` and run
+ * A language that is not listed here reads as English, so an old backup with an unknown language
+ * still opens. To add one, list it here, give it a region tag, add its catalog folder and run
  * `node scripts/gen-locale-indexes.mjs`.
  */
 export const SUPPORTED_LOCALES = [
@@ -47,9 +45,8 @@ export const isSupportedLocale = (value: unknown): value is Locale =>
   (SUPPORTED_LOCALES as readonly string[]).includes(value);
 
 /**
- * The regional tag that the browser Intl API formats numbers and dates with when the player keeps
- * the Auto choice. A language can have several regions, so this is its default one. Arabic and
- * Thai keep Western digits and the Gregorian calendar, as the game and its players write them.
+ * Arabic and Thai keep Western digits and the Gregorian calendar, as the game and its players
+ * write them.
  */
 export const REGION_TAG: Record<Locale, string> = {
   en: "en-US",
@@ -113,7 +110,6 @@ const loaders: Record<Locale, () => Promise<{ default: PartialMessages }>> = {
     import("./messages/en") as unknown as Promise<{ default: PartialMessages }>,
 };
 
-/** The English catalog with the language catalog laid over it, so no message is ever missing. */
 export const loadMessages = async (locale: Locale): Promise<Messages> => {
   const { default: english } = await import("./messages/en");
   if (locale === "en") return english;
