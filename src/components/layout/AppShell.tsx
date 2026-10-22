@@ -30,6 +30,7 @@ export function AppShell({ children }: { children: ReactNode }) {
 			<>
 				{skipLink}
 				<ThemeSync />
+				<DomainNotice />
 				{children}
 			</>
 		);
